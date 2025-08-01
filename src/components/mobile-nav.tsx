@@ -30,16 +30,19 @@ export function MobileNav() {
           </div>
           <div className="flex-1 overflow-y-auto">
             <div className="grid gap-2 py-6">
-              <Link href="#about" className="flex w-full items-center py-2 text-lg font-semibold px-4 rounded-md hover:bg-muted" onClick={closeSheet}>
+              <Link href="/#about" className="flex w-full items-center py-2 text-lg font-semibold px-4 rounded-md hover:bg-muted" onClick={closeSheet}>
                 About
               </Link>
-              <Link href="#skills" className="flex w-full items-center py-2 text-lg font-semibold px-4 rounded-md hover:bg-muted" onClick={closeSheet}>
+              <Link href="/#skills" className="flex w-full items-center py-2 text-lg font-semibold px-4 rounded-md hover:bg-muted" onClick={closeSheet}>
                 Skills
               </Link>
-              <Link href="#research" className="flex w-full items-center py-2 text-lg font-semibold px-4 rounded-md hover:bg-muted" onClick={closeSheet}>
+              <Link href="/#research" className="flex w-full items-center py-2 text-lg font-semibold px-4 rounded-md hover:bg-muted" onClick={closeSheet}>
                 Research
               </Link>
-              <Link href="#contact" className="flex w-full items-center py-2 text-lg font-semibold px-4 rounded-md hover:bg-muted" onClick={closeSheet}>
+              <Link href="/publications" className="flex w-full items-center py-2 text-lg font-semibold px-4 rounded-md hover:bg-muted" onClick={closeSheet}>
+                Publications
+              </Link>
+              <Link href="/#contact" className="flex w-full items-center py-2 text-lg font-semibold px-4 rounded-md hover:bg-muted" onClick={closeSheet}>
                 Contact
               </Link>
             </div>

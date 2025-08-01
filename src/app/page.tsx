@@ -1,7 +1,7 @@
 import { About } from '@/components/about';
 import { Contact } from '@/components/contact';
 import { Header } from '@/components/header';
-import { Research } from '@/components/research';
+import { FeaturedResearch } from '@/components/featured-research';
 import { Skills } from '@/components/skills';
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <main className="flex-1">
         <About />
         <Skills />
-        <Research />
+        <FeaturedResearch />
       </main>
       <Contact />
     </div>

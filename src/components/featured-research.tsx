@@ -33,7 +33,7 @@ const researchProjects = [
 
 export function FeaturedResearch() {
   return (
-    <section id="research" className="py-16 md:py-24">
+    <section id="research" className="bg-muted/50 py-16 md:py-24">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Featured Research</h2>
