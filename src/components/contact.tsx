@@ -25,7 +25,7 @@ export function Contact() {
         </p>
         <div className="mb-8">
           <Button size="lg" asChild>
-            <a href="mailto:ben.alterman@example.com">
+            <a href="mailto:blaltermanphd+web_inquiry@gmail.com">
               <Mail className="mr-2 h-5 w-5" />
               Email Me
             </a>
