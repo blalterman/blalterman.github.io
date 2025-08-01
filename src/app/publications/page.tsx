@@ -8,9 +8,8 @@ import {
   } from "@/components/ui/table";
   import { Button } from "@/components/ui/button";
   import { BookOpen, Database, FileText } from "lucide-react";
-  import adsMetrics from "../../../public/data/ads_metrics.json";
-  import publicationsData from "../../../public/data/publications.json";
-  import adsPublications from "../../../public/data/ads_publications.json";
+  import adsMetrics from "@/data/ads_metrics.json";
+  import adsPublications from "@/data/ads_publications.json";
 
   
   export default function PublicationsPage() {

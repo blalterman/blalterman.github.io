@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ExternalLink, BookOpen, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import researchProjects from '../../public/data/research-projects.json';
+import researchProjects from '@/data/research-projects.json';
 
 export function FeaturedResearch() {
   return (
@@ -35,7 +35,7 @@ export function FeaturedResearch() {
                   </Button>
                   <Button asChild>
                     <Link href={project.datasetLink} target="_blank">
-                      <ExternalLink className="mr-2 h-4 w-4" />
+                      <ExternalLink className="mr-2 h-4" />
                       Dataset
                     </Link>
                   </Button>
