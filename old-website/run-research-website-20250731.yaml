@@ -1,0 +1,12 @@
+name: run-research-website-20250731
+channels:
+  - conda-forge
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - pandas
+  - matplotlib
+  - numpy
+  - ipython
+  - jupyterlab
+  - ads
