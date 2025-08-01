@@ -1,0 +1,3 @@
+[submodule "external/otherstuff"]
+	path = external/otherstuff
+	url = https://github.com/blalterman/otherstuff.github.io.git
