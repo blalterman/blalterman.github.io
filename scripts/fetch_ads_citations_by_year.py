@@ -44,9 +44,14 @@ print("Querying NASA ADS for publications...")
 # results = ads.SearchQuery(orcid=ORCID_ID, fl=["bibcode"], rows=2000)
 # bibcodes = [paper.bibcode for paper in results]
 
-results = ads.SearchQuery(orcid=ORCID_ID, fl=["bibcode", 
-# "property"
-], rows=2000)
+results = ads.SearchQuery(
+    orcid=ORCID_ID,
+    fl=[
+        "bibcode",
+        # "property"
+    ],
+    rows=2000,
+)
 
 bibcodes = []
 # is_refereed = {}
@@ -63,30 +68,32 @@ headers = {"Authorization": f"Bearer {ADS_DEV_KEY}"}
 refereed_citations = dict()
 nonrefereed_citations = dict()
 
-# keys_to_get_citations = {"refereed": 
-#                      {"refereed": "refereed to refereed", 
+# keys_to_get_citations = {"refereed":
+#                      {"refereed": "refereed to refereed",
 #                      "nonrefereed": "refereed to nonrefereed"},
-#                      "nonrefereed": 
-#                      {"refereed": "nonrefereed to refereed", 
+#                      "nonrefereed":
+#                      {"refereed": "nonrefereed to refereed",
 #                      "nonrefereed": "nonrefereed to nonrefereed"},
 #                      }
 
 refereed_keys = ("refereed to refereed", "nonrefereed to refereed")
 nonrefereed_keys = ("refereed to nonrefereed", "nonrefereed to nonrefereed")
 
+
 def print_failure_msg(i, bibcode, response):
 
     if response.status_code != 429:
         print(f"""Failed to get metrics for ({i}) {bibcode}""")
         return
-        
+
     reset_time = int(response.headers["X-RateLimit-Reset"])
     reset_dt = int(response.headers["Retry-After"])
-    
+
     reset_time = datetime.fromtimestamp(reset_time, tz=ZoneInfo("UTC"))
     reset_dt = timedelta(seconds=reset_dt)
-    
-    print(f"""
+
+    print(
+        f"""
 Failed to get metrics
 Bibcode          : {bibcode}
 Status Code      : {response.status_code}
@@ -96,44 +103,50 @@ Wait Time        : {reset_dt}
 Rate Exceeded at : {(reset_time - reset_dt).astimezone(local_tz)}
 
 Exiting program
-""")
+"""
+    )
 
     sys.exit(1)  # Stop making more call
+
 
 print("Downloading citation data by year...")
 for i, bibcode in enumerate(bibcodes, 1):
     url = f"https://api.adsabs.harvard.edu/v1/metrics/{bibcode}"
     response = requests.get(url, headers=headers)
     if response.status_code != 200:
-        print_failure_msg(i, bibcode, response)        
+        print_failure_msg(i, bibcode, response)
         continue
-        
+
     data = response.json()
     hist = data.get("histograms", {}).get("citations", {})
-    
-#     print(i, bibcode)
-#     print(hist)
 
-#     print(is_refereed[bibcode])
-#     hist_keys = keys_to_get_citations["refereed" if is_refereed[bibcode] else "nonrefereed"]
-#     refereed_keys = [k for k in hist.keys() if k.endswith("to refereed")]
-#     nonrefereed_keys = [k for k in hist.keys() if k.endswith("to nonrefereed")]
-    
+    #     print(i, bibcode)
+    #     print(hist)
+
+    #     print(is_refereed[bibcode])
+    #     hist_keys = keys_to_get_citations["refereed" if is_refereed[bibcode] else "nonrefereed"]
+    #     refereed_keys = [k for k in hist.keys() if k.endswith("to refereed")]
+    #     nonrefereed_keys = [k for k in hist.keys() if k.endswith("to nonrefereed")]
+
     for k in refereed_keys:
         refereed_citations[(bibcode, k)] = hist.get(k, {})
-    for k in nonrefereed_keys:   
+    for k in nonrefereed_keys:
         nonrefereed_citations[(bibcode, k)] = hist.get(k, {})
 
 # 	refereed_citations[(bibcode, k)] = hist.get(hist_keys["refereed"], {})
 #     nonrefereed_citations[bibcode] = hist.get(hist_keys["nonrefereed"], {})
-    
+
 #     for year, count in hist.get(hist_keys["refereed"], {}).items():
 #         refereed_citations[int(year)] += count
 #     for year, count in hist.get(hist_keys["nonrefereed"], {}).items():
 #         nonrefereed_citations[int(year)] += count
 
-refereed_citations = [{'year': k, 'citations': v} for k, v in refereed_citations.items()]
-nonrefereed_citations = [{'year': k, 'citations': v} for k, v in nonrefereed_citations.items()]
+refereed_citations = [
+    {"year": k, "citations": v} for k, v in refereed_citations.items()
+]
+nonrefereed_citations = [
+    {"year": k, "citations": v} for k, v in nonrefereed_citations.items()
+]
 
 # === Step 3: Align years and prepare data
 print(refereed_citations)
@@ -150,14 +163,16 @@ nonref_counts = [nonrefereed_citations.get(y, 0) for y in all_years]
 print(all_years)
 print(ref_counts)
 print(nonref_counts)
-print(f"""
+print(
+    f"""
 Total Citations
 Refereed    : {sum(ref_counts)}
-Nonrefereed : {sum(nonref_counts)}""")
+Nonrefereed : {sum(nonref_counts)}"""
+)
 
 
-# === Step 4: Save citation data to _data/citations_by_year.json
-data_output_dir = os.path.join("_data")
+# === Step 4: Save citation data to public/data/citations_by_year.json
+data_output_dir = os.path.join("public", "data")
 os.makedirs(data_output_dir, exist_ok=True)
 json_output_path = os.path.join(data_output_dir, "citations_by_year.json")
 
