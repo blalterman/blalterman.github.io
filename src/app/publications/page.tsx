@@ -9,7 +9,6 @@ import {
   import { Button } from "@/components/ui/button";
   import { Badge } from "@/components/ui/badge";
   import { BookOpen, Database, FileText } from "lucide-react";
-  import Link from "next/link";
   
   const publications = [
       {
@@ -81,6 +80,7 @@ import {
   ];
   
   export default function PublicationsPage() {
+    const sortedPublications = [...publications].sort((a, b) => b.year - a.year);
     return (
       <div className="container py-16 md:py-24">
         <div className="text-center mb-12">
@@ -99,7 +99,7 @@ import {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {publications.map((pub, index) => (
+              {sortedPublications.map((pub, index) => (
                 <TableRow key={index} className="hover:bg-muted/30">
                   <TableCell className="font-medium">{pub.year}</TableCell>
                   <TableCell>{pub.title}</TableCell>
