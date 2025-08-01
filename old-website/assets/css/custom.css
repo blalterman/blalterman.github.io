@@ -33,3 +33,85 @@ img {
 .btn:hover {
   background-color: #005a99;
 }
+
+.positions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.positions-table th,
+.positions-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.positions-table th {
+  background-color: #4a5568;
+  color: #fff;
+}
+
+.positions-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.education-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.education-table th,
+.education-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.education-table th {
+  background-color: #4a5568;
+  color: #fff;
+}
+
+.education-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Responsive width for pages */
+article.page {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 600px) {
+  article.page {
+    padding: 0 0.75rem;
+  }
+}
+
+/* Layout for headshot next to introduction text */
+.about-headshot {
+  float: left;
+  width: 150px;
+  margin: 0 1rem 0.5rem 0;
+  border-radius: 4px;
+  vertical-align: top;
+}
+
+@media (max-width: 600px) {
+  .about-headshot {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+}
