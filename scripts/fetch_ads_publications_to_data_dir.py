@@ -7,7 +7,9 @@ from datetime import datetime
 ORCID = os.getenv("ADS_ORCID")
 token = os.getenv("ADS_DEV_KEY")
 if not ORCID or not token:
-    raise EnvironmentError("ADS_ORCID and ADS_DEV_KEY must be set in the environment.")
+    raise EnvironmentError(f"""Missing env variables.
+ADS_ORCID   : {ADS_ORCID}
+ADS_DEV_KEY : {ADS_DEV_KEY}""")
 
 # Fields to request from ADS
 fields = [
