@@ -1,7 +1,6 @@
 import { PublicationsList } from "@/components/publications-list";
-import { ads_publications } from "@/lib/publications-data";
 
-type PublicationType = "phdthesis" | "article" | "inproceedings" | "abstract" | "techreport" | "eprint" | "dataset" | "phdthesis" | "bookreview" | "catalog" | "inbook" | "mastersthesis" | "misc" | "pressrelease" | "proposal" | "software";
+type PublicationType = "phdthesis" | "article" | "inproceedings" | "abstract" | "techreport" | "eprint" | "dataset" | "bookreview" | "catalog" | "inbook" | "mastersthesis" | "misc" | "pressrelease" | "proposal" | "software";
 
 interface Publication {
   bibcode: string;
@@ -19,9 +18,45 @@ interface PublicationGroup {
     pubs: Publication[];
 }
 
+const stubPublications: Publication[] = [
+    {
+        "bibcode": "2023A&A...676A..36L",
+        "title": "First results from the Solar Orbiter Heavy Ion Sensor",
+        "authors": ["Livi, S.", "Lepri, S. T.", "Raines, J. M."],
+        "month": "August",
+        "year": "2023",
+        "journal": "Astronomy and Astrophysics",
+        "publication_type": "article",
+        "citations": 19,
+        "url": "https://dx.doi.org/10.1051/0004-6361/202346304"
+    },
+    {
+        "bibcode": "2025arXiv250418092A",
+        "title": "The Evolution of Heavy Ion Abundances with Solar Activity",
+        "authors": ["Alterman, B. L.", "Rivera, Y. J.", "Lepri, S. T."],
+        "month": "April",
+        "year": "2025",
+        "journal": "arXiv e-prints",
+        "publication_type": "eprint",
+        "citations": 0,
+        "url": "https://dx.doi.org/10.48550/arXiv.2504.18092"
+    },
+    {
+        "bibcode": "2019PhDT.......121A",
+        "title": "The significance of proton beams in the multiscale solar wind",
+        "authors": ["Alterman, Benjamin L."],
+        "month": "",
+        "year": "2019",
+        "journal": "Ph.D. Thesis",
+        "publication_type": "phdthesis",
+        "citations": 2,
+        "url": "https://ui.adsabs.harvard.edu/abs/2019PhDT.......121A"
+    }
+];
+
+
 async function getPublications(): Promise<Publication[]> {
-  // Data is imported directly from the data file.
-  return ads_publications as Publication[];
+  return stubPublications;
 }
 
 export default async function PublicationsPage() {
