@@ -3,33 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ExternalLink, BookOpen, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-
-const researchProjects = [
-  {
-    title: "Mapping Martian Surface Composition",
-    description: "Developed a novel deep learning model to analyze hyperspectral data from Martian orbiters, resulting in the most detailed mineralogical maps of the planet's surface to date.",
-    image: "https://placehold.co/600x400.png",
-    imageHint: "mars surface",
-    publicationLink: "#",
-    datasetLink: "#"
-  },
-  {
-    title: "Exoplanet Atmosphere Characterization",
-    description: "Utilized transit spectroscopy data from the Hubble Space Telescope to identify key atmospheric biosignatures on several potentially habitable exoplanets.",
-    image: "https://placehold.co/600x400.png",
-    imageHint: "exoplanet telescope",
-    publicationLink: "#",
-    datasetLink: "#"
-  },
-  {
-    title: "Modeling Galactic Chemical Evolution",
-    description: "Created high-resolution simulations to trace the distribution of heavy elements in the Milky Way, providing new constraints on star formation history and supernova yields.",
-    image: "https://placehold.co/600x400.png",
-    imageHint: "galaxy simulation",
-    publicationLink: "#",
-    datasetLink: "#"
-  }
-];
+import researchProjects from '/public/data/research-projects.json';
 
 export function FeaturedResearch() {
   return (
@@ -54,16 +28,16 @@ export function FeaturedResearch() {
                 </CardContent>
                 <CardFooter className="p-0 pt-4 flex justify-end gap-2">
                   <Button variant="outline" asChild>
-                    <a href={project.publicationLink} target="_blank">
+                    <Link href={project.publicationLink} target="_blank">
                       <BookOpen className="mr-2 h-4 w-4" />
                       Publication
-                    </a>
+                    </Link>
                   </Button>
                   <Button asChild>
-                    <a href={project.datasetLink} target="_blank">
+                    <Link href={project.datasetLink} target="_blank">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Dataset
-                    </a>
+                    </Link>
                   </Button>
                 </CardFooter>
               </div>
