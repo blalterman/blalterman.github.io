@@ -11,8 +11,14 @@ if not ORCID or not token:
 
 # Fields to request from ADS
 fields = [
-    "bibcode", "title", "author", "pubdate", "pub", "doctype",
-    "citation_count", "doi"
+    "bibcode",
+    "title",
+    "author",
+    "pubdate",
+    "pub",
+    "doctype",
+    "citation_count",
+    "doi",
 ]
 
 # Query ADS
@@ -35,23 +41,29 @@ for pub in results:
     journal = pub.pub or ""
     pub_type = pub.doctype or ""
     citations = pub.citation_count if hasattr(pub, "citation_count") else 0
-    url = f"https://dx.doi.org/{pub.doi[0]}" if hasattr(pub, "doi") and pub.doi else f"https://ui.adsabs.harvard.edu/abs/{pub.bibcode}"
+    url = (
+        f"https://dx.doi.org/{pub.doi[0]}"
+        if hasattr(pub, "doi") and pub.doi
+        else f"https://ui.adsabs.harvard.edu/abs/{pub.bibcode}"
+    )
 
-    publications.append({
-        "bibcode": pub.bibcode,
-        "title": title,
-        "authors": authors,
-        "month": month,
-        "year": year,
-        "journal": journal,
-        "publication_type": pub_type,
-        "citations": citations,
-        "url": url
-    })
+    publications.append(
+        {
+            "bibcode": pub.bibcode,
+            "title": title,
+            "authors": authors,
+            "month": month,
+            "year": year,
+            "journal": journal,
+            "publication_type": pub_type,
+            "citations": citations,
+            "url": url,
+        }
+    )
 
-# Ensure _data/ directory exists and save to JSON
-os.makedirs("_data", exist_ok=True)
-with open("_data/ads_publications.json", "w") as f:
+# Ensure public/data/ directory exists and save to JSON
+os.makedirs("public/data", exist_ok=True)
+with open("public/data/ads_publications.json", "w") as f:
     json.dump(publications, f, indent=2)
 
-print(f"Saved {len(publications)} publications to _data/ads_publications.json")
+print(f"Saved {len(publications)} publications to public/data/ads_publications.json")
