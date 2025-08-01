@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
-type PublicationType = "phdthesis" | "article" | "inproceedings" | "abstract" | "techreport" | "eprint" | "dataset";
+type PublicationType = "phdthesis" | "article" | "inproceedings" | "abstract" | "techreport" | "eprint" | "dataset" | "phdthesis" | "bookreview" | "catalog" | "inbook" | "mastersthesis" | "misc" | "pressrelease" | "proposal" | "software";
 
 interface Publication {
   bibcode: string;
@@ -40,10 +40,18 @@ const publicationTypeTitles: Record<PublicationType, string> = {
     abstract: "Conference Presentations",
     techreport: "White Papers",
     eprint: "Pre-Prints",
-    dataset: "Datasets"
+    dataset: "Datasets",
+    bookreview: "Book Reviews",
+    catalog: "Catalogs",
+    inbook: "Book Chapters",
+    mastersthesis: "Masters Thesis",
+    misc: "Miscellaneous",
+    pressrelease: "Press Releases",
+    proposal: "Proposals",
+    software: "Software"
 };
 
-const customOrder: PublicationType[] = ["phdthesis", "article", "inproceedings", "abstract", "techreport", "eprint", "dataset"];
+const customOrder: PublicationType[] = ["phdthesis", "article", "inproceedings", "abstract", "techreport", "eprint", "dataset", "inbook", "bookreview", "mastersthesis", "catalog", "misc", "pressrelease", "proposal", "software"];
 
 
 export function PublicationsList({ publications }: PublicationsListProps) {
@@ -80,7 +88,7 @@ export function PublicationsList({ publications }: PublicationsListProps) {
             {sortedPublications.map(({ type, pubs }) => (
                 pubs.length > 0 && (
                     <div key={type} className="mb-12">
-                         <h3 className="text-2xl font-bold font-headline mb-6">{publicationTypeTitles[type]}</h3>
+                         <h3 className="text-2xl font-bold font-headline mb-6">{publicationTypeTitles[type] || type}</h3>
                         <div className="border rounded-lg overflow-hidden">
                             <Table>
                                 <TableHeader>

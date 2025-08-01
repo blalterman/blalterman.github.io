@@ -1,7 +1,7 @@
 import { PublicationsList } from "@/components/publications-list";
 import { ads_publications } from "@/lib/publications-data";
 
-type PublicationType = "phdthesis" | "article" | "inproceedings" | "abstract" | "techreport" | "eprint" | "dataset";
+type PublicationType = "phdthesis" | "article" | "inproceedings" | "abstract" | "techreport" | "eprint" | "dataset" | "phdthesis" | "bookreview" | "catalog" | "inbook" | "mastersthesis" | "misc" | "pressrelease" | "proposal" | "software";
 
 interface Publication {
   bibcode: string;
@@ -47,7 +47,8 @@ export default async function PublicationsPage() {
                 if (yearB !== yearA) {
                     return yearB - yearA;
                 }
-                return a.title.localeCompare(b.title);
+                // Fallback to sorting by bibcode if years are the same
+                return b.bibcode.localeCompare(a.bibcode);
             }),
         }));
 
