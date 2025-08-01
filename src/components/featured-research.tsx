@@ -43,7 +43,7 @@ export function FeaturedResearch() {
           {researchProjects.map((project) => (
             <Card key={project.title} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="relative aspect-[16/9] w-full">
-                <Image src={project.image} alt={project.title} fill className="object-cover" data-ai-hint={project.imageHint} />
+                <Image src={project.image} alt={project.title} fill className="object-cover" data-ai-hint={project.imageHint} unoptimized />
               </div>
               <div className="flex flex-col flex-1 p-6">
                 <CardHeader className="p-0 mb-4">

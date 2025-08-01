@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import Image from 'next/image';
 
 export function About() {
@@ -7,7 +7,7 @@ export function About() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
         <div className="md:col-span-1 flex justify-center">
             <Avatar className="h-48 w-48 md:h-64 md:w-64 border-4 border-primary/50 shadow-lg">
-                <Image src="/images/headshot.jpg" alt="B. L. Alterman" width={256} height={256} className="rounded-full object-cover w-full h-full" />
+                <Image src="/images/headshot.jpg" alt="B. L. Alterman" width={256} height={256} className="rounded-full object-cover w-full h-full" unoptimized />
                 <AvatarFallback>BA</AvatarFallback>
             </Avatar>
         </div>
