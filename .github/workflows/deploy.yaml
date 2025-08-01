@@ -22,6 +22,8 @@ jobs:
         run: npm ci
 
       - name: Build Static Site
+        env:
+          NEXT_PUBLIC_BASE_URL: https://blalterman.github.io
         run: npm run build
 
       - name: Deploy to GitHub Pages
