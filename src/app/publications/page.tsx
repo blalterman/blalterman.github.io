@@ -11,7 +11,7 @@ interface Publication {
   publication_type: PublicationType;
   citations: number;
   url: string;
-  month?: string; // Added optional month property
+  month?: string;
 }
 
 interface PublicationGroup {
@@ -54,7 +54,6 @@ const stubPublications: Publication[] = [
         "url": "https://ui.adsabs.harvard.edu/abs/2019PhDT.......121A"
     }
 ];
-
 
 // Group publications by type
 const publicationGroups = stubPublications.reduce((acc, pub) => {
