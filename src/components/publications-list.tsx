@@ -77,7 +77,7 @@ const publications = [
       links: {
         preprint: "#",
       }
-    }
+    },
 ];
 
 export function PublicationsList() {
