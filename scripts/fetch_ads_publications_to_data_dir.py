@@ -8,8 +8,8 @@ ORCID = os.getenv("ADS_ORCID")
 token = os.getenv("ADS_DEV_KEY")
 if not ORCID or not token:
     raise EnvironmentError(f"""Missing env variables.
-ADS_ORCID   : {ADS_ORCID}
-ADS_DEV_KEY : {ADS_DEV_KEY}""")
+ADS_ORCID   : {ORCID}
+ADS_DEV_KEY : {token}""")
 
 # Fields to request from ADS
 fields = [
