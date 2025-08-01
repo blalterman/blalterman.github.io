@@ -11,6 +11,7 @@ interface Publication {
   publication_type: PublicationType;
   citations: number;
   url: string;
+  month?: string; // Added optional month property
 }
 
 interface PublicationGroup {
@@ -55,38 +56,32 @@ const stubPublications: Publication[] = [
 ];
 
 
-async function getPublications(): Promise<Publication[]> {
-  return stubPublications;
-}
+// Group publications by type
+const publicationGroups = stubPublications.reduce((acc, pub) => {
+    const type = pub.publication_type;
+    if (!acc[type]) {
+        acc[type] = [];
+    }
+    acc[type].push(pub);
+    return acc;
+}, {} as Record<PublicationType, Publication[]>);
 
-export default async function PublicationsPage() {
-    const publications = await getPublications();
-    
-    // Group publications by type
-    const publicationGroups = publications.reduce((acc, pub) => {
-        const type = pub.publication_type;
-        if (!acc[type]) {
-            acc[type] = [];
-        }
-        acc[type].push(pub);
-        return acc;
-    }, {} as Record<PublicationType, Publication[]>);
+// Create the final structure and sort publications within each group
+const sortedPublicationGroups: PublicationGroup[] = Object.entries(publicationGroups)
+    .map(([type, pubs]) => ({
+        type: type as PublicationType,
+        pubs: pubs.sort((a, b) => {
+            const yearA = parseInt(a.year, 10);
+            const yearB = parseInt(b.year, 10);
+            if (yearB !== yearA) {
+                return yearB - yearA;
+            }
+            // Fallback to sorting by bibcode if years are the same
+            return b.bibcode.localeCompare(a.bibcode);
+        }),
+    }));
 
-    // Sort publications within each group and create the final structure
-    const sortedPublicationGroups: PublicationGroup[] = Object.entries(publicationGroups)
-        .map(([type, pubs]) => ({
-            type: type as PublicationType,
-            pubs: pubs.sort((a, b) => {
-                const yearA = parseInt(a.year, 10);
-                const yearB = parseInt(b.year, 10);
-                if (yearB !== yearA) {
-                    return yearB - yearA;
-                }
-                // Fallback to sorting by bibcode if years are the same
-                return b.bibcode.localeCompare(a.bibcode);
-            }),
-        }));
-
+export default function PublicationsPage() {
     return (
         <PublicationsList publications={sortedPublicationGroups} />
     );
