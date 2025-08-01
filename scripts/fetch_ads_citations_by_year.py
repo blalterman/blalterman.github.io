@@ -18,6 +18,7 @@ import requests
 import matplotlib.pyplot as plt
 from collections import defaultdict
 from datetime import datetime, timedelta
+from pathlib import Path
 import os
 import json
 import sys
@@ -215,4 +216,7 @@ plt.ylabel("Citations")
 plt.legend()
 plt.tight_layout()
 plt.savefig(plot_path, format="svg")
+print(f"Plot saved to {plot_path}")
+plot_path = Path(plot_path).with_suffix(".png")
+plt.savefig(plot_path, format="png")
 print(f"Plot saved to {plot_path}")
