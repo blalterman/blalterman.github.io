@@ -3,17 +3,17 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ExternalLink, BookOpen, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
 
-async function getResearchProjects() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/research-projects.json`);
-  if (!res.ok) {
-    throw new Error('Failed to fetch research-projects.json');
-  }
-  return res.json();
+function getResearchProjects() {
+  const filePath = path.join(process.cwd(), 'data', 'research-projects.json');
+  const jsonData = fs.readFileSync(filePath, 'utf-8');
+  return JSON.parse(jsonData);
 }
 
-export async function FeaturedResearch() {
-  const researchProjects = await getResearchProjects();
+export function FeaturedResearch() {
+  const researchProjects = getResearchProjects();
   
   return (
     <section id="research" className="bg-muted/50 py-16 md:py-24">
@@ -67,4 +67,3 @@ export async function FeaturedResearch() {
     </section>
   );
 }
-    

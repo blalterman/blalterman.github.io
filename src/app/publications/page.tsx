@@ -8,25 +8,23 @@ import {
   } from "@/components/ui/table";
   import { Button } from "@/components/ui/button";
   import { BookOpen, Database, FileText } from "lucide-react";
+  import fs from 'fs';
+  import path from 'path';
   
-  async function getPublicationsData() {
-    const resMetrics = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/ads_metrics.json`);
-    if (!resMetrics.ok) {
-      throw new Error('Failed to fetch ads_metrics.json');
-    }
-    const adsMetrics = await resMetrics.json();
+  function getPublicationsData() {
+    const metricsPath = path.join(process.cwd(), 'data', 'ads_metrics.json');
+    const metricsData = fs.readFileSync(metricsPath, 'utf8');
+    const adsMetrics = JSON.parse(metricsData);
   
-    const resPublications = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/ads_publications.json`);
-    if (!resPublications.ok) {
-      throw new Error('Failed to fetch ads_publications.json');
-    }
-    const adsPublications = await resPublications.json();
+    const publicationsPath = path.join(process.cwd(), 'data', 'ads_publications.json');
+    const publicationsData = fs.readFileSync(publicationsPath, 'utf8');
+    const adsPublications = JSON.parse(publicationsData);
     
     return { adsMetrics, adsPublications };
   }
   
-  export default async function PublicationsPage() {
-    const { adsMetrics, adsPublications } = await getPublicationsData();
+  export default function PublicationsPage() {
+    const { adsMetrics, adsPublications } = getPublicationsData();
 
     const techReports = adsPublications.filter((pub: any) => pub.publication_type === "techreport");
     const eprints = adsPublications.filter((pub: any) => pub.publication_type === "eprint");
@@ -327,4 +325,3 @@ import {
       </div>
     );
   }
-    
