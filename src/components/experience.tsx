@@ -2,41 +2,57 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Briefcase, GraduationCap } from "lucide-react";
 
 const educationData = [
-    {
-        institution: "Massachusetts Institute of Technology (MIT)",
-        degree: "Ph.D. in Planetary Science",
-        period: "2016 - 2020",
-        notes: "Dissertation: 'Atmospheric Dynamics of Hot Jupiters'. Advised by Dr. Sara Seager."
-    },
-    {
-        institution: "California Institute of Technology (Caltech)",
-        degree: "B.S. in Astrophysics, with Honors",
-        period: "2012 - 2016",
-        notes: "Senior Thesis: 'Spectroscopic Analysis of K-type Stars'."
-    }
+  {
+    "Institution": "University of Michigan",
+    "Department": "Applied Physics",
+    "Location": "Ann Arbor, MI, USA",
+    "Dates": "2012--2019"
+  },
+  {
+    "Institution": "Macalester College",
+    "Department": "Physics & Philosophy",
+    "Location": "St. Paul, MN, USA",
+    "Dates": "2008--2012"
+  }
 ];
 
 const professionalData = [
-    {
-        title: "Postdoctoral Research Fellow",
-        institution: "NASA Jet Propulsion Laboratory (JPL)",
-        period: "2020 - Present",
-        responsibilities: [
-            "Lead investigator on the Mars 2020 mission's PIXL instrument data analysis.",
-            "Developed machine learning pipelines for identifying biosignatures in planetary data.",
-            "Collaborated with international teams on exoplanet atmosphere characterization."
-        ]
-    },
-    {
-        title: "Graduate Research Assistant",
-        institution: "MIT Department of Earth, Atmospheric and Planetary Sciences",
-        period: "2016 - 2020",
-        responsibilities: [
-            "Conducted numerical simulations of exoplanetary atmospheres.",
-            "Authored and co-authored 4 peer-reviewed publications.",
-            "Mentored undergraduate students in research projects."
-        ]
-    }
+  {
+    "Company": "NASA Goddard Space Flight Center",
+    "Position Title": "Research Astrophysicist",
+    "Dates": "2024 --",
+    "Location": "Greenbelt, MD"
+  },
+  {
+    "Company": "Southwest Research Institute",
+    "Position Title": "Senior Research Scientist",
+    "Dates": "2023 -- 2024",
+    "Location": "San Antonio, TX"
+  },
+  {
+    "Company": "Southwest Research Institute",
+    "Position Title": "Research Scientist",
+    "Dates": "2022 -- 2023",
+    "Location": "San Antonio, TX"
+  },
+  {
+    "Company": "Southwest Research Institute",
+    "Position Title": "Postdoctoral Researcher",
+    "Dates": "2020 -- 2021",
+    "Location": "San Antonio, TX"
+  },
+  {
+    "Company": "University of Texas at San Antonio",
+    "Position Title": "Postdoctoral Researcher",
+    "Dates": "2021--2022",
+    "Location": "San Antonio, TX"
+  },
+  {
+    "Company": "University of Michigan",
+    "Position Title": "Research Fellow",
+    "Dates": "2019--2020",
+    "Location": "Ann Arbor, MI"
+  }
 ];
 
 export function Experience() {
@@ -54,14 +70,14 @@ export function Experience() {
                     </h3>
                     <div className="space-y-8">
                         {educationData.map((edu) => (
-                            <Card key={edu.institution} className="shadow-lg">
+                            <Card key={edu.Institution} className="shadow-lg">
                                 <CardHeader>
-                                    <CardTitle>{edu.institution}</CardTitle>
-                                    <CardDescription>{edu.degree}</CardDescription>
-                                    <p className="text-sm text-muted-foreground pt-1">{edu.period}</p>
+                                    <CardTitle>{edu.Institution}</CardTitle>
+                                    <CardDescription>{edu.Department}</CardDescription>
+                                    <p className="text-sm text-muted-foreground pt-1">{edu.Dates}</p>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="text-sm">{edu.notes}</p>
+                                    <p className="text-sm">{edu.Location}</p>
                                 </CardContent>
                             </Card>
                         ))}
@@ -74,18 +90,14 @@ export function Experience() {
                     </h3>
                     <div className="space-y-8">
                         {professionalData.map((job) => (
-                            <Card key={job.title} className="shadow-lg">
+                            <Card key={job["Position Title"]} className="shadow-lg">
                                 <CardHeader>
-                                    <CardTitle>{job.title}</CardTitle>
-                                    <CardDescription>{job.institution}</CardDescription>
-                                     <p className="text-sm text-muted-foreground pt-1">{job.period}</p>
+                                    <CardTitle>{job["Position Title"]}</CardTitle>
+                                    <CardDescription>{job.Company}</CardDescription>
+                                     <p className="text-sm text-muted-foreground pt-1">{job.Dates}</p>
                                 </CardHeader>
                                 <CardContent>
-                                    <ul className="list-disc list-inside space-y-2 text-sm">
-                                        {job.responsibilities.map((item, index) => (
-                                            <li key={index}>{item}</li>
-                                        ))}
-                                    </ul>
+                                    <p className="text-sm">{job.Location}</p>
                                 </CardContent>
                             </Card>
                         ))}

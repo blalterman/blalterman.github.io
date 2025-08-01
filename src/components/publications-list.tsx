@@ -8,79 +8,47 @@ import {
 } from "@/components/ui/table"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button";
-import { ExternalLink, BookOpen } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
-const publications = [
-    {
-        year: 2023,
-        title: "Mapping Martian Surface Composition",
-        journal: "Journal of Geophysical Research: Planets",
-        status: "Published",
-        links: {
-            publication: "#",
-            dataset: "#",
-        }
-    },
-    {
-        year: 2023,
-        title: "Photochemical Haze Formation in the Atmosphere of TRAPPIST-1e",
-        journal: "The Astrophysical Journal",
-        status: "Published",
-        links: {
-            publication: "#",
-        }
-    },
-    {
-        year: 2022,
-        title: "Exoplanet Atmosphere Characterization",
-        journal: "Nature Astronomy",
-        status: "Published",
-        links: {
-            publication: "#",
-            dataset: "#",
-        }
-    },
-    {
-        year: 2022,
-        title: "Modeling Galactic Chemical Evolution",
-        journal: "Monthly Notices of the Royal Astronomical Society",
-        status: "Published",
-        links: {
-            publication: "#",
-            dataset: "#",
-        }
-    },
-    {
-        year: 2021,
-        title: "A Search for Technosignatures Around Cool Stars",
-        journal: "The Astronomical Journal",
-        status: "Published",
-        links: {
-            publication: "#",
-        }
-    },
-    {
-        year: 2020,
-        title: "Constraints on the Abundance of Primordial Black Holes",
-        journal: "Physical Review D",
-        status: "Published",
-        links: {
-            publication: "#",
-        }
-    },
-    {
-      year: 2024,
-      title: "The Role of Magnetic Fields in Star Formation",
-      journal: "Science",
-      status: "In Review",
-      links: {
-        preprint: "#",
-      }
-    },
-];
+type PublicationType = "phdthesis" | "article" | "inproceedings" | "abstract" | "techreport" | "eprint" | "dataset";
 
-export function PublicationsList() {
+interface Publication {
+  bibcode: string;
+  year: string;
+  title: string;
+  authors: string[];
+  journal: string;
+  publication_type: PublicationType;
+  citations: number;
+  url: string;
+}
+
+interface PublicationGroup {
+    type: PublicationType;
+    pubs: Publication[];
+}
+
+interface PublicationsListProps {
+  publications: PublicationGroup[];
+}
+
+const publicationTypeTitles: Record<PublicationType, string> = {
+    phdthesis: "PhD Thesis",
+    article: "Refereed Publications",
+    inproceedings: "Conference Proceedings",
+    abstract: "Conference Presentations",
+    techreport: "White Papers",
+    eprint: "Pre-Prints",
+    dataset: "Datasets"
+};
+
+const customOrder: PublicationType[] = ["phdthesis", "article", "inproceedings", "abstract", "techreport", "eprint", "dataset"];
+
+
+export function PublicationsList({ publications }: PublicationsListProps) {
+    const sortedPublications = publications.sort((a, b) => customOrder.indexOf(a.type) - customOrder.indexOf(b.type));
+
     return (
         <section id="publications" className="container py-16 md:py-24">
             <div className="text-center mb-12">
@@ -100,7 +68,7 @@ export function PublicationsList() {
                     </Link>
                     {' '}and is updated weekly.
                 </p>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2 mt-4 text-sm">
+                <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 mt-4 text-sm">
                     <p><strong>h-index:</strong> 15</p>
                     <p><strong>Total papers:</strong> 133</p>
                     <p><strong>Total citations:</strong> 741</p>
@@ -108,59 +76,50 @@ export function PublicationsList() {
                     <p><strong>Refereed citations:</strong> 730</p>
                 </div>
             </div>
-            <div className="border rounded-lg">
-                <Table>
-                    <TableHeader>
-                        <TableRow>
-                            <TableHead className="w-[100px]">Year</TableHead>
-                            <TableHead>Title</TableHead>
-                            <TableHead>Journal / Venue</TableHead>
-                            <TableHead className="text-center">Status</TableHead>
-                            <TableHead className="text-right">Links</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        {publications.sort((a, b) => b.year - a.year).map((pub) => (
-                            <TableRow key={pub.title}>
-                                <TableCell className="font-medium">{pub.year}</TableCell>
-                                <TableCell className="font-semibold">{pub.title}</TableCell>
-                                <TableCell>{pub.journal}</TableCell>
-                                <TableCell className="text-center">
-                                    <Badge variant={pub.status === 'Published' ? 'secondary' : 'outline'}>
-                                        {pub.status}
-                                    </Badge>
-                                </TableCell>
-                                <TableCell className="text-right space-x-2">
-                                    {pub.links.publication && (
-                                        <Button variant="outline" size="sm" asChild>
-                                            <a href={pub.links.publication} target="_blank">
-                                                <BookOpen className="mr-2 h-4 w-4" />
-                                                Publication
-                                            </a>
-                                        </Button>
-                                    )}
-                                    {pub.links.dataset && (
-                                        <Button size="sm" asChild>
-                                            <a href={pub.links.dataset} target="_blank">
-                                                <ExternalLink className="mr-2 h-4 w-4" />
-                                                Dataset
-                                            </a>
-                                        </Button>
-                                    )}
-                                     {pub.links.preprint && (
-                                        <Button variant="outline" size="sm" asChild>
-                                            <a href={pub.links.preprint} target="_blank">
-                                                <BookOpen className="mr-2 h-4 w-4" />
-                                                Preprint
-                                            </a>
-                                        </Button>
-                                    )}
-                                </TableCell>
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </div>
+            
+            {sortedPublications.map(({ type, pubs }) => (
+                pubs.length > 0 && (
+                    <div key={type} className="mb-12">
+                         <h3 className="text-2xl font-bold font-headline mb-6">{publicationTypeTitles[type]}</h3>
+                        <div className="border rounded-lg overflow-hidden">
+                            <Table>
+                                <TableHeader>
+                                    <TableRow>
+                                        <TableHead className="w-[80px]">Year</TableHead>
+                                        <TableHead>Title & Authors</TableHead>
+                                        <TableHead>Journal / Venue</TableHead>
+                                        <TableHead className="text-center w-[120px]">Citations</TableHead>
+                                        <TableHead className="text-right w-[120px]">Link</TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
+                                    {pubs.map((pub) => (
+                                        <TableRow key={pub.bibcode}>
+                                            <TableCell className="font-medium">{pub.year}</TableCell>
+                                            <TableCell>
+                                                <p className="font-semibold">{pub.title}</p>
+                                                <p className="text-sm text-muted-foreground mt-1">{pub.authors.join(', ')}</p>
+                                            </TableCell>
+                                            <TableCell>{pub.journal}</TableCell>
+                                            <TableCell className="text-center">
+                                                <Badge variant="secondary">{pub.citations}</Badge>
+                                            </TableCell>
+                                            <TableCell className="text-right">
+                                                <Button variant="ghost" size="sm" asChild>
+                                                    <a href={pub.url} target="_blank" rel="noopener noreferrer">
+                                                        View
+                                                        <ExternalLink className="ml-2 h-4 w-4" />
+                                                    </a>
+                                                </Button>
+                                            </TableCell>
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </div>
+                    </div>
+                )
+            ))}
         </section>
     );
 }

@@ -13,13 +13,19 @@ export function About() {
         </div>
         <div className="md:col-span-2 space-y-4">
           <h1 className="text-3xl md:text-5xl font-bold font-headline tracking-tighter">
-            Academic. Researcher. Innovator.
+            Academic. Researcher. Explorer.
           </h1>
           <p className="text-xl md:text-2xl text-primary font-light">
             Exploring the Solar Wind to Understand Our Place in the Cosmos
           </p>
           <p className="text-lg text-muted-foreground">
-            I am an academic and researcher with a passion for uncovering insights from complex data. My work focuses on planetary science and astrophysics, leveraging advanced data analysis techniques and computational modeling to answer fundamental questions about the universe. I thrive in collaborative environments and am always eager to explore new frontiers in science and technology.
+            I'm a Research Astrophysicist based in Greenbelt, MD, where I study how the Sun drives the solar wind and shapes the space environment of our solar system. I earned my PhD in Applied Physics from the University of Michigan, where I focused on how Coulomb collisions and kinetic processes influence the solar wind. After a postdoc at the Southwest Research Institute in San Antonio—where I was later promoted to Research Scientist—I joined NASA as a civil servant to continue my work in heliophysics.
+          </p>
+          <p className="text-lg text-muted-foreground">
+            I consider myself a heliophysics generalist, working across the thermal and suprathermal solar wind. My research spans multiple spacecraft—including Wind, ACE, Parker Solar Probe, and Solar Orbiter—and timescales ranging from seconds to decades. I’m especially interested in how the composition and structure of the solar wind reflect both its solar source and the processes it undergoes during interplanetary travel. My recent work on helium abundance and heavy ion composition has opened up new questions about solar cycle variability and space weather forecasting.
+          </p>
+          <p className="text-lg text-muted-foreground">
+            At the heart of my work is a deep curiosity about our Sun, humanity’s place in the Universe, and how solar variability affects life on Earth through space weather. As a Fellow of The Explorers Club and an active member of the heliophysics community, I try to bring energy, creativity, and a systems-level perspective to everything I do.
           </p>
         </div>
       </div>
