@@ -30,9 +30,6 @@ export function MobileNav() {
           </div>
           <div className="flex-1 overflow-y-auto">
             <div className="grid gap-2 py-6">
-              <Link href="/" className="flex w-full items-center py-2 text-lg font-semibold px-4 rounded-md hover:bg-muted" onClick={closeSheet}>
-                About
-              </Link>
               <Link href="/skills" className="flex w-full items-center py-2 text-lg font-semibold px-4 rounded-md hover:bg-muted" onClick={closeSheet}>
                 Skills
               </Link>
