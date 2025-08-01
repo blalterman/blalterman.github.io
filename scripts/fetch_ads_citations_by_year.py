@@ -172,7 +172,7 @@ Nonrefereed : {sum(nonref_counts)}"""
 
 
 # === Step 4: Save citation data to public/data/citations_by_year.json
-data_output_dir = os.path.join("public", "data")
+data_output_dir = os.path.join("../public", "data")
 os.makedirs(data_output_dir, exist_ok=True)
 json_output_path = os.path.join(data_output_dir, "citations_by_year.json")
 

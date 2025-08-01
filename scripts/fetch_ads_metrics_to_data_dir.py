@@ -5,7 +5,7 @@ import json
 import argparse
 
 
-def fetch_ads_metrics(orcid: str, output_file: str = "public/data/ads_metrics.json"):
+def fetch_ads_metrics(orcid: str, output_file: str = "../public/data/ads_metrics.json"):
     token = os.getenv("ADS_DEV_KEY")
     if not token:
         raise EnvironmentError("ADS_DEV_KEY environment variable not set.")
@@ -51,7 +51,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--output",
         type=str,
-        default="public/data/ads_metrics.json",
+        default="../public/data/ads_metrics.json",
         help="Output JSON file path",
     )
 

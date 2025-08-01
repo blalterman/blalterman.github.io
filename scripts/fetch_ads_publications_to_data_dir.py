@@ -62,8 +62,8 @@ for pub in results:
     )
 
 # Ensure public/data/ directory exists and save to JSON
-os.makedirs("public/data", exist_ok=True)
-with open("public/data/ads_publications.json", "w") as f:
+os.makedirs("../public/data", exist_ok=True)
+with open("../public/data/ads_publications.json", "w") as f:
     json.dump(publications, f, indent=2)
 
-print(f"Saved {len(publications)} publications to public/data/ads_publications.json")
+print(f"Saved {len(publications)} publications to ../public/data/ads_publications.json")
