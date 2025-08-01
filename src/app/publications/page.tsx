@@ -7,7 +7,7 @@ import {
     TableCell,
   } from "@/components/ui/table";
   import { Button } from "@/components/ui/button";
-  import { BookOpen, Database, FileText } from "lucide-react";
+  import { BookOpen, Database, FileText, FileBadge } from "lucide-react";
   import adsMetrics from "@/data/ads_metrics.json";
   import adsPublications from "@/data/ads_publications.json";
 
@@ -221,8 +221,8 @@ import {
                     {pub.url && (
                       <Button variant="outline" size="sm" asChild>
                         <a href={pub.url} target="_blank" rel="noopener noreferrer">
-                          <BookOpen className="mr-2 h-4 w-4" />
-                          Publication
+                          <FileBadge className="mr-2 h-4 w-4" />
+                          Paper
                         </a>
                       </Button>
                     )}
