@@ -9,188 +9,19 @@ import {
   import { Button } from "@/components/ui/button";
   import { BookOpen, Database, FileText } from "lucide-react";
   import adsMetrics from "../../../public/data/ads_metrics.json";
-  
-  const refereedPublications = [
-      {
-          year: 2023,
-          title: "Mapping Martian Surface Composition",
-          authors: "John Doe, Jane Smith",
-          journal: "Journal of Geophysical Research: Planets",
-          links: {
-              publication: "#",
-              dataset: "#",
-          }
-      },
-      {
-          year: 2023,
-          title: "Photochemical Haze Formation in the Atmosphere of TRAPPIST-1e",
-          authors: "Peter Jones, Mary Brown",
-          journal: "The Astrophysical Journal",
-          links: {
-              publication: "#",
-          }
-      },
-      {
-          year: 2022,
-          title: "Exoplanet Atmosphere Characterization",
-          authors: "David Green, Sarah White",
-          journal: "Nature Astronomy",
-          links: {
-              publication: "#",
-              dataset: "#",
-          }
-      },
-      {
-          year: 2022,
-          title: "Modeling Galactic Chemical Evolution",
-          authors: "Michael Black, Emily Blue",
-          journal: "Monthly Notices of the Royal Astronomical Society",
-          links: {
-              publication: "#",
-              dataset: "#",
-          }
-      },
-      {
-          year: 2021,
-          title: "A Search for Technosignatures Around Cool Stars",
-          authors: "Chris Grey, Olivia Pink",
-          journal: "The Astronomical Journal",
-          links: {
-              publication: "#",
-          }
-      },
-      {
-          year: 2020,
-          title: "Constraints on the Abundance of Primordial Black Holes",
-          authors: "Daniel Cyan, Sophia Magenta",
-          journal: "Physical Review D",
-          links: {
-              publication: "#",
-          }
-      },
-      {
-        year: 2024,
-        title: "The Role of Magnetic Fields in Star Formation",
-        authors: "Matthew Yellow, Isabella Red",
-        journal: "Science",
-        links: {
-          preprint: "#",
-        }
-      },
-  ];
+  import publicationsData from "../../../public/data/publications.json";
+  import adsPublications from "../../../public/data/ads_publications.json";
 
-  const datasets = [
-    {
-      year: 2023,
-      title: "Martian Surface Imagery Dataset",
-      authors: "Data Curator One, Data Curator Two",
-      journal: "", // Datasets may not have a journal
-      links: {
-        dataset: "#",
-      },
-    },
-    {
-      year: 2022,
-      title: "Exoplanet Atmospheric Data",
-      authors: "Data Provider One",
-      journal: "",
-      links: {
-        dataset: "#",
-      },
-    },
-  ];
-
-  const conferenceProceedings = [
-    {
-      year: 2023,
-      title: "Proceedings of the 1st International Conference on Space",
-      authors: "Author One, Author Two",
-      journal: "Space Conference Proceedings",
-      links: {
-        publication: "#",
-      },
-    },
-    {
-      year: 2022,
-      title: "Proceedings of the 15th Annual Astronomy Symposium",
-      authors: "Author Three, Author Four",
-      journal: "Astronomy Symposium Proceedings",
-      links: {
-        publication: "#",
-      },
-    },
-  ];
-
-  const conferencePresentations = [
-    {
-      year: 2024,
-      title: "Presented research on exoplanet atmospheres at conference",
-      authors: "Presenter One",
-      journal: "Conference Name",
-      links: {
-        preprint: "#",
-      },
-    },
-    {
-      year: 2023,
-      title: "Poster presentation on galactic modeling",
-      authors: "Presenter Two",
-      journal: "Another Conference Name",
-      links: {
-        dataset: "#",
-      },
-    },
-  ];
-
-  const whitePapers = [
-    {
-      year: 2023,
-      title: "White paper on future space missions",
-      authors: "Committee Member One, Committee Member Two",
-      journal: "", // White papers may not have a journal
-      links: {
-        publication: "#",
-      },
-    },
-    {
-      year: 2022,
-      title: "Recommendations for data analysis in astrophysics",
-      authors: "Working Group Lead",
-      journal: "",
-      links: {
-        publication: "#",
-      },
-    },
-  ];
-
-  const prePrints = [
-    {
-      year: 2024,
-      title: "Pre-print on new telescope technology",
-      authors: "Researcher A, Researcher B",
-      journal: "arXiv", // Pre-prints often have arXiv as journal
-      links: {
-        preprint: "#",
-      },
-    },
-    {
-      year: 2023,
-      title: "Pre-print on dark matter research",
-      authors: "Researcher C",
-      journal: "arXiv",
-      links: {
-        preprint: "#",
-      },
-    },
-  ];
   
   export default function PublicationsPage() {
-    const sortedRefereedPublications = [...refereedPublications].sort((a, b) => b.year - a.year);
-    const sortedDatasets = [...datasets].sort((a, b) => b.year - a.year);
-    const sortedConferenceProceedings = [...conferenceProceedings].sort((a, b) => b.year - a.year);
-    const sortedConferencePresentations = [...conferencePresentations].sort((a, b) => b.year - a.year);
-    const sortedWhitePapers = [...whitePapers].sort((a, b) => b.year - a.year);
-    const sortedPrePrints = [...prePrints].sort((a, b) => b.year - a.year);
+    const techReports = adsPublications.filter(pub => pub.publication_type === "techreport");
+
+    const sortedRefereedPublications = [...publicationsData.refereedPublications].sort((a, b) => b.year - a.year);
+    const sortedDatasets = [...publicationsData.datasets].sort((a, b) => b.year - a.year);
+    const sortedConferenceProceedings = [...publicationsData.conferenceProceedings].sort((a, b) => b.year - a.year);
+    const sortedConferencePresentations = [...publicationsData.conferencePresentations].sort((a, b) => b.year - a.year);
+    const sortedWhitePapers = [...techReports].sort((a, b) => parseInt(b.year) - parseInt(a.year));
+    const sortedPrePrints = [...publicationsData.prePrints].sort((a, b) => b.year - a.year);
 
     return (
       <div className="container py-16 md:py-24">
@@ -441,32 +272,16 @@ import {
             <TableBody>
               {sortedWhitePapers.map((pub, index) => (
                 <TableRow key={index} className="hover:bg-muted/30">
-                  <TableCell className="font-medium">{pub.year}</TableCell>
+                  <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
                   <TableCell>{pub.title}</TableCell>
-                  <TableCell>{pub.authors}</TableCell>
+                  <TableCell>{pub.authors.join(', ')}</TableCell>
                   <TableCell>{pub.journal}</TableCell>
                   <TableCell className="text-right space-x-2">
-                    {pub.links.publication && (
+                    {pub.url && (
                       <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.publication} target="_blank" rel="noopener noreferrer">
+                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
                           <BookOpen className="mr-2 h-4 w-4" />
                           Publication
-                        </a>
-                      </Button>
-                    )}
-                    {pub.links.dataset && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.dataset} target="_blank" rel="noopener noreferrer">
-                          <Database className="mr-2 h-4 w-4" />
-                          Dataset
-                        </a>
-                      </Button>
-                    )}
-                    {pub.links.preprint && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.preprint} target="_blank" rel="noopener noreferrer">
-                          <FileText className="mr-2 h-4 w-4" />
-                          Preprint
                         </a>
                       </Button>
                     )}
