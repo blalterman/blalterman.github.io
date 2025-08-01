@@ -25,20 +25,13 @@ async function getPublications(): Promise<Publication[]> {
 export default async function PublicationsPage() {
     const publications = await getPublications();
     
-    const publicationGroups: Record<PublicationType, Publication[]> = {
-        phdthesis: [],
-        article: [],
-        inproceedings: [],
-        abstract: [],
-        techreport: [],
-        eprint: [],
-        dataset: [],
-    };
+    const publicationGroups: Record<string, Publication[]> = {};
 
     publications.forEach(pub => {
-        if (publicationGroups[pub.publication_type]) {
-            publicationGroups[pub.publication_type].push(pub);
+        if (!publicationGroups[pub.publication_type]) {
+            publicationGroups[pub.publication_type] = [];
         }
+        publicationGroups[pub.publication_type].push(pub);
     });
 
     const sortedPublicationGroups = Object.entries(publicationGroups).map(([type, pubs]) => ({
