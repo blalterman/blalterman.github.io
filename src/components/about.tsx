@@ -14,6 +14,9 @@ export function About() {
           <h1 className="text-3xl md:text-5xl font-bold font-headline tracking-tighter">
             Academic. Researcher. Innovator.
           </h1>
+          <p className="text-xl md:text-2xl text-primary font-light">
+            Exploring the Solar Wind to Understand Our Place in the Cosmos
+          </p>
           <p className="text-lg text-muted-foreground">
             I am an academic and researcher with a passion for uncovering insights from complex data. My work focuses on planetary science and astrophysics, leveraging advanced data analysis techniques and computational modeling to answer fundamental questions about the universe. I thrive in collaborative environments and am always eager to explore new frontiers in science and technology.
           </p>
