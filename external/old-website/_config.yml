@@ -1,0 +1,19 @@
+# Jekyll configuration
+
+# Site settings
+title: B. L. Alterman
+baseurl: ""
+url: ""
+
+# Theme
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-include-cache
+
+# Build settings
+markdown: kramdown

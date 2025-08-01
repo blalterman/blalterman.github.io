@@ -1,0 +1,30 @@
+{% assign formatted_authors = "" %}
+{% for author in pub.authors %}
+  {% assign parts = author | split: " " %}
+  {% assign initials = "" %}
+  {% for part in parts offset:1 %}
+    {% assign initial = part | slice: 0, 1 %}
+    {% assign initials = initials | append: initial | append: "." %}
+    {% unless forloop.last %}{% assign initials = initials | append: " " %}{% endunless %}
+  {% endfor %}
+  {% assign lastname = parts[0] %}
+  {% assign formatted_name = lastname | append: ", " | append: initials %}
+
+  {% if formatted_name contains "Alterman" %}
+    {% assign formatted_name = "<strong>Alterman, B. L.</strong>" %}
+  {% endif %}
+
+  {% assign formatted_authors = formatted_authors | append: formatted_name %}
+  {% unless forloop.last %}
+    {% assign formatted_authors = formatted_authors | append: ", " %}
+  {% endunless %}
+{% endfor %}
+
+<li>
+  <strong><a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a></strong><br>
+  <span class="authors">{{ formatted_authors }}</span>
+  <em>{{ pub.journal }}</em>, {{ pub.year | slice: 0, 4 }}.
+  {% if pub.citations and pub.citations > 0 %}
+    <span class="citations"> Citations: <strong>{{ pub.citations }}</strong></span>
+  {% endif %}
+</li>
