@@ -14,6 +14,7 @@ import {
       {
           year: 2023,
           title: "Mapping Martian Surface Composition",
+          authors: "John Doe, Jane Smith",
           journal: "Journal of Geophysical Research: Planets",
           links: {
               publication: "#",
@@ -23,6 +24,7 @@ import {
       {
           year: 2023,
           title: "Photochemical Haze Formation in the Atmosphere of TRAPPIST-1e",
+          authors: "Peter Jones, Mary Brown",
           journal: "The Astrophysical Journal",
           links: {
               publication: "#",
@@ -31,6 +33,7 @@ import {
       {
           year: 2022,
           title: "Exoplanet Atmosphere Characterization",
+          authors: "David Green, Sarah White",
           journal: "Nature Astronomy",
           links: {
               publication: "#",
@@ -40,6 +43,7 @@ import {
       {
           year: 2022,
           title: "Modeling Galactic Chemical Evolution",
+          authors: "Michael Black, Emily Blue",
           journal: "Monthly Notices of the Royal Astronomical Society",
           links: {
               publication: "#",
@@ -49,6 +53,7 @@ import {
       {
           year: 2021,
           title: "A Search for Technosignatures Around Cool Stars",
+          authors: "Chris Grey, Olivia Pink",
           journal: "The Astronomical Journal",
           links: {
               publication: "#",
@@ -57,6 +62,7 @@ import {
       {
           year: 2020,
           title: "Constraints on the Abundance of Primordial Black Holes",
+          authors: "Daniel Cyan, Sophia Magenta",
           journal: "Physical Review D",
           links: {
               publication: "#",
@@ -65,6 +71,7 @@ import {
       {
         year: 2024,
         title: "The Role of Magnetic Fields in Star Formation",
+        authors: "Matthew Yellow, Isabella Red",
         journal: "Science",
         links: {
           preprint: "#",
@@ -108,6 +115,7 @@ import {
               <TableRow className="bg-muted/50">
                 <TableHead className="w-[100px] font-bold">Year</TableHead>
                 <TableHead className="font-bold">Title</TableHead>
+                <TableHead className="font-bold">Authors</TableHead>
                 <TableHead className="font-bold">Journal</TableHead>
                 <TableHead className="text-right w-[280px] font-bold">Links</TableHead>
               </TableRow>
@@ -117,6 +125,7 @@ import {
                 <TableRow key={index} className="hover:bg-muted/30">
                   <TableCell className="font-medium">{pub.year}</TableCell>
                   <TableCell>{pub.title}</TableCell>
+                  <TableCell>{pub.authors}</TableCell>
                   <TableCell>{pub.journal}</TableCell>
                   <TableCell className="text-right space-x-2">
                     {pub.links.publication && (
