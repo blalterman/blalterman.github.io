@@ -4,6 +4,10 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Mail, Github } from 'lucide-react';
 import Link from 'next/link';
+import { OrcidIcon } from './icons/orcid-icon';
+import { NasaAdsIcon } from './icons/nasa-ads-icon';
+import { GoogleScholarIcon } from './icons/google-scholar-icon';
+import { ArxivIcon } from './icons/arxiv-icon';
 
 export function Contact() {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -30,6 +34,18 @@ export function Contact() {
         <div className="flex justify-center items-center space-x-4 mb-4">
           <Link href="https://github.com/blalterman" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-foreground transition-colors">
             <Github className="h-6 w-6" />
+          </Link>
+          <Link href="https://orcid.org/0000-0001-6673-3432" target="_blank" rel="noopener noreferrer" aria-label="ORCID" className="text-muted-foreground hover:text-foreground transition-colors">
+            <OrcidIcon className="h-6 w-6" />
+          </Link>
+          <Link href="https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0001-6673-3432&sort=date%20desc%2C%20bibcode%20desc" target="_blank" rel="noopener noreferrer" aria-label="NASA ADS" className="text-muted-foreground hover:text-foreground transition-colors">
+            <NasaAdsIcon className="h-6 w-6" />
+          </Link>
+          <Link href="https://scholar.google.com/citations?user=yF0j6J8AAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" className="text-muted-foreground hover:text-foreground transition-colors">
+            <GoogleScholarIcon className="h-6 w-6" />
+          </Link>
+          <Link href="https://arxiv.org/a/alterman_b_1.html" target="_blank" rel="noopener noreferrer" aria-label="arXiv" className="text-muted-foreground hover:text-foreground transition-colors">
+            <ArxivIcon className="h-6 w-6" />
           </Link>
         </div>
         <p className="text-sm text-muted-foreground">

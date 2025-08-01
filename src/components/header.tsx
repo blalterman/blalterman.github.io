@@ -2,6 +2,10 @@ import Link from 'next/link';
 import { Github, Mountain } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { MobileNav } from '@/components/mobile-nav';
+import { ArxivIcon } from '@/components/icons/arxiv-icon';
+import { GoogleScholarIcon } from '@/components/icons/google-scholar-icon';
+import { NasaAdsIcon } from '@/components/icons/nasa-ads-icon';
+import { OrcidIcon } from '@/components/icons/orcid-icon';
 
 export function Header() {
   return (
@@ -23,9 +27,29 @@ export function Header() {
         <div className="flex flex-1 items-center justify-end">
           <div className="hidden md:flex items-center space-x-2">
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://github.com/blalterman" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <Github className="h-5 w-5" />
-              </Link>
+                <Link href="https://github.com/blalterman" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <Github className="h-5 w-5" />
+                </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+                <Link href="https://orcid.org/0000-0001-6673-3432" target="_blank" rel="noopener noreferrer" aria-label="ORCID">
+                    <OrcidIcon className="h-5 w-5" />
+                </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+                <Link href="https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0001-6673-3432&sort=date%20desc%2C%20bibcode%20desc" target="_blank" rel="noopener noreferrer" aria-label="NASA ADS">
+                    <NasaAdsIcon className="h-5 w-5" />
+                </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+                <Link href="https://scholar.google.com/citations?user=yF0j6J8AAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                    <GoogleScholarIcon className="h-5 w-5" />
+                </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+                <Link href="https://arxiv.org/a/alterman_b_1.html" target="_blank" rel="noopener noreferrer" aria-label="arXiv">
+                    <ArxivIcon className="h-5 w-5" />
+                </Link>
             </Button>
           </div>
           <MobileNav />
