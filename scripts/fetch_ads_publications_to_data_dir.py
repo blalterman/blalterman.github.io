@@ -2,6 +2,7 @@ import ads
 import os
 import json
 from datetime import datetime
+from pathlib import Path
 
 # Read ORCID and API token from environment variables
 ORCID = os.getenv("ADS_ORCID")
@@ -63,9 +64,11 @@ for pub in results:
         }
     )
 
-# Ensure public/data/ directory exists and save to JSON
-os.makedirs("../public/data", exist_ok=True)
-with open("../public/data/ads_publications.json", "w") as f:
-    json.dump(publications, f, indent=2)
-
-print(f"Saved {len(publications)} publications to ../public/data/ads_publications.json")
+# Ensure data/ and public/data/ directories exists and save to JSON.
+# Use both because public/ is scraped for SEO and data/ allows for static build.
+target_dirs = (Path("../public/data"), Path("../data"))
+for target in target_dirs:
+    os.makedirs(target, exist_ok=True)
+    with open(target / "ads_publications.json", "w") as f:
+        json.dump(publications, f, indent=2)
+    print(f"Saved {len(publications)} publications to {target}")

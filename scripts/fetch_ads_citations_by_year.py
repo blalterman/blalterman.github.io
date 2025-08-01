@@ -84,7 +84,8 @@ nonrefereed_keys = ("refereed to nonrefereed", "nonrefereed to nonrefereed")
 def print_failure_msg(i, bibcode, response):
 
     if response.status_code != 429:
-        print(f"""Failed to get metrics for ({i}) {bibcode}""")
+        print(f"""Failed to get metrics for ({i}) {bibcode}"""
+)
         return
 
     reset_time = int(response.headers["X-RateLimit-Reset"])
@@ -107,7 +108,7 @@ Exiting program
 """
     )
 
-    sys.exit(1)  # Stop making more call
+    sys.exit(1)  # Stop making more calls
 
 
 print("Downloading citation data by year...")
@@ -172,26 +173,30 @@ Nonrefereed : {sum(nonref_counts)}"""
 )
 
 
-# === Step 4: Save citation data to public/data/citations_by_year.json
-data_output_dir = os.path.join("../public", "data")
-os.makedirs(data_output_dir, exist_ok=True)
-json_output_path = os.path.join(data_output_dir, "citations_by_year.json")
+# === Step 4: Save citation data to data/ and public/data/
+data_dir = Path("data")
+public_data_dir = Path("public") / data_dir
+data_dir.mkdir(parents=True, exist_ok=True)
+public_data_dir.mkdir(parents=True, exist_ok=True)
 
-# all_counts.to_json(json_output_path)
+output_filename = "citations_by_year.json"
+data_output_path = data_dir / output_filename
+public_data_output_path = public_data_dir / output_filename
 
-with open(json_output_path, "w") as f:
-    json.dump(
-        {"years": all_years, "refereed": ref_counts, "nonrefereed": nonref_counts},
-        f,
-        indent=2,
-    )
+data_to_save = {"years": all_years, "refereed": ref_counts, "nonrefereed": nonref_counts}
 
-print(f"Citation data saved to {json_output_path}")
+with open(data_output_path, "w") as f:
+    json.dump(data_to_save, f, indent=2)
+print(f"Citation data saved to {data_output_path}")
 
-# === Step 5: Plot and save SVG to public/plots/
-image_output_dir = os.path.join("../public", "plots")
-os.makedirs(image_output_dir, exist_ok=True)
-plot_path = os.path.join(image_output_dir, "citations_by_year.svg")
+with open(public_data_output_path, "w") as f:
+    json.dump(data_to_save, f, indent=2)
+print(f"Citation data saved to {public_data_output_path}")
+
+
+# === Step 5: Plot and save SVG and PNG to public/plots/
+image_output_dir = Path("public") / "plots"
+image_output_dir.mkdir(parents=True, exist_ok=True)
 
 plt.figure(figsize=(10, 6))
 plt.plot(
@@ -215,8 +220,11 @@ plt.xlabel("Year")
 plt.ylabel("Citations")
 plt.legend()
 plt.tight_layout()
-plt.savefig(plot_path, format="svg")
-print(f"Plot saved to {plot_path}")
-plot_path = Path(plot_path).with_suffix(".png")
-plt.savefig(plot_path, format="png")
-print(f"Plot saved to {plot_path}")
+
+plot_path_svg = image_output_dir / "citations_by_year.svg"
+plt.savefig(plot_path_svg, format="svg")
+print(f"Plot saved to {plot_path_svg}")
+
+plot_path_png = image_output_dir / "citations_by_year.png"
+plt.savefig(plot_path_png, format="png")
+print(f"Plot saved to {plot_path_png}")
