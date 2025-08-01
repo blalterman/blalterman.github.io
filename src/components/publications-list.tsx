@@ -9,6 +9,7 @@ import {
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button";
 import { ExternalLink, BookOpen } from "lucide-react";
+import Link from "next/link";
 
 const publications = [
     {
@@ -85,6 +86,27 @@ export function PublicationsList() {
             <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">Publications</h2>
                 <p className="text-lg text-muted-foreground mt-2">A comprehensive list of my research papers and preprints.</p>
+            </div>
+            <div className="text-center mb-12 text-muted-foreground max-w-3xl mx-auto">
+                <p>
+                    This page is automatically generated using data from{' '}
+                    <Link
+                        href="https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0001-6673-3432&sort=date%20desc%2C%20bibcode%20desc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline"
+                    >
+                        NASA ADS
+                    </Link>
+                    {' '}and is updated weekly.
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2 mt-4 text-sm">
+                    <p><strong>h-index:</strong> 15</p>
+                    <p><strong>Total papers:</strong> 133</p>
+                    <p><strong>Total citations:</strong> 741</p>
+                    <p><strong>Refereed papers:</strong> 32</p>
+                    <p><strong>Refereed citations:</strong> 730</p>
+                </div>
             </div>
             <div className="border rounded-lg">
                 <Table>
