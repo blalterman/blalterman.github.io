@@ -187,8 +187,8 @@ with open(json_output_path, "w") as f:
 
 print(f"Citation data saved to {json_output_path}")
 
-# === Step 5: Plot and save SVG to assets/images/
-image_output_dir = os.path.join("assets", "images")
+# === Step 5: Plot and save SVG to public/plots/
+image_output_dir = os.path.join("../public", "plots")
 os.makedirs(image_output_dir, exist_ok=True)
 plot_path = os.path.join(image_output_dir, "citations_by_year.svg")
 
