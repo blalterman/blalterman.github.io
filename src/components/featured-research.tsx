@@ -18,14 +18,11 @@ interface ResearchProject {
 
 export function FeaturedResearch() {
   const [researchProjects, setResearchProjects] = useState<ResearchProject[]>([]);
-  const [baseUrl, setBaseUrl] = useState('');
 
   useEffect(() => {
-    setBaseUrl(window.location.origin);
-    
     async function getResearchProjects() {
       try {
-        const response = await fetch(`${window.location.origin}/data/research-projects.json`);
+        const response = await fetch(`/data/research-projects.json`);
         if (!response.ok) {
           throw new Error('Failed to fetch research-projects.json');
         }
