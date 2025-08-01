@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ExternalLink, BookOpen, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import researchProjects from '/public/data/research-projects.json';
+import researchProjects from '../../public/data/research-projects.json';
 
 export function FeaturedResearch() {
   return (
