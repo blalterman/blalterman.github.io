@@ -1,20 +1,44 @@
+"use client"
+
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ExternalLink, BookOpen, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import fs from 'fs';
-import path from 'path';
 
-function getResearchProjects() {
-  const filePath = path.join(process.cwd(), 'data', 'research-projects.json');
-  const jsonData = fs.readFileSync(filePath, 'utf-8');
-  return JSON.parse(jsonData);
+interface ResearchProject {
+  title: string;
+  description: string;
+  image: string;
+  imageHint: string;
+  publicationLink: string;
+  datasetLink: string | null;
 }
 
 export function FeaturedResearch() {
-  const researchProjects = getResearchProjects();
-  
+  const [researchProjects, setResearchProjects] = useState<ResearchProject[]>([]);
+  const [baseUrl, setBaseUrl] = useState('');
+
+  useEffect(() => {
+    setBaseUrl(window.location.origin);
+    
+    async function getResearchProjects() {
+      try {
+        const response = await fetch(`${window.location.origin}/data/research-projects.json`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch research-projects.json');
+        }
+        const data = await response.json();
+        setResearchProjects(data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    
+    getResearchProjects();
+  }, []);
+
   return (
     <section id="research" className="bg-muted/50 py-16 md:py-24">
       <div className="container">

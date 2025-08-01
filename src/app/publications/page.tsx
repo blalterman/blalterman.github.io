@@ -1,3 +1,6 @@
+"use client"
+
+import { useState, useEffect } from 'react';
 import {
     Table,
     TableHeader,
@@ -8,23 +11,41 @@ import {
   } from "@/components/ui/table";
   import { Button } from "@/components/ui/button";
   import { BookOpen, Database, FileText } from "lucide-react";
-  import fs from 'fs';
-  import path from 'path';
-  
-  function getPublicationsData() {
-    const metricsPath = path.join(process.cwd(), 'data', 'ads_metrics.json');
-    const metricsData = fs.readFileSync(metricsPath, 'utf8');
-    const adsMetrics = JSON.parse(metricsData);
-  
-    const publicationsPath = path.join(process.cwd(), 'data', 'ads_publications.json');
-    const publicationsData = fs.readFileSync(publicationsPath, 'utf8');
-    const adsPublications = JSON.parse(publicationsData);
-    
-    return { adsMetrics, adsPublications };
-  }
   
   export default function PublicationsPage() {
-    const { adsMetrics, adsPublications } = getPublicationsData();
+    const [adsMetrics, setAdsMetrics] = useState<any>(null);
+    const [adsPublications, setAdsPublications] = useState<any[]>([]);
+
+    useEffect(() => {
+        async function getData() {
+            try {
+                const metricsResponse = await fetch(`/data/ads_metrics.json`);
+                if (!metricsResponse.ok) {
+                  throw new Error('Failed to fetch ads_metrics.json');
+                }
+                const metricsData = await metricsResponse.json();
+                setAdsMetrics(metricsData);
+    
+                const publicationsResponse = await fetch(`/data/ads_publications.json`);
+                if (!publicationsResponse.ok) {
+                  throw new Error('Failed to fetch ads_publications.json');
+                }
+                const publicationsData = await publicationsResponse.json();
+                setAdsPublications(publicationsData);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        getData();
+    }, []);
+
+    if (!adsMetrics || !adsPublications.length) {
+      return (
+        <div className="container py-16 md:py-24 text-center">
+          <p>Loading publication data...</p>
+        </div>
+      );
+    }
 
     const techReports = adsPublications.filter((pub: any) => pub.publication_type === "techreport");
     const eprints = adsPublications.filter((pub: any) => pub.publication_type === "eprint");
@@ -40,7 +61,7 @@ import {
     const sortedConferenceProceedings = [...inproceedings].sort((a, b) => parseInt(a.year) - parseInt(b.year));
     const sortedConferencePresentations = [...abstracts].sort((a, b) => parseInt(b.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
     const sortedWhitePapers = [...techReports].sort((a, b) => parseInt(a.year) - parseInt(b.year));
-    const sortedPrePrints = [...eprints].sort((a, b) => parseInt(b.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
+    const sortedPrePrints = [...eprints].sort((a, b) => parseInt(a.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
     const sortedPhdThesis = [...phdThesis].sort((a, b) => parseInt(b.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
 
     return (
