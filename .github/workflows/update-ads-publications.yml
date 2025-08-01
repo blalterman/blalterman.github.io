@@ -1,0 +1,43 @@
+name: Update ADS Publications List
+
+on:
+  schedule:
+    - cron: "0 4 * * 1"  # Every Monday at 04:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update-publications:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install ads
+
+      - name: Fetch ADS publications
+        env:
+          ADS_DEV_KEY: ${{ secrets.ADS_DEV_KEY }}
+        run: |
+          python scripts/fetch_ads_publications_to_data_dir.py
+
+      - name: Pull latest changes
+        run: |
+          git fetch origin
+          git pull origin main --ff-only
+
+      - name: Commit updated publications file
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add _data/ads_publications.json
+          git commit -m "Update ADS publications [automated]" || echo "No changes to commit"
+          git push origin main
