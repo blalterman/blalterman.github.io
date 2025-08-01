@@ -26,6 +26,7 @@ jobs:
       - name: Fetch ADS publications
         env:
           ADS_DEV_KEY: ${{ secrets.ADS_DEV_KEY }}
+          ADS_ORCID: ${{ secrets.ADS_ORCID }}
         run: |
           python scripts/fetch_ads_publications_to_data_dir.py
 
