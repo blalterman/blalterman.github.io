@@ -7,7 +7,6 @@ import {
     TableCell,
   } from "@/components/ui/table";
   import { Button } from "@/components/ui/button";
-  import { Badge } from "@/components/ui/badge";
   import { BookOpen, Database, FileText } from "lucide-react";
   
   const publications = [
@@ -15,7 +14,6 @@ import {
           year: 2023,
           title: "Mapping Martian Surface Composition",
           journal: "Journal of Geophysical Research: Planets",
-          status: "Published",
           links: {
               publication: "#",
               dataset: "#",
@@ -25,7 +23,6 @@ import {
           year: 2023,
           title: "Photochemical Haze Formation in the Atmosphere of TRAPPIST-1e",
           journal: "The Astrophysical Journal",
-          status: "Published",
           links: {
               publication: "#",
           }
@@ -34,7 +31,6 @@ import {
           year: 2022,
           title: "Exoplanet Atmosphere Characterization",
           journal: "Nature Astronomy",
-          status: "Published",
           links: {
               publication: "#",
               dataset: "#",
@@ -44,7 +40,6 @@ import {
           year: 2022,
           title: "Modeling Galactic Chemical Evolution",
           journal: "Monthly Notices of the Royal Astronomical Society",
-          status: "Published",
           links: {
               publication: "#",
               dataset: "#",
@@ -54,7 +49,6 @@ import {
           year: 2021,
           title: "A Search for Technosignatures Around Cool Stars",
           journal: "The Astronomical Journal",
-          status: "Published",
           links: {
               publication: "#",
           }
@@ -63,7 +57,6 @@ import {
           year: 2020,
           title: "Constraints on the Abundance of Primordial Black Holes",
           journal: "Physical Review D",
-          status: "Published",
           links: {
               publication: "#",
           }
@@ -72,7 +65,6 @@ import {
         year: 2024,
         title: "The Role of Magnetic Fields in Star Formation",
         journal: "Science",
-        status: "In Review",
         links: {
           preprint: "#",
         }
@@ -94,7 +86,6 @@ import {
                 <TableHead className="w-[100px] font-bold">Year</TableHead>
                 <TableHead className="font-bold">Title</TableHead>
                 <TableHead className="font-bold">Journal</TableHead>
-                <TableHead className="w-[120px] font-bold">Status</TableHead>
                 <TableHead className="text-right w-[280px] font-bold">Links</TableHead>
               </TableRow>
             </TableHeader>
@@ -104,11 +95,6 @@ import {
                   <TableCell className="font-medium">{pub.year}</TableCell>
                   <TableCell>{pub.title}</TableCell>
                   <TableCell>{pub.journal}</TableCell>
-                  <TableCell>
-                    <Badge variant={pub.status === 'Published' ? 'default' : 'secondary'} className="capitalize">
-                      {pub.status}
-                    </Badge>
-                  </TableCell>
                   <TableCell className="text-right space-x-2">
                     {pub.links.publication && (
                       <Button variant="outline" size="sm" asChild>
