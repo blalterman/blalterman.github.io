@@ -90,7 +90,7 @@ export function Experience() {
                     </h3>
                     <div className="space-y-8">
                         {professionalData.map((job) => (
-                            <Card key={job["Position Title"]} className="shadow-lg">
+                            <Card key={`${job["Position Title"]}-${job.Company}`} className="shadow-lg">
                                 <CardHeader>
                                     <CardTitle>{job["Position Title"]}</CardTitle>
                                     <CardDescription>{job.Company}</CardDescription>
