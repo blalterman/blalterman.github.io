@@ -14,30 +14,42 @@ interface Publication {
   url: string;
 }
 
-async function getPublications(): Promise<Publication[]> {
-  // Data is imported directly from the data file.
-  // In a real-world scenario with a database or external API,
-  // the fetch call would be here.
-  return ads_publications as Publication[];
+interface PublicationGroup {
+    type: PublicationType;
+    pubs: Publication[];
 }
 
+async function getPublications(): Promise<Publication[]> {
+  // Data is imported directly from the data file.
+  return ads_publications as Publication[];
+}
 
 export default async function PublicationsPage() {
     const publications = await getPublications();
     
-    const publicationGroups: Record<string, Publication[]> = {};
-
-    publications.forEach(pub => {
-        if (!publicationGroups[pub.publication_type]) {
-            publicationGroups[pub.publication_type] = [];
+    // Group publications by type
+    const publicationGroups = publications.reduce((acc, pub) => {
+        const type = pub.publication_type;
+        if (!acc[type]) {
+            acc[type] = [];
         }
-        publicationGroups[pub.publication_type].push(pub);
-    });
+        acc[type].push(pub);
+        return acc;
+    }, {} as Record<PublicationType, Publication[]>);
 
-    const sortedPublicationGroups = Object.entries(publicationGroups).map(([type, pubs]) => ({
-        type: type as PublicationType,
-        pubs: pubs.sort((a, b) => parseInt(b.year) - parseInt(a.year) || a.title.localeCompare(b.title)),
-    }));
+    // Sort publications within each group and create the final structure
+    const sortedPublicationGroups: PublicationGroup[] = Object.entries(publicationGroups)
+        .map(([type, pubs]) => ({
+            type: type as PublicationType,
+            pubs: pubs.sort((a, b) => {
+                const yearA = parseInt(a.year, 10);
+                const yearB = parseInt(b.year, 10);
+                if (yearB !== yearA) {
+                    return yearB - yearA;
+                }
+                return a.title.localeCompare(b.title);
+            }),
+        }));
 
     return (
         <PublicationsList publications={sortedPublicationGroups} />
