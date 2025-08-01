@@ -6,7 +6,7 @@ export function About() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
         <div className="md:col-span-1 flex justify-center">
             <Avatar className="h-48 w-48 md:h-64 md:w-64 border-4 border-primary/50 shadow-lg">
-                <AvatarImage src="https://placehold.co/256x256.png" alt="Ben Alterman" data-ai-hint="professional headshot" />
+                <AvatarImage src="https://placehold.co/256x256.png" alt="B. L. Alterman" data-ai-hint="professional headshot" />
                 <AvatarFallback>BA</AvatarFallback>
             </Avatar>
         </div>

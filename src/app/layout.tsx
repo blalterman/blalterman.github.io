@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Ben Alterman | Academic Portfolio',
-  description: 'The academic and research portfolio of Ben Alterman, focusing on planetary science and astrophysics.',
+  title: 'B. L. Alterman | Academic Portfolio',
+  description: 'The academic and research portfolio of B. L. Alterman, focusing on planetary science and astrophysics.',
 };
 
 export default function RootLayout({

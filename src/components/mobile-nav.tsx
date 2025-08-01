@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, Mountain, Github, Linkedin, Twitter } from 'lucide-react';
+import { Menu, Mountain, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Separator } from '@/components/ui/separator';
@@ -25,7 +25,7 @@ export function MobileNav() {
           <div className="border-b p-4">
             <Link href="/" className="flex items-center gap-2 font-bold" onClick={closeSheet}>
               <Mountain className="h-6 w-6 text-primary" />
-              <span className="text-lg">Ben Alterman</span>
+              <span className="text-lg">B. L. Alterman</span>
             </Link>
           </div>
           <div className="flex-1 overflow-y-auto">
@@ -52,16 +52,6 @@ export function MobileNav() {
             <Button variant="ghost" size="icon" asChild>
               <Link href="https://github.com/blalterman" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-5 w-5" />
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5" />
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
               </Link>
             </Button>
           </div>

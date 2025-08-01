@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Github } from 'lucide-react';
 import Link from 'next/link';
 
 export function Contact() {
@@ -31,15 +31,9 @@ export function Contact() {
           <Link href="https://github.com/blalterman" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-foreground transition-colors">
             <Github className="h-6 w-6" />
           </Link>
-          <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Linkedin className="h-6 w-6" />
-          </Link>
-          <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Twitter className="h-6 w-6" />
-          </Link>
         </div>
         <p className="text-sm text-muted-foreground">
-          &copy; {currentYear} Ben Alterman. All Rights Reserved.
+          &copy; {currentYear} B. L. Alterman. All Rights Reserved.
         </p>
       </div>
     </footer>
