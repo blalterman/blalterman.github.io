@@ -2,50 +2,58 @@
 [
   {
     "title": "Proton Beams",
-    "description": "This page will describe research on proton beams.",
+    "description": "Overview of ongoing proton beam research projects.",
     "image": "https://placehold.co/600x400.png",
-    "imageHint": "particle beam",
-    "publicationLink": "/research/proton_beams",
-    "datasetLink": "/research/proton_beams"
+    "imageHint": "proton beam space",
+    "publicationLink": "#",
+    "datasetLink": "#"
   },
   {
     "title": "Helium Abundance",
-    "description": "This page will discuss research on helium abundance in the solar wind.",
+    "description": "Summary of studies on helium abundance in the solar wind.",
     "image": "https://placehold.co/600x400.png",
-    "imageHint": "sun solar flare",
-    "publicationLink": "/research/helium_abundance",
-    "datasetLink": "/research/helium_abundance"
+    "imageHint": "helium solar",
+    "publicationLink": "#",
+    "datasetLink": "#"
   },
   {
     "title": "Space Weather",
-    "description": "This page will outline research related to space weather forecasting and analysis.",
+    "description": "Information about space weather forecasting and analysis.",
     "image": "https://placehold.co/600x400.png",
-    "imageHint": "aurora borealis",
-    "publicationLink": "/research/space_weather",
-    "datasetLink": "/research/space_weather"
+    "imageHint": "space weather",
+    "publicationLink": "#",
+    "datasetLink": "#"
   },
   {
     "title": "Suprathermal Ions",
-    "description": "This page will describe studies on suprathermal ions in the heliosphere.",
+    "description": "Studies examining suprathermal ions throughout the heliosphere.",
     "image": "https://placehold.co/600x400.png",
-    "imageHint": "particle collision",
-    "publicationLink": "/research/suprathermal_ions",
-    "datasetLink": "/research/suprathermal_ions"
+    "imageHint": "suprathermal ions",
+    "publicationLink": "#",
+    "datasetLink": null
   },
   {
     "title": "Heavy Ion Composition",
-    "description": "This page will focus on heavy ion composition in the solar wind and related missions.",
+    "description": "Investigations into heavy ion makeup of the solar wind.",
     "image": "https://placehold.co/600x400.png",
-    "imageHint": "abstract particles",
-    "publicationLink": "/research/heavy_ion_composition",
-    "datasetLink": "/research/heavy_ion_composition"
+    "imageHint": "heavy ion",
+    "publicationLink": "#",
+    "datasetLink": "#"
   },
   {
     "title": "Coulomb Collisions",
-    "description": "This page will examine how Coulomb collisions influence the solar wind.",
+    "description": "Overview of Coulomb collision processes and their role in the solar wind.",
     "image": "https://placehold.co/600x400.png",
-    "imageHint": "plasma physics",
-    "publicationLink": "/research/coulomb_collisions",
-    "datasetLink": "/research/coulomb_collisions"
+    "imageHint": "coulomb collision",
+    "publicationLink": "#",
+    "datasetLink": null
+  },
+  {
+    "title": "Kinetic Physics",
+    "description": "Studies exploring kinetic processes in heliophysics and space plasmas.",
+    "image": "https://placehold.co/600x400.png",
+    "imageHint": "kinetic physics",
+    "publicationLink": "#",
+    "datasetLink": null
   }
 ]

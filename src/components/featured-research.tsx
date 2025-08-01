@@ -3,9 +3,18 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ExternalLink, BookOpen, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import researchProjects from '../../public/data/research-projects.json';
 
-export function FeaturedResearch() {
+async function getResearchProjects() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/research-projects.json`);
+  if (!res.ok) {
+    throw new Error('Failed to fetch research-projects.json');
+  }
+  return res.json();
+}
+
+export async function FeaturedResearch() {
+  const researchProjects = await getResearchProjects();
+  
   return (
     <section id="research" className="bg-muted/50 py-16 md:py-24">
       <div className="container">
@@ -14,7 +23,7 @@ export function FeaturedResearch() {
           <p className="text-lg text-muted-foreground mt-2">Highlights from my research contributions and discoveries.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {researchProjects.map((project) => (
+          {researchProjects.map((project: any) => (
             <Card key={project.title} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="relative aspect-[16/9] w-full">
                 <Image src={project.image} alt={project.title} fill className="object-cover" data-ai-hint={project.imageHint} />
@@ -33,12 +42,14 @@ export function FeaturedResearch() {
                       Publication
                     </Link>
                   </Button>
-                  <Button asChild>
-                    <Link href={project.datasetLink} target="_blank">
-                      <ExternalLink className="mr-2 h-4" />
-                      Dataset
-                    </Link>
-                  </Button>
+                  {project.datasetLink && (
+                    <Button asChild>
+                      <Link href={project.datasetLink} target="_blank">
+                        <ExternalLink className="mr-2 h-4" />
+                        Dataset
+                      </Link>
+                    </Button>
+                  )}
                 </CardFooter>
               </div>
             </Card>
@@ -56,3 +67,4 @@ export function FeaturedResearch() {
     </section>
   );
 }
+    
