@@ -8,6 +8,7 @@ import {
   } from "@/components/ui/table";
   import { Button } from "@/components/ui/button";
   import { BookOpen, Database, FileText } from "lucide-react";
+  import adsMetrics from "../../../public/data/ads_metrics.json";
   
   const publications = [
       {
@@ -78,6 +79,28 @@ import {
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold font-headline">Publications</h1>
           <p className="text-lg text-muted-foreground mt-2">A list of my research publications and conference presentations.</p>
+        </div>
+        <div className="flex justify-center space-x-8 mb-12">
+          <div className="flex flex-col items-center">
+            <span className="text-2xl font-bold">{adsMetrics["indicators"]["h"]}</span>
+            <span className="text-sm text-muted-foreground">h-index</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-2xl font-bold">{adsMetrics["basic stats"]["number of papers"]}</span>
+            <span className="text-sm text-muted-foreground">Total papers</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-2xl font-bold">{adsMetrics["citation stats"]["total number of citations"]}</span>
+            <span className="text-sm text-muted-foreground">Total citations</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-2xl font-bold">{adsMetrics["basic stats refereed"]["number of papers"]}</span>
+            <span className="text-sm text-muted-foreground">Refereed papers</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-2xl font-bold">{adsMetrics["citation stats refereed"]["total number of citations"]}</span>
+            <span className="text-sm text-muted-foreground">Refereed citations</span>
+          </div>
         </div>
         <div className="border rounded-lg overflow-hidden shadow-lg">
           <Table>
