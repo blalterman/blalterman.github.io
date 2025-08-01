@@ -15,13 +15,19 @@ import {
   
   export default function PublicationsPage() {
     const techReports = adsPublications.filter(pub => pub.publication_type === "techreport");
+    const eprints = adsPublications.filter(pub => pub.publication_type === "eprint");
+    const datasets = adsPublications.filter(pub => pub.publication_type === "dataset");
+    const inproceedings = adsPublications.filter(pub => pub.publication_type === "inproceedings");
+    const articles = adsPublications.filter(pub => pub.publication_type === "article");
+    const abstracts = adsPublications.filter(pub => pub.publication_type === "abstract");
 
-    const sortedRefereedPublications = [...publicationsData.refereedPublications].sort((a, b) => b.year - a.year);
-    const sortedDatasets = [...publicationsData.datasets].sort((a, b) => b.year - a.year);
-    const sortedConferenceProceedings = [...publicationsData.conferenceProceedings].sort((a, b) => b.year - a.year);
-    const sortedConferencePresentations = [...publicationsData.conferencePresentations].sort((a, b) => b.year - a.year);
+
+    const sortedRefereedPublications = [...articles].sort((a, b) => parseInt(b.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
+    const sortedDatasets = [...datasets].sort((a, b) => parseInt(b.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
+    const sortedConferenceProceedings = [...inproceedings].sort((a, b) => parseInt(b.year) - parseInt(a.year));
+    const sortedConferencePresentations = [...abstracts].sort((a, b) => parseInt(b.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
     const sortedWhitePapers = [...techReports].sort((a, b) => parseInt(b.year) - parseInt(a.year));
-    const sortedPrePrints = [...publicationsData.prePrints].sort((a, b) => b.year - a.year);
+    const sortedPrePrints = [...eprints].sort((a, b) => parseInt(b.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
 
     return (
       <div className="container py-16 md:py-24">
@@ -68,32 +74,16 @@ import {
             <TableBody>
               {sortedRefereedPublications.map((pub, index) => (
                 <TableRow key={index} className="hover:bg-muted/30">
-                  <TableCell className="font-medium">{pub.year}</TableCell>
+                  <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
                   <TableCell>{pub.title}</TableCell>
-                  <TableCell>{pub.authors}</TableCell>
+                  <TableCell>{pub.authors.join(', ')}</TableCell>
                   <TableCell>{pub.journal}</TableCell>
                   <TableCell className="text-right space-x-2">
-                    {pub.links.publication && (
+                    {pub.url && (
                       <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.publication} target="_blank" rel="noopener noreferrer">
+                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
                           <BookOpen className="mr-2 h-4 w-4" />
                           Publication
-                        </a>
-                      </Button>
-                    )}
-                    {pub.links.dataset && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.dataset} target="_blank" rel="noopener noreferrer">
-                          <Database className="mr-2 h-4 w-4" />
-                          Dataset
-                        </a>
-                      </Button>
-                    )}
-                    {pub.links.preprint && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.preprint} target="_blank" rel="noopener noreferrer">
-                          <FileText className="mr-2 h-4 w-4" />
-                          Preprint
                         </a>
                       </Button>
                     )}
@@ -119,32 +109,16 @@ import {
             <TableBody>
               {sortedDatasets.map((pub, index) => (
                 <TableRow key={index} className="hover:bg-muted/30">
-                  <TableCell className="font-medium">{pub.year}</TableCell>
+                  <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
                   <TableCell>{pub.title}</TableCell>
-                  <TableCell>{pub.authors}</TableCell>
+                  <TableCell>{pub.authors.join(', ')}</TableCell>
                   <TableCell>{pub.journal}</TableCell>
                   <TableCell className="text-right space-x-2">
-                    {pub.links.publication && (
+                    {pub.url && (
                       <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.publication} target="_blank" rel="noopener noreferrer">
-                          <BookOpen className="mr-2 h-4 w-4" />
-                          Publication
-                        </a>
-                      </Button>
-                    )}
-                    {pub.links.dataset && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.dataset} target="_blank" rel="noopener noreferrer">
+                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
                           <Database className="mr-2 h-4 w-4" />
                           Dataset
-                        </a>
-                      </Button>
-                    )}
-                    {pub.links.preprint && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.preprint} target="_blank" rel="noopener noreferrer">
-                          <FileText className="mr-2 h-4 w-4" />
-                          Preprint
                         </a>
                       </Button>
                     )}
@@ -170,32 +144,16 @@ import {
             <TableBody>
               {sortedConferenceProceedings.map((pub, index) => (
                 <TableRow key={index} className="hover:bg-muted/30">
-                  <TableCell className="font-medium">{pub.year}</TableCell>
+                  <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
                   <TableCell>{pub.title}</TableCell>
-                  <TableCell>{pub.authors}</TableCell>
+                  <TableCell>{pub.authors.join(', ')}</TableCell>
                   <TableCell>{pub.journal}</TableCell>
                   <TableCell className="text-right space-x-2">
-                    {pub.links.publication && (
+                    {pub.url && (
                       <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.publication} target="_blank" rel="noopener noreferrer">
+                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
                           <BookOpen className="mr-2 h-4 w-4" />
                           Publication
-                        </a>
-                      </Button>
-                    )}
-                    {pub.links.dataset && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.dataset} target="_blank" rel="noopener noreferrer">
-                          <Database className="mr-2 h-4 w-4" />
-                          Dataset
-                        </a>
-                      </Button>
-                    )}
-                    {pub.links.preprint && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.preprint} target="_blank" rel="noopener noreferrer">
-                          <FileText className="mr-2 h-4 w-4" />
-                          Preprint
                         </a>
                       </Button>
                     )}
@@ -221,32 +179,16 @@ import {
             <TableBody>
               {sortedConferencePresentations.map((pub, index) => (
                 <TableRow key={index} className="hover:bg-muted/30">
-                  <TableCell className="font-medium">{pub.year}</TableCell>
+                  <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
                   <TableCell>{pub.title}</TableCell>
-                  <TableCell>{pub.authors}</TableCell>
+                  <TableCell>{pub.authors.join(', ')}</TableCell>
                   <TableCell>{pub.journal}</TableCell>
                   <TableCell className="text-right space-x-2">
-                    {pub.links.publication && (
+                    {pub.url && (
                       <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.publication} target="_blank" rel="noopener noreferrer">
-                          <BookOpen className="mr-2 h-4 w-4" />
-                          Publication
-                        </a>
-                      </Button>
-                    )}
-                    {pub.links.dataset && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.dataset} target="_blank" rel="noopener noreferrer">
-                          <Database className="mr-2 h-4 w-4" />
-                          Dataset
-                        </a>
-                      </Button>
-                    )}
-                    {pub.links.preprint && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.preprint} target="_blank" rel="noopener noreferrer">
+                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
                           <FileText className="mr-2 h-4 w-4" />
-                          Preprint
+                          Presentation
                         </a>
                       </Button>
                     )}
@@ -307,30 +249,14 @@ import {
             <TableBody>
               {sortedPrePrints.map((pub, index) => (
                 <TableRow key={index} className="hover:bg-muted/30">
-                  <TableCell className="font-medium">{pub.year}</TableCell>
+                  <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
                   <TableCell>{pub.title}</TableCell>
-                  <TableCell>{pub.authors}</TableCell>
+                  <TableCell>{pub.authors.join(', ')}</TableCell>
                   <TableCell>{pub.journal}</TableCell>
                   <TableCell className="text-right space-x-2">
-                    {pub.links.publication && (
+                    {pub.url && (
                       <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.publication} target="_blank" rel="noopener noreferrer">
-                          <BookOpen className="mr-2 h-4 w-4" />
-                          Publication
-                        </a>
-                      </Button>
-                    )}
-                    {pub.links.dataset && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.dataset} target="_blank" rel="noopener noreferrer">
-                          <Database className="mr-2 h-4 w-4" />
-                          Dataset
-                        </a>
-                      </Button>
-                    )}
-                    {pub.links.preprint && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.links.preprint} target="_blank" rel="noopener noreferrer">
+                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
                           <FileText className="mr-2 h-4 w-4" />
                           Preprint
                         </a>
