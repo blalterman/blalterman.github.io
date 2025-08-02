@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ExternalLink, BookOpen, ArrowRight } from 'lucide-react';
@@ -20,7 +21,7 @@ interface FeaturedResearchProps {
 export function FeaturedResearch({ researchProjects }: FeaturedResearchProps) {
   return (
     <section id="research" className="bg-muted/50 py-16 md:py-24">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Featured Research</h2>
           <p className="text-lg text-muted-foreground mt-2">Highlights from my research contributions and discoveries.</p>

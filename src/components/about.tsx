@@ -1,9 +1,10 @@
+
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import Image from 'next/image';
 
 export function About() {
   return (
-    <section id="about" className="container py-16 md:py-24">
+    <section id="about" className="container mx-auto py-16 md:py-24">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
         <div className="md:col-span-1 flex justify-center">
             <Avatar className="h-48 w-48 md:h-64 md:w-64 border-4 border-primary/50 shadow-lg">

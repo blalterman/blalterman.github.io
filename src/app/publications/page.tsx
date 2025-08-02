@@ -1,3 +1,4 @@
+
 import fs from 'fs';
 import path from 'path';
 import {
@@ -21,7 +22,7 @@ import {
 
     if (!adsMetrics || !adsPublications.length) {
       return (
-        <div className="container py-16 md:py-24 text-center">
+        <div className="container mx-auto py-16 md:py-24 text-center">
           <p>Loading publication data...</p>
         </div>
       );
@@ -42,10 +43,10 @@ import {
     const sortedConferencePresentations = [...abstracts].sort((a, b) => parseInt(b.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
     const sortedWhitePapers = [...techReports].sort((a, b) => parseInt(a.year) - parseInt(b.year));
     const sortedPrePrints = [...eprints].sort((a, b) => parseInt(a.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
-    const sortedPhdThesis = [...phdThesis].sort((a, b) => parseInt(b.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
+    const sortedPhdThesis = [...phdThesis].sort((a, b) => parseInt(a.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
 
     return (
-      <div className="container py-16 md:py-24">
+      <div className="container mx-auto py-16 md:py-24">
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold font-headline">Publications</h1>
           <p className="text-lg text-muted-foreground mt-2">A list of my research publications and conference presentations.</p>

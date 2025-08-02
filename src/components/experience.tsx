@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Briefcase, GraduationCap } from "lucide-react";
 
@@ -22,7 +23,7 @@ interface ExperienceProps {
 
 export function Experience({ educationData, professionalData }: ExperienceProps) {
     return (
-        <section id="experience" className="container py-16 md:py-24">
+        <section id="experience" className="container mx-auto py-16 md:py-24">
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">Experience & Education</h2>
                 <p className="text-lg text-muted-foreground mt-2">My academic journey and professional background.</p>
