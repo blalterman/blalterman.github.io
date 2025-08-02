@@ -3,8 +3,13 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'B. L. Alterman | Academic Portfolio',
+  title: 'B. L. Alterman | Heliophysicist',
   description: 'The academic and research portfolio of B. L. Alterman.',
+  keywords: [
+    "heliophysics", "solar wind", "Coulomb collisions", "Helium Abundance",
+    "space weather", "solar physics", "composition", "proton beams",
+    "kinetic physics",
+  ],
 };
 
 export default function RootLayout({
