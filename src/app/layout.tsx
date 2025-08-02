@@ -67,7 +67,8 @@ export default function RootLayout({
     "alumniOf": [
       {
         "@type": "EducationalOrganization",
-        "name": "University of Michigan"
+        "name": "University of Michigan",
+        "url": "https://www.umich.edu"
       },
       {
         "@type": "EducationalOrganization",
