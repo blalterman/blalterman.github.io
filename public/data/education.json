@@ -2,16 +2,16 @@
 [
     {
         "Institution": "University of Michigan",
-        "Degree": "PhD",
         "Department": "Applied Physics",
         "Location": "Ann Arbor, MI",
-        "Dates": "2013 – 2018"
+        "Dates": "2013 – 2018",
+        "Degree": "Doctor of Philosophy"
     },
     {
         "Institution": "Macalester College",
-        "Degree": "Bachelors of the Arts",
         "Department": "Physics and Philosophy",
-        "Location": "St. Paul, MN",
-        "Dates": "2009 – 2013"
+        "Location": "Saint Paul, MN",
+        "Dates": "2009 – 2013",
+        "Degree": "Bachelor of the Arts"
     }
 ]
