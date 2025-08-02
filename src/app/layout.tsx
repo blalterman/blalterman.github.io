@@ -9,7 +9,9 @@ export const metadata: Metadata = {
   keywords: [
     "heliophysics", "solar wind", "Coulomb collisions", "Helium Abundance",
     "space weather", "solar physics", "composition", "proton beams",
-    "kinetic physics", "astrophysics", "B. L. Alterman", "Ben Alterman"
+    "kinetic physics", "astrophysics", 
+    "space physics", "space plasma", "plasma physics",
+    "B. L. Alterman", "Ben Alterman", "Benjamin Alterman", "Benjamin L. Alterman", "B. Alterman"
   ],
   authors: [{ name: "B. L. Alterman", url: "https://blalterman.github.io" }],
   alternates: {
@@ -60,6 +62,8 @@ export default function RootLayout({
       "https://www.iau.org/Profile?ID=25195",
       "https://www.agu.org/Search/PublicProfile?userId=B807C11E-0E6D-47E1-BB3A-1921EB2584B8",
       "https://www.linkedin.com/in/blalterman/",
+      "https://www.scopus.com/authid/detail.uri?authorId=57202115822",
+      "https://sciprofiles.com/profile/blalterman"
     ],
     "jobTitle": "Research Astrophysicist",
     "affiliation": {
