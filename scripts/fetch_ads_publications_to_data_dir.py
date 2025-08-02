@@ -4,6 +4,8 @@ import json
 from datetime import datetime
 from pathlib import Path
 
+import pdb
+
 # Read ORCID and API token from environment variables
 ORCID = os.getenv("ADS_ORCID")
 token = os.getenv("ADS_DEV_KEY")
@@ -17,13 +19,16 @@ def format_author_name(author_name):
     parts = author_name.split()
     if not parts:
         return ""
-    last_name = parts[-1]
-    first_initial = parts[0][0] if len(parts) > 1 else ""
-    middle_initial = parts[1][0] if len(parts) > 2 else ""
+    last_name = parts[0]
+    first_initial = parts[1][0] if len(parts) > 1 else ""
+    middle_initial = parts[2][0] if len(parts) > 2 else ""
 
     formatted_name = f"{last_name}, {first_initial}." # This line is potentially problematic from previous edit. Fixing it here.
     if middle_initial:
         formatted_name += f" {middle_initial}."
+        
+    formatted_name = formatted_name.replace(",,", ",")
+    
     return formatted_name
 
 # Fields to request from ADS
