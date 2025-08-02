@@ -1,7 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ExternalLink, BookOpen, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,8 +10,7 @@ interface ResearchProject {
   description: string;
   image: string;
   imageHint: string;
-  publicationLink: string;
-  datasetLink: string | null;
+  slug: string;
 }
 
 interface FeaturedResearchProps {
@@ -40,20 +39,12 @@ export function FeaturedResearch({ researchProjects }: FeaturedResearchProps) {
                   <CardDescription>{project.description}</CardDescription>
                 </CardContent>
                 <CardFooter className="p-0 pt-4 flex justify-end gap-2">
-                  <Button variant="outline" asChild>
-                    <Link href={project.publicationLink} target="_blank">
-                      <BookOpen className="mr-2 h-4 w-4" />
-                      Publication
+                  <Button asChild>
+                    <Link href={`/research/${project.slug}`}>
+                      Details
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                  {project.datasetLink && (
-                    <Button asChild>
-                      <Link href={project.datasetLink} target="_blank">
-                        <ExternalLink className="mr-2 h-4" />
-                        Dataset
-                      </Link>
-                    </Button>
-                  )}
                 </CardFooter>
               </div>
             </Card>

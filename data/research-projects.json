@@ -1,0 +1,52 @@
+
+[
+  {
+    "title": "Proton Beams",
+    "slug": "proton-beams",
+    "description": "Investigating the properties and impact of proton beams in the solar wind, using data from multiple spacecraft to understand their origin and evolution.",
+    "image": "https://placehold.co/600x400.png",
+    "imageHint": "solar wind particles"
+  },
+  {
+    "title": "Helium Abundance",
+    "slug": "helium-abundance",
+    "description": "Analyzing variations in helium abundance across solar cycles to better understand solar wind sources and the mechanisms of solar activity.",
+    "image": "https://placehold.co/600x400.png",
+    "imageHint": "sun corona"
+  },
+  {
+    "title": "Space Weather",
+    "slug": "space-weather",
+    "description": "Developing predictive models for space weather events by studying the connection between solar phenomena and near-Earth environmental conditions.",
+    "image": "https://placehold.co/600x400.png",
+    "imageHint": "earth aurora"
+  },
+  {
+    "title": "Suprathermal Ions",
+    "slug": "suprathermal-ions",
+    "description": "Exploring the energetic tail of the solar wind ion distribution to uncover particle acceleration mechanisms in the heliosphere.",
+    "image": "https://placehold.co/600x400.png",
+    "imageHint": "particle trails"
+  },
+  {
+    "title": "Heavy Ion Composition",
+    "slug": "heavy-ion-composition",
+    "description": "Using heavy ion composition data to trace the origin of solar wind streams back to their source regions on the Sun.",
+    "image": "https://placehold.co/600x400.png",
+    "imageHint": "atomic structure"
+  },
+  {
+    "title": "Coulomb Collisions",
+    "slug": "coulomb-collisions",
+    "description": "Studying the role of Coulomb collisions in shaping the velocity distributions of solar wind particles as they travel from the Sun to Earth.",
+    "image": "https://placehold.co/600x400.png",
+    "imageHint": "particle collision"
+  },
+  {
+    "title": "Kinetic Physics",
+    "slug": "kinetic-physics",
+    "description": "Investigating micro-scale plasma processes, such as wave-particle interactions and instabilities, that govern the macroscopic behavior of the solar wind.",
+    "image": "https://placehold.co/600x400.png",
+    "imageHint": "plasma waves"
+  }
+]
