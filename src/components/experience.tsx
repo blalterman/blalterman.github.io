@@ -7,6 +7,7 @@ interface Education {
     Department: string;
     Location: string;
     Dates: string;
+    Degree: string;
 }
 
 interface Position {
@@ -39,7 +40,8 @@ export function Experience({ educationData, professionalData }: ExperienceProps)
                             <Card key={edu.Institution} className="shadow-lg">
                                 <CardHeader>
                                     <CardTitle>{edu.Institution}</CardTitle>
-                                    <CardDescription>{edu.Department}</CardDescription>
+                                    <CardDescription>{edu.Degree}</CardDescription>
+                                    <p className="text-sm text-muted-foreground pt-1">{edu.Department}</p>
                                     <p className="text-sm text-muted-foreground pt-1">{edu.Dates}</p>
                                 </CardHeader>
                                 <CardContent>
