@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'B. L. Alterman | Academic Portfolio',
-  description: 'The academic and research portfolio of B. L. Alterman, focusing on planetary science and astrophysics.',
+  description: 'The academic and research portfolio of B. L. Alterman.',
 };
 
 export default function RootLayout({
