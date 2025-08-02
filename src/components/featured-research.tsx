@@ -1,6 +1,3 @@
-"use client"
-
-import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ExternalLink, BookOpen, ArrowRight } from 'lucide-react';
@@ -16,26 +13,11 @@ interface ResearchProject {
   datasetLink: string | null;
 }
 
-export function FeaturedResearch() {
-  const [researchProjects, setResearchProjects] = useState<ResearchProject[]>([]);
+interface FeaturedResearchProps {
+    researchProjects: ResearchProject[];
+}
 
-  useEffect(() => {
-    async function getResearchProjects() {
-      try {
-        const response = await fetch(`/data/research-projects.json`);
-        if (!response.ok) {
-          throw new Error('Failed to fetch research-projects.json');
-        }
-        const data = await response.json();
-        setResearchProjects(data);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    
-    getResearchProjects();
-  }, []);
-
+export function FeaturedResearch({ researchProjects }: FeaturedResearchProps) {
   return (
     <section id="research" className="bg-muted/50 py-16 md:py-24">
       <div className="container">

@@ -1,6 +1,3 @@
-"use client";
-
-import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Briefcase, GraduationCap } from "lucide-react";
 
@@ -18,27 +15,12 @@ interface Position {
     Location: string;
 }
 
-export function Experience() {
-    const [educationData, setEducationData] = useState<Education[]>([]);
-    const [professionalData, setProfessionalData] = useState<Position[]>([]);
+interface ExperienceProps {
+    educationData: Education[];
+    professionalData: Position[];
+}
 
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                const eduResponse = await fetch('/data/education.json');
-                const eduData = await eduResponse.json();
-                setEducationData(eduData);
-
-                const profResponse = await fetch('/data/positions.json');
-                const profData = await profResponse.json();
-                setProfessionalData(profData);
-            } catch (error) {
-                console.error("Failed to fetch experience data", error);
-            }
-        }
-        fetchData();
-    }, []);
-
+export function Experience({ educationData, professionalData }: ExperienceProps) {
     return (
         <section id="experience" className="container py-16 md:py-24">
             <div className="text-center mb-16">

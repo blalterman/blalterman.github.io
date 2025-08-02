@@ -1,6 +1,5 @@
-"use client"
-
-import { useState, useEffect } from 'react';
+import fs from 'fs';
+import path from 'path';
 import {
     Table,
     TableHeader,
@@ -13,31 +12,12 @@ import {
   import { BookOpen, Database, FileText } from "lucide-react";
   
   export default function PublicationsPage() {
-    const [adsMetrics, setAdsMetrics] = useState<any>(null);
-    const [adsPublications, setAdsPublications] = useState<any[]>([]);
+    const metricsPath = path.join(process.cwd(), 'public', 'data', 'ads_metrics.json');
+    const adsMetrics = JSON.parse(fs.readFileSync(metricsPath, 'utf-8'));
 
-    useEffect(() => {
-        async function getData() {
-            try {
-                const metricsResponse = await fetch(`/data/ads_metrics.json`);
-                if (!metricsResponse.ok) {
-                  throw new Error('Failed to fetch ads_metrics.json');
-                }
-                const metricsData = await metricsResponse.json();
-                setAdsMetrics(metricsData);
-    
-                const publicationsResponse = await fetch(`/data/ads_publications.json`);
-                if (!publicationsResponse.ok) {
-                  throw new Error('Failed to fetch ads_publications.json');
-                }
-                const publicationsData = await publicationsResponse.json();
-                setAdsPublications(publicationsData);
-            } catch (error) {
-                console.error(error);
-            }
-        }
-        getData();
-    }, []);
+    const publicationsPath = path.join(process.cwd(), 'public', 'data', 'ads_publications.json');
+    const adsPublications = JSON.parse(fs.readFileSync(publicationsPath, 'utf-8'));
+
 
     if (!adsMetrics || !adsPublications.length) {
       return (
