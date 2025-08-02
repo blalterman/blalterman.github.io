@@ -1,0 +1,41 @@
+name: Generate PDFs
+
+on:
+  push:
+    branches:
+      - main # or your default branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # or your preferred Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Puppeteer
+        run: npm install puppeteer
+
+      - name: Create output directory
+        run: mkdir -p public/paper-figures/pdfs
+
+      - name: Run PDF generation script
+        run: node scripts/generate-pdfs.js
+        env:
+          INPUT_DIR: public/paper-figures/html
+          OUTPUT_DIR: public/paper-figures/pdfs
+
+      - name: Upload PDFs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-figures-pdfs
+          path: public/paper-figures/pdfs/
+          retention-days: 5
