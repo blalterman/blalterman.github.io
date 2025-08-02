@@ -12,6 +12,20 @@ if not ORCID or not token:
 ADS_ORCID   : {ORCID}
 ADS_DEV_KEY : {token}""")
 
+# Function to format author names as "Lastname, F. M." or "Lastname, F."
+def format_author_name(author_name):
+    parts = author_name.split()
+    if not parts:
+        return ""
+    last_name = parts[-1]
+    first_initial = parts[0][0] if len(parts) > 1 else ""
+    middle_initial = parts[1][0] if len(parts) > 2 else ""
+
+    formatted_name = f"{last_name}, {first_initial}."
+    if middle_initial:
+        formatted_name += f" {middle_initial}."
+    return formatted_name
+
 # Fields to request from ADS
 fields = [
     "bibcode",
@@ -31,7 +45,7 @@ results = list(ads.SearchQuery(orcid=ORCID, fl=fields, rows=2000))
 publications = []
 for pub in results:
     title = pub.title[0] if pub.title else "(No title)"
-    authors = pub.author if pub.author else []
+    authors = [format_author_name(author) for author in pub.author] if pub.author else []
     pubdate = pub.pubdate or ""
     month, year = "", ""
     if pubdate:
