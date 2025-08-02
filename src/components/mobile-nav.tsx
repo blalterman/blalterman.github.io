@@ -40,9 +40,6 @@ export function MobileNav() {
               <Link href="/publications" className="flex w-full items-center py-2 text-lg font-semibold px-4 rounded-md hover:bg-muted" onClick={closeSheet}>
                 Publications
               </Link>
-              <Link href="/skills" className="flex w-full items-center py-2 text-lg font-semibold px-4 rounded-md hover:bg-muted" onClick={closeSheet}>
-                Skills
-              </Link>
               <Link href="/experience" className="flex w-full items-center py-2 text-lg font-semibold px-4 rounded-md hover:bg-muted" onClick={closeSheet}>
                 Experience
               </Link>
