@@ -1,0 +1,18 @@
+{
+  "Programming & Software": {
+    "icon": "Code",
+    "skills": ["Python", "R", "SQL", "MATLAB", "Git & GitHub", "Docker"]
+  },
+  "Data Analysis & Viz": {
+    "icon": "BrainCircuit",
+    "skills": ["Machine Learning", "Statistical Modeling", "Pandas & NumPy", "Matplotlib & Seaborn", "Plotly & Dash", "GIS"]
+  },
+  "Mission Involvement": {
+    "icon": "Rocket",
+    "skills": ["Mars Rover Mission", "Hubble Telescope", "ExoMars Program", "James Webb ST"]
+  },
+  "Techniques & Methods": {
+    "icon": "Database",
+    "skills": ["Spectroscopy", "Image Processing", "Numerical Simulation", "High-Performance Computing"]
+  }
+}
