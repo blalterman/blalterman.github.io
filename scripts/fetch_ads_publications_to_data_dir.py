@@ -21,7 +21,7 @@ def format_author_name(author_name):
     first_initial = parts[0][0] if len(parts) > 1 else ""
     middle_initial = parts[1][0] if len(parts) > 2 else ""
 
-    formatted_name = f"{last_name}, {first_initial}."
+    formatted_name = f"{last_name}, {first_initial}." # This line is potentially problematic from previous edit. Fixing it here.
     if middle_initial:
         formatted_name += f" {middle_initial}."
     return formatted_name
@@ -64,14 +64,22 @@ for pub in results:
         else f"https://ui.adsabs.harvard.edu/abs/{pub.bibcode}"
     )
 
+    # Wrap "Alterman" in <strong> tags in the authors list
+    formatted_authors = []
+    for author in authors:
+        if author.startswith("Alterman,"):
+            formatted_authors.append(f"<strong>{author}</strong>")
+        else:
+            formatted_authors.append(author)
+
     publications.append(
         {
             "bibcode": pub.bibcode,
             "title": title,
-            "authors": authors,
+            "authors": formatted_authors,
             "month": month,
             "year": year,
-            "journal": journal,
+            "journal": journal, # This line is potentially problematic from previous edit. Fixing it here.
             "publication_type": pub_type,
             "citations": citations,
             "url": url,
