@@ -23,6 +23,8 @@ import os
 import json
 import sys
 
+import pandas as pd
+
 from zoneinfo import ZoneInfo
 
 # Hard code Eastern Time because changing that is a quick update,
@@ -113,6 +115,9 @@ Exiting program
 
 print("Downloading citation data by year...")
 for i, bibcode in enumerate(bibcodes, 1):
+    if not (i % 10):
+        print(f"Downloading bibcode {i} ({bibcode})")
+        
     url = f"https://api.adsabs.harvard.edu/v1/metrics/{bibcode}"
     response = requests.get(url, headers=headers)
     if response.status_code != 200:
@@ -131,9 +136,13 @@ for i, bibcode in enumerate(bibcodes, 1):
     #     nonrefereed_keys = [k for k in hist.keys() if k.endswith("to nonrefereed")]
 
     for k in refereed_keys:
-        refereed_citations[(bibcode, k)] = hist.get(k, {})
+        case = hist.get(k, {})
+        for kk, vv in case.items():
+            refereed_citations[(bibcode, k, kk)] = vv
     for k in nonrefereed_keys:
-        nonrefereed_citations[(bibcode, k)] = hist.get(k, {})
+        case = hist.get(k, {})
+        for kk, vv in case.items():
+            nonrefereed_citations[(bibcode, k, kk)] = vv
 
 # 	refereed_citations[(bibcode, k)] = hist.get(hist_keys["refereed"], {})
 #     nonrefereed_citations[bibcode] = hist.get(hist_keys["nonrefereed"], {})
@@ -143,34 +152,49 @@ for i, bibcode in enumerate(bibcodes, 1):
 #     for year, count in hist.get(hist_keys["nonrefereed"], {}).items():
 #         nonrefereed_citations[int(year)] += count
 
-refereed_citations = [
-    {"year": k, "citations": v} for k, v in refereed_citations.items()
-]
-nonrefereed_citations = [
-    {"year": k, "citations": v} for k, v in nonrefereed_citations.items()
-]
+# pdb.set_trace()
+# 
+# refereed_citations = [
+#     {"year": k, "citations": v} for k, v in refereed_citations.items()
+# ]
+# nonrefereed_citations = [
+#     {"year": k, "citations": v} for k, v in nonrefereed_citations.items()
+# ]
 
 # === Step 3: Align years and prepare data
-print(refereed_citations)
-print(nonrefereed_citations)
+refereed_citations = pd.Series(refereed_citations)
+nonrefereed_citations = pd.Series(nonrefereed_citations)
 
-all_years = sorted(set(refereed_citations) | set(nonrefereed_citations))
-ref_counts = [refereed_citations.get(y, 0) for y in all_years]
-nonref_counts = [nonrefereed_citations.get(y, 0) for y in all_years]
+# print(refereed_citations)
+# print(nonrefereed_citations)
+# 
+# all_years = sorted(set(refereed_citations) | set(nonrefereed_citations))
+# ref_counts = [refereed_citations.get(y, 0) for y in all_years]
+# nonref_counts = [nonrefereed_citations.get(y, 0) for y in all_years]
 
 # ref_counts = refereed_citations.sum(axis=1)
 # nonref_counts = nonrefereed_citations.sum(axis=1)
 # all_counts = pd.concat({"refereed": ref_counts, "nonrefereed": nonref_counts}, axis=1)
 
-print(all_years)
-print(ref_counts)
-print(nonref_counts)
+ref_counts = refereed_citations.groupby(level=-1).sum()
+nonref_counts = nonrefereed_citations.groupby(level=-1).sum()
+all_counts = pd.concat({"Refereed": ref_counts, "Nonrefereed": nonref_counts}, axis=1)
+
+print(all_counts.T, "", sep="\n")
+# print(ref_counts)
+# print(nonref_counts)
 print(
     f"""
 Total Citations
-Refereed    : {sum(ref_counts)}
-Nonrefereed : {sum(nonref_counts)}"""
+Refereed    : {ref_counts.sum()}
+Nonrefereed : {nonref_counts.sum()}
+Total       : {all_counts.sum().sum()}
+"""
 )
+
+all_years = all_counts.index.tolist()
+ref_counts = all_counts.Refereed.tolist()
+nonref_counts = all_counts.Nonrefereed.tolist()
 
 
 # === Step 4: Save citation data to data/ and public/data/
