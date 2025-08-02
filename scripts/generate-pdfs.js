@@ -3,7 +3,9 @@ const fs = require('fs');
 const path = require('path');
 
 async function renderHtmlToPdf(inputDir, outputDir) {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    args: ['--no-sandbox'] // Required for running in environments like GitHub Actions
+  });
 
   try {
     // Ensure output directory exists
