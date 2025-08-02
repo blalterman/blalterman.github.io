@@ -1,52 +1,70 @@
-const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
+const { getDocument } = require('pdfjs-dist/legacy/build/pdf.js');
 
-async function renderHtmlToPdf(inputDir, outputDir) {
-  const browser = await puppeteer.launch({
-    args: ['--no-sandbox'] // Required for running in environments like GitHub Actions
-  });
+async function convertPdfToHtml(inputDir, outputDir) {
+  // Ensure output directory exists
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+    console.log(`Created output directory: ${outputDir}`);
+  }
 
   try {
-    // Ensure output directory exists
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
-      console.log(`Created output directory: ${outputDir}`);
-    }
-
-    const files = fs.readdirSync(inputDir);
+    const files = fs.readdirSync(inputDir).filter(file => path.extname(file).toLowerCase() === '.pdf');
 
     for (const file of files) {
-      if (path.extname(file).toLowerCase() === '.html') {
-        const htmlFilePath = path.join(inputDir, file);
-        const pdfFileName = file.replace('.html', '.pdf');
-        const pdfFilePath = path.join(outputDir, pdfFileName);
+      const pdfFilePath = path.join(inputDir, file);
+      const htmlFileName = file.replace('.pdf', '.html');
+      const htmlFilePath = path.join(outputDir, htmlFileName);
 
-        console.log(`Rendering ${htmlFilePath} to ${pdfFilePath}...`);
+      console.log(`Converting ${pdfFilePath} to ${htmlFilePath}...`);
 
-        const page = await browser.newPage();
-        await page.goto(`file://${htmlFilePath}`, { waitUntil: 'networkidle0' });
-        await page.pdf({ path: pdfFilePath, format: 'A4' });
+      const data = new Uint8Array(fs.readFileSync(pdfFilePath));
+      const loadingTask = getDocument({ data });
+      const pdfDocument = await loadingTask.promise;
 
-        console.log(`Successfully rendered ${pdfFilePath}`);
+      let htmlContent = `<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8">\n<title>${path.parse(file).name}</title>\n</head>\n<body>\n`;
+
+      for (let i = 1; i <= pdfDocument.numPages; i++) {
+        const page = await pdfDocument.getPage(i);
+        const textContent = await page.getTextContent();
+
+        // Basic conversion: Extract text content and wrap in paragraphs
+        // Note: This is a very basic conversion. More sophisticated HTML
+        // generation would require analyzing layout, images, etc.
+        textContent.items.forEach(item => {
+          if (item.str) {
+            htmlContent += `<p>${item.str}</p>\n`;
+          }
+        });
+
+        page.cleanup(); // Release page resources
       }
+
+      htmlContent += `</body>\n</html>`;
+
+      fs.writeFileSync(htmlFilePath, htmlContent);
+
+      console.log(`Successfully converted ${pdfFilePath} to ${htmlFilePath}`);
     }
+
+    console.log('All PDF files processed.');
   } catch (error) {
     console.error('An error occurred:', error);
-  } finally {
-    await browser.close();
-    console.log('Browser closed.');
   }
 }
 
 // Command-line execution
 const args = process.argv.slice(2);
 if (args.length !== 2) {
-  console.error('Usage: node script.js <inputDirectory> <outputDirectory>');
+  console.error(`Usage: node ${path.basename(__filename)} <inputDirectory> <outputDirectory>`);
   process.exit(1);
 }
 
 const inputDirectory = args[0];
 const outputDirectory = args[1];
 
-renderHtmlToPdf(inputDirectory, outputDirectory);
+convertPdfToHtml(inputDirectory, outputDirectory).catch(error => {
+  console.error('Unhandled error during PDF to HTML conversion:', error);
+  process.exit(1);
+});
