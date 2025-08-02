@@ -81,7 +81,7 @@ for pub in results:
         {
             "bibcode": pub.bibcode,
             "title": title,
-            "authors": formatted_authors,
+            "authors": authors,
             "month": month,
             "year": year,
             "journal": journal, # This line is potentially problematic from previous edit. Fixing it here.
