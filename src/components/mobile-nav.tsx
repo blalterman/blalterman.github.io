@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, Mountain, Github } from 'lucide-react';
+import { Menu, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Separator } from '@/components/ui/separator';
@@ -28,7 +28,6 @@ export function MobileNav() {
         <nav className="flex flex-col h-full">
           <div className="border-b p-4">
             <Link href="/" className="flex items-center gap-2 font-bold" onClick={closeSheet}>
-              <Mountain className="h-6 w-6 text-primary" />
               <span className="text-lg">B. L. Alterman</span>
             </Link>
           </div>
