@@ -11,6 +11,7 @@ import {
   } from "@/components/ui/table";
   import { Button } from "@/components/ui/button";
   import { BookOpen, Database, FileText } from "lucide-react";
+  import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
   
   export default function PublicationsPage() {
     const metricsPath = path.join(process.cwd(), 'public', 'data', 'ads_metrics.json');
@@ -86,7 +87,7 @@ import {
                     <TableHead className="font-bold">Title</TableHead>
                     <TableHead className="font-bold">Authors</TableHead>
                     <TableHead className="font-bold">Journal</TableHead>
-                    <TableHead className="text-right w-[280px] font-bold">Links</TableHead>
+                    <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -98,12 +99,20 @@ import {
                       <TableCell>{pub.journal}</TableCell>
                       <TableCell className="text-right space-x-2">
                         {pub.url && (
-                          <Button variant="outline" size="sm" asChild>
-                            <a href={pub.url} target="_blank" rel="noopener noreferrer">
-                              <BookOpen className="mr-2 h-4 w-4" />
-                              Publication
-                            </a>
-                          </Button>
+                          <TooltipProvider>
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <Button variant="outline" size="icon" asChild>
+                                  <a href={pub.url} target="_blank" rel="noopener noreferrer">
+                                    <BookOpen className="h-4 w-4" />
+                                  </a>
+                                </Button>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p>Publication</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
                         )}
                       </TableCell>
                     </TableRow>
@@ -123,7 +132,7 @@ import {
                 <TableHead className="font-bold">Title</TableHead>
                 <TableHead className="font-bold">Authors</TableHead>
                 <TableHead className="font-bold">Journal</TableHead>
-                <TableHead className="text-right w-[280px] font-bold">Links</TableHead>
+                <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -135,12 +144,20 @@ import {
                   <TableCell>{pub.journal}</TableCell>
                   <TableCell className="text-right space-x-2">
                     {pub.url && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
-                          <BookOpen className="mr-2 h-4 w-4" />
-                          Publication
-                        </a>
-                      </Button>
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <Button variant="outline" size="icon" asChild>
+                              <a href={pub.url} target="_blank" rel="noopener noreferrer">
+                                <BookOpen className="h-4 w-4" />
+                              </a>
+                            </Button>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>Publication</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     )}
                   </TableCell>
                 </TableRow>
@@ -149,181 +166,240 @@ import {
           </Table>
         </div>
 
-        <h2 className="text-2xl font-bold font-headline mt-8">Datasets</h2>
-        <div className="border rounded-lg overflow-hidden shadow-lg">
-          <Table>
-            <TableHeader>
-              <TableRow className="bg-muted/50">
-                <TableHead className="w-[100px] font-bold">Year</TableHead>
-                <TableHead className="font-bold">Title</TableHead>
-                <TableHead className="font-bold">Authors</TableHead>
-                <TableHead className="font-bold">Journal</TableHead>
-                <TableHead className="text-right w-[280px] font-bold">Links</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {sortedDatasets.map((pub: any, index: number) => (
-                <TableRow key={index} className="hover:bg-muted/30">
-                  <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
-                  <TableCell>{pub.title}</TableCell>
-                  <TableCell>{pub.authors.join(', ')}</TableCell>
-                  <TableCell>{pub.journal}</TableCell>
-                  <TableCell className="text-right space-x-2">
-                    {pub.url && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
-                          <Database className="mr-2 h-4 w-4" />
-                          Dataset
-                        </a>
-                      </Button>
-                    )}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
+        {sortedDatasets.length > 0 && (
+          <>
+            <h2 className="text-2xl font-bold font-headline mt-8">Datasets</h2>
+            <div className="border rounded-lg overflow-hidden shadow-lg">
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-muted/50">
+                    <TableHead className="w-[100px] font-bold">Year</TableHead>
+                    <TableHead className="font-bold">Title</TableHead>
+                    <TableHead className="font-bold">Authors</TableHead>
+                    <TableHead className="font-bold">Journal</TableHead>
+                    <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {sortedDatasets.map((pub: any, index: number) => (
+                    <TableRow key={index} className="hover:bg-muted/30">
+                      <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
+                      <TableCell>{pub.title}</TableCell>
+                      <TableCell>{pub.authors.join(', ')}</TableCell>
+                      <TableCell>{pub.journal}</TableCell>
+                      <TableCell className="text-right space-x-2">
+                        {pub.url && (
+                          <TooltipProvider>
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <Button variant="outline" size="icon" asChild>
+                                  <a href={pub.url} target="_blank" rel="noopener noreferrer">
+                                    <Database className="h-4 w-4" />
+                                  </a>
+                                </Button>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p>Dataset</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        )}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+          </>
+        )}
 
-        <h2 className="text-2xl font-bold font-headline mt-8">Conference Proceedings</h2>
-        <div className="border rounded-lg overflow-hidden shadow-lg">
-          <Table>
-            <TableHeader>
-              <TableRow className="bg-muted/50">
-                <TableHead className="w-[100px] font-bold">Year</TableHead>
-                <TableHead className="font-bold">Title</TableHead>
-                <TableHead className="font-bold">Authors</TableHead>
-                <TableHead className="font-bold">Journal</TableHead>
-                <TableHead className="text-right w-[280px] font-bold">Links</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {sortedConferenceProceedings.map((pub: any, index: number) => (
-                <TableRow key={index} className="hover:bg-muted/30">
-                  <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
-                  <TableCell>{pub.title}</TableCell>
-                  <TableCell>{pub.authors.join(', ')}</TableCell>
-                  <TableCell>{pub.journal}</TableCell>
-                  <TableCell className="text-right space-x-2">
-                    {pub.url && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
-                          <BookOpen className="mr-2 h-4 w-4" />
-                          Publication
-                        </a>
-                      </Button>
-                    )}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
+        {sortedConferenceProceedings.length > 0 && (
+          <>
+            <h2 className="text-2xl font-bold font-headline mt-8">Conference Proceedings</h2>
+            <div className="border rounded-lg overflow-hidden shadow-lg">
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-muted/50">
+                    <TableHead className="w-[100px] font-bold">Year</TableHead>
+                    <TableHead className="font-bold">Title</TableHead>
+                    <TableHead className="font-bold">Authors</TableHead>
+                    <TableHead className="font-bold">Journal</TableHead>
+                    <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {sortedConferenceProceedings.map((pub: any, index: number) => (
+                    <TableRow key={index} className="hover:bg-muted/30">
+                      <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
+                      <TableCell>{pub.title}</TableCell>
+                      <TableCell>{pub.authors.join(', ')}</TableCell>
+                      <TableCell>{pub.journal}</TableCell>
+                      <TableCell className="text-right space-x-2">
+                        {pub.url && (
+                           <TooltipProvider>
+                           <Tooltip>
+                             <TooltipTrigger asChild>
+                               <Button variant="outline" size="icon" asChild>
+                                 <a href={pub.url} target="_blank" rel="noopener noreferrer">
+                                   <BookOpen className="h-4 w-4" />
+                                 </a>
+                               </Button>
+                             </TooltipTrigger>
+                             <TooltipContent>
+                               <p>Publication</p>
+                             </TooltipContent>
+                           </Tooltip>
+                         </TooltipProvider>
+                        )}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+          </>
+        )}
 
-        <h2 className="text-2xl font-bold font-headline mt-8">Conference Presentations</h2>
-        <div className="border rounded-lg overflow-hidden shadow-lg">
-          <Table>
-            <TableHeader>
-              <TableRow className="bg-muted/50">
-                <TableHead className="w-[100px] font-bold">Year</TableHead>
-                <TableHead className="font-bold">Title</TableHead>
-                <TableHead className="font-bold">Authors</TableHead>
-                <TableHead className="font-bold">Journal</TableHead>
-                <TableHead className="text-right w-[280px] font-bold">Links</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {sortedConferencePresentations.map((pub: any, index: number) => (
-                <TableRow key={index} className="hover:bg-muted/30">
-                  <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
-                  <TableCell>{pub.title}</TableCell>
-                  <TableCell>{pub.authors.join(', ')}</TableCell>
-                  <TableCell>{pub.journal}</TableCell>
-                  <TableCell className="text-right space-x-2">
-                    {pub.url && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
-                          <FileText className="mr-2 h-4 w-4" />
-                          Presentation
-                        </a>
-                      </Button>
-                    )}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
+        {sortedConferencePresentations.length > 0 && (
+          <>
+            <h2 className="text-2xl font-bold font-headline mt-8">Conference Presentations</h2>
+            <div className="border rounded-lg overflow-hidden shadow-lg">
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-muted/50">
+                    <TableHead className="w-[100px] font-bold">Year</TableHead>
+                    <TableHead className="font-bold">Title</TableHead>
+                    <TableHead className="font-bold">Authors</TableHead>
+                    <TableHead className="font-bold">Journal</TableHead>
+                    <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {sortedConferencePresentations.map((pub: any, index: number) => (
+                    <TableRow key={index} className="hover:bg-muted/30">
+                      <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
+                      <TableCell>{pub.title}</TableCell>
+                      <TableCell>{pub.authors.join(', ')}</TableCell>
+                      <TableCell>{pub.journal}</TableCell>
+                      <TableCell className="text-right space-x-2">
+                        {pub.url && (
+                          <TooltipProvider>
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <Button variant="outline" size="icon" asChild>
+                                  <a href={pub.url} target="_blank" rel="noopener noreferrer">
+                                    <FileText className="h-4 w-4" />
+                                  </a>
+                                </Button>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p>Presentation</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        )}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+          </>
+        )}
 
-        <h2 className="text-2xl font-bold font-headline mt-8">White Papers</h2>
-        <div className="border rounded-lg overflow-hidden shadow-lg">
-          <Table>
-            <TableHeader>
-              <TableRow className="bg-muted/50">
-                <TableHead className="w-[100px] font-bold">Year</TableHead>
-                <TableHead className="font-bold">Title</TableHead>
-                <TableHead className="font-bold">Authors</TableHead>
-                <TableHead className="font-bold">Journal</TableHead>
-                <TableHead className="text-right w-[280px] font-bold">Links</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {sortedWhitePapers.map((pub: any, index: number) => (
-                <TableRow key={index} className="hover:bg-muted/30">
-                  <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
-                  <TableCell>{pub.title}</TableCell>
-                  <TableCell>{pub.authors.join(', ')}</TableCell>
-                  <TableCell>{pub.journal}</TableCell>
-                  <TableCell className="text-right space-x-2">
-                    {pub.url && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
-                          <FileText className="mr-2 h-4 w-4" />
-                          Paper
-                        </a>
-                      </Button>
-                    )}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
+        {sortedWhitePapers.length > 0 && (
+          <>
+            <h2 className="text-2xl font-bold font-headline mt-8">White Papers</h2>
+            <div className="border rounded-lg overflow-hidden shadow-lg">
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-muted/50">
+                    <TableHead className="w-[100px] font-bold">Year</TableHead>
+                    <TableHead className="font-bold">Title</TableHead>
+                    <TableHead className="font-bold">Authors</TableHead>
+                    <TableHead className="font-bold">Journal</TableHead>
+                    <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {sortedWhitePapers.map((pub: any, index: number) => (
+                    <TableRow key={index} className="hover:bg-muted/30">
+                      <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
+                      <TableCell>{pub.title}</TableCell>
+                      <TableCell>{pub.authors.join(', ')}</TableCell>
+                      <TableCell>{pub.journal}</TableCell>
+                      <TableCell className="text-right space-x-2">
+                        {pub.url && (
+                          <TooltipProvider>
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <Button variant="outline" size="icon" asChild>
+                                  <a href={pub.url} target="_blank" rel="noopener noreferrer">
+                                    <FileText className="h-4 w-4" />
+                                  </a>
+                                </Button>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p>Paper</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        )}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+          </>
+        )}
 
-        <h2 className="text-2xl font-bold font-headline mt-8">Pre-Prints</h2>
-        <div className="border rounded-lg overflow-hidden shadow-lg">
-          <Table>
-            <TableHeader>
-              <TableRow className="bg-muted/50">
-                <TableHead className="w-[100px] font-bold">Year</TableHead>
-                <TableHead className="font-bold">Title</TableHead>
-                <TableHead className="font-bold">Authors</TableHead>
-                <TableHead className="font-bold">Journal</TableHead>
-                <TableHead className="text-right w-[280px] font-bold">Links</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {sortedPrePrints.map((pub: any, index: number) => (
-                <TableRow key={index} className="hover:bg-muted/30">
-                  <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
-                  <TableCell>{pub.title}</TableCell>
-                  <TableCell>{pub.authors.join(', ')}</TableCell>
-                  <TableCell>{pub.journal}</TableCell>
-                  <TableCell className="text-right space-x-2">
-                    {pub.url && (
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pub.url} target="_blank" rel="noopener noreferrer">
-                          <FileText className="mr-2 h-4 w-4" />
-                          Preprint
-                        </a>
-                      </Button>
-                    )}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-
+        {sortedPrePrints.length > 0 && (
+          <>
+            <h2 className="text-2xl font-bold font-headline mt-8">Pre-Prints</h2>
+            <div className="border rounded-lg overflow-hidden shadow-lg">
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-muted/50">
+                    <TableHead className="w-[100px] font-bold">Year</TableHead>
+                    <TableHead className="font-bold">Title</TableHead>
+                    <TableHead className="font-bold">Authors</TableHead>
+                    <TableHead className="font-bold">Journal</TableHead>
+                    <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {sortedPrePrints.map((pub: any, index: number) => (
+                    <TableRow key={index} className="hover:bg-muted/30">
+                      <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
+                      <TableCell>{pub.title}</TableCell>
+                      <TableCell>{pub.authors.join(', ')}</TableCell>
+                      <TableCell>{pub.journal}</TableCell>
+                      <TableCell className="text-right space-x-2">
+                        {pub.url && (
+                          <TooltipProvider>
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <Button variant="outline" size="icon" asChild>
+                                  <a href={pub.url} target="_blank" rel="noopener noreferrer">
+                                    <FileText className="h-4 w-4" />
+                                  </a>
+                                </Button>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p>Preprint</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        )}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+          </>
+        )}
       </div>
     );
   }
