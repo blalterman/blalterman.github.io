@@ -56,7 +56,10 @@ export default function RootLayout({
       "https://scholar.google.com/citations?user=yF0j6J8AAAAJ",
       "https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0001-6673-3432&sort=date%20desc%2C%20bibcode%20desc",
       "https://github.com/blalterman",
-      "https://arxiv.org/a/alterman_b_1.html"
+      "https://arxiv.org/a/alterman_b_1.html",
+      "https://www.iau.org/Profile?ID=25195",
+      "https://www.agu.org/Search/PublicProfile?userId=B807C11E-0E6D-47E1-BB3A-1921EB2584B8",
+      "https://www.linkedin.com/in/blalterman/",
     ],
     "jobTitle": "Research Astrophysicist",
     "affiliation": {
