@@ -39,8 +39,8 @@ export function Experience({ educationData, professionalData }: ExperienceProps)
                         {educationData.map((edu) => (
                             <Card key={edu.Institution} className="shadow-lg">
                                 <CardHeader>
-                                    <CardTitle>{edu.Institution}</CardTitle>
-                                    <CardDescription>{edu.Degree}</CardDescription>
+                                    <CardTitle>{edu.Degree}</CardTitle>
+                                    <CardDescription>{edu.Institution}</CardDescription>
                                     <p className="text-sm text-muted-foreground pt-1">{edu.Department}</p>
                                     <p className="text-sm text-muted-foreground pt-1">{edu.Dates}</p>
                                 </CardHeader>
