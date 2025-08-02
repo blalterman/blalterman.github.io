@@ -1,27 +1,47 @@
-on: push
+on:
+  push:
+    paths:
+      - 'public/paper-figures/pdfs/**' # Trigger only when HTML source files change
 
 jobs:
-  build:
+  generate_pdfs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Grant write permission for committing
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18' # Or your preferred Node.js version
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20' # Or your preferred Node.js version
 
       - name: Install dependencies
-        run: npm install puppeteer --save-dev
+        run: npm install puppeteer
 
-      - name: Run script to generate PDFs
-        run: node scripts/generate-pdfs.js public/paper-figures/html public/paper-figures/pdfs
+      - name: Run script to generate HTML
+        run: node scripts/generate-pdfs.js public/paper-figures/pdfs public/paper-figures/html # Read from PDFs, write to HTML
 
       - name: Upload generated PDFs
         uses: actions/upload-artifact@v4
         with:
-          name: generated-pdfs
-          path: public/paper-figures/pdfs
+          name: generated-html-figures
+          path: public/paper-figures/html
+
+      - name: Commit and push HTML
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add public/paper-figures/pdfs # Stage the generated PDFs
+          git commit -m "Generated and added latest paper figures PDFs" || echo "No changes to commit"
+          git push
+
+
+
+
+
           
+          
+
