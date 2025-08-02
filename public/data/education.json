@@ -1,17 +1,17 @@
 
 [
-    {
-        "Institution": "University of Michigan",
-        "Department": "Applied Physics",
-        "Location": "Ann Arbor, MI",
-        "Dates": "2013 – 2018",
-        "Degree": "Doctor of Philosophy"
-    },
-    {
-        "Institution": "Macalester College",
-        "Department": "Physics and Philosophy",
-        "Location": "Saint Paul, MN",
-        "Dates": "2009 – 2013",
-        "Degree": "Bachelor of the Arts"
-    }
+  {
+    "Institution": "University of Michigan",
+    "Department": "Applied Physics (Space Physics)",
+    "Location": "Ann Arbor, MI",
+    "Dates": "2013 – 2018",
+    "Degree": "Doctor of Philosophy"
+  },
+  {
+    "Institution": "Macalester College",
+    "Department": "Physics and Philosophy",
+    "Location": "Saint Paul, MN",
+    "Dates": "2009 – 2013",
+    "Degree": "Bachelor of Arts"
+  }
 ]
