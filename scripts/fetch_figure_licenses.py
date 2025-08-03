@@ -29,6 +29,7 @@ def get_license_record(doi):
     resp = requests.get(url, headers={"Accept": "application/json"})
     if resp.status_code != 200:
         return {
+            "doi": doi,
             "name": "N/A",
             "url": "N/A",
             "holder": "N/A"
@@ -38,6 +39,7 @@ def get_license_record(doi):
     lic_list = msg.get("license", [])
     if not lic_list:
         return {
+            "doi": doi,
             "name": "N/A",
             "url": "N/A",
             "holder": "N/A"
@@ -51,16 +53,17 @@ def get_license_record(doi):
         ("Unknown license", "N/A")
     )
     return {
+        "doi": doi,
         "name": name,
         "url": lic_url,
         "holder": holder
     }
 
 def parse_doi_list(dois):
-    """Processes a list of DOIs and returns license info for each."""
-    results = {}
+    """Processes a list of DOIs and returns a list of license info objects."""
+    results = []
     for doi in dois:
-        results[doi] = get_license_record(doi)
+        results.append(get_license_record(doi))
     return results
 
 if __name__ == "__main__":
@@ -74,7 +77,7 @@ if __name__ == "__main__":
     # Parse the DOIs
     license_data = parse_doi_list(doi_list)
 
-    for k, row in license_data.items():
+    for row in license_data:
         print(f"DOI:            {row['doi']}")
         print(f"License Name:   {row['name']}")
         print(f"License URL:    {row['url']}")
@@ -82,7 +85,7 @@ if __name__ == "__main__":
         print("-" * 40)
 
     # Ensure output directory exists
-    output_path = "/public/paper-figures/figure-licenses.json"
+    output_path = "public/paper-figures/figure-licenses.json"
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     # Write the JSON file
