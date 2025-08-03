@@ -11,7 +11,8 @@ export default function HeliumAbundancePage() {
     const figures = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
 
     const introductoryParagraph = paragraphs['helium-abundance'];
-    const figure = figures['helium-abundance'];
+    const figure1 = figures['helium-abundance-2'];
+    const figure2 = figures['helium-abundance'];
 
     return (
         <main className="flex-1 container mx-auto py-16 md:py-24">
@@ -19,7 +20,8 @@ export default function HeliumAbundancePage() {
             <p className="text-lg text-muted-foreground mt-4">
                 {introductoryParagraph}
             </p>
-            {figure && <ResearchFigure src={figure.src} alt={figure.alt} caption={figure.caption} />}
+            {figure1 && <ResearchFigure src={figure1.src} alt={figure1.alt} caption={figure1.caption} />}
+            {figure2 && <ResearchFigure src={figure2.src} alt={figure2.alt} caption={figure2.caption} />}
             <p className="text-sm text-muted-foreground mt-8">
                 Summary generated with ChatGPT based on my first-author publications for clarity and accessibility.
             </p>

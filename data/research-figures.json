@@ -1,3 +1,4 @@
+
 {
   "coulomb-collisions": {
     "src": "/paper-figures/svg/P9-Fig9.svg",
@@ -14,10 +15,10 @@
     "alt": "Figure showing helium abundance vs. sunspot number over time.",
     "caption": "<b>Figure 3:</b> A placeholder graph of helium abundance over a solar cycle. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
   },
-  "kinetic-physics": {
-    "src": "https://placehold.co/800x600.png",
-    "alt": "Placeholder image for Kinetic Physics research",
-    "caption": "<b>Figure 4:</b> A placeholder simulation showing kinetic physics. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
+  "helium-abundance-2": {
+    "src": "/paper-figures/svg/AheXhel-Fig2.svg",
+    "alt": "Second figure showing helium abundance data.",
+    "caption": "<b>Figure 4:</b> A placeholder for the second helium abundance figure. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
   },
   "proton-beams": {
     "src": "https://placehold.co/800x600.png",
