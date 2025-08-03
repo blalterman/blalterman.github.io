@@ -1,8 +1,8 @@
 
 on:
   push:
-    paths:
-      - 'public/paper-figures/pdfs/**'
+#    paths:
+#      - 'public/paper-figures/pdfs/**'
 
 jobs:
   generate_pdfs:
@@ -34,3 +34,4 @@ jobs:
           git add public/paper-figures/html
           git commit -m "Generated and added latest paper figures HTML [automated]" || echo "No changes to commit"
           git push
+
