@@ -18,21 +18,19 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
       - name: Create output directory
-        run: mkdir -p public/paper-figures/html
+        run: mkdir -p public/paper-figures/svg
 
-      - name: Convert PDFs to HTML
+      - name: Convert PDFs to SVGs
         run: |
           for pdf in public/paper-figures/pdfs/*.pdf; do
             filename=$(basename "$pdf" .pdf)
-            pdftohtml -c -s -noframes "$pdf" "public/paper-figures/html/$filename.html"
+            pdftocairo -svg "$pdf" "public/paper-figures/svg/$filename.svg"
           done
 
-      - name: Commit and push HTML
+      - name: Commit and push SVGs
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add public/paper-figures/html
-          git commit -m "Generated and added latest paper figures HTML [automated]" || echo "No changes to commit"
+          git add public/paper-figures/svg
+          git commit -m "Generated and added latest paper figures as SVGs [automated]" || echo "No changes to commit"
           git push
-
-
