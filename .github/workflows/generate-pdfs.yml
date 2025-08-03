@@ -24,7 +24,7 @@ jobs:
         run: |
           for pdf in public/paper-figures/pdfs/*.pdf; do
             filename=$(basename "$pdf" .pdf)
-            pdftohtml -s -noframes -i "$pdf" "public/paper-figures/html/$filename.html"
+            pdftohtml -c -s -noframes "$pdf" "public/paper-figures/html/$filename.html"
           done
 
       - name: Commit and push HTML
@@ -34,4 +34,5 @@ jobs:
           git add public/paper-figures/html
           git commit -m "Generated and added latest paper figures HTML [automated]" || echo "No changes to commit"
           git push
+
 
