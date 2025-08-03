@@ -1,7 +1,7 @@
 on:
   push:
-    paths:
-      - 'public/paper-figures/pdfs/**' # Trigger only when PDF source files change
+    # paths:
+    #   - 'public/paper-figures/pdfs/**' # Trigger only when PDF source files change
 
 jobs:
   generate_pdfs:
