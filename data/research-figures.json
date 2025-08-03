@@ -3,7 +3,7 @@
   "coulomb-collisions": {
     "src": "/paper-figures/svg/P9-Fig9.svg",
     "alt": "Figure showing alpha-proton differential flow vs. coulomb collision frequency.",
-    "caption": "<b>Figure 1:</b> A placeholder diagram illustrating Coulomb collisions. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
+    "caption": "<b>Figure 1:</b> A placeholder diagram illustrating Coulomb collisions. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission under a Creative Commons Attribution 3.0 licence)."
   },
   "heavy-ion-composition": {
     "src": "/paper-figures/svg/SWICS-SSN-Fig1.svg",
@@ -13,12 +13,12 @@
   "helium-abundance": {
     "src": "/paper-figures/svg/KeFlux-Fig1.svg",
     "alt": "Figure showing helium abundance vs. sunspot number over time.",
-    "caption": "<b>Figure 3:</b> A placeholder graph of helium abundance over a solar cycle. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
+    "caption": "<b>Figure 3:</b> A placeholder graph of helium abundance over a solar cycle. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission under a Creative Commons Attribution 4.0 licence)."
   },
   "sources-of-the-solar-wind": {
     "src": "/paper-figures/svg/AheXhel-Fig2.svg",
     "alt": "Figure showing helium abundance data related to solar wind sources.",
-    "caption": "<b>Figure 4:</b> A placeholder for the solar wind sources figure. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
+    "caption": "<b>Figure 4:</b> A placeholder for the solar wind sources figure. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission under a Creative Commons Attribution 4.0 licence)."
   },
   "proton-beams": {
     "src": "https://placehold.co/800x600.png",
@@ -33,6 +33,6 @@
   "suprathermal-ions": {
     "src": "/paper-figures/svg/STQT-SpectralIndex-Fig4.svg",
     "alt": "Figure showing suprathermal ion spectral index",
-    "caption": "<b>Figure 7:</b> A plot of the suprathermal ion spectral index ($gamma$) versus the ratio of the alpha particle to proton densities ($n_alpha/n_p$). The dashed line indicates the expected value for injection from the solar wind peak. The solid line shows the best fit to the data points, which are color-coded by normalized radial distance ($R/R_odot$). From Alterman et al. (2020), ApJ, 903, 122. © AAS. Reproduced with permission."
+    "caption": "<b>Figure 7:</b> A plot of the suprathermal ion spectral index ($gamma$) versus the ratio of the alpha particle to proton densities ($n_alpha/n_p$). The dashed line indicates the expected value for injection from the solar wind peak. The solid line shows the best fit to the data points, which are color-coded by normalized radial distance ($R/R_odot$). From Alterman et al. (2020), ApJ, 903, 122. © AAS. Reproduced with permission under a Creative Commons Attribution 4.0 licence."
   }
 }
