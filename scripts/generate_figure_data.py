@@ -53,8 +53,17 @@ def main():
     # Create a lookup for publications by bibcode for efficiency
     pubs_lookup = {pub['bibcode']: pub for pub in pubs_data}
 
-    # Collect all unique DOIs from the captions data
-    all_dois = list(set([data['doi'] for data in captions_data.values() if 'doi' in data]))
+    # Extract all unique bibcodes from the captions data
+    required_bibcodes = set(data['bibcode'] for data in captions_data.values() if 'bibcode' in data)
+
+    # Collect DOIs only for the required publications
+    all_dois = []
+    for bibcode in required_bibcodes:
+        pub = pubs_lookup.get(bibcode)
+        # The DOI is part of the URL, formatted as "https://dx.doi.org/{doi}"
+        if pub and pub.get('url', '').startswith('https://dx.doi.org/'):
+            doi = pub['url'].replace('https://dx.doi.org/', '')
+            all_dois.append(doi)
     
     # Fetch all licenses for the collected DOIs
     print(f"Fetching licenses for {len(all_dois)} DOIs...")
@@ -93,7 +102,10 @@ def main():
         pub_info = pubs_lookup.get(bibcode, {})
         
         # Get the license for the current DOI
-        current_doi = caption_info.get("doi")
+        current_doi = None
+        if pub_info.get('url', '').startswith('https://dx.doi.org/'):
+            current_doi = pub_info['url'].replace('https://dx.doi.org/', '')
+
         license_info = doi_to_license.get(current_doi)
 
         # Generate the full caption
