@@ -14,7 +14,7 @@
     "figure": {
       "src": "/paper-figures/svg/KeFlux-Fig1.svg",
       "alt": "Figure showing helium abundance vs. sunspot number over time.",
-      "caption": "Lorem Ipsum From Alterman (2025), The Astrophysical Journal."
+      "caption": "Lorem Ipsum <a href=\"https://dx.doi.org/10.3847/2041-8213/add0a6\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman (2025), The Astrophysical Journal</a>."
     }
   },
   {
@@ -32,7 +32,7 @@
     "figure": {
       "src": "/paper-figures/svg/STQT-SpectralIndex-Fig4.svg",
       "alt": "Figure showing suprathermal ion spectral index",
-      "caption": "Lorem Ipsum From Alterman et al. (2024), The Astrophysical Journal."
+      "caption": "Lorem Ipsum <a href=\"https://dx.doi.org/10.3847/2041-8213/ad2deb\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman et al. (2024), The Astrophysical Journal</a>."
     }
   },
   {
@@ -50,7 +50,7 @@
     "figure": {
       "src": "/paper-figures/svg/P9-Fig9.svg",
       "alt": "Figure showing alpha-proton differential flow vs. coulomb collision frequency.",
-      "caption": "Lorem Ipsum From Alterman et al. (2018), The Astrophysical Journal."
+      "caption": "Lorem Ipsum <a href=\"https://dx.doi.org/10.3847/1538-4357/aad23f\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman et al. (2018), The Astrophysical Journal</a>."
     }
   },
   {
@@ -59,7 +59,7 @@
     "figure": {
       "src": "/paper-figures/svg/AheXhel-Fig2.svg",
       "alt": "Figure showing helium abundance data related to solar wind sources.",
-      "caption": "Lorem Ipsum From Alterman & D'Amicis (2025), The Astrophysical Journal."
+      "caption": "Lorem Ipsum <a href=\"https://dx.doi.org/10.3847/2041-8213/adb48e\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman & D'Amicis (2025), The Astrophysical Journal</a>."
     }
   }
 ]
