@@ -1,12 +1,15 @@
 import json
 from pathlib import Path
+from fetch_figure_licenses import fetch_licenses_for_dois
 
-def generate_full_caption(caption_info, pub_info):
+def generate_full_caption(caption_info, pub_info, license_info):
     """Formats the full figure caption with citation and license."""
     authors = pub_info.get("authors", [])
     year = pub_info.get("year", "")
     journal = pub_info.get("journal", "")
-    license_text = caption_info.get("License", "")
+    
+    # Use the license info passed in, default to "N/A"
+    license_text = license_info or "N/A"
 
     # Create a simplified author list (e.g., Alterman et al.)
     first_author_lastname = ""
@@ -50,6 +53,15 @@ def main():
     # Create a lookup for publications by bibcode for efficiency
     pubs_lookup = {pub['bibcode']: pub for pub in pubs_data}
 
+    # Collect all unique DOIs from the captions data
+    all_dois = list(set([data['doi'] for data in captions_data.values() if 'doi' in data]))
+    
+    # Fetch all licenses for the collected DOIs
+    print(f"Fetching licenses for {len(all_dois)} DOIs...")
+    doi_to_license = fetch_licenses_for_dois(all_dois)
+    print("...Done fetching licenses.")
+
+
     # Process the data
     processed_data = []
     for project in research_projects:
@@ -80,8 +92,12 @@ def main():
         bibcode = caption_info.get("bibcode")
         pub_info = pubs_lookup.get(bibcode, {})
         
+        # Get the license for the current DOI
+        current_doi = caption_info.get("doi")
+        license_info = doi_to_license.get(current_doi)
+
         # Generate the full caption
-        full_caption = generate_full_caption(caption_info, pub_info)
+        full_caption = generate_full_caption(caption_info, pub_info, license_info)
 
         # Update the figure info with the new caption
         updated_figure_info = figure_info.copy()
