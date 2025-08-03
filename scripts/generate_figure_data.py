@@ -33,7 +33,7 @@ def main():
     
     projects_path = data_dir / "research-projects.json"
     figures_path = data_dir / "research-figures.json"
-    captions_path = public_dir / "paper-figures" / "captions-bibcodes-licenses.json"
+    captions_path = public_dir / "paper-figures" / "captions-bibcodes.json"
     pubs_path = public_dir / "data" / "ads_publications.json"
     output_path = data_dir / "research-figures-with-captions.json"
 
