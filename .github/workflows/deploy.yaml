@@ -1,17 +1,26 @@
 name: Deploy Static Site to GitHub Pages
 
 on:
-  push:
-    branches:
-      - main # Or your default branch like master
+  workflow_run:
+    workflows:
+      - "Update ADS Publications List"
+      - "Generate Figure Data"
+      - "Update ADS Citation Metrics"
+      - "Update NASA ADS Citations Plot and Data"
+      - "convert-pdfs.yml"
+    types:
+      - completed
 
 jobs:
   build-and-deploy:
+    if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: main # Checkout main branch, which contains the latest data
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
