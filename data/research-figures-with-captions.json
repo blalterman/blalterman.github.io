@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "proton-beams",
+    "title": "Proton Beams",
+    "paragraph": "",
+    "figure": {
+      "src": "https://placehold.co/800x600.png",
+      "alt": "Placeholder image for Proton Beams research",
+      "caption": "A placeholder visualization of proton beams in the solar wind. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. \u00a9 AAS. Reproduced with permission)."
+    }
+  },
+  {
+    "slug": "helium-abundance",
+    "title": "Helium Abundance",
+    "figure": {
+      "src": "/paper-figures/svg/KeFlux-Fig1.svg",
+      "alt": "Figure showing helium abundance vs. sunspot number over time.",
+      "caption": "Lorem ipsum From Alterman (2025-05-00), The Astrophysical Journal. \u00a9 AAS. Reproduced with permission under a ."
+    }
+  },
+  {
+    "slug": "space-weather",
+    "title": "Space Weather",
+    "paragraph": "",
+    "figure": {
+      "src": "https://placehold.co/800x600.png",
+      "alt": "Placeholder image for Space Weather research",
+      "caption": "A placeholder infographic about space weather. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. \u00a9 AAS. Reproduced with permission)."
+    }
+  },
+  {
+    "slug": "suprathermal-ions",
+    "title": "Suprathermal Ions",
+    "figure": {
+      "src": "/paper-figures/svg/STQT-SpectralIndex-Fig4.svg",
+      "alt": "Figure showing suprathermal ion spectral index",
+      "caption": "Lorem ipsum From Alterman et al. (2024-04-00), The Astrophysical Journal. \u00a9 AAS. Reproduced with permission under a ."
+    }
+  },
+  {
+    "slug": "heavy-ion-composition",
+    "title": "Heavy Ion Composition",
+    "figure": {
+      "src": "/paper-figures/svg/SWICS-SSN-Fig1.svg",
+      "alt": "Figure showing heavy ion composition data from the SWICS instrument.",
+      "caption": "Lorem ipsum From  (), . \u00a9 AAS. Reproduced with permission under a ."
+    }
+  },
+  {
+    "slug": "coulomb-collisions",
+    "title": "Coulomb Collisions",
+    "figure": {
+      "src": "/paper-figures/svg/P9-Fig9.svg",
+      "alt": "Figure showing alpha-proton differential flow vs. coulomb collision frequency.",
+      "caption": "Lorem ipsum From Alterman et al. (2018-09-00), The Astrophysical Journal. \u00a9 AAS. Reproduced with permission under a ."
+    }
+  },
+  {
+    "slug": "sources-of-the-solar-wind",
+    "title": "Sources of the Solar Wind",
+    "figure": {
+      "src": "/paper-figures/svg/AheXhel-Fig2.svg",
+      "alt": "Figure showing helium abundance data related to solar wind sources.",
+      "caption": "Lorem ipsum From Alterman et al. (2025-04-00), The Astrophysical Journal. \u00a9 AAS. Reproduced with permission under a ."
+    }
+  }
+]
