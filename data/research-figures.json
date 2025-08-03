@@ -1,7 +1,7 @@
 {
   "coulomb-collisions": {
-    "src": "https://placehold.co/800x600.png",
-    "alt": "Placeholder image for Coulomb Collisions research",
+    "src": "/paper-figures/svg/P9-Fig9.svg",
+    "alt": "Figure showing alpha-proton differential flow vs. coulomb collision frequency.",
     "caption": "<b>Figure 1:</b> A placeholder diagram illustrating Coulomb collisions. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
   },
   "heavy-ion-composition": {
@@ -10,8 +10,8 @@
     "caption": "<b>Figure 2:</b> A placeholder chart showing heavy ion composition. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
   },
   "helium-abundance": {
-    "src": "https://placehold.co/800x600.png",
-    "alt": "Placeholder image for Helium Abundance research",
+    "src": "/paper-figures/svg/KeFlux-Fig1.svg",
+    "alt": "Figure showing helium abundance vs. sunspot number over time.",
     "caption": "<b>Figure 3:</b> A placeholder graph of helium abundance over a solar cycle. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
   },
   "kinetic-physics": {
