@@ -30,7 +30,7 @@
     "caption": "<b>Figure 6:</b> A placeholder infographic about space weather. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
   },
   "suprathermal-ions": {
-    "src": "https://placehold.co/800x600.png",
+    "src": "/paper-figures/svg/STQT-SpectralIndex-Fig4.svg",
     "alt": "Figure showing suprathermal ion spectral index",
     "caption": "<b>Figure 7:</b> A plot of the suprathermal ion spectral index ($gamma$) versus the ratio of the alpha particle to proton densities ($n_alpha/n_p$). The dashed line indicates the expected value for injection from the solar wind peak. The solid line shows the best fit to the data points, which are color-coded by normalized radial distance ($R/R_odot$). From Alterman et al. (2020), ApJ, 903, 122. © AAS. Reproduced with permission."
   }
