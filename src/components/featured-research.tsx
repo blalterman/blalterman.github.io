@@ -23,14 +23,11 @@ export function FeaturedResearch({ researchProjects }: FeaturedResearchProps) {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Featured Research</h2>
-          <p className="text-lg text-muted-foreground mt-2">Highlights from my research contributions and discoveries.</p>
+          <p className="text-lg text-muted-foreground mt-2">Highlights from my research activities.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {researchProjects.map((project: any) => (
             <Card key={project.title} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <div className="relative aspect-[16/9] w-full">
-                <Image src={project.image} alt={project.title} fill className="object-cover" data-ai-hint={project.imageHint} />
-              </div>
               <div className="flex flex-col flex-1 p-6">
                 <CardHeader className="p-0 mb-4">
                   <CardTitle>{project.title}</CardTitle>
