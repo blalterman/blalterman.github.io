@@ -42,5 +42,6 @@ def fetch_licenses_for_dois(dois):
     Returns:
         dict: A dictionary mapping each DOI to its license short name.
     """
+        
     return {doi: get_license_short(doi) for doi in dois}
 

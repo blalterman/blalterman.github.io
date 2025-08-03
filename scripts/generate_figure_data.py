@@ -2,6 +2,8 @@ import json
 from pathlib import Path
 from fetch_figure_licenses import fetch_licenses_for_dois
 
+import pdb
+
 def generate_full_caption(caption_info, pub_info, license_info):
     """Formats the full figure caption with citation and license."""
     authors = pub_info.get("authors", [])
@@ -31,8 +33,8 @@ def main():
     Generates a new JSON file with combined figure and publication data.
     """
     # Define paths
-    data_dir = Path("data")
-    public_dir = Path("public")
+    data_dir = Path(__file__).parent.parent / "data"
+    public_dir = Path(__file__).parent.parent / "public"
     
     projects_path = data_dir / "research-projects.json"
     figures_path = data_dir / "research-figures.json"
@@ -64,6 +66,8 @@ def main():
         if pub and pub.get('url', '').startswith('https://dx.doi.org/'):
             doi = pub['url'].replace('https://dx.doi.org/', '')
             all_dois.append(doi)
+    
+    pdb.set_trace()
     
     # Fetch all licenses for the collected DOIs
     print(f"Fetching licenses for {len(all_dois)} DOIs...")

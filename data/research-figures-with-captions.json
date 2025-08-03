@@ -14,7 +14,7 @@
     "figure": {
       "src": "/paper-figures/svg/KeFlux-Fig1.svg",
       "alt": "Figure showing helium abundance vs. sunspot number over time.",
-      "caption": "A placeholder graph of helium abundance over a solar cycle. Replace with your actual figure caption. From  (), . \u00a9 AAS. Reproduced with permission under a N/A."
+      "caption": "A placeholder graph of helium abundance over a solar cycle. Replace with your actual figure caption. From Alterman (2025-05-00), The Astrophysical Journal. \u00a9 AAS. Reproduced with permission under a Unknown."
     }
   },
   {
@@ -32,7 +32,7 @@
     "figure": {
       "src": "/paper-figures/svg/STQT-SpectralIndex-Fig4.svg",
       "alt": "Figure showing suprathermal ion spectral index",
-      "caption": "A plot of the suprathermal ion spectral index ($gamma$) versus the ratio of the alpha particle to proton densities ($n_alpha/n_p$). The dashed line indicates the expected value for injection from the solar wind peak. The solid line shows the best fit to the data points, which are color-coded by normalized radial distance ($R/odot$). From  (), . \u00a9 AAS. Reproduced with permission under a N/A."
+      "caption": "A plot of the suprathermal ion spectral index ($gamma$) versus the ratio of the alpha particle to proton densities ($n_alpha/n_p$). The dashed line indicates the expected value for injection from the solar wind peak. The solid line shows the best fit to the data points, which are color-coded by normalized radial distance ($R/odot$). From Alterman et al. (2024-04-00), The Astrophysical Journal. \u00a9 AAS. Reproduced with permission under a CC-BY-4.0."
     }
   },
   {
@@ -50,7 +50,7 @@
     "figure": {
       "src": "/paper-figures/svg/P9-Fig9.svg",
       "alt": "Figure showing alpha-proton differential flow vs. coulomb collision frequency.",
-      "caption": "A placeholder diagram illustrating Coulomb collisions. Replace with your actual figure caption. From  (), . \u00a9 AAS. Reproduced with permission under a N/A."
+      "caption": "A placeholder diagram illustrating Coulomb collisions. Replace with your actual figure caption. From Alterman et al. (2018-09-00), The Astrophysical Journal. \u00a9 AAS. Reproduced with permission under a CC-BY-3.0."
     }
   },
   {
@@ -59,7 +59,7 @@
     "figure": {
       "src": "/paper-figures/svg/AheXhel-Fig2.svg",
       "alt": "Figure showing helium abundance data related to solar wind sources.",
-      "caption": "A placeholder for the solar wind sources figure. Replace with your actual figure caption. From  (), . \u00a9 AAS. Reproduced with permission under a N/A."
+      "caption": "A placeholder for the solar wind sources figure. Replace with your actual figure caption. From Alterman et al. (2025-04-00), The Astrophysical Journal. \u00a9 AAS. Reproduced with permission under a Unknown."
     }
   }
 ]
