@@ -1,12 +1,15 @@
+
 import fs from 'fs';
 import path from 'path';
 import { ResearchFigure } from '@/components/research-figure';
 
-const paragraphs = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data/research-paragraphs.json'), 'utf-8'));
-const figures = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data/research-figures.json'), 'utf-8'));
-
-
 export default function SpaceWeatherPage() {
+  const paragraphsPath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
+  const figuresPath = path.join(process.cwd(), 'data', 'research-figures.json');
+
+  const paragraphs = JSON.parse(fs.readFileSync(paragraphsPath, 'utf-8'));
+  const figures = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
+  
   const paragraph = paragraphs['space-weather'];
   const figure = figures['space-weather'];
 
@@ -18,7 +21,7 @@ export default function SpaceWeatherPage() {
       </p>
       {figure && <ResearchFigure src={figure.src} alt={figure.alt} caption={figure.caption} />}
       <p className="text-sm text-muted-foreground mt-4">
-                Summary generated with ChatGPT based on my first-author publications for clarity and accessibility.
+        Summary generated with ChatGPT based on my first-author publications for clarity and accessibility.
       </p>
     </main>
   );

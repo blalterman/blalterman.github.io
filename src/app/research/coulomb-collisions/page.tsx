@@ -3,10 +3,13 @@ import fs from 'fs';
 import path from 'path';
 import { ResearchFigure } from '@/components/research-figure';
 
-const paragraphs = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data/research-paragraphs.json'), 'utf-8'));
-const figures = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data/research-figures.json'), 'utf-8'));
-
 export default function CoulombCollisionsPage() {
+  const paragraphsPath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
+  const figuresPath = path.join(process.cwd(), 'data', 'research-figures.json');
+
+  const paragraphs = JSON.parse(fs.readFileSync(paragraphsPath, 'utf-8'));
+  const figures = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
+
   const paragraph = paragraphs['coulomb-collisions'];
   const figure = figures['coulomb-collisions'];
 
@@ -17,6 +20,9 @@ export default function CoulombCollisionsPage() {
         {paragraph}
       </p>
       {figure && <ResearchFigure src={figure.src} alt={figure.alt} caption={figure.caption} />}
+      <p className="text-sm text-muted-foreground mt-8">
+        Summary generated with ChatGPT based on my first-author publications for clarity and accessibility.
+      </p>
     </main>
   );
 }

@@ -4,14 +4,13 @@ import path from 'path';
 import { ResearchFigure } from '@/components/research-figure';
 
 export default function HeliumAbundancePage() {
-    const dataFilePath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
-    const jsonData = fs.readFileSync(dataFilePath, 'utf-8');
-    const paragraphs = JSON.parse(jsonData);
-    const introductoryParagraph = paragraphs['helium-abundance'];
+    const paragraphsPath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
+    const figuresPath = path.join(process.cwd(), 'data', 'research-figures.json');
 
-    const figuresFilePath = path.join(process.cwd(), 'data', 'research-figures.json');
-    const figuresData = fs.readFileSync(figuresFilePath, 'utf-8');
-    const figures = JSON.parse(figuresData);
+    const paragraphs = JSON.parse(fs.readFileSync(paragraphsPath, 'utf-8'));
+    const figures = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
+
+    const introductoryParagraph = paragraphs['helium-abundance'];
     const figure = figures['helium-abundance'];
 
     return (

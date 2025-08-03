@@ -4,14 +4,13 @@ import path from 'path';
 import { ResearchFigure } from '@/components/research-figure';
 
 export default function SuprathermalIonsPage() {
-  const dataFilePath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
-  const jsonData = fs.readFileSync(dataFilePath, 'utf-8');
-  const researchParagraphs = JSON.parse(jsonData);
-  const introductoryParagraph = researchParagraphs['suprathermal-ions'];
+  const paragraphsPath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
+  const figuresPath = path.join(process.cwd(), 'data', 'research-figures.json');
 
-  const figuresFilePath = path.join(process.cwd(), 'data', 'research-figures.json');
-  const figuresData = fs.readFileSync(figuresFilePath, 'utf-8');
-  const figures = JSON.parse(figuresData);
+  const researchParagraphs = JSON.parse(fs.readFileSync(paragraphsPath, 'utf-8'));
+  const figures = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
+
+  const introductoryParagraph = researchParagraphs['suprathermal-ions'];
   const figure = figures['suprathermal-ions'];
 
 
@@ -25,8 +24,8 @@ export default function SuprathermalIonsPage() {
       {figure && <ResearchFigure src={figure.src} alt={figure.alt} caption={figure.caption} />}
 
       <p className="text-sm text-muted-foreground mt-4">
-                Summary generated with ChatGPT based on my first-author publications for clarity and accessibility.
-            </p>
+        Summary generated with ChatGPT based on my first-author publications for clarity and accessibility.
+      </p>
     </main>
   );
 }
