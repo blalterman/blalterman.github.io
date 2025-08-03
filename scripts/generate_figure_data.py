@@ -38,7 +38,6 @@ def main():
     figures_path = data_dir / "research-figures.json"
     captions_path = public_dir / "paper-figures" / "captions-bibcodes.json"
     pubs_path = public_dir / "data" / "ads_publications.json"
-    paragraphs_path = data_dir / "research-paragraphs.json"
     output_path = data_dir / "research-figures-with-captions.json"
 
     # Load all necessary JSON files
@@ -50,8 +49,6 @@ def main():
         captions_data = json.load(f)
     with open(pubs_path, 'r') as f:
         pubs_data = json.load(f)
-    with open(paragraphs_path, 'r') as f:
-        paragraphs_data = json.load(f)
 
     # Create a lookup for publications by bibcode for efficiency
     pubs_lookup = {pub['bibcode']: pub for pub in pubs_data}
@@ -84,9 +81,6 @@ def main():
         if not figure_info:
             continue
             
-        # Get the paragraph for the project
-        paragraph = paragraphs_data.get(slug, "")
-            
         # Extract the SVG filename from the path
         svg_filename = Path(figure_info.get("src", "")).name
         
@@ -97,7 +91,6 @@ def main():
             project_data = {
                 "slug": slug,
                 "title": project["title"],
-                "paragraph": paragraph,
                 "figure": figure_info
             }
             processed_data.append(project_data)
@@ -125,7 +118,6 @@ def main():
         project_data = {
             "slug": slug,
             "title": project["title"],
-            "paragraph": paragraph,
             "figure": updated_figure_info
         }
         processed_data.append(project_data)
