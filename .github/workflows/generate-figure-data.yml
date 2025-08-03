@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'public/data/ads_publications.json'
-      - 'public/paper-figures/captions-bibcodes-licenses.json'
+      - 'public/paper-figures/captions-bibcodes.json'
       - 'data/research-projects.json'
   workflow_dispatch:
 
