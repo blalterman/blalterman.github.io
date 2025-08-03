@@ -37,6 +37,23 @@ def parse_doi_list(dois):
     return {doi: get_license_short(doi) for doi in dois}
 
 if __name__ == "__main__":
+    # --- Placeholder for DOI source file ---
+    # In a real workflow, you would get this list from a file.
+    # For example, you might read DOIs from a JSON or CSV file.
+    input_file_path = "path/to/your/dois.json"  # <-- Replace with actual file path
+    
+    # --- Placeholder for DOI extraction logic ---
+    # This logic will depend on the format of your input file.
+    # For example, if it's a simple text file with one DOI per line:
+    # with open(input_file_path, 'r') as f:
+    #     doi_list = [line.strip() for line in f if line.strip()]
+    #
+    # Or, if it's a JSON file (like captions-bibcodes.json):
+    # with open(input_file_path, 'r') as f:
+    #     data = json.load(f)
+    #     doi_list = [item['doi'] for item in data.values() if 'doi' in item]
+    
+    # Using a hardcoded list for now as a placeholder
     doi_list = [
         "10.3847/2041-8213/ab2391",
         "10.1007/s11207-021-01801-9",
@@ -60,3 +77,4 @@ if __name__ == "__main__":
         json.dump(license_data, f, indent=2)
 
     print(f"License data for {len(license_data)} DOIs written to {output_path}")
+
