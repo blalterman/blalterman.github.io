@@ -7,7 +7,7 @@ on:
       - "Generate Figure Data"
       - "Update ADS Citation Metrics"
       - "Update NASA ADS Citations Plot and Data"
-      - "convert-pdfs.yml"
+      - "Convert PDFs to SVG"
     types:
       - completed
 
