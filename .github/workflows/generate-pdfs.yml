@@ -1,8 +1,8 @@
 
 on:
   push:
-    paths:
-      - 'public/paper-figures/pdfs/**'
+    # paths:
+    #   - 'public/paper-figures/pdfs/**'
 
 jobs:
   generate_pdfs:
