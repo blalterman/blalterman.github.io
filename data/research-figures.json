@@ -6,8 +6,8 @@
     "caption": "<b>Figure 1:</b> A placeholder diagram illustrating Coulomb collisions. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
   },
   "heavy-ion-composition": {
-    "src": "https://placehold.co/800x600.png",
-    "alt": "Placeholder image for Heavy Ion Composition research",
+    "src": "/paper-figures/svg/SWICS-SSN-Fig1.svg",
+    "alt": "Figure showing heavy ion composition data from the SWICS instrument.",
     "caption": "<b>Figure 2:</b> A placeholder chart showing heavy ion composition. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
   },
   "helium-abundance": {
