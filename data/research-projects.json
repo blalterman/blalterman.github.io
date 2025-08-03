@@ -41,5 +41,12 @@
     "description": "Quantifying the role of Coulomb collisions in regulating ion differential flows and distribution, with implications for plasma heating and transport.",
     "image": "https://placehold.co/600x400.png",
     "imageHint": "particle collision"
+  },
+  {
+    "title": "Sources of the Solar Wind",
+    "slug": "sources-of-the-solar-wind",
+    "description": "Understanding the different regions and processes on the Sun that give rise to the solar wind, from coronal holes to active regions.",
+    "image": "https://placehold.co/600x400.png",
+    "imageHint": "solar activity"
   }
 ]

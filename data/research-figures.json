@@ -15,10 +15,10 @@
     "alt": "Figure showing helium abundance vs. sunspot number over time.",
     "caption": "<b>Figure 3:</b> A placeholder graph of helium abundance over a solar cycle. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
   },
-  "helium-abundance-2": {
+  "sources-of-the-solar-wind": {
     "src": "/paper-figures/svg/AheXhel-Fig2.svg",
-    "alt": "Second figure showing helium abundance data.",
-    "caption": "<b>Figure 4:</b> A placeholder for the second helium abundance figure. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
+    "alt": "Figure showing helium abundance data related to solar wind sources.",
+    "caption": "<b>Figure 4:</b> A placeholder for the solar wind sources figure. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. © AAS. Reproduced with permission)."
   },
   "proton-beams": {
     "src": "https://placehold.co/800x600.png",
