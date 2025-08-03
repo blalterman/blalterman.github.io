@@ -2,7 +2,6 @@
   {
     "slug": "proton-beams",
     "title": "Proton Beams",
-    "paragraph": "",
     "figure": {
       "src": "https://placehold.co/800x600.png",
       "alt": "Placeholder image for Proton Beams research",
@@ -15,13 +14,12 @@
     "figure": {
       "src": "/paper-figures/svg/KeFlux-Fig1.svg",
       "alt": "Figure showing helium abundance vs. sunspot number over time.",
-      "caption": "Lorem ipsum From Alterman (2025-05-00), The Astrophysical Journal. \u00a9 AAS. Reproduced with permission under a ."
+      "caption": "A placeholder graph of helium abundance over a solar cycle. Replace with your actual figure caption. From  (), . \u00a9 AAS. Reproduced with permission under a N/A."
     }
   },
   {
     "slug": "space-weather",
     "title": "Space Weather",
-    "paragraph": "",
     "figure": {
       "src": "https://placehold.co/800x600.png",
       "alt": "Placeholder image for Space Weather research",
@@ -34,7 +32,7 @@
     "figure": {
       "src": "/paper-figures/svg/STQT-SpectralIndex-Fig4.svg",
       "alt": "Figure showing suprathermal ion spectral index",
-      "caption": "Lorem ipsum From Alterman et al. (2024-04-00), The Astrophysical Journal. \u00a9 AAS. Reproduced with permission under a ."
+      "caption": "A plot of the suprathermal ion spectral index ($gamma$) versus the ratio of the alpha particle to proton densities ($n_alpha/n_p$). The dashed line indicates the expected value for injection from the solar wind peak. The solid line shows the best fit to the data points, which are color-coded by normalized radial distance ($R/odot$). From  (), . \u00a9 AAS. Reproduced with permission under a N/A."
     }
   },
   {
@@ -43,7 +41,7 @@
     "figure": {
       "src": "/paper-figures/svg/SWICS-SSN-Fig1.svg",
       "alt": "Figure showing heavy ion composition data from the SWICS instrument.",
-      "caption": "Lorem ipsum From  (), . \u00a9 AAS. Reproduced with permission under a ."
+      "caption": "A placeholder chart showing heavy ion composition. Replace with your actual figure caption. From  (), . \u00a9 AAS. Reproduced with permission under a N/A."
     }
   },
   {
@@ -52,7 +50,7 @@
     "figure": {
       "src": "/paper-figures/svg/P9-Fig9.svg",
       "alt": "Figure showing alpha-proton differential flow vs. coulomb collision frequency.",
-      "caption": "Lorem ipsum From Alterman et al. (2018-09-00), The Astrophysical Journal. \u00a9 AAS. Reproduced with permission under a ."
+      "caption": "A placeholder diagram illustrating Coulomb collisions. Replace with your actual figure caption. From  (), . \u00a9 AAS. Reproduced with permission under a N/A."
     }
   },
   {
@@ -61,7 +59,7 @@
     "figure": {
       "src": "/paper-figures/svg/AheXhel-Fig2.svg",
       "alt": "Figure showing helium abundance data related to solar wind sources.",
-      "caption": "Lorem ipsum From Alterman et al. (2025-04-00), The Astrophysical Journal. \u00a9 AAS. Reproduced with permission under a ."
+      "caption": "A placeholder for the solar wind sources figure. Replace with your actual figure caption. From  (), . \u00a9 AAS. Reproduced with permission under a N/A."
     }
   }
 ]
