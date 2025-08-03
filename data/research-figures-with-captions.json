@@ -14,7 +14,7 @@
     "figure": {
       "src": "/paper-figures/svg/KeFlux-Fig1.svg",
       "alt": "Figure showing helium abundance vs. sunspot number over time.",
-      "caption": "A placeholder graph of helium abundance over a solar cycle. Replace with your actual figure caption. From Alterman (2025), The Astrophysical Journal."
+      "caption": "Lorem Ipsum From Alterman (2025), The Astrophysical Journal."
     }
   },
   {
@@ -32,7 +32,7 @@
     "figure": {
       "src": "/paper-figures/svg/STQT-SpectralIndex-Fig4.svg",
       "alt": "Figure showing suprathermal ion spectral index",
-      "caption": "A plot of the suprathermal ion spectral index ($gamma$) versus the ratio of the alpha particle to proton densities ($n_alpha/n_p$). The dashed line indicates the expected value for injection from the solar wind peak. The solid line shows the best fit to the data points, which are color-coded by normalized radial distance ($R/odot$). From Alterman et al. (2024), The Astrophysical Journal."
+      "caption": "Lorem Ipsum From Alterman et al. (2024), The Astrophysical Journal."
     }
   },
   {
@@ -41,7 +41,7 @@
     "figure": {
       "src": "/paper-figures/svg/SWICS-SSN-Fig1.svg",
       "alt": "Figure showing heavy ion composition data from the SWICS instrument.",
-      "caption": "A placeholder chart showing heavy ion composition. Replace with your actual figure caption. From  (), ."
+      "caption": "Lorem Ipsum From  (), ."
     }
   },
   {
@@ -50,7 +50,7 @@
     "figure": {
       "src": "/paper-figures/svg/P9-Fig9.svg",
       "alt": "Figure showing alpha-proton differential flow vs. coulomb collision frequency.",
-      "caption": "A placeholder diagram illustrating Coulomb collisions. Replace with your actual figure caption. From Alterman et al. (2018), The Astrophysical Journal."
+      "caption": "Lorem Ipsum From Alterman et al. (2018), The Astrophysical Journal."
     }
   },
   {
@@ -59,7 +59,7 @@
     "figure": {
       "src": "/paper-figures/svg/AheXhel-Fig2.svg",
       "alt": "Figure showing helium abundance data related to solar wind sources.",
-      "caption": "A placeholder for the solar wind sources figure. Replace with your actual figure caption. From Alterman & D'Amicis (2025), The Astrophysical Journal."
+      "caption": "Lorem Ipsum From Alterman & D'Amicis (2025), The Astrophysical Journal."
     }
   }
 ]
