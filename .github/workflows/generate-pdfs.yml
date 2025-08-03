@@ -19,7 +19,7 @@ jobs:
           node-version: '20' # Or your preferred Node.js version
 
       - name: Install dependencies
-        run: npm install pdfjs-dist
+        run: npm install
 
       - name: Run script to generate HTML
         run: node scripts/generate-pdfs.js public/paper-figures/pdfs public/paper-figures/html # Read from PDFs, write to HTML
@@ -37,11 +37,4 @@ jobs:
           git add public/paper-figures/html # Stage the generated HTML
           git commit -m "Generated and added latest paper figures HTML" || echo "No changes to commit"
           git push
-
-
-
-
-
-          
-          
 
