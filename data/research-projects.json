@@ -41,12 +41,5 @@
     "description": "Quantifying the role of Coulomb collisions in regulating ion differential flows and distribution, with implications for plasma heating and transport.",
     "image": "https://placehold.co/600x400.png",
     "imageHint": "particle collision"
-  },
-  {
-    "title": "Kinetic Physics",
-    "slug": "kinetic-physics",
-    "description": "Exploring particle-scale dynamics in the solar wind to understand how kinetic processes shape ion behavior beyond fluid approximations.",
-    "image": "https://placehold.co/600x400.png",
-    "imageHint": "plasma waves"
   }
 ]
