@@ -32,10 +32,6 @@ def get_license_short(doi):
     lic_url = lic_list[0].get("URL", "")
     return LICENSE_INFO.get(lic_url, "Unknown")
 
-def parse_doi_list(dois):
-    """Processes a list of DOIs and returns a mapping DOI -> short license name."""
-    return {doi: get_license_short(doi) for doi in dois}
-
 def fetch_licenses_for_dois(dois):
     """
     Main function to fetch licenses for a given list of DOIs.
@@ -46,5 +42,5 @@ def fetch_licenses_for_dois(dois):
     Returns:
         dict: A dictionary mapping each DOI to its license short name.
     """
-    return parse_doi_list(dois)
+    return {doi: get_license_short(doi) for doi in dois}
 
