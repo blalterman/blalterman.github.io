@@ -9,6 +9,7 @@ def generate_full_caption(caption_info, pub_info, license_info):
     authors = pub_info.get("authors", [])
     year = pub_info.get("year", "")
     journal = pub_info.get("journal", "")
+    url = pub_info.get("url")
     
     # Use the license info passed in, default to "N/A"
     license_text = license_info or "N/A"
@@ -28,8 +29,13 @@ def generate_full_caption(caption_info, pub_info, license_info):
     # Only use the year part (before any '-')
     year_only = year.split('-')[0] if year else ""
 
-    citation = f"From {author_str} ({year_only}), {journal}"
+    citation_text = f"From {author_str} ({year_only}), {journal}"
     
+    if url:
+        citation = f'<a href="{url}" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">{citation_text}</a>'
+    else:
+        citation = citation_text
+
     # Combine all parts
     full_caption = f"{caption_info.get('Caption', '')} {citation}."
     
