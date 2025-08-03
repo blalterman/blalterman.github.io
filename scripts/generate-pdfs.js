@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const { getDocument, GlobalWorkerOptions } = require('pdfjs-dist/legacy/build/pdf.js');
+const { getDocument, GlobalWorkerOptions } = require('pdfjs-dist');
 
 // Set the worker source for Node.js environment
-GlobalWorkerOptions.workerSrc = require.resolve('pdfjs-dist/legacy/build/pdf.worker.js');
+GlobalWorkerOptions.workerSrc = require.resolve('pdfjs-dist/build/pdf.worker.js');
 
 
 async function convertPdfToHtml(inputDir, outputDir) {
