@@ -1,40 +1,36 @@
+
 on:
   push:
-    # paths:
-    #   - 'public/paper-figures/pdfs/**' # Trigger only when PDF source files change
+    paths:
+      - 'public/paper-figures/pdfs/**'
 
 jobs:
   generate_pdfs:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Grant write permission for committing
+      contents: write
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20' # Or your preferred Node.js version
+      - name: Install poppler-utils
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
-      - name: Install dependencies
-        run: npm install
+      - name: Create output directory
+        run: mkdir -p public/paper-figures/html
 
-      - name: Run script to generate HTML
-        run: node scripts/generate-pdfs.js public/paper-figures/pdfs public/paper-figures/html # Read from PDFs, write to HTML
-
-      - name: Upload generated PDFs
-        uses: actions/upload-artifact@v4
-        with:
-          name: generated-html-figures
-          path: public/paper-figures/html
+      - name: Convert PDFs to HTML
+        run: |
+          for pdf in public/paper-figures/pdfs/*.pdf; do
+            filename=$(basename "$pdf" .pdf)
+            pdftohtml -s -noframes -i "$pdf" "public/paper-figures/html/$filename.html"
+          done
 
       - name: Commit and push HTML
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add public/paper-figures/html # Stage the generated HTML
-          git commit -m "Generated and added latest paper figures HTML" || echo "No changes to commit"
+          git add public/paper-figures/html
+          git commit -m "Generated and added latest paper figures HTML [automated]" || echo "No changes to commit"
           git push
-
