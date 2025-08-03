@@ -1,87 +1,54 @@
+
 import requests
 import json
 import os
 
-# 1) Define a mapping from license URL → (License Name, License Holder)
+# Define mapping from license URL to short name
 LICENSE_INFO = {
-    "http://creativecommons.org/licenses/by/4.0/": (
-        "Creative Commons Attribution 4.0 International",
-        "Creative Commons"
-    ),
-    "https://creativecommons.org/licenses/by-nc/4.0/": (
-        "Creative Commons Attribution-NonCommercial 4.0 International",
-        "Creative Commons"
-    ),
-    "https://creativecommons.org/licenses/by-nc-nd/4.0/": (
-        "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
-        "Creative Commons"
-    ),
-    "http://creativecommons.org/licenses/by/3.0/": (
-        "Creative Commons Attribution 3.0 Licence",
-        "Creative Commons"
-    ),
+    "http://creativecommons.org/licenses/by/4.0/": "CC-BY-4.0",
+    "https://creativecommons.org/licenses/by/4.0": "CC-BY-4.0",
+    "https://creativecommons.org/licenses/by-nc/4.0/": "CC-BY-NC-4.0",
+    "https://creativecommons.org/licenses/by-nc-nd/4.0/": "CC-BY-NC-ND-4.0",
+    "http://creativecommons.org/licenses/by/3.0/": "CC-BY-3.0",
+    # Springer Nature SharedIt license
+    "https://www.springernature.com/gp/open-research/shared-standards#license": "SN-SharedIt-3.0",
     # Add more known license URLs here as needed...
 }
 
-def get_license_record(doi):
-    """Fetches Crossref metadata for a DOI and returns license info dict."""
+
+
+def get_license_short(doi):
+    """Fetches Crossref metadata for a DOI and returns only the short license name."""
     url = f"https://api.crossref.org/works/{doi}"
     resp = requests.get(url, headers={"Accept": "application/json"})
     if resp.status_code != 200:
-        return {
-            "doi": doi,
-            "name": "N/A",
-            "url": "N/A",
-            "holder": "N/A"
-        }
+        return "N/A"
 
     msg = resp.json().get("message", {})
     lic_list = msg.get("license", [])
     if not lic_list:
-        return {
-            "doi": doi,
-            "name": "N/A",
-            "url": "N/A",
-            "holder": "N/A"
-        }
+        return "N/A"
 
-    lic = lic_list[0]  # take the first license block
-    lic_url = lic.get("URL", "")
-    name, holder = LICENSE_INFO.get(
-        lic_url,
-        # Fallback if URL not in our map:
-        ("Unknown license", "N/A")
-    )
-    return {
-        "doi": doi,
-        "name": name,
-        "url": lic_url,
-        "holder": holder
-    }
+    lic_url = lic_list[0].get("URL", "")
+    return LICENSE_INFO.get(lic_url, "Unknown")
 
 def parse_doi_list(dois):
-    """Processes a list of DOIs and returns a list of license info objects."""
-    results = []
-    for doi in dois:
-        results.append(get_license_record(doi))
-    return results
+    """Processes a list of DOIs and returns a mapping DOI -> short license name."""
+    return {doi: get_license_short(doi) for doi in dois}
 
 if __name__ == "__main__":
-    # Example DOIs (replace or extend with your own list)
     doi_list = [
-        "10.1038/s41586-020-2649-2",
-        "10.1103/PhysRevLett.116.061102",
-        "10.1000/xyz123"   # non-existent or closed-access example
+        "10.3847/2041-8213/ab2391",
+        "10.1007/s11207-021-01801-9",
+        "10.1051/0004-6361/202451550"
     ]
 
     # Parse the DOIs
     license_data = parse_doi_list(doi_list)
 
-    for row in license_data:
-        print(f"DOI:            {row['doi']}")
-        print(f"License Name:   {row['name']}")
-        print(f"License URL:    {row['url']}")
-        print(f"License Holder: {row['holder']}")
+    for k, v in license_data.items():
+        print(f"DOI:            {k}")
+        print(f"License Name:   {v}")
         print("-" * 40)
 
     # Ensure output directory exists
