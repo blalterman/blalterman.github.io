@@ -5,13 +5,14 @@ import { ResearchFigure } from '@/components/research-figure';
 
 export default function ProtonBeamsPage() {
     const paragraphsPath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
-    const figuresPath = path.join(process.cwd(), 'data', 'research-figures.json');
+    const figuresPath = path.join(process.cwd(), 'data', 'research-figures-with-captions.json');
     
     const paragraphs = JSON.parse(fs.readFileSync(paragraphsPath, 'utf8'));
-    const figures = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
+    const figuresData = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
     
+    const pageData = figuresData.find((p: any) => p.slug === 'proton-beams');
     const paragraph = paragraphs['proton-beams'];
-    const figure = figures['proton-beams'];
+    const figure = pageData?.figure;
     
     return (
         <main className="flex-1 container mx-auto py-16 md:py-24">

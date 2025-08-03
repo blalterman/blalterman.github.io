@@ -5,13 +5,14 @@ import { ResearchFigure } from '@/components/research-figure';
 
 export default function SuprathermalIonsPage() {
   const paragraphsPath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
-  const figuresPath = path.join(process.cwd(), 'data', 'research-figures.json');
+  const figuresPath = path.join(process.cwd(), 'data', 'research-figures-with-captions.json');
 
   const researchParagraphs = JSON.parse(fs.readFileSync(paragraphsPath, 'utf-8'));
-  const figures = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
+  const figuresData = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
 
+  const pageData = figuresData.find((p: any) => p.slug === 'suprathermal-ions');
   const introductoryParagraph = researchParagraphs['suprathermal-ions'];
-  const figure = figures['suprathermal-ions'];
+  const figure = pageData?.figure;
 
 
   return (

@@ -5,13 +5,14 @@ import { ResearchFigure } from '@/components/research-figure';
 
 export default function CoulombCollisionsPage() {
   const paragraphsPath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
-  const figuresPath = path.join(process.cwd(), 'data', 'research-figures.json');
+  const figuresPath = path.join(process.cwd(), 'data', 'research-figures-with-captions.json');
 
   const paragraphs = JSON.parse(fs.readFileSync(paragraphsPath, 'utf-8'));
-  const figures = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
+  const figuresData = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
 
+  const pageData = figuresData.find((p: any) => p.slug === 'coulomb-collisions');
   const paragraph = paragraphs['coulomb-collisions'];
-  const figure = figures['coulomb-collisions'];
+  const figure = pageData?.figure;
 
   return (
     <main className="flex-1 container mx-auto py-16 md:py-24">

@@ -5,13 +5,14 @@ import { ResearchFigure } from '@/components/research-figure';
 
 export default function HeliumAbundancePage() {
     const paragraphsPath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
-    const figuresPath = path.join(process.cwd(), 'data', 'research-figures.json');
+    const figuresPath = path.join(process.cwd(), 'data', 'research-figures-with-captions.json');
 
     const paragraphs = JSON.parse(fs.readFileSync(paragraphsPath, 'utf-8'));
-    const figures = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
+    const figuresData = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
 
+    const pageData = figuresData.find((p: any) => p.slug === 'helium-abundance');
     const introductoryParagraph = paragraphs['helium-abundance'];
-    const figure = figures['helium-abundance'];
+    const figure = pageData?.figure;
 
     return (
         <main className="flex-1 container mx-auto py-16 md:py-24">
