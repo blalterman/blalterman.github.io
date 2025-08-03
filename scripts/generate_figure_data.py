@@ -13,17 +13,25 @@ def generate_full_caption(caption_info, pub_info, license_info):
     # Use the license info passed in, default to "N/A"
     license_text = license_info or "N/A"
 
-    # Create a simplified author list (e.g., Alterman et al.)
-    first_author_lastname = ""
-    if authors:
-        first_author_lastname = authors[0].split(',')[0]
+    # Improved author string logic
+    if len(authors) == 1:
+        author_str = authors[0].split(',')[0]
+    elif len(authors) == 2:
+        author1 = authors[0].split(',')[0]
+        author2 = authors[1].split(',')[0]
+        author_str = f"{author1} & {author2}"
+    elif len(authors) > 2:
+        author_str = f"{authors[0].split(',')[0]} et al."
+    else:
+        author_str = ""
 
-    author_str = f"{first_author_lastname} et al." if len(authors) > 1 else first_author_lastname
+    # Only use the year part (before any '-')
+    year_only = year.split('-')[0] if year else ""
 
-    citation = f"From {author_str} ({year}), {journal}."
+    citation = f"From {author_str} ({year_only}), {journal}"
     
     # Combine all parts
-    full_caption = f"{caption_info.get('Caption', '')} {citation} © AAS. Reproduced with permission under a {license_text}."
+    full_caption = f"{caption_info.get('Caption', '')} {citation}."
     
     return full_caption.strip()
 
@@ -66,8 +74,6 @@ def main():
         if pub and pub.get('url', '').startswith('https://dx.doi.org/'):
             doi = pub['url'].replace('https://dx.doi.org/', '')
             all_dois.append(doi)
-    
-    pdb.set_trace()
     
     # Fetch all licenses for the collected DOIs
     print(f"Fetching licenses for {len(all_dois)} DOIs...")
