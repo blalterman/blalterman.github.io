@@ -58,14 +58,14 @@ export function Contact() {
                 Built with
                 <a href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer" className="ml-2 flex items-center hover:text-foreground transition-colors">
                     <FirebaseIcon className="h-5 w-5 mr-1" />
-                    Firebase
+                    Firebase.
                 </a>
             </span>
             <span className="flex items-center">
-                and hosted on
+                Hosted on
                 <a href="https://github.com/blalterman/blalterman.github.io" target="_blank" rel="noopener noreferrer" className="ml-2 flex items-center hover:text-foreground transition-colors">
                     <GithubMarkIcon className="h-5 w-5 mr-1" />
-                    GitHub
+                    GitHub.
                 </a>
             </span>
         </div>
