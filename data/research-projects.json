@@ -48,5 +48,12 @@
     "description": "Understanding the different regions and processes on the Sun that give rise to the solar wind, from coronal holes to active regions.",
     "image": "https://placehold.co/600x400.png",
     "imageHint": "solar activity"
+  },
+  {
+    "title": "Turbulence",
+    "slug": "turbulence",
+    "description": "Exploring the role of turbulence in heating the solar wind and accelerating solar energetic particles.",
+    "image": "https://placehold.co/600x400.png",
+    "imageHint": "plasma turbulence"
   }
 ]
