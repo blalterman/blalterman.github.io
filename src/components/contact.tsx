@@ -8,6 +8,8 @@ import { OrcidIcon } from './icons/orcid-icon';
 import { NasaAdsIcon } from './icons/nasa-ads-icon';
 import { GoogleScholarIcon } from './icons/google-scholar-icon';
 import { ArxivIcon } from './icons/arxiv-icon';
+import { FirebaseIcon } from './icons/firebase-icon';
+import { GithubCircleIcon } from './icons/github-circle-icon';
 
 export function Contact() {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -51,6 +53,22 @@ export function Contact() {
         <p className="text-sm text-muted-foreground">
           &copy; {currentYear} B. L. Alterman. All Rights Reserved.
         </p>
+        <div className="flex justify-center items-center space-x-4 mt-4 text-sm text-muted-foreground">
+            <span className="flex items-center">
+                Built with
+                <a href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer" className="ml-2 flex items-center hover:text-foreground transition-colors">
+                    <FirebaseIcon className="h-5 w-5 mr-1" />
+                    Firebase
+                </a>
+            </span>
+            <span className="flex items-center">
+                and hosted on
+                <a href="https://github.com/blalterman/blalterman.github.io" target="_blank" rel="noopener noreferrer" className="ml-2 flex items-center hover:text-foreground transition-colors">
+                    <GithubCircleIcon className="h-5 w-5 mr-1" />
+                    GitHub
+                </a>
+            </span>
+        </div>
       </div>
     </footer>
   );
