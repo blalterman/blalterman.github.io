@@ -9,7 +9,7 @@ import { NasaAdsIcon } from './icons/nasa-ads-icon';
 import { GoogleScholarIcon } from './icons/google-scholar-icon';
 import { ArxivIcon } from './icons/arxiv-icon';
 import { FirebaseIcon } from './icons/firebase-icon';
-import { GithubCircleIcon } from './icons/github-circle-icon';
+import { GithubMarkIcon } from './icons/github-mark-icon';
 
 export function Contact() {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -64,7 +64,7 @@ export function Contact() {
             <span className="flex items-center">
                 and hosted on
                 <a href="https://github.com/blalterman/blalterman.github.io" target="_blank" rel="noopener noreferrer" className="ml-2 flex items-center hover:text-foreground transition-colors">
-                    <GithubCircleIcon className="h-5 w-5 mr-1" />
+                    <GithubMarkIcon className="h-5 w-5 mr-1" />
                     GitHub
                 </a>
             </span>
