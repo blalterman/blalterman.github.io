@@ -2,6 +2,28 @@
 import fs from 'fs';
 import path from 'path';
 import { ResearchFigure } from '@/components/research-figure';
+import { Metadata, ResolvingMetadata } from 'next';
+
+type Props = {
+  params: { slug: string };
+};
+
+const pageSlug = 'suprathermal-ions';
+const pageTitle = 'Suprathermal Ions';
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const paragraphsPath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
+  const paragraphs = JSON.parse(fs.readFileSync(paragraphsPath, 'utf-8'));
+  const paragraph = paragraphs[pageSlug];
+
+  return {
+    title: `${pageTitle} | B. L. Alterman`,
+    description: paragraph,
+  };
+}
 
 export default function SuprathermalIonsPage() {
   const paragraphsPath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
@@ -10,14 +32,14 @@ export default function SuprathermalIonsPage() {
   const researchParagraphs = JSON.parse(fs.readFileSync(paragraphsPath, 'utf-8'));
   const figuresData = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
 
-  const pageData = figuresData.find((p: any) => p.slug === 'suprathermal-ions');
-  const introductoryParagraph = researchParagraphs['suprathermal-ions'];
+  const pageData = figuresData.find((p: any) => p.slug === pageSlug);
+  const introductoryParagraph = researchParagraphs[pageSlug];
   const figure = pageData?.figure;
 
 
   return (
     <main className="flex-1 container mx-auto py-16 md:py-24">
-      <h1 className="text-3xl md:text-4xl font-bold font-headline">Suprathermal Ions</h1>
+      <h1 className="text-3xl md:text-4xl font-bold font-headline">{pageTitle}</h1>
       <p className="text-lg text-muted-foreground mt-4">
               {introductoryParagraph}
       </p>
