@@ -47,7 +47,7 @@ import {
     const sortedRefereedPublications = [...articles].sort((a, b) => parseInt(b.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
     const sortedDatasets = [...datasets].sort((a, b) => parseInt(b.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
     const sortedConferenceProceedings = [...inproceedings].sort((a, b) => parseInt(a.year) - parseInt(b.year));
-    const sortedConferencePresentations = [...abstracts].sort((a, b) => parseInt(b.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
+    const sortedConferencePresentations = [...abstracts].sort((a, b) => parseInt(a.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
     const sortedWhitePapers = [...techReports].sort((a, b) => parseInt(a.year) - parseInt(b.year));
     const sortedPrePrints = [...eprints].sort((a, b) => parseInt(a.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
     const sortedPhdThesis = [...phdThesis].sort((a, b) => parseInt(a.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
@@ -58,7 +58,7 @@ import {
           <h1 className="text-3xl md:text-4xl font-bold font-headline">Publications</h1>
           <p className="text-lg text-muted-foreground mt-2">A list of my research publications and conference presentations.</p>
         </div>
-        <div className="flex justify-center flex-wrap space-x-8 mb-12">
+        <div className="flex justify-center flex-wrap gap-x-8 mb-12">
           <div className="flex flex-col items-center">
             <span className="text-2xl font-bold">{adsMetrics["indicators"]["h"]}</span>
             <span className="text-sm text-muted-foreground">h-index</span>
@@ -84,8 +84,8 @@ import {
 
         {sortedPhdThesis.length > 0 && (
           <>
-            <h2 className="text-2xl font-bold font-headline mt-8">PhD Thesis</h2>
-            <div className="border rounded-lg overflow-hidden shadow-lg">
+            <h2 className="text-2xl font-bold font-headline mt-8 text-center">PhD Thesis</h2>
+            <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto mt-4">
               <Table>
                 <TableHeader>
                   <TableRow className="bg-muted/50">
@@ -129,8 +129,8 @@ import {
           </>
         )}
         
-        <h2 className="text-2xl font-bold font-headline mt-8">Refereed Publications</h2>
-        <div className="border rounded-lg overflow-hidden shadow-lg">
+        <h2 className="text-2xl font-bold font-headline mt-8 text-center">Refereed Publications</h2>
+        <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto mt-4">
           <Table>
             <TableHeader>
               <TableRow className="bg-muted/50">
@@ -176,8 +176,8 @@ import {
 
         {sortedDatasets.length > 0 && (
           <>
-            <h2 className="text-2xl font-bold font-headline mt-8">Datasets</h2>
-            <div className="border rounded-lg overflow-hidden shadow-lg">
+            <h2 className="text-2xl font-bold font-headline mt-8 text-center">Datasets</h2>
+            <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto mt-4">
               <Table>
                 <TableHeader>
                   <TableRow className="bg-muted/50">
@@ -223,8 +223,8 @@ import {
 
         {sortedConferenceProceedings.length > 0 && (
           <>
-            <h2 className="text-2xl font-bold font-headline mt-8">Conference Proceedings</h2>
-            <div className="border rounded-lg overflow-hidden shadow-lg">
+            <h2 className="text-2xl font-bold font-headline mt-8 text-center">Conference Proceedings</h2>
+            <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto mt-4">
               <Table>
                 <TableHeader>
                   <TableRow className="bg-muted/50">
@@ -270,8 +270,8 @@ import {
 
         {sortedConferencePresentations.length > 0 && (
           <>
-            <h2 className="text-2xl font-bold font-headline mt-8">Conference Presentations</h2>
-            <div className="border rounded-lg overflow-hidden shadow-lg">
+            <h2 className="text-2xl font-bold font-headline mt-8 text-center">Conference Presentations</h2>
+            <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto mt-4">
               <Table>
                 <TableHeader>
                   <TableRow className="bg-muted/50">
@@ -317,8 +317,8 @@ import {
 
         {sortedWhitePapers.length > 0 && (
           <>
-            <h2 className="text-2xl font-bold font-headline mt-8">White Papers</h2>
-            <div className="border rounded-lg overflow-hidden shadow-lg">
+            <h2 className="text-2xl font-bold font-headline mt-8 text-center">White Papers</h2>
+            <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto mt-4">
               <Table>
                 <TableHeader>
                   <TableRow className="bg-muted/50">
@@ -364,8 +364,8 @@ import {
 
         {sortedPrePrints.length > 0 && (
           <>
-            <h2 className="text-2xl font-bold font-headline mt-8">Pre-Prints</h2>
-            <div className="border rounded-lg overflow-hidden shadow-lg">
+            <h2 className="text-2xl font-bold font-headline mt-8 text-center">Pre-Prints</h2>
+            <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto mt-4">
               <Table>
                 <TableHeader>
                   <TableRow className="bg-muted/50">
@@ -411,5 +411,7 @@ import {
       </div>
     );
   }
+
+    
 
     
