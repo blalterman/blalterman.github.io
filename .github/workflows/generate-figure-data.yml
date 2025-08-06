@@ -2,6 +2,7 @@ name: Generate Figure Data
 
 on:
   push:
+    branches: [main]
     paths:
       - 'public/data/ads_publications.json'
       - 'public/paper-figures/captions-bibcodes.json'

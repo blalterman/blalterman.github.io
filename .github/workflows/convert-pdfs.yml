@@ -2,6 +2,7 @@ name: Convert PDFs to SVG
 
 on:
   push:
+    branches: [main]
     paths:
       - 'public/paper-figures/pdfs/**'
 
