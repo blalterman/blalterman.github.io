@@ -1,4 +1,4 @@
-# Personal Academic Website of B. L. Alterman
+# Research Website of B. L. Alterman
 
 This repository contains the source code for the personal academic and professional portfolio of B. L. Alterman, a research astrophysicist. The website is built as a static site using Next.js and is hosted on GitHub Pages. It is designed to be a clean, professional, and easily maintainable platform to showcase research, publications, and professional experience.
 
