@@ -1,7 +1,7 @@
-import { SVGProps } from "react";
+import Image from 'next/image';
 
-export function ArxivIcon(props: SVGProps<SVGSVGElement>) {
+export function ArxivIcon(props: Omit<React.ComponentProps<typeof Image>, 'src' | 'alt'>) {
   return (
-    <img src="/icons/arxiv.svg" alt="arXiv Icon" {...props} />
+    <Image src="/icons/arxiv.svg" alt="arXiv Icon" width={24} height={24} {...props} />
   );
 }

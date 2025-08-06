@@ -1,7 +1,7 @@
-import { SVGProps } from "react";
+import Image from 'next/image';
 
-export function OrcidIcon(props: SVGProps<SVGSVGElement>) {
+export function OrcidIcon(props: Omit<React.ComponentProps<typeof Image>, 'src' | 'alt'>) {
   return (
-    <img src="/icons/orcid.svg" alt="ORCID Icon" {...props} />
+    <Image src="/icons/orcid.svg" alt="ORCID Icon" width={24} height={24} {...props} />
   );
 }

@@ -1,7 +1,7 @@
-import { SVGProps } from "react";
+import Image from 'next/image';
 
-export function NasaAdsIcon(props: SVGProps<SVGSVGElement>) {
+export function NasaAdsIcon(props: Omit<React.ComponentProps<typeof Image>, 'src' | 'alt'>) {
   return (
-    <img src="/icons/ads.svg" alt="NASA ADS Icon" {...props} />
+    <Image src="/icons/ads.svg" alt="NASA ADS Icon" width={24} height={24} {...props} />
   );
 }
