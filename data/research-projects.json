@@ -2,59 +2,58 @@
 [
   {
     "title": "Proton Beams",
-    "description": "Overview of ongoing proton beam research projects.",
+    "slug": "proton-beams",
+    "description": "Investigating how proton beams form, evolve, and interact with the solar wind to uncover the mechanisms generating them.",
     "image": "https://placehold.co/600x400.png",
-    "imageHint": "proton beam space",
-    "publicationLink": "#",
-    "datasetLink": "#"
+    "imageHint": "solar wind particles"
   },
   {
     "title": "Helium Abundance",
-    "description": "Summary of studies on helium abundance in the solar wind.",
+    "slug": "helium-abundance",
+    "description": "Characterizing how helium abundance varies across solar wind conditions and solar cycles to trace the sources, acceleration, and heating of the wind.",
     "image": "https://placehold.co/600x400.png",
-    "imageHint": "helium solar",
-    "publicationLink": "#",
-    "datasetLink": "#"
+    "imageHint": "sun corona"
   },
   {
     "title": "Space Weather",
-    "description": "Information about space weather forecasting and analysis.",
+    "slug": "space-weather",
+    "description": "Developing in situ diagnostics to connect solar wind structure and variability to solar sources and their role in shaping space weather at Earth.",
     "image": "https://placehold.co/600x400.png",
-    "imageHint": "space weather",
-    "publicationLink": "#",
-    "datasetLink": "#"
+    "imageHint": "earth aurora"
   },
   {
     "title": "Suprathermal Ions",
-    "description": "Studies examining suprathermal ions throughout the heliosphere.",
+    "slug": "suprathermal-ions",
+    "description": "Studying quiet-time suprathermal ion populations to reveal their origins, spectral properties, and links to solar energetic particle acceleration.",
     "image": "https://placehold.co/600x400.png",
-    "imageHint": "suprathermal ions",
-    "publicationLink": "#",
-    "datasetLink": null
+    "imageHint": "particle trails"
   },
   {
     "title": "Heavy Ion Composition",
-    "description": "Investigations into heavy ion makeup of the solar wind.",
+    "slug": "heavy-ion-composition",
+    "description": "Analyzing heavy ion abundance patterns to map solar wind source regions and identify fractionation processes in different wind regimes.",
     "image": "https://placehold.co/600x400.png",
-    "imageHint": "heavy ion",
-    "publicationLink": "#",
-    "datasetLink": "#"
+    "imageHint": "atomic structure"
   },
   {
     "title": "Coulomb Collisions",
-    "description": "Overview of Coulomb collision processes and their role in the solar wind.",
+    "slug": "coulomb-collisions",
+    "description": "Quantifying the role of Coulomb collisions in regulating ion differential flows and distribution, with implications for plasma heating and transport.",
     "image": "https://placehold.co/600x400.png",
-    "imageHint": "coulomb collision",
-    "publicationLink": "#",
-    "datasetLink": null
+    "imageHint": "particle collision"
   },
   {
-    "title": "Kinetic Physics",
-    "description": "Studies exploring kinetic processes in heliophysics and space plasmas.",
+    "title": "Sources of the Solar Wind",
+    "slug": "sources-of-the-solar-wind",
+    "description": "Understanding the different regions and processes on the Sun that give rise to the solar wind, from coronal holes to active regions.",
     "image": "https://placehold.co/600x400.png",
-    "imageHint": "kinetic physics",
-    "publicationLink": "#",
-    "datasetLink": null
+    "imageHint": "solar activity"
+  },
+  {
+    "title": "Turbulence",
+    "slug": "turbulence",
+    "description": "Exploring the role of turbulence in the solar wind's evolution through interplanetary space.",
+    "image": "https://placehold.co/600x400.png",
+    "imageHint": "plasma turbulence"
   }
 ]
-
