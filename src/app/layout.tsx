@@ -39,6 +39,11 @@ export const metadata: Metadata = {
     description: "Solar wind physicist exploring the heliosphere and its impact on Earth’s space environment.",
     images: ["https://blalterman.github.io/images/headshot.jpg"],
   },
+  icons: {
+    icon: '/icons/logo.svg',
+    shortcut: '/icons/logo.svg',
+    apple: '/icons/logo.svg',
+  },
 };
 
 
