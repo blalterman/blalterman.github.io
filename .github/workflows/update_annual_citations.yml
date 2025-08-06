@@ -37,6 +37,6 @@ jobs:
 
       - name: Commit and push updated data and plot
         run: |
-          git add public/data/citations_by_year.json assets/images/citations_by_year.svg
+          git add public/data/citations_by_year.json public/plots/citations_by_year.svg
           git commit -m "Update citation data and plot [auto]" || echo "No changes to commit"
           git push origin HEAD:main
