@@ -1,7 +1,5 @@
 # Personal Academic Website of B. L. Alterman
 
-[![Developed with Firebase](/public/icons/firebase.svg?width=24&height=24)](https://firebase.google.com/)
-
 This repository contains the source code for the personal academic and professional portfolio of B. L. Alterman, a research astrophysicist. The website is built as a static site using Next.js and is hosted on GitHub Pages. It is designed to be a clean, professional, and easily maintainable platform to showcase research, publications, and professional experience.
 
 A key feature of this project is its set of automated data workflows, which use GitHub Actions to periodically fetch and process data, ensuring the content remains up-to-date with minimal manual intervention.
