@@ -13,7 +13,7 @@ The website relies on a series of GitHub Actions to automate content updates. He
 -   **`update_annual_citations.yml`**: Runs weekly to fetch year-by-year citation data from NASA ADS. It generates both a data file (`public/data/citations_by_year.json`) and a plot (`public/plots/citations_by_year.svg`).
 -   **`convert-pdfs.yml`**: Triggers on any push to the `public/paper-figures/pdfs/` directory. It automatically converts any new or modified PDF files into SVG format and saves them in `public/paper-figures/svg/`, making them web-ready.
 -   **`generate-figure-data.yml`**: Triggers whenever publication data or research project info is updated. It runs a Python script (`scripts/generate_figure_data.py`) to combine publication metadata, figure details, and license information into a single, structured file: `public/data/research-figures-with-captions.json`. This file is used to generate the detailed research subpages.
--   **`deploy.yaml`**: This is the final deployment workflow. It triggers automatically after the successful completion of any of the data-updating workflows. It builds the static Next.js site and deploys the output to the `gh-pages` branch, making the updated website live.
+-   **`deploy.yaml`**: This is the final deployment workflow. It triggers automatically after the successful completion of any of the data-updating workflows. It builds the static Next.js site and a badge from shields.io, then deploys the output to the `gh-pages` branch, making the updated website live.
 
 ## Data Architecture and Content Pipeline
 
@@ -42,6 +42,10 @@ Below is a breakdown of the key data files and their role in the content pipelin
     -   **Origin**: Manually curated.
     -   **Purpose**: Defines the title, description, and slug for each featured research project.
     -   **Usage**: Consumed by the main **Research Page** (`src/app/research/page.tsx`) to create the grid of featured research cards.
+-   **`research-figures.json`**:
+    -   **Origin**: Manually curated.
+    -   **Purpose**: Maps a research project's slug (e.g., `proton-beams`) to the source path and alt text for its representative figure.
+    -   **Usage**: It is a key input for the `scripts/generate_figure_data.py` script. The script uses this file to find the correct figure for each research topic before combining it with publication data to generate the final `research-figures-with-captions.json`.
 -   **`research-paragraphs.json`**:
     -   **Origin**: Manually curated.
     -   **Purpose**: Provides the detailed introductory paragraph for each individual research subpage.
