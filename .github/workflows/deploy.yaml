@@ -1,15 +1,15 @@
 name: Deploy Static Site to GitHub Pages
 
-# on:
-#   workflow_run:
-#     workflows:
-#       - "Update ADS Publications List"
-#       - "Generate Figure Data"
-#       - "Update ADS Citation Metrics"
-#       - "Update NASA ADS Citations Plot and Data"
-#       - "Convert PDFs to SVG"
-#     types:
-#       - completed
+on:
+  workflow_run:
+    workflows:
+      - "Update ADS Publications List"
+      - "Generate Figure Data"
+      - "Update ADS Citation Metrics"
+      - "Update NASA ADS Citations Plot and Data"
+      - "Convert PDFs to SVG"
+    types:
+      - completed
 
 jobs:
   build-and-deploy:
