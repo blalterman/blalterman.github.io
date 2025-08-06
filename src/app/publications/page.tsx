@@ -12,6 +12,12 @@ import {
   import { Button } from "@/components/ui/button";
   import { BookOpen, Database, FileText } from "lucide-react";
   import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+  import { Metadata } from 'next';
+
+  export const metadata: Metadata = {
+    title: "Publications | B. L. Alterman",
+    description: "A comprehensive list of peer-reviewed articles, datasets, conference proceedings, and other publications by B. L. Alterman, with links to NASA/ADS.",
+  };
   
   export default function PublicationsPage() {
     const metricsPath = path.join(process.cwd(), 'public', 'data', 'ads_metrics.json');

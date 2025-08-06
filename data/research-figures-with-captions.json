@@ -61,5 +61,14 @@
       "alt": "Figure showing helium abundance data related to solar wind sources.",
       "caption": "Lorem Ipsum <a href=\"https://dx.doi.org/10.3847/2041-8213/adb48e\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman & D'Amicis (2025), The Astrophysical Journal</a>."
     }
+  },
+  {
+    "slug": "turbulence",
+    "title": "Turbulence",
+    "figure": {
+      "src": "https://placehold.co/800x600.png",
+      "alt": "Placeholder image for Turbulence research",
+      "caption": "A placeholder visualization of turbulence in the solar wind. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. \u00a9 AAS. Reproduced with permission)."
+    }
   }
 ]

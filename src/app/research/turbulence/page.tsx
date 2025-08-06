@@ -8,8 +8,8 @@ type Props = {
   params: { slug: string };
 };
 
-const pageSlug = 'coulomb-collisions';
-const pageTitle = 'Coulomb Collisions';
+const pageSlug = 'turbulence';
+const pageTitle = 'Turbulence';
 
 export async function generateMetadata(
   { params }: Props,
@@ -25,7 +25,8 @@ export async function generateMetadata(
   };
 }
 
-export default function CoulombCollisionsPage() {
+
+export default function TurbulencePage() {
   const paragraphsPath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
   const figuresPath = path.join(process.cwd(), 'data', 'research-figures-with-captions.json');
 
