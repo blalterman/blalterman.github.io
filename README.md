@@ -10,26 +10,54 @@ The website relies on a series of GitHub Actions to automate content updates. He
 
 -   **`update-ads-publications.yml`**: Runs on a weekly schedule to fetch the latest publication list from the NASA ADS API using a personal ORCID. It saves the formatted data to `public/data/ads_publications.json`.
 -   **`update-ads-metrics.yml`**: Runs on a weekly schedule to fetch up-to-date citation metrics (like h-index and total citations) from the NASA ADS API. It saves the data to `public/data/ads_metrics.json`.
--   **`update_annual_citations.yml`**: Runs weekly to fetch year-by-year citation data from NASA ADS. It generates both a data file (`public/data/citations_by_year.json`) and a plot (`assets/images/citations_by_year.svg`).
+-   **`update_annual_citations.yml`**: Runs weekly to fetch year-by-year citation data from NASA ADS. It generates both a data file (`public/data/citations_by_year.json`) and a plot (`public/plots/citations_by_year.svg`).
 -   **`convert-pdfs.yml`**: Triggers on any push to the `public/paper-figures/pdfs/` directory. It automatically converts any new or modified PDF files into SVG format and saves them in `public/paper-figures/svg/`, making them web-ready.
--   **`generate-figure-data.yml`**: Triggers whenever publication data or research project info is updated. It runs a Python script (`scripts/generate_figure_data.py`) to combine publication metadata, figure details, and license information into a single, structured file: `data/research-figures-with-captions.json`. This file is used to generate the detailed research subpages.
+-   **`generate-figure-data.yml`**: Triggers whenever publication data or research project info is updated. It runs a Python script (`scripts/generate_figure_data.py`) to combine publication metadata, figure details, and license information into a single, structured file: `public/data/research-figures-with-captions.json`. This file is used to generate the detailed research subpages.
 -   **`deploy.yaml`**: This is the final deployment workflow. It triggers automatically after the successful completion of any of the data-updating workflows. It builds the static Next.js site and deploys the output to the `gh-pages` branch, making the updated website live.
 
-## Website Architecture
+## Data Architecture and Content Pipeline
 
-The site is built with Next.js using the App Router, which allows for a statically generated website (`output: 'export'`) that is fast, secure, and ideal for hosting on GitHub Pages.
+The site is built with Next.js using the App Router, which allows for a statically generated website (`output: 'export'`) that is fast, secure, and ideal for hosting on GitHub Pages. All data used to build the site is consolidated in the `/public/data` directory, which serves as the single source of truth.
 
-### Publications Page
+Below is a breakdown of the key data files and their role in the content pipeline.
 
--   **File:** `src/app/publications/page.tsx`
--   **How it works:** At build time, this page reads the `ads_publications.json` and `ads_metrics.json` files directly from the filesystem. It then uses this data to statically render the tables of publications, ensuring the page is generated with the latest information fetched by the GitHub Actions.
+### Publication Data
 
-### Research Pages
+-   **`ads_publications.json`**:
+    -   **Origin**: Auto-generated weekly by the `update-ads-publications.yml` workflow.
+    -   **Purpose**: Contains the comprehensive list of all publications from NASA ADS.
+    -   **Usage**: Consumed by the **Publications Page** (`src/app/publications/page.tsx`) to build the various publication tables. It is also a key input for the `generate_figure_data.py` script.
+-   **`ads_metrics.json`**:
+    -   **Origin**: Auto-generated weekly by the `update-ads-metrics.yml` workflow.
+    -   **Purpose**: Contains key citation statistics (h-index, total citations, etc.).
+    -   **Usage**: Consumed by the **Publications Page** to display the summary metric cards.
+-   **`citations_by_year.json`**:
+    -   **Origin**: Auto-generated weekly by the `update_annual_citations.yml` workflow.
+    -   **Purpose**: Contains yearly citation counts.
+    -   **Usage**: Used by its corresponding script to generate the plot at `public/plots/citations_by_year.svg`.
 
--   **Files:** `src/app/research/page.tsx` (main page) and individual research pages (e.g., `src/app/research/[slug]/page.tsx`).
--   **How it works:**
-    -   The main research page reads from `data/research-projects.json` to create the grid of featured research cards.
-    -   Each individual research subpage is generated at build time. Next.js reads from `data/research-paragraphs.json` and `data/research-figures-with-captions.json` to generate a static page for each research topic, complete with its descriptive text and associated figure.
+### Research Content Data
+
+-   **`research-projects.json`**:
+    -   **Origin**: Manually curated.
+    -   **Purpose**: Defines the title, description, and slug for each featured research project.
+    -   **Usage**: Consumed by the main **Research Page** (`src/app/research/page.tsx`) to create the grid of featured research cards.
+-   **`research-paragraphs.json`**:
+    -   **Origin**: Manually curated.
+    -   **Purpose**: Provides the detailed introductory paragraph for each individual research subpage.
+    -   **Usage**: Consumed by each research subpage (e.g., `src/app/research/coulomb-collisions/page.tsx`) to display its main descriptive text.
+-   **`research-figures-with-captions.json`**:
+    -   **Origin**: Auto-generated by the `generate-figure-data.yml` workflow.
+    -   **Purpose**: This is the final, processed data file for research figures. It combines figure metadata with publication and citation info to generate rich, complete captions.
+    -   **Usage**: Consumed by each individual research subpage to display the correct figure and its fully formatted caption, including links and attribution.
+
+### Experience Data
+
+-   **`education.json` & `positions.json`**:
+    -   **Origin**: Manually curated.
+    -   **Purpose**: Contain structured data about academic degrees and professional history.
+    -   **Usage**: Consumed by the **Experience Page** (`src/app/experience/page.tsx`) to populate the education and professional position cards.
+
 
 ## Local Development
 
