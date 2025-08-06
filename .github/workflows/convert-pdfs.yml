@@ -1,9 +1,9 @@
 name: Convert PDFs to SVG
 
-# on:
-#   push:
-#     paths:
-#       - 'public/paper-figures/pdfs/**'
+on:
+  push:
+    paths:
+      - 'public/paper-figures/pdfs/**'
 
 jobs:
   generate_pdfs:
