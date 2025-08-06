@@ -44,7 +44,7 @@ Below is a breakdown of the key data files and their role in the content pipelin
     -   **Usage**: Consumed by the main **Research Page** (`src/app/research/page.tsx`) to create the grid of featured research cards.
 -   **`research-figures.json`**:
     -   **Origin**: Manually curated.
-    -   **Purpose**: Maps a research project's slug (e.g., `proton-beams`) to the source path and alt text for its representative figure.
+    -   **Purpose**: Maps a research project's slug (e.g., `proton-beams`) to the source path, caption, and alt text for its representative figure.
     -   **Usage**: It is a key input for the `scripts/generate_figure_data.py` script. The script uses this file to find the correct figure for each research topic before combining it with publication data to generate the final `research-figures-with-captions.json`.
 -   **`research-paragraphs.json`**:
     -   **Origin**: Manually curated.
