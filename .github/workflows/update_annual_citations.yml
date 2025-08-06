@@ -20,7 +20,7 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install ads requests matplotlib
+          pip install -r scripts/requirements.txt
 
       - name: Pull latest changes
         run: |
