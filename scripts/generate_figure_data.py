@@ -1,3 +1,4 @@
+
 import json
 from pathlib import Path
 from fetch_figure_licenses import fetch_licenses_for_dois
@@ -47,14 +48,14 @@ def main():
     Generates a new JSON file with combined figure and publication data.
     """
     # Define paths
-    data_dir = Path(__file__).parent.parent / "data"
+    public_data_dir = Path(__file__).parent.parent / "public" / "data"
     public_dir = Path(__file__).parent.parent / "public"
     
-    projects_path = data_dir / "research-projects.json"
-    figures_path = data_dir / "research-figures.json"
+    projects_path = public_data_dir / "research-projects.json"
+    figures_path = public_data_dir / "research-figures.json"
     captions_path = public_dir / "paper-figures" / "captions-bibcodes.json"
-    pubs_path = public_dir / "data" / "ads_publications.json"
-    output_path = data_dir / "research-figures-with-captions.json"
+    pubs_path = public_data_dir / "ads_publications.json"
+    output_path = public_data_dir / "research-figures-with-captions.json"
 
     # Load all necessary JSON files
     with open(projects_path, 'r') as f:

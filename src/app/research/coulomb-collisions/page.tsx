@@ -15,7 +15,7 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const paragraphsPath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
+  const paragraphsPath = path.join(process.cwd(), 'public', 'data', 'research-paragraphs.json');
   const paragraphs = JSON.parse(fs.readFileSync(paragraphsPath, 'utf-8'));
   const paragraph = paragraphs[pageSlug];
 
@@ -26,8 +26,8 @@ export async function generateMetadata(
 }
 
 export default function CoulombCollisionsPage() {
-  const paragraphsPath = path.join(process.cwd(), 'data', 'research-paragraphs.json');
-  const figuresPath = path.join(process.cwd(), 'data', 'research-figures-with-captions.json');
+  const paragraphsPath = path.join(process.cwd(), 'public', 'data', 'research-paragraphs.json');
+  const figuresPath = path.join(process.cwd(), 'public', 'data', 'research-figures-with-captions.json');
 
   const paragraphs = JSON.parse(fs.readFileSync(paragraphsPath, 'utf-8'));
   const figuresData = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
