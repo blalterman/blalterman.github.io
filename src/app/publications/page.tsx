@@ -93,6 +93,7 @@ import {
                     <TableHead className="font-bold">Title</TableHead>
                     <TableHead className="font-bold">Authors</TableHead>
                     <TableHead className="font-bold">Journal</TableHead>
+                    <TableHead className="text-center w-[100px] font-bold">Citations</TableHead>
                     <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
                   </TableRow>
                 </TableHeader>
@@ -103,6 +104,7 @@ import {
                       <TableCell>{pub.title}</TableCell>
                       <TableCell>{pub.authors.join(', ')}</TableCell>
                       <TableCell>{pub.journal}</TableCell>
+                      <TableCell className="text-center"><strong>{pub.citations}</strong></TableCell>
                       <TableCell className="text-right space-x-2">
                         {pub.url && (
                           <TooltipProvider>
@@ -138,6 +140,7 @@ import {
                 <TableHead className="font-bold">Title</TableHead>
                 <TableHead className="font-bold">Authors</TableHead>
                 <TableHead className="font-bold">Journal</TableHead>
+                <TableHead className="text-center w-[100px] font-bold">Citations</TableHead>
                 <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
               </TableRow>
             </TableHeader>
@@ -148,6 +151,7 @@ import {
                   <TableCell>{pub.title}</TableCell>
                   <TableCell>{pub.authors.join(', ')}</TableCell>
                   <TableCell>{pub.journal}</TableCell>
+                  <TableCell className="text-center"><strong>{pub.citations}</strong></TableCell>
                   <TableCell className="text-right space-x-2">
                     {pub.url && (
                       <TooltipProvider>
@@ -183,6 +187,7 @@ import {
                     <TableHead className="font-bold">Title</TableHead>
                     <TableHead className="font-bold">Authors</TableHead>
                     <TableHead className="font-bold">Journal</TableHead>
+                    <TableHead className="text-center w-[100px] font-bold">Citations</TableHead>
                     <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
                   </TableRow>
                 </TableHeader>
@@ -193,6 +198,7 @@ import {
                       <TableCell>{pub.title}</TableCell>
                       <TableCell>{pub.authors.join(', ')}</TableCell>
                       <TableCell>{pub.journal}</TableCell>
+                      <TableCell className="text-center"><strong>{pub.citations}</strong></TableCell>
                       <TableCell className="text-right space-x-2">
                         {pub.url && (
                           <TooltipProvider>
@@ -230,6 +236,7 @@ import {
                     <TableHead className="font-bold">Title</TableHead>
                     <TableHead className="font-bold">Authors</TableHead>
                     <TableHead className="font-bold">Journal</TableHead>
+                    <TableHead className="text-center w-[100px] font-bold">Citations</TableHead>
                     <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
                   </TableRow>
                 </TableHeader>
@@ -240,6 +247,7 @@ import {
                       <TableCell>{pub.title}</TableCell>
                       <TableCell>{pub.authors.join(', ')}</TableCell>
                       <TableCell>{pub.journal}</TableCell>
+                      <TableCell className="text-center"><strong>{pub.citations}</strong></TableCell>
                       <TableCell className="text-right space-x-2">
                         {pub.url && (
                            <TooltipProvider>
@@ -277,6 +285,7 @@ import {
                     <TableHead className="font-bold">Title</TableHead>
                     <TableHead className="font-bold">Authors</TableHead>
                     <TableHead className="font-bold">Journal</TableHead>
+                    <TableHead className="text-center w-[100px] font-bold">Citations</TableHead>
                     <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
                   </TableRow>
                 </TableHeader>
@@ -287,6 +296,7 @@ import {
                       <TableCell>{pub.title}</TableCell>
                       <TableCell>{pub.authors.join(', ')}</TableCell>
                       <TableCell>{pub.journal}</TableCell>
+                      <TableCell className="text-center"><strong>{pub.citations}</strong></TableCell>
                       <TableCell className="text-right space-x-2">
                         {pub.url && (
                           <TooltipProvider>
@@ -324,6 +334,7 @@ import {
                     <TableHead className="font-bold">Title</TableHead>
                     <TableHead className="font-bold">Authors</TableHead>
                     <TableHead className="font-bold">Journal</TableHead>
+                    <TableHead className="text-center w-[100px] font-bold">Citations</TableHead>
                     <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
                   </TableRow>
                 </TableHeader>
@@ -334,6 +345,7 @@ import {
                       <TableCell>{pub.title}</TableCell>
                       <TableCell>{pub.authors.join(', ')}</TableCell>
                       <TableCell>{pub.journal}</TableCell>
+                      <TableCell className="text-center"><strong>{pub.citations}</strong></TableCell>
                       <TableCell className="text-right space-x-2">
                         {pub.url && (
                           <TooltipProvider>
@@ -371,6 +383,7 @@ import {
                     <TableHead className="font-bold">Title</TableHead>
                     <TableHead className="font-bold">Authors</TableHead>
                     <TableHead className="font-bold">Journal</TableHead>
+                    <TableHead className="text-center w-[100px] font-bold">Citations</TableHead>
                     <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
                   </TableRow>
                 </TableHeader>
@@ -381,6 +394,7 @@ import {
                       <TableCell>{pub.title}</TableCell>
                       <TableCell>{pub.authors.join(', ')}</TableCell>
                       <TableCell>{pub.journal}</TableCell>
+                      <TableCell className="text-center"><strong>{pub.citations}</strong></TableCell>
                       <TableCell className="text-right space-x-2">
                         {pub.url && (
                           <TooltipProvider>
