@@ -10,6 +10,7 @@ import { GoogleScholarIcon } from './icons/google-scholar-icon';
 import { ArxivIcon } from './icons/arxiv-icon';
 import { FirebaseIcon } from './icons/firebase-icon';
 import { GithubMarkIcon } from './icons/github-mark-icon';
+import { LinkedinIcon } from './icons/linkedin-icon';
 
 export function Contact() {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -48,6 +49,9 @@ export function Contact() {
           </Link>
           <Link href="https://arxiv.org/a/alterman_b_1.html" target="_blank" rel="noopener noreferrer" aria-label="arXiv" className="text-muted-foreground hover:text-foreground transition-colors">
             <ArxivIcon className="h-6 w-6" />
+          </Link>
+          <Link href="https://www.linkedin.com/in/blalterman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-foreground transition-colors">
+            <LinkedinIcon className="h-6 w-6" />
           </Link>
         </div>
         <p className="text-sm text-muted-foreground">

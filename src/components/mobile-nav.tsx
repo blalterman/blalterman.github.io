@@ -10,6 +10,7 @@ import { OrcidIcon } from './icons/orcid-icon';
 import { NasaAdsIcon } from './icons/nasa-ads-icon';
 import { GoogleScholarIcon } from './icons/google-scholar-icon';
 import { ArxivIcon } from './icons/arxiv-icon';
+import { LinkedinIcon } from './icons/linkedin-icon';
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,6 +73,11 @@ export function MobileNav() {
             <Button variant="ghost" size="icon" asChild>
                 <Link href="https://arxiv.org/a/alterman_b_1.html" target="_blank" rel="noopener noreferrer" aria-label="arXiv">
                     <ArxivIcon className="h-5 w-5" />
+                </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+                <Link href="https://www.linkedin.com/in/blalterman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <LinkedinIcon className="h-5 w-5" />
                 </Link>
             </Button>
           </div>

@@ -7,6 +7,7 @@ import { GoogleScholarIcon } from '@/components/icons/google-scholar-icon';
 import { NasaAdsIcon } from '@/components/icons/nasa-ads-icon';
 import { OrcidIcon } from '@/components/icons/orcid-icon';
 import Image from 'next/image';
+import { LinkedinIcon } from './icons/linkedin-icon';
 
 export function Header() {
   return (
@@ -49,6 +50,11 @@ export function Header() {
             <Button variant="ghost" size="icon" asChild>
                 <Link href="https://arxiv.org/a/alterman_b_1.html" target="_blank" rel="noopener noreferrer" aria-label="arXiv">
                     <ArxivIcon className="h-5 w-5" />
+                </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+                <Link href="https://www.linkedin.com/in/blalterman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <LinkedinIcon className="h-5 w-5" />
                 </Link>
             </Button>
           </div>
