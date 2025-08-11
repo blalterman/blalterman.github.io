@@ -3,117 +3,117 @@
   "basic stats": {
     "number of papers": 133,
     "normalized paper count": 21.04293072220873,
-    "total number of reads": 7671,
-    "average number of reads": 57.67669172932331,
+    "total number of reads": 7682,
+    "average number of reads": 57.7593984962406,
     "median number of reads": 17.0,
-    "recent number of reads": 1140,
-    "total number of downloads": 3282,
-    "average number of downloads": 26.256,
+    "recent number of reads": 1151,
+    "total number of downloads": 3290,
+    "average number of downloads": 26.32,
     "median number of downloads": 1.0,
-    "recent number of downloads": 543
+    "recent number of downloads": 551
   },
   "basic stats refereed": {
     "number of papers": 32,
     "normalized paper count": 6.028984236661919,
-    "total number of reads": 5953,
-    "average number of reads": 186.03125,
+    "total number of reads": 5962,
+    "average number of reads": 186.3125,
     "median number of reads": 173.5,
-    "recent number of reads": 984,
-    "total number of downloads": 2845,
-    "average number of downloads": 88.90625,
+    "recent number of reads": 993,
+    "total number of downloads": 2853,
+    "average number of downloads": 89.15625,
     "median number of downloads": 84.5,
-    "recent number of downloads": 500
+    "recent number of downloads": 508
   },
   "citation stats": {
     "number of citing papers": 422,
     "number of self-citations": 97,
     "self-citations": [
-      "2019ApJ...884L..53W",
-      "2025ApJ...984L..64A",
-      "2025arXiv250418092A",
-      "2023A&A...676A..36L",
-      "2025ApJ...982L..40A",
-      "2022RNAAS...6..135A",
-      "2020ApJS..248....5V",
       "2021SoPh..296...67A",
+      "2025arXiv250418092A",
+      "2020ApJS..248....5V",
+      "2019ApJ...884L..53W",
       "2022ApJ...924..112V",
       "2021Atmos..12.1277N",
       "2019ApJ...879L...6A",
-      "2021ApJ...909....7K",
       "2021ApJ...923..116M",
+      "2023A&A...676A..36L",
+      "2025ApJ...982L..40A",
+      "2025ApJ...984L..64A",
+      "2021ApJ...909....7K",
       "2025ApJ...986L..28H",
       "2023ApJ...950...51J",
+      "2022RNAAS...6..135A",
       "2025A&A...694A.265A",
-      "2023A&A...676A..36L",
-      "2025arXiv250418092A",
-      "2025ApJ...982L..40A",
       "2023SoPh..298...78W",
       "2023BAAS...55c.341R",
       "2022FrASS...956347R",
+      "2025ApJ...982L..40A",
+      "2023A&A...676A..36L",
+      "2025arXiv250418092A",
       "2025A&A...694A.265A",
       "2025A&A...693A.243D",
       "2025ApJ...980...70R",
       "2025A&A...694A.265A",
       "2020ApJS..246...70H",
       "2025A&A...694A.265A",
-      "2025ApJ...984L..64A",
-      "2025arXiv250418092A",
+      "2022ApJ...924..112V",
+      "2021ApJ...923..116M",
       "2025ApJ...982L..40A",
-      "2022RNAAS...6..135A",
-      "2022ApJ...924..112V",
-      "2020MNRAS.498.5524W",
-      "2021ApJ...923..116M",
+      "2025ApJ...984L..64A",
       "2021ApJ...909....7K",
-      "2024ApJ...974..198R",
-      "2025ApJ...980...70R",
-      "2022FrASS...956347R",
-      "2023BAAS...55c.341R",
-      "2019ApJ...884L..53W",
-      "2020ApJS..248....5V",
-      "2020ApJS..246...70H",
-      "2022ApJ...924..112V",
-      "2021ApJ...923..116M",
-      "2021ApJ...909....7K",
-      "2025A&A...694A.265A",
-      "2023A&A...676A..36L",
       "2025arXiv250418092A",
+      "2020MNRAS.498.5524W",
+      "2022RNAAS...6..135A",
+      "2023BAAS...55c.341R",
+      "2025ApJ...980...70R",
+      "2024ApJ...974..198R",
+      "2022FrASS...956347R",
+      "2020ApJS..248....5V",
+      "2019ApJ...884L..53W",
+      "2022ApJ...924..112V",
+      "2021ApJ...923..116M",
+      "2021ApJ...909....7K",
+      "2020ApJS..246...70H",
+      "2025A&A...694A.265A",
       "2025ApJ...980...70R",
       "2023SoPh..298...78W",
+      "2023A&A...676A..36L",
+      "2025arXiv250418092A",
       "2024ApJ...974..198R",
       "2025A&A...694A.265A",
       "2025GeoRL..5215186B",
       "2025GeoRL..5215186B",
+      "2025ApJ...982L..40A",
       "2024ApJ...964L..31A",
       "2025A&A...694A.265A",
-      "2025ApJ...982L..40A",
-      "2020ApJS..248....5V",
       "2021ApJ...923..116M",
+      "2020ApJS..248....5V",
       "2025ApJ...984L..64A",
-      "2025arXiv250418092A",
       "2025GeoRL..5215186B",
-      "2024ApJ...974..198R",
-      "2025ApJ...980...70R",
-      "2025ApJ...982L..40A",
-      "2025A&A...694A.265A",
-      "2025ApJ...984L..64A",
-      "2025ApJ...982L..40A",
-      "2022RNAAS...6..135A",
       "2025arXiv250418092A",
       "2025ApJ...982L..40A",
       "2025ApJ...980...70R",
+      "2024ApJ...974..198R",
+      "2025A&A...694A.265A",
+      "2025ApJ...982L..40A",
+      "2025ApJ...984L..64A",
+      "2022RNAAS...6..135A",
       "2021SoPh..296...67A",
       "2023ApJ...952...42A",
+      "2025ApJ...980...70R",
+      "2025ApJ...982L..40A",
+      "2025arXiv250418092A",
       "2023IAUS..372....3M",
       "2025A&A...694A.265A",
-      "2025ApJ...986L..28H",
-      "2020ApJS..248....5V",
-      "2020MNRAS.498.5524W",
       "2021Atmos..12.1277N",
+      "2020MNRAS.498.5524W",
+      "2020ApJS..248....5V",
+      "2025ApJ...986L..28H",
+      "2022ApJ...924..112V",
+      "2025ApJ...982L..40A",
+      "2021ApJ...923..116M",
       "2025ApJ...984L..64A",
       "2025arXiv250418092A",
-      "2025ApJ...982L..40A",
-      "2022ApJ...924..112V",
-      "2021ApJ...923..116M",
       "2022RNAAS...6..135A",
       "2025ApJ...982L..40A",
       "2023ApJ...952...42A",
@@ -121,31 +121,31 @@
       "2025A&A...694A.265A",
       "2025ApJ...984L..64A",
       "2025ApJ...986L..28H",
-      "2025ApJ...984L..64A",
-      "2025arXiv250418092A",
       "2025ApJ...982L..40A",
-      "2022RNAAS...6..135A"
+      "2025ApJ...984L..64A",
+      "2022RNAAS...6..135A",
+      "2025arXiv250418092A"
     ],
     "total number of citations": 741,
     "average number of citations": 5.571428571428571,
     "median number of citations": 0.0,
-    "normalized number of citations": 99.68882620292467,
-    "total number of refereed citations": 686,
-    "average number of refereed citations": 5.157894736842105,
+    "normalized number of citations": 99.70549286959134,
+    "total number of refereed citations": 687,
+    "average number of refereed citations": 5.165413533834586,
     "median number of refereed citations": 0.0,
-    "normalized number of refereed citations": 92.5359133521016
+    "normalized number of refereed citations": 92.61924668543493
   },
   "citation stats refereed": {
     "number of citing papers": 413,
     "number of self-citations": 97,
     "total number of citations": 730,
     "average number of citations": 22.8125,
-    "median number of citations": 13.5,
-    "normalized number of citations": 98.04116452955967,
-    "total number of refereed citations": 677,
-    "average number of refereed citations": 21.15625,
+    "median number of citations": 14.0,
+    "normalized number of citations": 98.05783119622633,
+    "total number of refereed citations": 678,
+    "average number of refereed citations": 21.1875,
     "median number of refereed citations": 11.5,
-    "normalized number of refereed citations": 91.07207520814838
+    "normalized number of refereed citations": 91.15540854148169
   },
   "histograms": {
     "publications": {
@@ -237,7 +237,7 @@
         "2022": 949,
         "2023": 1525,
         "2024": 1540,
-        "2025": 1140
+        "2025": 1151
       },
       "all reads normalized": {
         "1996": 0.0,
@@ -269,7 +269,7 @@
         "2022": 123.304387001887,
         "2023": 151.0268915965151,
         "2024": 155.57719761097724,
-        "2025": 175.3110722432071
+        "2025": 176.4637305397273
       },
       "refereed reads": {
         "1996": 0,
@@ -301,7 +301,7 @@
         "2022": 772,
         "2023": 1187,
         "2024": 1170,
-        "2025": 984
+        "2025": 993
       },
       "refereed reads normalized": {
         "1996": 0.0,
@@ -333,7 +333,7 @@
         "2022": 90.84462469897252,
         "2023": 111.91970468770846,
         "2024": 115.5666791343817,
-        "2025": 156.51392750658803
+        "2025": 157.56014322607743
       }
     },
     "downloads": {
@@ -367,7 +367,7 @@
         "2022": 394,
         "2023": 695,
         "2024": 755,
-        "2025": 543
+        "2025": 551
       },
       "all downloads normalized": {
         "1996": 0.0,
@@ -399,7 +399,7 @@
         "2022": 56.40030307856395,
         "2023": 65.99363102397363,
         "2024": 78.00872584355398,
-        "2025": 81.60669093087488
+        "2025": 82.59408312095248
       },
       "refereed downloads": {
         "1996": 0,
@@ -431,7 +431,7 @@
         "2022": 359,
         "2023": 595,
         "2024": 606,
-        "2025": 500
+        "2025": 508
       },
       "refereed downloads normalized": {
         "1996": 0.0,
@@ -463,7 +463,7 @@
         "2022": 46.63725960030308,
         "2023": 56.196913112164154,
         "2024": 61.202042099291056,
-        "2025": 76.3390239354131
+        "2025": 77.32641612549072
       }
     },
     "citations": {
@@ -475,7 +475,7 @@
         "2022": 108,
         "2023": 114,
         "2024": 157,
-        "2025": 125
+        "2025": 126
       },
       "refereed to nonrefereed": {
         "2018": 0,
@@ -491,7 +491,7 @@
         "2018": 1,
         "2019": 1,
         "2020": 4,
-        "2021": 2,
+        "2021": 1,
         "2022": 6,
         "2023": 11,
         "2024": 3,
@@ -515,7 +515,7 @@
         "2022": 12.689974162628625,
         "2023": 14.069950309632636,
         "2024": 20.343989203539657,
-        "2025": 15.247661742282482
+        "2025": 15.330995075615814
       },
       "refereed to nonrefereed normalized": {
         "2018": 0,
@@ -531,7 +531,7 @@
         "2018": 0.2,
         "2019": 0.25,
         "2020": 0.200250626566416,
-        "2021": 0.09047619047619047,
+        "2021": 0.023809523809523808,
         "2022": 1.6569096538136785,
         "2023": 1.3731601731601732,
         "2024": 0.4738095238095238,
@@ -555,8 +555,8 @@
     "i10": 17,
     "i100": 0,
     "m": 1.25,
-    "read10": 292.63245276194465,
-    "tori": 1.5487340412683852,
+    "read10": 287.9578250239184,
+    "tori": 1.5437309516530036,
     "riq": 103
   },
   "indicators refereed": {
@@ -565,8 +565,8 @@
     "i10": 17,
     "i100": 0,
     "m": 1.25,
-    "read10": 262.0531355041497,
-    "tori": 1.4816433072076423,
+    "read10": 257.88992052698774,
+    "tori": 1.4766402175922606,
     "riq": 101
   },
   "time series": {
@@ -638,7 +638,7 @@
       "2022": 119.424469817622,
       "2023": 150.11384811825423,
       "2024": 146.4653963687412,
-      "2025": 292.63245276194465
+      "2025": 287.9578250239184
     },
     "tori": {
       "2014": 0.0,
@@ -648,11 +648,11 @@
       "2018": 0.0335535484,
       "2019": 0.0827061934,
       "2020": 0.21475110380500334,
-      "2021": 0.47992446842245273,
-      "2022": 0.7075674662640741,
-      "2023": 1.0112650189462955,
-      "2024": 1.3611811273132852,
-      "2025": 1.5487340412683852
+      "2021": 0.4788828017037027,
+      "2022": 0.706525799545324,
+      "2023": 1.0102233522275457,
+      "2024": 1.3601394605945352,
+      "2025": 1.5437309516530036
     }
   }
 }
