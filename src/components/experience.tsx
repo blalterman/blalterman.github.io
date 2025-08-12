@@ -42,9 +42,9 @@ export function Experience({ educationData, professionalData }: ExperienceProps)
                                     <CardTitle>{edu.Degree}</CardTitle>
                                     <CardDescription>{edu.Institution}</CardDescription>
                                     <p className="text-sm text-muted-foreground pt-1">{edu.Department}</p>
-                                    <p className="text-sm text-muted-foreground pt-1">{edu.Dates}</p>
                                 </CardHeader>
                                 <CardContent>
+                                     <p className="text-sm text-muted-foreground pt-1">{edu.Dates}</p>
                                     <p className="text-sm">{edu.Location}</p>
                                 </CardContent>
                             </Card>
@@ -62,9 +62,9 @@ export function Experience({ educationData, professionalData }: ExperienceProps)
                                 <CardHeader>
                                     <CardTitle>{job["Position Title"]}</CardTitle>
                                     <CardDescription>{job.Company}</CardDescription>
-                                     <p className="text-sm text-muted-foreground pt-1">{job.Dates}</p>
                                 </CardHeader>
                                 <CardContent>
+                                    <p className="text-sm text-muted-foreground pt-1">{job.Dates}</p>
                                     <p className="text-sm">{job.Location}</p>
                                 </CardContent>
                             </Card>
