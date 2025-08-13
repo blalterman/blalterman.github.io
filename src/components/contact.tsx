@@ -24,7 +24,7 @@ export function Contact() {
       <div className="container mx-auto max-w-screen-xl text-center">
         <h2 className="text-2xl md:text-3xl font-bold font-headline">Get in Touch</h2>
         <p className="text-muted-foreground mt-2 mb-6 max-w-xl mx-auto">
-          I'm always open to discussing new research, projects, or collaboration opportunities. Feel free to reach out.
+          I'm always open to discussing new research, projects, or collaboration opportunities.
         </p>
         <div className="mb-8">
           <Button size="lg" asChild>
