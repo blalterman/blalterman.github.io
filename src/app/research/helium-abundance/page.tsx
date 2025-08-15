@@ -1,7 +1,6 @@
 
-import fs from 'fs';
-import path from 'path';
 import { ResearchFigure } from '@/components/research-figure';
+import { loadJSONData } from '@/lib/data-loader';
 import { Metadata, ResolvingMetadata } from 'next';
 
 type Props = {
@@ -15,8 +14,7 @@ export async function generateMetadata(
     { params }: Props,
     parent: ResolvingMetadata
 ): Promise<Metadata> {
-    const paragraphsPath = path.join(process.cwd(), 'public', 'data', 'research-paragraphs.json');
-    const paragraphs = JSON.parse(fs.readFileSync(paragraphsPath, 'utf-8'));
+    const paragraphs = loadJSONData<Record<string, string>>('research-paragraphs.json');
     const paragraph = paragraphs[pageSlug];
 
     return {
@@ -26,11 +24,8 @@ export async function generateMetadata(
 }
 
 export default function HeliumAbundancePage() {
-    const paragraphsPath = path.join(process.cwd(), 'public', 'data', 'research-paragraphs.json');
-    const figuresPath = path.join(process.cwd(), 'public', 'data', 'research-figures-with-captions.json');
-
-    const paragraphs = JSON.parse(fs.readFileSync(paragraphsPath, 'utf-8'));
-    const figuresData = JSON.parse(fs.readFileSync(figuresPath, 'utf-8'));
+    const paragraphs = loadJSONData<Record<string, string>>('research-paragraphs.json');
+    const figuresData = loadJSONData<any[]>('research-figures-with-captions.json');
 
     const pageData = figuresData.find((p: any) => p.slug === pageSlug);
     const introductoryParagraph = paragraphs[pageSlug];

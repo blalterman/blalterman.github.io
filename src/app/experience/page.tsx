@@ -1,7 +1,6 @@
 
 import { Experience } from "@/components/experience";
-import fs from "fs";
-import path from "path";
+import { loadJSONData } from "@/lib/data-loader";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,12 +8,24 @@ export const metadata: Metadata = {
     description: "An overview of B. L. Alterman's professional positions and academic background, including roles at NASA, SwRI, and degrees from the University of Michigan and Macalester College.",
 };
 
-export default function ExperiencePage() {
-    const educationPath = path.join(process.cwd(), 'public', 'data', 'education.json');
-    const educationData = JSON.parse(fs.readFileSync(educationPath, 'utf-8'));
+interface Education {
+    Institution: string;
+    Department: string;
+    Location: string;
+    Dates: string;
+    Degree: string;
+}
 
-    const positionsPath = path.join(process.cwd(), 'public', 'data', 'positions.json');
-    const positionsData = JSON.parse(fs.readFileSync(positionsPath, 'utf-8'));
+interface Position {
+    Company: string;
+    "Position Title": string;
+    Dates: string;
+    Location: string;
+}
+
+export default function ExperiencePage() {
+    const educationData = loadJSONData<Education[]>('education.json');
+    const positionsData = loadJSONData<Position[]>('positions.json');
 
     return (
         <Experience educationData={educationData} professionalData={positionsData} />

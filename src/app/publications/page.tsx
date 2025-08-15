@@ -1,6 +1,4 @@
 
-import fs from 'fs';
-import path from 'path';
 import {
     Table,
     TableHeader,
@@ -13,6 +11,7 @@ import {
   import { BookOpen, Database, FileText } from "lucide-react";
   import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
   import { Metadata } from 'next';
+import { loadJSONData } from "@/lib/data-loader";
 
   export const metadata: Metadata = {
     title: "Publications | B. L. Alterman",
@@ -20,12 +19,8 @@ import {
   };
   
   export default function PublicationsPage() {
-    const metricsPath = path.join(process.cwd(), 'public', 'data', 'ads_metrics.json');
-    const adsMetrics = JSON.parse(fs.readFileSync(metricsPath, 'utf-8'));
-
-    const publicationsPath = path.join(process.cwd(), 'public', 'data', 'ads_publications.json');
-    const adsPublications = JSON.parse(fs.readFileSync(publicationsPath, 'utf-8'));
-
+    const adsMetrics = loadJSONData<any>('ads_metrics.json');
+    const adsPublications = loadJSONData<any[]>('ads_publications.json');
 
     if (!adsMetrics || !adsPublications.length) {
       return (
@@ -411,7 +406,3 @@ import {
       </div>
     );
   }
-
-    
-
-    
