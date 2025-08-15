@@ -55,7 +55,7 @@ import {
     return (
       <div className="container mx-auto py-16 md:py-24">
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold font-headline">Publications</h1>
+          <h1 className="font-headline">Publications</h1>
           <p className="text-lg text-muted-foreground mt-2">A list of my research publications and conference presentations.</p>
         </div>
         <div className="flex justify-center flex-wrap gap-x-8 mb-12">
@@ -84,7 +84,7 @@ import {
 
         {sortedPhdThesis.length > 0 && (
           <>
-            <h2 className="text-2xl font-bold font-headline mt-8 text-center">PhD Thesis</h2>
+            <h2 className="text-2xl font-bold mt-8 text-center">PhD Thesis</h2>
             <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto mt-4">
               <Table>
                 <TableHeader>
@@ -129,7 +129,7 @@ import {
           </>
         )}
         
-        <h2 className="text-2xl font-bold font-headline mt-8 text-center">Refereed Publications</h2>
+        <h2 className="text-2xl font-bold mt-8 text-center">Refereed Publications</h2>
         <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto mt-4">
           <Table>
             <TableHeader>
@@ -176,7 +176,7 @@ import {
 
         {sortedDatasets.length > 0 && (
           <>
-            <h2 className="text-2xl font-bold font-headline mt-8 text-center">Datasets</h2>
+            <h2 className="text-2xl font-bold mt-8 text-center">Datasets</h2>
             <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto mt-4">
               <Table>
                 <TableHeader>
@@ -223,7 +223,7 @@ import {
 
         {sortedConferenceProceedings.length > 0 && (
           <>
-            <h2 className="text-2xl font-bold font-headline mt-8 text-center">Conference Proceedings</h2>
+            <h2 className="text-2xl font-bold mt-8 text-center">Conference Proceedings</h2>
             <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto mt-4">
               <Table>
                 <TableHeader>
@@ -270,7 +270,7 @@ import {
 
         {sortedConferencePresentations.length > 0 && (
           <>
-            <h2 className="text-2xl font-bold font-headline mt-8 text-center">Conference Presentations</h2>
+            <h2 className="text-2xl font-bold mt-8 text-center">Conference Presentations</h2>
             <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto mt-4">
               <Table>
                 <TableHeader>
@@ -317,7 +317,7 @@ import {
 
         {sortedWhitePapers.length > 0 && (
           <>
-            <h2 className="text-2xl font-bold font-headline mt-8 text-center">White Papers</h2>
+            <h2 className="text-2xl font-bold mt-8 text-center">White Papers</h2>
             <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto mt-4">
               <Table>
                 <TableHeader>
@@ -364,7 +364,7 @@ import {
 
         {sortedPrePrints.length > 0 && (
           <>
-            <h2 className="text-2xl font-bold font-headline mt-8 text-center">Pre-Prints</h2>
+            <h2 className="text-2xl font-bold mt-8 text-center">Pre-Prints</h2>
             <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto mt-4">
               <Table>
                 <TableHeader>

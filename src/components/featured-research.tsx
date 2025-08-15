@@ -22,7 +22,7 @@ export function FeaturedResearch({ researchProjects }: FeaturedResearchProps) {
     <section id="research" className="bg-muted/50 py-16 md:py-24">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Featured Research</h2>
+          <h2 className="font-headline">Featured Research</h2>
           <p className="text-lg text-muted-foreground mt-2">Highlights from my research activities.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
