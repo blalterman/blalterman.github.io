@@ -12,6 +12,8 @@ import {
   import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
   import { Metadata } from 'next';
 import { loadJSONData } from "@/lib/data-loader";
+import { getPublicationsByType } from "@/lib/publication-utils";
+import type { Publication } from "@/types/publication";
 
   export const metadata: Metadata = {
     title: "Publications | B. L. Alterman",
@@ -20,7 +22,7 @@ import { loadJSONData } from "@/lib/data-loader";
   
   export default function PublicationsPage() {
     const adsMetrics = loadJSONData<any>('ads_metrics.json');
-    const adsPublications = loadJSONData<any[]>('ads_publications.json');
+    const adsPublications = loadJSONData<Publication[]>('ads_publications.json');
 
     if (!adsMetrics || !adsPublications.length) {
       return (
@@ -30,22 +32,14 @@ import { loadJSONData } from "@/lib/data-loader";
       );
     }
 
-    const techReports = adsPublications.filter((pub: any) => pub.publication_type === "techreport");
-    const eprints = adsPublications.filter((pub: any) => pub.publication_type === "eprint");
-    const datasets = adsPublications.filter((pub: any) => pub.publication_type === "dataset");
-    const inproceedings = adsPublications.filter((pub: any) => pub.publication_type === "inproceedings");
-    const articles = adsPublications.filter((pub: any) => pub.publication_type === "article");
-    const abstracts = adsPublications.filter((pub: any) => pub.publication_type === "abstract");
-    const phdThesis = adsPublications.filter((pub: any) => pub.publication_type === "phdthesis");
-
-
-    const sortedRefereedPublications = [...articles].sort((a, b) => parseInt(b.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
-    const sortedDatasets = [...datasets].sort((a, b) => parseInt(b.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
-    const sortedConferenceProceedings = [...inproceedings].sort((a, b) => parseInt(a.year) - parseInt(b.year));
-    const sortedConferencePresentations = [...abstracts].sort((a, b) => parseInt(a.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
-    const sortedWhitePapers = [...techReports].sort((a, b) => parseInt(a.year) - parseInt(b.year));
-    const sortedPrePrints = [...eprints].sort((a, b) => parseInt(a.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
-    const sortedPhdThesis = [...phdThesis].sort((a, b) => parseInt(a.year.substring(0, 4)) - parseInt(a.year.substring(0, 4)));
+    // Use centralized sorting functions for all publication types
+    const sortedRefereedPublications = getPublicationsByType(adsPublications, "article");
+    const sortedDatasets = getPublicationsByType(adsPublications, "dataset");
+    const sortedConferenceProceedings = getPublicationsByType(adsPublications, "inproceedings");
+    const sortedConferencePresentations = getPublicationsByType(adsPublications, "abstract");
+    const sortedWhitePapers = getPublicationsByType(adsPublications, "techreport");
+    const sortedPrePrints = getPublicationsByType(adsPublications, "eprint");
+    const sortedPhdThesis = getPublicationsByType(adsPublications, "phdthesis");
 
     return (
       <div className="container mx-auto py-16 md:py-24">
@@ -92,7 +86,7 @@ import { loadJSONData } from "@/lib/data-loader";
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {sortedPhdThesis.map((pub: any, index: number) => (
+                  {sortedPhdThesis.map((pub: Publication, index: number) => (
                     <TableRow key={index} className="hover:bg-muted/30">
                       <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
                       <TableCell>{pub.title}</TableCell>
@@ -138,7 +132,7 @@ import { loadJSONData } from "@/lib/data-loader";
               </TableRow>
             </TableHeader>
             <TableBody>
-              {sortedRefereedPublications.map((pub: any, index: number) => (
+              {sortedRefereedPublications.map((pub: Publication, index: number) => (
                 <TableRow key={index} className="hover:bg-muted/30">
                   <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
                   <TableCell>{pub.title}</TableCell>
@@ -184,7 +178,7 @@ import { loadJSONData } from "@/lib/data-loader";
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {sortedDatasets.map((pub: any, index: number) => (
+                  {sortedDatasets.map((pub: Publication, index: number) => (
                     <TableRow key={index} className="hover:bg-muted/30">
                       <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
                       <TableCell>{pub.title}</TableCell>
@@ -231,7 +225,7 @@ import { loadJSONData } from "@/lib/data-loader";
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {sortedConferenceProceedings.map((pub: any, index: number) => (
+                  {sortedConferenceProceedings.map((pub: Publication, index: number) => (
                     <TableRow key={index} className="hover:bg-muted/30">
                       <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
                       <TableCell>{pub.title}</TableCell>
@@ -278,7 +272,7 @@ import { loadJSONData } from "@/lib/data-loader";
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {sortedConferencePresentations.map((pub: any, index: number) => (
+                  {sortedConferencePresentations.map((pub: Publication, index: number) => (
                     <TableRow key={index} className="hover:bg-muted/30">
                       <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
                       <TableCell>{pub.title}</TableCell>
@@ -325,7 +319,7 @@ import { loadJSONData } from "@/lib/data-loader";
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {sortedWhitePapers.map((pub: any, index: number) => (
+                  {sortedWhitePapers.map((pub: Publication, index: number) => (
                     <TableRow key={index} className="hover:bg-muted/30">
                       <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
                       <TableCell>{pub.title}</TableCell>
@@ -372,7 +366,7 @@ import { loadJSONData } from "@/lib/data-loader";
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {sortedPrePrints.map((pub: any, index: number) => (
+                  {sortedPrePrints.map((pub: Publication, index: number) => (
                     <TableRow key={index} className="hover:bg-muted/30">
                       <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
                       <TableCell>{pub.title}</TableCell>
