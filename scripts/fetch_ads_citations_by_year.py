@@ -29,13 +29,14 @@ import sys
 import pandas as pd
 
 from zoneinfo import ZoneInfo
+from utils import get_public_data_dir, get_public_plots_dir, get_relative_path
 
 # Hard code Eastern Time because changing that is a quick update,
 # but it requires a lot of package installs and such to auto-detect.
 local_tz = ZoneInfo("America/New_York")
 
 # === Define output paths and check cache ===
-public_data_dir = Path("public") / "data"
+public_data_dir = get_public_data_dir()
 output_filename = "citations_by_year.json"
 cached_json_path = public_data_dir / output_filename
 
@@ -43,7 +44,7 @@ cached_json_path = public_data_dir / output_filename
 if cached_json_path.exists():
     last_modified_time = datetime.fromtimestamp(cached_json_path.stat().st_mtime, tz=timezone.utc)
     if datetime.now(timezone.utc) - last_modified_time < timedelta(days=7):
-        print(f"Cached data at {cached_json_path} is less than 7 days old. Skipping download.")
+        print(f"Cached data at {get_relative_path(cached_json_path)} is less than 7 days old. Skipping download.")
         # Optionally load the data if needed by subsequent steps
         with open(cached_json_path, "r") as f:
             cached_data = json.load(f)
@@ -156,27 +157,20 @@ ref_counts = all_counts.Refereed.tolist()
 nonref_counts = all_counts.Nonrefereed.tolist()
 
 
-# === Step 4: Save citation data to data/ and public/data/ ===
-data_dir = Path("data")
+# === Step 4: Save JSON data ===
 public_data_dir.mkdir(parents=True, exist_ok=True)
-data_dir.mkdir(parents=True, exist_ok=True)
-
-data_output_path = data_dir / output_filename
-public_data_output_path = public_data_dir / output_filename
+output_path = public_data_dir / output_filename
 
 data_to_save = {"years": all_years, "refereed": ref_counts, "nonrefereed": nonref_counts}
 
-with open(data_output_path, "w") as f:
+with open(output_path, "w") as f:
     json.dump(data_to_save, f, indent=2)
-print(f"Citation data saved to {data_output_path}")
 
-with open(public_data_output_path, "w") as f:
-    json.dump(data_to_save, f, indent=2)
-print(f"Citation data saved to {public_data_output_path}")
+print(f"Citation data saved to {get_relative_path(output_path)}")
 
 
 # === Step 5: Plot and save SVG and PNG to public/plots/ ===
-image_output_dir = Path("public") / "plots"
+image_output_dir = get_public_plots_dir()
 image_output_dir.mkdir(parents=True, exist_ok=True)
 
 plt.figure(figsize=(10, 6))
@@ -191,8 +185,8 @@ plt.tight_layout()
 
 plot_path_svg = image_output_dir / "citations_by_year.svg"
 plt.savefig(plot_path_svg, format="svg")
-print(f"Plot saved to {plot_path_svg}")
+print(f"Plot saved to {get_relative_path(plot_path_svg)}")
 
 plot_path_png = image_output_dir / "citations_by_year.png"
 plt.savefig(plot_path_png, format="png")
-print(f"Plot saved to {plot_path_png}")
+print(f"Plot saved to {get_relative_path(plot_path_png)}")

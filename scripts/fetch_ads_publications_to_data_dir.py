@@ -3,6 +3,7 @@ import os
 import json
 from datetime import datetime
 from pathlib import Path
+from utils import get_public_data_dir, get_relative_path
 
 import pdb
 
@@ -91,11 +92,12 @@ for pub in results:
         }
     )
 
-# Ensure data/ and public/data/ directories exists and save to JSON.
-# Use both because public/ is scraped for SEO and data/ allows for static build.
-target_dirs = (Path("../public/data"), Path("../data"))
-for target in target_dirs:
-    os.makedirs(target, exist_ok=True)
-    with open(target / "ads_publications.json", "w") as f:
-        json.dump(publications, f, indent=2)
-    print(f"Saved {len(publications)} publications to {target}")
+# Save to public/data directory
+public_data_dir = get_public_data_dir()
+public_data_dir.mkdir(parents=True, exist_ok=True)
+output_file = public_data_dir / "ads_publications.json"
+
+with open(output_file, "w") as f:
+    json.dump(publications, f, indent=2)
+
+print(f"Saved {len(publications)} publications to {get_relative_path(output_file)}")

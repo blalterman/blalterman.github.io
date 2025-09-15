@@ -4,9 +4,10 @@ import os
 import json
 import argparse
 from pathlib import Path
+from utils import get_public_data_dir, get_relative_path
 
 
-def fetch_ads_metrics(orcid: str, data_dir: str = "data"):
+def fetch_ads_metrics(orcid: str):
     token = os.getenv("ADS_DEV_KEY")
     if not token:
         raise EnvironmentError("ADS_DEV_KEY environment variable not set.")
@@ -33,23 +34,15 @@ def fetch_ads_metrics(orcid: str, data_dir: str = "data"):
 
     metrics = response.json()
 
-    # Ensure the output directories exist
-    data_path = Path(data_dir)
-    public_data_path = Path("public") / data_path
-    data_path.mkdir(parents=True, exist_ok=True)
-    public_data_path.mkdir(parents=True, exist_ok=True)
+    # Save metrics to public/data directory
+    public_data_dir = get_public_data_dir()
+    public_data_dir.mkdir(parents=True, exist_ok=True)
+    output_file = public_data_dir / "ads_metrics.json"
 
-    output_filename = "ads_metrics.json"
-    data_output_path = data_path / output_filename
-    public_data_output_path = public_data_path / output_filename
-
-    with open(data_output_path, "w") as f:
+    with open(output_file, "w") as f:
         json.dump(metrics, f, indent=2)
-    print(f"Metrics written to {data_output_path}")
 
-    with open(public_data_output_path, "w") as f:
-        json.dump(metrics, f, indent=2)
-    print(f"Metrics written to {public_data_output_path}")
+    print(f"Metrics written to {get_relative_path(output_file)}")
 
 
 if __name__ == "__main__":
@@ -59,12 +52,6 @@ if __name__ == "__main__":
     parser.add_argument(
         "--orcid", type=str, required=True, help="ORCID ID of the author"
     )
-    parser.add_argument(
-        "--data_dir",
-        type=str,
-        default="data",
-        help="Output data directory path",
-    )
 
     args = parser.parse_args()
-    fetch_ads_metrics(args.orcid, args.data_dir)
+    fetch_ads_metrics(args.orcid)

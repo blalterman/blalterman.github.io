@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 from fetch_figure_licenses import fetch_licenses_for_dois
+from utils import get_repo_root, get_public_data_dir, get_relative_path
 
 import pdb
 
@@ -48,12 +49,12 @@ def main():
     Generates a new JSON file with combined figure and publication data.
     """
     # Define paths
-    public_data_dir = Path(__file__).parent.parent / "public" / "data"
-    public_dir = Path(__file__).parent.parent / "public"
-    
+    public_data_dir = get_public_data_dir()
+    repo_root = get_repo_root()
+
     projects_path = public_data_dir / "research-projects.json"
     figures_path = public_data_dir / "research-figures.json"
-    captions_path = public_dir / "paper-figures" / "captions-bibcodes.json"
+    captions_path = repo_root / "public" / "paper-figures" / "captions-bibcodes.json"
     pubs_path = public_data_dir / "ads_publications.json"
     output_path = public_data_dir / "research-figures-with-captions.json"
 
@@ -143,7 +144,7 @@ def main():
     with open(output_path, 'w') as f:
         json.dump(processed_data, f, indent=2)
 
-    print(f"Successfully generated {output_path}")
+    print(f"Successfully generated {get_relative_path(output_path)}")
 
 if __name__ == "__main__":
     main()
