@@ -1,7 +1,7 @@
 {
   "P9-Fig9.svg": {
-    "alt": "Figure showing alpha-proton differential flow vs. coulomb collision frequency.",
-    "caption": "Lorem Ipsum",
+    "alt": "Figure showing alpha-proton and proton beam-core differential flow vs. coulomb collision frequency.",
+    "caption": "Alpha particles and proton beams both differentially flow faster than the bulk or core protons in the solar wind. This differential flow is aligned with the local magnetic field. Over the range of Coulomb Age ($A_c$, also called Coulomb Number $N_c$) that the alpha particle differential flow decays, proton beam-core differential flow is constant and independent of Coulomb collisions.",
     "bibcode": "2018ApJ...864..112A"
   },
   "SWICS-FSTranistion-Fig4.svg": {
@@ -10,13 +10,15 @@
     "bibcode": "2025A&A...694A.265A"
   },
   "SWICS-SSN-Fig1.svg": {
-    "alt": "Figure showing heavy ion composition data from the SWICS instrument.",
-    "caption": "Lorem Ipsum",
-    "bibcode": "TODO"
+    "alt": "Figure showing heavy ion composition data from the SWICS instrument onboard the ACE spacecraft and how it evolves with solar activity.",
+    "caption": "Heavy ion abundances in slow solar wind evolve with solar activity and the strength of this correlation increases with element mass. This suggests that the impact of gravitational settling at the Sun on heavy ions changes with solar activity. In fast wind, the correlations are weak, but we can't tell if this is because the time period of our observations is too short or there is no correlation between fast wind abundances and solar activity.",
+    "bibcode": "2025A&A...700A..23A"
   },
   "KeFlux-Fig1.svg": {
-    "alt": "Figure showing the predicted kinetic energy flux near Earth from near-Sun Parker Solar Probe observations.",
-    "caption": "Early Parker Solar Probe observations of the kinetic energy flux ",
+    "alt": "Figure showing the distribution of near-Earth solar wind speeds during solar minima with key speeds highlighted.",
+    "caption": "The intermediate range of speeds ($v_\\\\mathrm{IP}$) likely corresponds to solar wind from solar sources like coronal holes for which the energy in the Alfvénic fluctuations is too low to accelerate it to the fastest, non-transient speeds observed near Earth.",
+    "bibcode": "2025ApJ...984L..64A"
+  },
   "KeFlux-at-Earth.svg": {
     "alt": "Figure showing the predicted kinetic energy flux near Earth from near-Sun Parker Solar Probe observations match the range of speeds corresponding to fast wind (black lines and blue dots).",
     "caption": "The predicted kinetic energy flux near Earth from near-Sun Parker Solar Probe observations (orange) are compared to near-Earth observations of the kinetic energy flux (purple/white background). The predicted near-Earth values match the range of speeds corresponding to fast wind (black lines and blue dots).",
@@ -24,18 +26,12 @@
   },
   "AheXhel-Fig2.svg": {
     "alt": "A figure illustrating the relationship between the helium abundance, solar wind turbulent fluctuations, and the solar wind's birth at the Sun.",
-    "caption": "A schematic for the Sun-solar wind connection.
-The coronal plasma becomes the solar wind when it achieves supersonic speeds at the sonic critical surface ($r_c$).
-The helium abundance ($A_\mathrm{He}$) is set low in the solar atmosphere below $r_c$.
-The Alfvénicity or cross helicity ($\left| \sigma_c \right|$) reaches a maximum between $r_c$ and the Alfvén surface ($r_A$), indicated by the growing S-curve.
-Above $r_A$, $\left| \sigma_c \right|$ decays as Alfvénic fluctuations continue accelerating the solar wind (growing blue arrows).
-Both $A_\mathrm{He}$ and $\left| \sigma_c \right|$ depend on the local magnetic field topology (orange and red lines).
-Together, they provide a snapshot of the processes below ($A_\mathrm{He}$) and above ($\left| \sigma_c \right|) the interface where the coronal plasma is accelerated into the solar wind.",
+    "caption": "A schematic for the Sun-solar wind connection. The coronal plasma becomes the solar wind when it achieves supersonic speeds at the sonic critical surface ($r_c$). The helium abundance ($A_\\\\mathrm{He}$) is set low in the solar atmosphere below $r_c$. The Alfvénicity or cross helicity ($\\\\left| \\\\sigma_c \\\\right|$) reaches a maximum between $r_c$ and the Alfvén surface ($r_A$), indicated by the growing S-curve. Above $r_A$, $\\\\left| \\\\sigma_c \\\\right|$ decays as Alfvénic fluctuations continue accelerating the solar wind (growing blue arrows). Both $A_\\\\mathrm{He}$ and $\\\\left| \\\\sigma_c \\\\right|$ depend on the local magnetic field topology (orange and red lines). Together, they provide a snapshot of the processes below ($A_\\\\mathrm{He}$) and above ($\\\\left| \\\\sigma_c \\\\right|) the interface where the coronal plasma is accelerated into the solar wind.",
     "bibcode": "2025ApJ...982L..40A"
   },
   "STQT-SpectralIndex-Fig4.svg": {
     "alt": "Figure showing suprathermal ion spectral index",
-    "caption": "A stackd histogram of the suprathermal ion spectral index ($gamma$). The different colors indicate different elements. The white circle and line indicates the average $\gamma = 2.5 \pm 0.3$. This spectral index is invariant across solar activity.",
+    "caption": "A stackd histogram of the suprathermal ion spectral index ($gamma$). The different colors indicate different elements. The white circle and line indicates the average $\\\\gamma = 2.5 \\\\pm 0.3$. This spectral index is invariant across solar activity.",
     "bibcode": "2024ApJ...964L..31A"
   },
   "STQT-SelectionAbundance-Fig8.svg": {
@@ -58,9 +54,9 @@ Together, they provide a snapshot of the processes below ($A_\mathrm{He}$) and a
     "caption": "The solar wind helium abundance is constant in fast wind. In slow wind, it is highly variable. The blue dot indciates the speed and abundance where the slope changes. This is the helium saturation point with saturation speed $v_s$ and saturation abundance $A_s$. The diffences for speeds above and below $v_s$ are likely due to differences in how slow and fast wind are born when the coronal plasma is accelerated into the solar wind.",
     "bibcode": "2025ApJ...982L..40A"
   },
-"Categorization-cartoon-dnn.svg": {
+  "Categorization-cartoon-dnn.svg": {
     "alt": "Schematic for mapping in situ solar wind observations to their source regions.",
-    "caption": "A schematic for using the helium abundance and the normalized cross helicity (a magnetohydrogynamic (MHD) turbulence parameter) to identify the solar source of a solar wind observation. The green region indicates solar wind from regions with magnetic fields that only open to interplanetary space. This solar wind is helium poor and independent of the solar wind's turbulent state. The red region on the right is from regions like coronal holes that are always open to interplanetary space. This solar wind is helium-rich solar wind with fluctuations that are typically associated with Alfvén waves, the prototypical wave in a magnetized plasma. The red region on the top is from interplanetary coronal mass ejections (ICMEs). The yellow region in the middle indicates indicates a narrow range of speeds (20 km/s wide) that has an ambiguous source. The arrow indicates that the magnetic field of the source region is ",
+    "caption": "A schematic for using the helium abundance and the normalized cross helicity (a magnetohydrogynamic (MHD) turbulence parameter) to identify the solar source of a solar wind observation. The green region indicates solar wind from regions with magnetic fields that only open to interplanetary space. This solar wind is helium poor and independent of the solar wind's turbulent state. The red region on the right is from regions like coronal holes that are always open to interplanetary space. This solar wind is helium-rich solar wind with fluctuations that are typically associated with Alfvén waves, the prototypical wave in a magnetized plasma. The red region on the top is from interplanetary coronal mass ejections (ICMEs). The yellow region in the middle indicates indicates a narrow range of speeds (20 km/s wide) that has an ambiguous source. The arrow indicates that the magnetic field of the source region is more likely to be continuously open to interplanetary space.",
     "bibcode": "2025arXiv250820391A"
   },
   "placeholder.png": {
