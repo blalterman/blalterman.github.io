@@ -16,7 +16,7 @@
   },
   "KeFlux-Fig1.svg": {
     "alt": "Figure showing the distribution of near-Earth solar wind speeds during solar minima with key speeds highlighted.",
-    "caption": "The intermediate range of speeds ($v_\\\\mathrm{IP}$) likely corresponds to solar wind from solar sources like coronal holes for which the energy in the Alfvénic fluctuations is too low to accelerate it to the fastest, non-transient speeds observed near Earth.",
+    "caption": "The solar wind is filled with fluctuations. The most common are associated with Alfvén waves, the simplest type of wave in a magnetized plasma. The solar wind can't achieve the fastest, non-transient speeds observed near Earth ($v_\\\\mathrm{fast}$) without continued acceleration once it leaves the Sun. This acceleration is likely driven by Alfvén waves as they dissipate during the solar wind's transit through interplantery space. The intermediate range of speeds ($v_\\\\mathrm{IP}$) likelycorresponds to solar wind from solar sources like coronal holes for which the energy in the Alfvénic fluctuations is too low to accelerate it to the fastest, non-transient speeds observed near Earth.",
     "bibcode": "2025ApJ...984L..64A"
   },
   "KeFlux-at-Earth.svg": {
