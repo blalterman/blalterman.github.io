@@ -13,8 +13,8 @@
     "title": "Helium Abundance",
     "figure": {
       "src": "/paper-figures/svg/KeFlux-Fig1.svg",
-      "alt": "Figure showing helium abundance vs. sunspot number over time.",
-      "caption": "Lorem Ipsum <a href=\"https://dx.doi.org/10.3847/2041-8213/add0a6\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman (2025), The Astrophysical Journal</a>."
+      "alt": "Figure showing the distribution of near-Earth solar wind speeds during solar minima with key speeds highlighted.",
+      "caption": "The intermediate range of speeds ($v_\\\\mathrm{IP}$) likely corresponds to solar wind from solar sources like coronal holes for which the energy in the Alfv\u00e9nic fluctuations is too low to accelerate it to the fastest, non-transient speeds observed near Earth. <a href=\"https://dx.doi.org/10.3847/2041-8213/add0a6\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman (2025), The Astrophysical Journal</a>."
     }
   },
   {
@@ -32,7 +32,7 @@
     "figure": {
       "src": "/paper-figures/svg/STQT-SpectralIndex-Fig4.svg",
       "alt": "Figure showing suprathermal ion spectral index",
-      "caption": "Lorem Ipsum <a href=\"https://dx.doi.org/10.3847/2041-8213/ad2deb\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman et al. (2024), The Astrophysical Journal</a>."
+      "caption": "A stackd histogram of the suprathermal ion spectral index ($gamma$). The different colors indicate different elements. The white circle and line indicates the average $\\\\gamma = 2.5 \\\\pm 0.3$. This spectral index is invariant across solar activity. <a href=\"https://dx.doi.org/10.3847/2041-8213/ad2deb\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman et al. (2024), The Astrophysical Journal</a>."
     }
   },
   {
@@ -40,8 +40,8 @@
     "title": "Heavy Ion Composition",
     "figure": {
       "src": "/paper-figures/svg/SWICS-SSN-Fig1.svg",
-      "alt": "Figure showing heavy ion composition data from the SWICS instrument.",
-      "caption": "Lorem Ipsum"
+      "alt": "Figure showing heavy ion composition data from the SWICS instrument onboard the ACE spacecraft and how it evolves with solar activity.",
+      "caption": "Heavy ion abundances in slow solar wind evolve with solar activity and the strength of this correlation increases with element mass. This suggests that the impact of gravitational settling at the Sun on heavy ions changes with solar activity. In fast wind, the correlations are weak, but we can't tell if this is because the time period of our observations is too short or there is no correlation between fast wind abundances and solar activity. <a href=\"https://dx.doi.org/10.1051/0004-6361/202554299\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman et al. (2025), Astronomy and Astrophysics</a>."
     }
   },
   {
@@ -49,8 +49,8 @@
     "title": "Coulomb Collisions",
     "figure": {
       "src": "/paper-figures/svg/P9-Fig9.svg",
-      "alt": "Figure showing alpha-proton differential flow vs. coulomb collision frequency.",
-      "caption": "Lorem Ipsum <a href=\"https://dx.doi.org/10.3847/1538-4357/aad23f\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman et al. (2018), The Astrophysical Journal</a>."
+      "alt": "Figure showing alpha-proton and proton beam-core differential flow vs. coulomb collision frequency.",
+      "caption": "Alpha particles and proton beams both differentially flow faster than the bulk or core protons in the solar wind. This differential flow is aligned with the local magnetic field. Over the range of Coulomb Age ($A_c$, also called Coulomb Number $N_c$) that the alpha particle differential flow decays, proton beam-core differential flow is constant and independent of Coulomb collisions. <a href=\"https://dx.doi.org/10.3847/1538-4357/aad23f\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman et al. (2018), The Astrophysical Journal</a>."
     }
   },
   {
@@ -58,8 +58,8 @@
     "title": "Sources of the Solar Wind",
     "figure": {
       "src": "/paper-figures/svg/AheXhel-Fig2.svg",
-      "alt": "Figure showing helium abundance data related to solar wind sources.",
-      "caption": "Lorem Ipsum <a href=\"https://dx.doi.org/10.3847/2041-8213/adb48e\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman & D'Amicis (2025), The Astrophysical Journal</a>."
+      "alt": "A figure illustrating the relationship between the helium abundance, solar wind turbulent fluctuations, and the solar wind's birth at the Sun.",
+      "caption": "A schematic for the Sun-solar wind connection. The coronal plasma becomes the solar wind when it achieves supersonic speeds at the sonic critical surface ($r_c$). The helium abundance ($A_\\\\mathrm{He}$) is set low in the solar atmosphere below $r_c$. The Alfv\u00e9nicity or cross helicity ($\\\\left| \\\\sigma_c \\\\right|$) reaches a maximum between $r_c$ and the Alfv\u00e9n surface ($r_A$), indicated by the growing S-curve. Above $r_A$, $\\\\left| \\\\sigma_c \\\\right|$ decays as Alfv\u00e9nic fluctuations continue accelerating the solar wind (growing blue arrows). Both $A_\\\\mathrm{He}$ and $\\\\left| \\\\sigma_c \\\\right|$ depend on the local magnetic field topology (orange and red lines). Together, they provide a snapshot of the processes below ($A_\\\\mathrm{He}$) and above ($\\\\left| \\\\sigma_c \\\\right|) the interface where the coronal plasma is accelerated into the solar wind. <a href=\"https://dx.doi.org/10.3847/2041-8213/adb48e\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman & D'Amicis (2025), The Astrophysical Journal</a>."
     }
   },
   {
