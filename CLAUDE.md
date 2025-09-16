@@ -65,6 +65,18 @@ The site uses a decoupled architecture for managing research figures:
 - Simple data structure for maintenance
 
 **Adding a New Research Page (Automated Workflow)**:
+
+**Option 1: Interactive Script (Recommended)**
+```bash
+python scripts/create_research_page.py
+```
+The script will:
+- Display existing pages and available figures
+- Prompt for title, description, and content with validation
+- Preview changes before applying
+- Update all three JSON files automatically
+
+**Option 2: Manual JSON Updates**
 1. Add entry to `research-projects.json` (page title and description)
 2. Add entry to `page-figure-mappings.json` (map page to figure or placeholder)
 3. Add entry to `research-paragraphs.json` (detailed content)
@@ -114,8 +126,36 @@ After pushing, `/research/solar-energetic-particles` automatically becomes avail
 ## Python Scripts (in `/scripts/`)
 - `fetch_ads_*.py` - NASA ADS API integration scripts
 - `generate_figure_data.py` - Combines research metadata with publication data
+- `create_research_page.py` - Interactive script for creating new research pages
+- `test_create_research_page.py` - Test suite for the research page creation script
 - `utils.py` - Shared utilities for path management and repository structure
 - `requirements.txt` - Python dependencies for automation scripts
+
+### Research Page Creation Script
+
+The `create_research_page.py` script provides an interactive CLI for adding new research pages:
+
+**Features:**
+- **Interactive prompts** with input validation
+- **Smart slug generation** from titles with uniqueness checking
+- **Figure management** - displays available figures and prevents conflicts
+- **Preview mode** - shows exactly what will be changed before applying
+- **Dry-run support** for testing: `python scripts/create_research_page.py --dry-run`
+- **Comprehensive testing** via `test_create_research_page.py`
+
+**Usage:**
+```bash
+# Interactive mode
+python scripts/create_research_page.py
+
+# Preview mode (no changes made)
+python scripts/create_research_page.py --dry-run
+
+# Run tests
+python scripts/test_create_research_page.py
+```
+
+The script automatically updates all three required JSON files and validates that the new page will build correctly with the dynamic route system.
 
 ### Script Utilities
 All Python scripts use a shared `scripts/utils.py` module that provides:

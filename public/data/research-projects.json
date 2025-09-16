@@ -1,4 +1,3 @@
-
 [
   {
     "title": "Proton Beams",
@@ -55,5 +54,12 @@
     "description": "Exploring the role of turbulence in the solar wind's evolution through interplanetary space.",
     "image": "https://placehold.co/600x400.png",
     "imageHint": "plasma turbulence"
+  },
+  {
+    "title": "Solar Wind Compressibility",
+    "slug": "solar-wind-compressibility",
+    "description": "Determining the origin and role of compressive fluctuations in the solar wind.",
+    "image": "https://placehold.co/600x400.png",
+    "imageHint": "research visualization"
   }
 ]
