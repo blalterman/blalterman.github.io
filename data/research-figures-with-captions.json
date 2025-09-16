@@ -12,9 +12,9 @@
     "slug": "helium-abundance",
     "title": "Helium Abundance",
     "figure": {
-      "src": "/paper-figures/svg/KeFlux-Fig1.svg",
-      "alt": "Figure showing the distribution of near-Earth solar wind speeds during solar minima with key speeds highlighted.",
-      "caption": "The intermediate range of speeds ($v_\\\\mathrm{IP}$) likely corresponds to solar wind from solar sources like coronal holes for which the energy in the Alfv\u00e9nic fluctuations is too low to accelerate it to the fastest, non-transient speeds observed near Earth. <a href=\"https://dx.doi.org/10.3847/2041-8213/add0a6\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman (2025), The Astrophysical Journal</a>."
+      "src": "/paper-figures/svg/Ahe-bilinear.svg",
+      "alt": "Bilinear fits to the helium abundance as a function of solar wind speed.",
+      "caption": "The solar wind helium abundance is constant in fast wind. In slow wind, it is highly variable. The blue dot indciates the speed and abundance where the slope changes. This is the helium saturation point with saturation speed $v_s$ and saturation abundance $A_s$. The diffences for speeds above and below $v_s$ are likely due to differences in how slow and fast wind are born when the coronal plasma is accelerated into the solar wind. <a href=\"https://dx.doi.org/10.3847/2041-8213/adb48e\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman & D'Amicis (2025), The Astrophysical Journal</a>."
     }
   },
   {
