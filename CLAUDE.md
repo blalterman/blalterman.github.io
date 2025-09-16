@@ -45,7 +45,7 @@ The site operates on a data-driven architecture with all content stored in `/pub
 - `deploy.yaml` - Builds and deploys to gh-pages branch
 
 ### Component Structure
-- **App Router Pages**: Each research topic has its own route (`/research/[topic]/page.tsx`)
+- **Dynamic Research Routes**: Single dynamic route at `/src/app/research/[slug]/page.tsx` handles all research pages
 - **Shadcn/ui Components**: UI components in `/src/components/ui/`
 - **Custom Components**: Main application components in `/src/components/`
 - **Path Aliases**: `@/*` maps to `./src/*`
@@ -64,11 +64,47 @@ The site uses a decoupled architecture for managing research figures:
 - Single unified placeholder for consistency
 - Simple data structure for maintenance
 
-**Adding a New Research Page**:
+**Adding a New Research Page (Automated Workflow)**:
 1. Add entry to `research-projects.json` (page title and description)
 2. Add entry to `page-figure-mappings.json` (map page to figure or placeholder)
 3. Add entry to `research-paragraphs.json` (detailed content)
-4. Create React page file following existing pattern
+4. **Push changes** → Page automatically exists at `/research/[slug]`
+
+**No React/TypeScript files need to be created!** The dynamic route system automatically generates static pages for all slugs defined in the JSON data during the build process.
+
+### Dynamic Route System
+
+The research pages use Next.js App Router's dynamic routing with static generation:
+
+**How it works:**
+- Single template file: `/src/app/research/[slug]/page.tsx`
+- `generateStaticParams()` reads all slugs from `research-projects.json`
+- At build time, creates static HTML for each slug: `/research/proton-beams.html`, etc.
+- Each page loads its data dynamically based on the slug parameter
+
+**Benefits:**
+- **DRY principle**: One template instead of 8+ duplicate files
+- **Data-driven**: Adding pages requires only JSON updates
+- **Consistent styling**: All pages guaranteed to have identical structure
+- **Easier maintenance**: Layout changes only need updating in one place
+- **Static export compatible**: Generates individual HTML files for GitHub Pages
+
+**Example workflow for adding "solar-energetic-particles" research page:**
+```json
+// research-projects.json
+{
+  "title": "Solar Energetic Particles",
+  "slug": "solar-energetic-particles",
+  "description": "Studying particle acceleration in solar events"
+}
+
+// page-figure-mappings.json
+"solar-energetic-particles": "sep-figure.svg"
+
+// research-paragraphs.json
+"solar-energetic-particles": "Detailed research description..."
+```
+After pushing, `/research/solar-energetic-particles` automatically becomes available.
 
 ### Styling
 - **Tailwind CSS**: Primary styling framework with custom configuration
