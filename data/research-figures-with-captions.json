@@ -4,8 +4,8 @@
     "title": "Proton Beams",
     "figure": {
       "src": "https://placehold.co/800x600.png",
-      "alt": "Placeholder image for Proton Beams research",
-      "caption": "A placeholder visualization of proton beams in the solar wind. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. \u00a9 AAS. Reproduced with permission)."
+      "alt": "Placeholder image for research topic",
+      "caption": "Figure coming soon"
     }
   },
   {
@@ -22,8 +22,8 @@
     "title": "Space Weather",
     "figure": {
       "src": "https://placehold.co/800x600.png",
-      "alt": "Placeholder image for Space Weather research",
-      "caption": "A placeholder infographic about space weather. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. \u00a9 AAS. Reproduced with permission)."
+      "alt": "Placeholder image for research topic",
+      "caption": "Figure coming soon"
     }
   },
   {
@@ -41,7 +41,7 @@
     "figure": {
       "src": "/paper-figures/svg/SWICS-SSN-Fig1.svg",
       "alt": "Figure showing heavy ion composition data from the SWICS instrument.",
-      "caption": "Lorem Ipsum From  (), ."
+      "caption": "Lorem Ipsum"
     }
   },
   {
@@ -67,8 +67,8 @@
     "title": "Turbulence",
     "figure": {
       "src": "https://placehold.co/800x600.png",
-      "alt": "Placeholder image for Turbulence research",
-      "caption": "A placeholder visualization of turbulence in the solar wind. Replace with your actual figure caption, including citation and licensing information (e.g., Alterman et al. 2023, ApJ, 999, 123. \u00a9 AAS. Reproduced with permission)."
+      "alt": "Placeholder image for research topic",
+      "caption": "Figure coming soon"
     }
   }
 ]

@@ -1,0 +1,73 @@
+{
+  "P9-Fig9.svg": {
+    "alt": "Figure showing alpha-proton differential flow vs. coulomb collision frequency.",
+    "caption": "Lorem Ipsum",
+    "bibcode": "2018ApJ...864..112A"
+  },
+  "SWICS-FSTranistion-Fig4.svg": {
+    "alt": "Figure showing the speed characterizing the transition between fast and slow solar wind for heavy ions and helium.",
+    "caption": "The ",
+    "bibcode": "2025A&A...694A.265A"
+  },
+  "SWICS-SSN-Fig1.svg": {
+    "alt": "Figure showing heavy ion composition data from the SWICS instrument.",
+    "caption": "Lorem Ipsum",
+    "bibcode": "TODO"
+  },
+  "KeFlux-Fig1.svg": {
+    "alt": "Figure showing the predicted kinetic energy flux near Earth from near-Sun Parker Solar Probe observations.",
+    "caption": "Early Parker Solar Probe observations of the kinetic energy flux ",
+  "KeFlux-at-Earth.svg": {
+    "alt": "Figure showing the predicted kinetic energy flux near Earth from near-Sun Parker Solar Probe observations match the range of speeds corresponding to fast wind (black lines and blue dots).",
+    "caption": "The predicted kinetic energy flux near Earth from near-Sun Parker Solar Probe observations (orange) are compared to near-Earth observations of the kinetic energy flux (purple/white background). The predicted near-Earth values match the range of speeds corresponding to fast wind (black lines and blue dots).",
+    "bibcode": "2025ApJ...984L..64A"
+  },
+  "AheXhel-Fig2.svg": {
+    "alt": "A figure illustrating the relationship between the helium abundance, solar wind turbulent fluctuations, and the solar wind's birth at the Sun.",
+    "caption": "A schematic for the Sun-solar wind connection.
+The coronal plasma becomes the solar wind when it achieves supersonic speeds at the sonic critical surface ($r_c$).
+The helium abundance ($A_\mathrm{He}$) is set low in the solar atmosphere below $r_c$.
+The Alfvénicity or cross helicity ($\left| \sigma_c \right|$) reaches a maximum between $r_c$ and the Alfvén surface ($r_A$), indicated by the growing S-curve.
+Above $r_A$, $\left| \sigma_c \right|$ decays as Alfvénic fluctuations continue accelerating the solar wind (growing blue arrows).
+Both $A_\mathrm{He}$ and $\left| \sigma_c \right|$ depend on the local magnetic field topology (orange and red lines).
+Together, they provide a snapshot of the processes below ($A_\mathrm{He}$) and above ($\left| \sigma_c \right|) the interface where the coronal plasma is accelerated into the solar wind.",
+    "bibcode": "2025ApJ...982L..40A"
+  },
+  "STQT-SpectralIndex-Fig4.svg": {
+    "alt": "Figure showing suprathermal ion spectral index",
+    "caption": "A stackd histogram of the suprathermal ion spectral index ($gamma$). The different colors indicate different elements. The white circle and line indicates the average $\gamma = 2.5 \pm 0.3$. This spectral index is invariant across solar activity.",
+    "bibcode": "2024ApJ...964L..31A"
+  },
+  "STQT-SelectionAbundance-Fig8.svg": {
+    "alt": "",
+    "caption": "Lorem Ipsum",
+    "bibcode": "2023ApJ...952...42A"
+  },
+  "Ahe-Phase-Fig2b.svg": {
+    "alt": "Figure showing the phase lag between the helium abundance and sunspot number.",
+    "caption": "The abundance of helium in the solar wind responds to changes in solar activity after some delay. This delay increases with increasing solar wind speed, which idicates it may be related to differences in how the solar wind of different speeds is born when it leaves the Sun's corona.",
+    "bibcode": "2019ApJ...879L...6A"
+  },
+  "Ahe-Herald-Fig4.svg": {
+    "alt": "Figure first identifying the helium shutoff.",
+    "caption": "(Top) The abundance of helium in the solar wind varies with solar activity. During solar minima, there is a sudden depletion and recovery of helium over a very short time period. This is the `helium shutoff`. It happens at the same time across all solar wind speeds. (Bottom) The helium shutoff occurs at the same time that one solar cycle dies and the other starts to dominate solar activity as indicated by the green region of the plot.",
+    "bibcode": "2021SoPh..296...67A"
+  },
+  "Ahe-bilinear.svg": {
+    "alt": "Bilinear fits to the helium abundance as a function of solar wind speed.",
+    "caption": "The solar wind helium abundance is constant in fast wind. In slow wind, it is highly variable. The blue dot indciates the speed and abundance where the slope changes. This is the helium saturation point with saturation speed $v_s$ and saturation abundance $A_s$. The diffences for speeds above and below $v_s$ are likely due to differences in how slow and fast wind are born when the coronal plasma is accelerated into the solar wind.",
+    "bibcode": "2025ApJ...982L..40A"
+  },
+"Categorization-cartoon-dnn.svg": {
+    "alt": "Schematic for mapping in situ solar wind observations to their source regions.",
+    "caption": "A schematic for using the helium abundance and the normalized cross helicity (a magnetohydrogynamic (MHD) turbulence parameter) to identify the solar source of a solar wind observation. The green region indicates solar wind from regions with magnetic fields that only open to interplanetary space. This solar wind is helium poor and independent of the solar wind's turbulent state. The red region on the right is from regions like coronal holes that are always open to interplanetary space. This solar wind is helium-rich solar wind with fluctuations that are typically associated with Alfvén waves, the prototypical wave in a magnetized plasma. The red region on the top is from interplanetary coronal mass ejections (ICMEs). The yellow region in the middle indicates indicates a narrow range of speeds (20 km/s wide) that has an ambiguous source. The arrow indicates that the magnetic field of the source region is ",
+    "bibcode": "2025arXiv250820391A"
+  },
+  "placeholder.png": {
+    "src": "https://placehold.co/800x600.png",
+    "alt": "Placeholder image for research topic",
+    "caption": "Figure coming soon",
+    "bibcode": null,
+    "placeholder": true
+  }
+}
