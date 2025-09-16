@@ -68,7 +68,16 @@
     "figure": {
       "src": "/paper-figures/svg/KeFlux-Fig1.svg",
       "alt": "Figure showing the distribution of near-Earth solar wind speeds during solar minima with key speeds highlighted.",
-      "caption": "The solar wind is filled with fluctuations. The most common are associated with Alfv\u00e9n waves, the simplest type of wave in a magnetized plasma. The solar wind can't achieve the fastest, non-transient speeds observed near Earth ($v_\\\\mathrm{fast}$) without continued acceleration once it leaves the Sun. This acceleration is likely driven by Alfv\u00e9n waves as they dissipate during the solar wind's transit through interplantery space. The intermediate range of speeds ($v_\\\\mathrm{IP}$) likelycorresponds to solar wind from solar sources like coronal holes for which the energy in the Alfv\u00e9nic fluctuations is too low to accelerate it to the fastest, non-transient speeds observed near Earth. <a href=\"https://dx.doi.org/10.3847/2041-8213/add0a6\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman (2025), The Astrophysical Journal</a>."
+      "caption": "The solar wind is filled with fluctuations. The most common are associated with Alfv\u00e9n waves, the simplest type of wave in a magnetized plasma. The solar wind can't achieve the fastest, non-transient speeds observed near Earth ($v_\\\\mathrm{fast}$) without continued acceleration once it leaves the Sun. This acceleration is likely driven by Alfv\u00e9n waves as they dissipate during the solar wind's transit through interplantery space. The intermediate range of speeds ($v_\\\\mathrm{IP}$) likely corresponds to solar wind from solar sources like coronal holes for which the energy in the Alfv\u00e9nic fluctuations is too low to accelerate it to the fastest, non-transient speeds observed near Earth. <a href=\"https://dx.doi.org/10.3847/2041-8213/add0a6\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman (2025), The Astrophysical Journal</a>."
+    }
+  },
+  {
+    "slug": "solar-wind-compressibility",
+    "title": "Solar Wind Compressibility",
+    "figure": {
+      "src": "/paper-figures/svg/xhel-ahe-dnn.svg",
+      "alt": "Figure showing the changes in the solar wind compressibility with solar wind source region.",
+      "caption": "Lorem ipsum... <a href=\"https://dx.doi.org/10.48550/arXiv.2508.20391\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman & D'Amicis (2025), arXiv e-prints</a>."
     }
   }
 ]
