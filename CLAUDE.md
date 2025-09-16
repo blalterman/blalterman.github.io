@@ -30,7 +30,8 @@ The site operates on a data-driven architecture with all content stored in `/pub
 
 **Manual Data:**
 - `research-projects.json` - Featured research project definitions
-- `research-figures.json` - Figure metadata for research projects
+- `figure-metadata.json` - Figure database with captions, alt text, and bibcodes
+- `page-figure-mappings.json` - Simple mapping of research pages to figures
 - `research-paragraphs.json` - Detailed descriptions for research subpages
 - `education.json` & `positions.json` - Academic and professional history
 - `skills.json` - Technical skills data
@@ -48,6 +49,26 @@ The site operates on a data-driven architecture with all content stored in `/pub
 - **Shadcn/ui Components**: UI components in `/src/components/ui/`
 - **Custom Components**: Main application components in `/src/components/`
 - **Path Aliases**: `@/*` maps to `./src/*`
+
+### Figure Management Architecture
+The site uses a decoupled architecture for managing research figures:
+
+**Data Separation**:
+- `figure-metadata.json` - Complete figure database with all metadata (captions, alt text, bibcodes)
+- `page-figure-mappings.json` - Simple key-value mapping of research pages to figures
+- `research-figures-with-captions.json` - Generated output combining figures with citations
+
+**Benefits**:
+- Clean separation between figure content and page assignments
+- Figures can be easily reassigned between pages
+- Single unified placeholder for consistency
+- Simple data structure for maintenance
+
+**Adding a New Research Page**:
+1. Add entry to `research-projects.json` (page title and description)
+2. Add entry to `page-figure-mappings.json` (map page to figure or placeholder)
+3. Add entry to `research-paragraphs.json` (detailed content)
+4. Create React page file following existing pattern
 
 ### Styling
 - **Tailwind CSS**: Primary styling framework with custom configuration

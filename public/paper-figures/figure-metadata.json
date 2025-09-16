@@ -1,0 +1,54 @@
+{
+  "P9-Fig9.svg": {
+    "alt": "Figure showing alpha-proton differential flow vs. coulomb collision frequency.",
+    "caption": "Lorem Ipsum",
+    "bibcode": "2018ApJ...864..112A"
+  },
+  "SWICS-FSTranistion-Fig4.svg": {
+    "alt": "",
+    "caption": "Lorem Ipsum",
+    "bibcode": "2025A&A...694A.265A"
+  },
+  "SWICS-SSN-Fig1.svg": {
+    "alt": "Figure showing heavy ion composition data from the SWICS instrument.",
+    "caption": "Lorem Ipsum",
+    "bibcode": "TODO"
+  },
+  "KeFlux-Fig1.svg": {
+    "alt": "Figure showing helium abundance vs. sunspot number over time.",
+    "caption": "Lorem Ipsum",
+    "bibcode": "2025ApJ...984L..64A"
+  },
+  "AheXhel-Fig2.svg": {
+    "alt": "Figure showing helium abundance data related to solar wind sources.",
+    "caption": "Lorem Ipsum",
+    "bibcode": "2025ApJ...982L..40A"
+  },
+  "STQT-SpectralIndex-Fig4.svg": {
+    "alt": "Figure showing suprathermal ion spectral index",
+    "caption": "A stackd histogram of the suprathermal ion spectral index ($gamma$). The different colors indicate different elements. The white circle and line indicates the average $\gamma = 2.5 \pm 0.3$. This spectral index is invariant across solar activity.",
+    "bibcode": "2024ApJ...964L..31A"
+  },
+  "STQT-SelectionAbundance-Fig8.svg": {
+    "alt": "",
+    "caption": "Lorem Ipsum",
+    "bibcode": "2023ApJ...952...42A"
+  },
+  "Ahe-Phase-Fig2b.svg": {
+    "alt": "",
+    "caption": "Lorem Ipsum",
+    "bibcode": "2019ApJ...879L...6A"
+  },
+  "Ahe-Herald-Fig4.svg": {
+    "alt": "",
+    "caption": "(Top) The abundance of helium in the solar wind varies with solar activity. During solar minima, there is a sudden depletion and recovery of helium over a very short time period. This is the `helium shutoff`. It happens at the same time across all solar wind speeds. (Bottom) The helium shutoff occurs at the same time that one solar cycle dies and the other starts to dominate solar activity as indicated by the green region of the plot.",
+    "bibcode": "2021SoPh..296...67A"
+  },
+  "placeholder.png": {
+    "src": "https://placehold.co/800x600.png",
+    "alt": "Placeholder image for research topic",
+    "caption": "Figure coming soon",
+    "bibcode": null,
+    "placeholder": true
+  }
+}
