@@ -29,7 +29,7 @@
     "year": "2025-02-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
-    "citations": 7,
+    "citations": 9,
     "url": "https://dx.doi.org/10.3847/1538-4357/ada699"
   },
   {
@@ -113,7 +113,7 @@
     "year": "2023-06-00",
     "journal": "Solar Physics",
     "publication_type": "article",
-    "citations": 40,
+    "citations": 41,
     "url": "https://dx.doi.org/10.1007/s11207-023-02170-1"
   },
   {
@@ -189,7 +189,7 @@
     "year": "2020-05-00",
     "journal": "The Astrophysical Journal Supplement Series",
     "publication_type": "article",
-    "citations": 98,
+    "citations": 99,
     "url": "https://dx.doi.org/10.3847/1538-4365/ab86af"
   },
   {
@@ -231,7 +231,7 @@
     "year": "2020-02-00",
     "journal": "The Astrophysical Journal Supplement Series",
     "publication_type": "article",
-    "citations": 80,
+    "citations": 81,
     "url": "https://dx.doi.org/10.3847/1538-4365/ab74e0"
   },
   {
@@ -277,7 +277,7 @@
     "year": "2025-05-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
-    "citations": 2,
+    "citations": 3,
     "url": "https://dx.doi.org/10.3847/2041-8213/add0a6"
   },
   {
@@ -317,7 +317,7 @@
     "year": "2018-09-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
-    "citations": 82,
+    "citations": 83,
     "url": "https://dx.doi.org/10.3847/1538-4357/aad23f"
   },
   {
@@ -348,7 +348,7 @@
     "year": "2022-01-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
-    "citations": 39,
+    "citations": 40,
     "url": "https://dx.doi.org/10.3847/1538-4357/ac36d5"
   },
   {
@@ -428,7 +428,7 @@
     "year": "2025-06-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
-    "citations": 10,
+    "citations": 11,
     "url": "https://dx.doi.org/10.3847/2041-8213/ade0ac"
   },
   {
@@ -467,7 +467,7 @@
     "year": "2019-07-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
-    "citations": 43,
+    "citations": 44,
     "url": "https://dx.doi.org/10.3847/2041-8213/ab2391"
   },
   {
@@ -1413,7 +1413,7 @@
     "year": "2025-01-00",
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
-    "citations": 2,
+    "citations": 3,
     "url": "https://dx.doi.org/10.1051/0004-6361/202451686"
   },
   {
@@ -1458,7 +1458,7 @@
     "year": "2023-08-00",
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
-    "citations": 21,
+    "citations": 20,
     "url": "https://dx.doi.org/10.1051/0004-6361/202346304"
   },
   {
@@ -1475,7 +1475,7 @@
     "year": "2018-05-00",
     "journal": "Physical Review Letters",
     "publication_type": "article",
-    "citations": 66,
+    "citations": 67,
     "url": "https://dx.doi.org/10.1103/PhysRevLett.120.205102"
   },
   {
@@ -1519,6 +1519,49 @@
     "publication_type": "article",
     "citations": 1,
     "url": "https://dx.doi.org/10.1051/0004-6361/202347874"
+  },
+  {
+    "bibcode": "2025arXiv250820391A",
+    "title": "On the Regulation of the Solar Wind Helium Abundance by the Hydrogen Compressibility",
+    "authors": [
+      "Alterman, B. L.",
+      "D'Amicis, R."
+    ],
+    "month": "",
+    "year": "2025-08-00",
+    "journal": "arXiv e-prints",
+    "publication_type": "eprint",
+    "citations": 0,
+    "url": "https://dx.doi.org/10.48550/arXiv.2508.20391"
+  },
+  {
+    "bibcode": "2022FrASS...956347R",
+    "title": "Deciphering the Birth Region, Formation, and Evolution of Ambient and Transient Solar Wind Using Heavy Ion Observations",
+    "authors": [
+      "Rivera, Y. J.",
+      "Higginson, A.",
+      "Lepri, S. T.",
+      "Viall, N. M.",
+      "Alterman, B. L.",
+      "Landi, E.",
+      "Spitzer, S. A.",
+      "Raines, J. M.",
+      "Cranmer, S. R.",
+      "Laming, J. M.",
+      "Mason, E. I.",
+      "Wallace, S.",
+      "Raymond, J. C.",
+      "Lynch, B. J.",
+      "Gilly, C. R.",
+      "Chen, T. Y.",
+      "Dewey, R. M."
+    ],
+    "month": "",
+    "year": "2022-12-00",
+    "journal": "Frontiers in Astronomy and Space Sciences",
+    "publication_type": "article",
+    "citations": 15,
+    "url": "https://dx.doi.org/10.3389/fspas.2022.1056347"
   },
   {
     "bibcode": "2022dsss.rept..299V",
@@ -1572,49 +1615,6 @@
     "publication_type": "techreport",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2022dsss.rept..295R"
-  },
-  {
-    "bibcode": "2025arXiv250820391A",
-    "title": "On the Regulation of the Solar Wind Helium Abundance by the Hydrogen Compressibility",
-    "authors": [
-      "Alterman, B. L.",
-      "D'Amicis, R."
-    ],
-    "month": "",
-    "year": "2025-08-00",
-    "journal": "arXiv e-prints",
-    "publication_type": "eprint",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.48550/arXiv.2508.20391"
-  },
-  {
-    "bibcode": "2022FrASS...956347R",
-    "title": "Deciphering the Birth Region, Formation, and Evolution of Ambient and Transient Solar Wind Using Heavy Ion Observations",
-    "authors": [
-      "Rivera, Y. J.",
-      "Higginson, A.",
-      "Lepri, S. T.",
-      "Viall, N. M.",
-      "Alterman, B. L.",
-      "Landi, E.",
-      "Spitzer, S. A.",
-      "Raines, J. M.",
-      "Cranmer, S. R.",
-      "Laming, J. M.",
-      "Mason, E. I.",
-      "Wallace, S.",
-      "Raymond, J. C.",
-      "Lynch, B. J.",
-      "Gilly, C. R.",
-      "Chen, T. Y.",
-      "Dewey, R. M."
-    ],
-    "month": "",
-    "year": "2022-12-00",
-    "journal": "Frontiers in Astronomy and Space Sciences",
-    "publication_type": "article",
-    "citations": 15,
-    "url": "https://dx.doi.org/10.3389/fspas.2022.1056347"
   },
   {
     "bibcode": "2023IAUS..372....3M",
@@ -1705,6 +1705,41 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH51E2669W"
+  },
+  {
+    "bibcode": "2020arXiv200408632M",
+    "title": "Solar physics in the 2020s: DKIST, parker solar probe, and solar orbiter as a multi-messenger constellation",
+    "authors": [
+      "Martinez, P. V.",
+      "Tritschler, A.",
+      "Harra, L.",
+      "Andretta, V.",
+      "Vourlidas, A.",
+      "Raouafi, N.",
+      "Alterman, B. L.",
+      "Bellot, R. L.",
+      "Cauzzi, G.",
+      "Cranmer, S. R.",
+      "Gibson, S.",
+      "Habbal, S.",
+      "Ko, Y. K.",
+      "Lepri, S. T.",
+      "Linker, J.",
+      "Malaspina, D. M.",
+      "Matthews, S.",
+      "Parenti, S.",
+      "Petrie, G.",
+      "Spadaro, D.",
+      "Ugarte-Urra, I.",
+      "Warren, H.",
+      "Winslow, R."
+    ],
+    "month": "",
+    "year": "2020-04-00",
+    "journal": "arXiv e-prints",
+    "publication_type": "eprint",
+    "citations": 3,
+    "url": "https://dx.doi.org/10.48550/arXiv.2004.08632"
   },
   {
     "bibcode": "2022dsss.rept..319K",
@@ -1811,41 +1846,6 @@
     "publication_type": "techreport",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2022dsss.rept..220C"
-  },
-  {
-    "bibcode": "2020arXiv200408632M",
-    "title": "Solar physics in the 2020s: DKIST, parker solar probe, and solar orbiter as a multi-messenger constellation",
-    "authors": [
-      "Martinez, P. V.",
-      "Tritschler, A.",
-      "Harra, L.",
-      "Andretta, V.",
-      "Vourlidas, A.",
-      "Raouafi, N.",
-      "Alterman, B. L.",
-      "Bellot, R. L.",
-      "Cauzzi, G.",
-      "Cranmer, S. R.",
-      "Gibson, S.",
-      "Habbal, S.",
-      "Ko, Y. K.",
-      "Lepri, S. T.",
-      "Linker, J.",
-      "Malaspina, D. M.",
-      "Matthews, S.",
-      "Parenti, S.",
-      "Petrie, G.",
-      "Spadaro, D.",
-      "Ugarte-Urra, I.",
-      "Warren, H.",
-      "Winslow, R."
-    ],
-    "month": "",
-    "year": "2020-04-00",
-    "journal": "arXiv e-prints",
-    "publication_type": "eprint",
-    "citations": 3,
-    "url": "https://dx.doi.org/10.48550/arXiv.2004.08632"
   },
   {
     "bibcode": "2022FrASS...9.2868H",
@@ -2165,6 +2165,34 @@
     "url": "https://dx.doi.org/10.5194/egusphere-egu24-13328"
   },
   {
+    "bibcode": "2024AGUFMSH23C2951L",
+    "title": "Solar Orbiter HIS Observations of Suprathermal Particles (5-70 keV) in Association with Shocks",
+    "authors": [
+      "Livi, S. A.",
+      "Owen, C. J.",
+      "Louarn, P.",
+      "D'Amicis, R.",
+      "Fedorov, A.",
+      "Ho, G. C.",
+      "Alterman, B. L.",
+      "Lepri, S. T.",
+      "Raines, J. M.",
+      "Galvin, A.",
+      "Kistler, L. M.",
+      "Allegrini, F.",
+      "Ogasawara, K.",
+      "Wurz, P.",
+      "Dewey, R. M.",
+      "Rivera, Y."
+    ],
+    "month": "",
+    "year": "2024-12-00",
+    "journal": "AGU Fall Meeting Abstracts",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH23C2951L"
+  },
+  {
     "bibcode": "2023AGUFMSH51C2622D",
     "title": "PSP Observations of a Ubiquitous Suprathermal Spectrum within 1 au",
     "authors": [
@@ -2342,34 +2370,6 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH23F..01B"
-  },
-  {
-    "bibcode": "2024AGUFMSH23C2951L",
-    "title": "Solar Orbiter HIS Observations of Suprathermal Particles (5-70 keV) in Association with Shocks",
-    "authors": [
-      "Livi, S. A.",
-      "Owen, C. J.",
-      "Louarn, P.",
-      "D'Amicis, R.",
-      "Fedorov, A.",
-      "Ho, G. C.",
-      "Alterman, B. L.",
-      "Lepri, S. T.",
-      "Raines, J. M.",
-      "Galvin, A.",
-      "Kistler, L. M.",
-      "Allegrini, F.",
-      "Ogasawara, K.",
-      "Wurz, P.",
-      "Dewey, R. M.",
-      "Rivera, Y."
-    ],
-    "month": "",
-    "year": "2024-12-00",
-    "journal": "AGU Fall Meeting Abstracts",
-    "publication_type": "abstract",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH23C2951L"
   },
   {
     "bibcode": "2024EGUGA..2620809L",
