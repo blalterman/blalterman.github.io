@@ -62,6 +62,18 @@ for pub in results:
         except ValueError:
             year = pubdate
     journal = pub.pub or ""
+
+    # Fix: ADS API returns "The Astrophysical Journal" for both ApJ and ApJL
+    # Detect ApJL by bibcode pattern (...L..) or DOI prefix (2041-8213)
+    is_apjl = False
+    if "...L.." in pub.bibcode:  # Primary: bibcode pattern check
+        is_apjl = True
+    elif hasattr(pub, "doi") and pub.doi and "2041-8213" in pub.doi[0]:  # Fallback: DOI check
+        is_apjl = True
+
+    if is_apjl and journal == "The Astrophysical Journal":
+        journal = "The Astrophysical Journal Letters"
+
     pub_type = pub.doctype or ""
     citations = pub.citation_count if hasattr(pub, "citation_count") else 0
     url = (
