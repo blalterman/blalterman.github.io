@@ -1,5 +1,6 @@
 import { ResearchFigure } from '@/components/research-figure';
 import { loadJSONData } from '@/lib/data-loader';
+import { renderMathInText } from '@/lib/render-math';
 import { Metadata, ResolvingMetadata } from 'next';
 
 type Props = {
@@ -44,9 +45,10 @@ export default async function ResearchPage({ params }: { params: Promise<{ slug:
     return (
         <main className="flex-1 container mx-auto py-16 md:py-24">
             <h1 className="font-headline">{project?.title}</h1>
-            <p className="text-lg text-muted-foreground mt-4">
-                {introductoryParagraph}
-            </p>
+            <p
+                className="text-lg text-muted-foreground mt-4 [&_a]:text-primary [&_a:hover]:underline"
+                dangerouslySetInnerHTML={{ __html: renderMathInText(introductoryParagraph) }}
+            />
             <p className="text-sm text-muted-foreground mt-4">
                 Summary generated with ChatGPT based on my first-author publications for clarity and accessibility.
             </p>

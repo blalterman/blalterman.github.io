@@ -24,7 +24,7 @@ export function ResearchFigure({ src, alt, caption, className }: ResearchFigureP
         />
       </div>
       <figcaption
-        className="mt-4 text-sm text-center text-muted-foreground max-w-3xl"
+        className="mt-4 text-sm text-center text-muted-foreground max-w-3xl [&_a]:text-primary [&_a:hover]:underline"
         dangerouslySetInnerHTML={{ __html: processedCaption }}
       />
     </figure>
