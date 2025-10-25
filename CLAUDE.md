@@ -1,173 +1,245 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+> **AI Assistant Quick Reference**
+>
+> This file provides essential guidance for Claude Code and other AI assistants working with this repository.
+>
+> **📘 For detailed architecture:** [ARCHITECTURE.md](./ARCHITECTURE.md)
+> **📘 For AI behavior protocols:** [AGENTS.md](./AGENTS.md)
+
+---
 
 ## Project Overview
 
-This is a Next.js-based academic portfolio website for B. L. Alterman, a research astrophysicist. The site is statically generated and deployed to GitHub Pages, featuring an automated data pipeline that fetches research publications and metrics from NASA ADS.
+**Type:** Academic portfolio website (Next.js + TypeScript + Tailwind CSS)
 
-## Development Commands
+**Owner:** B. L. Alterman, Research Astrophysicist at NASA Goddard Space Flight Center
 
-- **Development server**: `npm run dev` (runs on port 9002 with Turbopack)
-- **Build**: `npm run build` (static export for GitHub Pages)
-- **Start production**: `npm start`
-- **Lint**: `npm run lint`
-- **Type check**: `npm run typecheck`
+**Key Features:**
+- Statically generated site deployed to GitHub Pages
+- Automated data pipeline fetching publications and citations from NASA ADS
+- Dynamic route system: single template generates all research pages from JSON data
+- Zero-maintenance content updates via JSON files
 
-## Architecture Overview
+**Tech Stack:** Next.js 15 (App Router), TypeScript 5, Tailwind CSS, Shadcn/ui, Python automation
 
-### Static Site Generation
-The site uses Next.js App Router with `output: 'export'` configuration for static site generation. TypeScript and ESLint errors are ignored during builds to accommodate the automated CI/CD pipeline.
+📘 **See [ARCHITECTURE.md § Technology Stack](./ARCHITECTURE.md#technology-stack) for complete dependencies**
 
-### Data Pipeline Architecture
-The site operates on a data-driven architecture with all content stored in `/public/data/` as JSON files:
+---
 
-**Automated Data (via GitHub Actions):**
-- `ads_publications.json` - Publications from NASA ADS (weekly updates)
-- `ads_metrics.json` - Citation metrics and h-index (weekly updates)
-- `citations_by_year.json` - Annual citation counts (weekly updates)
-- `research-figures-with-captions.json` - Generated from combining manual data with publication metadata
+## Quick Start Commands
 
-**Manual Data:**
-- `research-projects.json` - Featured research project definitions
-- `figure-metadata.json` - Figure database with captions, alt text, and bibcodes
-- `page-figure-mappings.json` - Simple mapping of research pages to figures
-- `research-paragraphs.json` - Detailed descriptions for research subpages
-- `education.json` & `positions.json` - Academic and professional history
-- `skills.json` - Technical skills data
-
-### Key GitHub Actions Workflows
-- `update-ads-publications.yml` - Fetches publications weekly
-- `update-ads-metrics.yml` - Updates citation metrics weekly
-- `update_annual_citations.yml` - Generates yearly citation data and plots
-- `convert-pdfs.yml` - Converts PDFs to web-ready SVGs
-- `generate-figure-data.yml` - Combines research data with publication metadata
-- `deploy.yaml` - Builds and deploys to gh-pages branch
-
-### Component Structure
-- **Dynamic Research Routes**: Single dynamic route at `/src/app/research/[slug]/page.tsx` handles all research pages
-- **Shadcn/ui Components**: UI components in `/src/components/ui/`
-- **Custom Components**: Main application components in `/src/components/`
-- **Path Aliases**: `@/*` maps to `./src/*`
-
-### Figure Management Architecture
-The site uses a decoupled architecture for managing research figures:
-
-**Data Separation**:
-- `figure-metadata.json` - Complete figure database with all metadata (captions, alt text, bibcodes)
-- `page-figure-mappings.json` - Simple key-value mapping of research pages to figures
-- `research-figures-with-captions.json` - Generated output combining figures with citations
-
-**Benefits**:
-- Clean separation between figure content and page assignments
-- Figures can be easily reassigned between pages
-- Single unified placeholder for consistency
-- Simple data structure for maintenance
-
-**Adding a New Research Page (Automated Workflow)**:
-
-**Option 1: Interactive Script (Recommended)**
 ```bash
+# Development (runs on port 9002 with Turbopack)
+npm run dev
+
+# Build for production (static export)
+npm run build
+
+# Type checking
+npm run typecheck
+
+# Linting
+npm run lint
+
+# Python scripts (requires dependencies)
+pip install -r scripts/requirements.txt
 python scripts/create_research_page.py
 ```
-The script will:
-- Display existing pages and available figures
-- Prompt for title, description, and content with validation
-- Preview changes before applying
-- Update all three JSON files automatically
 
-**Option 2: Manual JSON Updates**
-1. Add entry to `research-projects.json` (page title and description)
-2. Add entry to `page-figure-mappings.json` (map page to figure or placeholder)
-3. Add entry to `research-paragraphs.json` (detailed content)
-4. **Push changes** → Page automatically exists at `/research/[slug]`
+---
 
-**No React/TypeScript files need to be created!** The dynamic route system automatically generates static pages for all slugs defined in the JSON data during the build process.
+## AI Assistant Protocols
 
-### Dynamic Route System
+**This repository has specific guidelines for AI behavior and prompting.**
 
-The research pages use Next.js App Router's dynamic routing with static generation:
+### Key Protocols
 
-**How it works:**
-- Single template file: `/src/app/research/[slug]/page.tsx`
-- `generateStaticParams()` reads all slugs from `research-projects.json`
-- At build time, creates static HTML for each slug: `/research/proton-beams.html`, etc.
-- Each page loads its data dynamically based on the slug parameter
+1. **Prompt Improvement** - For moderate-to-complex tasks, proactively analyze prompts before execution for:
+   - Clarity & specificity
+   - Missing context or constraints
+   - Efficiency optimization opportunities
+   - Agent selection recommendations
 
-**Benefits:**
-- **DRY principle**: One template instead of 8+ duplicate files
-- **Data-driven**: Adding pages requires only JSON updates
-- **Consistent styling**: All pages guaranteed to have identical structure
-- **Easier maintenance**: Layout changes only need updating in one place
-- **Static export compatible**: Generates individual HTML files for GitHub Pages
+2. **Human Review Required** - All AI-generated code must be reviewed by human developer
 
-**Example workflow for adding "solar-energetic-particles" research page:**
-```json
-// research-projects.json
-{
-  "title": "Solar Energetic Particles",
-  "slug": "solar-energetic-particles",
-  "description": "Studying particle acceleration in solar events"
-}
+3. **Follow Project Conventions** - Use Next.js patterns, semantic HTML in React components, maintain type safety
 
-// page-figure-mappings.json
-"solar-energetic-particles": "sep-figure.svg"
+### When to Apply Prompt Analysis
 
-// research-paragraphs.json
-"solar-energetic-particles": "Detailed research description..."
-```
-After pushing, `/research/solar-energetic-particles` automatically becomes available.
+**Analyze for moderate/complex tasks:**
+- Multi-step workflows (2-4+ steps)
+- Planning, implementation, or architectural changes
+- Ambiguous scope requiring interpretation
+- Tasks needing agent coordination or debugging
 
-### Styling
-- **Tailwind CSS**: Primary styling framework with custom configuration
-- **Shadcn/ui**: Component library with neutral base color theme
-- **CSS Variables**: Theme customization via CSS custom properties
+**Skip for simple tasks:**
+- Single file reads or documentation lookups
+- Direct git/bash commands
+- Clear, specific, single-step requests
 
-## Python Scripts (in `/scripts/`)
-- `fetch_ads_*.py` - NASA ADS API integration scripts
-- `generate_figure_data.py` - Combines research metadata with publication data
-- `create_research_page.py` - Interactive script for creating new research pages
-- `test_create_research_page.py` - Test suite for the research page creation script
-- `utils.py` - Shared utilities for path management and repository structure
-- `requirements.txt` - Python dependencies for automation scripts
+📘 **See [AGENTS.md](./AGENTS.md) for complete protocols:**
+- [Prompt Improvement Protocol](./AGENTS.md#prompt-improvement-protocol) - Full framework with presentation format
+- [Development Conventions](./AGENTS.md#development-conventions) - Complete code standards
+- [Prompting Guidelines](./AGENTS.md#prompting-guidelines) - Best practices for users
+- [Agent Use Cases](./AGENTS.md#agent-use-cases) - Task categories and examples
 
-### Research Page Creation Script
+---
 
-The `create_research_page.py` script provides an interactive CLI for adding new research pages:
+## Critical Architecture Concepts
 
-**Features:**
-- **Interactive prompts** with input validation
-- **Smart slug generation** from titles with uniqueness checking
-- **Figure management** - displays available figures and prevents conflicts
-- **Preview mode** - shows exactly what will be changed before applying
-- **Dry-run support** for testing: `python scripts/create_research_page.py --dry-run`
-- **Comprehensive testing** via `test_create_research_page.py`
+### 1. Data-Driven Architecture
 
-**Usage:**
+**All content lives in JSON files** at `/public/data/` - no hardcoded content in React components.
+
+**Automated Data** (updated weekly by GitHub Actions):
+- `ads_publications.json`, `ads_metrics.json`, `citations_by_year.json`
+- `research-figures-with-captions.json`
+
+**Manual Data** (curated):
+- `research-projects.json`, `page-figure-mappings.json`, `research-paragraphs.json`
+- `education.json`, `positions.json`, `skills.json`
+
+📘 **See [ARCHITECTURE.md § Data Management](./ARCHITECTURE.md#data-management) for complete data structure documentation**
+
+### 2. Dynamic Route System ⚡ **Most Important!**
+
+**Single React component generates ALL research pages from JSON data.**
+
+- File: `/src/app/research/[slug]/page.tsx`
+- `generateStaticParams()` reads `research-projects.json`
+- No React/TypeScript files needed to add new pages - **just edit JSON!**
+
+**Adding a new research page:**
 ```bash
-# Interactive mode
+# Automated (recommended)
 python scripts/create_research_page.py
 
-# Preview mode (no changes made)
-python scripts/create_research_page.py --dry-run
-
-# Run tests
-python scripts/test_create_research_page.py
+# Manual: Update 3 JSON files
+# 1. research-projects.json
+# 2. page-figure-mappings.json
+# 3. research-paragraphs.json
 ```
 
-The script automatically updates all three required JSON files and validates that the new page will build correctly with the dynamic route system.
+📘 **See [ARCHITECTURE.md § Dynamic Route System](./ARCHITECTURE.md#dynamic-route-system) for detailed explanation**
 
-### Script Utilities
-All Python scripts use a shared `scripts/utils.py` module that provides:
-- `get_repo_root()`: Returns the repository root directory using `Path(__file__).parent.parent`
-- `get_public_data_dir()`: Returns the `public/data` directory path
-- `get_public_plots_dir()`: Returns the `public/plots` directory path
+### 3. GitHub Actions Automation
 
-This ensures scripts work correctly regardless of which directory they're invoked from, eliminating path-related issues.
+**5 workflows** handle data updates and deployment:
+- Publications, metrics, citations (weekly Mon updates)
+- PDF→SVG conversion (on upload)
+- Figure data generation (on data changes)
+
+📘 **See [ARCHITECTURE.md § GitHub Actions Workflows](./ARCHITECTURE.md#github-actions-workflows) for complete workflow documentation**
+
+### 4. Component Structure
+
+- **Pages:** `/src/app/` (App Router)
+- **Components:** `/src/components/` (custom) + `/src/components/ui/` (Shadcn/ui)
+- **Utils:** `/src/lib/` (data loading, publication utils, math rendering)
+- **Path Aliases:** `@/*` maps to `./src/*`
+
+📘 **See [ARCHITECTURE.md § Component Architecture](./ARCHITECTURE.md#component-architecture) for detailed structure**
+
+---
+
+## AI Assistant Guidelines
+
+### When Working with This Codebase
+
+**Key Patterns:**
+1. **Use path aliases** - Import with `@/*` (maps to `./src/*`)
+2. **Data files** - Always in `/public/data/` (never create duplicate `data/` directory)
+3. **Research pages** - Edit JSON only, never create React files
+4. **Scripts** - Use `utils.py` helpers for consistent paths
+
+**Adding Content Workflows:**
+
+| Task | Method |
+|------|--------|
+| New research page | `python scripts/create_research_page.py` OR update 3 JSON files |
+| New figure | Upload PDF to `/public/paper-figures/pdfs/` → auto-converts to SVG |
+| Update publications | Automatic weekly OR run fetch scripts manually |
+| Update professional info | Edit `education.json`, `positions.json`, `skills.json` |
+
+**Build Configuration:**
+- `output: 'export'` in `next.config.ts` (required for GitHub Pages)
+- TypeScript/ESLint errors ignored during builds (CI/CD compatibility)
+- Images unoptimized (required for static export)
+- Port 9002 for development
+
+📘 **See [ARCHITECTURE.md § Development Workflow](./ARCHITECTURE.md#development-workflow) for complete guide**
+📘 **See [ARCHITECTURE.md § Common Tasks](./ARCHITECTURE.md#common-tasks) for task-specific instructions**
+
+---
+
+## Python Scripts
+
+All scripts in `/scripts/` use shared `utils.py` for consistent path management:
+
+**Key Scripts:**
+- `create_research_page.py` - Interactive CLI for adding research pages (supports `--dry-run`)
+- `fetch_ads_*.py` - NASA ADS API integration (publications, metrics, citations)
+- `generate_figure_data.py` - Combines figure metadata with publications
+- `utils.py` - Shared utilities: `get_repo_root()`, `get_public_data_dir()`, `get_public_plots_dir()`
+
+📘 **See [ARCHITECTURE.md § Python Scripts](./ARCHITECTURE.md#python-scripts) for detailed documentation**
+
+---
+
+## Data Flow
+
+```
+NASA ADS API → Python Scripts → JSON Files → Next.js Build → GitHub Pages
+```
+
+Weekly automation updates publications and metrics every Monday automatically.
+
+📘 **See [ARCHITECTURE.md § Data Flow Architecture](./ARCHITECTURE.md#data-flow-architecture) for complete flow diagram**
+
+---
+
+## Troubleshooting Quick Reference
+
+| Issue | Check |
+|-------|-------|
+| Publications not updating | GitHub Actions logs, verify `ADS_DEV_KEY`/`ADS_ORCID` secrets |
+| Research page missing | Verify slug in all 3 JSON files, rebuild site |
+| Figure not displaying | Check file exists in `/public/paper-figures/svg/`, verify paths |
+| Build failing | Validate JSON syntax, check TypeScript, clear `.next` cache |
+
+📘 **See [ARCHITECTURE.md § Troubleshooting](./ARCHITECTURE.md#troubleshooting) for comprehensive guide**
+
+---
 
 ## Important Notes
-- Site is configured for GitHub Pages deployment with asset prefix handling
-- Images are unoptimized for static export compatibility
-- Research subpages are dynamically generated from data files
-- All external data sources are automatically updated via scheduled workflows
-- Scripts only write to `public/data/` directory (no duplicate `data/` directory)
+
+- **Static Site Generation:** Next.js with `output: 'export'` for GitHub Pages
+- **Data-Driven:** All content in JSON files, no hardcoded content
+- **Automated Updates:** Publications and metrics update weekly via GitHub Actions
+- **Path Management:** Scripts work from any directory using `utils.py`
+- **Single Data Directory:** Scripts only write to `/public/data/` (no duplicate `data/`)
+
+---
+
+## Resources
+
+- **Detailed Architecture:** [ARCHITECTURE.md](./ARCHITECTURE.md)
+- **AI Behavior Protocols:** [AGENTS.md](./AGENTS.md)
+- **Project README:** [README.md](./README.md)
+- **Node Setup:** [NVM_SETUP.md](./NVM_SETUP.md)
+
+---
+
+## Summary for AI Assistants
+
+This is a **data-driven static site** where:
+
+✅ Content lives in JSON files, not React components
+✅ Research pages auto-generate from JSON (dynamic routes)
+✅ Data updates automatically via GitHub Actions
+✅ Adding pages = editing JSON only (no code changes)
+✅ Python scripts handle automation with shared utilities
+
+**When you need details, always refer to [ARCHITECTURE.md](./ARCHITECTURE.md)**
+**For prompting and behavior protocols, refer to [AGENTS.md](./AGENTS.md)**
