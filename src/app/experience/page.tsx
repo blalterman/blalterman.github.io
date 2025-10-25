@@ -23,11 +23,22 @@ interface Position {
     Location: string;
 }
 
+interface ExperiencePageData {
+    heading: string;
+    tagline: string;
+}
+
 export default function ExperiencePage() {
     const educationData = loadJSONData<Education[]>('education.json');
     const positionsData = loadJSONData<Position[]>('positions.json');
+    const experiencePageData = loadJSONData<ExperiencePageData>('experience-page.json');
 
     return (
-        <Experience educationData={educationData} professionalData={positionsData} />
+        <Experience
+            heading={experiencePageData.heading}
+            tagline={experiencePageData.tagline}
+            educationData={educationData}
+            professionalData={positionsData}
+        />
     );
 }

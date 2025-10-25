@@ -18,16 +18,18 @@ interface Position {
 }
 
 interface ExperienceProps {
+    heading: string;
+    tagline: string;
     educationData: Education[];
     professionalData: Position[];
 }
 
-export function Experience({ educationData, professionalData }: ExperienceProps) {
+export function Experience({ heading, tagline, educationData, professionalData }: ExperienceProps) {
     return (
         <section id="experience" className="container mx-auto py-16 md:py-24">
             <div className="text-center mb-16">
-                <h2 className="font-headline">Experience & Education</h2>
-                <p className="text-lg text-muted-foreground mt-2">My academic journey and professional background.</p>
+                <h2 className="font-headline">{heading}</h2>
+                <p className="text-lg text-muted-foreground mt-2">{tagline}</p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>

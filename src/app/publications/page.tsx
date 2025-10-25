@@ -19,10 +19,16 @@ import type { Publication } from "@/types/publication";
     title: "Publications | B. L. Alterman",
     description: "A comprehensive list of peer-reviewed articles, datasets, conference proceedings, and other publications by B. L. Alterman, with links to NASA/ADS.",
   };
-  
+
+  interface PublicationsPageData {
+    heading: string;
+    tagline: string;
+  }
+
   export default function PublicationsPage() {
     const adsMetrics = loadJSONData<any>('ads_metrics.json');
     const adsPublications = loadJSONData<Publication[]>('ads_publications.json');
+    const publicationsPageData = loadJSONData<PublicationsPageData>('publications-page.json');
 
     if (!adsMetrics || !adsPublications.length) {
       return (
@@ -44,8 +50,8 @@ import type { Publication } from "@/types/publication";
     return (
       <div className="container mx-auto py-16 md:py-24">
         <div className="text-center mb-12">
-          <h1 className="font-headline">Publications</h1>
-          <p className="text-lg text-muted-foreground mt-2">A list of my research publications and conference presentations.</p>
+          <h1 className="font-headline">{publicationsPageData.heading}</h1>
+          <p className="text-lg text-muted-foreground mt-2">{publicationsPageData.tagline}</p>
         </div>
         <div className="flex justify-center flex-wrap gap-x-8 mb-12">
           <div className="flex flex-col items-center">

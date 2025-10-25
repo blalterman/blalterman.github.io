@@ -11,6 +11,7 @@ import { ArxivIcon } from './icons/arxiv-icon';
 import { FirebaseIcon } from './icons/firebase-icon';
 import { GithubMarkIcon } from './icons/github-mark-icon';
 import { LinkedinIcon } from './icons/linkedin-icon';
+import { ClaudeIcon } from './icons/claude-icon';
 
 export function Contact() {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -63,6 +64,13 @@ export function Contact() {
                 <a href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer" className="ml-2 flex items-center hover:text-foreground transition-colors">
                     <FirebaseIcon className="h-5 w-5 mr-1" />
                     Firebase.
+                </a>
+            </span>
+            <span className="flex items-center">
+                Maintained with
+                <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" className="ml-2 flex items-center hover:text-foreground transition-colors">
+                    <ClaudeIcon className="h-5 w-5 mr-1" />
+                    Claude.
                 </a>
             </span>
             <span className="flex items-center">

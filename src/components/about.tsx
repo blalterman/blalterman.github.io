@@ -1,6 +1,7 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface BiographyData {
   heading: string;
@@ -34,6 +35,12 @@ export function About({ biographyData }: AboutProps) {
               {paragraph}
             </p>
           ))}
+          <p className="text-lg text-muted-foreground mt-4">
+            Want to learn more about my research vision and team philosophy?{' '}
+            <Link href="/ben" className="text-primary hover:underline font-medium">
+              Read my full story
+            </Link>.
+          </p>
         </div>
       </div>
     </section>

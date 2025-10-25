@@ -14,16 +14,18 @@ interface ResearchProject {
 }
 
 interface FeaturedResearchProps {
+    heading: string;
+    tagline: string;
     researchProjects: ResearchProject[];
 }
 
-export function FeaturedResearch({ researchProjects }: FeaturedResearchProps) {
+export function FeaturedResearch({ heading, tagline, researchProjects }: FeaturedResearchProps) {
   return (
-    <section id="research" className="bg-muted/50 py-16 md:py-24">
+    <section id="research" className="py-16 md:py-24">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-headline">Featured Research</h2>
-          <p className="text-lg text-muted-foreground mt-2">Highlights from my research activities.</p>
+          <h2 className="font-headline">{heading}</h2>
+          <p className="text-lg text-muted-foreground mt-2">{tagline}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {researchProjects.map((project: any) => (

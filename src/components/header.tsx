@@ -19,6 +19,7 @@ export function Header() {
             <span className="font-bold sm:inline-block">B. L. Alterman</span>
           </Link>
           <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+            <Link href="/ben" className="transition-colors hover:text-foreground/80 text-foreground/60">Ben</Link>
             <Link href="/research" className="transition-colors hover:text-foreground/80 text-foreground/60">Research</Link>
             <Link href="/publications" className="transition-colors hover:text-foreground/80 text-foreground/60">Publications</Link>
             <Link href="/experience" className="transition-colors hover:text-foreground/80 text-foreground/60">Experience</Link>

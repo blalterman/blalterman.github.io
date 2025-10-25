@@ -10,7 +10,7 @@ interface BiographyData {
 }
 
 export default function Home() {
-  const biographyData = loadJSONData<BiographyData>('biography.json');
+  const biographyData = loadJSONData<BiographyData>('biography-homepage.json');
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-background">

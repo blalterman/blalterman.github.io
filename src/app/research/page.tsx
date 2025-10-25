@@ -16,10 +16,20 @@ interface ResearchProject {
     slug: string;
 }
 
+interface ResearchPageData {
+    heading: string;
+    tagline: string;
+}
+
 export default function ResearchPage() {
     const researchProjects = loadJSONData<ResearchProject[]>('research-projects.json');
+    const researchPageData = loadJSONData<ResearchPageData>('research-page.json');
 
     return (
-        <FeaturedResearch researchProjects={researchProjects} />
+        <FeaturedResearch
+            heading={researchPageData.heading}
+            tagline={researchPageData.tagline}
+            researchProjects={researchProjects}
+        />
     );
 }
