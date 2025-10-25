@@ -5,7 +5,7 @@
 >
 > **Related Documentation:**
 > - [CLAUDE.md](./CLAUDE.md) - AI assistant quick reference and startup guide
-> - [AGENTS.md](./AGENTS.md) - AI development protocols and prompting guidelines
+> - [AGENTS.md](./docs/AGENTS.md) - AI development protocols and prompting guidelines
 > - [README.md](./README.md) - Project overview for users
 
 ## Table of Contents
@@ -2114,11 +2114,11 @@ This project is developed with assistance from AI tools. Follow these guidelines
 
 5. **Document AI Contributions:** Use commit message prefixes (e.g., `AI:`) or co-author tags for AI-assisted work
 
-**📘 See [AGENTS.md](./AGENTS.md) for complete AI development protocols:**
-- [Prompt Improvement Protocol](./AGENTS.md#prompt-improvement-protocol) - When and how to analyze prompts
-- [Development Conventions](./AGENTS.md#development-conventions) - Code standards and review requirements
-- [Prompting Guidelines](./AGENTS.md#prompting-guidelines) - Best practices for effective AI collaboration
-- [Agent Use Cases](./AGENTS.md#agent-use-cases) - Common AI-assisted tasks
+**📘 See [AGENTS.md](./docs/AGENTS.md) for complete AI development protocols:**
+- [Prompt Improvement Protocol](./docs/AGENTS.md#prompt-improvement-protocol) - When and how to analyze prompts
+- [Development Conventions](./docs/AGENTS.md#development-conventions) - Code standards and review requirements
+- [Prompting Guidelines](./docs/AGENTS.md#prompting-guidelines) - Best practices for effective AI collaboration
+- [Agent Use Cases](./docs/AGENTS.md#agent-use-cases) - Common AI-assisted tasks
 
 ---
 
@@ -2154,9 +2154,9 @@ This project is developed with assistance from AI tools. Follow these guidelines
 
 - **[ARCHITECTURE.md](./ARCHITECTURE.md)** (this file) - Comprehensive technical reference for developers and AI assistants
 - **[CLAUDE.md](./CLAUDE.md)** - AI assistant quick reference and startup guide
-- **[AGENTS.md](./AGENTS.md)** - AI development protocols, prompting guidelines, and best practices
+- **[AGENTS.md](./docs/AGENTS.md)** - AI development protocols, prompting guidelines, and best practices
 - **[README.md](./README.md)** - Project overview and user documentation
-- **[NVM_SETUP.md](./NVM_SETUP.md)** - Node version management setup instructions
+- **[NVM_SETUP.md](./docs/NVM_SETUP.md)** - Node version management setup instructions
 
 ### External Documentation
 

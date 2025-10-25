@@ -5,7 +5,7 @@
 > This file provides essential guidance for Claude Code and other AI assistants working with this repository.
 >
 > **📘 For detailed architecture:** [ARCHITECTURE.md](./ARCHITECTURE.md)
-> **📘 For AI behavior protocols:** [AGENTS.md](./AGENTS.md)
+> **📘 For AI behavior protocols:** [AGENTS.md](./docs/AGENTS.md)
 
 ---
 
@@ -78,11 +78,11 @@ python scripts/create_research_page.py
 - Direct git/bash commands
 - Clear, specific, single-step requests
 
-📘 **See [AGENTS.md](./AGENTS.md) for complete protocols:**
-- [Prompt Improvement Protocol](./AGENTS.md#prompt-improvement-protocol) - Full framework with presentation format
-- [Development Conventions](./AGENTS.md#development-conventions) - Complete code standards
-- [Prompting Guidelines](./AGENTS.md#prompting-guidelines) - Best practices for users
-- [Agent Use Cases](./AGENTS.md#agent-use-cases) - Task categories and examples
+📘 **See [AGENTS.md](./docs/AGENTS.md) for complete protocols:**
+- [Prompt Improvement Protocol](./docs/AGENTS.md#prompt-improvement-protocol) - Full framework with presentation format
+- [Development Conventions](./docs/AGENTS.md#development-conventions) - Complete code standards
+- [Prompting Guidelines](./docs/AGENTS.md#prompting-guidelines) - Best practices for users
+- [Agent Use Cases](./docs/AGENTS.md#agent-use-cases) - Task categories and examples
 
 ---
 
@@ -225,9 +225,9 @@ Weekly automation updates publications and metrics every Monday automatically.
 ## Resources
 
 - **Detailed Architecture:** [ARCHITECTURE.md](./ARCHITECTURE.md)
-- **AI Behavior Protocols:** [AGENTS.md](./AGENTS.md)
+- **AI Behavior Protocols:** [AGENTS.md](./docs/AGENTS.md)
 - **Project README:** [README.md](./README.md)
-- **Node Setup:** [NVM_SETUP.md](./NVM_SETUP.md)
+- **Node Setup:** [NVM_SETUP.md](./docs/NVM_SETUP.md)
 
 ---
 
@@ -242,4 +242,5 @@ This is a **data-driven static site** where:
 ✅ Python scripts handle automation with shared utilities
 
 **When you need details, always refer to [ARCHITECTURE.md](./ARCHITECTURE.md)**
-**For prompting and behavior protocols, refer to [AGENTS.md](./AGENTS.md)**
+**For prompting and behavior protocols, refer to [AGENTS.md](./docs/AGENTS.md)**
+- CLAUDE.md

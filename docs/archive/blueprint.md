@@ -1,5 +1,13 @@
 # **App Name**: Academic Ascent
 
+> **⚠️ HISTORICAL DOCUMENT**
+>
+> This design document is from the Jekyll era of this website (pre-2024). The site has since been migrated to Next.js with a completely different architecture.
+>
+> **For current architecture and tech stack, see:** [ARCHITECTURE.md](../../ARCHITECTURE.md)
+>
+> This file is preserved for historical reference only.
+
 ## Core Features:
 
 - Research Portfolio: Display research projects with summaries, figures, and publication links.
