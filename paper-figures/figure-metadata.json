@@ -1,4 +1,11 @@
 {
+  "placeholder.png": {
+    "src": "https://placehold.co/800x600.png",
+    "alt": "Placeholder image for research topic",
+    "caption": "Figure coming soon",
+    "bibcode": null,
+    "placeholder": true
+  },
   "P9-Fig9.svg": {
     "alt": "Figure showing alpha-proton and proton beam-core differential flow vs. coulomb collision frequency.",
     "caption": "Alpha particles and proton beams both differentially flow faster than the bulk or core protons in the solar wind. This differential flow is aligned with the local magnetic field. Over the range of Coulomb Age ($A_c$, also called Coulomb Number $N_c$) that the alpha particle differential flow decays, proton beam-core differential flow is constant and independent of Coulomb collisions.",
@@ -63,12 +70,5 @@
     "alt": "Figure showing the changes in the solar wind compressibility with solar wind source region.",
     "caption": "Lorem ipsum...",
     "bibcode": "2025arXiv250820391A"
-  },
-  "placeholder.png": {
-    "src": "https://placehold.co/800x600.png",
-    "alt": "Placeholder image for research topic",
-    "caption": "Figure coming soon",
-    "bibcode": null,
-    "placeholder": true
   }
 }
