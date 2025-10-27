@@ -1,7 +1,9 @@
 import { ResearchFigure } from '@/components/research-figure';
 import { loadJSONData } from '@/lib/data-loader';
+import { filterPublishedProjects } from '@/lib/research-utils';
 import { renderMathInText } from '@/lib/render-math';
 import { Metadata, ResolvingMetadata } from 'next';
+import { redirect } from 'next/navigation';
 
 type Props = {
     params: Promise<{ slug: string }>;
@@ -9,7 +11,9 @@ type Props = {
 
 export async function generateStaticParams() {
     const projects = loadJSONData<any[]>('research-projects.json');
-    return projects.map((project) => ({
+    // Only generate static params for published projects (environment-aware)
+    const publishedProjects = filterPublishedProjects(projects);
+    return publishedProjects.map((project) => ({
         slug: project.slug,
     }));
 }
@@ -35,6 +39,14 @@ export default async function ResearchPage({ params }: { params: Promise<{ slug:
 
     const projects = loadJSONData<any[]>('research-projects.json');
     const project = projects.find((p: any) => p.slug === slug);
+
+    // Redirect to /research if page is unpublished in production
+    // (In development, allow access to all pages)
+    const isDev = process.env.NODE_ENV === 'development';
+    if (!isDev && project?.published === false) {
+        redirect('/research');
+    }
+
     const paragraphs = loadJSONData<Record<string, string>>('research-paragraphs.json');
     const figuresData = loadJSONData<any[]>('research-figures-with-captions.json');
 

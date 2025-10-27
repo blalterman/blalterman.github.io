@@ -1,6 +1,7 @@
 
 import { FeaturedResearch } from "@/components/featured-research";
 import { loadJSONData } from "@/lib/data-loader";
+import { filterPublishedProjects } from "@/lib/research-utils";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ interface ResearchProject {
     image: string;
     imageHint: string;
     slug: string;
+    published?: boolean;
 }
 
 interface ResearchPageData {
@@ -25,9 +27,12 @@ export default function ResearchPage() {
     const researchProjects = loadJSONData<ResearchProject[]>('research-projects.json');
     const researchPageData = loadJSONData<ResearchPageData>('research-page.json');
 
+    // Filter published projects (environment-aware: shows all in dev, only published in production)
+    const publishedProjects = filterPublishedProjects(researchProjects);
+
     // Shuffle research projects at build time to avoid implied priority hierarchy
     // Order will be identical for all visitors until next deployment
-    const shuffledProjects = [...researchProjects].sort(() => Math.random() - 0.5);
+    const shuffledProjects = [...publishedProjects].sort(() => Math.random() - 0.5);
 
     return (
         <FeaturedResearch

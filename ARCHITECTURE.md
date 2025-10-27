@@ -972,6 +972,31 @@ export function cn(...inputs: ClassValue[]) {
 
 **Purpose:** Merge Tailwind CSS class names with conflict resolution
 
+#### `lib/research-utils.ts`
+
+```typescript
+export function filterPublishedProjects<T extends { published?: boolean }>(
+    projects: T[]
+): T[]
+```
+
+**Purpose:** Environment-aware filtering for research projects
+
+**Behavior:**
+- **Development:** Returns all projects (including unpublished) for testing
+- **Production:** Returns only projects where `published !== false`
+
+**Usage Example:**
+```typescript
+const projects = loadJSONData<ResearchProject[]>('research-projects.json');
+const publishedProjects = filterPublishedProjects(projects);
+// Development: all 9 projects | Production: only published projects
+```
+
+**Used By:**
+- `/src/app/research/page.tsx` - Filter cards on research overview
+- `/src/app/research/[slug]/page.tsx` - Filter static params generation
+
 ---
 
 ## Data Management
@@ -1150,7 +1175,8 @@ export function cn(...inputs: ClassValue[]) {
     "slug": "proton-beams",
     "description": "Investigating how proton beams form and evolve in the solar wind",
     "image": "https://placehold.co/600x400.png",
-    "imageHint": "solar wind particles"
+    "imageHint": "solar wind particles",
+    "published": false
   }
 ]
 ```
@@ -1161,6 +1187,7 @@ export function cn(...inputs: ClassValue[]) {
 - **description:** Brief summary (shown on research overview page)
 - **image:** Placeholder image URL (for overview grid)
 - **imageHint:** Alt text hint for image
+- **published:** (optional, boolean) Whether page is visible in production. Defaults to `true`. Set to `false` to hide page in production builds while keeping it visible in development
 
 **Used By:**
 - Research overview page (/research) - displayed in random order (shuffled at build time)
@@ -1595,6 +1622,8 @@ python scripts/create_research_page.py
 }
 ```
 
+**Note:** By default, pages are published. To create a draft page visible only in development, add `"published": false` to the project definition.
+
 2. **Edit `page-figure-mappings.json`:**
 ```json
 {
@@ -1941,6 +1970,47 @@ npm run build
 - **Image paths:** Verify image paths are correct and files exist
 - **TypeScript errors:** May be ignored in production build, but should be fixed
 - **Module not found:** Run `npm install` to ensure all dependencies are installed
+
+---
+
+### Task: Hide/Show Research Pages (Environment-Aware)
+
+Use the `published` field to control research page visibility in production while keeping them accessible in development.
+
+**Hide a Research Page:**
+
+1. **Edit `/public/data/research-projects.json`:**
+```json
+{
+  "title": "Proton Beams",
+  "slug": "proton-beams",
+  "published": false  ← Add this field
+}
+```
+
+2. **Rebuild:**
+```bash
+npm run build
+```
+
+**Result:**
+- ✅ Development (`npm run dev`): Page visible, card appears
+- ❌ Production (`npm run build`): Page not built, card hidden
+- 🔗 Direct URL: Redirects to `/research` in production
+
+**Re-enable a Page:**
+
+Set `"published": true` or remove the field entirely (defaults to true).
+
+**Environment Behavior:**
+- **Development:** All pages visible (including unpublished) for testing
+- **Production:** Only published pages built and displayed
+- **Direct URLs:** Unpublished pages redirect to `/research` in production
+
+**Use Cases:**
+- Draft pages without figures or content
+- Placeholder topics for future research
+- Temporarily hide pages during updates
 
 ---
 

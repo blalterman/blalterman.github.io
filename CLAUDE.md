@@ -123,6 +123,11 @@ python scripts/create_research_page.py
 # 3. research-paragraphs.json
 ```
 
+**Published Field:** All pages default to published (`true`). To create draft pages visible only in development:
+- Add `"published": false` to `research-projects.json`
+- Pages remain accessible at `npm run dev` but won't build in production
+- See ARCHITECTURE.md § Common Tasks for complete guide
+
 📘 **See [ARCHITECTURE.md § Dynamic Route System](./ARCHITECTURE.md#dynamic-route-system) for detailed explanation**
 
 ### 3. GitHub Actions Automation
