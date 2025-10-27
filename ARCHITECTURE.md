@@ -694,6 +694,25 @@ export default function ResearchSubPage({ params }: { params: { slug: string } }
 5. **Static Export Compatible:** Generates individual HTML files for GitHub Pages
 6. **Type Safety:** TypeScript ensures data structure consistency
 
+### Research Card Randomization
+
+**Behavior:** Research project cards on `/research` are shuffled at build time
+
+**Implementation:** `/src/app/research/page.tsx` (line 30)
+```typescript
+const shuffledProjects = [...researchProjects].sort(() => Math.random() - 0.5);
+```
+
+**Characteristics:**
+- Shuffle occurs once during `npm run build`
+- All visitors see identical order until next deployment
+- Order refreshes automatically via:
+  - Weekly GitHub Actions deployments (every Monday)
+  - Manual deployments/rebuilds
+  - Any push to main branch that triggers deployment
+
+**Rationale:** Prevents implied priority hierarchy among research topics
+
 ### Adding a New Research Page
 
 **Option 1: Interactive Script (Recommended)**
@@ -784,6 +803,15 @@ git push
 │   │
 │   └── layout.tsx
 │
+├── ben/
+│   ├── page.tsx               # Personal philosophy page (/ben)
+│   │   ├── Loads ben-page.json (heading, tagline, sections array)
+│   │   ├── Dynamic card generation from sections array
+│   │   ├── Icon mapping with Lucide React (Telescope, Compass)
+│   │   └── Shadcn/ui Card components for each section
+│   │
+│   └── layout.tsx
+│
 └── globals.css                # Global Tailwind styles
 ```
 
@@ -833,6 +861,12 @@ interface ResearchFigureProps {
 - Displays project title, description, image
 - Responsive grid (1 column mobile → 2 columns tablet → 3 columns desktop)
 - Hover effects and transitions
+
+**Card Order:**
+- Research project cards are shuffled at build time using `Array.sort(() => Math.random() - 0.5)`
+- All visitors see the same random order until the next build/deployment
+- Order changes automatically with weekly automated builds (Monday deployments)
+- Manual rebuilds (`npm run build`) will generate a new random order
 
 **`research.tsx`** - Featured Research Projects Section
 - Section header
@@ -1129,7 +1163,7 @@ export function cn(...inputs: ClassValue[]) {
 - **imageHint:** Alt text hint for image
 
 **Used By:**
-- Research overview page (/research)
+- Research overview page (/research) - displayed in random order (shuffled at build time)
 - Research detail pages (generateStaticParams)
 - generate_figure_data.py
 
@@ -1664,6 +1698,8 @@ npm run build
     └── static/...
 ```
 
+**Note:** Each build generates a new random order for research project cards on `/research`.
+
 **3. Test Locally:**
 ```bash
 npm run start
@@ -1905,6 +1941,155 @@ npm run build
 - **Image paths:** Verify image paths are correct and files exist
 - **TypeScript errors:** May be ignored in production build, but should be fixed
 - **Module not found:** Run `npm install` to ensure all dependencies are installed
+
+---
+
+### Task: Add a New Section to the Ben Page
+
+The Ben page (`/ben`) follows the data-driven architecture pattern - all content lives in JSON and is automatically rendered by the React component.
+
+**Current Sections:**
+- "Research Vision" (Telescope icon)
+- "Team Ethos" (Compass icon)
+
+---
+
+#### Method 1: Add Section with Existing Icons
+
+**If using Telescope or Compass icons (already imported):**
+
+**1. Edit JSON file:**
+```bash
+# Edit: public/data/ben-page.json
+```
+
+**2. Add new section to the `sections` array:**
+```json
+{
+  "heading": "Collaboration & Mentoring",
+  "icon": "Telescope",
+  "paragraphs": [
+    "First paragraph of your content...",
+    "Second paragraph of your content...",
+    "Additional paragraphs as needed..."
+  ]
+}
+```
+
+**3. Rebuild:**
+```bash
+npm run build
+```
+
+✅ **Done!** The component automatically generates a new card.
+
+---
+
+#### Method 2: Add Section with New Icon
+
+**If you want a new icon from Lucide React:**
+
+**1. Update the React component (`src/app/ben/page.tsx`):**
+
+a. Import the new icon:
+```typescript
+import { Telescope, Compass, Users } from "lucide-react";
+//                               ^^^^^ new icon
+```
+
+b. Add to `iconMap`:
+```typescript
+const iconMap = {
+    Telescope: Telescope,
+    Compass: Compass,
+    Users: Users,  // new icon
+};
+```
+
+**2. Edit JSON file (`public/data/ben-page.json`):**
+```json
+{
+  "heading": "Collaboration & Mentoring",
+  "icon": "Users",
+  "paragraphs": [
+    "Mentoring is central to how I build teams...",
+    "I believe in creating opportunities for growth..."
+  ]
+}
+```
+
+**3. Rebuild:**
+```bash
+npm run build
+```
+
+---
+
+#### Available Lucide Icons
+
+Browse all icons at: **https://lucide.dev/icons/**
+
+**Popular options for additional sections:**
+- `Users` - Team/collaboration
+- `BookOpen` - Learning/education
+- `Lightbulb` - Ideas/innovation
+- `Target` - Goals/objectives
+- `Award` - Achievements
+- `TrendingUp` - Growth/progress
+- `GitBranch` - Collaboration/workflow
+- `Heart` - Values/culture
+- `Sparkles` - Innovation/creativity
+- `Rocket` - Vision/ambition
+
+---
+
+#### Data Structure
+
+**File:** `/public/data/ben-page.json`
+
+```json
+{
+  "heading": "About Ben",
+  "tagline": "How I ask big questions and who I ask them with.",
+  "sections": [
+    {
+      "heading": "Section Title",
+      "icon": "IconName",
+      "paragraphs": [
+        "Paragraph 1...",
+        "Paragraph 2...",
+        "..."
+      ]
+    }
+  ]
+}
+```
+
+**Key Points:**
+- ✅ Sections display in array order
+- ✅ Icon names must match keys in `iconMap`
+- ✅ Paragraphs array can have unlimited items
+- ✅ All styling is automatic (Shadcn/ui Card components)
+
+---
+
+#### Testing
+
+**1. Development server:**
+```bash
+npm run dev
+# Visit http://localhost:9002/ben
+```
+
+**2. Type checking:**
+```bash
+npm run typecheck
+```
+
+**3. Validate JSON:**
+```bash
+python -m json.tool public/data/ben-page.json
+```
 
 ---
 

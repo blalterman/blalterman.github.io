@@ -41,7 +41,7 @@ Below is a breakdown of the key data files and their role in the content pipelin
 -   **`research-projects.json`**:
     -   **Origin**: Manually curated.
     -   **Purpose**: Defines the title, description, and slug for each featured research project.
-    -   **Usage**: Consumed by the main **Research Page** (`src/app/research/page.tsx`) to create the grid of featured research cards.
+    -   **Usage**: Consumed by the main **Research Page** (`src/app/research/page.tsx`) to create the grid of featured research cards. Cards are displayed in random order (shuffled at build time) to avoid implied priority hierarchy.
 -   **`research-figures.json`**:
     -   **Origin**: Manually curated.
     -   **Purpose**: Maps a research project's slug (e.g., `proton-beams`) to the source path, caption, and alt text for its representative figure.

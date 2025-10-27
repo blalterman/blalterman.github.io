@@ -25,11 +25,15 @@ export default function ResearchPage() {
     const researchProjects = loadJSONData<ResearchProject[]>('research-projects.json');
     const researchPageData = loadJSONData<ResearchPageData>('research-page.json');
 
+    // Shuffle research projects at build time to avoid implied priority hierarchy
+    // Order will be identical for all visitors until next deployment
+    const shuffledProjects = [...researchProjects].sort(() => Math.random() - 0.5);
+
     return (
         <FeaturedResearch
             heading={researchPageData.heading}
             tagline={researchPageData.tagline}
-            researchProjects={researchProjects}
+            researchProjects={shuffledProjects}
         />
     );
 }

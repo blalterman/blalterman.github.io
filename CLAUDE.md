@@ -110,6 +110,8 @@ python scripts/create_research_page.py
 - `generateStaticParams()` reads `research-projects.json`
 - No React/TypeScript files needed to add new pages - **just edit JSON!**
 
+**Research Overview Page:** Research cards on `/research` are displayed in random order (shuffled at build time). This randomization refreshes with each deployment, preventing any implied priority hierarchy.
+
 **Adding a new research page:**
 ```bash
 # Automated (recommended)
