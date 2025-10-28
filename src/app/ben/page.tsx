@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Telescope, Compass } from "lucide-react";
+import { Telescope, Compass, HeartHandshake } from "lucide-react";
 import { loadJSONData } from "@/lib/data-loader";
 import { Metadata } from "next";
 
@@ -23,6 +23,7 @@ interface BenPageData {
 const iconMap = {
     Telescope: Telescope,
     Compass: Compass,
+    HeartHandshake: HeartHandshake,
 };
 
 export default function BenPage() {
