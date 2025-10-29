@@ -75,9 +75,9 @@ export default async function BenSubpage({ params }: { params: Promise<{ slug: s
     const IconComponent = iconMap[section.icon as keyof typeof iconMap];
 
     return (
-        <main className="flex-1 container mx-auto py-16 md:py-24">
+        <main className="flex-1 container mx-auto py-16 md:py-24 px-4">
             {/* Breadcrumb navigation */}
-            <nav className="mb-8 text-sm text-muted-foreground">
+            <nav className="max-w-4xl mx-auto mb-8 text-sm text-muted-foreground">
                 <Link href="/" className="hover:text-foreground transition-colors">
                     Home
                 </Link>
@@ -89,20 +89,22 @@ export default async function BenSubpage({ params }: { params: Promise<{ slug: s
                 <span className="text-foreground">{section.title}</span>
             </nav>
 
-            {/* Page title with icon */}
-            <h1 className="font-headline flex items-center">
-                {IconComponent && <IconComponent className="mr-4 h-10 w-10 text-primary" />}
-                {section.title}
-            </h1>
-
-            {/* Content */}
-            <div className="max-w-4xl mt-8 space-y-6">
-                {section.paragraphs.map((paragraph, index) => (
-                    <p key={index} className="text-lg text-muted-foreground leading-relaxed">
-                        {paragraph}
-                    </p>
-                ))}
-            </div>
+            {/* Content wrapped in Card */}
+            <Card className="max-w-4xl mx-auto shadow-lg">
+                <CardHeader>
+                    <CardTitle className="flex items-center text-3xl md:text-4xl">
+                        {IconComponent && <IconComponent className="mr-4 h-10 w-10 text-primary" />}
+                        {section.title}
+                    </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                    {section.paragraphs.map((paragraph, index) => (
+                        <p key={index} className="text-lg text-muted-foreground leading-relaxed">
+                            {paragraph}
+                        </p>
+                    ))}
+                </CardContent>
+            </Card>
         </main>
     );
 }
