@@ -25,6 +25,10 @@
 
 📘 **See [ARCHITECTURE.md § Technology Stack](./ARCHITECTURE.md#technology-stack) for complete dependencies**
 
+**💡 Navigation Tips for ARCHITECTURE.md:**
+- Use [Reading Paths by Role](./ARCHITECTURE.md#how-to-use-this-document) to jump to relevant sections for your task
+- Use [Quick Reference](./docs/architecture-quick-reference.md) to find specific topics quickly
+
 ---
 
 ## Quick Start Commands

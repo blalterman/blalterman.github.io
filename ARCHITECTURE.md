@@ -25,7 +25,57 @@
 
 ---
 
-## Project Overview
+## How to Use This Document
+
+### Reading Paths by Role
+
+Choose your path based on what you need:
+
+**🎯 Quick Reference** → See [CLAUDE.md](./CLAUDE.md) for AI assistant quick start
+**📋 Quick Lookup** → See [Architecture Quick Reference](./docs/architecture-quick-reference.md) for fast topic finder
+
+**Frontend Developer**
+- Start: [Component Architecture](#component-architecture)
+- Then: [Dynamic Route System](#dynamic-route-system)
+- Reference: [Data Management](#data-management)
+
+**Backend/Automation Engineer**
+- Start: [GitHub Actions Workflows](#github-actions-workflows)
+- Then: [Python Scripts](#python-scripts)
+- Reference: [Data Flow Architecture](#data-flow-architecture)
+
+**Data Engineer/Content Manager**
+- Start: [Data Management](#data-management)
+- Then: [Common Tasks](#common-tasks)
+- Reference: [Python Scripts](#python-scripts)
+
+**DevOps/Site Reliability**
+- Start: [Deployment Process](#deployment-process)
+- Then: [Troubleshooting](#troubleshooting)
+- Reference: [Configuration Files](#configuration-files)
+
+**New Developer (First Time)**
+1. [Project Overview](#project-overview)
+2. [Technology Stack](#technology-stack)
+3. [Directory Structure](#directory-structure)
+4. [Development Workflow](#development-workflow)
+5. [Common Tasks](#common-tasks)
+
+**AI Assistant (Full Context)**
+- Read entire document for comprehensive understanding
+
+---
+---
+
+## 🏗️ Project Overview
+
+> **Purpose:** High-level introduction to the project, its goals, and key features
+>
+> **When to use this section:** First-time orientation, understanding project scope
+>
+> **Related Sections:** [Technology Stack](#technology-stack) • [Development Workflow](#development-workflow)
+
+---
 
 This is a **statically-generated academic portfolio website** for B. L. Alterman, a Research Astrophysicist at NASA Goddard Space Flight Center. The site showcases research, publications, and professional experience with automated data pipelines that pull live citation metrics from NASA's Astrophysics Data System (ADS).
 
@@ -39,8 +89,17 @@ This is a **statically-generated academic portfolio website** for B. L. Alterman
 - **Zero-Maintenance Content:** Add research pages by editing JSON files only
 
 ---
+---
 
-## Technology Stack
+## 🛠️ Technology Stack
+
+> **Purpose:** Complete reference of all technologies, frameworks, and dependencies used in the project
+>
+> **When to use this section:** Understanding tech choices, checking versions, adding new dependencies
+>
+> **Related Sections:** [Configuration Files](#configuration-files) • [Development Workflow](#development-workflow)
+
+---
 
 ### Frontend
 
@@ -72,9 +131,20 @@ This is a **statically-generated academic portfolio website** for B. L. Alterman
 - **Development Server:** Port 9002
 - **Static Export:** `output: 'export'` for GitHub Pages compatibility
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Directory Structure
+## 📁 Directory Structure
+
+> **Purpose:** Visual map of the entire project file and folder organization
+>
+> **When to use this section:** Finding where files live, understanding project layout
+>
+> **Related Sections:** [Component Architecture](#component-architecture) • [Data Management](#data-management) • [Python Scripts](#python-scripts)
+
+---
 
 ```
 blalterman.github.io/
@@ -191,9 +261,20 @@ blalterman.github.io/
     └── .git/                         # Git repository
 ```
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Data Flow Architecture
+## 📊 Data Flow Architecture
+
+> **Purpose:** Understand how data moves from NASA ADS API through scripts to the deployed site
+>
+> **When to use this section:** Debugging data pipelines, understanding automation flow, adding new data sources
+>
+> **Related Sections:** [GitHub Actions Workflows](#github-actions-workflows) • [Python Scripts](#python-scripts) • [Data Management](#data-management)
+
+---
 
 ### High-Level Flow
 
@@ -287,9 +368,27 @@ blalterman.github.io/
 - `education.json` & `positions.json` - Academic and professional history
 - `skills.json` - Technical skills data
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## GitHub Actions Workflows
+## ⚙️ GitHub Actions Workflows
+
+> **Purpose:** Complete reference for all automated CI/CD workflows
+>
+> **When to use this section:** Debugging automation failures, understanding update schedules, modifying workflows
+>
+> **Related Sections:** [Data Flow Architecture](#data-flow-architecture) • [Python Scripts](#python-scripts) • [Deployment Process](#deployment-process)
+>
+> **Quick Links:**
+> - [Update Publications](#1-update-ads-publications)
+> - [Update Metrics](#2-update-ads-metrics)
+> - [Update Citations](#3-update-annual-citations)
+> - [Convert PDFs](#4-convert-pdfs-to-svg)
+> - [Generate Figure Data](#5-generate-figure-data)
+
+---
 
 ### 1. Update ADS Publications
 
@@ -453,9 +552,28 @@ blalterman.github.io/
 ]
 ```
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Python Scripts
+## 🐍 Python Scripts
+
+> **Purpose:** Detailed reference for all automation scripts in `/scripts/` directory
+>
+> **When to use this section:** Adding new data fetching automation, understanding how figures are processed, debugging data pipeline issues, creating new research pages programmatically
+>
+> **Related Sections:** [GitHub Actions Workflows](#github-actions-workflows) • [Data Management](#data-management) • [Common Tasks](#common-tasks)
+>
+> **Quick Links:**
+> - [Shared Utilities](#shared-utilities-utilspy)
+> - [Publications Fetcher](#1-fetch_ads_publications_to_data_dirpy)
+> - [Metrics Fetcher](#2-fetch_ads_metrics_to_data_dirpy)
+> - [Citations Fetcher](#3-fetch_ads_citations_by_yearpy)
+> - [Figure Data Generator](#4-generate_figure_datapy)
+> - [Research Page Creator](#5-create_research_pagepy)
+
+---
 
 All scripts are located in the `/scripts/` directory and use shared utilities from `utils.py`.
 
@@ -635,9 +753,20 @@ python scripts/test_create_research_page.py
 
 **Process:** Looks up DOI to find licensing info
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Dynamic Route System
+## 🔀 Dynamic Route System
+
+> **Purpose:** Understand how single React components generate multiple static pages from JSON data
+>
+> **When to use this section:** Adding new research/ben/publication pages, understanding page generation, modifying page templates
+>
+> **Related Sections:** [Data Management](#data-management) • [Component Architecture](#component-architecture) • [Common Tasks](#common-tasks)
+
+---
 
 ### Overview
 
@@ -764,9 +893,20 @@ git push
 
 **No React/TypeScript files need to be created!**
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Component Architecture
+## 🧩 Component Architecture
+
+> **Purpose:** Complete reference for React components, page structure, and utility functions
+>
+> **When to use this section:** Building new UI components, understanding page layouts, adding utilities
+>
+> **Related Sections:** [Dynamic Route System](#dynamic-route-system) • [Technology Stack](#technology-stack) • [Configuration Files](#configuration-files)
+
+---
 
 ### Page Structure (App Router)
 
@@ -1023,9 +1163,43 @@ const publishedProjects = filterPublishedProjects(projects);
 - `/src/app/research/page.tsx` - Filter cards on research overview
 - `/src/app/research/[slug]/page.tsx` - Filter static params generation
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Data Management
+## 💾 Data Management
+
+> **Purpose:** Complete reference for all JSON data files and their schemas
+>
+> **When to use this section:** Understanding data file formats, adding new data, debugging data issues, creating content
+>
+> **Related Sections:** [Data Flow Architecture](#data-flow-architecture) • [Python Scripts](#python-scripts) • [Common Tasks](#common-tasks)
+
+---
+
+### In This Section
+
+**Automated Data Files (Generated by GitHub Actions):**
+- [ads_publications.json](#ads_publicationsjson-3600-lines) - Publications from NASA ADS
+- [ads_metrics.json](#ads_metricsjson-679-lines) - Citation metrics
+- [citations_by_year.json](#citations_by_yearjson-43-lines) - Annual citations
+- [research-figures-with-captions.json](#research-figures-with-captionsjson-82-lines) - Combined figure data
+
+**Manual Data Files (Curated):**
+- [research-projects.json](#research-projectsjson-65-lines) - Featured research topics
+- [page-figure-mappings.json](#page-figure-mappingsjson-11-lines) - Figure assignments
+- [research-paragraphs.json](#research-paragraphsjson-12-lines) - Detailed descriptions
+- [figure-metadata.json](#figure-metadatajson) - Figure database
+- [ben-page.json](#ben-pagejson-40-lines) - Ben page structure
+- [publications-categories.json](#publications-categoriesjson-50-lines) - Publication categories
+- [education.json](#educationjson-16-lines) - Academic credentials
+- [positions.json](#positionsjson-21-lines) - Employment history
+- [skills.json](#skillsjson-18-lines) - Technical skills
+
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 
 ### Automated Data Files
 
@@ -1468,9 +1642,20 @@ const publishedProjects = filterPublishedProjects(projects);
 - `eprint` → Pre-Prints
 - `phdthesis` → PhD Thesis
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Configuration Files
+## ⚙️ Configuration Files
+
+> **Purpose:** Complete reference for all configuration files and their settings
+>
+> **When to use this section:** Modifying build settings, updating dependencies, configuring tools
+>
+> **Related Sections:** [Technology Stack](#technology-stack) • [Development Workflow](#development-workflow) • [Deployment Process](#deployment-process)
+
+---
 
 ### `package.json`
 
@@ -1656,9 +1841,20 @@ npx shadcn@latest add button
 # Component installed to: src/components/ui/button.tsx
 ```
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Development Workflow
+## 👨‍💻 Development Workflow
+
+> **Purpose:** Step-by-step guide for local development, testing, and building
+>
+> **When to use this section:** Setting up dev environment, running tests, building for production
+>
+> **Related Sections:** [Configuration Files](#configuration-files) • [Common Tasks](#common-tasks) • [Troubleshooting](#troubleshooting)
+
+---
 
 ### Local Development
 
@@ -1860,9 +2056,20 @@ npm run start
 # Or serve the /out directory with any static server
 ```
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Deployment Process
+## 🚀 Deployment Process
+
+> **Purpose:** Understand automated and manual deployment to GitHub Pages
+>
+> **When to use this section:** Deploying changes, debugging deployment issues, understanding CI/CD flow
+>
+> **Related Sections:** [GitHub Actions Workflows](#github-actions-workflows) • [Configuration Files](#configuration-files) • [Troubleshooting](#troubleshooting)
+
+---
 
 ### Automated Deployment
 
@@ -1948,9 +2155,20 @@ Visit https://blalterman.github.io
               └────────────────┘
 ```
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Common Tasks
+## ✅ Common Tasks
+
+> **Purpose:** Step-by-step guides for frequently performed operations
+>
+> **When to use this section:** Adding content, updating information, performing routine maintenance
+>
+> **Related Sections:** [Data Management](#data-management) • [Development Workflow](#development-workflow) • [Troubleshooting](#troubleshooting)
+
+---
 
 ### Task: Add a New Publication Manually
 
@@ -2036,6 +2254,8 @@ export const metadata: Metadata = {
   }
 }
 ```
+
+[↑ Back to Table of Contents](#table-of-contents)
 
 ---
 
@@ -2286,9 +2506,20 @@ npm run typecheck
 python -m json.tool public/data/ben-page.json
 ```
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Troubleshooting
+## 🔧 Troubleshooting
+
+> **Purpose:** Solutions for common problems and debugging strategies
+>
+> **When to use this section:** Debugging issues, fixing errors, understanding failures
+>
+> **Related Sections:** [Development Workflow](#development-workflow) • [GitHub Actions Workflows](#github-actions-workflows) • [Common Tasks](#common-tasks)
+
+---
 
 ### Issue: Publications Not Updating
 
@@ -2375,6 +2606,8 @@ npm run typecheck
 # Fix errors or update next.config.ts to ignore
 ```
 
+[↑ Back to Table of Contents](#table-of-contents)
+
 ---
 
 ### Issue: GitHub Actions Failing
@@ -2391,9 +2624,20 @@ npm run typecheck
 2. Click on failed workflow run
 3. Expand failed step to see error details
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Best Practices
+## ⭐ Best Practices
+
+> **Purpose:** Guidelines for maintaining code quality, consistency, and project health
+>
+> **When to use this section:** Establishing conventions, reviewing code, maintaining standards
+>
+> **Related Sections:** [Development Workflow](#development-workflow) • [Component Architecture](#component-architecture)
+
+---
 
 ### Code Organization
 
@@ -2500,9 +2744,18 @@ This project is developed with assistance from AI tools. Follow these guidelines
 - [Prompting Guidelines](./docs/AGENTS.md#prompting-guidelines) - Best practices for effective AI collaboration
 - [Agent Use Cases](./docs/AGENTS.md#agent-use-cases) - Common AI-assisted tasks
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Future Enhancements
+## 🔮 Future Enhancements
+
+> **Purpose:** Planned features and potential improvements for future development
+>
+> **When to use this section:** Planning new features, understanding roadmap, proposing improvements
+
+---
 
 ### Potential Improvements
 
@@ -2526,9 +2779,18 @@ This project is developed with assistance from AI tools. Follow these guidelines
 
 10. **Research Timeline:** Interactive timeline of research projects
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Resources
+## 📚 Resources
+
+> **Purpose:** Links to external documentation, tools, and community resources
+>
+> **When to use this section:** Learning about technologies, finding documentation, getting help
+
+---
 
 ### Project Documentation
 
@@ -2559,9 +2821,27 @@ This project is developed with assistance from AI tools. Follow these guidelines
 - **Tailwind Discord:** https://tailwindcss.com/discord
 - **Shadcn/ui GitHub:** https://github.com/shadcn/ui
 
+[↑ Back to Table of Contents](#table-of-contents)
+
+---
 ---
 
-## Changelog
+## 📝 Changelog
+
+> **Purpose:** Track major changes and updates to this documentation
+>
+> **When to use this section:** Understanding recent changes, tracking documentation evolution
+
+---
+
+### 2025-10-29
+- Added "How to Use This Document" section with role-based reading paths
+- Added visual separators (icons and horizontal rules) to all 18 major sections
+- Added purpose blocks to all major sections explaining when to use each section
+- Added "Jump to Top" navigation links throughout document (~15 locations)
+- Created Architecture Quick Reference companion file for fast topic lookup
+- Added navigation tips in CLAUDE.md for using ARCHITECTURE.md more effectively
+- Improved document navigation and reduced cognitive load while keeping unified structure
 
 ### 2025-10-25
 - Added cross-references to AGENTS.md throughout document
