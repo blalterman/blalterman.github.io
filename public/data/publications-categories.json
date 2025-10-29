@@ -1,0 +1,62 @@
+{
+  "heading": "Publications",
+  "tagline": "Peer-reviewed research, datasets, and conference contributions",
+  "categories": [
+    {
+      "title": "PhD Thesis",
+      "slug": "phd-thesis",
+      "icon": "GraduationCap",
+      "description": "Doctoral dissertation",
+      "publicationType": "phdthesis",
+      "showCitations": false
+    },
+    {
+      "title": "Refereed Publications",
+      "slug": "refereed",
+      "icon": "BookOpen",
+      "description": "Peer-reviewed journal articles",
+      "publicationType": "article",
+      "showCitations": true
+    },
+    {
+      "title": "Datasets",
+      "slug": "datasets",
+      "icon": "Database",
+      "description": "Published research datasets",
+      "publicationType": "dataset",
+      "showCitations": false
+    },
+    {
+      "title": "Conference Proceedings",
+      "slug": "proceedings",
+      "icon": "FileText",
+      "description": "Published conference papers",
+      "publicationType": "inproceedings",
+      "showCitations": false
+    },
+    {
+      "title": "Conference Presentations",
+      "slug": "presentations",
+      "icon": "Presentation",
+      "description": "Conference talks and poster presentations",
+      "publicationType": "abstract",
+      "showCitations": false
+    },
+    {
+      "title": "White Papers",
+      "slug": "white-papers",
+      "icon": "ScrollText",
+      "description": "Technical reports and white papers",
+      "publicationType": "techreport",
+      "showCitations": false
+    },
+    {
+      "title": "Pre-Prints",
+      "slug": "preprints",
+      "icon": "FileCode",
+      "description": "Manuscripts submitted for publication",
+      "publicationType": "eprint",
+      "showCitations": false
+    }
+  ]
+}

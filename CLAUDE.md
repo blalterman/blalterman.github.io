@@ -97,34 +97,40 @@ python scripts/create_research_page.py
 - `research-figures-with-captions.json`
 
 **Manual Data** (curated):
-- `research-projects.json`, `page-figure-mappings.json`, `research-paragraphs.json`
-- `education.json`, `positions.json`, `skills.json`
+- **Research:** `research-projects.json`, `page-figure-mappings.json`, `research-paragraphs.json`
+- **Ben Page:** `ben-page.json`
+- **Publications:** `publications-categories.json`
+- **Professional:** `education.json`, `positions.json`, `skills.json`
+- **Page Overviews:** `research-page.json`, `publications-page.json`, `experience-page.json`, `biography-homepage.json`
 
 📘 **See [ARCHITECTURE.md § Data Management](./ARCHITECTURE.md#data-management) for complete data structure documentation**
 
 ### 2. Dynamic Route System ⚡ **Most Important!**
 
-**Single React component generates ALL research pages from JSON data.**
+**Single React component generates multiple static pages from JSON data** - this pattern is used across Research, Ben, and Publications pages.
 
+**Research Pages:**
 - File: `/src/app/research/[slug]/page.tsx`
 - `generateStaticParams()` reads `research-projects.json`
-- No React/TypeScript files needed to add new pages - **just edit JSON!**
+- **Research Overview:** Cards displayed in random order (shuffled at build time)
+- **Adding new:** `python scripts/create_research_page.py` OR update 3 JSON files
 
-**Research Overview Page:** Research cards on `/research` are displayed in random order (shuffled at build time). This randomization refreshes with each deployment, preventing any implied priority hierarchy.
+**Ben Pages:**
+- Overview: `/src/app/ben/page.tsx` - card grid linking to subpages
+- Subpages: `/src/app/ben/[slug]/page.tsx` - individual topic pages
+- `generateStaticParams()` reads `ben-page.json`
+- **Adding new:** Edit `ben-page.json` (add section with slug, excerpt, paragraphs)
 
-**Adding a new research page:**
-```bash
-# Automated (recommended)
-python scripts/create_research_page.py
+**Publications Pages:**
+- Overview: `/src/app/publications/page.tsx` - metrics + category cards
+- Subpages: `/src/app/publications/[category]/page.tsx` - publication tables
+- `generateStaticParams()` reads `publications-categories.json`
+- **Adding new:** Edit `publications-categories.json` (rarely needed)
 
-# Manual: Update 3 JSON files
-# 1. research-projects.json
-# 2. page-figure-mappings.json
-# 3. research-paragraphs.json
-```
+**Key Pattern:** All pages use **card-based overview** + **dynamic subpages** for consistent navigation.
 
 **Published Field:** All pages default to published (`true`). To create draft pages visible only in development:
-- Add `"published": false` to `research-projects.json`
+- Add `"published": false` to respective JSON file
 - Pages remain accessible at `npm run dev` but won't build in production
 - See ARCHITECTURE.md § Common Tasks for complete guide
 

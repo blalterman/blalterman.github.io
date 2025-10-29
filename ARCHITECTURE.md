@@ -138,6 +138,12 @@ blalterman.github.io/
 │   │   ├── research-paragraphs.json        # MANUAL: Detailed descriptions
 │   │   ├── page-figure-mappings.json       # MANUAL: Maps pages to figures
 │   │   ├── figure-metadata.json            # MANUAL: Figure database
+│   │   ├── ben-page.json                   # MANUAL: Ben page structure & content
+│   │   ├── publications-categories.json    # MANUAL: Publication category definitions
+│   │   ├── research-page.json              # MANUAL: Research overview content
+│   │   ├── publications-page.json          # MANUAL: Publications overview content
+│   │   ├── experience-page.json            # MANUAL: Experience overview content
+│   │   ├── biography-homepage.json         # MANUAL: Homepage biography content
 │   │   ├── education.json                  # MANUAL: Education history
 │   │   ├── positions.json                  # MANUAL: Professional positions
 │   │   └── skills.json                     # MANUAL: Technical skills
@@ -788,11 +794,21 @@ git push
 │   └── layout.tsx
 │
 ├── publications/
-│   ├── page.tsx               # Publications list (/publications)
+│   ├── page.tsx               # Publications overview page (/publications)
 │   │   ├── Displays ads_metrics.json (h-index, citations)
-│   │   ├── Tables for different publication types
-│   │   ├── Filtering by publication type
-│   │   └── Tooltip icons for data sources
+│   │   ├── Loads publications-categories.json for card display
+│   │   ├── Card grid layout for publication categories
+│   │   ├── Conditional rendering (only shows categories with publications)
+│   │   ├── Links to /publications/[category] subpages
+│   │   └── Count badges on each card
+│   │
+│   ├── [category]/
+│   │   └── page.tsx           # Dynamic publication category pages
+│   │       ├── generateStaticParams() from publications-categories.json
+│   │       ├── Filters publications by publicationType
+│   │       ├── Displays full publication table for category
+│   │       ├── Conditional Citations column (showCitations flag)
+│   │       └── Breadcrumb navigation
 │   │
 │   ├── loading.tsx            # Loading state component
 │   └── layout.tsx
@@ -804,11 +820,21 @@ git push
 │   └── layout.tsx
 │
 ├── ben/
-│   ├── page.tsx               # Personal philosophy page (/ben)
+│   ├── page.tsx               # Ben overview page (/ben) - card grid
 │   │   ├── Loads ben-page.json (heading, tagline, sections array)
-│   │   ├── Dynamic card generation from sections array
-│   │   ├── Icon mapping with Lucide React (Telescope, Compass)
-│   │   └── Shadcn/ui Card components for each section
+│   │   ├── Filters published sections (environment-aware)
+│   │   ├── Card grid layout (responsive 1/2/3 columns)
+│   │   ├── Icon mapping with Lucide React (Telescope, Compass, HeartHandshake)
+│   │   ├── Displays title, icon, excerpt on each card
+│   │   └── Links to /ben/[slug] subpages
+│   │
+│   ├── [slug]/
+│   │   └── page.tsx           # Dynamic Ben subpages
+│   │       ├── generateStaticParams() from ben-page.json
+│   │       ├── Finds section by slug
+│   │       ├── Renders title, icon, full paragraphs
+│   │       ├── Environment-aware publishing (dev shows all, production filters)
+│   │       └── Breadcrumb navigation
 │   │
 │   └── layout.tsx
 │
@@ -1342,6 +1368,105 @@ const publishedProjects = filterPublishedProjects(projects);
 ```
 
 **Used By:** Future resume/CV page
+
+---
+
+#### `ben-page.json` (~40 lines)
+
+**Purpose:** Defines Ben page overview structure and subpage content
+
+**Type:** Manual (curated)
+
+**Structure:**
+```json
+{
+  "heading": "About Ben",
+  "tagline": "How I ask big questions and who I ask them with.",
+  "sections": [
+    {
+      "title": "Research Vision",
+      "slug": "research-vision",
+      "icon": "Telescope",
+      "excerpt": "I study the Sun and solar wind to discover what it means for a Sun to create a habitable zone and to power life on Earth.",
+      "paragraphs": ["...", "..."],
+      "published": true
+    }
+  ]
+}
+```
+
+**Schema:**
+- `heading` (string): Page title
+- `tagline` (string): Page subtitle
+- `sections` (array):
+  - `title` (string): Section title
+  - `slug` (string): URL-safe identifier for subpage route
+  - `icon` (string): Lucide React icon name (e.g., "Telescope", "Compass", "HeartHandshake")
+  - `excerpt` (string): Short description (~100 chars) for card preview on overview page
+  - `paragraphs` (string[]): Full content paragraphs for subpage
+  - `published` (boolean, optional): Whether to show in production (defaults to true)
+
+**Used By:**
+- Ben overview page (`/src/app/ben/page.tsx`)
+- Ben subpages (`/src/app/ben/[slug]/page.tsx`)
+
+**Environment-Aware Publishing:**
+- Development mode: Shows all sections regardless of `published` field
+- Production mode: Only generates routes for sections with `published: true`
+
+---
+
+#### `publications-categories.json` (~50 lines)
+
+**Purpose:** Defines publication categories for overview cards and subpage routing
+
+**Type:** Manual (curated)
+
+**Structure:**
+```json
+{
+  "heading": "Publications",
+  "tagline": "Peer-reviewed research, datasets, and conference contributions",
+  "categories": [
+    {
+      "title": "Refereed Publications",
+      "slug": "refereed",
+      "icon": "BookOpen",
+      "description": "Peer-reviewed journal articles",
+      "publicationType": "article",
+      "showCitations": true
+    }
+  ]
+}
+```
+
+**Schema:**
+- `heading` (string): Page title
+- `tagline` (string): Page subtitle
+- `categories` (array):
+  - `title` (string): Display name for category
+  - `slug` (string): URL-safe identifier for subpage route
+  - `icon` (string): Lucide React icon name (e.g., "BookOpen", "Database", "FileText")
+  - `description` (string): Short description for card
+  - `publicationType` (string): ADS publication type to filter (`article`, `dataset`, `inproceedings`, `abstract`, `techreport`, `eprint`, `phdthesis`)
+  - `showCitations` (boolean): Whether to display citations column in table
+
+**Used By:**
+- Publications overview page (`/src/app/publications/page.tsx`)
+- Publications category subpages (`/src/app/publications/[category]/page.tsx`)
+
+**Conditional Rendering:**
+- Categories with zero publications are automatically hidden from overview cards
+- Only generates static routes for categories that have publications
+
+**Publication Type Mapping:**
+- `article` → Refereed Publications
+- `dataset` → Datasets
+- `inproceedings` → Conference Proceedings
+- `abstract` → Conference Presentations
+- `techreport` → White Papers
+- `eprint` → Pre-Prints
+- `phdthesis` → PhD Thesis
 
 ---
 
