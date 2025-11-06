@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Telescope, Compass, HeartHandshake } from "lucide-react";
+import { Telescope, Compass, HeartHandshake, GitBranch, Wand2 } from "lucide-react";
 import { loadJSONData } from "@/lib/data-loader";
 import { filterPublishedProjects } from "@/lib/research-utils";
 import { Metadata, ResolvingMetadata } from "next";
@@ -29,6 +29,8 @@ const iconMap = {
     Telescope: Telescope,
     Compass: Compass,
     HeartHandshake: HeartHandshake,
+    GitBranch: GitBranch,
+    Wand2: Wand2,
 };
 
 export async function generateStaticParams() {

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Telescope, Compass, HeartHandshake, ArrowRight } from "lucide-react";
+import { Telescope, Compass, HeartHandshake, GitBranch, Wand2, ArrowRight } from "lucide-react";
 import { loadJSONData } from "@/lib/data-loader";
 import { filterPublishedProjects } from "@/lib/research-utils";
 import { Metadata } from "next";
@@ -30,6 +30,8 @@ const iconMap = {
     Telescope: Telescope,
     Compass: Compass,
     HeartHandshake: HeartHandshake,
+    GitBranch: GitBranch,
+    Wand2: Wand2,
 };
 
 export default function BenPage() {
