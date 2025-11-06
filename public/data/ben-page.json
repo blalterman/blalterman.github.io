@@ -48,7 +48,7 @@
         "I separate evolving tools from time-stamped research. Libraries grow and improve over time as understanding deepens and methods mature. Published results must remain reproducible indefinitely, frozen at a specific moment so others can verify what I claimed when I claimed it. This separation honors both needs: continuous improvement in computational tools alongside permanent reproducibility in published work. I automate verification through tests and documentation builds that run continuously. Broken examples fail immediately. Quality checking happens with every change, not periodically before publication. This discipline transforms reproducibility from an aspirational goal into a routine practice—effortless rather than heroic. When verification is automatic, I can focus effort on discovery rather than maintenance. The boring parts stay boring, and the science stays reproducible.",
         "Open science is collaborative science. When tools and methods flow freely between researchers, the community advances faster than any individual could alone. Early-career scientists gain practical skills by reading production code, not just idealized examples. Researchers across institutions build directly on shared work without reinventing solutions. This approach distributes expertise more equitably and accelerates the pace of discovery. When methods are open, science advances through shared understanding rather than isolated expertise. Trust becomes communal rather than individual. That is why I share openly: because discovery serves humanity best when knowledge flows freely."
       ],
-      "published": false
+      "published": true
     },
     {
       "title": "Generative AI",
@@ -60,7 +60,7 @@
         "I place AI where it adds leverage: after intent and requirements are set; during documentation, refactoring, and clarity passes; and as a second set of eyes on completeness—never as a substitute for interpretation, architecture, or deriving requirements from physical models. I disclose assistance whenever AI materially shapes text or code, and I avoid confidential or export-controlled inputs. Because science must be reproducible, AI-assisted steps must be reproducible. I document what tools I used, how I applied them, and how I validated outputs. Generative work can be broad—scaffolds, refactors, features, data transformations—but lands in targetted, reviewable increments behind tests and code review. This discipline maintains scientific integrity while capturing AI's strengths.",
         "To make AI effective and safe, I engineer the system around it. Clean repository practices—tests, continuous integration, version control, and clear documentation—scaffold changes that are easy to review and reproduce. I work requirements-first and link each requirement to reviewable commits. Clear expectations keep reviews focused on artifacts and criteria, not people, building shared ownership and trust. This approach places responsibility where it belongs: on human judgment, team culture, and the practices we build together. When wielded deliberately and reviewed rigorously, AI serves discovery without compromising the integrity that makes science communal."
       ],
-      "published": false
+      "published": true
     }
   ]
 }
