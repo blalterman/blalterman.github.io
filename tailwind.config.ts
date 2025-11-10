@@ -13,6 +13,14 @@ export default {
         sans: ['Inter', 'sans-serif'],
         code: ['monospace'],
       },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          md: '1.5rem',
+          lg: '2rem',
+        },
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
