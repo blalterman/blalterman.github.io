@@ -61,9 +61,6 @@ export default async function ResearchPage({ params }: { params: Promise<{ slug:
                 className="text-lg text-muted-foreground mt-4 [&_a]:text-primary [&_a:hover]:underline"
                 dangerouslySetInnerHTML={{ __html: renderMathInText(introductoryParagraph) }}
             />
-            <p className="text-sm text-muted-foreground mt-4">
-                Summary generated with ChatGPT based on my first-author publications for clarity and accessibility.
-            </p>
             {figure && <ResearchFigure src={figure.src} alt={figure.alt} caption={figure.caption} />}
         </main>
     );
