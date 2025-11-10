@@ -12,6 +12,7 @@ import { FirebaseIcon } from './icons/firebase-icon';
 import { GithubMarkIcon } from './icons/github-mark-icon';
 import { LinkedinIcon } from './icons/linkedin-icon';
 import { ClaudeIcon } from './icons/claude-icon';
+import { ChatGptIcon } from './icons/chatgpt-icon';
 
 export function Contact() {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -70,7 +71,12 @@ export function Contact() {
                 Maintained with
                 <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" className="ml-2 flex items-center hover:text-foreground transition-colors">
                     <ClaudeIcon className="h-5 w-5 mr-1" />
-                    Claude.
+                    Claude
+                </a>
+                <span className="mx-1">and</span>
+                <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-foreground transition-colors">
+                    <ChatGptIcon className="h-5 w-5 mr-1" />
+                    ChatGPT.
                 </a>
             </span>
             <span className="flex items-center">
