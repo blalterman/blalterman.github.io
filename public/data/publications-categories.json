@@ -54,7 +54,7 @@
       "title": "Pre-Prints",
       "slug": "preprints",
       "icon": "FileCode",
-      "description": "Manuscripts submitted for publication",
+      "description": "Manuscripts submitted or accepted for publication",
       "publicationType": "eprint",
       "showCitations": false
     }
