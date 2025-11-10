@@ -59,7 +59,7 @@ export function Contact() {
         <p className="text-sm text-muted-foreground">
           &copy; {currentYear} B. L. Alterman. All Rights Reserved.
         </p>
-        <div className="flex justify-center items-center space-x-4 mt-4 text-sm text-muted-foreground">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 mt-4 text-sm text-muted-foreground">
             <span className="flex items-center">
                 Built with
                 <a href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer" className="ml-2 flex items-center hover:text-foreground transition-colors">
