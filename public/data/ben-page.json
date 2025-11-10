@@ -41,7 +41,7 @@
     {
       "title": "Open Science",
       "slug": "open-science",
-      "icon": "GitBranch",
+      "icon": "Share2",
       "excerpt": "I practice Open Science by developing and sharing computational tools, archiving methods with results, and contributing to the broader scientific software ecosystem.",
       "paragraphs": [
         "Open Science is both a practical necessity and an ethical commitment. My conclusions are only as trustworthy as the methods behind them. I design software and documentation so others can validate, extend, and teach with them. When methods are visible, validation becomes possible. This transparency transforms scientific authority from persuasion to demonstration. Trust is earned through verifiable reproducibility, not through credentials or reputation alone. If you can read my methods, you can rebuild my results. If you can rebuild my results, you can assess my conclusions independently. This principle grounds every technical choice I make: openness is not an afterthought added for compliance, but the foundation that makes rigorous science possible.",
@@ -53,7 +53,7 @@
     {
       "title": "Generative AI",
       "slug": "generative-ai",
-      "icon": "Wand2",
+      "icon": "Wrench",
       "excerpt": "I approach generative AI as a powerful tool that requires deliberate choices, thoughtful application, and clear accountability in scientific research.",
       "paragraphs": [
         "Generative AI is a tool—powerful and versatile, but always an instrument under human direction and accountability. This framing is not semantic; it is ethical. When we treat AI as a tool rather than an autonomous agent, we maintain clear lines of responsibility: the person using the tool bears accountability for the outcomes it produces. I think best in dialogue. Speaking out loud or typing slows me enough to clarify vision, choose deliberately, and set specific goals. A conversation with a model sharpens requirements and helps me articulate what I need before delegating execution. I retain authorship and final review over every claim, figure, and line of code. The tool does not bear responsibility—I do.",
