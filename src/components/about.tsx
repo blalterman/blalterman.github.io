@@ -36,10 +36,10 @@ export function About({ biographyData }: AboutProps) {
             </p>
           ))}
           <p className="text-lg text-muted-foreground mt-4">
-            Want to learn more about my research vision and team philosophy?{' '}
+            Explore my research vision, leadership philosophy, and approach to building scientific systems that drive discovery{' '}
             <Link href="/ben" className="text-primary hover:underline font-medium">
-              Read my full story
-            </Link>.
+              →
+            </Link>
           </p>
         </div>
       </div>
