@@ -37,15 +37,33 @@ For hiring committees evaluating you for lab director, institutional leadership,
 
 ### Narrative Arc Structure
 
-The Ben pages follow a **zoom-in structure** with nested relationships:
+The homepage and Ben pages follow a **nested zoom-in structure**:
 
-1. **Research Vision** (Cosmic Scale) → Why big questions exist
+0. **Homepage** (Existential Scale) → Why humanity should care (cosmic stakes, universal accessibility)
+1. **Research Vision** (Scientific Scale) → Why big questions exist and require collaboration
 2. **Team Ethos** (Organizational Scale) → How teams tackle big questions
 3. **Mentorship Philosophy** (Individual Scale) → How individuals grow within teams
 4. **Open Science** (Community Scale) → How teams share with broader community
 5. **Generative AI** (Tool Scale) → How modern tools fit within ethical frameworks
 
-This creates a **fractal structure** where principles at one scale mirror principles at others—collaboration appears at cosmic (research questions), organizational (team culture), and community (open science) levels.
+This creates a **fractal structure** where principles at one scale mirror principles at others—collaboration appears at existential (homepage), cosmic (research questions), organizational (team culture), and community (open science) levels.
+
+### Homepage's Role in Professional Positioning
+
+**Current Content:**
+- Heading: "Academic. Researcher. Explorer."
+- Opens with "Are we alone?" and Proxima Centauri example (6600 years, 200 generations)
+- Establishes impossibility of direct exploration, necessity of studying our Sun
+
+**Audience Optimization:**
+- ✅ **Strongest for:** Public engagement, student recruitment, broad accessibility
+- ⚠️ **Adequate for:** Potential collaborators (inspiring but vague about what collaboration entails)
+- ❌ **Weakest for:** Hiring committees, funding agencies evaluating leadership capability
+
+**Why this matters for career positioning:**
+The homepage is optimized for **inspirational engagement** rather than **professional evaluation**. For visitors assessing you for senior leadership roles, the homepage doesn't signal executive capabilities—they must navigate deeper into Ben pages to discover leadership philosophy, and even those pages (per analysis below) need strengthening for senior roles.
+
+**Strategic implication:** The homepage establishes you as a visionary thinker and educator but doesn't preview research leader, strategist, or organizational executive. This is appropriate if your primary goal is broad accessibility, but creates friction for professional audiences who must dig deeper to evaluate leadership fit.
 
 ### Individual Page Analyses
 
