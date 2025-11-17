@@ -175,7 +175,7 @@
     "year": "2020-05-00",
     "journal": "The Astrophysical Journal Supplement Series",
     "publication_type": "article",
-    "citations": 103,
+    "citations": 104,
     "url": "https://dx.doi.org/10.3847/1538-4365/ab86af"
   },
   {
@@ -235,6 +235,19 @@
     "url": "https://dx.doi.org/10.3847/2041-8213/adb48e"
   },
   {
+    "bibcode": "2025ApJ...984L..64A",
+    "title": "Characterizing the Impact of Alfv\u00e9n Wave Forcing in Interplanetary Space on the Distribution of Near-Earth Solar Wind Speeds",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2025-05-00",
+    "journal": "The Astrophysical Journal Letters",
+    "publication_type": "article",
+    "citations": 4,
+    "url": "https://dx.doi.org/10.3847/2041-8213/add0a6"
+  },
+  {
     "bibcode": "2025A&A...694A.265A",
     "title": "The transition from slow to fast wind as observed in composition observations",
     "authors": [
@@ -271,7 +284,7 @@
     "year": "2023-07-00",
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
-    "citations": 16,
+    "citations": 17,
     "url": "https://dx.doi.org/10.1051/0004-6361/202345951"
   },
   {
@@ -308,19 +321,6 @@
     "url": "https://dx.doi.org/10.1051/0004-6361/202554299"
   },
   {
-    "bibcode": "2025ApJ...984L..64A",
-    "title": "Characterizing the Impact of Alfv\u00e9n Wave Forcing in Interplanetary Space on the Distribution of Near-Earth Solar Wind Speeds",
-    "authors": [
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2025-05-00",
-    "journal": "The Astrophysical Journal Letters",
-    "publication_type": "article",
-    "citations": 4,
-    "url": "https://dx.doi.org/10.3847/2041-8213/add0a6"
-  },
-  {
     "bibcode": "2022ApJ...924..112V",
     "title": "Strong Perpendicular Velocity-space Diffusion in Proton Beams Observed by Parker Solar Probe",
     "authors": [
@@ -348,7 +348,7 @@
     "year": "2022-01-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
-    "citations": 45,
+    "citations": 46,
     "url": "https://dx.doi.org/10.3847/1538-4357/ac36d5"
   },
   {
@@ -375,7 +375,7 @@
     "year": "2021-03-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
-    "citations": 51,
+    "citations": 52,
     "url": "https://dx.doi.org/10.3847/1538-4357/abd7a0"
   },
   {
@@ -486,7 +486,7 @@
     "year": "2020-02-00",
     "journal": "The Astrophysical Journal Supplement Series",
     "publication_type": "article",
-    "citations": 40,
+    "citations": 42,
     "url": "https://dx.doi.org/10.3847/1538-4365/ab527f"
   },
   {
@@ -534,6 +534,25 @@
     "publication_type": "article",
     "citations": 18,
     "url": "https://dx.doi.org/10.1007/s11207-021-01801-9"
+  },
+  {
+    "bibcode": "2025GeoRL..5215186B",
+    "title": "Evaluating the Parker Model With the Trans-Heliospheric Survey",
+    "authors": [
+      "Brown, C. P.",
+      "Maruca, B. A.",
+      "Prabakaran, V.",
+      "Qudsi, R. A.",
+      "Walsh, B. M.",
+      "Alterman, B. L.",
+      "Isenberg, P. A."
+    ],
+    "month": "",
+    "year": "2025-06-00",
+    "journal": "Geophysical Research Letters",
+    "publication_type": "article",
+    "citations": 0,
+    "url": "https://dx.doi.org/10.1029/2025GL115186"
   },
   {
     "bibcode": "2023BAAS...55c.199K",
@@ -747,25 +766,6 @@
     "url": "https://dx.doi.org/10.3847/1538-4357/acd24a"
   },
   {
-    "bibcode": "2025GeoRL..5215186B",
-    "title": "Evaluating the Parker Model With the Trans-Heliospheric Survey",
-    "authors": [
-      "Brown, C. P.",
-      "Maruca, B. A.",
-      "Prabakaran, V.",
-      "Qudsi, R. A.",
-      "Walsh, B. M.",
-      "Alterman, B. L.",
-      "Isenberg, P. A."
-    ],
-    "month": "",
-    "year": "2025-06-00",
-    "journal": "Geophysical Research Letters",
-    "publication_type": "article",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.1029/2025GL115186"
-  },
-  {
     "bibcode": "2023ApJ...950...51J",
     "title": "Anterograde Collisional Analysis of Solar Wind Ions",
     "authors": [
@@ -886,27 +886,6 @@
     "url": "https://ui.adsabs.harvard.edu/abs/2019PhDT.......121A"
   },
   {
-    "bibcode": "2021Atmos..12.1277N",
-    "title": "Spectra of Temperature Fluctuations in the Solar Wind",
-    "authors": [
-      "N\u011bme\u010dek, Z.",
-      "\u0160afr\u00e1nkov\u00e1, J.",
-      "N\u011bmec, F.",
-      "\u010eurovcov\u00e1, T.",
-      "Pit\u0148a, A.",
-      "Alterman, B. L.",
-      "Voitenko, Y. M.",
-      "Pavl\u016f, J.",
-      "Stevens, M. L."
-    ],
-    "month": "",
-    "year": "2021-09-00",
-    "journal": "Atmosphere",
-    "publication_type": "article",
-    "citations": 4,
-    "url": "https://dx.doi.org/10.3390/atmos12101277"
-  },
-  {
     "bibcode": "2023BAAS...55c.025B",
     "title": "Recognition for All: A Way Forward to Enhance Diversity, Equity and Inclusion in Space Physics",
     "authors": [
@@ -961,6 +940,27 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://dx.doi.org/10.3847/25c2cfeb.bff53876"
+  },
+  {
+    "bibcode": "2021Atmos..12.1277N",
+    "title": "Spectra of Temperature Fluctuations in the Solar Wind",
+    "authors": [
+      "N\u011bme\u010dek, Z.",
+      "\u0160afr\u00e1nkov\u00e1, J.",
+      "N\u011bmec, F.",
+      "\u010eurovcov\u00e1, T.",
+      "Pit\u0148a, A.",
+      "Alterman, B. L.",
+      "Voitenko, Y. M.",
+      "Pavl\u016f, J.",
+      "Stevens, M. L."
+    ],
+    "month": "",
+    "year": "2021-09-00",
+    "journal": "Atmosphere",
+    "publication_type": "article",
+    "citations": 4,
+    "url": "https://dx.doi.org/10.3390/atmos12101277"
   },
   {
     "bibcode": "2023BAAS...55c.415V",
@@ -1521,35 +1521,6 @@
     "url": "https://dx.doi.org/10.1051/0004-6361/202347874"
   },
   {
-    "bibcode": "2022FrASS...956347R",
-    "title": "Deciphering the Birth Region, Formation, and Evolution of Ambient and Transient Solar Wind Using Heavy Ion Observations",
-    "authors": [
-      "Rivera, Y. J.",
-      "Higginson, A.",
-      "Lepri, S. T.",
-      "Viall, N. M.",
-      "Alterman, B. L.",
-      "Landi, E.",
-      "Spitzer, S. A.",
-      "Raines, J. M.",
-      "Cranmer, S. R.",
-      "Laming, J. M.",
-      "Mason, E. I.",
-      "Wallace, S.",
-      "Raymond, J. C.",
-      "Lynch, B. J.",
-      "Gilly, C. R.",
-      "Chen, T. Y.",
-      "Dewey, R. M."
-    ],
-    "month": "",
-    "year": "2022-12-00",
-    "journal": "Frontiers in Astronomy and Space Sciences",
-    "publication_type": "article",
-    "citations": 15,
-    "url": "https://dx.doi.org/10.3389/fspas.2022.1056347"
-  },
-  {
     "bibcode": "2022dsss.rept..299V",
     "title": "Guiding Heliophysics Toward an Enhanced Transdisciplinary Framework",
     "authors": [
@@ -1601,6 +1572,35 @@
     "publication_type": "techreport",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2022dsss.rept..295R"
+  },
+  {
+    "bibcode": "2022FrASS...956347R",
+    "title": "Deciphering the Birth Region, Formation, and Evolution of Ambient and Transient Solar Wind Using Heavy Ion Observations",
+    "authors": [
+      "Rivera, Y. J.",
+      "Higginson, A.",
+      "Lepri, S. T.",
+      "Viall, N. M.",
+      "Alterman, B. L.",
+      "Landi, E.",
+      "Spitzer, S. A.",
+      "Raines, J. M.",
+      "Cranmer, S. R.",
+      "Laming, J. M.",
+      "Mason, E. I.",
+      "Wallace, S.",
+      "Raymond, J. C.",
+      "Lynch, B. J.",
+      "Gilly, C. R.",
+      "Chen, T. Y.",
+      "Dewey, R. M."
+    ],
+    "month": "",
+    "year": "2022-12-00",
+    "journal": "Frontiers in Astronomy and Space Sciences",
+    "publication_type": "article",
+    "citations": 15,
+    "url": "https://dx.doi.org/10.3389/fspas.2022.1056347"
   },
   {
     "bibcode": "2023IAUS..372....3M",
@@ -1944,6 +1944,28 @@
     "url": "https://ui.adsabs.harvard.edu/abs/2020AGUFMSH035..05L"
   },
   {
+    "bibcode": "2021EGUGA..2312435L",
+    "title": "Updates and Early Results from the Heavy Ion Sensor on Solar Orbiter",
+    "authors": [
+      "Lepri, S. T.",
+      "Livi, S. A.",
+      "Raines, J. M.",
+      "Galvin, A. B.",
+      "Kistler, L. M.",
+      "Dewey, R. M.",
+      "Alterman, B. L.",
+      "Allegrini, F.",
+      "Collier, M. R.",
+      "Owen, C. J."
+    ],
+    "month": "",
+    "year": "2021-04-00",
+    "journal": "EGU General Assembly Conference Abstracts",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://dx.doi.org/10.5194/egusphere-egu21-12435"
+  },
+  {
     "bibcode": "2023AGUFMSH31G3048D",
     "title": "Detection of Cometary Ions by SWA-HIS during Solar Orbiter's Encounter of Comet Leonard",
     "authors": [
@@ -1994,28 +2016,6 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://dx.doi.org/10.3847/25c2cfeb.5deec7eb"
-  },
-  {
-    "bibcode": "2021EGUGA..2312435L",
-    "title": "Updates and Early Results from the Heavy Ion Sensor on Solar Orbiter",
-    "authors": [
-      "Lepri, S. T.",
-      "Livi, S. A.",
-      "Raines, J. M.",
-      "Galvin, A. B.",
-      "Kistler, L. M.",
-      "Dewey, R. M.",
-      "Alterman, B. L.",
-      "Allegrini, F.",
-      "Collier, M. R.",
-      "Owen, C. J."
-    ],
-    "month": "",
-    "year": "2021-04-00",
-    "journal": "EGU General Assembly Conference Abstracts",
-    "publication_type": "abstract",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.5194/egusphere-egu21-12435"
   },
   {
     "bibcode": "2024AGUFMSH31F2665H",
@@ -2131,6 +2131,23 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH36B..07S"
+  },
+  {
+    "bibcode": "2018shin.confE...6K",
+    "title": "Ion Free-Energy Sources Drive Instabilities in Half the Solar Wind",
+    "authors": [
+      "Klein, K. G.",
+      "Alterman, B. L.",
+      "Stevens, M. L.",
+      "Vech, D.",
+      "Kasper, J. C."
+    ],
+    "month": "",
+    "year": "2018-07-00",
+    "journal": "Solar Heliospheric and INterplanetary Environment (SHINE 2018)",
+    "publication_type": "abstract",
+    "citations": 1,
+    "url": "https://ui.adsabs.harvard.edu/abs/2018shin.confE...6K"
   },
   {
     "bibcode": "2024EGUGA..2613328A",
@@ -2321,23 +2338,6 @@
     "url": "https://ui.adsabs.harvard.edu/abs/2019AGUFMSH13C3452H"
   },
   {
-    "bibcode": "2018shin.confE...6K",
-    "title": "Ion Free-Energy Sources Drive Instabilities in Half the Solar Wind",
-    "authors": [
-      "Klein, K. G.",
-      "Alterman, B. L.",
-      "Stevens, M. L.",
-      "Vech, D.",
-      "Kasper, J. C."
-    ],
-    "month": "",
-    "year": "2018-07-00",
-    "journal": "Solar Heliospheric and INterplanetary Environment (SHINE 2018)",
-    "publication_type": "abstract",
-    "citations": 1,
-    "url": "https://ui.adsabs.harvard.edu/abs/2018shin.confE...6K"
-  },
-  {
     "bibcode": "2024AGUFMSH23F..01B",
     "title": "Evaluating the Parker Model with the Trans-Heliospheric Survey",
     "authors": [
@@ -2354,6 +2354,44 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH23F..01B"
+  },
+  {
+    "bibcode": "2024AGUFMSH11B..03R",
+    "title": "Comparing the Radial Evolution of Slow and Alfv\u00e9nic Slow Solar Wind with Parker Solar Probe and Solar Orbiter",
+    "authors": [
+      "Rivera, Y.",
+      "Badman, S. T.",
+      "Verniero, J.",
+      "Varesano, T.",
+      "Stevens, M. L.",
+      "Stawarz, J. E.",
+      "Shi, C.",
+      "Reeves, K.",
+      "Raymond, J.",
+      "Raines, J. M.",
+      "Paulson, K. W.",
+      "Owen, C. J.",
+      "Niembro, H. T.",
+      "Louarn, P.",
+      "Livi, S. A.",
+      "Lepri, S. T.",
+      "Landi, E.",
+      "Horbury, T. S.",
+      "Halekas, J. S.",
+      "Ervin, T.",
+      "Dewey, R. M.",
+      "De, M. R.",
+      "D'Amicis, R.",
+      "Jean-Baptiste, D.",
+      "Bale, S. D.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2024-12-00",
+    "journal": "AGU Fall Meeting Abstracts",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH11B..03R"
   },
   {
     "bibcode": "2024AGUFMSH23C2951L",
@@ -2661,44 +2699,6 @@
     "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH33E2788G"
   },
   {
-    "bibcode": "2024AGUFMSH11B..03R",
-    "title": "Comparing the Radial Evolution of Slow and Alfv\u00e9nic Slow Solar Wind with Parker Solar Probe and Solar Orbiter",
-    "authors": [
-      "Rivera, Y.",
-      "Badman, S. T.",
-      "Verniero, J.",
-      "Varesano, T.",
-      "Stevens, M. L.",
-      "Stawarz, J. E.",
-      "Shi, C.",
-      "Reeves, K.",
-      "Raymond, J.",
-      "Raines, J. M.",
-      "Paulson, K. W.",
-      "Owen, C. J.",
-      "Niembro, H. T.",
-      "Louarn, P.",
-      "Livi, S. A.",
-      "Lepri, S. T.",
-      "Landi, E.",
-      "Horbury, T. S.",
-      "Halekas, J. S.",
-      "Ervin, T.",
-      "Dewey, R. M.",
-      "De, M. R.",
-      "D'Amicis, R.",
-      "Jean-Baptiste, D.",
-      "Bale, S. D.",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2024-12-00",
-    "journal": "AGU Fall Meeting Abstracts",
-    "publication_type": "abstract",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH11B..03R"
-  },
-  {
     "bibcode": "2024AGUFMP32B...02D",
     "title": "Analysis of Pickup Ions Observed by SWA-HIS during the Solar Orbiter Encounter with Comet Leonard",
     "authors": [
@@ -2728,6 +2728,22 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMP32B...02D"
+  },
+  {
+    "bibcode": "2022shin.confE.214M",
+    "title": "Classification of Solar Wind Instabilities in the Inner Heliosphere",
+    "authors": [
+      "Martinovic, M. M.",
+      "Klein, K. G.",
+      "Durovcova, T.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2022-06-00",
+    "journal": "SHINE 2022 Workshop",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2022shin.confE.214M"
   },
   {
     "bibcode": "2022AGUFMSH15A..05L",
@@ -2879,6 +2895,23 @@
     "url": "https://ui.adsabs.harvard.edu/abs/2017shin.confE...7A"
   },
   {
+    "bibcode": "2017AGUFMSH32A..03A",
+    "title": "A Deeper Understanding of Stability in the Solar Wind: Applying Nyquist's Instability Criterion to Wind Faraday Cup Data",
+    "authors": [
+      "Alterman, B. L.",
+      "Klein, K. G.",
+      "Verscharen, D.",
+      "Stevens, M. L.",
+      "Kasper, J. C."
+    ],
+    "month": "",
+    "year": "2017-12-00",
+    "journal": "AGU Fall Meeting Abstracts",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2017AGUFMSH32A..03A"
+  },
+  {
     "bibcode": "2015AGUFMSH21A2374A",
     "title": "Differential flow: Locally Generated or Coronal Artifact?",
     "authors": [
@@ -2912,22 +2945,6 @@
     "publication_type": "inproceedings",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2023LPICo2808.8118P"
-  },
-  {
-    "bibcode": "2022shin.confE.214M",
-    "title": "Classification of Solar Wind Instabilities in the Inner Heliosphere",
-    "authors": [
-      "Martinovic, M. M.",
-      "Klein, K. G.",
-      "Durovcova, T.",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2022-06-00",
-    "journal": "SHINE 2022 Workshop",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022shin.confE.214M"
   },
   {
     "bibcode": "2022EGUGA..24.8953A",
@@ -3034,23 +3051,6 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2017shin.confE.111A"
-  },
-  {
-    "bibcode": "2017AGUFMSH32A..03A",
-    "title": "A Deeper Understanding of Stability in the Solar Wind: Applying Nyquist's Instability Criterion to Wind Faraday Cup Data",
-    "authors": [
-      "Alterman, B. L.",
-      "Klein, K. G.",
-      "Verscharen, D.",
-      "Stevens, M. L.",
-      "Kasper, J. C."
-    ],
-    "month": "",
-    "year": "2017-12-00",
-    "journal": "AGU Fall Meeting Abstracts",
-    "publication_type": "abstract",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2017AGUFMSH32A..03A"
   },
   {
     "bibcode": "2022tess.conf20104A",
