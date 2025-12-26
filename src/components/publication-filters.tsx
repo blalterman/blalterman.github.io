@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+import { Checkbox } from '@/components/ui/checkbox'
 import {
   Select,
   SelectContent,
@@ -22,6 +23,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { Label } from '@/components/ui/label'
+import { MultiSelect } from '@/components/ui/multi-select'
 import { BookOpen, Filter, ChevronDown, X } from 'lucide-react'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { extractUniqueJournals, extractUniqueYears, isFirstAuthor } from '@/lib/publication-utils'
@@ -33,6 +35,7 @@ interface PublicationCategory {
   description: string
   publicationType: string | string[]
   showCitations: boolean
+  showFilters?: boolean
 }
 
 interface PublicationFiltersProps {
@@ -53,8 +56,8 @@ export function PublicationFilters({
 
   // Filter state
   const [authorshipFilter, setAuthorshipFilter] = useState<'all' | 'first' | 'coauthor'>('all')
-  const [journalFilter, setJournalFilter] = useState<string>('all')
-  const [yearFilter, setYearFilter] = useState<string>('all')
+  const [journalFilters, setJournalFilters] = useState<string[]>([])
+  const [yearFilters, setYearFilters] = useState<string[]>([])
   const [isPopoverOpen, setIsPopoverOpen] = useState(false)
 
   // Extract unique values for dropdowns
@@ -78,41 +81,45 @@ export function PublicationFilters({
         if (isFirstAuthor(pub)) return false
       }
 
-      // Journal filter
-      if (journalFilter !== 'all' && pub.journal !== journalFilter) {
+      // Journal filter - OR logic (match any selected)
+      if (journalFilters.length > 0 && !journalFilters.includes(pub.journal)) {
         return false
       }
 
-      // Year filter
-      if (yearFilter !== 'all' && pub.year.substring(0, 4) !== yearFilter) {
+      // Year filter - OR logic (match any selected)
+      const pubYear = pub.year.substring(0, 4)
+      if (yearFilters.length > 0 && !yearFilters.includes(pubYear)) {
         return false
       }
 
       return true
     })
-  }, [publications, authorshipFilter, journalFilter, yearFilter])
+  }, [publications, authorshipFilter, journalFilters, yearFilters])
 
   // Count active filters
   const activeFilterCount = useMemo(() => {
     let count = 0
     if (authorshipFilter !== 'all') count++
-    if (journalFilter !== 'all') count++
-    if (yearFilter !== 'all') count++
+    count += journalFilters.length
+    count += yearFilters.length
     return count
-  }, [authorshipFilter, journalFilter, yearFilter])
+  }, [authorshipFilter, journalFilters, yearFilters])
 
   // Reset all filters
   const clearAllFilters = () => {
     setAuthorshipFilter('all')
-    setJournalFilter('all')
-    setYearFilter('all')
+    setJournalFilters([])
+    setYearFilters([])
   }
 
   return (
     <div className="max-w-screen-xl mx-auto mb-8">
-      {/* Filter button and result count */}
-      <div className="flex items-center justify-between mb-4">
-        <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
+      {/* Only show filters if enabled */}
+      {categoryData.showFilters !== false && (
+        <>
+          {/* Filter button and result count */}
+          <div className="flex items-center justify-between mb-4">
+            <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
           <PopoverTrigger asChild>
             <Button variant="outline" className="gap-2">
               <Filter className="h-4 w-4" />
@@ -141,13 +148,13 @@ export function PublicationFilters({
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="first" id="authorship-first" />
                     <Label htmlFor="authorship-first" className="font-normal cursor-pointer">
-                      First author only
+                      First author
                     </Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="coauthor" id="authorship-coauthor" />
                     <Label htmlFor="authorship-coauthor" className="font-normal cursor-pointer">
-                      Co-author only
+                      Co-author
                     </Label>
                   </div>
                 </RadioGroup>
@@ -155,42 +162,26 @@ export function PublicationFilters({
 
               {/* Journal filter */}
               <div className="space-y-2">
-                <Label htmlFor="journal-select" className="text-sm font-medium">
-                  {journalLabel}
-                </Label>
-                <Select value={journalFilter} onValueChange={setJournalFilter}>
-                  <SelectTrigger id="journal-select">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All {journalLabel}s</SelectItem>
-                    {uniqueJournals.map(journal => (
-                      <SelectItem key={journal} value={journal}>
-                        {journal}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                <Label className="text-sm font-medium">{journalLabel}</Label>
+                <MultiSelect
+                  options={uniqueJournals}
+                  selected={journalFilters}
+                  onChange={setJournalFilters}
+                  placeholder={`All ${journalLabel}s`}
+                  searchPlaceholder={`Search ${journalLabel.toLowerCase()}s...`}
+                />
               </div>
 
               {/* Year filter */}
               <div className="space-y-2">
-                <Label htmlFor="year-select" className="text-sm font-medium">
-                  Year
-                </Label>
-                <Select value={yearFilter} onValueChange={setYearFilter}>
-                  <SelectTrigger id="year-select">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Years</SelectItem>
-                    {uniqueYears.map(year => (
-                      <SelectItem key={year} value={year}>
-                        {year}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                <Label className="text-sm font-medium">Year</Label>
+                <MultiSelect
+                  options={uniqueYears}
+                  selected={yearFilters}
+                  onChange={setYearFilters}
+                  placeholder="All Years"
+                  searchPlaceholder="Search years..."
+                />
               </div>
 
               {/* Action buttons */}
@@ -241,24 +232,33 @@ export function PublicationFilters({
               />
             </Badge>
           )}
-          {journalFilter !== 'all' && (
-            <Badge variant="secondary" className="gap-1">
-              {journalFilter}
+          {journalFilters.map(journal => (
+            <Badge key={`journal-${journal}`} variant="secondary" className="gap-1 max-w-full">
+              <span className="truncate">{journal}</span>
               <X
-                className="h-3 w-3 cursor-pointer"
-                onClick={() => setJournalFilter('all')}
+                className="h-3 w-3 cursor-pointer shrink-0"
+                onClick={() => setJournalFilters(journalFilters.filter(j => j !== journal))}
               />
             </Badge>
-          )}
-          {yearFilter !== 'all' && (
-            <Badge variant="secondary" className="gap-1">
-              {yearFilter}
+          ))}
+          {yearFilters.map(year => (
+            <Badge key={`year-${year}`} variant="secondary" className="gap-1">
+              <span className="truncate">{year}</span>
               <X
-                className="h-3 w-3 cursor-pointer"
-                onClick={() => setYearFilter('all')}
+                className="h-3 w-3 cursor-pointer shrink-0"
+                onClick={() => setYearFilters(yearFilters.filter(y => y !== year))}
               />
             </Badge>
-          )}
+          ))}
+        </div>
+      )}
+      </>
+    )}
+
+      {/* Show publication count when filters are disabled */}
+      {categoryData.showFilters === false && (
+        <div className="text-sm text-muted-foreground mb-4">
+          Showing {publications.length} publication{publications.length !== 1 ? 's' : ''}
         </div>
       )}
 
