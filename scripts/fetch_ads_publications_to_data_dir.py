@@ -26,6 +26,11 @@ CONFERENCE_VENUE_MAPPINGS = {
     "Third Triennial Earth-Sun Summit (TESS)": "Triennial Earth-Sun Summit",
     # APS Division of Plasma Physics
     "APS Division of Plasma Physics Meeting Abstracts": "APS Division of Plasma Physics",
+    # EGU General Assembly - consolidate variants
+    "EGU General Assembly Conference Abstracts": "EGU General Assembly",
+    "European Geosciences Union General Assembly 2024 (EGU24)": "EGU General Assembly",
+    # AGU Fall Meeting
+    "AGU Fall Meeting Abstracts": "AGU Fall Meeting",
 }
 
 # Read ORCID and API token from environment variables
