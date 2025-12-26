@@ -52,7 +52,7 @@ export function PublicationFilters({
   const journalLabel = labels.journal || 'Journal'
 
   // Filter state
-  const [authorshipFilter, setAuthorshipFilter] = useState<'all' | 'first'>('all')
+  const [authorshipFilter, setAuthorshipFilter] = useState<'all' | 'first' | 'coauthor'>('all')
   const [journalFilter, setJournalFilter] = useState<string>('all')
   const [yearFilter, setYearFilter] = useState<string>('all')
   const [isPopoverOpen, setIsPopoverOpen] = useState(false)
@@ -74,6 +74,8 @@ export function PublicationFilters({
       // Authorship filter
       if (authorshipFilter === 'first') {
         if (!isFirstAuthor(pub)) return false
+      } else if (authorshipFilter === 'coauthor') {
+        if (isFirstAuthor(pub)) return false
       }
 
       // Journal filter
@@ -140,6 +142,12 @@ export function PublicationFilters({
                     <RadioGroupItem value="first" id="authorship-first" />
                     <Label htmlFor="authorship-first" className="font-normal cursor-pointer">
                       First author only
+                    </Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="coauthor" id="authorship-coauthor" />
+                    <Label htmlFor="authorship-coauthor" className="font-normal cursor-pointer">
+                      Co-author only
                     </Label>
                   </div>
                 </RadioGroup>
@@ -218,6 +226,15 @@ export function PublicationFilters({
           {authorshipFilter === 'first' && (
             <Badge variant="secondary" className="gap-1">
               First Author
+              <X
+                className="h-3 w-3 cursor-pointer"
+                onClick={() => setAuthorshipFilter('all')}
+              />
+            </Badge>
+          )}
+          {authorshipFilter === 'coauthor' && (
+            <Badge variant="secondary" className="gap-1">
+              Co-Author
               <X
                 className="h-3 w-3 cursor-pointer"
                 onClick={() => setAuthorshipFilter('all')}
