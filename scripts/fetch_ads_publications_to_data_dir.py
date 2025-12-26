@@ -7,6 +7,27 @@ from utils import get_public_data_dir, get_relative_path
 
 import pdb
 
+# Venue name standardization mappings for conference publications
+# Groups mappings by conference series for easy maintenance and extension
+CONFERENCE_VENUE_MAPPINGS = {
+    # SHINE conferences - consolidate all annual meetings to single name
+    "Solar Heliospheric and INterplanetary Environment (SHINE 2015)": "SHINE",
+    "Solar Heliospheric and INterplanetary Environment (SHINE 2016)": "SHINE",
+    "Solar Heliospheric and INterplanetary Environment (SHINE 2017)": "SHINE",
+    "Solar Heliospheric and INterplanetary Environment (SHINE 2018)": "SHINE",
+    "Solar Heliospheric and INterplanetary Environment (SHINE 2019)": "SHINE",
+    "SHINE 2022 Workshop": "SHINE",
+    # COSPAR - standardize across different assembly numbers
+    "43rd COSPAR Scientific Assembly. Held 28 January - 4 February": "COSPAR",
+    "44th COSPAR Scientific Assembly. Held 16-24 July": "COSPAR",
+    # Bulletin of the American Astronomical Society
+    "Bulletin of the American Astronomical Society": "Bulletin of AAS",
+    # Triennial Earth-Sun Summit - standardize naming
+    "Third Triennial Earth-Sun Summit (TESS)": "Triennial Earth-Sun Summit",
+    # APS Division of Plasma Physics
+    "APS Division of Plasma Physics Meeting Abstracts": "APS Division of Plasma Physics",
+}
+
 # Read ORCID and API token from environment variables
 ORCID = os.getenv("ADS_ORCID")
 token = os.getenv("ADS_DEV_KEY")
@@ -73,6 +94,9 @@ for pub in results:
 
     if is_apjl and journal == "The Astrophysical Journal":
         journal = "The Astrophysical Journal Letters"
+
+    # Apply conference venue name standardization
+    journal = CONFERENCE_VENUE_MAPPINGS.get(journal, journal)
 
     pub_type = pub.doctype or ""
     citations = pub.citation_count if hasattr(pub, "citation_count") else 0
