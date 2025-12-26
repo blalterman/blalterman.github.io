@@ -31,19 +31,26 @@ interface PublicationCategory {
   slug: string
   icon: string
   description: string
-  publicationType: string
+  publicationType: string | string[]
   showCitations: boolean
 }
 
 interface PublicationFiltersProps {
   publications: Publication[]
   categoryData: PublicationCategory
+  labels?: {
+    journal?: string
+  }
 }
 
 export function PublicationFilters({
   publications,
   categoryData,
+  labels = {},
 }: PublicationFiltersProps) {
+  // Label customization with fallback
+  const journalLabel = labels.journal || 'Journal'
+
   // Filter state
   const [authorshipFilter, setAuthorshipFilter] = useState<'all' | 'first'>('all')
   const [journalFilter, setJournalFilter] = useState<string>('all')
@@ -141,14 +148,14 @@ export function PublicationFilters({
               {/* Journal filter */}
               <div className="space-y-2">
                 <Label htmlFor="journal-select" className="text-sm font-medium">
-                  Journal
+                  {journalLabel}
                 </Label>
                 <Select value={journalFilter} onValueChange={setJournalFilter}>
                   <SelectTrigger id="journal-select">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">All Journals</SelectItem>
+                    <SelectItem value="all">All {journalLabel}s</SelectItem>
                     {uniqueJournals.map(journal => (
                       <SelectItem key={journal} value={journal}>
                         {journal}

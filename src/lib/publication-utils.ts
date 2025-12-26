@@ -20,30 +20,33 @@ export function sortPublicationsByDate(
 
 /**
  * Filter publications by publication type.
+ * Supports both single type (string) and multiple types (array).
  *
  * @param publications Array of publications to filter
- * @param type Publication type to filter by
- * @returns New array containing only publications of the specified type
+ * @param type Publication type(s) to filter by
+ * @returns New array containing only publications of the specified type(s)
  */
 export function filterPublicationsByType(
   publications: Publication[],
-  type: string
+  type: string | string[]
 ): Publication[] {
-  return publications.filter(pub => pub.publication_type === type);
+  const types = Array.isArray(type) ? type : [type];
+  return publications.filter(pub => types.includes(pub.publication_type));
 }
 
 /**
  * Get publications of a specific type, sorted by date.
  * Combines filtering and sorting in a single operation.
+ * Supports both single type (string) and multiple types (array).
  *
  * @param publications Array of publications to process
- * @param type Publication type to filter by
+ * @param type Publication type(s) to filter by
  * @param order Sort order: 'desc' for newest first, 'asc' for oldest first
  * @returns New array of filtered and sorted publications
  */
 export function getPublicationsByType(
   publications: Publication[],
-  type: string,
+  type: string | string[],
   order: 'desc' | 'asc' = 'desc'
 ): Publication[] {
   return sortPublicationsByDate(

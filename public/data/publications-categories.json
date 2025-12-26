@@ -27,19 +27,11 @@
       "showCitations": false
     },
     {
-      "title": "Conference Proceedings",
-      "slug": "proceedings",
-      "icon": "FileText",
-      "description": "Published conference papers",
-      "publicationType": "inproceedings",
-      "showCitations": false
-    },
-    {
-      "title": "Conference Presentations",
-      "slug": "presentations",
+      "title": "Conference Presentations and Proceedings",
+      "slug": "conferences",
       "icon": "Presentation",
-      "description": "Conference talks and poster presentations",
-      "publicationType": "abstract",
+      "description": "Conference talks, poster presentations, and published proceedings",
+      "publicationType": ["inproceedings", "abstract"],
       "showCitations": false
     },
     {

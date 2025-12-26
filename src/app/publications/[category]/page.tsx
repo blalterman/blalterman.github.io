@@ -17,7 +17,7 @@ interface PublicationCategory {
   slug: string;
   icon: string;
   description: string;
-  publicationType: string;
+  publicationType: string | string[];
   showCitations: boolean;
 }
 
@@ -109,7 +109,13 @@ export default async function PublicationCategoryPage({ params }: { params: Prom
       </h1>
 
       {/* Publications with filtering */}
-      <PublicationFilters publications={publications} categoryData={categoryData} />
+      <PublicationFilters
+        publications={publications}
+        categoryData={categoryData}
+        {...(categoryData.slug === 'conferences' && {
+          labels: { journal: 'Conference' }
+        })}
+      />
 
       {/* Back to overview button */}
       <div className="text-center mt-8">
