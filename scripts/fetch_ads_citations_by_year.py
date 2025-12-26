@@ -30,6 +30,7 @@ import pandas as pd
 
 from zoneinfo import ZoneInfo
 from utils import get_public_data_dir, get_public_plots_dir, get_relative_path
+from plot_config import COLORS, FIGURE, FONTS, BARS, GRID, LEGEND, LAYOUT, OUTPUT
 
 # Hard code Eastern Time because changing that is a quick update,
 # but it requires a lot of package installs and such to auto-detect.
@@ -142,15 +143,14 @@ ref_counts = refereed_citations.groupby(level=-1).sum().sort_index()
 nonref_counts = nonrefereed_citations.groupby(level=-1).sum().sort_index()
 all_counts = pd.concat({"Refereed": ref_counts, "Nonrefereed": nonref_counts}, axis=1).fillna(0).astype(int)
 
-print(all_counts.T, "", sep="\n")
-print(
-    f"""
-Total Citations
-Refereed    : {all_counts.Refereed.sum()}
-Nonrefereed : {all_counts.Nonrefereed.sum()}
-Total       : {all_counts.sum().sum()}
-"""
-)
+# Filter to start from first year with non-zero citations
+all_counts = all_counts[(all_counts.Refereed > 0) | (all_counts.Nonrefereed > 0)]
+
+print("\n📊 Citation counts by year:")
+print(all_counts.T)
+print(f"\n✓ Total citations: {all_counts.sum().sum()}")
+print(f"  • Refereed: {all_counts.Refereed.sum()}")
+print(f"  • Non-Refereed: {all_counts.Nonrefereed.sum()}")
 
 all_years = all_counts.index.tolist()
 ref_counts = all_counts.Refereed.tolist()
@@ -166,27 +166,74 @@ data_to_save = {"years": all_years, "refereed": ref_counts, "nonrefereed": nonre
 with open(output_path, "w") as f:
     json.dump(data_to_save, f, indent=2)
 
-print(f"Citation data saved to {get_relative_path(output_path)}")
+print(f"\n💾 Data saved to {get_relative_path(output_path)}")
 
 
 # === Step 5: Plot and save SVG and PNG to public/plots/ ===
 image_output_dir = get_public_plots_dir()
 image_output_dir.mkdir(parents=True, exist_ok=True)
 
-plt.figure(figsize=(10, 6))
-plt.bar(all_years, ref_counts, label="Refereed", color="cornflowerblue")
-plt.bar(all_years, nonref_counts, bottom=ref_counts, label="Non-Refereed", color="lightgreen")
+# Create figure with configured settings
+fig, ax = plt.subplots(figsize=FIGURE['figsize'], dpi=FIGURE['dpi'])
+fig.patch.set_facecolor(FIGURE['facecolor'])
 
-plt.title("Citations per Year by Type (NASA ADS)")
-plt.xlabel("Year")
-plt.ylabel("Citations")
-plt.legend()
-plt.tight_layout()
+# Plot bars with configured styles
+ax.bar(all_years, ref_counts,
+       label='Refereed',
+       color=COLORS['refereed'],
+       width=BARS['width'],
+       alpha=BARS['alpha'],
+       edgecolor=BARS['edgecolor'])
+
+ax.bar(all_years, nonref_counts,
+       bottom=ref_counts,
+       label='Non-Refereed',
+       color=COLORS['nonrefereed'],
+       width=BARS['width'],
+       alpha=BARS['alpha'],
+       edgecolor=BARS['edgecolor'])
+
+# Apply styling
+ax.set_title('Citations Timeline', **FONTS['title'])
+ax.set_xlabel('Year', **FONTS['axis_label'])
+ax.set_ylabel('Citations', **FONTS['axis_label'])
+
+# Configure x-axis: label every 2nd year, minor ticks for all years
+major_ticks = all_years[::2]  # Every 2nd year for labels
+ax.set_xticks(major_ticks, minor=False)  # Major ticks with labels
+ax.set_xticks(all_years, minor=True)     # Minor ticks for all years
+ax.tick_params(axis='x', which='minor', length=3)  # Shorter minor ticks
+ax.tick_params(axis='x', which='major', length=6)  # Standard major ticks
+
+# Configure grid
+ax.grid(GRID['visible'],
+        alpha=GRID['alpha'],
+        linestyle=GRID['linestyle'],
+        linewidth=GRID['linewidth'],
+        color=GRID['color'])
+ax.set_axisbelow(True)  # Grid behind plot elements
+
+# Configure legend
+ax.legend(**LEGEND)
+
+# Hide top and right spines for cleaner look
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+# Apply tight layout
+if LAYOUT['tight_layout']:
+    plt.tight_layout(pad=LAYOUT['pad'])
 
 plot_path_svg = image_output_dir / "citations_by_year.svg"
-plt.savefig(plot_path_svg, format="svg")
-print(f"Plot saved to {get_relative_path(plot_path_svg)}")
+plt.savefig(plot_path_svg,
+            format='svg',
+            dpi=OUTPUT['svg_dpi'],
+            bbox_inches=OUTPUT['bbox_inches'])
+print(f"📈 Plot saved to {get_relative_path(plot_path_svg)}")
 
 plot_path_png = image_output_dir / "citations_by_year.png"
-plt.savefig(plot_path_png, format="png")
-print(f"Plot saved to {get_relative_path(plot_path_png)}")
+plt.savefig(plot_path_png,
+            format='png',
+            dpi=OUTPUT['png_dpi'],
+            bbox_inches=OUTPUT['bbox_inches'])
+print(f"📈 Plot saved to {get_relative_path(plot_path_png)}")
