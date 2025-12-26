@@ -79,5 +79,14 @@
       "alt": "Figure showing the changes in the solar wind compressibility with solar wind source region.",
       "caption": "A heat map of the solar wind's compressibility ($\\left|\\\\delta_n/n\\right|$) as a function of the normalized cross helicity or Alfv\u00e9nicity ($\\left|\\\\sigma_c\\right|$) helium abundance ($A_\\\\mathrm{He}$). Low compressibility ($\\left| \\\\delta_n/n \\right| < 0.15$) signals typical solar wind, while a higher compressibility likely indicates interplanetary coronal mass ejections (ICMEs). The ambient solar wind's compressibility changes depending on where on the Sun it was born (see <a href=\"/research/sources-of-the-solar-wind\">Sources of the Solar Wind</a>). When $\\left|\\\\delta_n/n\\right| < 0.085$, the solar wind was likely born in coronal holes, while a compressibility $0.085 < \\left|\\\\delta_n/n\\right| < 0.15$ typically indicates solar wind born in other, more variable sources (see <a href=\"/research/space-weather\">Space Weather</a>). <a href=\"https://dx.doi.org/10.48550/arXiv.2508.20391\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary hover:underline\">From Alterman & D'Amicis (2025), arXiv e-prints</a>."
     }
+  },
+  {
+    "slug": "solarwindpy",
+    "title": "SolarWindPy",
+    "figure": {
+      "src": "https://placehold.co/800x600.png",
+      "alt": "Placeholder image for research topic",
+      "caption": "Figure coming soon"
+    }
   }
 ]

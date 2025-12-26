@@ -8,7 +8,8 @@
       "icon": "GraduationCap",
       "description": "Doctoral dissertation",
       "publicationType": "phdthesis",
-      "showCitations": false
+      "showCitations": false,
+      "showFilters": false
     },
     {
       "title": "Refereed Publications",
@@ -16,7 +17,8 @@
       "icon": "BookOpen",
       "description": "Peer-reviewed journal articles",
       "publicationType": "article",
-      "showCitations": true
+      "showCitations": true,
+      "showFilters": true
     },
     {
       "title": "Datasets",
@@ -24,23 +26,17 @@
       "icon": "Database",
       "description": "Published research datasets",
       "publicationType": "dataset",
-      "showCitations": false
+      "showCitations": false,
+      "showFilters": false
     },
     {
-      "title": "Conference Proceedings",
-      "slug": "proceedings",
-      "icon": "FileText",
-      "description": "Published conference papers",
-      "publicationType": "inproceedings",
-      "showCitations": false
-    },
-    {
-      "title": "Conference Presentations",
-      "slug": "presentations",
+      "title": "Conferences",
+      "slug": "conferences",
       "icon": "Presentation",
-      "description": "Conference talks and poster presentations",
-      "publicationType": "abstract",
-      "showCitations": false
+      "description": "Conference talks, poster presentations, and published proceedings",
+      "publicationType": ["inproceedings", "abstract"],
+      "showCitations": false,
+      "showFilters": true
     },
     {
       "title": "White Papers",
@@ -48,7 +44,8 @@
       "icon": "ScrollText",
       "description": "Technical reports and white papers",
       "publicationType": "techreport",
-      "showCitations": false
+      "showCitations": false,
+      "showFilters": true
     },
     {
       "title": "Pre-Prints",
@@ -56,7 +53,8 @@
       "icon": "FileCode",
       "description": "Manuscripts submitted or accepted for publication",
       "publicationType": "eprint",
-      "showCitations": false
+      "showCitations": false,
+      "showFilters": true
     }
   ]
 }
