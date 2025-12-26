@@ -68,3 +68,39 @@ export function sortPublicationsByCitations(
     return order === 'desc' ? comparison : -comparison;
   });
 }
+
+/**
+ * Check if a publication is first-authored by Alterman.
+ * Handles both "Alterman, B. L." and "B. L. Alterman" formats.
+ *
+ * @param publication Publication to check
+ * @returns True if Alterman is the first author
+ */
+export function isFirstAuthor(publication: Publication): boolean {
+  const firstAuthor = publication.authors[0]?.toLowerCase() || '';
+  return firstAuthor.includes('alterman');
+}
+
+/**
+ * Extract unique journal names from publications.
+ *
+ * @param publications Array of publications
+ * @returns Sorted array of unique journal names
+ */
+export function extractUniqueJournals(publications: Publication[]): string[] {
+  return Array.from(new Set(publications.map(p => p.journal))).sort();
+}
+
+/**
+ * Extract unique years from publications.
+ *
+ * @param publications Array of publications
+ * @returns Array of unique years sorted newest first
+ */
+export function extractUniqueYears(publications: Publication[]): string[] {
+  return Array.from(
+    new Set(publications.map(p => p.year.substring(0, 4)))
+  )
+    .sort()
+    .reverse();
+}

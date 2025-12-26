@@ -1,20 +1,12 @@
-import {
-  Table,
-  TableHeader,
-  TableBody,
-  TableRow,
-  TableHead,
-  TableCell,
-} from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, BookOpen, Database, FileText, Presentation, ScrollText, FileCode } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Metadata, ResolvingMetadata } from 'next';
 import { loadJSONData } from "@/lib/data-loader";
 import { getPublicationsByType } from "@/lib/publication-utils";
 import type { Publication } from "@/types/publication";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import { PublicationFilters } from "@/components/publication-filters";
 
 type Props = {
   params: Promise<{ category: string }>;
@@ -116,54 +108,8 @@ export default async function PublicationCategoryPage({ params }: { params: Prom
         {categoryData.title}
       </h1>
 
-      {/* Publications table */}
-      <div className="border rounded-lg overflow-hidden shadow-lg max-w-screen-xl mx-auto">
-        <Table>
-          <TableHeader>
-            <TableRow className="bg-muted/50">
-              <TableHead className="w-[100px] font-bold">Year</TableHead>
-              <TableHead className="font-bold">Title</TableHead>
-              <TableHead className="font-bold">Authors</TableHead>
-              <TableHead className="font-bold">Journal</TableHead>
-              {categoryData.showCitations && (
-                <TableHead className="text-center w-[100px] font-bold">Citations</TableHead>
-              )}
-              <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {publications.map((pub: Publication, index: number) => (
-              <TableRow key={index} className="hover:bg-muted/30">
-                <TableCell className="font-medium">{pub.year.substring(0, 4)}</TableCell>
-                <TableCell>{pub.title}</TableCell>
-                <TableCell>{pub.authors.join(', ')}</TableCell>
-                <TableCell>{pub.journal}</TableCell>
-                {categoryData.showCitations && (
-                  <TableCell className="text-center">{pub.citations}</TableCell>
-                )}
-                <TableCell className="text-right space-x-2">
-                  {pub.url && (
-                    <TooltipProvider>
-                      <Tooltip>
-                        <TooltipTrigger asChild>
-                          <Button variant="outline" size="icon" asChild>
-                            <a href={pub.url} target="_blank" rel="noopener noreferrer">
-                              <BookOpen className="h-4 w-4" />
-                            </a>
-                          </Button>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>Publication</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  )}
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </div>
+      {/* Publications with filtering */}
+      <PublicationFilters publications={publications} categoryData={categoryData} />
 
       {/* Back to overview button */}
       <div className="text-center mt-8">
