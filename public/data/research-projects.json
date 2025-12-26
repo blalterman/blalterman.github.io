@@ -70,5 +70,13 @@
     "image": "https://placehold.co/600x400.png",
     "imageHint": "research visualization",
     "published": true
+  },
+  {
+    "title": "SolarWindPy",
+    "slug": "solarwindpy",
+    "description": "An open-source Python package for analyzing in-situ solar wind observations, providing tools for plasma physics calculations, data analysis, and visualization.",
+    "image": "https://placehold.co/600x400.png",
+    "imageHint": "python code data analysis",
+    "published": false
   }
 ]
