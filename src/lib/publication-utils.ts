@@ -289,3 +289,34 @@ export function getSeminarPresentations(
     order
   );
 }
+
+/**
+ * Decode HTML entities in text (e.g., &amp; → &, &lt; → <).
+ *
+ * Handles common HTML entities returned by ADS API in publication titles.
+ * Uses browser's DOMParser for accurate decoding.
+ *
+ * @param text Text containing HTML entities
+ * @returns Decoded text with entities replaced by actual characters
+ *
+ * @example
+ * decodeHtmlEntities("Solar &amp; Space Physics") // "Solar & Space Physics"
+ * decodeHtmlEntities("E &lt; 10 keV") // "E < 10 keV"
+ */
+export function decodeHtmlEntities(text: string): string {
+  if (typeof window === 'undefined') {
+    // Server-side: use regex-based decoding for common entities
+    return text
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .replace(/&nbsp;/g, ' ');
+  }
+
+  // Client-side: use DOMParser for complete entity decoding
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(text, 'text/html');
+  return doc.documentElement.textContent || text;
+}

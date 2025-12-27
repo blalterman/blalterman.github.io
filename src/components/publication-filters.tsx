@@ -26,7 +26,7 @@ import { Label } from '@/components/ui/label'
 import { MultiSelect } from '@/components/ui/multi-select'
 import { BookOpen, Filter, ChevronDown, X } from 'lucide-react'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-import { extractUniqueJournals, extractUniqueYears, isFirstAuthor, formatAuthorNames, isAlterman } from '@/lib/publication-utils'
+import { extractUniqueJournals, extractUniqueYears, isFirstAuthor, formatAuthorNames, isAlterman, decodeHtmlEntities } from '@/lib/publication-utils'
 
 interface PublicationCategory {
   title: string
@@ -370,7 +370,7 @@ export function PublicationFilters({
                     {pub.year.substring(0, 4)}
                   </TableCell>
                   <TableCell>
-                    {pub.title}
+                    {decodeHtmlEntities(pub.title)}
                     {pub.invited && categoryData.slug !== 'invited-talks' && (
                       <Badge variant="outline" className="ml-2 text-xs">
                         Invited
