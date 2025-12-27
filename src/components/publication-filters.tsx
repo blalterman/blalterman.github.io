@@ -336,7 +336,9 @@ export function PublicationFilters({
               <TableRow className="bg-muted/50">
                 <TableHead className="w-[100px] font-bold">Year</TableHead>
                 <TableHead className="font-bold">Title</TableHead>
-                <TableHead className="font-bold">Authors</TableHead>
+                {categoryData.slug !== 'invited-talks' && categoryData.slug !== 'phd-thesis' && (
+                  <TableHead className="font-bold">Authors</TableHead>
+                )}
                 <TableHead className="font-bold">Journal</TableHead>
                 {categoryData.showCitations && (
                   <TableHead className="text-center w-[100px] font-bold">Citations</TableHead>
@@ -358,18 +360,20 @@ export function PublicationFilters({
                       </Badge>
                     )}
                   </TableCell>
-                  <TableCell>
-                    {formatAuthorNames(pub.authors).map((author, idx, arr) => (
-                      <React.Fragment key={idx}>
-                        {isAlterman(author) ? (
-                          <span className="font-semibold">{author}</span>
-                        ) : (
-                          author
-                        )}
-                        {idx < arr.length - 1 && ', '}
-                      </React.Fragment>
-                    ))}
-                  </TableCell>
+                  {categoryData.slug !== 'invited-talks' && categoryData.slug !== 'phd-thesis' && (
+                    <TableCell>
+                      {formatAuthorNames(pub.authors).map((author, idx, arr) => (
+                        <React.Fragment key={idx}>
+                          {isAlterman(author) ? (
+                            <span className="font-semibold">{author}</span>
+                          ) : (
+                            author
+                          )}
+                          {idx < arr.length - 1 && ', '}
+                        </React.Fragment>
+                      ))}
+                    </TableCell>
+                  )}
                   <TableCell>{pub.journal}</TableCell>
                   {categoryData.showCitations && (
                     <TableCell className="text-center">{pub.citations}</TableCell>

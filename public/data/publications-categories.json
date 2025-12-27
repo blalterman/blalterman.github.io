@@ -45,7 +45,7 @@
       "description": "Invited colloquia, seminars, and public lectures",
       "publicationType": "inproceedings",
       "showCitations": false,
-      "showFilters": true
+      "showFilters": false
     },
     {
       "title": "White Papers",
