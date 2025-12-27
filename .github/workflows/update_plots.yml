@@ -1,0 +1,56 @@
+name: Update All Timeline Plots
+
+on:
+  workflow_run:
+    workflows:
+      - "Update ADS Citation Metrics"
+      - "Update ADS Publications List"
+      - "Update NASA ADS Citations Plot and Data"
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  update-plots:
+    # Only run if triggering workflow succeeded
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('scripts/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Pull latest changes
+        run: |
+          git fetch origin
+          git pull origin main --ff-only
+
+      - name: Generate publications timeline plot
+        run: python scripts/generate_publications_timeline.py
+
+      - name: Generate h-index timeline plot
+        run: python scripts/generate_h_index_timeline.py
+
+      - name: Commit updated plots
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add public/data/publications_timeline.json public/plots/*.svg public/plots/*.png
+          git commit -m "Update timeline plots [automated]" || echo "No changes to commit"
+          git push origin main
