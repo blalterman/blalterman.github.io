@@ -9,7 +9,8 @@
       "description": "Doctoral dissertation",
       "publicationType": "phdthesis",
       "showCitations": false,
-      "showFilters": false
+      "showFilters": false,
+      "showJournal": false
     },
     {
       "title": "Refereed Publications",
@@ -45,7 +46,9 @@
       "description": "Invited colloquia, seminars, and public lectures",
       "publicationType": "inproceedings",
       "showCitations": false,
-      "showFilters": false
+      "showFilters": false,
+      "journalLabel": "Location",
+      "journalField": "location"
     },
     {
       "title": "White Papers",
