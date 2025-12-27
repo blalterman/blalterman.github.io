@@ -56,6 +56,7 @@ export function PublicationFilters({
 
   // Filter state
   const [authorshipFilter, setAuthorshipFilter] = useState<'all' | 'first' | 'coauthor'>('all')
+  const [invitedFilter, setInvitedFilter] = useState<'all' | 'invited' | 'contributed'>('all')
   const [journalFilters, setJournalFilters] = useState<string[]>([])
   const [yearFilters, setYearFilters] = useState<string[]>([])
   const [isPopoverOpen, setIsPopoverOpen] = useState(false)
@@ -92,22 +93,30 @@ export function PublicationFilters({
         return false
       }
 
+      // Invited filter (only for conferences)
+      if (categoryData.slug === 'conferences' && invitedFilter !== 'all') {
+        if (invitedFilter === 'invited' && !pub.invited) return false
+        if (invitedFilter === 'contributed' && pub.invited) return false
+      }
+
       return true
     })
-  }, [publications, authorshipFilter, journalFilters, yearFilters])
+  }, [publications, authorshipFilter, invitedFilter, journalFilters, yearFilters, categoryData.slug])
 
   // Count active filters
   const activeFilterCount = useMemo(() => {
     let count = 0
     if (authorshipFilter !== 'all') count++
+    if (categoryData.slug === 'conferences' && invitedFilter !== 'all') count++
     count += journalFilters.length
     count += yearFilters.length
     return count
-  }, [authorshipFilter, journalFilters, yearFilters])
+  }, [authorshipFilter, invitedFilter, journalFilters, yearFilters, categoryData.slug])
 
   // Reset all filters
   const clearAllFilters = () => {
     setAuthorshipFilter('all')
+    setInvitedFilter('all')
     setJournalFilters([])
     setYearFilters([])
   }
@@ -159,6 +168,33 @@ export function PublicationFilters({
                   </div>
                 </RadioGroup>
               </div>
+
+              {/* Invited filter (conferences only) */}
+              {categoryData.slug === 'conferences' && (
+                <div className="space-y-3">
+                  <Label className="text-sm font-medium">Type</Label>
+                  <RadioGroup value={invitedFilter} onValueChange={(value: any) => setInvitedFilter(value)}>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="all" id="invited-all" />
+                      <Label htmlFor="invited-all" className="font-normal cursor-pointer">
+                        All conferences
+                      </Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="invited" id="invited-invited" />
+                      <Label htmlFor="invited-invited" className="font-normal cursor-pointer">
+                        Invited talks only
+                      </Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="contributed" id="invited-contributed" />
+                      <Label htmlFor="invited-contributed" className="font-normal cursor-pointer">
+                        Contributed only
+                      </Label>
+                    </div>
+                  </RadioGroup>
+                </div>
+              )}
 
               {/* Journal filter */}
               <div className="space-y-2">
@@ -232,6 +268,24 @@ export function PublicationFilters({
               />
             </Badge>
           )}
+          {categoryData.slug === 'conferences' && invitedFilter === 'invited' && (
+            <Badge variant="secondary" className="gap-1">
+              Invited Talks Only
+              <X
+                className="h-3 w-3 cursor-pointer"
+                onClick={() => setInvitedFilter('all')}
+              />
+            </Badge>
+          )}
+          {categoryData.slug === 'conferences' && invitedFilter === 'contributed' && (
+            <Badge variant="secondary" className="gap-1">
+              Contributed Only
+              <X
+                className="h-3 w-3 cursor-pointer"
+                onClick={() => setInvitedFilter('all')}
+              />
+            </Badge>
+          )}
           {journalFilters.map(journal => (
             <Badge key={`journal-${journal}`} variant="secondary" className="gap-1 max-w-full">
               <span className="truncate">{journal}</span>
@@ -296,7 +350,14 @@ export function PublicationFilters({
                   <TableCell className="font-medium">
                     {pub.year.substring(0, 4)}
                   </TableCell>
-                  <TableCell>{pub.title}</TableCell>
+                  <TableCell>
+                    {pub.title}
+                    {pub.invited && (
+                      <Badge variant="outline" className="ml-2 text-xs">
+                        Invited
+                      </Badge>
+                    )}
+                  </TableCell>
                   <TableCell>
                     {formatAuthorNames(pub.authors).map((author, idx, arr) => (
                       <React.Fragment key={idx}>
