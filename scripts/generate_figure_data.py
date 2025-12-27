@@ -60,8 +60,8 @@ def main():
     with open(pubs_path, 'r') as f:
         pubs_data = json.load(f)
 
-    # Create publication lookup
-    pubs_lookup = {pub['bibcode']: pub for pub in pubs_data}
+    # Create publication lookup (filter out publications without bibcode, e.g., manually added invited talks)
+    pubs_lookup = {pub['bibcode']: pub for pub in pubs_data if 'bibcode' in pub}
 
     # Collect DOIs for license fetching (only for real figures)
     all_dois = []
