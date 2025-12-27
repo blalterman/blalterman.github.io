@@ -107,3 +107,59 @@ export function extractUniqueYears(publications: Publication[]): string[] {
     .sort()
     .reverse();
 }
+
+/**
+ * Transforms author name from ADS format to display format
+ * @param adsName - Author name in ADS format: "LastName, F. M."
+ * @returns Display format: "F. M. LastName"
+ * @example formatAuthorName("Alterman, B. L.") // "B. L. Alterman"
+ */
+export function formatAuthorName(adsName: string): string {
+  const cleaned = adsName.trim();
+  const parts = cleaned.split(',').map(p => p.trim());
+
+  if (parts.length === 1) {
+    return cleaned; // Already formatted or single name
+  }
+
+  if (parts.length === 2) {
+    // Standard: "LastName, Initials" → "Initials LastName"
+    const [lastName, initials] = parts;
+    return `${initials} ${lastName}`;
+  }
+
+  if (parts.length === 3) {
+    // With suffix: "LastName, Suffix, Initials" → "Initials LastName, Suffix"
+    const [lastName, suffix, initials] = parts;
+    return `${initials} ${lastName}, ${suffix}`;
+  }
+
+  // Fallback for unexpected formats
+  console.warn(`Unexpected author name format: ${adsName}`);
+  return cleaned;
+}
+
+/**
+ * Transforms array of ADS-formatted author names to display format
+ * @param adsAuthors - Array of author names in ADS format
+ * @returns Array of author names in display format
+ */
+export function formatAuthorNames(adsAuthors: string[]): string[] {
+  return adsAuthors.map(formatAuthorName);
+}
+
+/**
+ * Checks if an author name matches B. L. Alterman (format-agnostic)
+ * @param authorName - Author name in any format
+ * @returns True if author is B. L. Alterman
+ */
+export function isAlterman(authorName: string): boolean {
+  const normalized = authorName.trim().toLowerCase();
+
+  return (
+    normalized === 'alterman, b. l.' ||
+    normalized === 'b. l. alterman' ||
+    normalized === 'alterman, b.l.' ||
+    normalized === 'b.l. alterman'
+  );
+}

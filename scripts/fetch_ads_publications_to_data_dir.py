@@ -111,14 +111,6 @@ for pub in results:
         else f"https://ui.adsabs.harvard.edu/abs/{pub.bibcode}"
     )
 
-    # Wrap "Alterman" in <strong> tags in the authors list
-    formatted_authors = []
-    for author in authors:
-        if author.startswith("Alterman,"):
-            formatted_authors.append(f"<strong>{author}</strong>")
-        else:
-            formatted_authors.append(author)
-
     publications.append(
         {
             "bibcode": pub.bibcode,
@@ -130,6 +122,7 @@ for pub in results:
             "publication_type": pub_type,
             "citations": citations,
             "url": url,
+            "invited": False,  # Default all publications to non-invited
         }
     )
 

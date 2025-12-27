@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import type { Publication } from '@/types/publication'
 import {
   Table,
@@ -26,7 +26,7 @@ import { Label } from '@/components/ui/label'
 import { MultiSelect } from '@/components/ui/multi-select'
 import { BookOpen, Filter, ChevronDown, X } from 'lucide-react'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-import { extractUniqueJournals, extractUniqueYears, isFirstAuthor } from '@/lib/publication-utils'
+import { extractUniqueJournals, extractUniqueYears, isFirstAuthor, formatAuthorNames, isAlterman } from '@/lib/publication-utils'
 
 interface PublicationCategory {
   title: string
@@ -297,7 +297,18 @@ export function PublicationFilters({
                     {pub.year.substring(0, 4)}
                   </TableCell>
                   <TableCell>{pub.title}</TableCell>
-                  <TableCell>{pub.authors.join(', ')}</TableCell>
+                  <TableCell>
+                    {formatAuthorNames(pub.authors).map((author, idx, arr) => (
+                      <React.Fragment key={idx}>
+                        {isAlterman(author) ? (
+                          <span className="font-semibold">{author}</span>
+                        ) : (
+                          author
+                        )}
+                        {idx < arr.length - 1 && ', '}
+                      </React.Fragment>
+                    ))}
+                  </TableCell>
                   <TableCell>{pub.journal}</TableCell>
                   {categoryData.showCitations && (
                     <TableCell className="text-center">{pub.citations}</TableCell>

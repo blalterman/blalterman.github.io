@@ -28,4 +28,7 @@ export interface Publication {
 
   /** URL to the publication (DOI or NASA ADS link) */
   url: string;
+
+  /** Whether this is an invited presentation/talk (optional during migration, will become required) */
+  invited?: boolean;
 }

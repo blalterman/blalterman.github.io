@@ -1,7 +1,7 @@
 [
   {
     "bibcode": "2025ApJ...980...70R",
-    "title": "Differentiating the Acceleration Mechanisms in the Slow and Alfv\u00e9nic Slow Solar Wind",
+    "title": "Differentiating the Acceleration Mechanisms in the Slow and Alfvénic Slow Solar Wind",
     "authors": [
       "Rivera, Y. J.",
       "Badman, S. T.",
@@ -30,7 +30,8 @@
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
     "citations": 12,
-    "url": "https://dx.doi.org/10.3847/1538-4357/ada699"
+    "url": "https://dx.doi.org/10.3847/1538-4357/ada699",
+    "invited": false
   },
   {
     "bibcode": "2025ApJ...990L..60R",
@@ -60,7 +61,8 @@
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
     "citations": 1,
-    "url": "https://dx.doi.org/10.3847/2041-8213/adfa97"
+    "url": "https://dx.doi.org/10.3847/2041-8213/adfa97",
+    "invited": false
   },
   {
     "bibcode": "2023SoPh..298...78W",
@@ -83,7 +85,7 @@
       "Alterman, B. L.",
       "Alzate, N.",
       "Andretta, V.",
-      "Auch\u00e8re, F.",
+      "Auchère, F.",
       "Banerjee, D.",
       "Berghmans, D.",
       "Chamberlin, P.",
@@ -114,7 +116,8 @@
     "journal": "Solar Physics",
     "publication_type": "article",
     "citations": 51,
-    "url": "https://dx.doi.org/10.1007/s11207-023-02170-1"
+    "url": "https://dx.doi.org/10.1007/s11207-023-02170-1",
+    "invited": false
   },
   {
     "bibcode": "2025ApJ...982L..40A",
@@ -128,7 +131,8 @@
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
     "citations": 8,
-    "url": "https://dx.doi.org/10.3847/2041-8213/adb48e"
+    "url": "https://dx.doi.org/10.3847/2041-8213/adb48e",
+    "invited": false
   },
   {
     "bibcode": "2024ApJ...974..198R",
@@ -156,7 +160,8 @@
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
     "citations": 7,
-    "url": "https://dx.doi.org/10.3847/1538-4357/ad7815"
+    "url": "https://dx.doi.org/10.3847/1538-4357/ad7815",
+    "invited": false
   },
   {
     "bibcode": "2020ApJS..248....5V",
@@ -190,7 +195,8 @@
     "journal": "The Astrophysical Journal Supplement Series",
     "publication_type": "article",
     "citations": 109,
-    "url": "https://dx.doi.org/10.3847/1538-4365/ab86af"
+    "url": "https://dx.doi.org/10.3847/1538-4365/ab86af",
+    "invited": false
   },
   {
     "bibcode": "2020ApJS..246...70H",
@@ -201,9 +207,9 @@
       "Vech, D.",
       "Klein, K. G.",
       "Stevens, M.",
-      "Martinovi\u0107, M. M.",
+      "Martinović, M. M.",
       "Alterman, B. L.",
-      "\u010eurovcov\u00e1, T.",
+      "Ďurovcová, T.",
       "Paulson, K.",
       "Maruca, B. A.",
       "Qudsi, R. A.",
@@ -232,7 +238,8 @@
     "journal": "The Astrophysical Journal Supplement Series",
     "publication_type": "article",
     "citations": 86,
-    "url": "https://dx.doi.org/10.3847/1538-4365/ab74e0"
+    "url": "https://dx.doi.org/10.3847/1538-4365/ab74e0",
+    "invited": false
   },
   {
     "bibcode": "2025A&A...694A.265A",
@@ -248,7 +255,8 @@
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
     "citations": 8,
-    "url": "https://dx.doi.org/10.1051/0004-6361/202451550"
+    "url": "https://dx.doi.org/10.1051/0004-6361/202451550",
+    "invited": false
   },
   {
     "bibcode": "2025A&A...700A..23A",
@@ -265,11 +273,12 @@
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
     "citations": 2,
-    "url": "https://dx.doi.org/10.1051/0004-6361/202554299"
+    "url": "https://dx.doi.org/10.1051/0004-6361/202554299",
+    "invited": false
   },
   {
     "bibcode": "2025ApJ...984L..64A",
-    "title": "Characterizing the Impact of Alfv\u00e9n Wave Forcing in Interplanetary Space on the Distribution of Near-Earth Solar Wind Speeds",
+    "title": "Characterizing the Impact of Alfvén Wave Forcing in Interplanetary Space on the Distribution of Near-Earth Solar Wind Speeds",
     "authors": [
       "Alterman, B. L."
     ],
@@ -278,7 +287,8 @@
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
     "citations": 5,
-    "url": "https://dx.doi.org/10.3847/2041-8213/add0a6"
+    "url": "https://dx.doi.org/10.3847/2041-8213/add0a6",
+    "invited": false
   },
   {
     "bibcode": "2018ApJ...864..112A",
@@ -294,7 +304,8 @@
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
     "citations": 87,
-    "url": "https://dx.doi.org/10.3847/1538-4357/aad23f"
+    "url": "https://dx.doi.org/10.3847/1538-4357/aad23f",
+    "invited": false
   },
   {
     "bibcode": "2023A&A...675A.196M",
@@ -318,7 +329,8 @@
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
     "citations": 18,
-    "url": "https://dx.doi.org/10.1051/0004-6361/202345951"
+    "url": "https://dx.doi.org/10.1051/0004-6361/202345951",
+    "invited": false
   },
   {
     "bibcode": "2022ApJ...924..112V",
@@ -349,7 +361,8 @@
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
     "citations": 49,
-    "url": "https://dx.doi.org/10.3847/1538-4357/ac36d5"
+    "url": "https://dx.doi.org/10.3847/1538-4357/ac36d5",
+    "invited": false
   },
   {
     "bibcode": "2021ApJ...909....7K",
@@ -366,7 +379,7 @@
       "Lichko, E.",
       "Livi, R.",
       "McManus, M.",
-      "Martinovi\u0107, M.",
+      "Martinović, M.",
       "Rahmati, A.",
       "Stevens, M.",
       "Whittlesey, P."
@@ -376,18 +389,19 @@
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
     "citations": 55,
-    "url": "https://dx.doi.org/10.3847/1538-4357/abd7a0"
+    "url": "https://dx.doi.org/10.3847/1538-4357/abd7a0",
+    "invited": false
   },
   {
     "bibcode": "2025ApJ...986L..28H",
-    "title": "The Temperature Anisotropy and Helium Abundance Features of Alfv\u00e9nic Slow Solar Wind Observed by Parker Solar Probe, Helios, and Wind Missions",
+    "title": "The Temperature Anisotropy and Helium Abundance Features of Alfvénic Slow Solar Wind Observed by Parker Solar Probe, Helios, and Wind Missions",
     "authors": [
       "Huang, J.",
       "Larson, D. E.",
       "Ervin, T.",
       "Liu, M.",
       "Ortiz, O.",
-      "Martinovi\u0107, M. M.",
+      "Martinović, M. M.",
       "Huang, Z.",
       "Chasapis, A.",
       "Chu, X.",
@@ -411,7 +425,8 @@
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
     "citations": 15,
-    "url": "https://dx.doi.org/10.3847/2041-8213/ade0ac"
+    "url": "https://dx.doi.org/10.3847/2041-8213/ade0ac",
+    "invited": false
   },
   {
     "bibcode": "2019ApJ...884L..53W",
@@ -429,7 +444,8 @@
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
     "citations": 47,
-    "url": "https://dx.doi.org/10.3847/2041-8213/ab4adc"
+    "url": "https://dx.doi.org/10.3847/2041-8213/ab4adc",
+    "invited": false
   },
   {
     "bibcode": "2019ApJ...879L...6A",
@@ -443,7 +459,8 @@
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
     "citations": 46,
-    "url": "https://dx.doi.org/10.3847/2041-8213/ab2391"
+    "url": "https://dx.doi.org/10.3847/2041-8213/ab2391",
+    "invited": false
   },
   {
     "bibcode": "2020MNRAS.498.5524W",
@@ -460,7 +477,7 @@
       "Case, A. W.",
       "Kasper, J. C.",
       "Klein, K. G.",
-      "Martinovi\u0107, M. M.",
+      "Martinović, M. M.",
       "Stevens, M."
     ],
     "month": "",
@@ -468,13 +485,14 @@
     "journal": "Monthly Notices of the Royal Astronomical Society",
     "publication_type": "article",
     "citations": 37,
-    "url": "https://dx.doi.org/10.1093/mnras/staa2770"
+    "url": "https://dx.doi.org/10.1093/mnras/staa2770",
+    "invited": false
   },
   {
     "bibcode": "2020ApJS..246...30M",
     "title": "The Enhancement of Proton Stochastic Heating in the Near-Sun Solar Wind",
     "authors": [
-      "Martinovi\u0107, M. M.",
+      "Martinović, M. M.",
       "Klein, K. G.",
       "Kasper, J. C.",
       "Case, A. W.",
@@ -501,15 +519,16 @@
     "journal": "The Astrophysical Journal Supplement Series",
     "publication_type": "article",
     "citations": 42,
-    "url": "https://dx.doi.org/10.3847/1538-4365/ab527f"
+    "url": "https://dx.doi.org/10.3847/1538-4365/ab527f",
+    "invited": false
   },
   {
     "bibcode": "2021ApJ...923..116M",
     "title": "Ion-driven Instabilities in the Inner Heliosphere. I. Statistical Trends",
     "authors": [
-      "Martinovi\u0107, M. M.",
+      "Martinović, M. M.",
       "Klein, K. G.",
-      "\u010eurovcov\u00e1, T.",
+      "Ďurovcová, T.",
       "Alterman, B. L."
     ],
     "month": "",
@@ -517,7 +536,8 @@
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
     "citations": 19,
-    "url": "https://dx.doi.org/10.3847/1538-4357/ac3081"
+    "url": "https://dx.doi.org/10.3847/1538-4357/ac3081",
+    "invited": false
   },
   {
     "bibcode": "2021SoPh..296...67A",
@@ -533,7 +553,8 @@
     "journal": "Solar Physics",
     "publication_type": "article",
     "citations": 20,
-    "url": "https://dx.doi.org/10.1007/s11207-021-01801-9"
+    "url": "https://dx.doi.org/10.1007/s11207-021-01801-9",
+    "invited": false
   },
   {
     "bibcode": "2023BAAS...55c.199K",
@@ -596,7 +617,8 @@
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://dx.doi.org/10.3847/25c2cfeb.0e9841dd"
+    "url": "https://dx.doi.org/10.3847/25c2cfeb.0e9841dd",
+    "invited": false
   },
   {
     "bibcode": "2023ApJ...952...42A",
@@ -613,7 +635,8 @@
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
     "citations": 5,
-    "url": "https://dx.doi.org/10.3847/1538-4357/acd24a"
+    "url": "https://dx.doi.org/10.3847/1538-4357/acd24a",
+    "invited": false
   },
   {
     "bibcode": "2023BAAS...55c.038B",
@@ -744,7 +767,8 @@
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
     "citations": 1,
-    "url": "https://dx.doi.org/10.3847/25c2cfeb.e0bf48d5"
+    "url": "https://dx.doi.org/10.3847/25c2cfeb.e0bf48d5",
+    "invited": false
   },
   {
     "bibcode": "2022ApJ...936...83R",
@@ -763,7 +787,8 @@
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
     "citations": 14,
-    "url": "https://dx.doi.org/10.3847/1538-4357/ac8873"
+    "url": "https://dx.doi.org/10.3847/1538-4357/ac8873",
+    "invited": false
   },
   {
     "bibcode": "2025GeoRL..5215186B",
@@ -782,7 +807,8 @@
     "journal": "Geophysical Research Letters",
     "publication_type": "article",
     "citations": 1,
-    "url": "https://dx.doi.org/10.1029/2025GL115186"
+    "url": "https://dx.doi.org/10.1029/2025GL115186",
+    "invited": false
   },
   {
     "bibcode": "2024ApJ...964L..31A",
@@ -799,7 +825,8 @@
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
     "citations": 0,
-    "url": "https://dx.doi.org/10.3847/2041-8213/ad2deb"
+    "url": "https://dx.doi.org/10.3847/2041-8213/ad2deb",
+    "invited": false
   },
   {
     "bibcode": "2023ApJ...950...51J",
@@ -828,7 +855,8 @@
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
     "citations": 5,
-    "url": "https://dx.doi.org/10.3847/1538-4357/accc32"
+    "url": "https://dx.doi.org/10.3847/1538-4357/accc32",
+    "invited": false
   },
   {
     "bibcode": "2023BAAS...55c.341R",
@@ -857,7 +885,8 @@
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
     "citations": 1,
-    "url": "https://dx.doi.org/10.3847/25c2cfeb.6bd5e78b"
+    "url": "https://dx.doi.org/10.3847/25c2cfeb.6bd5e78b",
+    "invited": false
   },
   {
     "bibcode": "2019PhDT.......121A",
@@ -870,7 +899,8 @@
     "journal": "Ph.D. Thesis",
     "publication_type": "phdthesis",
     "citations": 2,
-    "url": "https://ui.adsabs.harvard.edu/abs/2019PhDT.......121A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2019PhDT.......121A",
+    "invited": false
   },
   {
     "bibcode": "2023BAAS...55c.025B",
@@ -926,7 +956,8 @@
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://dx.doi.org/10.3847/25c2cfeb.bff53876"
+    "url": "https://dx.doi.org/10.3847/25c2cfeb.bff53876",
+    "invited": false
   },
   {
     "bibcode": "2022RNAAS...6..135A",
@@ -939,20 +970,21 @@
     "journal": "Research Notes of the American Astronomical Society",
     "publication_type": "article",
     "citations": 1,
-    "url": "https://dx.doi.org/10.3847/2515-5172/ac7a2f"
+    "url": "https://dx.doi.org/10.3847/2515-5172/ac7a2f",
+    "invited": false
   },
   {
     "bibcode": "2021Atmos..12.1277N",
     "title": "Spectra of Temperature Fluctuations in the Solar Wind",
     "authors": [
-      "N\u011bme\u010dek, Z.",
-      "\u0160afr\u00e1nkov\u00e1, J.",
-      "N\u011bmec, F.",
-      "\u010eurovcov\u00e1, T.",
-      "Pit\u0148a, A.",
+      "Němeček, Z.",
+      "Šafránková, J.",
+      "Němec, F.",
+      "Ďurovcová, T.",
+      "Pitňa, A.",
       "Alterman, B. L.",
       "Voitenko, Y. M.",
-      "Pavl\u016f, J.",
+      "Pavlů, J.",
       "Stevens, M. L."
     ],
     "month": "",
@@ -960,7 +992,8 @@
     "journal": "Atmosphere",
     "publication_type": "article",
     "citations": 4,
-    "url": "https://dx.doi.org/10.3390/atmos12101277"
+    "url": "https://dx.doi.org/10.3390/atmos12101277",
+    "invited": false
   },
   {
     "bibcode": "2023BAAS...55c.415V",
@@ -984,7 +1017,8 @@
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://dx.doi.org/10.3847/25c2cfeb.28b02668"
+    "url": "https://dx.doi.org/10.3847/25c2cfeb.28b02668",
+    "invited": false
   },
   {
     "bibcode": "2023BAAS...55c.073C",
@@ -1027,7 +1061,8 @@
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://dx.doi.org/10.3847/25c2cfeb.1c7fc2c0"
+    "url": "https://dx.doi.org/10.3847/25c2cfeb.1c7fc2c0",
+    "invited": false
   },
   {
     "bibcode": "2024AGUFMSH33E2787A",
@@ -1076,7 +1111,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH33E2787A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH33E2787A",
+    "invited": false
   },
   {
     "bibcode": "2023BAAS...55c.271M",
@@ -1096,7 +1132,8 @@
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
     "citations": 1,
-    "url": "https://dx.doi.org/10.3847/25c2cfeb.d070989e"
+    "url": "https://dx.doi.org/10.3847/25c2cfeb.d070989e",
+    "invited": false
   },
   {
     "bibcode": "2022AGUFMSH45C2347L",
@@ -1125,7 +1162,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH45C2347L"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH45C2347L",
+    "invited": false
   },
   {
     "bibcode": "2022AGUFMSH42D2320A",
@@ -1164,7 +1202,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH42D2320A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH42D2320A",
+    "invited": false
   },
   {
     "bibcode": "2023AGUFMSH43A..04A",
@@ -1181,7 +1220,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH43A..04A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH43A..04A",
+    "invited": false
   },
   {
     "bibcode": "2022AGUFMSH35D1837M",
@@ -1205,7 +1245,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH35D1837M"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH35D1837M",
+    "invited": false
   },
   {
     "bibcode": "2021AGUFMSH55F1908A",
@@ -1222,7 +1263,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2021AGUFMSH55F1908A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2021AGUFMSH55F1908A",
+    "invited": false
   },
   {
     "bibcode": "2021AGUFMSH35C2063M",
@@ -1238,7 +1280,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2021AGUFMSH35C2063M"
+    "url": "https://ui.adsabs.harvard.edu/abs/2021AGUFMSH35C2063M",
+    "invited": false
   },
   {
     "bibcode": "2022dsss.rept..158A",
@@ -1368,7 +1411,8 @@
     "journal": "White paper prepared for the The Decadal Survey on Solar and Space Physics (Heliophysics",
     "publication_type": "techreport",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022dsss.rept..158A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022dsss.rept..158A",
+    "invited": false
   },
   {
     "bibcode": "2022dsss.rept..319K",
@@ -1431,11 +1475,12 @@
     "journal": "White paper prepared for the The Decadal Survey on Solar and Space Physics (Heliophysics",
     "publication_type": "techreport",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022dsss.rept..319K"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022dsss.rept..319K",
+    "invited": false
   },
   {
     "bibcode": "2025A&A...693A.243D",
-    "title": "On Alfv\u00e9nic turbulence of solar wind streams observed by Solar Orbiter during March 2022 perihelion and their source regions",
+    "title": "On Alfvénic turbulence of solar wind streams observed by Solar Orbiter during March 2022 perihelion and their source regions",
     "authors": [
       "D'Amicis, R.",
       "Velli, M.",
@@ -1446,7 +1491,7 @@
       "De, M. R.",
       "Bruno, R.",
       "Wang, Y.",
-      "R\u00e9ville, V.",
+      "Réville, V.",
       "Baker, D.",
       "Matteini, L.",
       "Yardley, S.",
@@ -1477,7 +1522,8 @@
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
     "citations": 4,
-    "url": "https://dx.doi.org/10.1051/0004-6361/202451686"
+    "url": "https://dx.doi.org/10.1051/0004-6361/202451686",
+    "invited": false
   },
   {
     "bibcode": "2023A&A...676A..36L",
@@ -1522,7 +1568,8 @@
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
     "citations": 23,
-    "url": "https://dx.doi.org/10.1051/0004-6361/202346304"
+    "url": "https://dx.doi.org/10.1051/0004-6361/202346304",
+    "invited": false
   },
   {
     "bibcode": "2018PhRvL.120t5102K",
@@ -1539,7 +1586,8 @@
     "journal": "Physical Review Letters",
     "publication_type": "article",
     "citations": 68,
-    "url": "https://dx.doi.org/10.1103/PhysRevLett.120.205102"
+    "url": "https://dx.doi.org/10.1103/PhysRevLett.120.205102",
+    "invited": false
   },
   {
     "bibcode": "2022dsss.rept..220C",
@@ -1582,7 +1630,8 @@
     "journal": "White paper prepared for the The Decadal Survey on Solar and Space Physics (Heliophysics",
     "publication_type": "techreport",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022dsss.rept..220C"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022dsss.rept..220C",
+    "invited": false
   },
   {
     "bibcode": "2022dsss.rept..299V",
@@ -1606,7 +1655,8 @@
     "journal": "White paper prepared for the The Decadal Survey on Solar and Space Physics (Heliophysics",
     "publication_type": "techreport",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022dsss.rept..299V"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022dsss.rept..299V",
+    "invited": false
   },
   {
     "bibcode": "2022dsss.rept..295R",
@@ -1635,7 +1685,8 @@
     "journal": "White paper prepared for the The Decadal Survey on Solar and Space Physics (Heliophysics",
     "publication_type": "techreport",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022dsss.rept..295R"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022dsss.rept..295R",
+    "invited": false
   },
   {
     "bibcode": "2024A&A...682A..44L",
@@ -1650,10 +1701,10 @@
       "Livi, S.",
       "Lavraud, B.",
       "Rouillard, A. P.",
-      "G\u00e9not, V.",
-      "Andr\u00e9, N.",
+      "Génot, V.",
+      "André, N.",
       "Fruit, G.",
-      "R\u00e9ville, V.",
+      "Réville, V.",
       "Kieokaew, R.",
       "Plotnikov, I.",
       "Penou, E.",
@@ -1677,7 +1728,8 @@
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
     "citations": 3,
-    "url": "https://dx.doi.org/10.1051/0004-6361/202347874"
+    "url": "https://dx.doi.org/10.1051/0004-6361/202347874",
+    "invited": false
   },
   {
     "bibcode": "2025arXiv250820391A",
@@ -1691,7 +1743,8 @@
     "journal": "arXiv e-prints",
     "publication_type": "eprint",
     "citations": 1,
-    "url": "https://dx.doi.org/10.48550/arXiv.2508.20391"
+    "url": "https://dx.doi.org/10.48550/arXiv.2508.20391",
+    "invited": false
   },
   {
     "bibcode": "2022FrASS...956347R",
@@ -1720,7 +1773,8 @@
     "journal": "Frontiers in Astronomy and Space Sciences",
     "publication_type": "article",
     "citations": 16,
-    "url": "https://dx.doi.org/10.3389/fspas.2022.1056347"
+    "url": "https://dx.doi.org/10.3389/fspas.2022.1056347",
+    "invited": false
   },
   {
     "bibcode": "2023IAUS..372....3M",
@@ -1743,7 +1797,7 @@
       "Linker, J.",
       "Malaspina, D. M.",
       "Matthews, S.",
-      "M\u00fcller, D.",
+      "Müller, D.",
       "Parenti, S.",
       "Petrie, G.",
       "Spadaro, D.",
@@ -1756,7 +1810,8 @@
     "journal": "The Era of Multi-Messenger Solar Physics",
     "publication_type": "inproceedings",
     "citations": 5,
-    "url": "https://dx.doi.org/10.1017/S1743921323001266"
+    "url": "https://dx.doi.org/10.1017/S1743921323001266",
+    "invited": false
   },
   {
     "bibcode": "2023AGUFMSH51E2669W",
@@ -1810,7 +1865,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH51E2669W"
+    "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH51E2669W",
+    "invited": false
   },
   {
     "bibcode": "2020arXiv200408632M",
@@ -1845,7 +1901,8 @@
     "journal": "arXiv e-prints",
     "publication_type": "eprint",
     "citations": 3,
-    "url": "https://dx.doi.org/10.48550/arXiv.2004.08632"
+    "url": "https://dx.doi.org/10.48550/arXiv.2004.08632",
+    "invited": false
   },
   {
     "bibcode": "2022FrASS...9.2868H",
@@ -1871,11 +1928,12 @@
     "journal": "Frontiers in Astronomy and Space Sciences",
     "publication_type": "article",
     "citations": 2,
-    "url": "https://dx.doi.org/10.3389/fspas.2022.912868"
+    "url": "https://dx.doi.org/10.3389/fspas.2022.912868",
+    "invited": false
   },
   {
     "bibcode": "2024AGUFMSH11B..03R",
-    "title": "Comparing the Radial Evolution of Slow and Alfv\u00e9nic Slow Solar Wind with Parker Solar Probe and Solar Orbiter",
+    "title": "Comparing the Radial Evolution of Slow and Alfvénic Slow Solar Wind with Parker Solar Probe and Solar Orbiter",
     "authors": [
       "Rivera, Y.",
       "Badman, S. T.",
@@ -1909,7 +1967,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH11B..03R"
+    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH11B..03R",
+    "invited": false
   },
   {
     "bibcode": "2023yCat..36750196M",
@@ -1933,7 +1992,8 @@
     "journal": "VizieR Online Data Catalog",
     "publication_type": "dataset",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2023yCat..36750196M"
+    "url": "https://ui.adsabs.harvard.edu/abs/2023yCat..36750196M",
+    "invited": false
   },
   {
     "bibcode": "2024AGUFMSH23F..01B",
@@ -1951,13 +2011,14 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH23F..01B"
+    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH23F..01B",
+    "invited": false
   },
   {
     "bibcode": "2022AGUFMSH46A..03M",
     "title": "Overview and Classification of Solar Wind Instabilities in the Inner Heliosphere",
     "authors": [
-      "Martinovi\u0107, M.",
+      "Martinović, M.",
       "Klein, K. G.",
       "Durovcova, T.",
       "Alterman, B."
@@ -1967,7 +2028,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH46A..03M"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH46A..03M",
+    "invited": false
   },
   {
     "bibcode": "2023EGUGA..25.7823A",
@@ -1999,7 +2061,8 @@
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://dx.doi.org/10.5194/egusphere-egu23-7823"
+    "url": "https://dx.doi.org/10.5194/egusphere-egu23-7823",
+    "invited": false
   },
   {
     "bibcode": "2021EGUGA..2312435L",
@@ -2021,7 +2084,8 @@
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://dx.doi.org/10.5194/egusphere-egu21-12435"
+    "url": "https://dx.doi.org/10.5194/egusphere-egu21-12435",
+    "invited": false
   },
   {
     "bibcode": "2020AGUFMSH035..05L",
@@ -2051,11 +2115,12 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2020AGUFMSH035..05L"
+    "url": "https://ui.adsabs.harvard.edu/abs/2020AGUFMSH035..05L",
+    "invited": false
   },
   {
     "bibcode": "2024AGUFMSH31F2665H",
-    "title": "Temperature Anisotropy and Alpha Abundance Features of Alfv\u00e9nic Slow Solar Wind Observed by Parker Solar Probe, Helios, and Wind Missions",
+    "title": "Temperature Anisotropy and Alpha Abundance Features of Alfvénic Slow Solar Wind Observed by Parker Solar Probe, Helios, and Wind Missions",
     "authors": [
       "Huang, J.",
       "Larson, D. E.",
@@ -2084,7 +2149,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH31F2665H"
+    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH31F2665H",
+    "invited": false
   },
   {
     "bibcode": "2024EGUGA..2613328A",
@@ -2116,7 +2182,8 @@
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://dx.doi.org/10.5194/egusphere-egu24-13328"
+    "url": "https://dx.doi.org/10.5194/egusphere-egu24-13328",
+    "invited": false
   },
   {
     "bibcode": "2023AGUFMSH34B..01L",
@@ -2128,7 +2195,7 @@
       "Rouillard, A. P.",
       "Genot, V. N.",
       "Plotnikov, I.",
-      "R\u00e9ville, V.",
+      "Réville, V.",
       "Kieokaew, R. O.",
       "Prech, L.",
       "D'Amicis, R.",
@@ -2147,7 +2214,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH34B..01L"
+    "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH34B..01L",
+    "invited": false
   },
   {
     "bibcode": "2023AGUFMSH31G3048D",
@@ -2179,7 +2247,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH31G3048D"
+    "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH31G3048D",
+    "invited": false
   },
   {
     "bibcode": "2023AGUFMSH51C2622D",
@@ -2209,7 +2278,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH51C2622D"
+    "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH51C2622D",
+    "invited": false
   },
   {
     "bibcode": "2023AGUFMSH43D3194M",
@@ -2233,7 +2303,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH43D3194M"
+    "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH43D3194M",
+    "invited": false
   },
   {
     "bibcode": "2022AGUFMSH22E2047D",
@@ -2257,7 +2328,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH22E2047D"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH22E2047D",
+    "invited": false
   },
   {
     "bibcode": "2022AGUFMSH36B..07S",
@@ -2283,7 +2355,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH36B..07S"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH36B..07S",
+    "invited": false
   },
   {
     "bibcode": "2018shin.confE...6K",
@@ -2300,7 +2373,8 @@
     "journal": "SHINE",
     "publication_type": "abstract",
     "citations": 1,
-    "url": "https://ui.adsabs.harvard.edu/abs/2018shin.confE...6K"
+    "url": "https://ui.adsabs.harvard.edu/abs/2018shin.confE...6K",
+    "invited": false
   },
   {
     "bibcode": "2023LPICo2808.8113E",
@@ -2318,7 +2392,8 @@
     "journal": "Uranus Flagship: Investigations and Instruments for Cross-Discipline Science Workshop",
     "publication_type": "inproceedings",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2023LPICo2808.8113E"
+    "url": "https://ui.adsabs.harvard.edu/abs/2023LPICo2808.8113E",
+    "invited": false
   },
   {
     "bibcode": "2023BAAS...55c.116G",
@@ -2329,7 +2404,7 @@
       "Provornikova, E.",
       "Kucharek, H.",
       "Swaczyna, P.",
-      "Sok\u00f3\u0142, J. M.",
+      "Sokół, J. M.",
       "Kubiak, M. A.",
       "Alterman, B. L."
     ],
@@ -2338,7 +2413,8 @@
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://dx.doi.org/10.3847/25c2cfeb.5deec7eb"
+    "url": "https://dx.doi.org/10.3847/25c2cfeb.5deec7eb",
+    "invited": false
   },
   {
     "bibcode": "2024AGUFMSH33E2788G",
@@ -2366,7 +2442,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH33E2788G"
+    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH33E2788G",
+    "invited": false
   },
   {
     "bibcode": "2024AGUFMSH23C2951L",
@@ -2394,7 +2471,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH23C2951L"
+    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH23C2951L",
+    "invited": false
   },
   {
     "bibcode": "2024AGUFMP32B...02D",
@@ -2425,7 +2503,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMP32B...02D"
+    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMP32B...02D",
+    "invited": false
   },
   {
     "bibcode": "2024EGUGA..2620809L",
@@ -2453,7 +2532,8 @@
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://dx.doi.org/10.5194/egusphere-egu24-20809"
+    "url": "https://dx.doi.org/10.5194/egusphere-egu24-20809",
+    "invited": false
   },
   {
     "bibcode": "2022AGUFMSH15E1521G",
@@ -2477,7 +2557,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH15E1521G"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH15E1521G",
+    "invited": false
   },
   {
     "bibcode": "2022tess.conf111b01",
@@ -2496,7 +2577,8 @@
     "journal": "Triennial Earth-Sun Summit",
     "publication_type": "inproceedings",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022tess.conf111b01"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022tess.conf111b01",
+    "invited": false
   },
   {
     "bibcode": "2021cosp...43E1117A",
@@ -2511,7 +2593,8 @@
     "journal": "COSPAR",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2021cosp...43E1117A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2021cosp...43E1117A",
+    "invited": false
   },
   {
     "bibcode": "2020AGUFMSH0490013V",
@@ -2535,7 +2618,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2020AGUFMSH0490013V"
+    "url": "https://ui.adsabs.harvard.edu/abs/2020AGUFMSH0490013V",
+    "invited": false
   },
   {
     "bibcode": "2019AGUFMSH13C3452H",
@@ -2571,7 +2655,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2019AGUFMSH13C3452H"
+    "url": "https://ui.adsabs.harvard.edu/abs/2019AGUFMSH13C3452H",
+    "invited": false
   },
   {
     "bibcode": "2022shin.confE.120A",
@@ -2608,7 +2693,8 @@
     "journal": "SHINE",
     "publication_type": "inproceedings",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022shin.confE.120A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022shin.confE.120A",
+    "invited": false
   },
   {
     "bibcode": "2022cosp...44.1092A",
@@ -2645,7 +2731,8 @@
     "journal": "COSPAR",
     "publication_type": "inproceedings",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1092A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1092A",
+    "invited": false
   },
   {
     "bibcode": "2022cosp...44.1656J",
@@ -2665,7 +2752,8 @@
     "journal": "COSPAR",
     "publication_type": "inproceedings",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1656J"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1656J",
+    "invited": false
   },
   {
     "bibcode": "2020AGUFMSH0290004W",
@@ -2690,7 +2778,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2020AGUFMSH0290004W"
+    "url": "https://ui.adsabs.harvard.edu/abs/2020AGUFMSH0290004W",
+    "invited": false
   },
   {
     "bibcode": "2014AGUFMSH33A4130T",
@@ -2709,7 +2798,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2014AGUFMSH33A4130T"
+    "url": "https://ui.adsabs.harvard.edu/abs/2014AGUFMSH33A4130T",
+    "invited": false
   },
   {
     "bibcode": "2023LPICo2808.8118P",
@@ -2727,7 +2817,8 @@
     "journal": "Uranus Flagship: Investigations and Instruments for Cross-Discipline Science Workshop",
     "publication_type": "inproceedings",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2023LPICo2808.8118P"
+    "url": "https://ui.adsabs.harvard.edu/abs/2023LPICo2808.8118P",
+    "invited": false
   },
   {
     "bibcode": "2022AGUFMSH15A..05L",
@@ -2749,7 +2840,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH15A..05L"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH15A..05L",
+    "invited": false
   },
   {
     "bibcode": "2022AGUFMSH15C1491J",
@@ -2772,7 +2864,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH15C1491J"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH15C1491J",
+    "invited": false
   },
   {
     "bibcode": "2020AGUFMSH053..01A",
@@ -2788,7 +2881,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2020AGUFMSH053..01A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2020AGUFMSH053..01A",
+    "invited": false
   },
   {
     "bibcode": "2019AGUFMSH21C3331V",
@@ -2821,13 +2915,14 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2019AGUFMSH21C3331V"
+    "url": "https://ui.adsabs.harvard.edu/abs/2019AGUFMSH21C3331V",
+    "invited": false
   },
   {
     "bibcode": "2019AGUFMSH13C3448M",
     "title": "Stochastic heating of the solar wind becomes increasingly significant close to the Alfven critical point",
     "authors": [
-      "Martinovi\u0107, M.",
+      "Martinović, M.",
       "Klein, K. G.",
       "Kasper, J. C.",
       "Case, A. W.",
@@ -2853,7 +2948,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2019AGUFMSH13C3448M"
+    "url": "https://ui.adsabs.harvard.edu/abs/2019AGUFMSH13C3448M",
+    "invited": false
   },
   {
     "bibcode": "2017shin.confE...7A",
@@ -2866,7 +2962,8 @@
     "journal": "SHINE",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2017shin.confE...7A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2017shin.confE...7A",
+    "invited": false
   },
   {
     "bibcode": "2017AGUFMSH32A..03A",
@@ -2883,7 +2980,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2017AGUFMSH32A..03A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2017AGUFMSH32A..03A",
+    "invited": false
   },
   {
     "bibcode": "2022shin.confE.214M",
@@ -2899,7 +2997,8 @@
     "journal": "SHINE",
     "publication_type": "inproceedings",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022shin.confE.214M"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022shin.confE.214M",
+    "invited": false
   },
   {
     "bibcode": "2022cosp...44.1221L",
@@ -2927,7 +3026,8 @@
     "journal": "COSPAR",
     "publication_type": "inproceedings",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1221L"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1221L",
+    "invited": false
   },
   {
     "bibcode": "2019AGUFMSH43C3381A",
@@ -2943,7 +3043,7 @@
       "Whittlesey, P. L.",
       "Huang, J.",
       "Klein, K. G.",
-      "Martinovi\u0107, M.",
+      "Martinović, M.",
       "Bale, S. D.",
       "Pulupa, M.",
       "Malaspina, D.",
@@ -2963,7 +3063,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2019AGUFMSH43C3381A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2019AGUFMSH43C3381A",
+    "invited": false
   },
   {
     "bibcode": "2018APS..DPPYO8006K",
@@ -2980,7 +3081,8 @@
     "journal": "APS Division of Plasma Physics",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2018APS..DPPYO8006K"
+    "url": "https://ui.adsabs.harvard.edu/abs/2018APS..DPPYO8006K",
+    "invited": false
   },
   {
     "bibcode": "2018AGUFMSH23B..06K",
@@ -2998,7 +3100,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2018AGUFMSH23B..06K"
+    "url": "https://ui.adsabs.harvard.edu/abs/2018AGUFMSH23B..06K",
+    "invited": false
   },
   {
     "bibcode": "2017shin.confE.112J",
@@ -3017,7 +3120,8 @@
     "journal": "SHINE",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2017shin.confE.112J"
+    "url": "https://ui.adsabs.harvard.edu/abs/2017shin.confE.112J",
+    "invited": false
   },
   {
     "bibcode": "2017shin.confE.111A",
@@ -3034,7 +3138,8 @@
     "journal": "SHINE",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2017shin.confE.111A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2017shin.confE.111A",
+    "invited": false
   },
   {
     "bibcode": "2015AGUFMSH21A2374A",
@@ -3051,7 +3156,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2015AGUFMSH21A2374A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2015AGUFMSH21A2374A",
+    "invited": false
   },
   {
     "bibcode": "2022EGUGA..24.8953A",
@@ -3068,7 +3174,8 @@
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://dx.doi.org/10.5194/egusphere-egu22-8953"
+    "url": "https://dx.doi.org/10.5194/egusphere-egu22-8953",
+    "invited": false
   },
   {
     "bibcode": "2022cosp...44.3205G",
@@ -3088,7 +3195,8 @@
     "journal": "COSPAR",
     "publication_type": "inproceedings",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.3205G"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.3205G",
+    "invited": false
   },
   {
     "bibcode": "2021APS..DPPTO6003M",
@@ -3104,7 +3212,8 @@
     "journal": "APS Division of Plasma Physics",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2021APS..DPPTO6003M"
+    "url": "https://ui.adsabs.harvard.edu/abs/2021APS..DPPTO6003M",
+    "invited": false
   },
   {
     "bibcode": "2019AGUFMSH23A..03K",
@@ -3123,7 +3232,7 @@
       "Livi, R.",
       "MacDowall, R. J.",
       "Mallet, A.",
-      "Martinovi\u0107, M.",
+      "Martinović, M.",
       "Paulson, K.",
       "Pulupa, M.",
       "Stevens, M. L.",
@@ -3134,7 +3243,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2019AGUFMSH23A..03K"
+    "url": "https://ui.adsabs.harvard.edu/abs/2019AGUFMSH23A..03K",
+    "invited": false
   },
   {
     "bibcode": "2019AGUFM.U21B..14A",
@@ -3148,7 +3258,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2019AGUFM.U21B..14A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2019AGUFM.U21B..14A",
+    "invited": false
   },
   {
     "bibcode": "2018AGUFMSH23D3350Q",
@@ -3165,7 +3276,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2018AGUFMSH23D3350Q"
+    "url": "https://ui.adsabs.harvard.edu/abs/2018AGUFMSH23D3350Q",
+    "invited": false
   },
   {
     "bibcode": "2015shin.confE.159A",
@@ -3180,7 +3292,8 @@
     "journal": "SHINE",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2015shin.confE.159A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2015shin.confE.159A",
+    "invited": false
   },
   {
     "bibcode": "2018shin.confE..55Q",
@@ -3197,7 +3310,8 @@
     "journal": "SHINE",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2018shin.confE..55Q"
+    "url": "https://ui.adsabs.harvard.edu/abs/2018shin.confE..55Q",
+    "invited": false
   },
   {
     "bibcode": "2017APS..DPPCO6003K",
@@ -3214,7 +3328,8 @@
     "journal": "APS Division of Plasma Physics",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2017APS..DPPCO6003K"
+    "url": "https://ui.adsabs.harvard.edu/abs/2017APS..DPPCO6003K",
+    "invited": false
   },
   {
     "bibcode": "2014AGUFMSH21B4102W",
@@ -3235,7 +3350,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2014AGUFMSH21B4102W"
+    "url": "https://ui.adsabs.harvard.edu/abs/2014AGUFMSH21B4102W",
+    "invited": false
   },
   {
     "bibcode": "2023AGUFMSH23B..03A",
@@ -3255,7 +3371,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH23B..03A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2023AGUFMSH23B..03A",
+    "invited": false
   },
   {
     "bibcode": "2016AGUFMSH51D2611A",
@@ -3271,7 +3388,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2016AGUFMSH51D2611A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2016AGUFMSH51D2611A",
+    "invited": false
   },
   {
     "bibcode": "2015AGUFMSH31C2429H",
@@ -3290,7 +3408,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2015AGUFMSH31C2429H"
+    "url": "https://ui.adsabs.harvard.edu/abs/2015AGUFMSH31C2429H",
+    "invited": false
   },
   {
     "bibcode": "2022tess.conf20104A",
@@ -3307,7 +3426,8 @@
     "journal": "Triennial Earth-Sun Summit",
     "publication_type": "inproceedings",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022tess.conf20104A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022tess.conf20104A",
+    "invited": false
   },
   {
     "bibcode": "2022EGUGA..24.5984L",
@@ -3334,7 +3454,8 @@
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://dx.doi.org/10.5194/egusphere-egu22-5984"
+    "url": "https://dx.doi.org/10.5194/egusphere-egu22-5984",
+    "invited": false
   },
   {
     "bibcode": "2022cosp...44.1524D",
@@ -3356,7 +3477,8 @@
     "journal": "COSPAR",
     "publication_type": "inproceedings",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1524D"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1524D",
+    "invited": false
   },
   {
     "bibcode": "2021cosp...43E1118A",
@@ -3373,7 +3495,8 @@
     "journal": "COSPAR",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2021cosp...43E1118A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2021cosp...43E1118A",
+    "invited": false
   },
   {
     "bibcode": "2019shin.confE..48A",
@@ -3387,7 +3510,8 @@
     "journal": "SHINE",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2019shin.confE..48A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2019shin.confE..48A",
+    "invited": false
   },
   {
     "bibcode": "2017shin.confE...5Q",
@@ -3404,7 +3528,8 @@
     "journal": "SHINE",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2017shin.confE...5Q"
+    "url": "https://ui.adsabs.harvard.edu/abs/2017shin.confE...5Q",
+    "invited": false
   },
   {
     "bibcode": "2018shin.confE.181A",
@@ -3420,7 +3545,8 @@
     "journal": "SHINE",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2018shin.confE.181A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2018shin.confE.181A",
+    "invited": false
   },
   {
     "bibcode": "2017EGUGA..1911005K",
@@ -3436,7 +3562,8 @@
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2017EGUGA..1911005K"
+    "url": "https://ui.adsabs.harvard.edu/abs/2017EGUGA..1911005K",
+    "invited": false
   },
   {
     "bibcode": "2024AGUFMSH22B..07K",
@@ -3463,7 +3590,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH22B..07K"
+    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH22B..07K",
+    "invited": false
   },
   {
     "bibcode": "2021esoar.10509340A",
@@ -3480,7 +3608,8 @@
     "journal": "ESS Open Archive eprints",
     "publication_type": "eprint",
     "citations": 0,
-    "url": "https://dx.doi.org/10.1002/essoar.10509340.1"
+    "url": "https://dx.doi.org/10.1002/essoar.10509340.1",
+    "invited": false
   },
   {
     "bibcode": "2022shin.confE.122R",
@@ -3499,7 +3628,8 @@
     "journal": "SHINE",
     "publication_type": "inproceedings",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022shin.confE.122R"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022shin.confE.122R",
+    "invited": false
   },
   {
     "bibcode": "2022cosp...44.1540L",
@@ -3527,7 +3657,8 @@
     "journal": "COSPAR",
     "publication_type": "inproceedings",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1540L"
+    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1540L",
+    "invited": false
   },
   {
     "bibcode": "2018AGUFMSH43B3701A",
@@ -3542,7 +3673,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2018AGUFMSH43B3701A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2018AGUFMSH43B3701A",
+    "invited": false
   },
   {
     "bibcode": "2016shin.confE..74A",
@@ -3557,7 +3689,8 @@
     "journal": "SHINE",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2016shin.confE..74A"
+    "url": "https://ui.adsabs.harvard.edu/abs/2016shin.confE..74A",
+    "invited": false
   },
   {
     "bibcode": "2017AGUFMSH32A..09V",
@@ -3574,7 +3707,8 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2017AGUFMSH32A..09V"
+    "url": "https://ui.adsabs.harvard.edu/abs/2017AGUFMSH32A..09V",
+    "invited": false
   },
   {
     "bibcode": "2017AGUFMSH32A..01K",
@@ -3590,6 +3724,55 @@
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2017AGUFMSH32A..01K"
+    "url": "https://ui.adsabs.harvard.edu/abs/2017AGUFMSH32A..01K",
+    "invited": false
+  },
+  {
+    "title": "Collisions in an Expanding Solar Wind (Scene Setting Talk)",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "year": "2017-07-00",
+    "month": "7",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "invited": true,
+    "booktitle": "SHINE Conference",
+    "journal": "SHINE Conference",
+    "keywords": "invited",
+    "invited_url": "ui.adsabs.harvard.edu/abs/2017shin.confE...7A",
+    "url": ""
+  },
+  {
+    "title": "An Experimentalists Introduction to the Solar Wind",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "year": "2017-07-00",
+    "month": "July",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "invited": true,
+    "booktitle": "SHINE Conference Student Day",
+    "journal": "SHINE Conference Student Day",
+    "keywords": "invited",
+    "url": ""
+  },
+  {
+    "title": "Helium Variation Across Two Solar Cycles Reveals A Speed-Dependent Phase Lag",
+    "authors": [
+      "Alterman, B. L.",
+      "Kasper, J. C."
+    ],
+    "year": "2019-12-00",
+    "month": "12",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "invited": true,
+    "booktitle": "AGU Fall Meeting",
+    "journal": "AGU Fall Meeting",
+    "keywords": "invited",
+    "invited_url": "ui.adsabs.harvard.edu/abs/2019AGUFM.U21B..14A",
+    "url": ""
   }
 ]

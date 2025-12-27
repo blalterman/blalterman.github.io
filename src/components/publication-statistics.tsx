@@ -19,6 +19,7 @@ export function PublicationStatistics({ adsMetrics }: PublicationStatisticsProps
   const [citationsDialogOpen, setCitationsDialogOpen] = useState(false)
   const [refereedPapersDialogOpen, setRefereedPapersDialogOpen] = useState(false)
   const [refereedCitationsDialogOpen, setRefereedCitationsDialogOpen] = useState(false)
+  const [hIndexDialogOpen, setHIndexDialogOpen] = useState(false)
 
   const ClickableMetric = ({
     value,
@@ -45,11 +46,12 @@ export function PublicationStatistics({ adsMetrics }: PublicationStatisticsProps
   return (
     <>
       <div className="flex justify-center flex-wrap gap-x-8 mb-12">
-        {/* Non-clickable: h-index */}
-        <div className="flex flex-col items-center">
-          <span className="text-2xl font-bold">{adsMetrics["indicators"]["h"]}</span>
-          <span className="text-sm text-muted-foreground">h-index</span>
-        </div>
+        {/* CLICKABLE: h-index → H-Index Timeline */}
+        <ClickableMetric
+          value={adsMetrics["indicators"]["h"]}
+          label="h-index"
+          onClick={() => setHIndexDialogOpen(true)}
+        />
 
         {/* CLICKABLE: Total papers → Publications Timeline */}
         <ClickableMetric
@@ -136,6 +138,22 @@ export function PublicationStatistics({ adsMetrics }: PublicationStatisticsProps
             <Image
               src="/plots/citations_by_year.svg"
               alt="Citations Timeline showing refereed and non-refereed citations from 2018-2026"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* H-Index Timeline Dialog */}
+      <Dialog open={hIndexDialogOpen} onOpenChange={setHIndexDialogOpen}>
+        <DialogContent className="w-[95vw] max-w-[min(896px,calc((90vh-4rem)*10/7))] max-h-[90vh] overflow-hidden">
+          <DialogTitle className="sr-only">H-Index Timeline</DialogTitle>
+          <div className="relative w-full aspect-[10/7]">
+            <Image
+              src="/plots/h_index_timeline.svg"
+              alt="h-index timeline showing growth from 2014 to 2025"
               fill
               className="object-contain"
               priority
