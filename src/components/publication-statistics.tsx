@@ -2,13 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog'
+import { Dialog, DialogContent } from '@/components/ui/dialog'
 import { TrendingUp } from 'lucide-react'
 
 interface PublicationStatisticsProps {
