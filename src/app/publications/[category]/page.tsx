@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { GraduationCap, BookOpen, Database, FileText, Presentation, ScrollText, FileCode } from "lucide-react";
 import { Metadata, ResolvingMetadata } from 'next';
 import { loadJSONData } from "@/lib/data-loader";
-import { getPublicationsByType } from "@/lib/publication-utils";
+import { getPublicationsByType, getInvitedPublications } from "@/lib/publication-utils";
 import type { Publication } from "@/types/publication";
 import { redirect } from "next/navigation";
 import Link from "next/link";
@@ -80,7 +80,9 @@ export default async function PublicationCategoryPage({ params }: { params: Prom
 
   const adsPublications = loadJSONData<Publication[]>('ads_publications.json');
   const adsMetrics = loadJSONData<any>('ads_metrics.json');
-  const publications = getPublicationsByType(adsPublications, categoryData.publicationType);
+  const publications = categoryData.slug === 'invited-talks'
+    ? getInvitedPublications(adsPublications, categoryData.publicationType)
+    : getPublicationsByType(adsPublications, categoryData.publicationType);
 
   // If no publications in this category, redirect to /publications
   if (publications.length === 0) {

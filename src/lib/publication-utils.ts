@@ -163,3 +163,40 @@ export function isAlterman(authorName: string): boolean {
     normalized === 'b.l. alterman'
   );
 }
+
+/**
+ * Filter publications by invited status.
+ *
+ * @param publications Array of publications to filter
+ * @param invited Filter for invited (true) or contributed (false)
+ * @returns Filtered publications
+ */
+export function filterPublicationsByInvited(
+  publications: Publication[],
+  invited: boolean
+): Publication[] {
+  return publications.filter(pub => pub.invited === invited);
+}
+
+/**
+ * Get invited publications of a specific type, sorted by date.
+ * Convenience function combining type and invited filtering.
+ *
+ * @param publications Array of all publications
+ * @param type Publication type(s) to filter by
+ * @param order Sort order ('desc' for newest first, 'asc' for oldest first)
+ * @returns Filtered and sorted invited publications
+ */
+export function getInvitedPublications(
+  publications: Publication[],
+  type: string | string[],
+  order: 'desc' | 'asc' = 'desc'
+): Publication[] {
+  return sortPublicationsByDate(
+    filterPublicationsByInvited(
+      filterPublicationsByType(publications, type),
+      true
+    ),
+    order
+  );
+}

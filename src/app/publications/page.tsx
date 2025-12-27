@@ -71,7 +71,13 @@ export default function PublicationsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
         {categoriesData.categories.map((category) => {
           const IconComponent = iconMap[category.icon as keyof typeof iconMap];
-          const publications = getPublicationsByType(adsPublications, category.publicationType);
+          let publications = getPublicationsByType(adsPublications, category.publicationType);
+
+          // Special case: filter by invited field for invited-talks
+          if (category.slug === 'invited-talks') {
+            publications = publications.filter(pub => pub.invited === true);
+          }
+
           const count = publications.length;
 
           // Only show categories that have publications
