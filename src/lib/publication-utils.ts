@@ -294,7 +294,7 @@ export function getSeminarPresentations(
  * Decode HTML entities in text (e.g., &amp; → &, &lt; → <).
  *
  * Handles common HTML entities returned by ADS API in publication titles.
- * Uses browser's DOMParser for accurate decoding.
+ * Uses regex-based decoding for reliability across server and client rendering.
  *
  * @param text Text containing HTML entities
  * @returns Decoded text with entities replaced by actual characters
@@ -304,19 +304,15 @@ export function getSeminarPresentations(
  * decodeHtmlEntities("E &lt; 10 keV") // "E < 10 keV"
  */
 export function decodeHtmlEntities(text: string): string {
-  if (typeof window === 'undefined') {
-    // Server-side: use regex-based decoding for common entities
-    return text
-      .replace(/&amp;/g, '&')
-      .replace(/&lt;/g, '<')
-      .replace(/&gt;/g, '>')
-      .replace(/&quot;/g, '"')
-      .replace(/&#39;/g, "'")
-      .replace(/&nbsp;/g, ' ');
-  }
-
-  // Client-side: use DOMParser for complete entity decoding
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(text, 'text/html');
-  return doc.documentElement.textContent || text;
+  // Use regex-based decoding for common entities (works on both server and client)
+  return text
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&#(\d+);/g, (match, dec) => String.fromCharCode(dec))
+    .replace(/&#x([0-9a-fA-F]+);/g, (match, hex) => String.fromCharCode(parseInt(hex, 16)));
 }
