@@ -30,15 +30,24 @@ jobs:
         run: |
           python scripts/fetch_ads_publications_to_data_dir.py
 
+      - name: Merge invited conferences
+        run: |
+          python scripts/merge_invited_conferences.py
+
+      - name: Compute invited metrics
+        run: |
+          python scripts/compute_invited_metrics.py
+
       - name: Pull latest changes
         run: |
           git fetch origin
           git pull origin main --ff-only
 
-      - name: Commit updated publications file
+      - name: Commit updated publications and metrics files
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add public/data/ads_publications.json
-          git commit -m "Update ADS publications [automated]" || echo "No changes to commit"
+          git add public/data/invited_metrics.json
+          git commit -m "Update ADS publications and invited metrics [automated]" || echo "No changes to commit"
           git push origin main

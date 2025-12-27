@@ -14,6 +14,7 @@ Date: 2025-12-26
 """
 
 import json
+import sys
 from pathlib import Path
 from typing import Dict, List, Any
 
@@ -145,7 +146,7 @@ def main():
     if not ads_file.exists():
         print(f"\nError: ADS publications file not found: {ads_file}")
         print("Run fetch_ads_publications_to_data_dir.py first to generate ADS data.")
-        return
+        sys.exit(1)
 
     print(f"\nLoading ADS publications from {ads_file.name}...")
     with open(ads_file, 'r', encoding='utf-8') as f:
@@ -157,7 +158,7 @@ def main():
     if not invited_file.exists():
         print(f"\nError: Invited conferences file not found: {invited_file}")
         print("Run convert_invited_bibtex.py first to generate invited data.")
-        return
+        sys.exit(1)
 
     print(f"\nLoading invited conferences from {invited_file.name}...")
     with open(invited_file, 'r', encoding='utf-8') as f:
