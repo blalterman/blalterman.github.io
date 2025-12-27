@@ -29,11 +29,14 @@ jobs:
           git fetch origin main
           git rebase origin/main
 
-      - name: Run citation update script
+      - name: Fetch citations data from NASA ADS
         env:
           ADS_ORCID: ${{ secrets.ADS_ORCID }}
           ADS_DEV_KEY: ${{ secrets.ADS_DEV_KEY }}
-        run: python scripts/fetch_ads_citations_by_year.py
+        run: python scripts/fetch_ads_citations_to_data_dir.py
+
+      - name: Generate citations timeline plot
+        run: python scripts/generate_citations_timeline.py
 
       - name: Generate h-index timeline plot
         run: python scripts/generate_h_index_timeline.py

@@ -231,7 +231,9 @@ blalterman.github.io/
 ├── scripts/                          # Python automation
 │   ├── fetch_ads_publications_to_data_dir.py  # Fetch publications
 │   ├── fetch_ads_metrics_to_data_dir.py       # Fetch metrics
-│   ├── fetch_ads_citations_by_year.py         # Fetch & plot citations
+│   ├── fetch_ads_citations_to_data_dir.py     # Fetch citations data
+│   ├── generate_citations_timeline.py         # Generate citations plot
+│   ├── generate_h_index_timeline.py           # Generate h-index plot
 │   ├── generate_figure_data.py                # Combine data sources
 │   ├── create_research_page.py                # Interactive page creation
 │   ├── fetch_figure_licenses.py               # License fetching
@@ -466,18 +468,24 @@ blalterman.github.io/
 
 **Trigger:** Weekly on Mondays at 00:00 UTC (or manual dispatch)
 
-**Purpose:** Generate yearly citation data and visualization
+**Purpose:** Update yearly citation data and timeline visualizations
 
 **Process:**
-1. Run `fetch_ads_citations_by_year.py`
-2. 7-day caching to avoid redundant API calls
-3. Fetch citation histogram per year from ADS
-4. Generate SVG plot using matplotlib
-5. Commit both JSON data and SVG plot
+1. Run `fetch_ads_citations_to_data_dir.py` (data collection)
+   - 7-day caching to avoid redundant API calls
+   - Fetch citation histogram per year from ADS
+2. Run `generate_citations_timeline.py` (visualization)
+   - Generate citations timeline plot
+3. Run `generate_h_index_timeline.py` (visualization)
+   - Generate h-index timeline plot
+4. Commit JSON data and all plots
 
 **Output:**
 - `/public/data/citations_by_year.json`
 - `/public/plots/citations_by_year.svg`
+- `/public/plots/citations_by_year.png`
+- `/public/plots/h_index_timeline.svg`
+- `/public/plots/h_index_timeline.png`
 
 **Features:**
 - Rate limiting with Retry-After headers
@@ -569,9 +577,10 @@ blalterman.github.io/
 > - [Shared Utilities](#shared-utilities-utilspy)
 > - [Publications Fetcher](#1-fetch_ads_publications_to_data_dirpy)
 > - [Metrics Fetcher](#2-fetch_ads_metrics_to_data_dirpy)
-> - [Citations Fetcher](#3-fetch_ads_citations_by_yearpy)
-> - [Figure Data Generator](#4-generate_figure_datapy)
-> - [Research Page Creator](#5-create_research_pagepy)
+> - [Citations Data Fetcher](#3-fetch_ads_citations_to_data_dirpy)
+> - [Citations Plot Generator](#4-generate_citations_timelinepy)
+> - [Figure Data Generator](#5-generate_figure_datapy)
+> - [Research Page Creator](#6-create_research_pagepy)
 
 ---
 
@@ -643,32 +652,56 @@ get_relative_path(absolute_path: Path) -> str
 
 ---
 
-### 3. `fetch_ads_citations_by_year.py`
+### 3. `fetch_ads_citations_to_data_dir.py`
 
-**Purpose:** Fetch annual citation data and generate visualization
+**Purpose:** Fetch annual citation data from NASA ADS (data collection only)
 
 **Features:**
 - 7-day caching to prevent redundant API calls
 - Rate limiting with Retry-After header handling
-- Matplotlib visualization generation
 - Timezone handling (Eastern Time)
+- Separation of concerns (data only, no visualization)
 
 **Process:**
 1. Get all bibcodes for ORCID
 2. Query citation histogram by year from ADS
 3. Separate refereed vs. non-refereed citations
-4. Generate matplotlib bar chart
-5. Save both JSON data and SVG plot
+4. Save JSON data only
 
 **Output:**
 - `/public/data/citations_by_year.json`
-- `/public/plots/citations_by_year.svg`
 
 **API Endpoint:** `https://api.adsabs.harvard.edu/v1/metrics`
 
+**Note:** Run `generate_citations_timeline.py` afterward to create plots from this data.
+
 ---
 
-### 4. `generate_figure_data.py`
+### 4. `generate_citations_timeline.py`
+
+**Purpose:** Generate citations timeline plot from cached data (visualization only)
+
+**Features:**
+- Reads from existing JSON data (no API calls)
+- Matplotlib line plot visualization
+- Centralized plot styling via `plot_config.py`
+- Matches aesthetic of other timeline plots
+
+**Process:**
+1. Load `/public/data/citations_by_year.json`
+2. Create styled line plots (refereed + non-refereed)
+3. Apply semi-transparent fill under lines
+4. Save SVG and PNG to public/plots/
+
+**Output:**
+- `/public/plots/citations_by_year.svg`
+- `/public/plots/citations_by_year.png`
+
+**Note:** Must run `fetch_ads_citations_to_data_dir.py` first to ensure data is current.
+
+---
+
+### 5. `generate_figure_data.py`
 
 **Purpose:** Combine figure metadata with publication data to create rich captions
 
@@ -701,7 +734,7 @@ From {first_author} et al. ({year}), {journal}
 
 ---
 
-### 5. `create_research_page.py`
+### 6. `create_research_page.py`
 
 **Purpose:** Interactive CLI tool for creating new research pages
 
@@ -745,7 +778,7 @@ python scripts/test_create_research_page.py
 
 ---
 
-### 6. `fetch_figure_licenses.py`
+### 7. `fetch_figure_licenses.py`
 
 **Purpose:** Fetch Creative Commons license information for figures
 
@@ -1899,9 +1932,14 @@ pip install -r scripts/requirements.txt
 export ADS_DEV_KEY="your-ads-api-key"
 export ADS_ORCID="0000-0001-2345-6789"
 
+# Fetch data from NASA ADS
 python scripts/fetch_ads_publications_to_data_dir.py
 python scripts/fetch_ads_metrics_to_data_dir.py
-python scripts/fetch_ads_citations_by_year.py
+python scripts/fetch_ads_citations_to_data_dir.py
+
+# Generate visualizations
+python scripts/generate_citations_timeline.py
+python scripts/generate_h_index_timeline.py
 ```
 
 **3. Test Figure Data Generation:**

@@ -114,14 +114,14 @@ export default async function PublicationCategoryPage({ params }: { params: Prom
         <span className="text-foreground">{categoryData.title}</span>
       </nav>
 
-      {/* Statistics display */}
-      <PublicationStatistics stats={stats} />
-
       {/* Category title with icon (promoted to H1 for SEO) */}
       <h1 className="text-2xl font-bold text-center flex items-center justify-center mb-8">
         {IconComponent && <IconComponent className="mr-3 h-8 w-8 text-primary" />}
         {categoryData.title}
       </h1>
+
+      {/* Statistics display */}
+      <PublicationStatistics stats={stats} />
 
       {/* Publications with filtering */}
       <PublicationFilters

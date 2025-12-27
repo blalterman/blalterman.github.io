@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """
-Regenerate citations timeline plot from existing JSON data.
+Generate citations timeline plot from citations data.
 
-Useful for updating plot styling without re-fetching data from ADS API.
+Reads yearly citation counts from public/data/citations_by_year.json
+and creates styled line plots matching other timeline visualizations.
+
+This script does NOT fetch data from NASA ADS - run
+fetch_ads_citations_to_data_dir.py first to ensure data is current.
 
 Usage:
-    python scripts/regenerate_citations_plot.py
+    python scripts/generate_citations_timeline.py
 """
 
 import json
@@ -14,8 +18,8 @@ from utils import get_public_data_dir, get_public_plots_dir, get_relative_path
 from plot_config import COLORS, FIGURE, FONTS, LINES, GRID, LEGEND, LAYOUT, OUTPUT
 
 
-def regenerate_citations_plot():
-    """Load existing citations data and regenerate plot."""
+def generate_citations_timeline():
+    """Load existing citations data and generate timeline plot."""
 
     # Load existing data
     data_file = get_public_data_dir() / "citations_by_year.json"
@@ -23,7 +27,7 @@ def regenerate_citations_plot():
     if not data_file.exists():
         raise FileNotFoundError(
             f"Citations data not found at {get_relative_path(data_file)}. "
-            "Run fetch_ads_citations_by_year.py first."
+            "Run fetch_ads_citations_to_data_dir.py first."
         )
 
     print(f"📖 Loading citations data from {get_relative_path(data_file)}")
@@ -112,5 +116,5 @@ def regenerate_citations_plot():
 
 
 if __name__ == '__main__':
-    regenerate_citations_plot()
-    print("\n✓ Citations timeline plot regeneration complete")
+    generate_citations_timeline()
+    print("\n✓ Citations timeline plot generation complete")

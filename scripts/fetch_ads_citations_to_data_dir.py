@@ -2,7 +2,11 @@
 """
 Fetches yearly citation counts for all NASA ADS publications associated with a given ORCID.
 
-Reads ADS_ORCID and ADS_DEV_KEY from environment variables, retrieves all bibcodes, then fetches citation histograms per year from the NASA ADS metrics API. Outputs a JSON file and an SVG plot.
+Reads ADS_ORCID and ADS_DEV_KEY from environment variables, retrieves all bibcodes,
+then fetches citation histograms per year from the NASA ADS metrics API. Outputs a
+JSON file to public/data/.
+
+Use generate_citations_timeline.py to create plots from this data.
 
 This script includes a caching mechanism. If the output data file has been modified
 in the last 7 days, it will skip the download and processing steps.
@@ -14,12 +18,11 @@ ValueError
 
 Example
 -------
-$ python scripts/fetch_ads_citations_by_year.py
+$ python scripts/fetch_ads_citations_to_data_dir.py
 """
 
 import ads
 import requests
-import matplotlib.pyplot as plt
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import os
@@ -29,8 +32,7 @@ import sys
 import pandas as pd
 
 from zoneinfo import ZoneInfo
-from utils import get_public_data_dir, get_public_plots_dir, get_relative_path
-from plot_config import COLORS, FIGURE, FONTS, LINES, GRID, LEGEND, LAYOUT, OUTPUT
+from utils import get_public_data_dir, get_relative_path
 
 # Hard code Eastern Time because changing that is a quick update,
 # but it requires a lot of package installs and such to auto-detect.
@@ -167,72 +169,5 @@ with open(output_path, "w") as f:
     json.dump(data_to_save, f, indent=2)
 
 print(f"\n💾 Data saved to {get_relative_path(output_path)}")
-
-
-# === Step 5: Plot and save SVG and PNG to public/plots/ ===
-image_output_dir = get_public_plots_dir()
-image_output_dir.mkdir(parents=True, exist_ok=True)
-
-# Create figure with configured settings
-fig, ax = plt.subplots(figsize=FIGURE['figsize'], dpi=FIGURE['dpi'])
-fig.patch.set_facecolor(FIGURE['facecolor'])
-
-# Plot lines with configured styles
-ax.plot(all_years, ref_counts,
-        label='Refereed',
-        color=COLORS['refereed'],
-        **LINES['refereed'])
-
-ax.plot(all_years, nonref_counts,
-        label='Non-Refereed',
-        color=COLORS['nonrefereed'],
-        **LINES['other'])
-
-# Add semi-transparent fill under refereed line for visual interest
-ax.fill_between(all_years, ref_counts, alpha=0.15, color=COLORS['refereed'])
-ax.fill_between(all_years, nonref_counts, alpha=0.15, color=COLORS['nonrefereed'])
-
-# Apply styling
-ax.set_title('Citations Timeline', **FONTS['title'])
-ax.set_xlabel('Year', **FONTS['axis_label'])
-ax.set_ylabel('Citations', **FONTS['axis_label'])
-
-# Configure x-axis: label every 2nd year, minor ticks for all years
-major_ticks = all_years[::2]  # Every 2nd year for labels
-ax.set_xticks(major_ticks, minor=False)  # Major ticks with labels
-ax.set_xticks(all_years, minor=True)     # Minor ticks for all years
-ax.tick_params(axis='x', which='minor', length=3)  # Shorter minor ticks
-ax.tick_params(axis='x', which='major', length=6)  # Standard major ticks
-
-# Configure grid
-ax.grid(GRID['visible'],
-        alpha=GRID['alpha'],
-        linestyle=GRID['linestyle'],
-        linewidth=GRID['linewidth'],
-        color=GRID['color'])
-ax.set_axisbelow(True)  # Grid behind plot elements
-
-# Configure legend
-ax.legend(**LEGEND)
-
-# Hide top and right spines for cleaner look
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
-
-# Apply tight layout
-if LAYOUT['tight_layout']:
-    plt.tight_layout(pad=LAYOUT['pad'])
-
-plot_path_svg = image_output_dir / "citations_by_year.svg"
-plt.savefig(plot_path_svg,
-            format='svg',
-            dpi=OUTPUT['svg_dpi'],
-            bbox_inches=OUTPUT['bbox_inches'])
-print(f"📈 Plot saved to {get_relative_path(plot_path_svg)}")
-
-plot_path_png = image_output_dir / "citations_by_year.png"
-plt.savefig(plot_path_png,
-            format='png',
-            dpi=OUTPUT['png_dpi'],
-            bbox_inches=OUTPUT['bbox_inches'])
-print(f"📈 Plot saved to {get_relative_path(plot_path_png)}")
+print("\n✓ Citations data fetch complete")
+print(f"   Use 'python scripts/generate_citations_timeline.py' to generate plots")
