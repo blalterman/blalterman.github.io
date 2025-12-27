@@ -39,6 +39,15 @@
       "showFilters": true
     },
     {
+      "title": "Invited Talks",
+      "slug": "invited-talks",
+      "icon": "Presentation",
+      "description": "Invited colloquia, seminars, and public lectures",
+      "publicationType": "inproceedings",
+      "showCitations": false,
+      "showFilters": true
+    },
+    {
       "title": "White Papers",
       "slug": "white-papers",
       "icon": "ScrollText",
