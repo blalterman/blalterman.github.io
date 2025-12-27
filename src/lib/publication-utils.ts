@@ -109,6 +109,19 @@ export function extractUniqueYears(publications: Publication[]): string[] {
 }
 
 /**
+ * Removes parenthetical content from a string
+ * @param text - Text that may contain parenthetical content
+ * @returns Text with all parenthetical content removed
+ * @example stripParenthetical("Yaireska (Yari)") // "Yaireska"
+ * @example stripParenthetical("John (Jack) Smith") // "John Smith"
+ */
+function stripParenthetical(text: string): string {
+  // Remove all content within parentheses, including the parentheses
+  // Handles multiple occurrences: "John (Jack) (Johnny)" → "John"
+  return text.replace(/\s*\([^)]*\)\s*/g, ' ').trim();
+}
+
+/**
  * Converts a name component to initial format with period
  * @param name - Name part (full name like "Yeimy" or initial like "B.")
  * @returns Initial with period (e.g., "Yeimy" → "Y.", "B." → "B.")
@@ -150,8 +163,11 @@ export function formatAuthorName(adsName: string): string {
     // Standard: "LastName, FirstName/Initials MiddleInitial"
     const [lastName, firstNames] = parts;
 
+    // Strip parenthetical content: "Yaireska (Yari)" → "Yaireska"
+    const cleanedFirstNames = stripParenthetical(firstNames);
+
     // Split first names by whitespace: "Yeimy J." → ["Yeimy", "J."]
-    const nameComponents = firstNames.split(/\s+/).filter(n => n.length > 0);
+    const nameComponents = cleanedFirstNames.split(/\s+/).filter(n => n.length > 0);
 
     // Convert each component to initial: ["Yeimy", "J."] → ["Y.", "J."]
     const initials = nameComponents.map(toInitial).join(' ');
@@ -163,8 +179,11 @@ export function formatAuthorName(adsName: string): string {
     // With suffix: "LastName, Suffix, FirstName/Initials MiddleInitial"
     const [lastName, suffix, firstNames] = parts;
 
+    // Strip parenthetical content: "Yaireska (Yari)" → "Yaireska"
+    const cleanedFirstNames = stripParenthetical(firstNames);
+
     // Split and convert to initials
-    const nameComponents = firstNames.split(/\s+/).filter(n => n.length > 0);
+    const nameComponents = cleanedFirstNames.split(/\s+/).filter(n => n.length > 0);
     const initials = nameComponents.map(toInitial).join(' ');
 
     return `${initials} ${lastName}, ${suffix}`;
