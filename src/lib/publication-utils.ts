@@ -109,28 +109,64 @@ export function extractUniqueYears(publications: Publication[]): string[] {
 }
 
 /**
- * Transforms author name from ADS format to display format
- * @param adsName - Author name in ADS format: "LastName, F. M."
- * @returns Display format: "F. M. LastName"
+ * Converts a name component to initial format with period
+ * @param name - Name part (full name like "Yeimy" or initial like "B.")
+ * @returns Initial with period (e.g., "Yeimy" → "Y.", "B." → "B.")
+ */
+function toInitial(name: string): string {
+  const trimmed = name.trim();
+
+  // Already an initial with period
+  if (trimmed.endsWith('.')) {
+    return trimmed;
+  }
+
+  // Single letter without period
+  if (trimmed.length === 1) {
+    return `${trimmed}.`;
+  }
+
+  // Full name - extract first letter
+  return `${trimmed.charAt(0).toUpperCase()}.`;
+}
+
+/**
+ * Transforms author name from ADS format to initials-only display format
+ * @param adsName - Author name in ADS format: "LastName, FirstName(s)/Initials"
+ * @returns Display format: "Initials LastName"
+ * @example formatAuthorName("Rivera, Yeimy J.") // "Y. J. Rivera"
  * @example formatAuthorName("Alterman, B. L.") // "B. L. Alterman"
+ * @example formatAuthorName("Del Zanna, Giulio") // "G. Del Zanna"
  */
 export function formatAuthorName(adsName: string): string {
   const cleaned = adsName.trim();
   const parts = cleaned.split(',').map(p => p.trim());
 
   if (parts.length === 1) {
-    return cleaned; // Already formatted or single name
+    return cleaned; // Already formatted or mononym
   }
 
   if (parts.length === 2) {
-    // Standard: "LastName, Initials" → "Initials LastName"
-    const [lastName, initials] = parts;
+    // Standard: "LastName, FirstName/Initials MiddleInitial"
+    const [lastName, firstNames] = parts;
+
+    // Split first names by whitespace: "Yeimy J." → ["Yeimy", "J."]
+    const nameComponents = firstNames.split(/\s+/).filter(n => n.length > 0);
+
+    // Convert each component to initial: ["Yeimy", "J."] → ["Y.", "J."]
+    const initials = nameComponents.map(toInitial).join(' ');
+
     return `${initials} ${lastName}`;
   }
 
   if (parts.length === 3) {
-    // With suffix: "LastName, Suffix, Initials" → "Initials LastName, Suffix"
-    const [lastName, suffix, initials] = parts;
+    // With suffix: "LastName, Suffix, FirstName/Initials MiddleInitial"
+    const [lastName, suffix, firstNames] = parts;
+
+    // Split and convert to initials
+    const nameComponents = firstNames.split(/\s+/).filter(n => n.length > 0);
+    const initials = nameComponents.map(toInitial).join(' ');
+
     return `${initials} ${lastName}, ${suffix}`;
   }
 
