@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Dialog, DialogContent } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { TrendingUp } from 'lucide-react'
 
 interface PublicationStatisticsProps {
@@ -83,6 +83,7 @@ export function PublicationStatistics({ adsMetrics }: PublicationStatisticsProps
       {/* Publications Timeline Dialog */}
       <Dialog open={publicationsDialogOpen} onOpenChange={setPublicationsDialogOpen}>
         <DialogContent className="w-[95vw] max-w-[min(896px,calc((90vh-4rem)*10/7))] max-h-[90vh] overflow-hidden">
+          <DialogTitle className="sr-only">Publications Timeline</DialogTitle>
           <div className="relative w-full aspect-[10/7]">
             <Image
               src="/plots/publications_timeline.svg"
@@ -98,6 +99,7 @@ export function PublicationStatistics({ adsMetrics }: PublicationStatisticsProps
       {/* Citations Timeline Dialog */}
       <Dialog open={citationsDialogOpen} onOpenChange={setCitationsDialogOpen}>
         <DialogContent className="w-[95vw] max-w-[min(896px,calc((90vh-4rem)*10/7))] max-h-[90vh] overflow-hidden">
+          <DialogTitle className="sr-only">Citations Timeline</DialogTitle>
           <div className="relative w-full aspect-[10/7]">
             <Image
               src="/plots/citations_by_year.svg"
@@ -113,6 +115,7 @@ export function PublicationStatistics({ adsMetrics }: PublicationStatisticsProps
       {/* Refereed Papers Timeline Dialog */}
       <Dialog open={refereedPapersDialogOpen} onOpenChange={setRefereedPapersDialogOpen}>
         <DialogContent className="w-[95vw] max-w-[min(896px,calc((90vh-4rem)*10/7))] max-h-[90vh] overflow-hidden">
+          <DialogTitle className="sr-only">Refereed Publications Timeline</DialogTitle>
           <div className="relative w-full aspect-[10/7]">
             <Image
               src="/plots/publications_timeline.svg"
@@ -128,6 +131,7 @@ export function PublicationStatistics({ adsMetrics }: PublicationStatisticsProps
       {/* Refereed Citations Timeline Dialog */}
       <Dialog open={refereedCitationsDialogOpen} onOpenChange={setRefereedCitationsDialogOpen}>
         <DialogContent className="w-[95vw] max-w-[min(896px,calc((90vh-4rem)*10/7))] max-h-[90vh] overflow-hidden">
+          <DialogTitle className="sr-only">Refereed Citations Timeline</DialogTitle>
           <div className="relative w-full aspect-[10/7]">
             <Image
               src="/plots/citations_by_year.svg"
