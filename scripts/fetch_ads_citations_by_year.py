@@ -30,7 +30,7 @@ import pandas as pd
 
 from zoneinfo import ZoneInfo
 from utils import get_public_data_dir, get_public_plots_dir, get_relative_path
-from plot_config import COLORS, FIGURE, FONTS, BARS, GRID, LEGEND, LAYOUT, OUTPUT
+from plot_config import COLORS, FIGURE, FONTS, LINES, GRID, LEGEND, LAYOUT, OUTPUT
 
 # Hard code Eastern Time because changing that is a quick update,
 # but it requires a lot of package installs and such to auto-detect.
@@ -177,21 +177,20 @@ image_output_dir.mkdir(parents=True, exist_ok=True)
 fig, ax = plt.subplots(figsize=FIGURE['figsize'], dpi=FIGURE['dpi'])
 fig.patch.set_facecolor(FIGURE['facecolor'])
 
-# Plot bars with configured styles
-ax.bar(all_years, ref_counts,
-       label='Refereed',
-       color=COLORS['refereed'],
-       width=BARS['width'],
-       alpha=BARS['alpha'],
-       edgecolor=BARS['edgecolor'])
+# Plot lines with configured styles
+ax.plot(all_years, ref_counts,
+        label='Refereed',
+        color=COLORS['refereed'],
+        **LINES['refereed'])
 
-ax.bar(all_years, nonref_counts,
-       bottom=ref_counts,
-       label='Non-Refereed',
-       color=COLORS['nonrefereed'],
-       width=BARS['width'],
-       alpha=BARS['alpha'],
-       edgecolor=BARS['edgecolor'])
+ax.plot(all_years, nonref_counts,
+        label='Non-Refereed',
+        color=COLORS['nonrefereed'],
+        **LINES['other'])
+
+# Add semi-transparent fill under refereed line for visual interest
+ax.fill_between(all_years, ref_counts, alpha=0.15, color=COLORS['refereed'])
+ax.fill_between(all_years, nonref_counts, alpha=0.15, color=COLORS['nonrefereed'])
 
 # Apply styling
 ax.set_title('Citations Timeline', **FONTS['title'])
