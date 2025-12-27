@@ -31,4 +31,23 @@ export interface Publication {
 
   /** Whether this is an invited presentation/talk (optional during migration, will become required) */
   invited?: boolean;
+
+  /** Publication keywords for categorization
+   * - "invited" = invited conference talk
+   * - "invitedother" = invited seminar/colloquium
+   * - "public" = public lecture
+   */
+  keywords?: string;
+
+  /** Venue/institution name for presentations */
+  booktitle?: string;
+
+  /** Geographic location (e.g., "Greenbelt, MD") */
+  location?: string;
+
+  /** Day of month (for presentations) */
+  day?: string;
+
+  /** Direct URL to invited talk announcement */
+  invited_url?: string;
 }

@@ -200,3 +200,37 @@ export function getInvitedPublications(
     order
   );
 }
+
+/**
+ * Filter publications by keywords field.
+ * Used to distinguish conference talks ("invited") from seminars ("invitedother").
+ *
+ * @param publications Array of publications to filter
+ * @param keywords Keywords value to filter by
+ * @returns Filtered publications
+ */
+export function filterPublicationsByKeywords(
+  publications: Publication[],
+  keywords: string
+): Publication[] {
+  return publications.filter(pub => pub.keywords === keywords);
+}
+
+/**
+ * Get seminar/colloquium presentations (keywords: "invitedother").
+ * These are institution visits, department seminars, specialist talks.
+ * Does NOT include conference presentations (even if invited).
+ *
+ * @param publications Array of all publications
+ * @param order Sort order ('desc' for newest first, 'asc' for oldest first)
+ * @returns Filtered and sorted seminar presentations
+ */
+export function getSeminarPresentations(
+  publications: Publication[],
+  order: 'desc' | 'asc' = 'desc'
+): Publication[] {
+  return sortPublicationsByDate(
+    filterPublicationsByKeywords(publications, 'invitedother'),
+    order
+  );
+}

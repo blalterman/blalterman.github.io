@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "standardization_rules": [
+    {
+      "canonical": "Alterman, B. L.",
+      "last_name": "Alterman",
+      "first_names": ["Benjamin", "Ben"],
+      "first_initial": "B",
+      "middle_initial": "L",
+      "enabled": true,
+      "notes": "Primary author - enforce B. L. format across all publications"
+    }
+  ]
+}

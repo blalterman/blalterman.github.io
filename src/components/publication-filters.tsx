@@ -352,7 +352,7 @@ export function PublicationFilters({
                   </TableCell>
                   <TableCell>
                     {pub.title}
-                    {pub.invited && (
+                    {pub.invited && categoryData.slug !== 'invited-talks' && (
                       <Badge variant="outline" className="ml-2 text-xs">
                         Invited
                       </Badge>
