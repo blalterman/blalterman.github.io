@@ -7,6 +7,8 @@ import { TrendingUp } from 'lucide-react'
 
 interface PublicationStatisticsProps {
   adsMetrics: any;
+  invitedMetrics?: any;
+  invitedPresentations?: any[];
 }
 
 /**
@@ -14,12 +16,17 @@ interface PublicationStatisticsProps {
  * Shows h-index, total papers, citations, and refereed publications.
  * Makes "Total papers" and "Total citations" clickable to view timeline plots in modals.
  */
-export function PublicationStatistics({ adsMetrics }: PublicationStatisticsProps) {
+export function PublicationStatistics({ adsMetrics, invitedMetrics, invitedPresentations }: PublicationStatisticsProps) {
   const [publicationsDialogOpen, setPublicationsDialogOpen] = useState(false)
   const [citationsDialogOpen, setCitationsDialogOpen] = useState(false)
   const [refereedPapersDialogOpen, setRefereedPapersDialogOpen] = useState(false)
   const [refereedCitationsDialogOpen, setRefereedCitationsDialogOpen] = useState(false)
   const [hIndexDialogOpen, setHIndexDialogOpen] = useState(false)
+
+  // Calculate total papers: ADS publications + invited presentations (colloquia/seminars not in ADS)
+  // Note: Invited conferences are already merged into ADS data, so they're counted in the ADS total
+  const invitedPresentationsCount = invitedPresentations?.length || 0;
+  const totalPapers = adsMetrics["basic stats"]["number of papers"] + invitedPresentationsCount;
 
   const ClickableMetric = ({
     value,
@@ -32,11 +39,11 @@ export function PublicationStatistics({ adsMetrics }: PublicationStatisticsProps
   }) => (
     <button
       onClick={onClick}
-      className="flex flex-col items-center cursor-pointer transition-all duration-200 hover:scale-105 hover:opacity-80 rounded-lg p-3 hover:bg-accent/50 group"
+      className="flex flex-col items-center cursor-pointer transition-all duration-200 hover:scale-105 hover:opacity-80 rounded-lg p-2 md:p-3 hover:bg-accent/50 group"
       aria-label={`View ${label.toLowerCase()} timeline`}
     >
-      <span className="text-2xl font-bold">{value}</span>
-      <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+      <span className="text-xl md:text-2xl font-bold">{value}</span>
+      <span className="text-xs md:text-sm text-muted-foreground group-hover:text-foreground transition-colors">
         {label}
       </span>
       <TrendingUp className="h-3 w-3 mt-1 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
@@ -45,7 +52,7 @@ export function PublicationStatistics({ adsMetrics }: PublicationStatisticsProps
 
   return (
     <>
-      <div className="flex justify-center flex-wrap gap-x-8 mb-12">
+      <div className="flex justify-center flex-wrap gap-x-4 md:gap-x-8 mb-12">
         {/* CLICKABLE: h-index → H-Index Timeline */}
         <ClickableMetric
           value={adsMetrics["indicators"]["h"]}
@@ -55,7 +62,7 @@ export function PublicationStatistics({ adsMetrics }: PublicationStatisticsProps
 
         {/* CLICKABLE: Total papers → Publications Timeline */}
         <ClickableMetric
-          value={adsMetrics["basic stats"]["number of papers"]}
+          value={totalPapers}
           label="Total papers"
           onClick={() => setPublicationsDialogOpen(true)}
         />

@@ -4,6 +4,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 from utils import get_public_data_dir, get_relative_path
+from html_to_unicode import convert_html_to_unicode
 
 import pdb
 
@@ -43,19 +44,19 @@ ADS_DEV_KEY : {token}""")
 
 # Function to format author names as "Lastname, F. M." or "Lastname, F."
 def format_author_name(author_name):
-    parts = author_name.split()
-    if not parts:
-        return ""
-    last_name = parts[0]
-    first_initial = parts[1][0] if len(parts) > 1 else ""
-    middle_initial = parts[2][0] if len(parts) > 2 else ""
+    """
+    Format author name from ADS format.
 
-    formatted_name = f"{last_name}, {first_initial}." # This line is potentially problematic from previous edit. Fixing it here.
-    if middle_initial:
-        formatted_name += f" {middle_initial}."
-        
-    formatted_name = formatted_name.replace(",,", ",")
-    
+    ADS returns: 'Lastname, F.' or 'Lastname, F. M.'
+    Special handling: Ensures 'Alterman, B. L.' (not just 'Alterman, B.')
+    """
+    # ADS already provides formatted names, just apply Alterman fix
+    formatted_name = author_name.strip()
+
+    # Special handling for Alterman - enforce middle initial
+    if formatted_name in ['Alterman, B.', 'Alterman, B.L.']:
+        formatted_name = 'Alterman, B. L.'
+
     return formatted_name
 
 # Fields to request from ADS
@@ -77,6 +78,7 @@ results = list(ads.SearchQuery(orcid=ORCID, fl=fields, rows=2000))
 publications = []
 for pub in results:
     title = pub.title[0] if pub.title else "(No title)"
+    title = convert_html_to_unicode(title)  # Convert HTML tags to Unicode
     authors = [format_author_name(author) for author in pub.author] if pub.author else []
     pubdate = pub.pubdate or ""
     month, year = "", ""

@@ -80,6 +80,8 @@ export default async function PublicationCategoryPage({ params }: { params: Prom
 
   const adsPublications = loadJSONData<Publication[]>('ads_publications.json');
   const adsMetrics = loadJSONData<any>('ads_metrics.json');
+  const invitedMetrics = loadJSONData<any>('invited_metrics.json');
+  const invitedPresentations = loadJSONData<any[]>('invited_presentations.json');
   const publications = categoryData.slug === 'invited-talks'
     ? getInvitedPublications(adsPublications, categoryData.publicationType)
     : getPublicationsByType(adsPublications, categoryData.publicationType);
@@ -106,20 +108,18 @@ export default async function PublicationCategoryPage({ params }: { params: Prom
         <span className="text-foreground">{categoryData.title}</span>
       </nav>
 
-      {/* Page heading */}
-      <div className="text-center mb-12">
-        <h1 className="font-headline">{categoriesData.heading}</h1>
-        <p className="text-lg text-muted-foreground mt-2">{categoriesData.tagline}</p>
-      </div>
-
       {/* Statistics display */}
-      <PublicationStatistics adsMetrics={adsMetrics} />
+      <PublicationStatistics
+        adsMetrics={adsMetrics}
+        invitedMetrics={invitedMetrics}
+        invitedPresentations={invitedPresentations}
+      />
 
-      {/* Category title with icon */}
-      <h2 className="text-2xl font-bold text-center flex items-center justify-center mb-8">
+      {/* Category title with icon (promoted to H1 for SEO) */}
+      <h1 className="text-2xl font-bold text-center flex items-center justify-center mb-8">
         {IconComponent && <IconComponent className="mr-3 h-8 w-8 text-primary" />}
         {categoryData.title}
-      </h2>
+      </h1>
 
       {/* Publications with filtering */}
       <PublicationFilters

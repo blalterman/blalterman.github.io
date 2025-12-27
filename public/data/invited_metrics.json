@@ -1,0 +1,12 @@
+{
+  "total_invited_talks": 3,
+  "invited_by_year": {
+    "2017": 2,
+    "2019": 1
+  },
+  "invited_conferences": {
+    "SHINE Conference": 1,
+    "AGU Fall Meeting": 1,
+    "SHINE Conference Student Day": 1
+  }
+}

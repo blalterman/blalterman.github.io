@@ -14,11 +14,53 @@ Date: 2025-12-26
 """
 
 import json
+import re
 import sys
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Optional
 
 from utils import get_public_data_dir
+
+
+def extract_bibcode_from_entry(entry: Dict[str, Any]) -> Optional[str]:
+    """
+    Extract bibcode from invited entry, checking multiple fields.
+
+    Checks (in priority order):
+    1. entry['bibcode']
+    2. Bibcode pattern in entry['invited_url']
+    3. Bibcode pattern in entry['url']
+
+    Args:
+        entry: Invited conference entry dictionary
+
+    Returns:
+        Bibcode string or None if not found
+    """
+    # Check bibcode field first
+    if entry.get('bibcode'):
+        return entry['bibcode']
+
+    # Pattern to match ADS bibcodes (e.g., 2019AGUFM.U21B..14A)
+    bibcode_pattern = r'(?:ui\.adsabs\.harvard\.edu/abs/)?([12][0-9]{3}[A-Za-z0-9&.]+)'
+
+    # Check invited_url field
+    if 'invited_url' in entry and entry['invited_url']:
+        match = re.search(bibcode_pattern, entry['invited_url'])
+        if match:
+            bibcode = match.group(1)
+            print(f"  ⚠ Found bibcode in invited_url instead of bibcode field: {bibcode}")
+            return bibcode
+
+    # Check url field
+    if 'url' in entry and entry['url']:
+        match = re.search(bibcode_pattern, entry['url'])
+        if match:
+            bibcode = match.group(1)
+            print(f"  ⚠ Found bibcode in url instead of bibcode field: {bibcode}")
+            return bibcode
+
+    return None
 
 
 def find_publication_by_bibcode(publications: List[Dict[str, Any]], bibcode: str) -> int:
@@ -95,7 +137,9 @@ def merge_conferences(ads_pubs: List[Dict[str, Any]], invited_confs: List[Dict[s
     for invited in invited_confs:
         title = invited.get('title', 'Unknown')
         year = invited.get('year', '')
-        bibcode = invited.get('bibcode')
+
+        # Extract bibcode from multiple possible locations
+        bibcode = extract_bibcode_from_entry(invited)
 
         if not bibcode:
             # No bibcode - can't verify if duplicate, add as new
