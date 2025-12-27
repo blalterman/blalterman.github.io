@@ -3,8 +3,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { GraduationCap, BookOpen, Database, FileText, Presentation, ScrollText, FileCode, ArrowRight } from "lucide-react";
 import { Metadata } from 'next';
 import { loadJSONData } from "@/lib/data-loader";
-import { getPublicationsByType } from "@/lib/publication-utils";
-import type { Publication } from "@/types/publication";
 import Link from "next/link";
 import { PublicationStatistics } from "@/components/publication-statistics";
 
@@ -44,11 +42,10 @@ const iconMap = {
 };
 
 export default function PublicationsPage() {
-  const adsMetrics = loadJSONData<any>('ads_metrics.json');
-  const adsPublications = loadJSONData<Publication[]>('ads_publications.json');
+  const stats = loadJSONData<any>('publication_statistics.json');
   const categoriesData = loadJSONData<PublicationsCategoriesData>('publications-categories.json');
 
-  if (!adsMetrics || !adsPublications.length) {
+  if (!stats) {
     return (
       <div className="container mx-auto py-16 md:py-24 text-center">
         <p>Loading publication data...</p>
@@ -65,20 +62,15 @@ export default function PublicationsPage() {
       </div>
 
       {/* Metrics display */}
-      <PublicationStatistics adsMetrics={adsMetrics} />
+      <PublicationStatistics stats={stats} />
 
       {/* Category cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
         {categoriesData.categories.map((category) => {
           const IconComponent = iconMap[category.icon as keyof typeof iconMap];
-          let publications = getPublicationsByType(adsPublications, category.publicationType);
 
-          // Special case: filter by invited field for invited-talks
-          if (category.slug === 'invited-talks') {
-            publications = publications.filter(pub => pub.invited === true);
-          }
-
-          const count = publications.length;
+          // Use pre-computed counts from statistics file
+          const count = stats.category_counts[category.slug] || 0;
 
           // Only show categories that have publications
           if (count === 0) return null;

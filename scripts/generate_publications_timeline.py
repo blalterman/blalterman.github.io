@@ -26,19 +26,33 @@ from plot_config import COLORS, FIGURE, FONTS, LINES, GRID, LEGEND, LAYOUT, OUTP
 
 # === SECTION 1: Load Publications Data ===
 public_data_dir = get_public_data_dir()
-input_file = public_data_dir / "ads_publications.json"
+ads_file = public_data_dir / "ads_publications.json"
+invited_file = public_data_dir / "invited_presentations.json"
 
-if not input_file.exists():
+if not ads_file.exists():
     raise FileNotFoundError(
-        f"Publications data not found at {get_relative_path(input_file)}. "
+        f"Publications data not found at {get_relative_path(ads_file)}. "
         "Run fetch_ads_publications_to_data_dir.py first."
     )
 
-print(f"📖 Loading publications from {get_relative_path(input_file)}")
-with open(input_file, 'r') as f:
-    publications = json.load(f)
+print(f"📖 Loading ADS publications from {get_relative_path(ads_file)}")
+with open(ads_file, 'r') as f:
+    ads_publications = json.load(f)
 
-print(f"   Loaded {len(publications)} publications")
+print(f"   Loaded {len(ads_publications)} ADS publications")
+
+# Load invited presentations (seminars/colloquia not in ADS)
+if invited_file.exists():
+    print(f"📖 Loading invited presentations from {get_relative_path(invited_file)}")
+    with open(invited_file, 'r') as f:
+        invited_presentations = json.load(f)
+    print(f"   Loaded {len(invited_presentations)} invited presentations")
+    # Merge into publications list
+    publications = ads_publications + invited_presentations
+    print(f"   Total: {len(publications)} publications (ADS + invited)")
+else:
+    publications = ads_publications
+    print(f"   No invited presentations file found, using ADS only")
 
 # === SECTION 2: Data Processing ===
 # Convert to DataFrame

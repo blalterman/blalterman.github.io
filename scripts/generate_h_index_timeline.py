@@ -40,10 +40,23 @@ def load_h_index_data():
     years = sorted([int(year) for year in h_index_series.keys()])
     h_values = [h_index_series[str(year)] for year in years]
 
+    # Filter out leading zeros - start at LAST zero year (shows baseline before growth)
+    first_nonzero_idx = next((i for i, h in enumerate(h_values) if h > 0), 0)
+    if first_nonzero_idx > 0:
+        # Start one year before first non-zero (the last zero year)
+        start_idx = first_nonzero_idx - 1
+    else:
+        # No leading zeros, start at beginning
+        start_idx = 0
+
+    years = years[start_idx:]
+    h_values = h_values[start_idx:]
+
     current_h = metrics.get("indicators", {}).get("h", h_values[-1] if h_values else 0)
 
     print(f"   Current h-index: {current_h}")
     print(f"   Time span: {years[0]}-{years[-1]} ({len(years)} years)")
+    print(f"   Starting at last zero year: {years[0]} (h={h_values[0]})")
 
     return years, h_values
 

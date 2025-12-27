@@ -38,6 +38,10 @@ jobs:
         run: |
           python scripts/compute_invited_metrics.py
 
+      - name: Generate integrated publication statistics
+        run: |
+          python scripts/generate_publication_statistics.py
+
       - name: Pull latest changes
         run: |
           git fetch origin
@@ -49,5 +53,6 @@ jobs:
           git config user.email "github-actions@github.com"
           git add public/data/ads_publications.json
           git add public/data/invited_metrics.json
-          git commit -m "Update ADS publications and invited metrics [automated]" || echo "No changes to commit"
+          git add public/data/publication_statistics.json
+          git commit -m "Update ADS publications and metrics [automated]" || echo "No changes to commit"
           git push origin main

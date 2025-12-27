@@ -79,8 +79,7 @@ export default async function PublicationCategoryPage({ params }: { params: Prom
   }
 
   const adsPublications = loadJSONData<Publication[]>('ads_publications.json');
-  const adsMetrics = loadJSONData<any>('ads_metrics.json');
-  const invitedMetrics = loadJSONData<any>('invited_metrics.json');
+  const stats = loadJSONData<any>('publication_statistics.json');
   const invitedPresentations = loadJSONData<Publication[]>('invited_presentations.json');
 
   // Merge invited presentations into main publications list for Invited Talks page
@@ -116,11 +115,7 @@ export default async function PublicationCategoryPage({ params }: { params: Prom
       </nav>
 
       {/* Statistics display */}
-      <PublicationStatistics
-        adsMetrics={adsMetrics}
-        invitedMetrics={invitedMetrics}
-        invitedPresentations={invitedPresentations}
-      />
+      <PublicationStatistics stats={stats} />
 
       {/* Category title with icon (promoted to H1 for SEO) */}
       <h1 className="text-2xl font-bold text-center flex items-center justify-center mb-8">

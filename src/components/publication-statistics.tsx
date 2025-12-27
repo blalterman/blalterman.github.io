@@ -6,9 +6,7 @@ import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { TrendingUp } from 'lucide-react'
 
 interface PublicationStatisticsProps {
-  adsMetrics: any;
-  invitedMetrics?: any;
-  invitedPresentations?: any[];
+  stats: any;
 }
 
 /**
@@ -16,17 +14,12 @@ interface PublicationStatisticsProps {
  * Shows h-index, total papers, citations, and refereed publications.
  * Makes "Total papers" and "Total citations" clickable to view timeline plots in modals.
  */
-export function PublicationStatistics({ adsMetrics, invitedMetrics, invitedPresentations }: PublicationStatisticsProps) {
+export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
   const [publicationsDialogOpen, setPublicationsDialogOpen] = useState(false)
   const [citationsDialogOpen, setCitationsDialogOpen] = useState(false)
   const [refereedPapersDialogOpen, setRefereedPapersDialogOpen] = useState(false)
   const [refereedCitationsDialogOpen, setRefereedCitationsDialogOpen] = useState(false)
   const [hIndexDialogOpen, setHIndexDialogOpen] = useState(false)
-
-  // Calculate total papers: ADS publications + invited presentations (colloquia/seminars not in ADS)
-  // Note: Invited conferences are already merged into ADS data, so they're counted in the ADS total
-  const invitedPresentationsCount = invitedPresentations?.length || 0;
-  const totalPapers = adsMetrics["basic stats"]["number of papers"] + invitedPresentationsCount;
 
   const ClickableMetric = ({
     value,
@@ -55,35 +48,41 @@ export function PublicationStatistics({ adsMetrics, invitedMetrics, invitedPrese
       <div className="flex justify-center flex-wrap gap-x-4 md:gap-x-8 mb-12">
         {/* CLICKABLE: h-index → H-Index Timeline */}
         <ClickableMetric
-          value={adsMetrics["indicators"]["h"]}
+          value={stats.summary.h_index}
           label="h-index"
           onClick={() => setHIndexDialogOpen(true)}
         />
 
         {/* CLICKABLE: Total papers → Publications Timeline */}
         <ClickableMetric
-          value={totalPapers}
+          value={stats.summary.total_papers}
           label="Total papers"
           onClick={() => setPublicationsDialogOpen(true)}
         />
 
         {/* CLICKABLE: Total citations → Citations Timeline */}
         <ClickableMetric
-          value={adsMetrics["citation stats"]["total number of citations"]}
+          value={stats.summary.total_citations}
           label="Total citations"
           onClick={() => setCitationsDialogOpen(true)}
         />
 
+        {/* NEW: Invited Presentations (non-clickable) */}
+        <div className="flex flex-col items-center p-2 md:p-3">
+          <span className="text-xl md:text-2xl font-bold">{stats.summary.invited_total}</span>
+          <span className="text-xs md:text-sm text-muted-foreground">Invited presentations</span>
+        </div>
+
         {/* CLICKABLE: Refereed papers → Publications Timeline */}
         <ClickableMetric
-          value={adsMetrics["basic stats refereed"]["number of papers"]}
+          value={stats.summary.refereed_papers}
           label="Refereed papers"
           onClick={() => setRefereedPapersDialogOpen(true)}
         />
 
         {/* CLICKABLE: Refereed citations → Citations Timeline */}
         <ClickableMetric
-          value={adsMetrics["citation stats refereed"]["total number of citations"]}
+          value={stats.summary.refereed_citations}
           label="Refereed citations"
           onClick={() => setRefereedCitationsDialogOpen(true)}
         />
