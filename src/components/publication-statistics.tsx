@@ -23,6 +23,8 @@ interface PublicationStatisticsProps {
 export function PublicationStatistics({ adsMetrics }: PublicationStatisticsProps) {
   const [publicationsDialogOpen, setPublicationsDialogOpen] = useState(false)
   const [citationsDialogOpen, setCitationsDialogOpen] = useState(false)
+  const [refereedPapersDialogOpen, setRefereedPapersDialogOpen] = useState(false)
+  const [refereedCitationsDialogOpen, setRefereedCitationsDialogOpen] = useState(false)
 
   const ClickableMetric = ({
     value,
@@ -69,29 +71,25 @@ export function PublicationStatistics({ adsMetrics }: PublicationStatisticsProps
           onClick={() => setCitationsDialogOpen(true)}
         />
 
-        {/* Non-clickable: Refereed papers */}
-        <div className="flex flex-col items-center">
-          <span className="text-2xl font-bold">{adsMetrics["basic stats refereed"]["number of papers"]}</span>
-          <span className="text-sm text-muted-foreground">Refereed papers</span>
-        </div>
+        {/* CLICKABLE: Refereed papers → Publications Timeline */}
+        <ClickableMetric
+          value={adsMetrics["basic stats refereed"]["number of papers"]}
+          label="Refereed papers"
+          onClick={() => setRefereedPapersDialogOpen(true)}
+        />
 
-        {/* Non-clickable: Refereed citations */}
-        <div className="flex flex-col items-center">
-          <span className="text-2xl font-bold">{adsMetrics["citation stats refereed"]["total number of citations"]}</span>
-          <span className="text-sm text-muted-foreground">Refereed citations</span>
-        </div>
+        {/* CLICKABLE: Refereed citations → Citations Timeline */}
+        <ClickableMetric
+          value={adsMetrics["citation stats refereed"]["total number of citations"]}
+          label="Refereed citations"
+          onClick={() => setRefereedCitationsDialogOpen(true)}
+        />
       </div>
 
       {/* Publications Timeline Dialog */}
       <Dialog open={publicationsDialogOpen} onOpenChange={setPublicationsDialogOpen}>
-        <DialogContent className="max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle>Publications Timeline</DialogTitle>
-            <DialogDescription>
-              Distribution of publications by category over time
-            </DialogDescription>
-          </DialogHeader>
-          <div className="relative w-full aspect-[10/7] mt-4">
+        <DialogContent className="w-[95vw] max-w-[min(896px,calc((90vh-4rem)*10/7))] max-h-[90vh] overflow-hidden">
+          <div className="relative w-full aspect-[10/7]">
             <Image
               src="/plots/publications_timeline.svg"
               alt="Publications Timeline showing refereed articles, conference contributions, and other publications from 2014-2025"
@@ -105,14 +103,38 @@ export function PublicationStatistics({ adsMetrics }: PublicationStatisticsProps
 
       {/* Citations Timeline Dialog */}
       <Dialog open={citationsDialogOpen} onOpenChange={setCitationsDialogOpen}>
-        <DialogContent className="max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle>Citations Timeline</DialogTitle>
-            <DialogDescription>
-              Citations received per year (refereed and non-refereed)
-            </DialogDescription>
-          </DialogHeader>
-          <div className="relative w-full aspect-[10/7] mt-4">
+        <DialogContent className="w-[95vw] max-w-[min(896px,calc((90vh-4rem)*10/7))] max-h-[90vh] overflow-hidden">
+          <div className="relative w-full aspect-[10/7]">
+            <Image
+              src="/plots/citations_by_year.svg"
+              alt="Citations Timeline showing refereed and non-refereed citations from 2018-2026"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Refereed Papers Timeline Dialog */}
+      <Dialog open={refereedPapersDialogOpen} onOpenChange={setRefereedPapersDialogOpen}>
+        <DialogContent className="w-[95vw] max-w-[min(896px,calc((90vh-4rem)*10/7))] max-h-[90vh] overflow-hidden">
+          <div className="relative w-full aspect-[10/7]">
+            <Image
+              src="/plots/publications_timeline.svg"
+              alt="Publications Timeline showing refereed articles, conference contributions, and other publications from 2014-2025"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Refereed Citations Timeline Dialog */}
+      <Dialog open={refereedCitationsDialogOpen} onOpenChange={setRefereedCitationsDialogOpen}>
+        <DialogContent className="w-[95vw] max-w-[min(896px,calc((90vh-4rem)*10/7))] max-h-[90vh] overflow-hidden">
+          <div className="relative w-full aspect-[10/7]">
             <Image
               src="/plots/citations_by_year.svg"
               alt="Citations Timeline showing refereed and non-refereed citations from 2018-2026"
