@@ -35,8 +35,11 @@ jobs:
           ADS_DEV_KEY: ${{ secrets.ADS_DEV_KEY }}
         run: python scripts/fetch_ads_citations_by_year.py
 
-      - name: Commit and push updated data and plot
+      - name: Generate h-index timeline plot
+        run: python scripts/generate_h_index_timeline.py
+
+      - name: Commit and push updated data and plots
         run: |
-          git add public/data/citations_by_year.json public/plots/citations_by_year.svg
-          git commit -m "Update citation data and plot [auto]" || echo "No changes to commit"
+          git add public/data/citations_by_year.json public/plots/citations_by_year.svg public/plots/h_index_timeline.*
+          git commit -m "Update citation and h-index timeline plots [auto]" || echo "No changes to commit"
           git push origin HEAD:main
