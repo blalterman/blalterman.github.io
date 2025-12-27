@@ -39,6 +39,7 @@ interface PublicationCategory {
   showJournal?: boolean          // Default: true. Set false to hide column
   journalLabel?: string           // Default: 'Journal'. Custom header label
   journalField?: string           // Default: 'journal'. Which field to display
+  showLinks?: boolean             // Default: true. Set false to hide Links column
 }
 
 interface PublicationFiltersProps {
@@ -357,7 +358,9 @@ export function PublicationFilters({
                 {categoryData.showCitations && (
                   <TableHead className="text-center w-[100px] font-bold">Citations</TableHead>
                 )}
-                <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
+                {(categoryData.showLinks !== false) && (
+                  <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
+                )}
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -394,24 +397,26 @@ export function PublicationFilters({
                   {categoryData.showCitations && (
                     <TableCell className="text-center">{pub.citations}</TableCell>
                   )}
-                  <TableCell className="text-right space-x-2">
-                    {pub.url && (
-                      <TooltipProvider>
-                        <Tooltip>
-                          <TooltipTrigger asChild>
-                            <Button variant="outline" size="icon" asChild>
-                              <a href={pub.url} target="_blank" rel="noopener noreferrer">
-                                <BookOpen className="h-4 w-4" />
-                              </a>
-                            </Button>
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p>Publication</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    )}
-                  </TableCell>
+                  {(categoryData.showLinks !== false) && (
+                    <TableCell className="text-right space-x-2">
+                      {pub.url && (
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <Button variant="outline" size="icon" asChild>
+                                <a href={pub.url} target="_blank" rel="noopener noreferrer">
+                                  <BookOpen className="h-4 w-4" />
+                                </a>
+                              </Button>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Publication</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      )}
+                    </TableCell>
+                  )}
                 </TableRow>
               ))}
             </TableBody>

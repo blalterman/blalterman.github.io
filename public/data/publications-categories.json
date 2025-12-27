@@ -48,7 +48,8 @@
       "showCitations": false,
       "showFilters": false,
       "journalLabel": "Location",
-      "journalField": "location"
+      "journalField": "location",
+      "showLinks": false
     },
     {
       "title": "White Papers",
