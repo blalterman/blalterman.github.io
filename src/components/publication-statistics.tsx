@@ -27,16 +27,16 @@ export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
     onClick,
   }: {
     value: string | number
-    label: string
+    label: React.ReactNode
     onClick: () => void
   }) => (
     <button
       onClick={onClick}
       className="flex flex-col items-center cursor-pointer transition-all duration-200 hover:scale-105 hover:opacity-80 rounded-lg p-2 md:p-3 hover:bg-accent/50 group"
-      aria-label={`View ${label.toLowerCase()} timeline`}
+      aria-label={`View ${typeof label === 'string' ? label.toLowerCase() : 'metric'} timeline`}
     >
       <span className="text-xl md:text-2xl font-bold">{value}</span>
-      <span className="text-xs md:text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+      <span className="text-xs md:text-sm text-muted-foreground group-hover:text-foreground transition-colors text-center">
         {label}
       </span>
       <TrendingUp className="h-3 w-3 mt-1 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
@@ -49,42 +49,43 @@ export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
         {/* CLICKABLE: h-index → H-Index Timeline */}
         <ClickableMetric
           value={stats.summary.h_index}
-          label="h-index"
+          label="H-Index"
           onClick={() => setHIndexDialogOpen(true)}
         />
 
         {/* CLICKABLE: Total papers → Publications Timeline */}
         <ClickableMetric
           value={stats.summary.total_papers}
-          label="Total papers"
+          label={<>Total<br />Papers</>}
           onClick={() => setPublicationsDialogOpen(true)}
         />
 
         {/* CLICKABLE: Total citations → Citations Timeline */}
         <ClickableMetric
           value={stats.summary.total_citations}
-          label="Total citations"
+          label={<>Total<br />Citations</>}
           onClick={() => setCitationsDialogOpen(true)}
         />
-
-        {/* NEW: Invited Presentations (non-clickable) */}
-        <div className="flex flex-col items-center p-2 md:p-3">
-          <span className="text-xl md:text-2xl font-bold">{stats.summary.invited_total}</span>
-          <span className="text-xs md:text-sm text-muted-foreground">Invited presentations</span>
-        </div>
 
         {/* CLICKABLE: Refereed papers → Publications Timeline */}
         <ClickableMetric
           value={stats.summary.refereed_papers}
-          label="Refereed papers"
+          label={<>Refereed<br />Papers</>}
           onClick={() => setRefereedPapersDialogOpen(true)}
         />
 
         {/* CLICKABLE: Refereed citations → Citations Timeline */}
         <ClickableMetric
           value={stats.summary.refereed_citations}
-          label="Refereed citations"
+          label={<>Refereed<br />Citations</>}
           onClick={() => setRefereedCitationsDialogOpen(true)}
+        />
+
+        {/* CLICKABLE: Invited Presentations → Publications Timeline (MOVED TO END) */}
+        <ClickableMetric
+          value={stats.summary.invited_total}
+          label={<>Invited<br />Presentations</>}
+          onClick={() => setPublicationsDialogOpen(true)}
         />
       </div>
 
