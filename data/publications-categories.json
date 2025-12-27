@@ -47,8 +47,7 @@
       "publicationType": "inproceedings",
       "showCitations": false,
       "showFilters": false,
-      "journalLabel": "Location",
-      "journalField": "location",
+      "journalLabel": "Venue",
       "showLinks": false
     },
     {
