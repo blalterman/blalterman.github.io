@@ -36,6 +36,9 @@ interface PublicationCategory {
   publicationType: string | string[]
   showCitations: boolean
   showFilters?: boolean
+  showJournal?: boolean          // Default: true. Set false to hide column
+  journalLabel?: string           // Default: 'Journal'. Custom header label
+  journalField?: string           // Default: 'journal'. Which field to display
 }
 
 interface PublicationFiltersProps {
@@ -52,7 +55,16 @@ export function PublicationFilters({
   labels = {},
 }: PublicationFiltersProps) {
   // Label customization with fallback
-  const journalLabel = labels.journal || 'Journal'
+  const journalLabel = labels.journal || categoryData.journalLabel || 'Journal'
+
+  // Determine which field to display in Journal column
+  const journalFieldName = categoryData.journalField || 'journal'
+  const getJournalValue = (pub: Publication): string => {
+    if (journalFieldName === 'location') {
+      return pub.location || pub.booktitle || '—'
+    }
+    return pub.journal || '—'
+  }
 
   // Filter state
   const [authorshipFilter, setAuthorshipFilter] = useState<'all' | 'first' | 'coauthor'>('all')
@@ -339,7 +351,9 @@ export function PublicationFilters({
                 {categoryData.slug !== 'invited-talks' && categoryData.slug !== 'phd-thesis' && (
                   <TableHead className="font-bold">Authors</TableHead>
                 )}
-                <TableHead className="font-bold">Journal</TableHead>
+                {(categoryData.showJournal !== false) && (
+                  <TableHead className="font-bold">{journalLabel}</TableHead>
+                )}
                 {categoryData.showCitations && (
                   <TableHead className="text-center w-[100px] font-bold">Citations</TableHead>
                 )}
@@ -374,7 +388,9 @@ export function PublicationFilters({
                       ))}
                     </TableCell>
                   )}
-                  <TableCell>{pub.journal}</TableCell>
+                  {(categoryData.showJournal !== false) && (
+                    <TableCell>{getJournalValue(pub)}</TableCell>
+                  )}
                   {categoryData.showCitations && (
                     <TableCell className="text-center">{pub.citations}</TableCell>
                   )}
