@@ -142,8 +142,9 @@ python scripts/create_research_page.py
 
 ### 3. GitHub Actions Automation
 
-**5 workflows** handle data updates and deployment:
+**6 workflows** handle data updates and deployment:
 - Publications, metrics, citations (weekly Mon updates)
+- Timeline plots (triggers after data updates complete)
 - PDF→SVG conversion (on upload)
 - Figure data generation (on data changes)
 

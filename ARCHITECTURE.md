@@ -1,6 +1,6 @@
 # Architecture Documentation
 
-> **Last Updated:** 2025-10-25
+> **Last Updated:** 2025-12-29
 > **Purpose:** Comprehensive reference for developers and AI assistants working with this codebase
 >
 > **Related Documentation:**
@@ -387,8 +387,9 @@ blalterman.github.io/
 > - [Update Publications](#1-update-ads-publications)
 > - [Update Metrics](#2-update-ads-metrics)
 > - [Update Citations](#3-update-annual-citations)
-> - [Convert PDFs](#4-convert-pdfs-to-svg)
-> - [Generate Figure Data](#5-generate-figure-data)
+> - [Generate Timeline Plots](#4-generate-timeline-plots)
+> - [Convert PDFs](#5-convert-pdfs-to-svg)
+> - [Generate Figure Data](#6-generate-figure-data)
 
 ---
 
@@ -506,7 +507,32 @@ blalterman.github.io/
 
 ---
 
-### 4. Convert PDFs to SVG
+### 4. Generate Timeline Plots
+
+**File:** `.github/workflows/update_plots.yml`
+
+**Trigger:** `workflow_run` (executes after ADS workflows complete successfully) or manual dispatch
+
+**Purpose:** Generate publication, h-index, and citation timeline visualizations after data updates
+
+**Process:**
+1. Waits for completion of all 3 ADS data workflows (publications, metrics, citations)
+2. Runs `generate_publications_timeline.py` - creates publication counts by year/category
+3. Runs `generate_h_index_timeline.py` - creates h-index growth visualization
+4. Runs `generate_citations_timeline.py` - creates citation trends visualization
+5. Commits generated plots and data files
+
+**Outputs:**
+- `/public/data/publications_timeline.json`
+- `/public/plots/publications_timeline.svg` and `.png`
+- `/public/plots/h_index_timeline.svg` and `.png`
+- `/public/plots/citations_by_year.svg` and `.png`
+
+**Key Feature:** Uses `workflow_run` trigger to ensure data dependencies are met before visualization generation
+
+---
+
+### 5. Convert PDFs to SVG
 
 **File:** `.github/workflows/convert-pdfs.yml`
 
@@ -524,7 +550,7 @@ blalterman.github.io/
 
 ---
 
-### 5. Generate Figure Data
+### 6. Generate Figure Data
 
 **File:** `.github/workflows/generate-figure-data.yml`
 
@@ -559,6 +585,80 @@ blalterman.github.io/
   }
 ]
 ```
+
+---
+
+### Workflow Dependencies & Triggers
+
+The 6 workflows are orchestrated with specific dependencies and trigger patterns to ensure data consistency and proper update sequencing.
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         WEEKLY SCHEDULED UPDATES                         │
+│                          (Every Monday, UTC)                             │
+└─────────────────────────────────────────────────────────────────────────┘
+
+TIME-BASED TRIGGERS (Parallel Execution):
+══════════════════════════════════════════
+
+00:00 UTC ┌──────────────────────────────────────┐
+    ┌─────┤ update_annual_citations.yml          │
+    │     │ → citations_by_year.json             │
+    │     └──────────────────────────────────────┘
+    │
+03:00 UTC ┌──────────────────────────────────────┐
+    ├─────┤ update-ads-metrics.yml                │
+    │     │ → ads_metrics.json                    │
+    │     └──────────────────────────────────────┘
+    │
+04:00 UTC ┌──────────────────────────────────────┐
+    └─────┤ update-ads-publications.yml           │
+          │ → ads_publications.json               │
+          │ → invited_metrics.json                │
+          │ → publication_statistics.json         │
+          └──────────────────────────────────────┘
+                        │
+                        │ (after all 3 complete)
+                        ▼
+            ┌──────────────────────────────────────┐
+            │ update_plots.yml                     │
+            │ TRIGGER: workflow_run (dependency)   │
+            │                                       │
+            │ → publications_timeline.json/.svg    │
+            │ → h_index_timeline.svg/.png          │
+            │ → citations_by_year.svg/.png         │
+            └──────────────────────────────────────┘
+
+══════════════════════════════════════════
+EVENT-BASED TRIGGERS (Independent):
+══════════════════════════════════════════
+
+On Push to              ┌──────────────────────────────────────┐
+paper-figures/pdfs/     │ convert-pdfs.yml                     │
+          ┌─────────────┤ → paper-figures/svg/*.svg            │
+          │             └──────────────────────────────────────┘
+          │
+On Push to              ┌──────────────────────────────────────┐
+4 data files            │ generate-figure-data.yml             │
+          └─────────────┤ → research-figures-with-captions.json│
+                        └──────────────────────────────────────┘
+
+══════════════════════════════════════════
+TRIGGER SUMMARY:
+══════════════════════════════════════════
+
+• schedule (cron) ····· 3 workflows (00:00, 03:00, 04:00 UTC Mon)
+• workflow_run ········ 1 workflow (plots - waits for data)
+• push (path) ········· 2 workflows (PDFs, figure data)
+• workflow_dispatch ··· All 6 (manual trigger available)
+```
+
+**Key Design Decisions:**
+
+1. **Staggered Schedule:** Citations (00:00) → Metrics (03:00) → Publications (04:00) prevents API rate limiting
+2. **Dependent Workflow:** Timeline plots wait for all 3 ADS workflows to complete before generating visualizations
+3. **Independent Events:** PDF conversion and figure data generation run independently when files change
+4. **Manual Overrides:** All workflows support `workflow_dispatch` for on-demand execution
 
 [↑ Back to Table of Contents](#table-of-contents)
 
@@ -607,6 +707,106 @@ get_relative_path(absolute_path: Path) -> str
 ```
 
 **Benefit:** Scripts work correctly regardless of invocation directory
+
+---
+
+### Data Aggregation Pattern
+
+The automation scripts follow a clear **separation of concerns** pattern with three distinct layers:
+
+#### Layer 1: Data Acquisition (Fetch Scripts)
+
+**Purpose:** Retrieve raw data from external APIs and create atomic data files
+
+**Scripts:**
+- `fetch_ads_publications_to_data_dir.py` → `ads_publications.json`
+- `fetch_ads_metrics_to_data_dir.py` → `ads_metrics.json`
+- `fetch_ads_citations_to_data_dir.py` → `citations_by_year.json`
+
+**Characteristics:**
+- Each script fetches from a single source (NASA ADS API)
+- Outputs one primary JSON file
+- No dependencies on other scripts' output
+- Run independently on staggered schedule (Monday 00:00, 03:00, 04:00 UTC)
+
+#### Layer 2: Data Enrichment & Aggregation
+
+**Purpose:** Combine multiple data sources into comprehensive datasets
+
+**Master Aggregator:** `generate_publication_statistics.py`
+- **Inputs (4 sources):**
+  - `ads_metrics.json` (Layer 1)
+  - `ads_publications.json` (Layer 1)
+  - `invited_presentations.json` (manual)
+  - `invited_conferences.json` (manual)
+- **Process:**
+  - Merges bibliometric metrics with publication counts
+  - Computes invited talk statistics
+  - Generates comprehensive summary statistics
+  - Creates time-series data combining all sources
+- **Output:** `publication_statistics.json`
+
+**Other Enrichment Scripts:**
+- `merge_invited_conferences.py` - Enriches `ads_publications.json` with invited talk flags
+- `compute_invited_metrics.py` - Generates `invited_metrics.json` from publications
+- `generate_figure_data.py` - Combines figure metadata with publication data
+
+**Characteristics:**
+- Read from multiple JSON sources
+- Cross-reference data via keys (bibcode, slug, year)
+- Produce enriched, combined datasets
+- Run after Layer 1 completes
+
+#### Layer 3: Visualization
+
+**Purpose:** Generate plots and timeline visualizations from data files
+
+**Scripts:**
+- `generate_publications_timeline.py`
+  - **Inputs:** `ads_publications.json` + `invited_presentations.json` (optional)
+  - **Outputs:** `publications_timeline.json`, `.svg`, `.png` plots
+
+- `generate_citations_timeline.py`
+  - **Input:** `citations_by_year.json` (pre-aggregated)
+  - **Outputs:** `citations_by_year.svg`, `.png`
+
+- `generate_h_index_timeline.py`
+  - **Input:** `ads_metrics.json` (pre-aggregated)
+  - **Outputs:** `h_index_timeline.svg`, `.png`
+
+**Characteristics:**
+- Read from Layer 1 or Layer 2 outputs
+- No API calls - visualization only
+- Generate both JSON data and plot files (.svg/.png)
+- Triggered by `workflow_run` after data updates complete
+
+#### Benefits of This Pattern
+
+1. **Single Responsibility:** Each script has one clear purpose (fetch OR aggregate OR visualize)
+2. **Testability:** Can test aggregation logic without API calls by using mock JSON files
+3. **Resilience:** API failures only affect Layer 1; Layers 2-3 can still run with cached data
+4. **Flexibility:** Can re-generate visualizations without re-fetching from APIs
+5. **Clear Dependencies:** Layer 2 depends on Layer 1; Layer 3 depends on Layers 1-2
+6. **Parallel Execution:** Layer 1 scripts run in parallel (staggered for rate limiting)
+7. **Caching:** Only Layer 1 implements caching (7-day for citations)
+
+#### Data Flow Example
+
+```
+Monday 00:00-04:00 UTC (Layer 1 - Parallel):
+├─ fetch_ads_citations → citations_by_year.json
+├─ fetch_ads_metrics → ads_metrics.json
+└─ fetch_ads_publications → ads_publications.json
+           │
+           ├─ merge_invited_conferences → ads_publications.json (enriched)
+           ├─ compute_invited_metrics → invited_metrics.json
+           └─ generate_publication_statistics → publication_statistics.json
+                        │
+                        └─ (Layer 3 - After all complete):
+                           ├─ generate_publications_timeline
+                           ├─ generate_citations_timeline
+                           └─ generate_h_index_timeline
+```
 
 ---
 
@@ -926,6 +1126,179 @@ git push
 
 **No React/TypeScript files need to be created!**
 
+---
+
+### Card-Based Overview Pattern
+
+**Implemented:** 2025-10-29 (Commit: `ab8f371`)
+
+All three major page types (Research, Ben, Publications) now follow a consistent **card-based overview + dynamic subpages** pattern:
+
+```
+Overview Page (Card Grid) → Individual Subpages (Dynamic Routes)
+```
+
+This architecture provides:
+1. **Consistent Navigation:** Users experience identical interaction patterns across all sections
+2. **Discoverability:** Card grids with icons and descriptions help users explore content
+3. **Scalability:** Adding new pages requires only JSON updates
+4. **Single Source of Truth:** One template generates all subpages in each category
+
+---
+
+### 1. Research Pages
+
+**Pattern:** Card Overview → Dynamic Research Topics
+
+**Overview Page:** `/src/app/research/page.tsx`
+- Displays grid of research project cards
+- Cards shuffled at build time (no implied priority)
+- Links to individual research pages
+
+**Dynamic Subpages:** `/src/app/research/[slug]/page.tsx`
+- Generates pages for each research topic
+- Data sources: `research-projects.json`, `research-paragraphs.json`, `research-figures-with-captions.json`
+
+**URL Structure:**
+- `/research` - Card grid overview
+- `/research/proton-beams` - Individual topic
+- `/research/helium-abundance` - Individual topic
+- etc.
+
+---
+
+### 2. Ben Pages
+
+**Pattern:** Card Overview → Dynamic Ben Subpages
+
+**Overview Page:** `/src/app/ben/page.tsx`
+- Displays grid of thought leadership topic cards
+- Each card shows icon, title, and excerpt
+- Links to individual Ben subpages
+
+**Dynamic Subpages:** `/src/app/ben/[slug]/page.tsx`
+- Generates pages for each topic (Research Vision, Team Ethos, Mentorship Philosophy, Open Science)
+- Data source: `ben-page.json` (single file with `sections` array)
+
+**URL Structure:**
+- `/ben` - Card grid overview
+- `/ben/research-vision` - Individual topic
+- `/ben/team-ethos` - Individual topic
+- `/ben/mentorship-philosophy` - Individual topic
+- `/ben/open-science` - Individual topic
+
+**Data Schema (`ben-page.json`):**
+```json
+{
+  "heading": "About Ben",
+  "tagline": "How I ask big questions and who I ask them with",
+  "sections": [
+    {
+      "title": "Research Vision",
+      "slug": "research-vision",
+      "icon": "Telescope",
+      "excerpt": "1-2 sentence summary for card",
+      "paragraphs": ["Full content paragraph 1", "paragraph 2", ...],
+      "published": true
+    }
+  ]
+}
+```
+
+**Adding New Ben Page:**
+1. Edit `public/data/ben-page.json`
+2. Add new section to `sections` array with slug, title, icon, excerpt, paragraphs
+3. Set `published: true` (or `false` for drafts)
+4. Push to main - page automatically exists at `/ben/[slug]`
+
+---
+
+### 3. Publications Pages
+
+**Pattern:** Card Overview → Dynamic Category Pages
+
+**Overview Page:** `/src/app/publications/page.tsx`
+- Displays publication metrics dashboard
+- Shows grid of publication category cards
+- Each card shows count, icon, and description
+- Links to individual category pages
+
+**Dynamic Subpages:** `/src/app/publications/[category]/page.tsx`
+- Generates pages for each publication category
+- Data sources: `publications-categories.json`, `ads_publications.json`
+- Includes interactive filtering UI (authorship, year, journal, invited/contributed)
+
+**URL Structure:**
+- `/publications` - Metrics dashboard + category card grid
+- `/publications/refereed` - Refereed articles table
+- `/publications/conferences` - Conference publications table
+- `/publications/datasets` - Dataset publications table
+- etc.
+
+**Data Schema (`publications-categories.json`):**
+```json
+{
+  "heading": "Publications",
+  "tagline": "Peer-reviewed research and data products",
+  "categories": [
+    {
+      "title": "Refereed Articles",
+      "slug": "refereed",
+      "icon": "BookOpen",
+      "description": "Peer-reviewed journal publications",
+      "publicationType": "article",
+      "showCitations": true,
+      "showFilters": true,
+      "journalLabel": "Journal",
+      "journalField": "journal"
+    }
+  ]
+}
+```
+
+**Configuration Options (per category):**
+- `showFilters`: Enable/disable interactive filtering UI
+- `showCitations`: Show/hide citations column
+- `showJournal`: Show/hide journal/venue column
+- `showLinks`: Show/hide links column
+- `journalLabel`: Custom column header (e.g., "Venue" vs "Journal")
+- `journalField`: Which field to display (`"journal"` or `"location"`)
+
+**Adding New Publications Category:**
+1. Edit `public/data/publications-categories.json`
+2. Add new category to `categories` array
+3. Specify `publicationType` to filter publications
+4. Configure display options (filters, citations, etc.)
+5. Push to main - page automatically exists at `/publications/[slug]`
+
+---
+
+### Environment-Aware Publishing
+
+All three dynamic route systems support **draft pages** via the `published` field:
+
+```typescript
+// In generateStaticParams():
+const publishedItems = isDev ? allItems : allItems.filter(item => item.published !== false);
+```
+
+**Behavior:**
+- **Development (`npm run dev`):** All pages accessible, including `published: false`
+- **Production (`npm run build`):** Only pages with `published !== false` are generated
+
+**Use Case:** Create and test new pages locally before making them public
+
+---
+
+### Shared Pattern Benefits
+
+1. **Consistency:** Users navigate all major sections identically
+2. **Discoverability:** Card grids encourage exploration
+3. **Maintainability:** Same routing pattern across all dynamic page types
+4. **Scalability:** JSON-only updates to add pages
+5. **Type Safety:** TypeScript ensures schema consistency
+6. **SEO:** Each page generates individual HTML with proper metadata
+
 [↑ Back to Table of Contents](#table-of-contents)
 
 ---
@@ -1087,6 +1460,59 @@ interface ResearchFigureProps {
 - Footer section with contact details
 - Email address
 - Links to professional profiles
+
+**`publication-filters.tsx`** - Interactive Publication Filtering System
+- **File:** 429 lines of comprehensive client-side filtering UI
+- **Purpose:** Advanced filtering for publication category pages with real-time updates
+
+**Features:**
+- **Authorship Filter:** Radio buttons (All / First Author / Co-author)
+- **Invited Filter:** Radio buttons for conferences (All / Invited / Contributed)
+- **Journal Filter:** Multi-select dropdown with search functionality
+- **Year Filter:** Multi-select dropdown with search functionality
+- **Active Filter Badges:** Displays current filters with individual remove buttons
+- **Filter Count Badge:** Shows number of active filters on filter button
+- **Result Count:** "Showing X of Y publications" live update
+- **Empty State:** Displays message when no publications match filters
+- **Clear All:** Single-click to reset all filters
+
+**Configuration (per category via `publications-categories.json`):**
+```typescript
+interface PublicationCategory {
+  showFilters?: boolean;      // Enable/disable entire filtering UI (default: true)
+  showJournal?: boolean;       // Show/hide journal/venue column (default: true)
+  journalLabel?: string;       // Custom column header (default: "Journal")
+  journalField?: string;       // Field to display: "journal" | "location" (default: "journal")
+  showLinks?: boolean;         // Show/hide links column (default: true)
+  showCitations?: boolean;     // Show/hide citations column
+}
+```
+
+**Filter Logic:**
+- **AND between filter types:** Must match authorship AND year AND journal
+- **OR within filter type:** Match ANY selected journal OR ANY selected year
+- **Environment-aware:** Works with both client-side filtering and static generation
+
+**Example Usage:**
+```typescript
+<PublicationFilters
+  publications={filteredPubs}
+  categoryData={category}
+  labels={{ journal: "Venue" }}  // Custom labels
+/>
+```
+
+**UI Components Used:**
+- Popover for filter panel
+- RadioGroup for single-select filters
+- MultiSelect for journal/year filters
+- Badge for active filter chips
+- Button for Apply/Clear actions
+
+**Performance:**
+- Client-side filtering via `useMemo` hook
+- Re-renders only when filter state or publications change
+- Efficient array filtering with early returns
 
 #### Icon Components (`src/components/icons/`)
 
@@ -1655,8 +2081,18 @@ const publishedProjects = filterPublishedProjects(projects);
   - `slug` (string): URL-safe identifier for subpage route
   - `icon` (string): Lucide React icon name (e.g., "BookOpen", "Database", "FileText")
   - `description` (string): Short description for card
-  - `publicationType` (string): ADS publication type to filter (`article`, `dataset`, `inproceedings`, `abstract`, `techreport`, `eprint`, `phdthesis`)
+  - `publicationType` (string | string[]): ADS publication type(s) to filter (`article`, `dataset`, `inproceedings`, `abstract`, `techreport`, `eprint`, `phdthesis`)
   - `showCitations` (boolean): Whether to display citations column in table
+
+**Filter & Display Configuration (Optional):**
+  - `showFilters` (boolean): Enable/disable interactive filtering UI (default: `true`)
+  - `showJournal` (boolean): Show/hide journal/venue column (default: `true`)
+  - `showLinks` (boolean): Show/hide links column (default: `true`)
+  - `journalLabel` (string): Custom column header (default: `"Journal"`)
+    - Example: `"Venue"` for conferences
+  - `journalField` (string): Field to display in column (default: `"journal"`)
+    - Options: `"journal"` | `"location"`
+    - Use `"location"` for conferences to show venue instead of journal name
 
 **Used By:**
 - Publications overview page (`/src/app/publications/page.tsx`)
