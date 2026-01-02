@@ -11,8 +11,8 @@ interface PublicationStatisticsProps {
 
 /**
  * Displays publication statistics from NASA ADS metrics.
- * Shows h-index, total papers, citations, and refereed publications.
- * Makes "Total papers" and "Total citations" clickable to view timeline plots in modals.
+ * Shows h-index, total publications, citations, and refereed publications.
+ * Makes "Total publications" and "Total citations" clickable to view timeline plots in modals.
  */
 export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
   const [publicationsDialogOpen, setPublicationsDialogOpen] = useState(false)
@@ -56,7 +56,7 @@ export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
         {/* CLICKABLE: Total papers → Publications Timeline */}
         <ClickableMetric
           value={stats.summary.total_papers}
-          label={<>Total<br />Papers</>}
+          label={<>Total<br />Publications</>}
           onClick={() => setPublicationsDialogOpen(true)}
         />
 
