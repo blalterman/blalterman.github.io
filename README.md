@@ -13,7 +13,9 @@ The website relies on a series of GitHub Actions to automate content updates. He
 -   **`update_annual_citations.yml`**: Runs weekly to fetch year-by-year citation data from NASA ADS. It generates both a data file (`public/data/citations_by_year.json`) and a plot (`public/plots/citations_by_year.svg`).
 -   **`convert-pdfs.yml`**: Triggers on any push to the `public/paper-figures/pdfs/` directory. It automatically converts any new or modified PDF files into SVG format and saves them in `public/paper-figures/svg/`, making them web-ready.
 -   **`generate-figure-data.yml`**: Triggers whenever publication data or research project info is updated. It runs a Python script (`scripts/generate_figure_data.py`) to combine publication metadata, figure details, and license information into a single, structured file: `public/data/research-figures-with-captions.json`. This file is used to generate the detailed research subpages.
--   **`deploy.yaml`**: This is the final deployment workflow. It triggers automatically after the successful completion of any of the data-updating workflows. It builds the static Next.js site and a badge from shields.io, then deploys the output to the `gh-pages` branch, making the updated website live.
+-   **`update_plots.yml`**: Triggers automatically after the three ADS data workflows complete. It generates publication, h-index, and citation timeline visualizations using Python scripts and saves both JSON data and SVG/PNG plots to the `public/` directories.
+
+**Deployment:** The site deploys automatically to GitHub Pages via the Next.js static export configuration (`output: 'export'` in `next.config.ts`). GitHub Pages builds and publishes changes whenever commits are pushed to the main branch.
 
 ## Data Architecture and Content Pipeline
 
