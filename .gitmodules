@@ -1,0 +1,3 @@
+[submodule "research-corpus"]
+	path = research-corpus
+	url = git@github.com:blalterman/research-corpus.git
