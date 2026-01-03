@@ -1,0 +1,149 @@
+{
+  "paper_id": "Alterman_2019_ApJL_879_L6",
+  "paper_title": "Helium Variation across Two Solar Cycles Reveals a Speed-dependent Phase Lag",
+  "paper_doi": "https://doi.org/10.3847/2041-8213/ab2391",
+  "metadata": {
+    "version": "1.0",
+    "figures_count": 6,
+    "target_audience": "scientifically_literate_public"
+  },
+  "figures": [
+    {
+      "figure_id": "fig_1",
+      "short_title": "Two Decades of Helium Variation with Solar Wind Speed",
+      "summary": {
+        "what_we_see": "This multi-layered time series spans 23 years from 1995 to 2018, showing how helium abundance in the solar wind evolves through more than two complete eleven-year solar cycles. The plot divides solar wind into ten speed categories ranging from slow wind around 325 km/s (dark blue at bottom) to faster wind around 542 km/s (red at top). Each colored curve tracks the helium-to-hydrogen abundance ratio for its speed category, with measurements averaged over 250-day intervals. Abundance is plotted on the left vertical axis (1% to 6%), while the thick black dashed line shows thirteen-month smoothed sunspot number on the right axis (0 to 200). Two dramatic peaks around 2000 and 2014 (solar maximum periods) are separated by deep valleys around 2008 (solar minimum). Each curve's legend entry shows both the middle speed of that category and a correlation coefficient measuring how closely that curve tracks the sunspot pattern.",
+        "the_finding": "Helium abundance dances with solar activity, but not all solar wind speeds dance to the same beat. The slower solar wind (bottom curves in blues and purples) shows the strongest response to the solar cycle, with correlation coefficients above 0.85. When sunspot numbers rise, these curves climb steeply; when sunspots fade, helium drops. At the slowest speeds around 325 km/s, helium swings from below 2% during solar minimum to above 4% during solar maximum. Moving to faster wind speeds (middle curves in greens and yellows), the amplitude of wiggles gets smaller and correlations weaken, though they remain statistically meaningful above 0.6 up through about 490 km/s. The fastest wind shown (red curve at 542 km/s) stays relatively flat around 4-5% with almost no visible response to the sunspot cycle (correlation only 0.34). Solar Cycle 24 (second peak around 2014) was substantially weaker than Cycle 23 (first peak around 2000), with maximum sunspot numbers of about 120 versus 180. Yet helium abundance unexpectedly climbed to nearly the same heights during both maxima, particularly in slower wind speeds.",
+        "why_it_matters": "This figure establishes that helium behaves as a sensitive tracer of solar activity conditions, but only for certain types of solar wind. The strong correlation in slow wind tells us that whatever process controls helium abundance in these streams is intimately connected to the eleven-year solar cycle: the waxing and waning of active regions, magnetic field complexity, and energy release from the Sun. The weak correlation in fast wind suggests these streams originate from different solar sources (likely stable coronal holes) that remain relatively unchanged throughout the solar cycle. For space physicists, this split behavior is like having two independent thermometers measuring different parts of the Sun's atmosphere. The puzzle of why helium returns to similar maximum values despite different sunspot peaks hints that helium abundance may be controlled by magnetic or thermal conditions that do not scale linearly with simple sunspot counts. This points toward more sophisticated solar wind formation physics than previously thought."
+      },
+      "keywords": [
+        "time series",
+        "helium abundance",
+        "solar wind speed",
+        "solar cycle",
+        "sunspot number",
+        "correlation",
+        "speed quantiles",
+        "A_He",
+        "SSN",
+        "solar maximum",
+        "solar minimum",
+        "two solar cycles",
+        "Hale cycle"
+      ]
+    },
+    {
+      "figure_id": "fig_2",
+      "short_title": "How Time Delays Strengthen the Helium-Sunspot Correlation",
+      "summary": {
+        "what_we_see": "This panel plots correlation strength (vertical axis, ranging from 0.6 to 1.0) against solar wind speed (horizontal axis, from about 325 to 550 km/s) for the same ten speed categories shown in Figure 1, using matching colors and symbols. Two sets of markers appear: hollow symbols connected by a dotted line show the correlation when using the sunspot number exactly as observed in time, while filled symbols connected by another dotted line show what happens when sunspot numbers are shifted backward in time by an optimal delay before comparing to helium measurements. Error bars on each point indicate how much the correlation varies when the analysis is repeated with slightly different averaging window lengths (225-275 days instead of exactly 250). The two curves track each other closely in shape\u2014both peaking at the same wind speed around 355 km/s (green triangles) and declining toward faster speeds\u2014but the filled symbols consistently sit higher on the correlation scale.",
+        "the_finding": "The key discovery is that introducing a time delay universally improves the correlation between helium and sunspots across essentially all solar wind speeds. At the peak (355 km/s), the correlation jumps from about 0.87 to 0.94 when applying the optimal delay\u2014this might seem like a small numerical change, but it represents a substantial reduction in unexplained scatter and brings the relationship much closer to deterministic. The improvement is even more dramatic at faster speeds: at 488 km/s, the correlation nearly doubles from about 0.45 to 0.82, transforming what looked like a weak, barely significant relationship into a statistically strong one. This pattern holds across the entire speed range except the very fastest quantile (542 km/s), where correlations remain modest even after accounting for delays. The error bars are generally small compared to the improvement, confirming this is a robust signal rather than a statistical fluke arising from the choice of averaging window. Critically, the speed at which correlation peaks doesn't change\u2014it's still 355 km/s whether you use delayed or observed sunspots\u2014indicating the delay correction isn't artificially creating correlations but rather revealing relationships that were already present but obscured by timing offsets.",
+        "why_it_matters": "This panel provides the first evidence that helium doesn't respond instantaneously to changes in solar activity, and that properly accounting for this lag is essential to understanding the physical connection between the two. In scientific terms, it transforms helium variation from a complicated, somewhat messy response to solar activity into a highly organized, predictable one\u2014once you know the right time delay for each wind speed. For those trying to understand solar wind origins, this is analogous to discovering that echo delays in a canyon vary systematically with position: if you shout from different spots and measure how long it takes to hear the echo, you can map the canyon's geometry. Here, the varying time delays act as a diagnostic tool revealing how long it takes different solar source regions to process changes in solar conditions before releasing helium into the solar wind. The practical implication is that space weather forecasters could potentially use current sunspot observations to predict helium abundance changes weeks or months in advance, if they know which solar wind speed they're forecasting for."
+      },
+      "keywords": [
+        "correlation coefficient",
+        "time delay",
+        "solar wind speed",
+        "Spearman rank",
+        "observed versus delayed",
+        "SSN",
+        "A_He",
+        "statistical analysis",
+        "error bars",
+        "lag correction"
+      ]
+    },
+    {
+      "figure_id": "fig_3",
+      "short_title": "The Speed-Dependent Time Lag Revealed",
+      "summary": {
+        "what_we_see": "This companion panel reveals the optimal time delays that produced the improved correlations shown in panel (a). The vertical axis shows delay time in days (ranging from 0 to about 400), where positive values mean changes in sunspot number happened first and helium responded later. The horizontal axis again shows solar wind speed from 325 to 550 km/s, with the same ten colored symbols as the previous figures. Error bars indicate how much the optimal delay varies when testing different averaging window lengths. A dashed green line shows a mathematical fit to the data points\u2014specifically a linear relationship that crosses zero delay at about 200 km/s and increases steadily toward longer delays at higher speeds. An inset box provides the fit equation (delay = 3.4 \u00d7 speed \u2212 680) along with quality metrics showing this linear model explains the observations quite well.",
+        "the_finding": "The headline discovery is that time delay is not random or constant but instead increases systematically and nearly linearly with solar wind speed. The slowest wind (around 325 km/s) requires shifting sunspots backward by roughly 150 days to maximize correlation\u2014meaning helium abundance changes appear about five months after sunspot changes. As you move to moderately faster wind (around 410 km/s), the optimal delay stretches to about 250 days (eight months). The fastest wind showing meaningful correlations (around 488 km/s) needs delays exceeding 300 days (ten months). This creates a spread of more than 150 days in response time across the solar wind speed spectrum. The fitted line, when extrapolated backward, suggests there's a critical speed around 200 km/s where helium would respond instantly (zero delay). Intriguingly, this instantaneous response speed is actually slower than the previously measured helium vanishing speed of 259 km/s\u2014the speed below which helium essentially disappears from the solar wind entirely. This creates a paradox: any helium actually present in the observable solar wind (above 259 km/s) must necessarily have some time delay in responding to solar activity.",
+        "why_it_matters": "This linear relationship between wind speed and response time is the study's central discovery because it provides a direct window into solar wind formation physics. The speed-dependent lag tells us that solar wind from different sources takes different amounts of time to reflect changes in solar activity, like how water from mountain snowmelt takes longer to reach the ocean than water from coastal rainfall. The longer delays in faster wind suggest these flows originate from more magnetically complex or magnetically isolated structures\u2014likely active regions that are slow to respond to solar cycle changes. The shorter delays in slower wind point to sources (like the streamer belt) that are more tightly coupled to the solar cycle. The fact that the relationship is linear and systematic rather than scattered randomly across speeds indicates we're seeing an organized physical process, not chaotic behavior. For theorists building models of how helium gets depleted or enhanced during solar wind formation, this delay pattern provides a crucial constraint: any successful model must explain not just why helium varies with solar activity, but why that variation is delayed, and why the delay duration depends specifically on solar wind speed in this particular mathematical way."
+      },
+      "keywords": [
+        "time delay",
+        "phase lag",
+        "solar wind speed",
+        "correlation peak",
+        "tau",
+        "linear fit",
+        "speed dependence",
+        "response time",
+        "robust fit",
+        "fit parameters",
+        "instantaneous response speed"
+      ]
+    },
+    {
+      "figure_id": "fig_4",
+      "short_title": "The Hysteresis Pattern with Observed Sunspot Numbers",
+      "summary": {
+        "what_we_see": "This scatter plot focuses on a single representative solar wind speed category\u2014the 355 km/s quantile that showed the strongest correlations in Figure 2\u2014and plots helium abundance (vertical axis, 2% to 5%) against observed sunspot number (horizontal axis, 0 to 180) across the full 23-year measurement period. Each point represents one 250-day averaged measurement, with the color of the marker indicating how many days after the mission started that measurement was taken, following a rainbow progression from dark blue (early mission, around day 0) through greens and yellows to red (late mission, around day 8000). A line connects consecutive points in time order, creating a path that loops through the plot space. A dashed green line shows a robust statistical fit\u2014essentially the best linear trend through the scattered points\u2014with the fit equation and quality metrics displayed in an inset box (slope of 0.013% per sunspot, with R\u00b2 = 0.76).",
+        "the_finding": "The plot reveals a striking hysteresis loop\u2014a counter-clockwise spiral pattern where the path going up in sunspot number (rising phase of the solar cycle, shown in blue-green colors) takes a different route through the plot than the path coming back down (declining phase, shown in yellow-orange-red colors). If helium responded instantaneously to sunspot changes, all points would collapse onto a single curve. Instead, at intermediate sunspot numbers (say, 80-120), you can find two very different helium values separated by about 0.5-1.0 percentage points depending on whether you're in the rising phase (lower abundance) or falling phase (higher abundance). This spread is particularly pronounced near solar maximum, where the points cluster and spread out horizontally\u2014the same sunspot number corresponds to a wide range of helium values. Near solar minimum (sunspot numbers below 20), the loop tightens considerably, with points bunching close to the trend line. The linear fit tries to capture the overall relationship but can only explain 76% of the variance (R\u00b2 = 0.76), leaving nearly a quarter of the behavior unexplained by a simple proportionality between helium and sunspots.",
+        "why_it_matters": "This hysteresis pattern is the visual signature of the time lag revealed in Figure 2, and it demonstrates why simply looking at the instantaneous relationship between helium and sunspot number misses crucial physics. The counter-clockwise direction tells us that helium lags behind sunspot changes: when sunspots are climbing toward maximum, helium hasn't fully responded yet, so it reads lower than you'd expect; when sunspots are declining, helium is still elevated from the recent maximum, so it reads higher than the current sunspot count would suggest. This is identical to the hysteresis seen in many other solar cycle indicators\u2014like a thermal system that heats up slowly and cools down slowly, never quite in equilibrium with the heating source. For solar physicists, recognizing this pattern is essential because it means you cannot predict helium abundance from the current sunspot number alone; you need to know the history\u2014whether activity is increasing or decreasing. The tightening of the loop near solar minimum and its opening near solar maximum also suggests that the lag effects are most important when solar activity is changing rapidly, providing clues about timescales of the physical processes controlling helium release."
+      },
+      "keywords": [
+        "hysteresis",
+        "helium abundance",
+        "sunspot number",
+        "A_He versus SSN",
+        "observed SSN",
+        "solar cycle phase",
+        "rising phase",
+        "declining phase",
+        "counter-clockwise loop",
+        "robust fit",
+        "scatter plot",
+        "time evolution",
+        "355 km/s"
+      ]
+    },
+    {
+      "figure_id": "fig_5",
+      "short_title": "Hysteresis Largely Removed by Applying the Optimal Time Delay",
+      "summary": {
+        "what_we_see": "This panel is nearly identical in format to panel (a): same axes, same speed category (355 km/s), same color coding by mission day, same connected trajectory. The crucial difference is that the horizontal axis now shows time-delayed sunspot number rather than observed values. Sunspot numbers have been shifted backward in time by approximately 150 days (the optimal delay for this speed from Figure 2b) before being compared to helium abundance. The dashed green fit line is steeper than in panel (a), with a larger slope of 0.015% per delayed sunspot unit. The fit quality metrics in the inset box show improvement: R-squared has increased from 0.76 to 0.80, and reduced chi-squared has dropped from 1.79 to 1.33, closer to the ideal value of 1.0.",
+        "the_finding": "The hysteresis loop has dramatically collapsed. While not completely eliminated, the counter-clockwise spiral prominent in panel (a) has tightened considerably. Points that were separated vertically at a given sunspot number now cluster much more closely to the fit line. The improvement is most noticeable at intermediate sunspot numbers (60-120), where vertical spread between rising and falling phases has shrunk by roughly half. The increased R-squared value quantifies this improvement: the linear relationship now explains 80% of variance instead of 76%, meaning the delay correction reduced unexplained scatter by about one-sixth. The closer-to-unity chi-squared confirms that a simple linear model (helium proportional to delayed sunspots) is now statistically appropriate. The data points maintain their time-ordered color progression and some residual loop structure remains, indicating the delay correction captures most but not all of the timing offset.",
+        "why_it_matters": "This panel provides direct visual proof that the speed-dependent time lag is a real physical phenomenon, not a mathematical artifact. Shifting sunspot numbers backward by the right amount effectively synchronizes the two time series, accounting for how long it takes solar source regions to respond to activity changes. The remaining scatter after this correction tells us that while timing delay is the dominant effect, other factors also matter. These might include variations in how different types of active regions process helium, or intrinsic measurement uncertainties. For researchers building predictive models, this demonstrates that a simple rule captures the bulk of the behavior: helium abundance at a given wind speed today depends linearly on what sunspot number was doing approximately five months ago. This time-lagged linear relationship is far more useful for forecasting than the messy hysteresis pattern in panel (a), where the relationship between instantaneous helium and sunspot values appears confusingly non-unique."
+      },
+      "keywords": [
+        "hysteresis reduction",
+        "delayed SSN",
+        "helium abundance",
+        "A_He versus delayed SSN",
+        "phase correction",
+        "linear relationship",
+        "improved fit",
+        "R squared",
+        "chi squared",
+        "lag correction",
+        "355 km/s"
+      ]
+    },
+    {
+      "figure_id": "fig_6",
+      "short_title": "Validation Against Prior Solar Minimum Measurements",
+      "summary": {
+        "what_we_see": "This validation plot shows helium abundance at zero solar activity\u2014essentially where the fitted lines from Figure 3 cross the vertical axis\u2014plotted against solar wind speed. The horizontal axis spans from about 300 to 550 km/s, while the vertical axis shows helium abundance from 0% to 6%. Two sets of colored markers appear, maintaining the same color scheme as previous figures: unfilled markers represent values extracted from fits using the full range of sunspot numbers (0-180) from the 23-year dataset, while filled markers show results from repeating the analysis using only periods when sunspot number was below 25 (quiet-time conditions near solar minimum). Error bars on each point indicate how these extrapolated zero-activity values vary when using different averaging window lengths. A dashed black curve overlays the data\u2014this is not a fit to the current measurements but rather the empirical relationship A_He = 0.0163 \u00d7 (v \u2212 259) derived by Kasper et al. (2007) from a focused two-year study around Solar Minimum 23 in the early 2000s.",
+        "the_finding": "The filled markers (analysis restricted to low sunspot periods) align remarkably well with the Kasper et al. (2007) curve across nearly the entire speed range, typically falling within one error bar of the predicted values. This close agreement validates that the current study's methodology produces results consistent with prior focused studies of solar minimum conditions. The unfilled markers (using all solar activity levels) systematically sit slightly higher than both the filled markers and the Kasper curve, particularly at moderate speeds around 350-450 km/s where the offset is about 0.5-1.0 percentage points. This upward shift makes physical sense: when you include solar maximum periods in your fit and then extrapolate back to zero sunspot number, you're essentially asking 'what would helium be if sunspots suddenly vanished?' which gives a slightly different answer than actually measuring during real solar minimum when the Sun has been quiet for an extended period. The one notable deviation occurs at the fastest speed category (542 km/s), where both marker types fall significantly below the extrapolated curve, but this is expected because Kasper et al. (2007) noted that fast wind behaves differently\u2014helium stabilizes at 4-5% regardless of solar activity at these speeds.",
+        "why_it_matters": "This comparison serves as a critical credibility check for the entire study, demonstrating that analyzing 23 years of data spanning two complete solar cycles with time-delay corrections produces results that agree with detailed observations from a single solar minimum period when the analysis is restricted to comparable conditions. It's analogous to verifying that a climate model that spans a century still correctly reproduces the temperatures measured during one specific summer. The agreement also substantiates the interpretation that helium essentially vanishes from the solar wind below 259 km/s (the x-intercept of the Kasper curve) regardless of solar cycle phase, supporting the hypothesis that helium release may be essential for solar wind formation\u2014below this critical speed, whatever process releases helium into the wind shuts off, and no wind escapes. For the broader scientific community, this validation using independent analysis techniques and different temporal baselines strengthens confidence that the helium-speed relationship represents a fundamental constraint on solar wind physics rather than an artifact of a particular observational period or analysis approach."
+      },
+      "keywords": [
+        "validation",
+        "zero solar activity",
+        "helium abundance",
+        "solar minimum",
+        "Kasper 2007",
+        "A_He(SSN=0)",
+        "solar wind speed",
+        "helium vanishing speed",
+        "v0 = 259 km/s",
+        "comparison",
+        "robustness",
+        "SSN < 25",
+        "extrapolation"
+      ]
+    }
+  ]
+}
