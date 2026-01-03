@@ -1,0 +1,185 @@
+{
+  "paper_id": "Alterman_2018_ApJ_864_112",
+  "paper_title": "A Comparison of Alpha Particle and Proton Beam Differential Flows in Collisionally Young Solar Wind",
+  "paper_doi": "https://doi.org/10.3847/1538-4357/aad23f",
+  "metadata": {
+    "version": "1.0",
+    "figures_count": 9,
+    "target_audience": "scientifically_literate_public"
+  },
+  "figures": [
+    {
+      "figure_id": "fig_1",
+      "short_title": "Three Ion Populations Revealed by Different Viewing Angles",
+      "summary": {
+        "what_we_see": "This four-panel figure shows solar wind measurements from the Wind spacecraft. The Faraday cup instrument captures particles arriving at four angles relative to the magnetic field (118, 139, 156, and 170 degrees). Each panel plots charge flux versus energy-per-charge on a logarithmic scale spanning 0-4 kilovolts. Three distinct peaks appear in different colors: red for core protons (the main hydrogen component), blue for beam protons (a faster-moving subset), and purple for alpha particles (fully ionized helium). Vertical dashed lines mark where the instrument distinguishes the beam from the core. The viewing angle indicated at the top of each panel shows how aligned the detector is with the magnetic field, with 170 degrees being nearly anti-parallel.",
+        "the_finding": "The three-population structure becomes dramatically clearer as the viewing angle approaches anti-parallel to the magnetic field. At 118 degrees (upper left), the blue proton beam peak appears as a subtle shoulder barely distinguishable from the red core. By 170 degrees (lower right), the beam separates into a distinct peak shifted to higher energy. This reveals that beam protons travel faster than the core along the magnetic field direction. The purple alpha particle peak remains consistently positioned between core and beam across all angles, with its separation from the core also improving at aligned viewing angles. The charge flux spans nearly three orders of magnitude, with core protons peaking around 200 picoamperes, beams at 60-80 pA, and alphas at 10-15 pA. The presence of all three peaks at all viewing angles confirms these are real physical populations, not instrumental artifacts.",
+        "why_it_matters": "This figure demonstrates a breakthrough capability: simultaneously measuring three ion populations from the same solar wind parcel. Previous algorithms could not reliably achieve this. The angle-dependence reveals a fundamental property of solar wind ions: they drift preferentially along magnetic field lines, not randomly in all directions. This field-aligned flow is a signature of wave-particle interactions, where magnetic waves selectively accelerate ions in one direction. By measuring from multiple look directions, the instrument confirms that what appears as higher energy at aligned viewing angles is actually higher velocity along the field, not perpendicular motion. The three-population measurement is crucial for understanding solar wind physics. The core protons represent bulk flow, beam protons indicate ongoing acceleration processes, and alpha particles (four times heavier than protons but carrying the same charge) provide an independent test of wave-particle coupling theories. The relative positions of these three peaks form the basis for understanding how collisions and waves shape differential flows in subsequent figures."
+      },
+      "keywords": [
+        "Faraday cup",
+        "charge flux",
+        "energy spectrum",
+        "three populations",
+        "viewing angle",
+        "magnetic field alignment",
+        "alpha particles",
+        "proton core",
+        "proton beam",
+        "differential flow"
+      ]
+    },
+    {
+      "figure_id": "fig_2",
+      "short_title": "Velocity Space Distributions Show Beam as High-Speed Shoulder",
+      "summary": {
+        "what_we_see": "This figure transforms the energy measurements from Figure 1 into velocity space, creating contour maps that show particle density at each combination of parallel velocity (motion along the magnetic field) and perpendicular velocity (motion across the field). The top panel shows the combined proton distribution; the bottom panel shows alpha particles separately. Think of these as topographic maps where each contour line represents a level of particle density. Both panels use the same contour levels and span roughly -400 to +1000 km/s parallel and -600 to +600 km/s perpendicular. The distributions are centered slightly above zero parallel velocity, reflecting the bulk solar wind flow, and appear as elongated structures tilted slightly from vertical.",
+        "the_finding": "The proton distribution (top) reveals the beam as a distinct high-speed shoulder extending toward positive parallel velocities. The main core peaks around +400 km/s parallel velocity, appearing as tightly nested circular-to-oval contours. A secondary enhancement stretches toward +600-700 km/s: this is the beam population traveling faster than the core along the magnetic field. The beam appears as a velocity-space shoulder rather than a completely separate peak, explaining why it can be tricky to measure. The perpendicular spread is similar for both core and beam, indicating comparable temperatures perpendicular to the field. The alpha particle distribution (bottom) tells a different story. It peaks around +450 km/s parallel (faster than the proton core but slower than the beam) and shows a more compact structure. The alpha distribution is notably smoother with no secondary shoulders, suggesting alpha particles behave as a single, coherent population unlike the two-component proton case.",
+        "why_it_matters": "These velocity distributions are fingerprints revealing the microscopic physics of solar wind behavior. The beam's appearance as a shoulder rather than a separate peak indicates it shares some thermal connection with the core. They are not entirely independent populations but represent different parts of a complex, non-equilibrium proton distribution. This non-equilibrium structure is a smoking gun for ongoing wave-particle interactions. If the solar wind were simply coasting outward and undergoing collisions, it would relax toward a single, smooth bell-shaped distribution. The persistence of the beam shoulder at Earth (1 AU from the Sun) means something actively maintains or replenishes it during the multi-day journey through space. The different shapes of proton versus alpha distributions suggest they couple differently to solar wind waves. Protons develop this characteristic asymmetric, beam-bearing structure, while alphas remain relatively simple. These measurements provide critical constraints on kinetic theories of wave-particle resonance."
+      },
+      "keywords": [
+        "velocity distribution function",
+        "VDF",
+        "phase space",
+        "beam shoulder",
+        "contour plot",
+        "parallel velocity",
+        "perpendicular velocity",
+        "non-equilibrium",
+        "kinetic theory"
+      ]
+    },
+    {
+      "figure_id": "fig_3",
+      "short_title": "Differential Flows Cluster Near Characteristic Fractions of Alfv\u00e9n Speed",
+      "summary": {
+        "what_we_see": "This histogram compares how fast alpha particles and proton beams drift relative to core protons. Both drifts are normalized by the local Alfven speed, the characteristic speed of magnetic waves in the plasma. The horizontal axis shows this normalized drift from 0 to 1.75, where 1.0 means drifting exactly at the Alfven speed. The vertical axis counts measurements in each bin, reaching up to 14,000 observations. Two overlapping distributions appear: a dashed orange curve for alpha particle drift and a solid orange curve for proton beam drift. Green highlighting marks bins included in Gaussian fits (counts above 30% of peak). Fit parameters appear in text boxes: for alphas, the peak is at 0.673 (67.3% of Alfven speed) with width 0.260; for beams, the peak is at 1.079 (107.9%) with width 0.164. Data come from fast wind (at least 400 km/s) when collisions are minimal.",
+        "the_finding": "The two distributions cluster around distinctly different values, with almost no overlap between their peaks. Alpha particles preferentially drift at about two-thirds the Alfven speed, while proton beams drift slightly faster than the Alfven speed itself. The proton beam distribution is notably narrower (width 0.164 versus 0.260 for alphas), indicating beam drift is more tightly constrained to a characteristic value. The alpha distribution shows broader spread and a secondary population of very slow drifts near zero, though these low-drift measurements are excluded from the fit. The approximately 1.6-fold difference between alpha and beam drift speeds (1.079/0.673) is a robust feature requiring physical explanation.",
+        "why_it_matters": "The clustering of drifts around characteristic fractions of the Alfven speed is the central finding of this paper. It provides strong evidence that magnetic waves limit how fast different ion species can drift. If there were no wave-mediated speed limit, drifts would vary randomly based on source region conditions, showing no particular relationship to the Alfven speed. Instead, the data reveal Alfvenic regulation: ions drift until wave-particle interactions balance further acceleration, with the equilibrium speed set by plasma wave physics. Why do alphas and beams equilibrate at different fractions of the same Alfven speed? Two possibilities emerge. First, different wave modes may couple to the two species, with protons resonating with waves that allow faster drift. Second, both may couple to the same waves, but alphas experience stronger drag forces that prevent them from reaching as high a drift speed. The broader spread in alpha drift compared to beam drift suggests alphas are more sensitive to variable environmental conditions, perhaps collision rates. For solar wind models, these characteristic drift fractions become critical benchmarks: any theory must explain not just that differential flows exist, but why they lock onto these specific values relative to the local Alfven speed."
+      },
+      "keywords": [
+        "differential flow",
+        "Alfv\u00e9n speed",
+        "normalized drift",
+        "Gaussian fit",
+        "fast wind",
+        "collisionless",
+        "characteristic values",
+        "wave-particle interactions",
+        "speed limit"
+      ]
+    },
+    {
+      "figure_id": "fig_4",
+      "short_title": "Alpha and Beam Drift Fluctuations Show No Correlation",
+      "summary": {
+        "what_we_see": "This two-dimensional histogram explores whether alpha particle and proton beam drifts fluctuate together or independently. The vertical axis plots fluctuations in beam drift (-20 to +20 km/s), while the horizontal axis shows fluctuations in alpha drift over the same range. Each axis represents deviations from a 14-minute running mean, effectively isolating minute-to-minute changes. The color scale uses a logarithmic range from 1 to 300+ counts, with deep purple indicating rare combinations and bright yellow showing the most common. Overlaid yellow ellipse contours represent a fitted two-dimensional Gaussian distribution. A beige text box displays the fit parameters: the ellipse centers near the origin with nearly equal widths in both directions and a near-vertical rotation angle of 86.7 degrees.",
+        "the_finding": "The fitted ellipse is remarkably circular and perfectly centered on zero fluctuation for both species, demonstrating that variations in alpha drift are completely uncorrelated with variations in beam drift on these 5-15 minute timescales. If the two species responded in lock-step to the same driving process, we would see an elongated ellipse tilted at 45 degrees. Instead, the near-vertical orientation and circular shape reveal statistical independence: knowing that alpha drift just increased by +5 km/s tells you nothing about whether beam drift will increase, decrease, or stay the same. The distribution shows no preferred direction of correlated variation. The color gradient concentrates at the center, indicating most fluctuations are small, with purple edges showing that large simultaneous fluctuations are rare but do occur occasionally.",
+        "why_it_matters": "This lack of correlation is a critical negative result that rules out a simple explanation for the different drift speeds shown in Figure 3. If alpha particles and proton beams were both responding to the same local wave field, their drifts would rise and fall together. The absence of correlation indicates either different wave modes are involved or the same waves couple through different physical mechanisms. This finding also constrains the sources of scatter in Figure 3: the different distribution widths must arise from different sources rather than large-scale wave amplitude fluctuations. For theoretical modeling, simple models where a single wave field simultaneously accelerates all ions can be ruled out, pointing toward species-dependent resonance conditions."
+      },
+      "keywords": [
+        "2D histogram",
+        "fluctuation analysis",
+        "correlation",
+        "statistical independence",
+        "uncorrelated variations",
+        "ellipse fit",
+        "time series analysis",
+        "wave-particle coupling"
+      ]
+    },
+    {
+      "figure_id": "fig_5",
+      "short_title": "Collisional Age Dramatically Affects Alpha Drift But Not Beam Drift",
+      "summary": {
+        "what_we_see": "This pair of heat maps shows how normalized differential flow (vertical axis, 0.2 to 1.6 for both panels) varies with collisional age A_c (horizontal axis, 10\u207b\u00b2 to 10\u207b\u00b9 on logarithmic scale). Collisional age represents how many Coulomb collisions the plasma has experienced during its journey from Sun to Earth\u2014lower values mean younger, more collision-free plasma. The left panel shows alpha particle drift, the right panel shows proton beam drift, both normalized by the Alfv\u00e9n speed. Color intensity represents the number of observations in each bin, but each vertical column is normalized to its own maximum to emphasize trends rather than overall statistics, so brightness reveals the most probable drift value at each collisional age. A vertical blue line at A_c = 1.2 \u00d7 10\u207b\u00b2 marks the boundary of the 'youngest' measured plasma subset. Only bins with at least 30% of their column's maximum are colored; regions with insufficient data appear blank (white).",
+        "the_finding": "The two panels tell strikingly different stories. In the alpha panel (left), the bright ridge of high probability clearly slopes downward from left to right, starting near 0.8 at the youngest ages (A_c ~ 0.01) and declining to about 0.4 at the oldest ages (A_c ~ 0.1). This dramatic ~50% decrease indicates alpha drift is extremely sensitive to collisions\u2014as the plasma ages and experiences more cumulative collisions, alpha particles slow down relative to the core protons. The proton beam panel (right), in contrast, shows an almost horizontal bright ridge hovering around 1.0-1.1 across the entire collisional age range. There's barely any slope\u2014beam drift remains nearly constant regardless of how many collisions have occurred. The youngest region (left of the blue line) shows alpha drift concentrated around 0.75-0.8 and beam drift around 1.0-1.05, but as age increases, these values diverge: alphas drop while beams stay put. The color intensity patterns also differ: the alpha panel shows broader vertical spread (more scatter at each age), while the beam panel shows tighter vertical clustering (more predictable drift at each age).",
+        "why_it_matters": "This figure reveals why alpha particles and proton beams have such different normalized drift distributions in Figure 3\u2014they respond completely differently to collisions. Alpha particles suffer from 'collisional drag': as they drift faster than the bulk protons, they collide with slower-moving core protons, and these small-angle Coulomb scattering events gradually sap their drift speed, like friction slowing a car. The exponential-looking decay visible in the left panel matches theoretical predictions for how differential flow should decrease with cumulative collisions. Proton beams, however, appear immune to this collisional braking\u2014their drift stays pinned near the Alfv\u00e9n speed even as the plasma ages. This dramatic difference suggests two possibilities: either (1) some process continuously re-accelerates proton beams to compensate for collisional drag, keeping them at the Alfv\u00e9n speed despite friction, or (2) the collisional drag formula (Equation 1 in the paper) underestimates drag on protons compared to alphas, perhaps because proton-proton collisions work differently than alpha-proton collisions at the velocity-space locations where beams live. For understanding solar wind evolution, this means alpha drift is a good diagnostic of how collisional the plasma has become\u2014fast alpha drift indicates young, pristine wind fresh from the corona, while slow alpha drift signals older wind that's been collisionally processed. Beam drift, conversely, tells us about wave-particle balance regardless of age."
+      },
+      "keywords": [
+        "collisional age",
+        "2D histogram",
+        "heat map",
+        "Coulomb collisions",
+        "collisional drag",
+        "age dependence",
+        "exponential decay",
+        "youngest plasma"
+      ]
+    },
+    {
+      "figure_id": "fig_6",
+      "short_title": "Alpha-to-Beam Drift Ratio Narrows in Youngest Plasma",
+      "summary": {
+        "what_we_see": "This histogram directly compares alpha and beam drifts by plotting their ratio \u0394v_{\u03b1,p1}/\u0394v_{p2,p1} (horizontal axis, 0 to 1.5) for measurements where both populations are detected simultaneously. The vertical axis shows normalized count (0 to 1.0, where each distribution is scaled to its own peak). Two overlapping distributions appear: an orange dashed curve representing the full low-collision sample (10\u207b\u00b2 \u2264 A_c \u2264 10\u207b\u00b9) and an orange solid curve for the 'youngest' subset (10\u207b\u00b2 \u2264 A_c \u2264 1.2 \u00d7 10\u207b\u00b2) shown in Figure 5. Gray histogram bars show the raw counts for each case, with green highlighting indicating bins included in Gaussian fits (those with counts \u226530% of maximum). Text boxes display fit parameters: the collisionless sample (dashed) peaks at \u03bc = 0.619 with width \u03c3 = 0.193, while the youngest sample (solid) peaks at \u03bc = 0.707 with width \u03c3 = 0.141. Both fits are orange curves overlaying the histograms.",
+        "the_finding": "The youngest plasma (solid orange) shows a narrower, more tightly peaked distribution than the broader collisionless sample (dashed orange), indicating that restricting to very young plasma reduces scatter in the alpha-to-beam ratio. The peak shifts rightward from 0.619 to 0.707 when moving from all collisionless data to only the youngest\u2014a ~14% increase. This means alphas drift at about 71% the speed of beams in the youngest plasma, compared to 62% when averaging over all collisional ages. The width shrinks by ~27% (from \u03c3 = 0.193 to 0.141), showing that collisional age variation was contributing substantial spread to the ratio. Converting these ratios to the absolute drift speeds from Figure 3: in the youngest plasma, if beams drift at ~105% of Alfv\u00e9n speed, alphas are at ~71% \u00d7 105% \u2248 75% of Alfv\u00e9n speed, which matches the ~0.75-0.8 seen in Figure 5's youngest region. The residual spread (\u03c3 = 0.141 even in youngest plasma) indicates that factors beyond collisional age contribute to variability\u2014perhaps local wave amplitudes, source region conditions, or measurement uncertainties.",
+        "why_it_matters": "This ratio distribution quantifies the fundamental puzzle motivating this paper: even in the most pristine, collision-free plasma measurable at Earth, alpha particles consistently drift slower than proton beams\u2014at best reaching 71% of the beam speed. The ~1.4\u00d7 difference (1/0.707 \u2248 1.4) cannot be explained by collisions alone, since this is measured in the youngest available plasma where collisional effects are minimized. Two physical interpretations emerge: either (1) alpha particles and proton beams reach intrinsically different equilibrium drift speeds when wave-particle interactions dominate over collisions, perhaps because alpha particles (with charge-to-mass ratio half that of protons) couple differently to plasma waves, or (2) even in the 'youngest' plasma measured here (A_c ~ 0.01), alphas have already experienced enough collisional drag to slow them below their true initial drift speed, while beams somehow resist that drag. The narrowing of the distribution when restricting to youngest plasma (smaller \u03c3) supports the collisional interpretation: much of the scatter in the full sample comes from mixing plasmas at different evolutionary stages. For understanding coronal physics (conditions at the solar wind's birthplace), this ratio provides a crucial constraint: if we assume minimal collisional modification in the youngest sample, then source regions at the Sun must already establish this ~0.7 ratio, implying the wave-particle processes setting up differential flows operate differently for alphas versus protons even before the wind leaves the corona."
+      },
+      "keywords": [
+        "drift ratio",
+        "youngest plasma",
+        "collisionless comparison",
+        "Gaussian fit",
+        "scatter reduction",
+        "alpha-beam ratio",
+        "pristine solar wind"
+      ]
+    },
+    {
+      "figure_id": "fig_7",
+      "short_title": "Anisotropic Alfv\u00e9n Speed Reduces Scatter in Normalized Drifts",
+      "summary": {
+        "what_we_see": "This two-panel figure presents Gaussian fits to normalized drift distributions using a more sophisticated Alfven speed calculation that accounts for proton temperature anisotropy. Each panel shows a histogram with the fitted region highlighted, an orange Gaussian fit curve, and a residual plot below. The left panel displays alpha particle drift normalized by this anisotropic Alfven speed; the right panel shows proton beam drift. Text boxes report fit parameters: for alphas, the mean is 0.622 with width 0.132; for beams, the mean is 1.057 with width 0.150. Only the youngest plasma is included to minimize collisional effects.",
+        "the_finding": "Compared to the ideal Alfven speed normalization used earlier, this anisotropic approach yields notably tighter distributions. Alpha width drops from ~0.26 to 0.132, representing a 50% reduction. Beam width decreases from ~0.164 to 0.150, a 9% reduction. The mean values also shift: alphas now peak at 62% of the anisotropic Alfven speed because accounting for perpendicular pressure typically increases the calculated Alfven speed. Beams remain close to 106% of Alfven speed with minimal change. The residual plots show excellent fits, with deviations mostly within plus or minus 10% and no systematic patterns.",
+        "why_it_matters": "This figure demonstrates that much of the scatter in Figure 3 was due to an oversimplified Alfven speed formula rather than varying physics. The dramatic reduction in scatter indicates that differential flows are tightly coupled to the true local wave speed. This has profound implications: the waves regulating differential flow must propagate at the anisotropic Alfven speed, likely kinetic Alfven waves or ion-cyclotron waves. For modeling, you cannot use simple MHD to correctly capture wave speeds and predict differential flows. The fact that this correction works better for alphas than beams hints that alpha drift may be more purely Alfvenic."
+      },
+      "keywords": [
+        "anisotropic Alfv\u00e9n speed",
+        "pressure anisotropy",
+        "Gaussian fit",
+        "residuals",
+        "scatter reduction",
+        "MHD approximation",
+        "temperature anisotropy",
+        "fit quality"
+      ]
+    },
+    {
+      "figure_id": "fig_8",
+      "short_title": "Optimal Alfv\u00e9n Speed Formula Balances Precision and Measurement Uncertainty",
+      "summary": {
+        "what_we_see": "This scatter plot systematically compares different Alfven speed formulas by plotting distribution width (vertical axis, 0 to 0.25) versus mean normalized drift (horizontal axis, 0 to 1.2). Each point represents one formula variant applied to one species. Blue symbols are for alpha particles; yellow symbols are for proton beams. Three symbol shapes encode different physics: triangles use the classic isotropic Alfven speed, squares add proton core pressure anisotropy correction, and stars add both anisotropy and dynamic pressure from differential streaming. All cases include both proton densities in the mass density calculation. A legend in the lower left decodes the symbols. Different formulas shift points horizontally (changing mean drift value) and vertically (changing distribution width).",
+        "the_finding": "The square symbols (anisotropic correction only) sit at the lowest vertical positions for both species, indicating these formulas yield the narrowest distributions and best precision. For alpha particles, moving from isotropic (triangle) to anisotropic (square) drops the width from approximately 0.18 to 0.16. For beams, width decreases from approximately 0.17 to 0.15. However, adding the dynamic pressure term (stars) increases width back to 0.20-0.21 for both species, worse than even the isotropic case. This counterintuitive result means that while dynamic pressure is theoretically part of the correct Alfven speed, including it actually degrades fit quality. The mean values shift predictably: more complete formulas give higher Alfven speeds, making normalized drifts appear smaller (points shift leftward). The consistent vertical ordering (squares lowest, stars highest) across both species indicates this is a robust pattern.",
+        "why_it_matters": "The most physically complete formula is not always the most useful one. In principle, the full anisotropic Alfven speed including dynamic pressure should give the best representation. In practice, it introduces more measurement uncertainty than physical correction. Dynamic pressure depends on differential velocities themselves (creating a circular dependency) and on higher moments of distribution functions that carry larger error bars. The optimal choice (squares) includes the dominant correction: proton core pressure anisotropy, which is well-measured and physically significant (typically 6-7% correction, up to 50% in extreme cases). It omits the dynamic pressure correction that is smaller (approximately 5% for typical beam density) but harder to measure accurately. This pragmatic choice exemplifies a general principle: the goal is not to include every theoretically correct term, but to maximize signal-to-noise by retaining only corrections that are large relative to their uncertainties. For plasma physics, differential flows track primarily the kinetic Alfven speed set by pressure anisotropy, with dynamic pressure playing a secondary role."
+      },
+      "keywords": [
+        "Alfv\u00e9n speed comparison",
+        "width vs mean",
+        "pressure corrections",
+        "dynamic pressure",
+        "measurement uncertainty",
+        "formula optimization",
+        "MHD variants"
+      ]
+    },
+    {
+      "figure_id": "fig_9",
+      "short_title": "Extrapolating to Zero Collisions Reveals Intrinsic Drift Limits",
+      "summary": {
+        "what_we_see": "This figure tracks how normalized differential flow varies with collisional age by plotting mean drift values against collisional age on a logarithmic scale. Two species are shown: blue for alpha particles and yellow for proton beams. Each point represents the center of a Gaussian fit to a narrow collisional age bin, with error bars showing the distribution width. Dotted black lines fit the trends: for alphas, an exponential decay curve; for beams, a linear fit with near-zero slope. The alpha trend curves strongly downward, while the beam trend is nearly horizontal.",
+        "the_finding": "Alpha drift drops dramatically with increasing collisional age, starting near 0.65 at the youngest ages and decaying toward 0.40 at the oldest ages shown. The exponential fit indicates the drift halves roughly every factor-of-2 increase in collision count. Extrapolating to zero collisional age gives 0.67, suggesting alpha particles would drift at 67% of Alfven speed in perfectly collision-free conditions. Proton beams show minimal variation: the best-fit line is essentially flat with intercept 1.06. Both fits converge toward their asymptotic values at the leftmost edge.",
+        "why_it_matters": "This figure provides the paper's headline numbers: alpha particles drift at 67% and proton beams drift at 105% of the local Alfven speed in the collision-free limit. These values represent intrinsic drift limits set by wave-particle interactions. The exponential decay of alpha drift confirms collisions act as friction, as predicted by classical Coulomb collision theory. The invariance of beam drift suggests some process continuously replenishes beam drift to compensate for friction. For solar physics, any coronal acceleration mechanism must produce initial drifts consistent with these values."
+      },
+      "keywords": [
+        "collisional age trends",
+        "exponential decay",
+        "asymptotic limit",
+        "zero collision extrapolation",
+        "alpha decay",
+        "beam invariance",
+        "Alfv\u00e9n speed limit",
+        "intrinsic drift"
+      ]
+    }
+  ]
+}
