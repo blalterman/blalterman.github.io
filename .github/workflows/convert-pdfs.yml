@@ -3,35 +3,56 @@ name: Convert PDFs to SVG
 on:
   push:
     paths:
-      - 'public/paper-figures/pdfs/**'
+      - 'research-corpus/papers/**/figures/*.pdf'
+  workflow_dispatch:  # Allow manual trigger
 
 jobs:
-  generate_pdfs:
+  convert_pdfs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
-      - name: Checkout code
+      - name: Checkout code with submodules
         uses: actions/checkout@v4
+        with:
+          submodules: true
 
       - name: Install poppler-utils
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
-      - name: Create output directory
-        run: mkdir -p public/paper-figures/svg
-
-      - name: Convert PDFs to SVGs
+      - name: Convert corpus PDFs to SVGs
         run: |
-          for pdf in public/paper-figures/pdfs/*.pdf; do
-            filename=$(basename "$pdf" .pdf)
-            pdftocairo -svg "$pdf" "public/paper-figures/svg/$filename.svg"
+          # Process each paper directory in the corpus
+          for paper_dir in research-corpus/papers/*/; do
+            paper_id=$(basename "$paper_dir")
+            figures_dir="$paper_dir/figures"
+            output_dir="public/papers/$paper_id/figures"
+
+            # Skip if no figures directory
+            if [ ! -d "$figures_dir" ]; then
+              echo "Skipping $paper_id - no figures directory"
+              continue
+            fi
+
+            # Create output directory
+            mkdir -p "$output_dir"
+
+            # Convert each PDF to SVG
+            for pdf in "$figures_dir"/fig_*.pdf; do
+              if [ -f "$pdf" ]; then
+                filename=$(basename "$pdf" .pdf)
+                output_file="$output_dir/$filename.svg"
+                echo "Converting: $paper_id/$filename.pdf -> $filename.svg"
+                pdftocairo -svg "$pdf" "$output_file"
+              fi
+            done
           done
 
       - name: Commit and push SVGs
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add public/paper-figures/svg
-          git commit -m "Generated and added latest paper figures as SVGs [automated]" || echo "No changes to commit"
+          git add public/papers/*/figures/*.svg
+          git commit -m "Convert corpus figure PDFs to SVGs [automated]" || echo "No changes to commit"
           git push
