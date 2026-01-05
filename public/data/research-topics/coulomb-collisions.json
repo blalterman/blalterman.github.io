@@ -62,6 +62,7 @@
       "connection": "Both describe how solar wind evolves during its journey to Earth"
     }
   ],
+  "published": false,
   "paper": {
     "id": "Alterman_2018_ApJ_864_112",
     "title": "A Comparison of Alpha Particle and Proton Beam Differential Flows in Collisionally Young Solar Wind",

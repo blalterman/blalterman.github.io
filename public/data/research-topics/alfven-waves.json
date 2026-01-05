@@ -51,6 +51,7 @@
       "connection": "Both describe how solar wind evolves during its journey to Earth"
     }
   ],
+  "published": false,
   "paper": {
     "id": "Alterman_2025_ApJL_984_L64",
     "title": "Characterizing the Impact of Alfven Wave Forcing in Interplanetary Space on the Distribution of Near-Earth Solar Wind Speeds",

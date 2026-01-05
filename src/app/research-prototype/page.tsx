@@ -2,11 +2,27 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
+import { filterPublishedProjects } from '@/lib/research-utils';
+import { ResearchTopicData } from '@/types/research-topic';
+import fs from 'fs';
+import path from 'path';
 
 export const metadata: Metadata = {
   title: 'Research Topics (Prototype) | B. L. Alterman',
   description: 'Prototype research pages organized by fundamental research questions in heliophysics.',
 };
+
+// Load all topic data from JSON files
+function loadAllTopics(): ResearchTopicData[] {
+  const topicsDir = path.join(process.cwd(), 'public/data/research-topics');
+  const files = fs.readdirSync(topicsDir).filter(f => f.endsWith('.json'));
+
+  return files.map(file => {
+    const filePath = path.join(topicsDir, file);
+    const content = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(content);
+  });
+}
 
 // Convert slug to title case (e.g., "solar-activity" -> "Solar Activity")
 function slugToTitle(slug: string): string {
@@ -52,6 +68,19 @@ const researchQuestions: ResearchQuestion[] = [
 ];
 
 export default function ResearchPrototypePage() {
+  // Load and filter topics by published status
+  const allTopics = loadAllTopics();
+  const publishedTopics = filterPublishedProjects(allTopics);
+  const publishedSlugs = new Set(publishedTopics.map(t => t.slug));
+
+  // Filter each section's topics to only include published ones
+  const filteredQuestions = researchQuestions
+    .map(section => ({
+      ...section,
+      topics: section.topics.filter(slug => publishedSlugs.has(slug))
+    }))
+    .filter(section => section.topics.length > 0);
+
   return (
     <main className="flex-1 container mx-auto py-16 md:py-24 max-w-5xl">
       <div className="mb-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
@@ -68,7 +97,7 @@ export default function ResearchPrototypePage() {
       </header>
 
       <div className="space-y-16">
-        {researchQuestions.map((section) => (
+        {filteredQuestions.map((section) => (
           <section key={section.subtitle}>
             <div className="mb-6">
               <h2 className="font-headline text-2xl md:text-3xl text-primary mb-1">

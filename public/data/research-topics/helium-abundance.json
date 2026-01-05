@@ -68,6 +68,7 @@
       "connection": "Helium abundance varies dramatically over the solar cycle"
     }
   ],
+  "published": false,
   "paper": {
     "id": "Alterman_2025_ApJL_982_L40",
     "title": "Cross Helicity and the Helium Abundance as an In Situ Metric of Solar Wind Acceleration",

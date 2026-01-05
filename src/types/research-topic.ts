@@ -56,5 +56,6 @@ export interface ResearchTopicData {
   primary_figure: PrimaryFigure;
   related_figures: RelatedFigure[];
   related_topics?: RelatedTopic[];
+  published?: boolean; // defaults to true if not specified
   paper: PaperInfo;
 }
