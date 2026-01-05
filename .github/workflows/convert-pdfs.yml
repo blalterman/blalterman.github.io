@@ -21,8 +21,15 @@ jobs:
       - name: Install poppler-utils
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
-      - name: Convert corpus PDFs to SVGs
+      - name: Convert corpus PDFs to SVGs (with size check)
         run: |
+          # Threshold: 50MB (GitHub warns at 50MB, blocks at 100MB)
+          MAX_SIZE_MB=50
+          MAX_SIZE_BYTES=$((MAX_SIZE_MB * 1024 * 1024))
+
+          # Track PNG conversions for reporting
+          PNG_CONVERSIONS=""
+
           # Process each paper directory in the corpus
           for paper_dir in research-corpus/papers/*/; do
             paper_id=$(basename "$paper_dir")
@@ -38,21 +45,55 @@ jobs:
             # Create output directory
             mkdir -p "$output_dir"
 
-            # Convert each PDF to SVG
+            # Convert each PDF
             for pdf in "$figures_dir"/fig_*.pdf; do
               if [ -f "$pdf" ]; then
                 filename=$(basename "$pdf" .pdf)
-                output_file="$output_dir/$filename.svg"
+                svg_file="$output_dir/$filename.svg"
+
+                # First, convert to SVG
                 echo "Converting: $paper_id/$filename.pdf -> $filename.svg"
-                pdftocairo -svg "$pdf" "$output_file"
+                pdftocairo -svg "$pdf" "$svg_file"
+
+                # Check SVG file size
+                svg_size=$(stat -c%s "$svg_file")
+
+                if [ "$svg_size" -gt "$MAX_SIZE_BYTES" ]; then
+                  # SVG too large - convert to PNG instead
+                  size_mb=$((svg_size / 1024 / 1024))
+                  echo "⚠️ $paper_id/$filename.svg is ${size_mb}MB (>${MAX_SIZE_MB}MB) - converting to PNG"
+
+                  # Remove oversized SVG
+                  rm "$svg_file"
+
+                  # Convert PDF to PNG at 300dpi
+                  pdftoppm -png -r 300 "$pdf" "$output_dir/${filename}_temp"
+                  mv "$output_dir/${filename}_temp-1.png" "$output_dir/$filename.png"
+
+                  # Track for summary
+                  PNG_CONVERSIONS="${PNG_CONVERSIONS}\n  - $paper_id/$filename.png (was ${size_mb}MB SVG)"
+                fi
               fi
             done
           done
 
-      - name: Commit and push SVGs
+          # Report summary
+          echo ""
+          echo "=== Conversion Summary ==="
+          if [ -n "$PNG_CONVERSIONS" ]; then
+            echo "The following figures were converted to PNG due to size:"
+            echo -e "$PNG_CONVERSIONS"
+          else
+            echo "All figures converted to SVG (none exceeded ${MAX_SIZE_MB}MB)"
+          fi
+
+      - name: Commit and push converted figures
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add public/papers/*/figures/*.svg
-          git commit -m "Convert corpus figure PDFs to SVGs [automated]" || echo "No changes to commit"
+
+          # Add both SVG and PNG files
+          git add public/papers/*/figures/*.svg public/papers/*/figures/*.png 2>/dev/null || true
+
+          git commit -m "Convert corpus figure PDFs to SVG/PNG [automated]" || echo "No changes to commit"
           git push
