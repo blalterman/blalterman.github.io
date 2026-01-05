@@ -1,0 +1,75 @@
+{
+  "slug": "space-weather",
+  "title": "Space Weather",
+  "subtitle": "Mapping solar wind to its source on the Sun",
+  "description": "Space weather forecasting requires knowing where solar wind originated on the Sun. By combining helium abundance and cross helicity measurements, we can classify solar wind into distinct source-region types and predict its impact on Earth's magnetosphere.",
+  "primary_figure": {
+    "paper_id": "Alterman_2026_ApJL_996_L12",
+    "figure_id": "fig_3",
+    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_3.svg",
+    "short_title": "Solar Wind Classification Scheme",
+    "alt": "A classification diagram using cross helicity and helium abundance to categorize solar wind into four source-region types",
+    "summary": {
+      "what_we_see": "This classification diagram maps solar wind onto a two-parameter space: cross helicity (0-1) on one axis and helium abundance (0-10%) on the other. Colored regions identify four distinct solar wind types: Intermittently Open (green), Mixed Source (orange), Continuously Open (red), and Transients (red, high helium). Each region corresponds to a specific magnetic topology on the Sun.",
+      "the_finding": "Solar wind naturally segregates into four regimes based on cross helicity and helium abundance, each tracing back to distinct source regions on the Sun. High cross helicity with moderate helium indicates continuously open coronal holes, while low cross helicity with low helium points to intermittently open or closed-field regions. Transient events occupy a separate high-helium regime regardless of cross helicity.",
+      "why_it_matters": "This classification scheme provides a practical diagnostic tool for space weather forecasting. By measuring just two parameters in the solar wind at 1 AU, forecasters can identify the source region type and anticipate the wind's geoeffective properties. This enables better predictions of geomagnetic storm intensity and duration based on the source region's known characteristics."
+    },
+    "keywords": [
+      "space weather",
+      "solar wind classification",
+      "cross helicity",
+      "helium abundance",
+      "coronal holes",
+      "magnetic topology",
+      "geomagnetic storms",
+      "source regions"
+    ]
+  },
+  "related_figures": [
+    {
+      "paper_id": "Alterman_2026_ApJL_996_L12",
+      "figure_id": "fig_7",
+      "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_7.svg",
+      "short_title": "Compressibility Maps Show Saturation",
+      "alt": "Maps showing how hydrogen compressibility varies across the classification space",
+      "relevance": "Shows how compressibility helps refine the classification by revealing saturation behavior in different source-region types",
+      "summary_short": "Hydrogen compressibility maps reveal saturation patterns that sharpen the boundaries between solar wind source-region types, improving classification accuracy."
+    },
+    {
+      "paper_id": "Alterman_2026_ApJL_996_L12",
+      "figure_id": "fig_11",
+      "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_11.svg",
+      "short_title": "Saturation Points Shift with Compressibility",
+      "alt": "Diagram showing how transition speeds between source-region types depend on compressibility",
+      "relevance": "Demonstrates how the transition speeds between classification regimes depend on plasma compressibility properties",
+      "summary_short": "The transition speeds marking boundaries between source-region types shift systematically with plasma compressibility, providing additional constraints on the classification scheme."
+    }
+  ],
+  "related_topics": [
+    {
+      "slug": "sources-of-the-solar-wind",
+      "connection": "Classification scheme is based on source region identification physics"
+    },
+    {
+      "slug": "solar-wind-compressibility",
+      "connection": "Compressibility refines the classification boundaries"
+    },
+    {
+      "slug": "suprathermal-ions",
+      "connection": "Suprathermal populations are seed particles for SEP events"
+    }
+  ],
+  "paper": {
+    "id": "Alterman_2026_ApJL_996_L12",
+    "title": "On the Regulation of the Solar Wind Helium Abundance by the Hydrogen Compressibility",
+    "doi": "https://doi.org/10.3847/2041-8213/ae002f",
+    "bibcode": "2026ApJ...996L..12A",
+    "journal": "The Astrophysical Journal Letters",
+    "year": 2026,
+    "license": {
+      "holder": "The Author(s). Published by the American Astronomical Society",
+      "year": 2026,
+      "type": "CC BY 4.0"
+    }
+  }
+}

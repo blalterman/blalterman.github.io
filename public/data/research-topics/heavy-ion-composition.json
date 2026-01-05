@@ -1,0 +1,70 @@
+{
+  "slug": "heavy-ion-composition",
+  "title": "Heavy Ion Composition",
+  "subtitle": "Universal behavior below the fast-slow transition",
+  "description": "When normalized to their saturation points, all heavy ion species follow an identical trajectory in slow solar wind, revealing universal physics that doesn't discriminate by mass, charge, or ionization potential. Above saturation, this universality breaks down as element-specific fractionation takes over in fast wind.",
+  "primary_figure": {
+    "paper_id": "aa51550-24",
+    "figure_id": "fig_3",
+    "src": "/papers/aa51550-24/figures/fig_3.svg",
+    "short_title": "Universal Slow-Wind Gradient Across All Elements",
+    "alt": "Normalized abundance versus normalized speed showing all ten elements collapsing onto a single curve below saturation, then diverging above",
+    "summary": {
+      "what_we_see": "This normalized plot rescales ten elements (helium through iron) so each species' saturation point maps to coordinate (1.0, 1.0). The horizontal axis shows speed divided by saturation speed; the vertical axis shows abundance divided by saturation abundance. Below saturation (left of 1.0), all curves overlay completely, forming a single master trajectory. Above saturation (right of 1.0), the curves fan apart into distinct families.",
+      "the_finding": "Below saturation, all ten species—spanning masses 4-56 amu and both low-FIP and high-FIP elements—exhibit indistinguishable gradients. The curves overlay so completely they form essentially one universal curve. Above saturation, universality breaks down: light high-FIP elements (C, N, O) climb steeply to 1.8-2.0x saturation, while iron and helium plateau near 1.1-1.2x, with other elements falling between.",
+      "why_it_matters": "The universal slow-wind gradient demonstrates that abundances below 327 km/s are set by a single process that doesn't discriminate between elements. Above saturation, element-specific fractionation activates—organized by charge state rather than mass. This asymmetry reveals where in the solar atmosphere composition gets locked in (below saturation) versus where transport physics modifies it (above saturation)."
+    },
+    "keywords": [
+      "normalized abundance",
+      "universal slow-wind gradient",
+      "fast-wind fractionation",
+      "saturation point",
+      "element-specific divergence",
+      "mass independence",
+      "charge-state fractionation"
+    ]
+  },
+  "related_figures": [
+    {
+      "paper_id": "aa51550-24",
+      "figure_id": "fig_2",
+      "src": "/papers/aa51550-24/figures/fig_2.svg",
+      "short_title": "Heavy Ions Saturate 75 km/s Before Helium",
+      "alt": "Multi-species abundance curves showing all heavy ions saturate at 327 km/s while helium waits until 402 km/s",
+      "relevance": "Shows the raw data before normalization, revealing the 75 km/s gap between heavy-ion and helium saturation speeds",
+      "summary_short": "All eight heavy elements (C through Fe) saturate at 327 +/- 2 km/s, while helium saturates 75 km/s later at 402 km/s. This gap means 30-40% of solar wind is classified differently depending on which tracer you use."
+    },
+    {
+      "paper_id": "aa51550-24",
+      "figure_id": "fig_8",
+      "src": "/papers/aa51550-24/figures/fig_8.svg",
+      "short_title": "Charge State Organizes Fast-Wind Fractionation",
+      "alt": "Scatter plot showing fast-wind enhancement versus charge state with R-squared of 0.95",
+      "relevance": "Explains the divergence above saturation seen in the primary figure—charge state, not mass, controls fast-wind fractionation",
+      "summary_short": "When organized by ionization state rather than mass, fast-wind enhancement follows a clean inverse relationship (R-squared = 0.95). Low charge-state ions show 2x enhancement; high charge-state ions show minimal change."
+    }
+  ],
+  "related_topics": [
+    {
+      "slug": "solar-activity",
+      "connection": "Heavy ion abundances modulate with the solar cycle"
+    },
+    {
+      "slug": "helium-abundance",
+      "connection": "Helium shows the same saturation behavior as heavy ions"
+    }
+  ],
+  "paper": {
+    "id": "aa51550-24",
+    "title": "The transition from slow to fast wind as observed in composition observations",
+    "doi": "https://doi.org/10.1051/0004-6361/202451550",
+    "bibcode": "2024A&A...XXX..XXX",
+    "journal": "Astronomy and Astrophysics",
+    "year": 2024,
+    "license": {
+      "holder": "The Authors",
+      "year": 2024,
+      "type": "CC BY 4.0"
+    }
+  }
+}

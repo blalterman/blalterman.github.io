@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ResearchTopicData } from '@/types/research-topic';
-import { ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
+import { ChevronDown, ChevronUp, ExternalLink, ArrowRight } from 'lucide-react';
 
 interface ResearchTopicPrototypeProps {
   data: ResearchTopicData;
@@ -43,7 +44,7 @@ function SummarySection({
 }
 
 export function ResearchTopicPrototype({ data }: ResearchTopicPrototypeProps) {
-  const { primary_figure, related_figures, paper } = data;
+  const { primary_figure, related_figures, related_topics, paper } = data;
 
   return (
     <div className="space-y-12">
@@ -128,6 +129,32 @@ export function ResearchTopicPrototype({ data }: ResearchTopicPrototypeProps) {
                   <p className="text-xs text-primary">{fig.relevance}</p>
                 </div>
               </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* See Also (Related Topics) */}
+      {related_topics && related_topics.length > 0 && (
+        <section className="space-y-4">
+          <h2 className="font-headline text-2xl">See Also</h2>
+          <div className="space-y-3">
+            {related_topics.map((topic) => (
+              <Link
+                key={topic.slug}
+                href={`/research-prototype/${topic.slug}`}
+                className="flex items-center justify-between p-4 border border-border rounded-lg hover:bg-muted/50 transition-colors group"
+              >
+                <div>
+                  <span className="font-medium group-hover:text-primary transition-colors">
+                    {topic.slug.split('-').map(word =>
+                      word.charAt(0).toUpperCase() + word.slice(1)
+                    ).join(' ')}
+                  </span>
+                  <p className="text-sm text-muted-foreground mt-1">{topic.connection}</p>
+                </div>
+                <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+              </Link>
             ))}
           </div>
         </section>

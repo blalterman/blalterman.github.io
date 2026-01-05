@@ -1,0 +1,67 @@
+{
+  "slug": "alfven-waves",
+  "title": "Alfven Waves",
+  "subtitle": "How magnetic waves shape solar wind speeds",
+  "description": "Alfven waves propagating through the solar wind continuously deposit energy into the plasma, accelerating it during its journey from the Sun to Earth. Speed distributions reveal that fast solar wind receives an additional 100+ km/s boost from wave forcing, explaining why observed speeds exceed predictions from thermal expansion alone.",
+  "primary_figure": {
+    "paper_id": "Alterman_2025_ApJL_984_L64",
+    "figure_id": "fig_1",
+    "src": "/papers/Alterman_2025_ApJL_984_L64/figures/fig_1.svg",
+    "short_title": "Speed Distribution with Alfven Wave Predictions",
+    "alt": "Probability distribution of solar wind speeds showing slow and fast wind peaks with overlaid theoretical predictions for Alfven wave acceleration",
+    "summary": {
+      "what_we_see": "A probability distribution reveals how frequently different solar wind speeds occur near Earth, displaying a distinctive double-humped shape. One peak at 355 km/s marks slow wind, another at 622 km/s marks fast wind. Colored bands overlay the data showing theoretical predictions with and without Alfven wave acceleration.",
+      "the_finding": "The speed range predicted with Alfven wave acceleration (620-671 km/s) sits directly on the fast wind peak, while predictions without wave acceleration (434-554 km/s) fall into the valley between peaks. This 120 km/s gap represents the speed boost that Alfven waves provide during interplanetary transit.",
+      "why_it_matters": "This resolves a decades-old puzzle: thermal expansion alone predicts speeds around 400-500 km/s, well below the 600+ km/s routinely observed in fast wind. Alfven waves continuously deposit energy during transit, particularly in wind from continuously open magnetic field regions. Measuring a parcel's Alfvenicity reveals more about its solar origin than speed alone."
+    },
+    "keywords": [
+      "Alfven wave acceleration",
+      "solar wind speed distribution",
+      "fast wind",
+      "slow wind",
+      "bimodal distribution",
+      "kinetic energy flux",
+      "wave forcing",
+      "interplanetary acceleration"
+    ]
+  },
+  "related_figures": [
+    {
+      "paper_id": "Alterman_2025_ApJL_984_L64",
+      "figure_id": "fig_2",
+      "src": "/papers/Alterman_2025_ApJL_984_L64/figures/fig_2.svg",
+      "short_title": "Kinetic Energy Flux Heat Map",
+      "alt": "Heat map showing solar wind speed versus kinetic energy flux with Parker Solar Probe predictions",
+      "relevance": "Demonstrates how kinetic energy measured near the Sun by Parker Solar Probe predicts speeds at Earth, validating that wave-driven acceleration is complete by 0.2 AU",
+      "summary_short": "The kinetic energy flux measured near the Sun predicts exactly the fast wind speeds observed at Earth, confirming that Alfven wave acceleration is largely complete within 0.2 AU of the Sun."
+    },
+    {
+      "paper_id": "Alterman_2025_ApJL_984_L64",
+      "figure_id": "fig_4",
+      "src": "/papers/Alterman_2025_ApJL_984_L64/figures/fig_4.svg",
+      "short_title": "Gaussian Fits to Speed Peaks",
+      "alt": "Solar wind speed distribution with Gaussian curves fit to slow and fast wind populations",
+      "relevance": "Provides quantitative speed thresholds (355 and 622 km/s) used to test whether Alfven wave predictions match the observed fast wind peak",
+      "summary_short": "Gaussian decomposition yields precise slow wind (355 km/s) and fast wind (622 km/s) peaks, enabling quantitative comparison with theoretical predictions that include or exclude Alfven wave forcing."
+    }
+  ],
+  "related_topics": [
+    {
+      "slug": "coulomb-collisions",
+      "connection": "Both describe how solar wind evolves during its journey to Earth"
+    }
+  ],
+  "paper": {
+    "id": "Alterman_2025_ApJL_984_L64",
+    "title": "Characterizing the Impact of Alfven Wave Forcing in Interplanetary Space on the Distribution of Near-Earth Solar Wind Speeds",
+    "doi": "https://doi.org/10.3847/2041-8213/add0a6",
+    "bibcode": "2025ApJ...984L..64A",
+    "journal": "The Astrophysical Journal Letters",
+    "year": 2025,
+    "license": {
+      "holder": "The Author(s). Published by the American Astronomical Society",
+      "year": 2025,
+      "type": "CC BY 4.0"
+    }
+  }
+}

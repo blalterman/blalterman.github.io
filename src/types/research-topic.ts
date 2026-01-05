@@ -43,6 +43,11 @@ export interface PaperInfo {
   };
 }
 
+export interface RelatedTopic {
+  slug: string;
+  connection: string;
+}
+
 export interface ResearchTopicData {
   slug: string;
   title: string;
@@ -50,5 +55,6 @@ export interface ResearchTopicData {
   description: string;
   primary_figure: PrimaryFigure;
   related_figures: RelatedFigure[];
+  related_topics?: RelatedTopic[];
   paper: PaperInfo;
 }

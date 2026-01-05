@@ -46,6 +46,20 @@
       "summary_short": "Two distinct populations emerge in the cross-helicity/helium-abundance plane: slow wind from closed fields clusters in the lower-left, while fast wind from open fields forms a wedge in the upper-right."
     }
   ],
+  "related_topics": [
+    {
+      "slug": "helium-abundance",
+      "connection": "Helium abundance is a key diagnostic for source identification"
+    },
+    {
+      "slug": "space-weather",
+      "connection": "Applies the source classification scheme for space weather forecasting"
+    },
+    {
+      "slug": "solar-wind-compressibility",
+      "connection": "Compressibility provides an additional diagnostic for source region identification"
+    }
+  ],
   "paper": {
     "id": "Alterman_2025_ApJL_982_L40",
     "title": "Cross Helicity and the Helium Abundance as an In Situ Metric of Solar Wind Acceleration",
