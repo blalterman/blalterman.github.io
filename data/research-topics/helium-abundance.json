@@ -1,0 +1,85 @@
+{
+  "slug": "helium-abundance",
+  "title": "Helium Abundance",
+  "subtitle": "Tracing solar wind origins through composition",
+  "description": "Helium abundance in the solar wind varies dramatically with speed, rising from near-zero in the slowest wind to a saturation value of 4.19% above 433 km/s. This compositional fingerprint, locked in at the chromosphere, provides a powerful diagnostic for distinguishing solar wind from magnetically closed versus open source regions.",
+  "primary_figure": {
+    "paper_id": "Alterman_2025_ApJL_982_L40",
+    "figure_id": "fig_3",
+    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_3.svg",
+    "short_title": "Helium Saturation at 4.19%",
+    "alt": "A 2D histogram showing helium abundance versus solar wind speed, revealing saturation above 433 km/s",
+    "summary": {
+      "what_we_see": "This column-normalized 2D histogram maps 28 years of solar wind measurements, with speed on the horizontal axis (200-800 km/s) and helium abundance on the vertical axis (0-10%). The bright yellow band traces the most common helium value at each speed: rising steadily from near-zero at 200 km/s to approximately 4% at 400 km/s, then abruptly flattening into a horizontal plateau at 4.2% that extends to 800 km/s with no further increase.",
+      "the_finding": "Helium abundance exhibits a dramatic transition at 433 km/s. Below this speed, helium increases monotonically at roughly 0.035% per km/s. Above this speed, helium saturates at 4.19% and remains constant across the entire fast wind regime. The saturation value corresponds to roughly 49% of the Sun's photospheric helium abundance, and the transition is remarkably sharp.",
+      "why_it_matters": "This compositional fingerprint sharply divides two physically distinct populations. In slow wind from closed magnetic loops, helium varies wildly because energy availability depends on local topology. In fast wind from open coronal holes, helium saturates because sufficient energy exists to ionize and accelerate helium uniformly. The 433 km/s threshold enables simple operational classification of solar wind source regions."
+    },
+    "keywords": [
+      "helium abundance",
+      "saturation",
+      "saturation speed",
+      "solar wind speed",
+      "composition",
+      "open field",
+      "closed field",
+      "photospheric abundance"
+    ]
+  },
+  "related_figures": [
+    {
+      "paper_id": "Alterman_2025_ApJL_982_L40",
+      "figure_id": "fig_5",
+      "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_5.svg",
+      "short_title": "Saturation Point Shifts with Alfvenicity",
+      "alt": "Multi-line plot showing how helium saturation varies with cross helicity level",
+      "relevance": "Demonstrates that the helium saturation point is not fixed but shifts systematically with Alfvenicity, revealing the physical coupling between composition and wave activity",
+      "summary_short": "When subdividing by Alfvenicity level, the helium saturation point shifts systematically: highly Alfvenic wind saturates at lower speeds (410 km/s) and lower abundances (3.87%), while less Alfvenic wind saturates at higher speeds (433 km/s) and higher abundances (4.19%)."
+    },
+    {
+      "paper_id": "Alterman_2025_ApJL_982_L40",
+      "figure_id": "fig_6",
+      "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_6.svg",
+      "short_title": "Universal Scaling Below Saturation",
+      "alt": "Rescaled fits showing collapse onto a universal curve below saturation",
+      "relevance": "Reveals that helium abundance follows a universal scaling law below saturation regardless of Alfvenicity, but diverges into Alfvenicity-dependent behavior above saturation",
+      "summary_short": "When normalized to each Alfvenicity quantile's saturation point, all 15 saturation curves collapse onto a single trajectory below saturation (A_He/A_s = v_sw/v_s), demonstrating scale-invariant behavior that breaks into Alfvenicity-dependent overshooting above saturation."
+    },
+    {
+      "paper_id": "Alterman_2025_ApJL_982_L40",
+      "figure_id": "fig_7",
+      "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_7.svg",
+      "short_title": "Saturation Speed and Abundance Trends",
+      "alt": "Two-panel figure showing saturation speed and abundance versus cross helicity",
+      "relevance": "Quantifies the anticorrelation between saturation speed and saturation abundance as a function of Alfvenicity, providing the key empirical relationship for understanding helium behavior",
+      "summary_short": "Saturation speed decreases by 23 km/s (from 433 to 410 km/s) while saturation abundance decreases by 0.32% (from 4.19% to 3.87%) as Alfvenicity increases from 0 to 1, revealing that wave-driven acceleration is compositionally selective."
+    }
+  ],
+  "related_topics": [
+    {
+      "slug": "sources-of-the-solar-wind",
+      "connection": "Helium abundance is used to classify solar wind source regions"
+    },
+    {
+      "slug": "solar-wind-compressibility",
+      "connection": "Compressibility is the primary regulator of helium saturation"
+    },
+    {
+      "slug": "solar-activity",
+      "connection": "Helium abundance varies dramatically over the solar cycle"
+    }
+  ],
+  "published": false,
+  "paper": {
+    "id": "Alterman_2025_ApJL_982_L40",
+    "title": "Cross Helicity and the Helium Abundance as an In Situ Metric of Solar Wind Acceleration",
+    "doi": "https://doi.org/10.3847/2041-8213/ada835",
+    "bibcode": "2025ApJ...982L..40A",
+    "journal": "The Astrophysical Journal Letters",
+    "year": 2025,
+    "license": {
+      "holder": "The Author(s). Published by the American Astronomical Society",
+      "year": 2025,
+      "type": "CC BY 4.0"
+    }
+  }
+}

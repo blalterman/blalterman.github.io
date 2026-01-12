@@ -1,0 +1,89 @@
+{
+  "slug": "suprathermal-ions",
+  "title": "Suprathermal Ions",
+  "subtitle": "Remnants of past energetic events",
+  "description": "Suprathermal ions are particles with energies above the thermal solar wind but below fully accelerated cosmic rays. These remnant populations exhibit a universal spectral index of 2.5 that remains invariant across nine different elements and two full solar cycles, revealing a fundamental constraint on particle acceleration in the heliosphere.",
+  "primary_figure": {
+    "paper_id": "Alterman_2024_ApJL_964_L31",
+    "figure_id": "fig_4",
+    "src": "/papers/Alterman_2024_ApJL_964_L31/figures/fig_4.svg",
+    "short_title": "Distribution of Spectral Indices",
+    "alt": "A stacked histogram showing spectral index measurements from all nine elements across 22 years, centered at 2.5",
+    "summary": {
+      "what_we_see": "This stacked histogram aggregates all spectral index measurements from nine different elements across a 22-year study period. Each colored layer represents a different element from carbon to iron, with the distribution forming a clear bell-shaped peak centered at 2.5. The white circle marks the overall mean with error bars showing the standard deviation of 0.3.",
+      "the_finding": "The compact distribution demonstrates a universal spectral signature: gamma = 2.5 plus or minus 0.3. About 80 percent of all observations fall within one standard deviation of this mean, and no single element dominates the distribution. This tight clustering across all nine species and 22 years reveals that nature produces a single, well-defined spectral answer regardless of element type or solar conditions.",
+      "why_it_matters": "This precise convergence suggests a fundamental physical process governs how suprathermal particles populate different energy levels after decaying from higher-energy sources. For space weather modeling, engineers can use a single representative spectral index when calculating radiation dose for long-duration missions, rather than needing separate values for different elements or solar cycle phases."
+    },
+    "keywords": [
+      "histogram",
+      "distribution",
+      "spectral index",
+      "gamma 2.5",
+      "universal behavior",
+      "heavy ions",
+      "suprathermal particles"
+    ]
+  },
+  "related_figures": [
+    {
+      "paper_id": "Alterman_2024_ApJL_964_L31",
+      "figure_id": "fig_1",
+      "src": "/papers/Alterman_2024_ApJL_964_L31/figures/fig_1.svg",
+      "short_title": "Universal Power-Law Behavior",
+      "alt": "Energy spectra for nine different elements showing nearly identical power-law slopes",
+      "relevance": "Shows all 9 elements following the same spectral slope",
+      "summary_short": "Despite ranging from lightweight carbon to heavy iron, all nine species march together in near-perfect lockstep with the same power-law slope of approximately 2.5, revealing that whatever process created these particles treated all species democratically."
+    },
+    {
+      "paper_id": "Alterman_2024_ApJL_964_L31",
+      "figure_id": "fig_2",
+      "src": "/papers/Alterman_2024_ApJL_964_L31/figures/fig_2.svg",
+      "short_title": "Spectral Index Stability Throughout Solar Cycle",
+      "alt": "Time series plot showing spectral index remains constant despite dramatic swings in solar activity",
+      "relevance": "Demonstrates independence from solar activity",
+      "summary_short": "Despite dramatic swings in solar activity over two solar cycles, the spectral index stays stubbornly around 2.5, pointing to a stable, long-lived origin that transcends individual solar cycles rather than active element-specific acceleration."
+    },
+    {
+      "paper_id": "Alterman_2023_ApJ_952_42",
+      "figure_id": "fig_4",
+      "src": "/papers/Alterman_2023_ApJ_952_42/figures/fig_4.png",
+      "short_title": "22-Year Evolution Reveals CIR and GSEP Sources",
+      "alt": "Time series of eight heavy ion abundances showing solar-cycle modulation with opposite trends for carbon vs iron",
+      "relevance": "Proves suprathermals are remnants from CIRs during solar minimum and CME-driven shocks during solar maximum",
+      "summary_short": "Carbon anticorrelates with solar activity (r=-0.84) while iron strongly correlates (r=+0.89). During solar minimum, abundances match CIR signatures; during maximum, they shift toward gradual SEP values—proving the seed population carries compositional memory of recent acceleration events."
+    },
+    {
+      "paper_id": "Alterman_2023_ApJ_952_42",
+      "figure_id": "fig_8",
+      "src": "/papers/Alterman_2023_ApJ_952_42/figures/fig_8.svg",
+      "short_title": "M/Q Variability Matches CME-Shock Acceleration Pattern",
+      "alt": "Power-law exponents vs mass-per-charge ratio showing quiet-time variability matches gradual SEP events",
+      "relevance": "Connects suprathermals to their role as seed population for solar energetic particle events",
+      "summary_short": "Quiet-time variability follows the same M/Q-dependent pattern as gradual SEP events (slope m=0.33 vs GSEP m=0.36). This proves suprathermals are remnants of shock-accelerated particles and serve as the seed population for the next CME-driven event."
+    }
+  ],
+  "related_topics": [
+    {
+      "slug": "space-weather",
+      "connection": "Suprathermal ions are seed populations for SEP events"
+    },
+    {
+      "slug": "solar-activity",
+      "connection": "Suprathermal composition varies with the solar cycle"
+    }
+  ],
+  "published": false,
+  "paper": {
+    "id": "Alterman_2024_ApJL_964_L31",
+    "title": "Quiet-time Spectra of Suprathermal Heavy Ions near 1 au in Solar Cycles 23 and 24",
+    "doi": "https://doi.org/10.3847/2041-8213/ad2deb",
+    "bibcode": "2024ApJ...964L..31A",
+    "journal": "The Astrophysical Journal Letters",
+    "year": 2024,
+    "license": {
+      "holder": "The Author(s). Published by the American Astronomical Society",
+      "year": 2024,
+      "type": "CC BY 4.0"
+    }
+  }
+}
