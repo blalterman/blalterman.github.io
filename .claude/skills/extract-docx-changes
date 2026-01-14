@@ -1,0 +1,93 @@
+#!/bin/bash
+# Claude Code Skill: extract-docx-changes
+# Extract all comments and track changes from Word documents
+# Usage: /extract-docx-changes <input.docx> [output.txt]
+
+set -e
+
+# Parse arguments
+INPUT_FILE="$1"
+OUTPUT_FILE="${2:-}"
+
+# Validate input
+if [[ -z "$INPUT_FILE" ]]; then
+    echo "❌ Error: No input file specified"
+    echo "Usage: /extract-docx-changes <input.docx> [output.txt]"
+    echo ""
+    echo "Examples:"
+    echo "  /extract-docx-changes Doc-v21.docx"
+    echo "  /extract-docx-changes my-doc.docx custom-output.txt"
+    exit 1
+fi
+
+if [[ ! -f "$INPUT_FILE" ]]; then
+    echo "❌ Error: Input file '$INPUT_FILE' not found"
+    exit 1
+fi
+
+# Verify it's a .docx file (ZIP archive)
+if ! file "$INPUT_FILE" | grep -q "Microsoft Word 2007+\|Zip archive"; then
+    echo "❌ Error: '$INPUT_FILE' does not appear to be a valid .docx file"
+    echo "File type: $(file -b "$INPUT_FILE")"
+    exit 1
+fi
+
+# Generate output filename if not specified
+if [[ -z "$OUTPUT_FILE" ]]; then
+    # Remove .docx extension and add -extraction.txt
+    BASE_NAME="${INPUT_FILE%.docx}"
+    OUTPUT_FILE="${BASE_NAME}-extraction.txt"
+fi
+
+# Get absolute path to this script's directory for finding Python script
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PYTHON_SCRIPT="$SCRIPT_DIR/docx_extractor.py"
+
+# Verify Python script exists
+if [[ ! -f "$PYTHON_SCRIPT" ]]; then
+    echo "❌ Error: Python extractor not found at $PYTHON_SCRIPT"
+    exit 1
+fi
+
+# Create temporary directory for extraction
+TEMP_DIR=$(mktemp -d -t docx-extract-XXXXXX)
+trap "rm -rf '$TEMP_DIR'" EXIT
+
+# Extract .docx to temp directory
+echo "Extracting $INPUT_FILE..."
+unzip -q "$INPUT_FILE" -d "$TEMP_DIR"
+
+# Verify word/document.xml exists
+if [[ ! -f "$TEMP_DIR/word/document.xml" ]]; then
+    echo "❌ Error: Invalid .docx structure - word/document.xml not found"
+    exit 1
+fi
+
+# Check for comments.xml (not required, but inform user)
+if [[ ! -f "$TEMP_DIR/word/comments.xml" ]]; then
+    echo "ℹ️  Note: No comments.xml found (document may have no comments)"
+fi
+
+# Run Python extraction script
+echo "Analyzing comments and track changes..."
+# Pass temp dir, output file, and original filename for display
+python3 "$PYTHON_SCRIPT" "$TEMP_DIR" "$OUTPUT_FILE" "$(basename "$INPUT_FILE")"
+
+# Verify output was created
+if [[ ! -f "$OUTPUT_FILE" ]]; then
+    echo "❌ Error: Output file was not created"
+    exit 1
+fi
+
+# Display results
+echo ""
+echo "✅ Extraction complete!"
+echo "   Output: $OUTPUT_FILE"
+SIZE=$(ls -lh "$OUTPUT_FILE" | awk '{print $5}')
+LINES=$(wc -l < "$OUTPUT_FILE")
+echo "   Size: $SIZE ($LINES lines)"
+echo ""
+echo "Next steps:"
+echo "  1. Review extraction: cat \"$OUTPUT_FILE\""
+echo "  2. Create implementation plan based on changes"
+echo "  3. After implementing changes, use: /pandoc-docx <source.md>"

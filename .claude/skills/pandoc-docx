@@ -1,0 +1,55 @@
+#!/bin/bash
+# Claude Code Skill: pandoc-docx
+# Convert markdown to .docx using pandoc with NASA reference template
+# Usage: /pandoc-docx <input.md> [output.docx]
+
+set -e
+
+# Parse arguments
+INPUT_FILE="$1"
+OUTPUT_FILE="${2:-${INPUT_FILE%.md}.docx}"
+
+# Validate input
+if [[ -z "$INPUT_FILE" ]]; then
+    echo "❌ Error: No input file specified"
+    echo "Usage: /pandoc-docx <input.md> [output.docx]"
+    exit 1
+fi
+
+if [[ ! -f "$INPUT_FILE" ]]; then
+    echo "❌ Error: Input file '$INPUT_FILE' not found"
+    exit 1
+fi
+
+# Find pandoc
+PANDOC_PATH="/opt/anaconda3/envs/docx-conversion/bin/pandoc"
+if [[ ! -f "$PANDOC_PATH" ]]; then
+    echo "❌ Error: pandoc not found at $PANDOC_PATH"
+    echo "Check conda environment: docx-conversion"
+    exit 1
+fi
+
+# Find reference template
+TEMPLATE="nasa-reference-template.docx"
+if [[ ! -f "$TEMPLATE" ]]; then
+    echo "⚠️  Warning: nasa-reference-template.docx not found in current directory"
+    echo "Proceeding without reference template..."
+    TEMPLATE_ARG=""
+else
+    TEMPLATE_ARG="--reference-doc=$TEMPLATE"
+    echo "✓ Using template: $TEMPLATE"
+fi
+
+# Run conversion
+echo "Converting $INPUT_FILE → $OUTPUT_FILE"
+$PANDOC_PATH "$INPUT_FILE" -o "$OUTPUT_FILE" $TEMPLATE_ARG
+
+# Verify output
+if [[ -f "$OUTPUT_FILE" ]]; then
+    SIZE=$(ls -lh "$OUTPUT_FILE" | awk '{print $5}')
+    echo "✅ Success! Created $OUTPUT_FILE ($SIZE)"
+    echo "Type: $(file -b "$OUTPUT_FILE")"
+else
+    echo "❌ Error: Output file not created"
+    exit 1
+fi
