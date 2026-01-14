@@ -30,10 +30,10 @@
       "paper_id": "Alterman_2025_ApJL_982_L40",
       "figure_id": "fig_5",
       "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_5.svg",
-      "short_title": "Saturation Point Shifts with Alfvenicity",
+      "short_title": "Saturation Point Shifts with Alfvénicity",
       "alt": "Multi-line plot showing how helium saturation varies with cross helicity level",
-      "relevance": "Demonstrates that the helium saturation point is not fixed but shifts systematically with Alfvenicity, revealing the physical coupling between composition and wave activity",
-      "summary_short": "When subdividing by Alfvenicity level, the helium saturation point shifts systematically: highly Alfvenic wind saturates at lower speeds (410 km/s) and lower abundances (3.87%), while less Alfvenic wind saturates at higher speeds (433 km/s) and higher abundances (4.19%)."
+      "relevance": "Demonstrates that the helium saturation point is not fixed but shifts systematically with Alfvénicity, revealing the physical coupling between composition and wave activity",
+      "summary_short": "When subdividing by Alfvénicity level, the helium saturation point shifts systematically: highly Alfvenic wind saturates at lower speeds (410 km/s) and lower abundances (3.87%), while less Alfvenic wind saturates at higher speeds (433 km/s) and higher abundances (4.19%)."
     },
     {
       "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -41,8 +41,8 @@
       "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_6.svg",
       "short_title": "Universal Scaling Below Saturation",
       "alt": "Rescaled fits showing collapse onto a universal curve below saturation",
-      "relevance": "Reveals that helium abundance follows a universal scaling law below saturation regardless of Alfvenicity, but diverges into Alfvenicity-dependent behavior above saturation",
-      "summary_short": "When normalized to each Alfvenicity quantile's saturation point, all 15 saturation curves collapse onto a single trajectory below saturation (A_He/A_s = v_sw/v_s), demonstrating scale-invariant behavior that breaks into Alfvenicity-dependent overshooting above saturation."
+      "relevance": "Reveals that helium abundance follows a universal scaling law below saturation regardless of Alfvénicity, but diverges into Alfvénicity-dependent behavior above saturation",
+      "summary_short": "When normalized to each Alfvénicity quantile's saturation point, all 15 saturation curves collapse onto a single trajectory below saturation (A_He/A_s = v_sw/v_s), demonstrating scale-invariant behavior that breaks into Alfvénicity-dependent overshooting above saturation."
     },
     {
       "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -50,8 +50,8 @@
       "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_7.svg",
       "short_title": "Saturation Speed and Abundance Trends",
       "alt": "Two-panel figure showing saturation speed and abundance versus cross helicity",
-      "relevance": "Quantifies the anticorrelation between saturation speed and saturation abundance as a function of Alfvenicity, providing the key empirical relationship for understanding helium behavior",
-      "summary_short": "Saturation speed decreases by 23 km/s (from 433 to 410 km/s) while saturation abundance decreases by 0.32% (from 4.19% to 3.87%) as Alfvenicity increases from 0 to 1, revealing that wave-driven acceleration is compositionally selective."
+      "relevance": "Quantifies the anticorrelation between saturation speed and saturation abundance as a function of Alfvénicity, providing the key empirical relationship for understanding helium behavior",
+      "summary_short": "Saturation speed decreases by 23 km/s (from 433 to 410 km/s) while saturation abundance decreases by 0.32% (from 4.19% to 3.87%) as Alfvénicity increases from 0 to 1, revealing that wave-driven acceleration is compositionally selective."
     }
   ],
   "related_topics": [

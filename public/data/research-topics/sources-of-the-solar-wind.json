@@ -34,7 +34,7 @@
       "short_title": "Four-Population Classification Scheme",
       "alt": "A cartoon showing how cross helicity and helium abundance divide solar wind into four source region types",
       "relevance": "Shows the operational classification scheme derived from the physics in Figure 2",
-      "summary_short": "The cross-helicity and helium-abundance plane divides solar wind into four populations: Closed Field (low Alfvénicity, low helium), Open Field (high Alfvénicity, moderate helium), Mixed Source (intermediate values), and Transients (high helium, variable Alfvénicity)."
+      "summary_short": "The cross helicity and helium-abundance plane divides solar wind into four populations: Closed Field (low Alfvénicity, low helium), Open Field (high Alfvénicity, moderate helium), Mixed Source (intermediate values), and Transients (high helium, variable Alfvénicity)."
     },
     {
       "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -43,7 +43,7 @@
       "short_title": "Speed Mapped onto Composition-Wave Space",
       "alt": "Heat maps showing solar wind speed as a function of cross helicity and helium abundance",
       "relevance": "Quantitative data underlying the classification cartoon",
-      "summary_short": "Two distinct populations emerge in the cross-helicity/helium-abundance plane: slow wind from closed fields clusters in the lower-left, while fast wind from open fields forms a wedge in the upper-right."
+      "summary_short": "Two distinct populations emerge in the cross helicity/helium-abundance plane: slow wind from closed fields clusters in the lower-left, while fast wind from open fields forms a wedge in the upper-right."
     }
   ],
   "related_topics": [
