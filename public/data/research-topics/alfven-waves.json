@@ -12,7 +12,7 @@
     "summary": {
       "what_we_see": "A probability distribution reveals how frequently different solar wind speeds occur near Earth, displaying a distinctive double-humped shape. One peak at 355 km/s marks slow wind, another at 622 km/s marks fast wind. Colored bands overlay the data showing theoretical predictions with and without Alfven wave acceleration.",
       "the_finding": "The speed range predicted with Alfven wave acceleration (620-671 km/s) sits directly on the fast wind peak, while predictions without wave acceleration (434-554 km/s) fall into the valley between peaks. This 120 km/s gap represents the speed boost that Alfven waves provide during interplanetary transit.",
-      "why_it_matters": "This resolves a decades-old puzzle: thermal expansion alone predicts speeds around 400-500 km/s, well below the 600+ km/s routinely observed in fast wind. Alfven waves continuously deposit energy during transit, particularly in wind from continuously open magnetic field regions. Measuring a parcel's Alfvenicity reveals more about its solar origin than speed alone."
+      "why_it_matters": "This resolves a decades-old puzzle: thermal expansion alone predicts speeds around 400-500 km/s, well below the 600+ km/s routinely observed in fast wind. Alfven waves continuously deposit energy during transit, particularly in wind from continuously open magnetic field regions. Measuring a parcel's Alfvénicity reveals more about its solar origin than speed alone."
     },
     "keywords": [
       "Alfven wave acceleration",
