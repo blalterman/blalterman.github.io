@@ -2,19 +2,10 @@
   "slug": "solar-wind-compressibility",
   "title": "Solar Wind Compressibility",
   "subtitle": "How density fluctuations regulate helium",
-  "description": "Hydrogen compressibility (density fluctuations) is the primary regulator of helium abundance saturation in the solar wind. When compressibility drops below 9%, helium saturates at a universal value regardless of speed or Alfvénicity. This incompressibility threshold provides a powerful diagnostic for identifying solar wind source regions.",
+  "description": "Hydrogen compressibility (density fluctuations) is the primary regulator of helium abundance saturation in the solar wind. When compressibility drops below 9%, helium saturates at a universal value regardless of speed or Alfv\u00e9nicity. This incompressibility threshold provides a powerful diagnostic for identifying solar wind source regions.",
   "primary_figure": {
-    "paper_id": "Alterman_2026_ApJL_996_L12",
-    "figure_id": "fig_7",
-    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_7.svg",
-    "short_title": "Compressibility Maps Show Saturation in Incompressible Wind",
-    "alt": "A heat map showing compressibility versus solar wind speed and helium abundance, revealing saturation occurs exclusively in incompressible wind",
-    "summary": {
-      "what_we_see": "This heat map displays compressibility as color across the helium abundance (0-10%) versus solar wind speed (300-800 km/s) plane. Deep blue indicates incompressible wind where density barely fluctuates, yellow shows moderate fluctuations, and orange-red marks compressible wind with substantial density variations. A striking diagonal divide separates the blue incompressible lower-left region from the orange compressible upper-right.",
-      "the_finding": "Helium saturation occurs exclusively in incompressible solar wind where density fluctuations remain below 9%. All saturation points sit firmly in the blue incompressible region, avoiding compressible areas entirely. This resolves the crossover puzzle from Alfvénicity-based analysis: non-Alfvenic wind at 530-560 km/s reaches the edge of the incompressible regime where compressibility begins enhancing helium, while Alfvenic wind remains deep in the incompressible zone.",
-      "why_it_matters": "Compressibility, not Alfvénicity, is the primary regulator of helium saturation. Coronal holes produce saturated wind not because they are Alfvenic, but because their open-field topology suppresses compressive fluctuations below 9%. This provides a practical classification threshold: density fluctuations below 9% indicate coronal-hole-type wind regardless of wave coherence, enabling reliable source region identification from in situ measurements."
-    },
-    "keywords": [
+    "ref": "Alterman_2026_ApJL_996_L12/fig_7",
+    "topic_keywords": [
       "hydrogen compressibility",
       "density fluctuations",
       "incompressible wind",
@@ -26,22 +17,12 @@
   },
   "related_figures": [
     {
-      "paper_id": "Alterman_2026_ApJL_996_L12",
-      "figure_id": "fig_9",
-      "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_9.svg",
-      "short_title": "Compressibility-Quantile Fits",
-      "alt": "Multi-curve plot showing helium abundance versus speed for 15 compressibility levels",
-      "relevance": "Shows universal saturation below 15% compressibility threshold",
-      "summary_short": "All 12 incompressible quantiles (density fluctuations below 15%) saturate at indistinguishable speeds and abundances. The saturation mechanism is remarkably robust: as long as compressibility stays below 15%, the exact level barely matters. Compressible wind shows no saturation, continuing to climb steeply."
+      "ref": "Alterman_2026_ApJL_996_L12/fig_9",
+      "relevance": "Shows universal saturation below 15% compressibility threshold"
     },
     {
-      "paper_id": "Alterman_2026_ApJL_996_L12",
-      "figure_id": "fig_15",
-      "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_15.svg",
-      "short_title": "Helium Abundance and Variability Map",
-      "alt": "Four-panel contour maps showing helium statistics across cross helicity and compressibility space",
-      "relevance": "Reveals dual role of compressibility in mean abundance vs variability",
-      "summary_short": "Compressibility plays a dual, paradoxical role: Alfvenic wind (low compressibility, high cross helicity) shows high mean helium with moderate variability, while compressible wind shows lower mean helium but extreme variability (80-100%). The 90% quantile reaches comparable values in both regimes, revealing compressible wind is a heterogeneous mixture of source types."
+      "ref": "Alterman_2026_ApJL_996_L12/fig_15",
+      "relevance": "Reveals dual role of compressibility in mean abundance vs variability"
     }
   ],
   "related_topics": [

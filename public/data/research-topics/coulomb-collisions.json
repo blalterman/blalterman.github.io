@@ -4,17 +4,8 @@
   "subtitle": "How particle collisions shape solar wind evolution",
   "description": "Coulomb collisions act as friction on solar wind ions, gradually reducing the differential flows of alpha particles and proton beams during their journey from Sun to Earth. By extrapolating measured drifts to zero collisional age, we reveal the intrinsic velocity limits set by wave-particle interactions in the corona.",
   "primary_figure": {
-    "paper_id": "Alterman_2018_ApJ_864_112",
-    "figure_id": "fig_9",
-    "src": "/papers/Alterman_2018_ApJ_864_112/figures/fig_9.svg",
-    "short_title": "Extrapolating to Zero Collisions Reveals Intrinsic Drift Limits",
-    "alt": "Plot showing mean normalized drift versus collisional age for alpha particles and proton beams, with exponential and linear fits extrapolating to collision-free limits",
-    "summary": {
-      "what_we_see": "This plot tracks how normalized differential flow varies with collisional age on a logarithmic scale. Alpha particles (blue) show an exponential decay with increasing collisions, while proton beams (yellow) remain nearly constant. Dotted lines fit the trends and extrapolate toward zero collisional age.",
-      "the_finding": "Alpha drift drops dramatically from 0.65 to 0.40 of the Alfven speed as collisional age increases, following exponential decay. Proton beams stay pinned near 1.06 regardless of collision count. Extrapolating to zero collisions yields intrinsic limits: alphas at 67% and beams at 105% of the Alfven speed.",
-      "why_it_matters": "These collision-free limits represent the intrinsic drift speeds set by wave-particle interactions in the corona, before collisional friction slows the ions. Any coronal acceleration theory must produce these characteristic values, and the contrast between alpha decay and beam invariance reveals fundamentally different coupling to solar wind physics."
-    },
-    "keywords": [
+    "ref": "Alterman_2018_ApJ_864_112/fig_9",
+    "topic_keywords": [
       "collisional age",
       "Coulomb collisions",
       "exponential decay",
@@ -29,31 +20,16 @@
   },
   "related_figures": [
     {
-      "paper_id": "Alterman_2018_ApJ_864_112",
-      "figure_id": "fig_3",
-      "src": "/papers/Alterman_2018_ApJ_864_112/figures/fig_3.svg",
-      "short_title": "Differential Flows Cluster Near Alfven Speed Fractions",
-      "alt": "Histogram comparing alpha particle and proton beam drifts normalized by Alfven speed",
-      "relevance": "Establishes the baseline observation that drifts cluster at characteristic Alfven speed fractions, motivating the collisional age analysis",
-      "summary_short": "Alpha particles drift at 67% and proton beams at 108% of the Alfven speed, clustering around distinct characteristic values that suggest magnetic waves limit differential flows."
+      "ref": "Alterman_2018_ApJ_864_112/fig_3",
+      "relevance": "Establishes the baseline observation that drifts cluster at characteristic Alfven speed fractions, motivating the collisional age analysis"
     },
     {
-      "paper_id": "Alterman_2018_ApJ_864_112",
-      "figure_id": "fig_5",
-      "src": "/papers/Alterman_2018_ApJ_864_112/figures/fig_5.svg",
-      "short_title": "Collisional Age Effects on Drift Speeds",
-      "alt": "Heat maps showing how alpha and beam drifts vary with collisional age",
-      "relevance": "Demonstrates the core finding that collisions dramatically slow alpha drift while leaving beam drift unchanged",
-      "summary_short": "Alpha drift decreases by 50% across the measured collisional age range while proton beam drift remains constant, revealing fundamentally different responses to Coulomb collisions."
+      "ref": "Alterman_2018_ApJ_864_112/fig_5",
+      "relevance": "Demonstrates the core finding that collisions dramatically slow alpha drift while leaving beam drift unchanged"
     },
     {
-      "paper_id": "Alterman_2018_ApJ_864_112",
-      "figure_id": "fig_6",
-      "src": "/papers/Alterman_2018_ApJ_864_112/figures/fig_6.svg",
-      "short_title": "Alpha-to-Beam Ratio in Youngest Plasma",
-      "alt": "Histogram of alpha-to-beam drift ratio for collisionless and youngest plasma samples",
-      "relevance": "Shows that restricting to youngest plasma narrows the alpha-to-beam ratio, confirming collisional age as a major source of scatter",
-      "summary_short": "In the youngest, most collision-free plasma, alpha particles drift at 71% of the proton beam speed with reduced scatter, confirming that collisional variation contributes substantially to observed spread."
+      "ref": "Alterman_2018_ApJ_864_112/fig_6",
+      "relevance": "Shows that restricting to youngest plasma narrows the alpha-to-beam ratio, confirming collisional age as a major source of scatter"
     }
   ],
   "related_topics": [

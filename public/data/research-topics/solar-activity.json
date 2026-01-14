@@ -2,19 +2,10 @@
   "slug": "solar-activity",
   "title": "Solar Activity",
   "subtitle": "How the 11-year cycle reshapes solar wind composition",
-  "description": "Solar wind composition breathes in sync with the Sun's 11-year activity cycle. Fast wind from coronal holes maintains stable abundances regardless of solar activity, while slow wind abundances rise during solar maximum and crash during solar minimum—with heavier elements showing stronger modulation due to gravitational settling.",
+  "description": "Solar wind composition breathes in sync with the Sun's 11-year activity cycle. Fast wind from coronal holes maintains stable abundances regardless of solar activity, while slow wind abundances rise during solar maximum and crash during solar minimum\u2014with heavier elements showing stronger modulation due to gravitational settling.",
   "primary_figure": {
-    "paper_id": "aa54299-25",
-    "figure_id": "fig_1",
-    "src": "/papers/aa54299-25/figures/fig_1.svg",
-    "short_title": "Helium Abundance Tracks the Solar Cycle",
-    "alt": "Time series showing helium abundance in fast and slow solar wind from 1998-2020, with sunspot number overlay",
-    "summary": {
-      "what_we_see": "This 22-year time series tracks helium abundance in fast wind (filled markers, >420 km/s) and slow wind (empty markers) from 1998-2020. The sunspot number on the right axis traces the Sun's activity cycle. A reference line at 4.2% marks half the Sun's photospheric helium value. The two populations tell dramatically different stories.",
-      "the_finding": "Fast wind helium holds steady around 4.2% throughout two full solar cycles, regardless of whether the Sun is hyperactive or quiet. Slow wind helium rises and falls in lockstep with sunspot number—climbing to nearly match fast wind during solar maximum, then plummeting to half that value during solar minimum. The correlation is extraordinarily strong (0.94-0.95).",
-      "why_it_matters": "This reveals that slow wind source regions undergo profound changes over the solar cycle. During maximum, slow wind achieves fast-wind-like composition, suggesting similar open-field origins. During minimum, gravitational settling in closed magnetic loops or reduced ionization energy severely depletes helium before escape. Fast wind's stability confirms coronal holes maintain consistent conditions across the cycle."
-    },
-    "keywords": [
+    "ref": "aa54299-25/fig_1",
+    "topic_keywords": [
       "solar cycle",
       "sunspot number",
       "helium abundance",
@@ -27,49 +18,24 @@
   },
   "related_figures": [
     {
-      "paper_id": "aa54299-25",
-      "figure_id": "fig_2",
-      "src": "/papers/aa54299-25/figures/fig_2.svg",
-      "short_title": "Nine Elements Track Solar Activity",
-      "alt": "Time series showing abundances of nine elements in fast and slow wind over two decades",
-      "relevance": "Extends the helium finding across the periodic table, confirming the fast/slow dichotomy is universal",
-      "summary_short": "All nine elements (He, C, N, O, Ne, Mg, Si, S, Fe) show stable abundances in fast wind but dramatic solar-cycle modulation in slow wind, confirming the pattern isn't unique to helium but reflects fundamental source-region physics."
+      "ref": "aa54299-25/fig_2",
+      "relevance": "Extends the helium finding across the periodic table, confirming the fast/slow dichotomy is universal"
     },
     {
-      "paper_id": "aa54299-25",
-      "figure_id": "fig_3",
-      "src": "/papers/aa54299-25/figures/fig_3.svg",
-      "short_title": "Heavier Elements Show Stronger Solar Cycle Connection",
-      "alt": "Correlation strength versus atomic mass showing monotonic increase from carbon to iron",
-      "relevance": "Reveals the physical mechanism: gravitational settling preferentially depletes heavier elements during solar minimum",
-      "summary_short": "Correlation strength with solar activity increases monotonically with atomic mass—from carbon at 0.5 to iron at 0.84. This mass-dependent pattern is the fingerprint of gravitational settling in closed magnetic loops during solar minimum."
+      "ref": "aa54299-25/fig_3",
+      "relevance": "Reveals the physical mechanism: gravitational settling preferentially depletes heavier elements during solar minimum"
     },
     {
-      "paper_id": "Alterman_2019_ApJL_879_L6",
-      "figure_id": "fig_3",
-      "src": "/papers/Alterman_2019_ApJL_879_L6/figures/fig_3.svg",
-      "short_title": "Speed-Dependent Time Lag Revealed",
-      "alt": "Optimal time delay versus solar wind speed showing linear increase from 150 to 300+ days",
-      "relevance": "Reveals that helium doesn't respond instantaneously—delay increases linearly with speed, providing a window into source region response times",
-      "summary_short": "Time delay increases systematically with solar wind speed: slow wind (325 km/s) responds ~150 days after sunspot changes, while faster wind (488 km/s) takes 300+ days. This speed-dependent lag is a direct diagnostic of how long different solar sources take to process solar activity changes."
+      "ref": "Alterman_2019_ApJL_879_L6/fig_3",
+      "relevance": "Reveals that helium doesn't respond instantaneously\u2014delay increases linearly with speed, providing a window into source region response times"
     },
     {
-      "paper_id": "s11207-021-01801-9",
-      "figure_id": "fig_1",
-      "src": "/papers/s11207-021-01801-9/figures/fig_1.svg",
-      "short_title": "Helium Shutoff Heralds Solar Minimum",
-      "alt": "45-year time series showing helium abundance crashing then recovering before each solar minimum",
-      "relevance": "Demonstrates predictive capability: helium shutoff consistently precedes solar minimum by ~10 months across four cycles",
-      "summary_short": "Across 45 years and four complete solar cycles, helium abundance suddenly crashes and recovers ~10 months before each officially declared solar minimum. This 'shutoff' pattern occurs simultaneously across all solar wind speeds, providing early warning of cycle transitions."
+      "ref": "s11207-021-01801-9/fig_1",
+      "relevance": "Demonstrates predictive capability: helium shutoff consistently precedes solar minimum by ~10 months across four cycles"
     },
     {
-      "paper_id": "s11207-021-01801-9",
-      "figure_id": "fig_6",
-      "src": "/papers/s11207-021-01801-9/figures/fig_6.svg",
-      "short_title": "Brightpoint Emergence Coincides with Helium Shutoff",
-      "alt": "Butterfly diagram showing mid-latitude brightpoint emergence coinciding with helium depletion events",
-      "relevance": "Reveals the physical mechanism: helium shutoff coincides with magnetic flux cancelation at the equator as solar cycles overlap",
-      "summary_short": "Helium depletion coincides with mid-latitude brightpoint emergence during the overlap of consecutive solar cycles. As old-cycle magnetic bands cancel across the equator, flux emergence temporarily shuts down, cutting off helium supply—making helium a remote diagnostic of deep solar processes."
+      "ref": "s11207-021-01801-9/fig_6",
+      "relevance": "Reveals the physical mechanism: helium shutoff coincides with magnetic flux cancelation at the equator as solar cycles overlap"
     }
   ],
   "related_topics": [

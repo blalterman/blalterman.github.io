@@ -4,21 +4,12 @@
   "subtitle": "Understanding where the solar wind is born",
   "description": "The solar wind originates from different regions on the Sun, each with distinct magnetic topologies. By combining helium abundance and cross helicity measurements, we can trace in situ observations back to their solar source regions.",
   "primary_figure": {
-    "paper_id": "Alterman_2025_ApJL_982_L40",
-    "figure_id": "fig_2",
-    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_2.svg",
-    "short_title": "Where Helium Abundance and Cross Helicity Are Set",
-    "alt": "A schematic showing the Sun's atmosphere layers and where helium abundance and cross helicity are imprinted on the solar wind",
-    "summary": {
-      "what_we_see": "This conceptual diagram illustrates the Sun's inner atmosphere in cross-section, showing how the solar wind acquires two key properties—helium abundance and cross helicity—at different heights above the solar surface. The left side displays the photosphere transitioning through the chromosphere and transition region into the corona. Three critical surfaces are marked: the chromosphere/transition region where helium abundance is set, the sonic surface where the wind becomes supersonic, and the Alfvén surface where the wind magnetically disconnects from the Sun. Both closed magnetic loops (orange) and open field lines (red) are shown, with blue arrows illustrating solar wind acceleration.",
-      "the_finding": "Helium abundance and cross helicity are physically imprinted on the solar wind at vastly different heights, yet both carry information about the source region's magnetic topology that persists all the way to Earth. Helium abundance gets locked in extremely close to the Sun—in the chromosphere below 10,000 km altitude—where helium ionization determines what fraction will flow into the solar wind. Cross helicity is established much higher—between the sonic and Alfvén surfaces spanning 1-20 solar radii—where Alfvén waves create the characteristic correlation between magnetic and velocity fluctuations.",
-      "why_it_matters": "This framework transforms abstract plasma parameters into powerful remote sensing tools. By measuring helium abundance at Earth, we can infer whether the wind originated from regions with sufficient energy to ionize helium (open field coronal holes) versus regions where energy is insufficient (closed field loops). Similarly, cross helicity measured at 1 AU preserves information about wave generation processes in the corona. Together, these two measurements probe conditions at vastly different solar altitudes—a factor of 7,000 in height—constraining both the starting conditions and acceleration mechanism of the solar wind."
-    },
-    "keywords": [
+    "ref": "Alterman_2025_ApJL_982_L40/fig_2",
+    "topic_keywords": [
       "chromosphere",
       "transition region",
       "sonic surface",
-      "Alfvén surface",
+      "Alfv\u00e9n surface",
       "helium ionization",
       "cross helicity",
       "magnetic topology",
@@ -28,22 +19,12 @@
   },
   "related_figures": [
     {
-      "paper_id": "Alterman_2025_ApJL_982_L40",
-      "figure_id": "fig_11",
-      "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_11.svg",
-      "short_title": "Four-Population Classification Scheme",
-      "alt": "A cartoon showing how cross helicity and helium abundance divide solar wind into four source region types",
-      "relevance": "Shows the operational classification scheme derived from the physics in Figure 2",
-      "summary_short": "The cross helicity and helium-abundance plane divides solar wind into four populations: Closed Field (low Alfvénicity, low helium), Open Field (high Alfvénicity, moderate helium), Mixed Source (intermediate values), and Transients (high helium, variable Alfvénicity)."
+      "ref": "Alterman_2025_ApJL_982_L40/fig_11",
+      "relevance": "Shows the operational classification scheme derived from the physics in Figure 2"
     },
     {
-      "paper_id": "Alterman_2025_ApJL_982_L40",
-      "figure_id": "fig_10",
-      "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_10.svg",
-      "short_title": "Speed Mapped onto Composition-Wave Space",
-      "alt": "Heat maps showing solar wind speed as a function of cross helicity and helium abundance",
-      "relevance": "Quantitative data underlying the classification cartoon",
-      "summary_short": "Two distinct populations emerge in the cross helicity/helium-abundance plane: slow wind from closed fields clusters in the lower-left, while fast wind from open fields forms a wedge in the upper-right."
+      "ref": "Alterman_2025_ApJL_982_L40/fig_10",
+      "relevance": "Quantitative data underlying the classification cartoon"
     }
   ],
   "related_topics": [

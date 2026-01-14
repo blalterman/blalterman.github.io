@@ -1,0 +1,583 @@
+{
+  "Alterman_2025_ApJL_984_L64/fig_1": {
+    "paper_id": "Alterman_2025_ApJL_984_L64",
+    "figure_id": "fig_1",
+    "src": "/papers/Alterman_2025_ApJL_984_L64/figures/fig_1.svg",
+    "short_title": "Speed Distribution with Alfven Wave Predictions",
+    "alt": "Probability distribution of solar wind speeds showing slow and fast wind peaks with overlaid theoretical predictions for Alfven wave acceleration",
+    "summary": {
+      "what_we_see": "A probability distribution reveals how frequently different solar wind speeds occur near Earth, displaying a distinctive double-humped shape. One peak at 355 km/s marks slow wind, another at 622 km/s marks fast wind. Colored bands overlay the data showing theoretical predictions with and without Alfven wave acceleration.",
+      "the_finding": "The speed range predicted with Alfven wave acceleration (620-671 km/s) sits directly on the fast wind peak, while predictions without wave acceleration (434-554 km/s) fall into the valley between peaks. This 120 km/s gap represents the speed boost that Alfven waves provide during interplanetary transit.",
+      "why_it_matters": "This resolves a decades-old puzzle: thermal expansion alone predicts speeds around 400-500 km/s, well below the 600+ km/s routinely observed in fast wind. Alfven waves continuously deposit energy during transit, particularly in wind from continuously open magnetic field regions. Measuring a parcel's Alfv\u00e9nicity reveals more about its solar origin than speed alone."
+    },
+    "summary_short": null,
+    "keywords": [
+      "Alfven wave acceleration",
+      "solar wind speed distribution",
+      "fast wind",
+      "slow wind",
+      "bimodal distribution",
+      "kinetic energy flux",
+      "wave forcing",
+      "interplanetary acceleration"
+    ],
+    "used_as_primary_in": [
+      "alfven-waves"
+    ],
+    "used_as_related_in": []
+  },
+  "Alterman_2025_ApJL_984_L64/fig_2": {
+    "paper_id": "Alterman_2025_ApJL_984_L64",
+    "figure_id": "fig_2",
+    "src": "/papers/Alterman_2025_ApJL_984_L64/figures/fig_2.svg",
+    "short_title": "Kinetic Energy Flux Heat Map",
+    "alt": "Heat map showing solar wind speed versus kinetic energy flux with Parker Solar Probe predictions",
+    "summary": null,
+    "summary_short": "The kinetic energy flux measured near the Sun predicts exactly the fast wind speeds observed at Earth, confirming that Alfven wave acceleration is largely complete within 0.2 AU of the Sun.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "alfven-waves"
+    ]
+  },
+  "Alterman_2025_ApJL_984_L64/fig_4": {
+    "paper_id": "Alterman_2025_ApJL_984_L64",
+    "figure_id": "fig_4",
+    "src": "/papers/Alterman_2025_ApJL_984_L64/figures/fig_4.svg",
+    "short_title": "Gaussian Fits to Speed Peaks",
+    "alt": "Solar wind speed distribution with Gaussian curves fit to slow and fast wind populations",
+    "summary": null,
+    "summary_short": "Gaussian decomposition yields precise slow wind (355 km/s) and fast wind (622 km/s) peaks, enabling quantitative comparison with theoretical predictions that include or exclude Alfven wave forcing.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "alfven-waves"
+    ]
+  },
+  "Alterman_2018_ApJ_864_112/fig_9": {
+    "paper_id": "Alterman_2018_ApJ_864_112",
+    "figure_id": "fig_9",
+    "src": "/papers/Alterman_2018_ApJ_864_112/figures/fig_9.svg",
+    "short_title": "Extrapolating to Zero Collisions Reveals Intrinsic Drift Limits",
+    "alt": "Plot showing mean normalized drift versus collisional age for alpha particles and proton beams, with exponential and linear fits extrapolating to collision-free limits",
+    "summary": {
+      "what_we_see": "This plot tracks how normalized differential flow varies with collisional age on a logarithmic scale. Alpha particles (blue) show an exponential decay with increasing collisions, while proton beams (yellow) remain nearly constant. Dotted lines fit the trends and extrapolate toward zero collisional age.",
+      "the_finding": "Alpha drift drops dramatically from 0.65 to 0.40 of the Alfven speed as collisional age increases, following exponential decay. Proton beams stay pinned near 1.06 regardless of collision count. Extrapolating to zero collisions yields intrinsic limits: alphas at 67% and beams at 105% of the Alfven speed.",
+      "why_it_matters": "These collision-free limits represent the intrinsic drift speeds set by wave-particle interactions in the corona, before collisional friction slows the ions. Any coronal acceleration theory must produce these characteristic values, and the contrast between alpha decay and beam invariance reveals fundamentally different coupling to solar wind physics."
+    },
+    "summary_short": null,
+    "keywords": [
+      "collisional age",
+      "Coulomb collisions",
+      "exponential decay",
+      "asymptotic limit",
+      "zero collision extrapolation",
+      "Alfven speed limit",
+      "alpha particles",
+      "proton beams",
+      "differential flow",
+      "wave-particle interactions"
+    ],
+    "used_as_primary_in": [
+      "coulomb-collisions"
+    ],
+    "used_as_related_in": []
+  },
+  "Alterman_2018_ApJ_864_112/fig_3": {
+    "paper_id": "Alterman_2018_ApJ_864_112",
+    "figure_id": "fig_3",
+    "src": "/papers/Alterman_2018_ApJ_864_112/figures/fig_3.svg",
+    "short_title": "Differential Flows Cluster Near Alfven Speed Fractions",
+    "alt": "Histogram comparing alpha particle and proton beam drifts normalized by Alfven speed",
+    "summary": null,
+    "summary_short": "Alpha particles drift at 67% and proton beams at 108% of the Alfven speed, clustering around distinct characteristic values that suggest magnetic waves limit differential flows.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "coulomb-collisions"
+    ]
+  },
+  "Alterman_2018_ApJ_864_112/fig_5": {
+    "paper_id": "Alterman_2018_ApJ_864_112",
+    "figure_id": "fig_5",
+    "src": "/papers/Alterman_2018_ApJ_864_112/figures/fig_5.svg",
+    "short_title": "Collisional Age Effects on Drift Speeds",
+    "alt": "Heat maps showing how alpha and beam drifts vary with collisional age",
+    "summary": null,
+    "summary_short": "Alpha drift decreases by 50% across the measured collisional age range while proton beam drift remains constant, revealing fundamentally different responses to Coulomb collisions.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "coulomb-collisions"
+    ]
+  },
+  "Alterman_2018_ApJ_864_112/fig_6": {
+    "paper_id": "Alterman_2018_ApJ_864_112",
+    "figure_id": "fig_6",
+    "src": "/papers/Alterman_2018_ApJ_864_112/figures/fig_6.svg",
+    "short_title": "Alpha-to-Beam Ratio in Youngest Plasma",
+    "alt": "Histogram of alpha-to-beam drift ratio for collisionless and youngest plasma samples",
+    "summary": null,
+    "summary_short": "In the youngest, most collision-free plasma, alpha particles drift at 71% of the proton beam speed with reduced scatter, confirming that collisional variation contributes substantially to observed spread.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "coulomb-collisions"
+    ]
+  },
+  "aa51550-24/fig_3": {
+    "paper_id": "aa51550-24",
+    "figure_id": "fig_3",
+    "src": "/papers/aa51550-24/figures/fig_3.svg",
+    "short_title": "Universal Slow-Wind Gradient Across All Elements",
+    "alt": "Normalized abundance versus normalized speed showing all ten elements collapsing onto a single curve below saturation, then diverging above",
+    "summary": {
+      "what_we_see": "This normalized plot rescales ten elements (helium through iron) so each species' saturation point maps to coordinate (1.0, 1.0). The horizontal axis shows speed divided by saturation speed; the vertical axis shows abundance divided by saturation abundance. Below saturation (left of 1.0), all curves overlay completely, forming a single master trajectory. Above saturation (right of 1.0), the curves fan apart into distinct families.",
+      "the_finding": "Below saturation, all ten species\u2014spanning masses 4-56 amu and both low-FIP and high-FIP elements\u2014exhibit indistinguishable gradients. The curves overlay so completely they form essentially one universal curve. Above saturation, universality breaks down: light high-FIP elements (C, N, O) climb steeply to 1.8-2.0x saturation, while iron and helium plateau near 1.1-1.2x, with other elements falling between.",
+      "why_it_matters": "The universal slow-wind gradient demonstrates that abundances below 327 km/s are set by a single process that doesn't discriminate between elements. Above saturation, element-specific fractionation activates\u2014organized by charge state rather than mass. This asymmetry reveals where in the solar atmosphere composition gets locked in (below saturation) versus where transport physics modifies it (above saturation)."
+    },
+    "summary_short": null,
+    "keywords": [
+      "normalized abundance",
+      "universal slow-wind gradient",
+      "fast-wind fractionation",
+      "saturation point",
+      "element-specific divergence",
+      "mass independence",
+      "charge-state fractionation"
+    ],
+    "used_as_primary_in": [
+      "heavy-ion-composition"
+    ],
+    "used_as_related_in": []
+  },
+  "aa51550-24/fig_2": {
+    "paper_id": "aa51550-24",
+    "figure_id": "fig_2",
+    "src": "/papers/aa51550-24/figures/fig_2.svg",
+    "short_title": "Heavy Ions Saturate 75 km/s Before Helium",
+    "alt": "Multi-species abundance curves showing all heavy ions saturate at 327 km/s while helium waits until 402 km/s",
+    "summary": null,
+    "summary_short": "All eight heavy elements (C through Fe) saturate at 327 +/- 2 km/s, while helium saturates 75 km/s later at 402 km/s. This gap means 30-40% of solar wind is classified differently depending on which tracer you use.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "heavy-ion-composition"
+    ]
+  },
+  "aa51550-24/fig_8": {
+    "paper_id": "aa51550-24",
+    "figure_id": "fig_8",
+    "src": "/papers/aa51550-24/figures/fig_8.svg",
+    "short_title": "Charge State Organizes Fast-Wind Fractionation",
+    "alt": "Scatter plot showing fast-wind enhancement versus charge state with R-squared of 0.95",
+    "summary": null,
+    "summary_short": "When organized by ionization state rather than mass, fast-wind enhancement follows a clean inverse relationship (R-squared = 0.95). Low charge-state ions show 2x enhancement; high charge-state ions show minimal change.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "heavy-ion-composition"
+    ]
+  },
+  "Alterman_2025_ApJL_982_L40/fig_3": {
+    "paper_id": "Alterman_2025_ApJL_982_L40",
+    "figure_id": "fig_3",
+    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_3.svg",
+    "short_title": "Helium Saturation at 4.19%",
+    "alt": "A 2D histogram showing helium abundance versus solar wind speed, revealing saturation above 433 km/s",
+    "summary": {
+      "what_we_see": "This column-normalized 2D histogram maps 28 years of solar wind measurements, with speed on the horizontal axis (200-800 km/s) and helium abundance on the vertical axis (0-10%). The bright yellow band traces the most common helium value at each speed: rising steadily from near-zero at 200 km/s to approximately 4% at 400 km/s, then abruptly flattening into a horizontal plateau at 4.2% that extends to 800 km/s with no further increase.",
+      "the_finding": "Helium abundance exhibits a dramatic transition at 433 km/s. Below this speed, helium increases monotonically at roughly 0.035% per km/s. Above this speed, helium saturates at 4.19% and remains constant across the entire fast wind regime. The saturation value corresponds to roughly 49% of the Sun's photospheric helium abundance, and the transition is remarkably sharp.",
+      "why_it_matters": "This compositional fingerprint sharply divides two physically distinct populations. In slow wind from closed magnetic loops, helium varies wildly because energy availability depends on local topology. In fast wind from open coronal holes, helium saturates because sufficient energy exists to ionize and accelerate helium uniformly. The 433 km/s threshold enables simple operational classification of solar wind source regions."
+    },
+    "summary_short": null,
+    "keywords": [
+      "helium abundance",
+      "saturation",
+      "saturation speed",
+      "solar wind speed",
+      "composition",
+      "open field",
+      "closed field",
+      "photospheric abundance"
+    ],
+    "used_as_primary_in": [
+      "helium-abundance"
+    ],
+    "used_as_related_in": []
+  },
+  "Alterman_2025_ApJL_982_L40/fig_5": {
+    "paper_id": "Alterman_2025_ApJL_982_L40",
+    "figure_id": "fig_5",
+    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_5.svg",
+    "short_title": "Saturation Point Shifts with Alfv\u00e9nicity",
+    "alt": "Multi-line plot showing how helium saturation varies with cross helicity level",
+    "summary": null,
+    "summary_short": "When subdividing by Alfv\u00e9nicity level, the helium saturation point shifts systematically: highly Alfvenic wind saturates at lower speeds (410 km/s) and lower abundances (3.87%), while less Alfvenic wind saturates at higher speeds (433 km/s) and higher abundances (4.19%).",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "helium-abundance"
+    ]
+  },
+  "Alterman_2025_ApJL_982_L40/fig_6": {
+    "paper_id": "Alterman_2025_ApJL_982_L40",
+    "figure_id": "fig_6",
+    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_6.svg",
+    "short_title": "Universal Scaling Below Saturation",
+    "alt": "Rescaled fits showing collapse onto a universal curve below saturation",
+    "summary": null,
+    "summary_short": "When normalized to each Alfv\u00e9nicity quantile's saturation point, all 15 saturation curves collapse onto a single trajectory below saturation (A_He/A_s = v_sw/v_s), demonstrating scale-invariant behavior that breaks into Alfv\u00e9nicity-dependent overshooting above saturation.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "helium-abundance"
+    ]
+  },
+  "Alterman_2025_ApJL_982_L40/fig_7": {
+    "paper_id": "Alterman_2025_ApJL_982_L40",
+    "figure_id": "fig_7",
+    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_7.svg",
+    "short_title": "Saturation Speed and Abundance Trends",
+    "alt": "Two-panel figure showing saturation speed and abundance versus cross helicity",
+    "summary": null,
+    "summary_short": "Saturation speed decreases by 23 km/s (from 433 to 410 km/s) while saturation abundance decreases by 0.32% (from 4.19% to 3.87%) as Alfv\u00e9nicity increases from 0 to 1, revealing that wave-driven acceleration is compositionally selective.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "helium-abundance"
+    ]
+  },
+  "aa54299-25/fig_1": {
+    "paper_id": "aa54299-25",
+    "figure_id": "fig_1",
+    "src": "/papers/aa54299-25/figures/fig_1.svg",
+    "short_title": "Helium Abundance Tracks the Solar Cycle",
+    "alt": "Time series showing helium abundance in fast and slow solar wind from 1998-2020, with sunspot number overlay",
+    "summary": {
+      "what_we_see": "This 22-year time series tracks helium abundance in fast wind (filled markers, >420 km/s) and slow wind (empty markers) from 1998-2020. The sunspot number on the right axis traces the Sun's activity cycle. A reference line at 4.2% marks half the Sun's photospheric helium value. The two populations tell dramatically different stories.",
+      "the_finding": "Fast wind helium holds steady around 4.2% throughout two full solar cycles, regardless of whether the Sun is hyperactive or quiet. Slow wind helium rises and falls in lockstep with sunspot number\u2014climbing to nearly match fast wind during solar maximum, then plummeting to half that value during solar minimum. The correlation is extraordinarily strong (0.94-0.95).",
+      "why_it_matters": "This reveals that slow wind source regions undergo profound changes over the solar cycle. During maximum, slow wind achieves fast-wind-like composition, suggesting similar open-field origins. During minimum, gravitational settling in closed magnetic loops or reduced ionization energy severely depletes helium before escape. Fast wind's stability confirms coronal holes maintain consistent conditions across the cycle."
+    },
+    "summary_short": null,
+    "keywords": [
+      "solar cycle",
+      "sunspot number",
+      "helium abundance",
+      "fast wind",
+      "slow wind",
+      "temporal evolution",
+      "22-year observations",
+      "source region variability"
+    ],
+    "used_as_primary_in": [
+      "solar-activity"
+    ],
+    "used_as_related_in": []
+  },
+  "aa54299-25/fig_2": {
+    "paper_id": "aa54299-25",
+    "figure_id": "fig_2",
+    "src": "/papers/aa54299-25/figures/fig_2.svg",
+    "short_title": "Nine Elements Track Solar Activity",
+    "alt": "Time series showing abundances of nine elements in fast and slow wind over two decades",
+    "summary": null,
+    "summary_short": "All nine elements (He, C, N, O, Ne, Mg, Si, S, Fe) show stable abundances in fast wind but dramatic solar-cycle modulation in slow wind, confirming the pattern isn't unique to helium but reflects fundamental source-region physics.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "solar-activity"
+    ]
+  },
+  "aa54299-25/fig_3": {
+    "paper_id": "aa54299-25",
+    "figure_id": "fig_3",
+    "src": "/papers/aa54299-25/figures/fig_3.svg",
+    "short_title": "Heavier Elements Show Stronger Solar Cycle Connection",
+    "alt": "Correlation strength versus atomic mass showing monotonic increase from carbon to iron",
+    "summary": null,
+    "summary_short": "Correlation strength with solar activity increases monotonically with atomic mass\u2014from carbon at 0.5 to iron at 0.84. This mass-dependent pattern is the fingerprint of gravitational settling in closed magnetic loops during solar minimum.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "solar-activity"
+    ]
+  },
+  "Alterman_2019_ApJL_879_L6/fig_3": {
+    "paper_id": "Alterman_2019_ApJL_879_L6",
+    "figure_id": "fig_3",
+    "src": "/papers/Alterman_2019_ApJL_879_L6/figures/fig_3.svg",
+    "short_title": "Speed-Dependent Time Lag Revealed",
+    "alt": "Optimal time delay versus solar wind speed showing linear increase from 150 to 300+ days",
+    "summary": null,
+    "summary_short": "Time delay increases systematically with solar wind speed: slow wind (325 km/s) responds ~150 days after sunspot changes, while faster wind (488 km/s) takes 300+ days. This speed-dependent lag is a direct diagnostic of how long different solar sources take to process solar activity changes.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "solar-activity"
+    ]
+  },
+  "s11207-021-01801-9/fig_1": {
+    "paper_id": "s11207-021-01801-9",
+    "figure_id": "fig_1",
+    "src": "/papers/s11207-021-01801-9/figures/fig_1.svg",
+    "short_title": "Helium Shutoff Heralds Solar Minimum",
+    "alt": "45-year time series showing helium abundance crashing then recovering before each solar minimum",
+    "summary": null,
+    "summary_short": "Across 45 years and four complete solar cycles, helium abundance suddenly crashes and recovers ~10 months before each officially declared solar minimum. This 'shutoff' pattern occurs simultaneously across all solar wind speeds, providing early warning of cycle transitions.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "solar-activity"
+    ]
+  },
+  "s11207-021-01801-9/fig_6": {
+    "paper_id": "s11207-021-01801-9",
+    "figure_id": "fig_6",
+    "src": "/papers/s11207-021-01801-9/figures/fig_6.svg",
+    "short_title": "Brightpoint Emergence Coincides with Helium Shutoff",
+    "alt": "Butterfly diagram showing mid-latitude brightpoint emergence coinciding with helium depletion events",
+    "summary": null,
+    "summary_short": "Helium depletion coincides with mid-latitude brightpoint emergence during the overlap of consecutive solar cycles. As old-cycle magnetic bands cancel across the equator, flux emergence temporarily shuts down, cutting off helium supply\u2014making helium a remote diagnostic of deep solar processes.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "solar-activity"
+    ]
+  },
+  "Alterman_2026_ApJL_996_L12/fig_7": {
+    "paper_id": "Alterman_2026_ApJL_996_L12",
+    "figure_id": "fig_7",
+    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_7.svg",
+    "short_title": "Compressibility Maps Show Saturation in Incompressible Wind",
+    "alt": "A heat map showing compressibility versus solar wind speed and helium abundance, revealing saturation occurs exclusively in incompressible wind",
+    "summary": {
+      "what_we_see": "This heat map displays compressibility as color across the helium abundance (0-10%) versus solar wind speed (300-800 km/s) plane. Deep blue indicates incompressible wind where density barely fluctuates, yellow shows moderate fluctuations, and orange-red marks compressible wind with substantial density variations. A striking diagonal divide separates the blue incompressible lower-left region from the orange compressible upper-right.",
+      "the_finding": "Helium saturation occurs exclusively in incompressible solar wind where density fluctuations remain below 9%. All saturation points sit firmly in the blue incompressible region, avoiding compressible areas entirely. This resolves the crossover puzzle from Alfv\u00e9nicity-based analysis: non-Alfvenic wind at 530-560 km/s reaches the edge of the incompressible regime where compressibility begins enhancing helium, while Alfvenic wind remains deep in the incompressible zone.",
+      "why_it_matters": "Compressibility, not Alfv\u00e9nicity, is the primary regulator of helium saturation. Coronal holes produce saturated wind not because they are Alfvenic, but because their open-field topology suppresses compressive fluctuations below 9%. This provides a practical classification threshold: density fluctuations below 9% indicate coronal-hole-type wind regardless of wave coherence, enabling reliable source region identification from in situ measurements."
+    },
+    "summary_short": "Hydrogen compressibility maps reveal saturation patterns that sharpen the boundaries between solar wind source-region types, improving classification accuracy.",
+    "keywords": [
+      "hydrogen compressibility",
+      "density fluctuations",
+      "incompressible wind",
+      "saturation region",
+      "compressibility threshold",
+      "helium regulation",
+      "source region identification"
+    ],
+    "used_as_primary_in": [
+      "solar-wind-compressibility"
+    ],
+    "used_as_related_in": [
+      "space-weather"
+    ]
+  },
+  "Alterman_2026_ApJL_996_L12/fig_9": {
+    "paper_id": "Alterman_2026_ApJL_996_L12",
+    "figure_id": "fig_9",
+    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_9.svg",
+    "short_title": "Compressibility-Quantile Fits",
+    "alt": "Multi-curve plot showing helium abundance versus speed for 15 compressibility levels",
+    "summary": null,
+    "summary_short": "All 12 incompressible quantiles (density fluctuations below 15%) saturate at indistinguishable speeds and abundances. The saturation mechanism is remarkably robust: as long as compressibility stays below 15%, the exact level barely matters. Compressible wind shows no saturation, continuing to climb steeply.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "solar-wind-compressibility"
+    ]
+  },
+  "Alterman_2026_ApJL_996_L12/fig_15": {
+    "paper_id": "Alterman_2026_ApJL_996_L12",
+    "figure_id": "fig_15",
+    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_15.svg",
+    "short_title": "Helium Abundance and Variability Map",
+    "alt": "Four-panel contour maps showing helium statistics across cross helicity and compressibility space",
+    "summary": null,
+    "summary_short": "Compressibility plays a dual, paradoxical role: Alfvenic wind (low compressibility, high cross helicity) shows high mean helium with moderate variability, while compressible wind shows lower mean helium but extreme variability (80-100%). The 90% quantile reaches comparable values in both regimes, revealing compressible wind is a heterogeneous mixture of source types.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "solar-wind-compressibility"
+    ]
+  },
+  "Alterman_2025_ApJL_982_L40/fig_2": {
+    "paper_id": "Alterman_2025_ApJL_982_L40",
+    "figure_id": "fig_2",
+    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_2.svg",
+    "short_title": "Where Helium Abundance and Cross Helicity Are Set",
+    "alt": "A schematic showing the Sun's atmosphere layers and where helium abundance and cross helicity are imprinted on the solar wind",
+    "summary": {
+      "what_we_see": "This conceptual diagram illustrates the Sun's inner atmosphere in cross-section, showing how the solar wind acquires two key properties\u2014helium abundance and cross helicity\u2014at different heights above the solar surface. The left side displays the photosphere transitioning through the chromosphere and transition region into the corona. Three critical surfaces are marked: the chromosphere/transition region where helium abundance is set, the sonic surface where the wind becomes supersonic, and the Alfv\u00e9n surface where the wind magnetically disconnects from the Sun. Both closed magnetic loops (orange) and open field lines (red) are shown, with blue arrows illustrating solar wind acceleration.",
+      "the_finding": "Helium abundance and cross helicity are physically imprinted on the solar wind at vastly different heights, yet both carry information about the source region's magnetic topology that persists all the way to Earth. Helium abundance gets locked in extremely close to the Sun\u2014in the chromosphere below 10,000 km altitude\u2014where helium ionization determines what fraction will flow into the solar wind. Cross helicity is established much higher\u2014between the sonic and Alfv\u00e9n surfaces spanning 1-20 solar radii\u2014where Alfv\u00e9n waves create the characteristic correlation between magnetic and velocity fluctuations.",
+      "why_it_matters": "This framework transforms abstract plasma parameters into powerful remote sensing tools. By measuring helium abundance at Earth, we can infer whether the wind originated from regions with sufficient energy to ionize helium (open field coronal holes) versus regions where energy is insufficient (closed field loops). Similarly, cross helicity measured at 1 AU preserves information about wave generation processes in the corona. Together, these two measurements probe conditions at vastly different solar altitudes\u2014a factor of 7,000 in height\u2014constraining both the starting conditions and acceleration mechanism of the solar wind."
+    },
+    "summary_short": null,
+    "keywords": [
+      "chromosphere",
+      "transition region",
+      "sonic surface",
+      "Alfv\u00e9n surface",
+      "helium ionization",
+      "cross helicity",
+      "magnetic topology",
+      "open field",
+      "closed field"
+    ],
+    "used_as_primary_in": [
+      "sources-of-the-solar-wind"
+    ],
+    "used_as_related_in": []
+  },
+  "Alterman_2025_ApJL_982_L40/fig_11": {
+    "paper_id": "Alterman_2025_ApJL_982_L40",
+    "figure_id": "fig_11",
+    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_11.svg",
+    "short_title": "Four-Population Classification Scheme",
+    "alt": "A cartoon showing how cross helicity and helium abundance divide solar wind into four source region types",
+    "summary": null,
+    "summary_short": "The cross helicity and helium-abundance plane divides solar wind into four populations: Closed Field (low Alfv\u00e9nicity, low helium), Open Field (high Alfv\u00e9nicity, moderate helium), Mixed Source (intermediate values), and Transients (high helium, variable Alfv\u00e9nicity).",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "sources-of-the-solar-wind"
+    ]
+  },
+  "Alterman_2025_ApJL_982_L40/fig_10": {
+    "paper_id": "Alterman_2025_ApJL_982_L40",
+    "figure_id": "fig_10",
+    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_10.svg",
+    "short_title": "Speed Mapped onto Composition-Wave Space",
+    "alt": "Heat maps showing solar wind speed as a function of cross helicity and helium abundance",
+    "summary": null,
+    "summary_short": "Two distinct populations emerge in the cross helicity/helium-abundance plane: slow wind from closed fields clusters in the lower-left, while fast wind from open fields forms a wedge in the upper-right.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "sources-of-the-solar-wind"
+    ]
+  },
+  "Alterman_2026_ApJL_996_L12/fig_3": {
+    "paper_id": "Alterman_2026_ApJL_996_L12",
+    "figure_id": "fig_3",
+    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_3.svg",
+    "short_title": "Solar Wind Classification Scheme",
+    "alt": "A classification diagram using cross helicity and helium abundance to categorize solar wind into four source-region types",
+    "summary": {
+      "what_we_see": "This classification diagram maps solar wind onto a two-parameter space: cross helicity (0-1) on one axis and helium abundance (0-10%) on the other. Colored regions identify four distinct solar wind types: Intermittently Open (green), Mixed Source (orange), Continuously Open (red), and Transients (red, high helium). Each region corresponds to a specific magnetic topology on the Sun.",
+      "the_finding": "Solar wind naturally segregates into four regimes based on cross helicity and helium abundance, each tracing back to distinct source regions on the Sun. High cross helicity with moderate helium indicates continuously open coronal holes, while low cross helicity with low helium points to intermittently open or closed-field regions. Transient events occupy a separate high-helium regime regardless of cross helicity.",
+      "why_it_matters": "This classification scheme provides a practical diagnostic tool for space weather forecasting. By measuring just two parameters in the solar wind at 1 AU, forecasters can identify the source region type and anticipate the wind's geoeffective properties. This enables better predictions of geomagnetic storm intensity and duration based on the source region's known characteristics."
+    },
+    "summary_short": null,
+    "keywords": [
+      "space weather",
+      "solar wind classification",
+      "cross helicity",
+      "helium abundance",
+      "coronal holes",
+      "magnetic topology",
+      "geomagnetic storms",
+      "source regions"
+    ],
+    "used_as_primary_in": [
+      "space-weather"
+    ],
+    "used_as_related_in": []
+  },
+  "Alterman_2026_ApJL_996_L12/fig_11": {
+    "paper_id": "Alterman_2026_ApJL_996_L12",
+    "figure_id": "fig_11",
+    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_11.svg",
+    "short_title": "Saturation Points Shift with Compressibility",
+    "alt": "Diagram showing how transition speeds between source-region types depend on compressibility",
+    "summary": null,
+    "summary_short": "The transition speeds marking boundaries between source-region types shift systematically with plasma compressibility, providing additional constraints on the classification scheme.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "space-weather"
+    ]
+  },
+  "Alterman_2024_ApJL_964_L31/fig_4": {
+    "paper_id": "Alterman_2024_ApJL_964_L31",
+    "figure_id": "fig_4",
+    "src": "/papers/Alterman_2024_ApJL_964_L31/figures/fig_4.svg",
+    "short_title": "Distribution of Spectral Indices",
+    "alt": "A stacked histogram showing spectral index measurements from all nine elements across 22 years, centered at 2.5",
+    "summary": {
+      "what_we_see": "This stacked histogram aggregates all spectral index measurements from nine different elements across a 22-year study period. Each colored layer represents a different element from carbon to iron, with the distribution forming a clear bell-shaped peak centered at 2.5. The white circle marks the overall mean with error bars showing the standard deviation of 0.3.",
+      "the_finding": "The compact distribution demonstrates a universal spectral signature: gamma = 2.5 plus or minus 0.3. About 80 percent of all observations fall within one standard deviation of this mean, and no single element dominates the distribution. This tight clustering across all nine species and 22 years reveals that nature produces a single, well-defined spectral answer regardless of element type or solar conditions.",
+      "why_it_matters": "This precise convergence suggests a fundamental physical process governs how suprathermal particles populate different energy levels after decaying from higher-energy sources. For space weather modeling, engineers can use a single representative spectral index when calculating radiation dose for long-duration missions, rather than needing separate values for different elements or solar cycle phases."
+    },
+    "summary_short": null,
+    "keywords": [
+      "histogram",
+      "distribution",
+      "spectral index",
+      "gamma 2.5",
+      "universal behavior",
+      "heavy ions",
+      "suprathermal particles"
+    ],
+    "used_as_primary_in": [
+      "suprathermal-ions"
+    ],
+    "used_as_related_in": []
+  },
+  "Alterman_2024_ApJL_964_L31/fig_1": {
+    "paper_id": "Alterman_2024_ApJL_964_L31",
+    "figure_id": "fig_1",
+    "src": "/papers/Alterman_2024_ApJL_964_L31/figures/fig_1.svg",
+    "short_title": "Universal Power-Law Behavior",
+    "alt": "Energy spectra for nine different elements showing nearly identical power-law slopes",
+    "summary": null,
+    "summary_short": "Despite ranging from lightweight carbon to heavy iron, all nine species march together in near-perfect lockstep with the same power-law slope of approximately 2.5, revealing that whatever process created these particles treated all species democratically.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "suprathermal-ions"
+    ]
+  },
+  "Alterman_2024_ApJL_964_L31/fig_2": {
+    "paper_id": "Alterman_2024_ApJL_964_L31",
+    "figure_id": "fig_2",
+    "src": "/papers/Alterman_2024_ApJL_964_L31/figures/fig_2.svg",
+    "short_title": "Spectral Index Stability Throughout Solar Cycle",
+    "alt": "Time series plot showing spectral index remains constant despite dramatic swings in solar activity",
+    "summary": null,
+    "summary_short": "Despite dramatic swings in solar activity over two solar cycles, the spectral index stays stubbornly around 2.5, pointing to a stable, long-lived origin that transcends individual solar cycles rather than active element-specific acceleration.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "suprathermal-ions"
+    ]
+  },
+  "Alterman_2023_ApJ_952_42/fig_4": {
+    "paper_id": "Alterman_2023_ApJ_952_42",
+    "figure_id": "fig_4",
+    "src": "/papers/Alterman_2023_ApJ_952_42/figures/fig_4.png",
+    "short_title": "22-Year Evolution Reveals CIR and GSEP Sources",
+    "alt": "Time series of eight heavy ion abundances showing solar-cycle modulation with opposite trends for carbon vs iron",
+    "summary": null,
+    "summary_short": "Carbon anticorrelates with solar activity (r=-0.84) while iron strongly correlates (r=+0.89). During solar minimum, abundances match CIR signatures; during maximum, they shift toward gradual SEP values\u2014proving the seed population carries compositional memory of recent acceleration events.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "suprathermal-ions"
+    ]
+  },
+  "Alterman_2023_ApJ_952_42/fig_8": {
+    "paper_id": "Alterman_2023_ApJ_952_42",
+    "figure_id": "fig_8",
+    "src": "/papers/Alterman_2023_ApJ_952_42/figures/fig_8.svg",
+    "short_title": "M/Q Variability Matches CME-Shock Acceleration Pattern",
+    "alt": "Power-law exponents vs mass-per-charge ratio showing quiet-time variability matches gradual SEP events",
+    "summary": null,
+    "summary_short": "Quiet-time variability follows the same M/Q-dependent pattern as gradual SEP events (slope m=0.33 vs GSEP m=0.36). This proves suprathermals are remnants of shock-accelerated particles and serve as the seed population for the next CME-driven event.",
+    "keywords": [],
+    "used_as_primary_in": [],
+    "used_as_related_in": [
+      "suprathermal-ions"
+    ]
+  }
+}
