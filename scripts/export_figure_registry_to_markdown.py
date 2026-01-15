@@ -25,6 +25,11 @@ def export_registry_to_markdown():
         lines.append("")
         lines.append(f"**Short Title:** {fig['short_title']}")
         lines.append("")
+        # Embed the figure image
+        # Convert src path to absolute path for pandoc
+        fig_path = str(repo_root / "public" / fig['src'].lstrip('/'))
+        lines.append(f"![{fig['alt']}]({fig_path})")
+        lines.append("")
         lines.append(f"**File:** `{fig['src']}`")
         lines.append("")
 

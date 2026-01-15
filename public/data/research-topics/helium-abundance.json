@@ -2,7 +2,7 @@
   "slug": "helium-abundance",
   "title": "Helium Abundance",
   "subtitle": "Tracing solar wind origins through composition",
-  "description": "Helium abundance in the solar wind varies dramatically with speed, rising from near-zero in the slowest wind to a saturation value of 4.19% above 433 km/s. This compositional fingerprint, locked in at the chromosphere, provides a powerful diagnostic for distinguishing solar wind from magnetically closed versus open source regions.",
+  "description": "Helium abundance in the solar wind varies dramatically with speed, rising from near-zero in the slowest wind to a saturation value of 4.19% above 433 km/s. This compositional fingerprint, locked in at the chromosphere, provides a powerful diagnostic for distinguishing solar wind from source regions with intermittently and continuously open magnetic field topologies.",
   "primary_figure": {
     "ref": "Alterman_2025_ApJL_982_L40/fig_3",
     "topic_keywords": [
@@ -19,7 +19,7 @@
   "related_figures": [
     {
       "ref": "Alterman_2025_ApJL_982_L40/fig_5",
-      "relevance": "Demonstrates that the helium saturation point is not fixed but shifts systematically with Alfv\u00e9nicity, revealing the physical coupling between composition and wave activity"
+      "relevance": "Demonstrates that the helium saturation point is not fixed but shifts systematically with Alfvénicity or cross helicity, revealing an unexpected enhancement in fast wind helium abundance when the Alfvénicity is low in fast wind. Alterman & D'Amicis (2025b, ApJL) resolves the contradiction implied by this observation."
     },
     {
       "ref": "Alterman_2025_ApJL_982_L40/fig_6",
@@ -27,7 +27,15 @@
     },
     {
       "ref": "Alterman_2025_ApJL_982_L40/fig_7",
-      "relevance": "Quantifies the anticorrelation between saturation speed and saturation abundance as a function of Alfv\u00e9nicity, providing the key empirical relationship for understanding helium behavior"
+      "relevance": "Quantifies the anticorrelation between saturation speed and saturation abundance as a function of Alfvénicity, providing the key empirical relationship for understanding helium behavior"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_9",
+      "relevance": "Shows that compressibility, not Alfvénicity, is the primary regulator of helium saturation"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_10",
+      "relevance": "Demonstrates that limiting compressibility < 15% excludes confounding impacts and enables reliable source region identification"
     }
   ],
   "related_topics": [
