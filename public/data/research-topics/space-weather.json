@@ -18,26 +18,26 @@
   },
   "related_figures": [
     {
-      "ref": "Alterman_2026_ApJL_996_L12/fig_7",
-      "relevance": "Shows how compressibility helps refine the classification by revealing saturation behavior in different source-region types"
+      "ref": "Alterman_2026_ApJL_996_L12/fig_5",
+      "relevance": "Shows how helium abundance varies with cross helicity in different solar wind classification regimes"
     },
     {
-      "ref": "Alterman_2026_ApJL_996_L12/fig_11",
-      "relevance": "Demonstrates how the transition speeds between classification regimes depend on plasma compressibility properties"
+      "ref": "Alterman_2026_ApJL_996_L12/fig_6",
+      "relevance": "Demonstrates the universal scaling behavior that underlies the classification scheme"
     }
   ],
   "related_topics": [
     {
-      "slug": "sources-of-the-solar-wind",
-      "connection": "Classification scheme is based on source region identification physics"
+      "slug": "helium-abundance",
+      "connection": "Helium abundance is a key parameter in the classification scheme"
+    },
+    {
+      "slug": "alfven-waves",
+      "connection": "Cross helicity (Alfvénicity) is the other key parameter in the classification"
     },
     {
       "slug": "solar-wind-compressibility",
       "connection": "Compressibility refines the classification boundaries"
-    },
-    {
-      "slug": "suprathermal-ions",
-      "connection": "Suprathermal populations are seed particles for SEP events"
     }
   ],
   "published": false,

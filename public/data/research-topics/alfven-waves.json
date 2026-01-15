@@ -20,10 +20,6 @@
     {
       "ref": "Alterman_2025_ApJL_984_L64/fig_2",
       "relevance": "Demonstrates how kinetic energy measured near the Sun by Parker Solar Probe predicts speeds at Earth, validating that wave-driven acceleration is complete by 0.2 AU"
-    },
-    {
-      "ref": "Alterman_2025_ApJL_984_L64/fig_4",
-      "relevance": "Provides quantitative speed thresholds (355 and 622 km/s) used to test whether Alfven wave predictions match the observed fast wind peak"
     }
   ],
   "related_topics": [

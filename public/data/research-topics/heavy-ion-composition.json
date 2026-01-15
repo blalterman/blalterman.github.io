@@ -17,22 +17,50 @@
   },
   "related_figures": [
     {
+      "ref": "aa51550-24/fig_1",
+      "relevance": "Shows helium's saturation at 402 km/s—the baseline for comparing heavy ions which saturate 75 km/s earlier"
+    },
+    {
       "ref": "aa51550-24/fig_2",
       "relevance": "Shows the raw data before normalization, revealing the 75 km/s gap between heavy-ion and helium saturation speeds"
     },
     {
+      "ref": "aa51550-24/fig_4",
+      "relevance": "Context showing the saturation speeds straddle the solar wind's peak distribution, making the discrepancy operationally important"
+    },
+    {
+      "ref": "aa51550-24/fig_5",
+      "relevance": "Proves saturation speed is independent of first ionization potential—all heavy elements cluster at 327 km/s"
+    },
+    {
+      "ref": "aa51550-24/fig_6",
+      "relevance": "Saturation abundances show expected FIP pattern, revealing where chromospheric fractionation sets composition"
+    },
+    {
+      "ref": "aa51550-24/fig_7",
+      "relevance": "Fast-wind enhancement shows mass dependence above saturation, motivating the charge-state analysis"
+    },
+    {
       "ref": "aa51550-24/fig_8",
-      "relevance": "Explains the divergence above saturation seen in the primary figure\u2014charge state, not mass, controls fast-wind fractionation"
+      "relevance": "Explains the divergence above saturation—charge state (R²=0.95), not mass, controls fast-wind fractionation"
+    },
+    {
+      "ref": "Alterman_2025_ApJL_982_L40/fig_3",
+      "relevance": "Links to Helium Abundance page; helium shows similar saturation behavior but at different speed threshold"
     }
   ],
   "related_topics": [
+    {
+      "slug": "sources-of-the-solar-wind",
+      "connection": "Heavy ion saturation speeds provide source region classification thresholds"
+    },
     {
       "slug": "solar-activity",
       "connection": "Heavy ion abundances modulate with the solar cycle"
     },
     {
       "slug": "helium-abundance",
-      "connection": "Helium shows the same saturation behavior as heavy ions"
+      "connection": "Helium shows the same saturation behavior as heavy ions but at 402 km/s vs 327 km/s"
     }
   ],
   "published": false,
