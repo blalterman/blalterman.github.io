@@ -120,6 +120,21 @@
     "invited": false
   },
   {
+    "bibcode": "2025ApJ...982L..40A",
+    "title": "Cross Helicity and the Helium Abundance as an In Situ Metric of Solar Wind Acceleration",
+    "authors": [
+      "Alterman, B. L.",
+      "D'Amicis, Raffaella"
+    ],
+    "month": "",
+    "year": "2025-04-00",
+    "journal": "The Astrophysical Journal Letters",
+    "publication_type": "article",
+    "citations": 8,
+    "url": "https://dx.doi.org/10.3847/2041-8213/adb48e",
+    "invited": false
+  },
+  {
     "bibcode": "2024ApJ...974..198R",
     "title": "Mixed Source Region Signatures inside Magnetic Switchback Patches Inferred by Heavy Ion Diagnostics",
     "authors": [
@@ -184,21 +199,6 @@
     "invited": false
   },
   {
-    "bibcode": "2025ApJ...982L..40A",
-    "title": "Cross Helicity and the Helium Abundance as an In Situ Metric of Solar Wind Acceleration",
-    "authors": [
-      "Alterman, B. L.",
-      "D'Amicis, Raffaella"
-    ],
-    "month": "",
-    "year": "2025-04-00",
-    "journal": "The Astrophysical Journal Letters",
-    "publication_type": "article",
-    "citations": 8,
-    "url": "https://dx.doi.org/10.3847/2041-8213/adb48e",
-    "invited": false
-  },
-  {
     "bibcode": "2020ApJS..246...70H",
     "title": "Proton Temperature Anisotropy Variations in Inner Heliosphere Estimated with the First Parker Solar Probe Observations",
     "authors": [
@@ -237,7 +237,7 @@
     "year": "2020-02-00",
     "journal": "The Astrophysical Journal Supplement Series",
     "publication_type": "article",
-    "citations": 87,
+    "citations": 89,
     "url": "https://dx.doi.org/10.3847/1538-4365/ab74e0",
     "invited": false
   },
@@ -303,33 +303,8 @@
     "year": "2018-09-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
-    "citations": 87,
+    "citations": 88,
     "url": "https://dx.doi.org/10.3847/1538-4357/aad23f",
-    "invited": false
-  },
-  {
-    "bibcode": "2023A&A...675A.196M",
-    "title": "The Trans-Heliospheric Survey. Radial trends in plasma parameters across the heliosphere",
-    "authors": [
-      "Maruca, Bennett A.",
-      "Qudsi, Ramiz A.",
-      "Alterman, B. L.",
-      "Walsh, Brian M.",
-      "Korreck, Kelly E.",
-      "Verscharen, Daniel",
-      "Bandyopadhyay, Riddhi",
-      "Chhiber, Rohit",
-      "Chasapis, Alexandros",
-      "Parashar, Tulasi N.",
-      "Matthaeus, William H.",
-      "Goldstein, Melvyn L."
-    ],
-    "month": "",
-    "year": "2023-07-00",
-    "journal": "Astronomy and Astrophysics",
-    "publication_type": "article",
-    "citations": 18,
-    "url": "https://dx.doi.org/10.1051/0004-6361/202345951",
     "invited": false
   },
   {
@@ -429,6 +404,31 @@
     "invited": false
   },
   {
+    "bibcode": "2023A&A...675A.196M",
+    "title": "The Trans-Heliospheric Survey. Radial trends in plasma parameters across the heliosphere",
+    "authors": [
+      "Maruca, Bennett A.",
+      "Qudsi, Ramiz A.",
+      "Alterman, B. L.",
+      "Walsh, Brian M.",
+      "Korreck, Kelly E.",
+      "Verscharen, Daniel",
+      "Bandyopadhyay, Riddhi",
+      "Chhiber, Rohit",
+      "Chasapis, Alexandros",
+      "Parashar, Tulasi N.",
+      "Matthaeus, William H.",
+      "Goldstein, Melvyn L."
+    ],
+    "month": "",
+    "year": "2023-07-00",
+    "journal": "Astronomy and Astrophysics",
+    "publication_type": "article",
+    "citations": 19,
+    "url": "https://dx.doi.org/10.1051/0004-6361/202345951",
+    "invited": false
+  },
+  {
     "bibcode": "2019ApJ...884L..53W",
     "title": "Parallel-propagating Fluctuations at Proton-kinetic Scales in the Solar Wind Are Dominated By Kinetic Instabilities",
     "authors": [
@@ -492,8 +492,25 @@
     "year": "2019-07-00",
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
-    "citations": 46,
+    "citations": 47,
     "url": "https://dx.doi.org/10.3847/2041-8213/ab2391",
+    "invited": false
+  },
+  {
+    "bibcode": "2021ApJ...923..116M",
+    "title": "Ion-driven Instabilities in the Inner Heliosphere. I. Statistical Trends",
+    "authors": [
+      "Martinović, Mihailo M.",
+      "Klein, Kristopher G.",
+      "Ďurovcová, Tereza",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2021-12-00",
+    "journal": "The Astrophysical Journal",
+    "publication_type": "article",
+    "citations": 20,
+    "url": "https://dx.doi.org/10.3847/1538-4357/ac3081",
     "invited": false
   },
   {
@@ -520,23 +537,6 @@
     "publication_type": "article",
     "citations": 38,
     "url": "https://dx.doi.org/10.1093/mnras/staa2770",
-    "invited": false
-  },
-  {
-    "bibcode": "2021ApJ...923..116M",
-    "title": "Ion-driven Instabilities in the Inner Heliosphere. I. Statistical Trends",
-    "authors": [
-      "Martinović, Mihailo M.",
-      "Klein, Kristopher G.",
-      "Ďurovcová, Tereza",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2021-12-00",
-    "journal": "The Astrophysical Journal",
-    "publication_type": "article",
-    "citations": 19,
-    "url": "https://dx.doi.org/10.3847/1538-4357/ac3081",
     "invited": false
   },
   {
@@ -634,7 +634,7 @@
     "year": "2023-07-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
-    "citations": 5,
+    "citations": 6,
     "url": "https://dx.doi.org/10.3847/1538-4357/acd24a",
     "invited": false
   },
@@ -656,6 +656,26 @@
     "publication_type": "article",
     "citations": 14,
     "url": "https://dx.doi.org/10.3847/1538-4357/ac8873",
+    "invited": false
+  },
+  {
+    "bibcode": "2025GeoRL..5215186B",
+    "title": "Evaluating the Parker Model With the Trans-Heliospheric Survey",
+    "authors": [
+      "Brown, Carson P.",
+      "Maruca, Bennett A.",
+      "Prabakaran, Vaishali",
+      "Qudsi, Ramiz A.",
+      "Walsh, B. M.",
+      "Alterman, B. L.",
+      "Isenberg, Philip A."
+    ],
+    "month": "",
+    "year": "2025-06-00",
+    "journal": "Geophysical Research Letters",
+    "publication_type": "article",
+    "citations": 1,
+    "url": "https://dx.doi.org/10.1029/2025GL115186",
     "invited": false
   },
   {
@@ -791,23 +811,21 @@
     "invited": false
   },
   {
-    "bibcode": "2025GeoRL..5215186B",
-    "title": "Evaluating the Parker Model With the Trans-Heliospheric Survey",
+    "bibcode": "2024ApJ...964L..31A",
+    "title": "Quiet-time Spectra of Suprathermal Heavy Ions near 1 au in Solar Cycles 23 and 24",
     "authors": [
-      "Brown, Carson P.",
-      "Maruca, Bennett A.",
-      "Prabakaran, Vaishali",
-      "Qudsi, Ramiz A.",
-      "Walsh, B. M.",
       "Alterman, B. L.",
-      "Isenberg, Philip A."
+      "Desai, Mihir I.",
+      "Dayeh, Maher A.",
+      "Mason, Glenn M.",
+      "Ho, George C."
     ],
     "month": "",
-    "year": "2025-06-00",
-    "journal": "Geophysical Research Letters",
+    "year": "2024-04-00",
+    "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
     "citations": 1,
-    "url": "https://dx.doi.org/10.1029/2025GL115186",
+    "url": "https://dx.doi.org/10.3847/2041-8213/ad2deb",
     "invited": false
   },
   {
@@ -838,24 +856,6 @@
     "publication_type": "article",
     "citations": 5,
     "url": "https://dx.doi.org/10.3847/1538-4357/accc32",
-    "invited": false
-  },
-  {
-    "bibcode": "2024ApJ...964L..31A",
-    "title": "Quiet-time Spectra of Suprathermal Heavy Ions near 1 au in Solar Cycles 23 and 24",
-    "authors": [
-      "Alterman, B. L.",
-      "Desai, Mihir I.",
-      "Dayeh, Maher A.",
-      "Mason, Glenn M.",
-      "Ho, George C."
-    ],
-    "month": "",
-    "year": "2024-04-00",
-    "journal": "The Astrophysical Journal Letters",
-    "publication_type": "article",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.3847/2041-8213/ad2deb",
     "invited": false
   },
   {
@@ -900,6 +900,28 @@
     "publication_type": "phdthesis",
     "citations": 3,
     "url": "https://ui.adsabs.harvard.edu/abs/2019PhDT.......121A",
+    "invited": false
+  },
+  {
+    "bibcode": "2021Atmos..12.1277N",
+    "title": "Spectra of Temperature Fluctuations in the Solar Wind",
+    "authors": [
+      "Němeček, Zdeněk",
+      "Šafránková, Jana",
+      "Němec, František",
+      "Ďurovcová, Tereza",
+      "Pitňa, Alexander",
+      "Alterman, B. L.",
+      "Voitenko, Yuriy M.",
+      "Pavlů, Jiří",
+      "Stevens, Michael L."
+    ],
+    "month": "",
+    "year": "2021-09-00",
+    "journal": "Atmosphere",
+    "publication_type": "article",
+    "citations": 5,
+    "url": "https://dx.doi.org/10.3390/atmos12101277",
     "invited": false
   },
   {
@@ -974,25 +996,53 @@
     "invited": false
   },
   {
-    "bibcode": "2021Atmos..12.1277N",
-    "title": "Spectra of Temperature Fluctuations in the Solar Wind",
+    "bibcode": "2024AGUFMSH33E2787A",
+    "title": "Suprathermal Ion Observations from Solar Orbiter: Status of Intercalibration between the Heavy Ion Sensor and Suprathermal Ion Spectrograph",
     "authors": [
-      "Němeček, Zdeněk",
-      "Šafránková, Jana",
-      "Němec, František",
-      "Ďurovcová, Tereza",
-      "Pitňa, Alexander",
       "Alterman, B. L.",
-      "Voitenko, Yuriy M.",
-      "Pavlů, Jiří",
-      "Stevens, Michael L."
+      "Allen, Robert Colby",
+      "Dewey, Ryan M.",
+      "Livi, Stefano A.",
+      "Lepri, Susan T.",
+      "Raines, Jim M.",
+      "Ho, George C.",
+      "Mason, Glenn M.",
+      "Wimmer-Schweingruber, Robert F.",
+      "Rodriguez-Pacheco, Javier",
+      "Spitzer, Sarah A.",
+      "Rivera, Yeimy",
+      "Kucharek, Harald",
+      "Owen, Christopher John",
+      "Allegrini, Frederic",
+      "Ogasawara, Keiichi",
+      "Galvin, Antoinette Broe",
+      "Verscharen, Daniel",
+      "Kistler, Lynn M.",
+      "Wurz, Peter",
+      "Elliott, Heather Alison",
+      "Nicolaou, Georgios",
+      "Stubbs, Timothy",
+      "Delano, Kevin",
+      "Louarn, Philippe",
+      "Fedorov, Andrei",
+      "Bruno, Roberto",
+      "D'Amicis, Raffaella",
+      "Bert, Christopher Mark",
+      "Carpenter, Daniel",
+      "Shimoun, Evan",
+      "Gershkovich, Irena",
+      "Zhao, Liang",
+      "Eddy, Tyler",
+      "Lugaz, Noé",
+      "Lario, David",
+      "Nieves-Chinchilla, Teresa"
     ],
     "month": "",
-    "year": "2021-09-00",
-    "journal": "Atmosphere",
-    "publication_type": "article",
-    "citations": 4,
-    "url": "https://dx.doi.org/10.3390/atmos12101277",
+    "year": "2024-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH33E2787A",
     "invited": false
   },
   {
@@ -1062,56 +1112,6 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://dx.doi.org/10.3847/25c2cfeb.1c7fc2c0",
-    "invited": false
-  },
-  {
-    "bibcode": "2024AGUFMSH33E2787A",
-    "title": "Suprathermal Ion Observations from Solar Orbiter: Status of Intercalibration between the Heavy Ion Sensor and Suprathermal Ion Spectrograph",
-    "authors": [
-      "Alterman, B. L.",
-      "Allen, Robert Colby",
-      "Dewey, Ryan M.",
-      "Livi, Stefano A.",
-      "Lepri, Susan T.",
-      "Raines, Jim M.",
-      "Ho, George C.",
-      "Mason, Glenn M.",
-      "Wimmer-Schweingruber, Robert F.",
-      "Rodriguez-Pacheco, Javier",
-      "Spitzer, Sarah A.",
-      "Rivera, Yeimy",
-      "Kucharek, Harald",
-      "Owen, Christopher John",
-      "Allegrini, Frederic",
-      "Ogasawara, Keiichi",
-      "Galvin, Antoinette Broe",
-      "Verscharen, Daniel",
-      "Kistler, Lynn M.",
-      "Wurz, Peter",
-      "Elliott, Heather Alison",
-      "Nicolaou, Georgios",
-      "Stubbs, Timothy",
-      "Delano, Kevin",
-      "Louarn, Philippe",
-      "Fedorov, Andrei",
-      "Bruno, Roberto",
-      "D'Amicis, Raffaella",
-      "Bert, Christopher Mark",
-      "Carpenter, Daniel",
-      "Shimoun, Evan",
-      "Gershkovich, Irena",
-      "Zhao, Liang",
-      "Eddy, Tyler",
-      "Lugaz, Noé",
-      "Lario, David",
-      "Nieves-Chinchilla, Teresa"
-    ],
-    "month": "",
-    "year": "2024-12-00",
-    "journal": "AGU Fall Meeting",
-    "publication_type": "abstract",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH33E2787A",
     "invited": false
   },
   {
@@ -1224,31 +1224,6 @@
     "invited": false
   },
   {
-    "bibcode": "2022AGUFMSH35D1837M",
-    "title": "Radial Trends in Plasma Parameters Across the Heliosphere",
-    "authors": [
-      "Maruca, Bennett",
-      "Qudsi, Ramiz A.",
-      "Alterman, B. L.",
-      "Walsh, Brian",
-      "Korreck, Kelly E.",
-      "Verscharen, Daniel",
-      "Bandyopadhyay, Riddhi",
-      "Chhiber, Rohit",
-      "Chasapis, Alexandros",
-      "Parashar, Tulasi",
-      "Matthaeus, William H.",
-      "Goldstein, Melvyn L."
-    ],
-    "month": "",
-    "year": "2022-12-00",
-    "journal": "AGU Fall Meeting",
-    "publication_type": "abstract",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH35D1837M",
-    "invited": false
-  },
-  {
     "bibcode": "2021AGUFMSH55F1908A",
     "title": "Solar Cycle Variation of Suprathermal Heavy Ion Composition and Spectra during Quiet Times near 1 AU",
     "authors": [
@@ -1281,6 +1256,31 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2021AGUFMSH35C2063M",
+    "invited": false
+  },
+  {
+    "bibcode": "2022AGUFMSH35D1837M",
+    "title": "Radial Trends in Plasma Parameters Across the Heliosphere",
+    "authors": [
+      "Maruca, Bennett",
+      "Qudsi, Ramiz A.",
+      "Alterman, B. L.",
+      "Walsh, Brian",
+      "Korreck, Kelly E.",
+      "Verscharen, Daniel",
+      "Bandyopadhyay, Riddhi",
+      "Chhiber, Rohit",
+      "Chasapis, Alexandros",
+      "Parashar, Tulasi",
+      "Matthaeus, William H.",
+      "Goldstein, Melvyn L."
+    ],
+    "month": "",
+    "year": "2022-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH35D1837M",
     "invited": false
   },
   {
@@ -1541,6 +1541,54 @@
     "invited": false
   },
   {
+    "bibcode": "2025arXiv251220098D",
+    "title": "Alfvénic solar wind intervals observed by Solar Orbiter: Exploiting the capability of the SWA plasma suite and source region investigation",
+    "authors": [
+      "D'Amicis, R.",
+      "Raines, J. M.",
+      "Benella, S.",
+      "Velli, M.",
+      "Panasenco, O.",
+      "Nicolaou, G.",
+      "Owen, C. J.",
+      "Dewey, R. M.",
+      "Louarn, P.",
+      "Fedorov, A.",
+      "Lepri, S. T.",
+      "Alterman, B. L.",
+      "Perrone, D.",
+      "De Marco, R.",
+      "Bruno, R.",
+      "Sorriso-Valvo, L.",
+      "Dhamane, O. S.",
+      "Rivera, Y.",
+      "Kieokaew, O. R.",
+      "Verscharen, D.",
+      "Consolini, G.",
+      "Yardley, S.",
+      "Réville, V.",
+      "Telloni, D.",
+      "Baker, D.",
+      "Lewis, G.",
+      "Watson, G.",
+      "Anekallu, C.",
+      "Darwish, K.",
+      "Prech, L.",
+      "Livi, S.",
+      "Horbury, T.",
+      "Mele, G.",
+      "Fortunato, V.",
+      "Monti, F."
+    ],
+    "month": "",
+    "year": "2025-12-00",
+    "journal": "arXiv e-prints",
+    "publication_type": "eprint",
+    "citations": 0,
+    "url": "https://dx.doi.org/10.48550/arXiv.2512.20098",
+    "invited": false
+  },
+  {
     "bibcode": "2023A&A...676A..36L",
     "title": "First results from the Solar Orbiter Heavy Ion Sensor",
     "authors": [
@@ -1605,51 +1653,65 @@
     "invited": false
   },
   {
-    "bibcode": "2025arXiv251220098D",
-    "title": "Alfvénic solar wind intervals observed by Solar Orbiter: Exploiting the capability of the SWA plasma suite and source region investigation",
+    "bibcode": "2025SSRv..222....1L",
+    "title": "The Compact Dual Ion Composition Experiment (CoDICE) for the IMAP Mission",
     "authors": [
-      "D'Amicis, R.",
-      "Raines, J. M.",
-      "Benella, S.",
-      "Velli, M.",
-      "Panasenco, O.",
-      "Nicolaou, G.",
-      "Owen, C. J.",
-      "Dewey, R. M.",
-      "Louarn, P.",
-      "Fedorov, A.",
-      "Lepri, S. T.",
+      "Livi, S. A.",
+      "Desai, M. I.",
+      "Ogasawara, K.",
+      "Kistler, L.",
+      "Möbius, E.",
+      "Starkey, M. J.",
+      "Dayeh, M. A.",
+      "Kataria, D.",
+      "Elliott, H. A.",
+      "Hart, S.",
       "Alterman, B. L.",
-      "Perrone, D.",
-      "De Marco, R.",
-      "Bruno, R.",
-      "Sorriso-Valvo, L.",
-      "Dhamane, O. S.",
-      "Rivera, Y.",
-      "Kieokaew, O. R.",
-      "Verscharen, D.",
-      "Consolini, G.",
-      "Yardley, S.",
-      "Réville, V.",
-      "Telloni, D.",
-      "Baker, D.",
-      "Lewis, G.",
-      "Watson, G.",
-      "Anekallu, C.",
-      "Darwish, K.",
-      "Prech, L.",
-      "Livi, S.",
-      "Horbury, T.",
-      "Mele, G.",
-      "Fortunato, V.",
-      "Monti, F."
+      "McComas, D. J.",
+      "Pollock, C. J.",
+      "Mukherjee, J.",
+      "Trevino, J.",
+      "Ferrell, S.",
+      "Brenner, T.",
+      "Pope, S. E.",
+      "Tapley, M.",
+      "Pavlas, K.",
+      "Rankin, J. S.",
+      "Shen, M. M.",
+      "Khoo, L.",
+      "Alimaganbetov, M.",
+      "Teifert, J.",
+      "Roemer, E. M.",
+      "Shaw-Lecerf, M.",
+      "Escobar, J.",
+      "Christian, E. R.",
+      "Schwadron, N. A.",
+      "Gkioulidou, M.",
+      "Grubbs, G.",
+      "Brysch, M.",
+      "Epperly, M.",
+      "George, D.",
+      "Dunn, G.",
+      "Ford, J.",
+      "Schwendeman, C. L.",
+      "Commons, M.",
+      "Persyn, S.",
+      "Jaskulek, S.",
+      "Weidner, S.",
+      "Bert, C.",
+      "Ferris, M.",
+      "Rodriguez, B.",
+      "Nunez, C.",
+      "Urdiales, C.",
+      "Cortinas, S.",
+      "Rodriguez, H."
     ],
     "month": "",
     "year": "2025-12-00",
-    "journal": "arXiv e-prints",
-    "publication_type": "eprint",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.48550/arXiv.2512.20098",
+    "journal": "Space Science Reviews",
+    "publication_type": "article",
+    "citations": 2,
+    "url": "https://dx.doi.org/10.1007/s11214-025-01251-w",
     "invited": false
   },
   {
@@ -1696,6 +1758,28 @@
     "invited": false
   },
   {
+    "bibcode": "2025arXiv251218485M",
+    "title": "Observed Low-Plasma-$β$ Temperature Anisotropy Constraint Driven by $α$-Particle Drift",
+    "authors": [
+      "Martinović, Mihailo M.",
+      "Klein, Kristopher G.",
+      "Ofman, Leon",
+      "Yogesh",
+      "Verniero, Jaye L.",
+      "Yoon, Peter H.",
+      "Howes, Gregory G.",
+      "Verscharen, Daniel",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2025-12-00",
+    "journal": "arXiv e-prints",
+    "publication_type": "eprint",
+    "citations": 0,
+    "url": "https://dx.doi.org/10.48550/arXiv.2512.18485",
+    "invited": false
+  },
+  {
     "bibcode": "2022FrASS...956347R",
     "title": "Deciphering the Birth Region, Formation, and Evolution of Ambient and Transient Solar Wind Using Heavy Ion Observations",
     "authors": [
@@ -1723,43 +1807,6 @@
     "publication_type": "article",
     "citations": 16,
     "url": "https://dx.doi.org/10.3389/fspas.2022.1056347",
-    "invited": false
-  },
-  {
-    "bibcode": "2023IAUS..372....3M",
-    "title": "Solar Physics in the 2020s: DKIST, Parker Solar Probe, and Solar Orbiter as a Multi-Messenger Constellation",
-    "authors": [
-      "Martinez Pillet, V.",
-      "Cauzzi, G.",
-      "Tritschler, A.",
-      "Harra, L.",
-      "Andretta, V.",
-      "Vourlidas, A.",
-      "Raouafi, N.",
-      "Alterman, B. L.",
-      "Bellot Rubio, L.",
-      "Cranmer, S. R.",
-      "Gibson, S.",
-      "De Groof, A.",
-      "Ko, Y.-K.",
-      "Lepri, S. T.",
-      "Linker, J.",
-      "Malaspina, D. M.",
-      "Matthews, S.",
-      "Müller, D.",
-      "Parenti, S.",
-      "Petrie, G.",
-      "Spadaro, D.",
-      "Ugarte-Urra, I.",
-      "Warren, H.",
-      "Zouganelis, I."
-    ],
-    "month": "",
-    "year": "2023-00-00",
-    "journal": "The Era of Multi-Messenger Solar Physics",
-    "publication_type": "inproceedings",
-    "citations": 6,
-    "url": "https://dx.doi.org/10.1017/S1743921323001266",
     "invited": false
   },
   {
@@ -1862,90 +1909,6 @@
     "invited": false
   },
   {
-    "bibcode": "2025SSRv..222....1L",
-    "title": "The Compact Dual Ion Composition Experiment (CoDICE) for the IMAP Mission",
-    "authors": [
-      "Livi, S. A.",
-      "Desai, M. I.",
-      "Ogasawara, K.",
-      "Kistler, L.",
-      "Möbius, E.",
-      "Starkey, M. J.",
-      "Dayeh, M. A.",
-      "Kataria, D.",
-      "Elliott, H. A.",
-      "Hart, S.",
-      "Alterman, B. L.",
-      "McComas, D. J.",
-      "Pollock, C. J.",
-      "Mukherjee, J.",
-      "Trevino, J.",
-      "Ferrell, S.",
-      "Brenner, T.",
-      "Pope, S. E.",
-      "Tapley, M.",
-      "Pavlas, K.",
-      "Rankin, J. S.",
-      "Shen, M. M.",
-      "Khoo, L.",
-      "Alimaganbetov, M.",
-      "Teifert, J.",
-      "Roemer, E. M.",
-      "Shaw-Lecerf, M.",
-      "Escobar, J.",
-      "Christian, E. R.",
-      "Schwadron, N. A.",
-      "Gkioulidou, M.",
-      "Grubbs, G.",
-      "Brysch, M.",
-      "Epperly, M.",
-      "George, D.",
-      "Dunn, G.",
-      "Ford, J.",
-      "Schwendeman, C. L.",
-      "Commons, M.",
-      "Persyn, S.",
-      "Jaskulek, S.",
-      "Weidner, S.",
-      "Bert, C.",
-      "Ferris, M.",
-      "Rodriguez, B.",
-      "Nunez, C.",
-      "Urdiales, C.",
-      "Cortinas, S.",
-      "Rodriguez, H."
-    ],
-    "month": "",
-    "year": "2025-12-00",
-    "journal": "Space Science Reviews",
-    "publication_type": "article",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.1007/s11214-025-01251-w",
-    "invited": false
-  },
-  {
-    "bibcode": "2025arXiv251218485M",
-    "title": "Observed Low-Plasma-$β$ Temperature Anisotropy Constraint Driven by $α$-Particle Drift",
-    "authors": [
-      "Martinović, Mihailo M.",
-      "Klein, Kristopher G.",
-      "Ofman, Leon",
-      "Yogesh",
-      "Verniero, Jaye L.",
-      "Yoon, Peter H.",
-      "Howes, Gregory G.",
-      "Verscharen, Daniel",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2025-12-00",
-    "journal": "arXiv e-prints",
-    "publication_type": "eprint",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.48550/arXiv.2512.18485",
-    "invited": false
-  },
-  {
     "bibcode": "2025arXiv251203890N",
     "title": "The May 2024 Storm: dayside magnetopause and cusps in simulated soft X-Rays",
     "authors": [
@@ -1969,6 +1932,43 @@
     "publication_type": "eprint",
     "citations": 0,
     "url": "https://dx.doi.org/10.48550/arXiv.2512.03890",
+    "invited": false
+  },
+  {
+    "bibcode": "2023IAUS..372....3M",
+    "title": "Solar Physics in the 2020s: DKIST, Parker Solar Probe, and Solar Orbiter as a Multi-Messenger Constellation",
+    "authors": [
+      "Martinez Pillet, V.",
+      "Cauzzi, G.",
+      "Tritschler, A.",
+      "Harra, L.",
+      "Andretta, V.",
+      "Vourlidas, A.",
+      "Raouafi, N.",
+      "Alterman, B. L.",
+      "Bellot Rubio, L.",
+      "Cranmer, S. R.",
+      "Gibson, S.",
+      "De Groof, A.",
+      "Ko, Y.-K.",
+      "Lepri, S. T.",
+      "Linker, J.",
+      "Malaspina, D. M.",
+      "Matthews, S.",
+      "Müller, D.",
+      "Parenti, S.",
+      "Petrie, G.",
+      "Spadaro, D.",
+      "Ugarte-Urra, I.",
+      "Warren, H.",
+      "Zouganelis, I."
+    ],
+    "month": "",
+    "year": "2023-00-00",
+    "journal": "The Era of Multi-Messenger Solar Physics",
+    "publication_type": "inproceedings",
+    "citations": 6,
+    "url": "https://dx.doi.org/10.1017/S1743921323001266",
     "invited": false
   },
   {
@@ -2090,6 +2090,37 @@
     "invited": false
   },
   {
+    "bibcode": "2026ApJ...997..204V",
+    "title": "Solar Orbiter's Passage through Comet Leonard's Tail while in the He⁺ Focusing Cone",
+    "authors": [
+      "Vasquez, Bernard J.",
+      "Smith, Charles W.",
+      "Galvin, Antoinette",
+      "Kistler, Lynn",
+      "Ellis, Lorna",
+      "Swart, Allison",
+      "Stubbs, Timothy J.",
+      "Delano, Kevin",
+      "Owen, C. J.",
+      "Livi, S.",
+      "Louarn, P.",
+      "Lepri, S. T.",
+      "Raines, J. M.",
+      "Dewey, R. M.",
+      "Alterman, B. L.",
+      "Rivera, Yeimy J.",
+      "Fischer, Erik",
+      "Shimoun, Evan P."
+    ],
+    "month": "",
+    "year": "2026-02-00",
+    "journal": "The Astrophysical Journal",
+    "publication_type": "article",
+    "citations": null,
+    "url": "https://dx.doi.org/10.3847/1538-4357/ae2756",
+    "invited": false
+  },
+  {
     "bibcode": "2023LPICo2808.8113E",
     "title": "Plasma Measurements for Magnetospheric Science at Uranus",
     "authors": [
@@ -2148,6 +2179,25 @@
     "invited": false
   },
   {
+    "bibcode": "2024AGUFMSH23F..01B",
+    "title": "Evaluating the Parker Model with the Trans-Heliospheric Survey",
+    "authors": [
+      "Brown, Carson",
+      "Prabakaran, Vaishali",
+      "Qudsi, Ramiz A.",
+      "Alterman, B. L.",
+      "Walsh, Brian",
+      "Maruca, Bennett"
+    ],
+    "month": "",
+    "year": "2024-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH23F..01B",
+    "invited": false
+  },
+  {
     "bibcode": "2023yCat..36750196M",
     "title": "VizieR Online Data Catalog: Trans-Heliospheric Survey. Radial trends (Maruca+, 2023)",
     "authors": [
@@ -2170,58 +2220,6 @@
     "publication_type": "dataset",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2023yCat..36750196M",
-    "invited": false
-  },
-  {
-    "bibcode": "2024AGUFMSH23F..01B",
-    "title": "Evaluating the Parker Model with the Trans-Heliospheric Survey",
-    "authors": [
-      "Brown, Carson",
-      "Prabakaran, Vaishali",
-      "Qudsi, Ramiz A.",
-      "Alterman, B. L.",
-      "Walsh, Brian",
-      "Maruca, Bennett"
-    ],
-    "month": "",
-    "year": "2024-12-00",
-    "journal": "AGU Fall Meeting",
-    "publication_type": "abstract",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2024AGUFMSH23F..01B",
-    "invited": false
-  },
-  {
-    "bibcode": "2023EGUGA..25.7823A",
-    "title": "Iron Heating Across a Shock Observed by Solar Orbiter's Heavy Ion Sensor",
-    "authors": [
-      "Alterman, B. L.",
-      "Livi, Stefano",
-      "Owen, Christopher",
-      "Louarn, Philippe",
-      "Bruno, Roberto",
-      "D'Amicis, Raffaella",
-      "Raines, Jim",
-      "Lepri, Susan",
-      "Spitzer, Sarah",
-      "Dewey, Ryan M.",
-      "Bert, Christopher M.",
-      "Kistler, Lynn",
-      "Galvin, Antoinette",
-      "Rivera, Yeimy",
-      "Horbury, Tim",
-      "Trotta, Domenico",
-      "Hietala, Heli",
-      "Fauchon-Jones, Ed",
-      "Gershkovich, Irena",
-      "Verscharen, Daniel"
-    ],
-    "month": "",
-    "year": "2023-05-00",
-    "journal": "EGU General Assembly",
-    "publication_type": "abstract",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.5194/egusphere-egu23-7823",
     "invited": false
   },
   {
@@ -2274,57 +2272,36 @@
     "invited": false
   },
   {
-    "bibcode": "2021EGUGA..2312435L",
-    "title": "Updates and Early Results from the Heavy Ion Sensor on Solar Orbiter",
+    "bibcode": "2023EGUGA..25.7823A",
+    "title": "Iron Heating Across a Shock Observed by Solar Orbiter's Heavy Ion Sensor",
     "authors": [
-      "Lepri, Susan T.",
-      "Livi, Stefano A.",
-      "Raines, Jim M.",
-      "Galvin, Antoinette B.",
-      "Kistler, Lynn M.",
-      "Dewey, Ryan M.",
       "Alterman, B. L.",
-      "Allegrini, Frederic",
-      "Collier, Michael R.",
-      "Owen, Christopher J."
+      "Livi, Stefano",
+      "Owen, Christopher",
+      "Louarn, Philippe",
+      "Bruno, Roberto",
+      "D'Amicis, Raffaella",
+      "Raines, Jim",
+      "Lepri, Susan",
+      "Spitzer, Sarah",
+      "Dewey, Ryan M.",
+      "Bert, Christopher M.",
+      "Kistler, Lynn",
+      "Galvin, Antoinette",
+      "Rivera, Yeimy",
+      "Horbury, Tim",
+      "Trotta, Domenico",
+      "Hietala, Heli",
+      "Fauchon-Jones, Ed",
+      "Gershkovich, Irena",
+      "Verscharen, Daniel"
     ],
     "month": "",
-    "year": "2021-04-00",
+    "year": "2023-05-00",
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://dx.doi.org/10.5194/egusphere-egu21-12435",
-    "invited": false
-  },
-  {
-    "bibcode": "2020AGUFMSH035..05L",
-    "title": "Heavy Ion Sensor on Solar Orbiter: Linking the Solar Wind and the Sun",
-    "authors": [
-      "Livi, S. A.",
-      "Lepri, S. T.",
-      "Raines, J. M.",
-      "Galvin, A.",
-      "Kistler, L. M.",
-      "Allegrini, F.",
-      "Ogasawara, K.",
-      "Alterman, B. L.",
-      "Collier, M. R.",
-      "Stubbs, T.",
-      "Owen, C. J.",
-      "Louarn, P.",
-      "Fedorov, A.",
-      "Bruno, R.",
-      "Horbury, T. S.",
-      "O'Brien, H.",
-      "Evans, V.",
-      "Angelini, V."
-    ],
-    "month": "",
-    "year": "2020-12-00",
-    "journal": "AGU Fall Meeting",
-    "publication_type": "abstract",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2020AGUFMSH035..05L",
+    "url": "https://dx.doi.org/10.5194/egusphere-egu23-7823",
     "invited": false
   },
   {
@@ -2453,6 +2430,60 @@
     "invited": false
   },
   {
+    "bibcode": "2021EGUGA..2312435L",
+    "title": "Updates and Early Results from the Heavy Ion Sensor on Solar Orbiter",
+    "authors": [
+      "Lepri, Susan T.",
+      "Livi, Stefano A.",
+      "Raines, Jim M.",
+      "Galvin, Antoinette B.",
+      "Kistler, Lynn M.",
+      "Dewey, Ryan M.",
+      "Alterman, B. L.",
+      "Allegrini, Frederic",
+      "Collier, Michael R.",
+      "Owen, Christopher J."
+    ],
+    "month": "",
+    "year": "2021-04-00",
+    "journal": "EGU General Assembly",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://dx.doi.org/10.5194/egusphere-egu21-12435",
+    "invited": false
+  },
+  {
+    "bibcode": "2020AGUFMSH035..05L",
+    "title": "Heavy Ion Sensor on Solar Orbiter: Linking the Solar Wind and the Sun",
+    "authors": [
+      "Livi, S. A.",
+      "Lepri, S. T.",
+      "Raines, J. M.",
+      "Galvin, A.",
+      "Kistler, L. M.",
+      "Allegrini, F.",
+      "Ogasawara, K.",
+      "Alterman, B. L.",
+      "Collier, M. R.",
+      "Stubbs, T.",
+      "Owen, C. J.",
+      "Louarn, P.",
+      "Fedorov, A.",
+      "Bruno, R.",
+      "Horbury, T. S.",
+      "O'Brien, H.",
+      "Evans, V.",
+      "Angelini, V."
+    ],
+    "month": "",
+    "year": "2020-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2020AGUFMSH035..05L",
+    "invited": false
+  },
+  {
     "bibcode": "2023AGUFMSH51C2622D",
     "title": "PSP Observations of a Ubiquitous Suprathermal Spectrum within 1 au",
     "authors": [
@@ -2506,33 +2537,6 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH22E2047D",
-    "invited": false
-  },
-  {
-    "bibcode": "2022AGUFMSH36B..07S",
-    "title": "Energy partition between the solar wind proton \"core\" and \"tail\" distributions in the inner heliosphere",
-    "authors": [
-      "Stevens, Michael Louis",
-      "Case, Anthony W.",
-      "Paulson, Kristoff W.",
-      "Niembro Hernandez, Tatiana",
-      "Korreck, Kelly E.",
-      "Kasper, Justin",
-      "Larson, Davin",
-      "Livi, Roberto",
-      "Whittlesey, Phyllis L.",
-      "Rahmati, Ali",
-      "McManus, Michael",
-      "Alterman, B. L.",
-      "Verniero, Jaye",
-      "Jean-Baptiste, Dakeyo"
-    ],
-    "month": "",
-    "year": "2022-12-00",
-    "journal": "AGU Fall Meeting",
-    "publication_type": "abstract",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH36B..07S",
     "invited": false
   },
   {
@@ -2612,24 +2616,30 @@
     "invited": false
   },
   {
-    "bibcode": "2023BAAS...55c.116G",
-    "title": "Measuring interstellar neutrals in-situ: a critical contribution to heliospheric science",
+    "bibcode": "2022AGUFMSH36B..07S",
+    "title": "Energy partition between the solar wind proton \"core\" and \"tail\" distributions in the inner heliosphere",
     "authors": [
-      "Galli, André",
-      "Redfield, Seth",
-      "Provornikova, Elena",
-      "Kucharek, Harald",
-      "Swaczyna, Paweł",
-      "Sokół, Justyna M.",
-      "Kubiak, Marzena A.",
-      "Alterman, B. L."
+      "Stevens, Michael Louis",
+      "Case, Anthony W.",
+      "Paulson, Kristoff W.",
+      "Niembro Hernandez, Tatiana",
+      "Korreck, Kelly E.",
+      "Kasper, Justin",
+      "Larson, Davin",
+      "Livi, Roberto",
+      "Whittlesey, Phyllis L.",
+      "Rahmati, Ali",
+      "McManus, Michael",
+      "Alterman, B. L.",
+      "Verniero, Jaye",
+      "Jean-Baptiste, Dakeyo"
     ],
     "month": "",
-    "year": "2023-07-00",
-    "journal": "Bulletin of AAS",
+    "year": "2022-12-00",
+    "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
     "citations": 0,
-    "url": "https://dx.doi.org/10.3847/25c2cfeb.5deec7eb",
+    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH36B..07S",
     "invited": false
   },
   {
@@ -2710,6 +2720,44 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH15E1521G",
+    "invited": false
+  },
+  {
+    "bibcode": "2022cosp...44.1092A",
+    "title": "Heavy ion VDFs observed at a shock with Solar Orbiter's Heavy Ion Sensor",
+    "authors": [
+      "Alterman, B. L.",
+      "Livi, Stefano",
+      "Owen, Christopher",
+      "Louarn, Philippe",
+      "Bruno, Roberto",
+      "Fedorov, A.",
+      "Ho, George",
+      "Lepri, Susan",
+      "Raines, Jim",
+      "Galvin, Antoinette",
+      "Kistler, Lynn",
+      "Allegrini, Frederic",
+      "Ogasawara, Keiichi",
+      "Wurz, Peter",
+      "Dewey, Ryan",
+      "Rivera, Yeimy",
+      "Spitzer, Sarah",
+      "Bert, Christopher",
+      "Sullivan, Kylie",
+      "Horbury, Tim",
+      "Trotta, Domenico",
+      "Hietala, Heli",
+      "Maksimovic, Milan",
+      "Dimmock, Andrew",
+      "Khotyaintsev, Yuri"
+    ],
+    "month": "",
+    "year": "2022-07-00",
+    "journal": "COSPAR",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1092A",
     "invited": false
   },
   {
@@ -2836,6 +2884,27 @@
     "invited": false
   },
   {
+    "bibcode": "2023BAAS...55c.116G",
+    "title": "Measuring interstellar neutrals in-situ: a critical contribution to heliospheric science",
+    "authors": [
+      "Galli, André",
+      "Redfield, Seth",
+      "Provornikova, Elena",
+      "Kucharek, Harald",
+      "Swaczyna, Paweł",
+      "Sokół, Justyna M.",
+      "Kubiak, Marzena A.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2023-07-00",
+    "journal": "Bulletin of AAS",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://dx.doi.org/10.3847/25c2cfeb.5deec7eb",
+    "invited": false
+  },
+  {
     "bibcode": "2022shin.confE.120A",
     "title": "Heavy Ion Heating Observed by Solar Orbiter HIS Across a Shock",
     "authors": [
@@ -2874,44 +2943,6 @@
     "invited": false
   },
   {
-    "bibcode": "2022cosp...44.1092A",
-    "title": "Heavy ion VDFs observed at a shock with Solar Orbiter's Heavy Ion Sensor",
-    "authors": [
-      "Alterman, B. L.",
-      "Livi, Stefano",
-      "Owen, Christopher",
-      "Louarn, Philippe",
-      "Bruno, Roberto",
-      "Fedorov, A.",
-      "Ho, George",
-      "Lepri, Susan",
-      "Raines, Jim",
-      "Galvin, Antoinette",
-      "Kistler, Lynn",
-      "Allegrini, Frederic",
-      "Ogasawara, Keiichi",
-      "Wurz, Peter",
-      "Dewey, Ryan",
-      "Rivera, Yeimy",
-      "Spitzer, Sarah",
-      "Bert, Christopher",
-      "Sullivan, Kylie",
-      "Horbury, Tim",
-      "Trotta, Domenico",
-      "Hietala, Heli",
-      "Maksimovic, Milan",
-      "Dimmock, Andrew",
-      "Khotyaintsev, Yuri"
-    ],
-    "month": "",
-    "year": "2022-07-00",
-    "journal": "COSPAR",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1092A",
-    "invited": false
-  },
-  {
     "bibcode": "2022cosp...44.1656J",
     "title": "Observations of Ion-Scale Cyclotron Waves and Their Relationship with Non-thermal Ion Distributions in the Solar Wind",
     "authors": [
@@ -2930,52 +2961,6 @@
     "publication_type": "inproceedings",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1656J",
-    "invited": false
-  },
-  {
-    "bibcode": "2020AGUFMSH0290004W",
-    "title": "Proton Core Behaviour inside Magnetic Field Switchbacks",
-    "authors": [
-      "Woolley, T.",
-      "Matteini, L.",
-      "Horbury, T. S.",
-      "Bale, S.",
-      "Woodham, L. D.",
-      "Laker, R.",
-      "Alterman, B. L.",
-      "Bonnell, J. W.",
-      "Case, A. W.",
-      "Kasper, J. C.",
-      "Klein, K. G.",
-      "Martinovic, M.",
-      "Stevens, M. L."
-    ],
-    "month": "",
-    "year": "2020-12-00",
-    "journal": "AGU Fall Meeting",
-    "publication_type": "abstract",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2020AGUFMSH0290004W",
-    "invited": false
-  },
-  {
-    "bibcode": "2014AGUFMSH33A4130T",
-    "title": "Heavy Ion Temperatures As Observed By ACE/Swics",
-    "authors": [
-      "Tracy, P.",
-      "Zurbuchen, T.",
-      "Raines, J. M.",
-      "Shearer, P.",
-      "Kasper, J. C.",
-      "Gilbert, J. A.",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2014-12-00",
-    "journal": "AGU Fall Meeting",
-    "publication_type": "abstract",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2014AGUFMSH33A4130T",
     "invited": false
   },
   {
@@ -3002,30 +2987,6 @@
     "invited": false
   },
   {
-    "bibcode": "2022AGUFMSH15C1491J",
-    "title": "Anterograde Collisional Analysis of Solar Wind Ions",
-    "authors": [
-      "Johnson, Elliot Thomas",
-      "Maruca, Bennett",
-      "McManus, Michael",
-      "Alterman, B. L.",
-      "Lichko, Emily Rose",
-      "DeWeese, Haley",
-      "Dieguez, Isabella",
-      "Verniero, Jaye",
-      "Klein, Kristopher G.",
-      "Paulson, Kristoff W.",
-      "Stevens, Michael Louis"
-    ],
-    "month": "",
-    "year": "2022-12-00",
-    "journal": "AGU Fall Meeting",
-    "publication_type": "abstract",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH15C1491J",
-    "invited": false
-  },
-  {
     "bibcode": "2020AGUFMSH053..01A",
     "title": "Solar Wind Helium Abundance Heralds the Onset of Solar Cycle 25",
     "authors": [
@@ -3040,6 +3001,32 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2020AGUFMSH053..01A",
+    "invited": false
+  },
+  {
+    "bibcode": "2020AGUFMSH0290004W",
+    "title": "Proton Core Behaviour inside Magnetic Field Switchbacks",
+    "authors": [
+      "Woolley, T.",
+      "Matteini, L.",
+      "Horbury, T. S.",
+      "Bale, S.",
+      "Woodham, L. D.",
+      "Laker, R.",
+      "Alterman, B. L.",
+      "Bonnell, J. W.",
+      "Case, A. W.",
+      "Kasper, J. C.",
+      "Klein, K. G.",
+      "Martinovic, M.",
+      "Stevens, M. L."
+    ],
+    "month": "",
+    "year": "2020-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2020AGUFMSH0290004W",
     "invited": false
   },
   {
@@ -3110,23 +3097,6 @@
     "invited": false
   },
   {
-    "bibcode": "2017shin.confE...7A",
-    "title": "Collisions in an Expanding Solar Wind (Scene Setting Talk)",
-    "authors": [
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2017-07-00",
-    "journal": "SHINE",
-    "publication_type": "abstract",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2017shin.confE...7A",
-    "invited": true,
-    "booktitle": "SHINE Conference",
-    "invited_url": "ui.adsabs.harvard.edu/abs/2017shin.confE...7A",
-    "keywords": "invited"
-  },
-  {
     "bibcode": "2017AGUFMSH32A..03A",
     "title": "A Deeper Understanding of Stability in the Solar Wind: Applying Nyquist's Instability Criterion to Wind Faraday Cup Data",
     "authors": [
@@ -3145,6 +3115,26 @@
     "invited": false
   },
   {
+    "bibcode": "2014AGUFMSH33A4130T",
+    "title": "Heavy Ion Temperatures As Observed By ACE/Swics",
+    "authors": [
+      "Tracy, P.",
+      "Zurbuchen, T.",
+      "Raines, J. M.",
+      "Shearer, P.",
+      "Kasper, J. C.",
+      "Gilbert, J. A.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2014-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2014AGUFMSH33A4130T",
+    "invited": false
+  },
+  {
     "bibcode": "2022shin.confE.214M",
     "title": "Classification of Solar Wind Instabilities in the Inner Heliosphere",
     "authors": [
@@ -3159,6 +3149,53 @@
     "publication_type": "inproceedings",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2022shin.confE.214M",
+    "invited": false
+  },
+  {
+    "bibcode": "2022AGUFMSH15C1491J",
+    "title": "Anterograde Collisional Analysis of Solar Wind Ions",
+    "authors": [
+      "Johnson, Elliot Thomas",
+      "Maruca, Bennett",
+      "McManus, Michael",
+      "Alterman, B. L.",
+      "Lichko, Emily Rose",
+      "DeWeese, Haley",
+      "Dieguez, Isabella",
+      "Verniero, Jaye",
+      "Klein, Kristopher G.",
+      "Paulson, Kristoff W.",
+      "Stevens, Michael Louis"
+    ],
+    "month": "",
+    "year": "2022-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2022AGUFMSH15C1491J",
+    "invited": false
+  },
+  {
+    "bibcode": "2022cosp...44.1524D",
+    "title": "A rare in-situ measurement of prominence plasma inside an ICME as observed by the Heavy Ion Sensor on Solar Orbiter",
+    "authors": [
+      "Dewey, Ryan",
+      "Lepri, Susan",
+      "Livi, Stefano",
+      "Raines, Jim",
+      "Ploof, Keeling",
+      "Galvin, Antoinette",
+      "Kistler, Lynn",
+      "Ellis, Lorna",
+      "Nieves-Chinchilla, Teresa",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2022-07-00",
+    "journal": "COSPAR",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1524D",
     "invited": false
   },
   {
@@ -3283,6 +3320,23 @@
     "invited": false
   },
   {
+    "bibcode": "2017shin.confE...7A",
+    "title": "Collisions in an Expanding Solar Wind (Scene Setting Talk)",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2017-07-00",
+    "journal": "SHINE",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2017shin.confE...7A",
+    "invited": true,
+    "booktitle": "SHINE Conference",
+    "invited_url": "ui.adsabs.harvard.edu/abs/2017shin.confE...7A",
+    "keywords": "invited"
+  },
+  {
     "bibcode": "2017shin.confE.112J",
     "title": "Electromagnetic Cyclotron Waves at 1 AU: Wind Observation and Wave Dispersion Analysis",
     "authors": [
@@ -3399,29 +3453,6 @@
     "invited": false
   },
   {
-    "bibcode": "2022cosp...44.1524D",
-    "title": "A rare in-situ measurement of prominence plasma inside an ICME as observed by the Heavy Ion Sensor on Solar Orbiter",
-    "authors": [
-      "Dewey, Ryan",
-      "Lepri, Susan",
-      "Livi, Stefano",
-      "Raines, Jim",
-      "Ploof, Keeling",
-      "Galvin, Antoinette",
-      "Kistler, Lynn",
-      "Ellis, Lorna",
-      "Nieves-Chinchilla, Teresa",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2022-07-00",
-    "journal": "COSPAR",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1524D",
-    "invited": false
-  },
-  {
     "bibcode": "2021APS..DPPTO6003M",
     "title": "Ion-Driven Instabilities as Observed by Helios",
     "authors": [
@@ -3436,6 +3467,24 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2021APS..DPPTO6003M",
+    "invited": false
+  },
+  {
+    "bibcode": "2021cosp...43E1118A",
+    "title": "On the limitations of applying reduced free energy parameter spaces to proton beams in the solar wind",
+    "authors": [
+      "Alterman, B. L.",
+      "Livi, Stefano",
+      "Stevens, Michael",
+      "Kasper, Justin",
+      "Klein, Kristopher"
+    ],
+    "month": "",
+    "year": "2021-01-00",
+    "journal": "COSPAR",
+    "publication_type": "abstract",
+    "citations": 0,
+    "url": "https://ui.adsabs.harvard.edu/abs/2021cosp...43E1118A",
     "invited": false
   },
   {
@@ -3645,21 +3694,32 @@
     "invited": false
   },
   {
-    "bibcode": "2021cosp...43E1118A",
-    "title": "On the limitations of applying reduced free energy parameter spaces to proton beams in the solar wind",
+    "bibcode": "2022cosp...44.1540L",
+    "title": "Observations of Suprathermal Particles (5-70 keV) in Association with Shocks",
     "authors": [
-      "Alterman, B. L.",
       "Livi, Stefano",
-      "Stevens, Michael",
-      "Kasper, Justin",
-      "Klein, Kristopher"
+      "Owen, Christopher",
+      "Louarn, Philippe",
+      "Bruno, Roberto",
+      "Fedorov, A.",
+      "Ho, George",
+      "Alterman, B. L.",
+      "Lepri, Susan",
+      "Raines, Jim",
+      "Galvin, Antoinette",
+      "Kistler, Lynn",
+      "Allegrini, Frederic",
+      "Ogasawara, Keiichi",
+      "Wurz, Peter",
+      "Dewey, Ryan",
+      "Rivera, Yeimy"
     ],
     "month": "",
-    "year": "2021-01-00",
+    "year": "2022-07-00",
     "journal": "COSPAR",
-    "publication_type": "abstract",
+    "publication_type": "inproceedings",
     "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2021cosp...43E1118A",
+    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1540L",
     "invited": false
   },
   {
@@ -3809,35 +3869,6 @@
     "publication_type": "inproceedings",
     "citations": 0,
     "url": "https://ui.adsabs.harvard.edu/abs/2022shin.confE.122R",
-    "invited": false
-  },
-  {
-    "bibcode": "2022cosp...44.1540L",
-    "title": "Observations of Suprathermal Particles (5-70 keV) in Association with Shocks",
-    "authors": [
-      "Livi, Stefano",
-      "Owen, Christopher",
-      "Louarn, Philippe",
-      "Bruno, Roberto",
-      "Fedorov, A.",
-      "Ho, George",
-      "Alterman, B. L.",
-      "Lepri, Susan",
-      "Raines, Jim",
-      "Galvin, Antoinette",
-      "Kistler, Lynn",
-      "Allegrini, Frederic",
-      "Ogasawara, Keiichi",
-      "Wurz, Peter",
-      "Dewey, Ryan",
-      "Rivera, Yeimy"
-    ],
-    "month": "",
-    "year": "2022-07-00",
-    "journal": "COSPAR",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "url": "https://ui.adsabs.harvard.edu/abs/2022cosp...44.1540L",
     "invited": false
   },
   {
