@@ -90,11 +90,16 @@ counts = df.groupby(['year', 'category']).size().unstack(fill_value=0)
 year_range = range(counts.index.min(), counts.index.max() + 1)
 counts = counts.reindex(year_range, fill_value=0)
 
-# Extract data for plotting
+# Extract per-year data (kept for JSON output and summary)
 all_years = counts.index.tolist()
 refereed = counts.get('Refereed Articles', pd.Series(0, index=counts.index)).tolist()
 conferences = counts.get('Conference Contributions', pd.Series(0, index=counts.index)).tolist()
 other = counts.get('Other Publications', pd.Series(0, index=counts.index)).tolist()
+
+# Compute cumulative sums for plotting (pandas native)
+cum_refereed = counts.get('Refereed Articles', pd.Series(0, index=counts.index)).cumsum().tolist()
+cum_conferences = counts.get('Conference Contributions', pd.Series(0, index=counts.index)).cumsum().tolist()
+cum_other = counts.get('Other Publications', pd.Series(0, index=counts.index)).cumsum().tolist()
 
 print("\n📊 Publication counts by year:")
 print(counts)
@@ -102,6 +107,10 @@ print(f"\n✓ Total publications: {len(df)}")
 print(f"  • Refereed Articles: {sum(refereed)}")
 print(f"  • Conference Contributions: {sum(conferences)}")
 print(f"  • Other Publications: {sum(other)}")
+print(f"\n📈 Cumulative totals (final year):")
+print(f"  • Refereed Articles: {cum_refereed[-1]}")
+print(f"  • Conference Contributions: {cum_conferences[-1]}")
+print(f"  • Other Publications: {cum_other[-1]}")
 
 # === SECTION 3: Save JSON Data ===
 output_filename = "publications_timeline.json"
@@ -127,26 +136,26 @@ image_output_dir.mkdir(parents=True, exist_ok=True)
 fig, ax = plt.subplots(figsize=FIGURE['figsize'], dpi=FIGURE['dpi'])
 fig.patch.set_facecolor(FIGURE['facecolor'])
 
-# Plot lines with configured styles
-ax.plot(all_years, refereed,
+# Plot lines with configured styles (cumulative data)
+ax.plot(all_years, cum_refereed,
         label='Refereed Articles',
         color=COLORS['refereed'],
         **LINES['refereed'])
 
-ax.plot(all_years, conferences,
+ax.plot(all_years, cum_conferences,
         label='Conference Contributions',
         color=COLORS['conference'],
         **LINES['conference'])
 
-ax.plot(all_years, other,
+ax.plot(all_years, cum_other,
         label='Other Publications',
         color=COLORS['other'],
         **LINES['other'])
 
 # Apply styling
-ax.set_title('Publications Timeline', **FONTS['title'])
+ax.set_title('Cumulative Publications', **FONTS['title'])
 ax.set_xlabel('Year', **FONTS['axis_label'])
-ax.set_ylabel('Number of Publications', **FONTS['axis_label'])
+ax.set_ylabel('Total Publications', **FONTS['axis_label'])
 
 # Configure x-axis: label every 2nd year, minor ticks for all years
 major_ticks = all_years[::2]  # Every 2nd year for labels

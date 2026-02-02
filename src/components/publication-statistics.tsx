@@ -92,11 +92,11 @@ export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
       {/* Publications Timeline Dialog */}
       <Dialog open={publicationsDialogOpen} onOpenChange={setPublicationsDialogOpen}>
         <DialogContent className="w-[95vw] max-w-[min(896px,calc((90vh-4rem)*10/7))] max-h-[90vh] overflow-hidden">
-          <DialogTitle className="sr-only">Publications Timeline</DialogTitle>
+          <DialogTitle className="sr-only">Cumulative Publications</DialogTitle>
           <div className="relative w-full aspect-[10/7]">
             <Image
               src="/plots/publications_timeline.svg"
-              alt="Publications Timeline showing refereed articles, conference contributions, and other publications from 2014-2025"
+              alt="Cumulative publications showing total refereed articles, conference contributions, and other publications from 2014-2025"
               fill
               className="object-contain"
               priority
@@ -108,11 +108,11 @@ export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
       {/* Citations Timeline Dialog */}
       <Dialog open={citationsDialogOpen} onOpenChange={setCitationsDialogOpen}>
         <DialogContent className="w-[95vw] max-w-[min(896px,calc((90vh-4rem)*10/7))] max-h-[90vh] overflow-hidden">
-          <DialogTitle className="sr-only">Citations Timeline</DialogTitle>
+          <DialogTitle className="sr-only">Cumulative Citations</DialogTitle>
           <div className="relative w-full aspect-[10/7]">
             <Image
               src="/plots/citations_by_year.svg"
-              alt="Citations Timeline showing refereed and non-refereed citations from 2018-2026"
+              alt="Cumulative citations showing total refereed and non-refereed citations from 2018-2026"
               fill
               className="object-contain"
               priority
@@ -124,11 +124,11 @@ export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
       {/* Refereed Papers Timeline Dialog */}
       <Dialog open={refereedPapersDialogOpen} onOpenChange={setRefereedPapersDialogOpen}>
         <DialogContent className="w-[95vw] max-w-[min(896px,calc((90vh-4rem)*10/7))] max-h-[90vh] overflow-hidden">
-          <DialogTitle className="sr-only">Refereed Publications Timeline</DialogTitle>
+          <DialogTitle className="sr-only">Cumulative Publications</DialogTitle>
           <div className="relative w-full aspect-[10/7]">
             <Image
               src="/plots/publications_timeline.svg"
-              alt="Publications Timeline showing refereed articles, conference contributions, and other publications from 2014-2025"
+              alt="Cumulative publications showing total refereed articles, conference contributions, and other publications from 2014-2025"
               fill
               className="object-contain"
               priority
@@ -140,11 +140,11 @@ export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
       {/* Refereed Citations Timeline Dialog */}
       <Dialog open={refereedCitationsDialogOpen} onOpenChange={setRefereedCitationsDialogOpen}>
         <DialogContent className="w-[95vw] max-w-[min(896px,calc((90vh-4rem)*10/7))] max-h-[90vh] overflow-hidden">
-          <DialogTitle className="sr-only">Refereed Citations Timeline</DialogTitle>
+          <DialogTitle className="sr-only">Cumulative Citations</DialogTitle>
           <div className="relative w-full aspect-[10/7]">
             <Image
               src="/plots/citations_by_year.svg"
-              alt="Citations Timeline showing refereed and non-refereed citations from 2018-2026"
+              alt="Cumulative citations showing total refereed and non-refereed citations from 2018-2026"
               fill
               className="object-contain"
               priority

@@ -12,6 +12,7 @@ Usage:
     python scripts/generate_citations_timeline.py
 """
 
+import itertools
 import json
 import matplotlib.pyplot as plt
 from utils import get_public_data_dir, get_public_plots_dir, get_relative_path
@@ -43,29 +44,36 @@ def generate_citations_timeline():
     print(f"   Total citations: {total_citations}")
     print(f"   Time span: {all_years[0]}-{all_years[-1]} ({len(all_years)} years)")
 
+    # Compute cumulative sums for plotting
+    cum_ref = list(itertools.accumulate(ref_counts))
+    cum_nonref = list(itertools.accumulate(nonref_counts))
+
+    print(f"   Cumulative refereed: {cum_ref[-1]}")
+    print(f"   Cumulative non-refereed: {cum_nonref[-1]}")
+
     # Create figure with configured settings
     fig, ax = plt.subplots(figsize=FIGURE['figsize'], dpi=FIGURE['dpi'])
     fig.patch.set_facecolor(FIGURE['facecolor'])
 
-    # Plot lines with configured styles
-    ax.plot(all_years, ref_counts,
+    # Plot lines with configured styles (cumulative data)
+    ax.plot(all_years, cum_ref,
             label='Refereed',
             color=COLORS['refereed'],
             **LINES['refereed'])
 
-    ax.plot(all_years, nonref_counts,
+    ax.plot(all_years, cum_nonref,
             label='Non-Refereed',
             color=COLORS['nonrefereed'],
             **LINES['other'])
 
-    # Add semi-transparent fill under refereed line for visual interest
-    ax.fill_between(all_years, ref_counts, alpha=0.15, color=COLORS['refereed'])
-    ax.fill_between(all_years, nonref_counts, alpha=0.15, color=COLORS['nonrefereed'])
+    # Add semi-transparent fill under lines for visual interest
+    ax.fill_between(all_years, cum_ref, alpha=0.15, color=COLORS['refereed'])
+    ax.fill_between(all_years, cum_nonref, alpha=0.15, color=COLORS['nonrefereed'])
 
     # Apply styling
-    ax.set_title('Citations Timeline', **FONTS['title'])
+    ax.set_title('Cumulative Citations', **FONTS['title'])
     ax.set_xlabel('Year', **FONTS['axis_label'])
-    ax.set_ylabel('Citations', **FONTS['axis_label'])
+    ax.set_ylabel('Total Citations', **FONTS['axis_label'])
 
     # Configure x-axis: label every 2nd year, minor ticks for all years
     major_ticks = all_years[::2]  # Every 2nd year for labels
