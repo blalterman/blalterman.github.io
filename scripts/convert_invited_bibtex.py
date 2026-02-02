@@ -243,6 +243,9 @@ def process_category(category_dir: Path, category_name: str) -> List[Dict[str, A
         print(f"  Parsing {bib_file.name}...")
         entries = parse_bibtex_file(bib_file)
 
+        if len(entries) == 0:
+            print(f"  ⚠️  Warning: {bib_file.name} is non-empty but yielded 0 entries — possible malformed BibTeX")
+
         for entry in entries:
             json_entry = convert_bibtex_entry_to_json(entry, category_name)
             json_entries.append(json_entry)
@@ -281,14 +284,35 @@ def main():
             continue
 
         # Process category
-        json_entries = process_category(category_dir, category)
+        new_entries = process_category(category_dir, category)
 
-        # Save to file
+        # Merge with existing JSON entries (if any)
         output_file = output_dir / output_filename
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(json_entries, f, indent=2, ensure_ascii=False)
+        existing_entries = []
+        if output_file.exists():
+            with open(output_file, 'r', encoding='utf-8') as f:
+                existing_entries = json.load(f)
 
-        print(f"  ✓ Saved {len(json_entries)} entries to {output_filename}")
+        # Build dedup key set from existing entries: (title, year prefix)
+        # Year field is "YYYY-MM-DD"; we compare on 4-digit year only
+        existing_keys = {
+            (e["title"], e["year"][:4])
+            for e in existing_entries
+            if "title" in e and "year" in e
+        }
+
+        # Append only genuinely new entries
+        for entry in new_entries:
+            key = (entry["title"], entry["year"][:4])
+            if key not in existing_keys:
+                existing_entries.append(entry)
+                existing_keys.add(key)
+
+        # Save merged result
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(existing_entries, f, indent=2, ensure_ascii=False)
+
+        print(f"  ✓ Saved {len(existing_entries)} entries to {output_filename}")
 
     print("\n" + "=" * 60)
     print("Conversion complete!")
