@@ -356,5 +356,39 @@
     "day": "21",
     "keywords": "invitedother",
     "url": ""
+  },
+  {
+    "title": "Why is it so hard to map intermediate speed solar wind to its solar source region and how does this answer give us an amplitude independent solar cycle clock?",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "year": "2026-01-22",
+    "month": "01",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "invited": true,
+    "booktitle": "Lunar and Planetary Laboartory (University of Arizona)",
+    "journal": "Lunar and Planetary Laboartory (University of Arizona)",
+    "location": "Tucson, AZ",
+    "day": "22",
+    "keywords": "invited",
+    "url": ""
+  },
+  {
+    "title": "Using in situ helium to understand the solar wind's acceleration and how this shows up in solar wind composition observations",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "year": "2026-01-27",
+    "month": "01",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "invited": true,
+    "booktitle": "Lunar and Planetary Laboartory (University of Arizona)",
+    "journal": "Lunar and Planetary Laboartory (University of Arizona)",
+    "location": "Tucson, AZ",
+    "day": "27",
+    "keywords": "invited",
+    "url": ""
   }
 ]
