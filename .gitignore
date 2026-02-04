@@ -47,3 +47,6 @@ next-env.d.ts
 firebase-debug.log
 firestore-debug.log
 tmp/
+
+# bibtex source files (converted to JSON in public/data/)
+/data/
