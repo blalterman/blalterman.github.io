@@ -3,7 +3,7 @@ name: Convert PDFs to SVG
 on:
   push:
     paths:
-      - 'research-corpus/papers/**/figures/*.pdf'
+      - 'research-corpus'
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
