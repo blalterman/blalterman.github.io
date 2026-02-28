@@ -25,19 +25,19 @@
       "relevance": "Shows the raw data before normalization, revealing the 75 km/s gap between heavy-ion and helium saturation speeds"
     },
     {
-      "ref": "aa51550-24/fig_4",
+      "ref": "aa51550-24/fig_7",
       "relevance": "Context showing the saturation speeds straddle the solar wind's peak distribution, making the discrepancy operationally important"
     },
     {
-      "ref": "aa51550-24/fig_5",
+      "ref": "aa51550-24/fig_4",
       "relevance": "Proves saturation speed is independent of first ionization potential—all heavy elements cluster at 327 km/s"
     },
     {
-      "ref": "aa51550-24/fig_6",
+      "ref": "aa51550-24/fig_5",
       "relevance": "Saturation abundances show expected FIP pattern, revealing where chromospheric fractionation sets composition"
     },
     {
-      "ref": "aa51550-24/fig_7",
+      "ref": "aa51550-24/fig_6",
       "relevance": "Fast-wind enhancement shows mass dependence above saturation, motivating the charge-state analysis"
     },
     {

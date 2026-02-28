@@ -268,10 +268,10 @@
     "used_as_primary_in": [],
     "used_as_related_in": []
   },
-  "Alterman_2019_ApJL_879_L6/fig_2": {
+  "Alterman_2019_ApJL_879_L6/fig_2a": {
     "paper_id": "Alterman_2019_ApJL_879_L6",
-    "figure_id": "fig_2",
-    "src": "/papers/Alterman_2019_ApJL_879_L6/figures/fig_2.svg",
+    "figure_id": "fig_2a",
+    "src": "/papers/Alterman_2019_ApJL_879_L6/figures/fig_2a.svg",
     "short_title": "Delaying sunspot number lifts the helium correlation at all speeds",
     "alt": "Two series of colored data points trace the strength of the helium-sunspot connection at each wind speed.",
     "summary": {
@@ -293,10 +293,10 @@
     "used_as_primary_in": [],
     "used_as_related_in": []
   },
-  "Alterman_2019_ApJL_879_L6/fig_3": {
+  "Alterman_2019_ApJL_879_L6/fig_2b": {
     "paper_id": "Alterman_2019_ApJL_879_L6",
-    "figure_id": "fig_3",
-    "src": "/papers/Alterman_2019_ApJL_879_L6/figures/fig_3.svg",
+    "figure_id": "fig_2b",
+    "src": "/papers/Alterman_2019_ApJL_879_L6/figures/fig_2b.svg",
     "short_title": "Faster solar wind waits longer to respond to solar activity",
     "alt": "Colored data points with error bars march upward from left to right across the plot, showing the time delay in days between a change in sunspot number and the corresponding change in helium abundance.",
     "summary": {
@@ -322,10 +322,10 @@
       "solar-activity"
     ]
   },
-  "Alterman_2019_ApJL_879_L6/fig_4": {
+  "Alterman_2019_ApJL_879_L6/fig_3a": {
     "paper_id": "Alterman_2019_ApJL_879_L6",
-    "figure_id": "fig_4",
-    "src": "/papers/Alterman_2019_ApJL_879_L6/figures/fig_4.svg",
+    "figure_id": "fig_3a",
+    "src": "/papers/Alterman_2019_ApJL_879_L6/figures/fig_3a.svg",
     "short_title": "Helium traces counter-clockwise loops around observed sunspots",
     "alt": "Diamond-shaped data points plot helium abundance (vertical axis, 0-7%) against sunspot number (horizontal axis, 0-200), colored by time from mission start using a colorbar on the right that runs from black (early, around 1995) through red and orange to yellow (late, around 2018).",
     "summary": {
@@ -348,10 +348,10 @@
     "used_as_primary_in": [],
     "used_as_related_in": []
   },
-  "Alterman_2019_ApJL_879_L6/fig_5": {
+  "Alterman_2019_ApJL_879_L6/fig_3b": {
     "paper_id": "Alterman_2019_ApJL_879_L6",
-    "figure_id": "fig_5",
-    "src": "/papers/Alterman_2019_ApJL_879_L6/figures/fig_5.svg",
+    "figure_id": "fig_3b",
+    "src": "/papers/Alterman_2019_ApJL_879_L6/figures/fig_3b.svg",
     "short_title": "Time-shifting sunspots collapses the hysteresis to a straight line",
     "alt": "The same diamond-shaped data points from the companion panel now plot helium against a time-shifted sunspot number, with identical color coding from black (early) through orange to yellow (late).",
     "summary": {
@@ -373,10 +373,10 @@
     "used_as_primary_in": [],
     "used_as_related_in": []
   },
-  "Alterman_2019_ApJL_879_L6/fig_6": {
+  "Alterman_2019_ApJL_879_L6/fig_4": {
     "paper_id": "Alterman_2019_ApJL_879_L6",
-    "figure_id": "fig_6",
-    "src": "/papers/Alterman_2019_ApJL_879_L6/figures/fig_6.svg",
+    "figure_id": "fig_4",
+    "src": "/papers/Alterman_2019_ApJL_879_L6/figures/fig_4.svg",
     "short_title": "Quiet-Sun helium rises with speed, confirming a decade-old prediction",
     "alt": "Two series of colored data points with error bars rise from left to right, showing the baseline helium abundance -- the amount present when the Sun is completely quiet (zero sunspots) -- at each wind speed.",
     "summary": {
@@ -423,6 +423,30 @@
     "used_as_primary_in": [],
     "used_as_related_in": []
   },
+  "Alterman_2023_ApJ_952_42/fig_1c": {
+    "paper_id": "Alterman_2023_ApJ_952_42",
+    "figure_id": "fig_1c",
+    "src": "/papers/Alterman_2023_ApJ_952_42/figures/fig_1c.svg",
+    "short_title": "Quiet-time threshold cleanly separates active and quiet intervals",
+    "alt": "A time series spanning five days in late July 2012 (days 26 through 30) showing hourly carbon-through-iron particle intensity on a logarithmic vertical axis.",
+    "summary": {
+      "what_we_see": "A time series spanning five days in late July 2012 (days 26 through 30) showing hourly carbon-through-iron particle intensity on a logarithmic vertical axis. Blue open circles mark active-time measurements, clustered above approximately 10^-3.5, while orange X-shaped markers denote quiet-time measurements, scattered below that level at intensities down to 10^-4. A horizontal magenta dashed line marks the quiet-time threshold, flanked by a narrow semitransparent pink band representing its 1-sigma uncertainty. The active and quiet populations are visually well separated, with only a handful of points near the boundary.",
+      "the_finding": "The quiet-time threshold derived from the variance-mean fitting method cleanly divides this representative time series into active and quiet intervals. Only 7 of 29 quiet-time intervals fall within the threshold's uncertainty band, meaning the vast majority of observations are unambiguously classified. This demonstrates that the statistical method produces a decisive boundary rather than a blurred transition zone where many intervals could go either way.",
+      "why_it_matters": "This concrete example builds confidence that the automated threshold translates reliably from the statistical fitting domain to individual time periods. Showing that most quiet intervals sit well below the threshold confirms the method works as intended on real data, not just in aggregate statistics. This validation step is essential before applying the method across two decades of observations to study how seed-population composition changes with solar activity."
+    },
+    "summary_short": "The quiet-time threshold derived from the variance-mean fitting method cleanly divides this representative time series into active and quiet intervals.",
+    "keywords": [
+      "quiet_time_selection",
+      "suprathermal_ions",
+      "intensity_threshold",
+      "cumulative_intensity",
+      "ACE_ULEIS",
+      "active_quiet_separation"
+    ],
+    "technical_caption": "(c) An example of the cumulative C through Fe intensity time series illustrating the difference between active and quiet times. Only 7 of 29 quiet-time intervals fall within its 1σ uncertainty.",
+    "used_as_primary_in": [],
+    "used_as_related_in": []
+  },
   "Alterman_2023_ApJ_952_42/fig_2": {
     "paper_id": "Alterman_2023_ApJ_952_42",
     "figure_id": "fig_2",
@@ -450,7 +474,7 @@
   "Alterman_2023_ApJ_952_42/fig_3": {
     "paper_id": "Alterman_2023_ApJ_952_42",
     "figure_id": "fig_3",
-    "src": "/papers/Alterman_2023_ApJ_952_42/figures/fig_3.svg",
+    "src": "/papers/Alterman_2023_ApJ_952_42/figures/fig_3.png",
     "short_title": "Quiet hours peak when sunspot activity drops to its lowest",
     "alt": "Two stacked panels spanning 1997 to 2021.",
     "summary": {
@@ -475,7 +499,7 @@
   "Alterman_2023_ApJ_952_42/fig_4": {
     "paper_id": "Alterman_2023_ApJ_952_42",
     "figure_id": "fig_4",
-    "src": "/papers/Alterman_2023_ApJ_952_42/figures/fig_4.png",
+    "src": "/papers/Alterman_2023_ApJ_952_42/figures/fig_4.svg",
     "short_title": "Heavy ion abundances shift between CIR and SEP values with the solar cycle",
     "alt": "Panel (a) shows eight colored time series from 1998 to 2019, each tracing a different element's abundance relative to oxygen on a logarithmic scale.",
     "summary": {
@@ -1004,10 +1028,10 @@
     "used_as_primary_in": [],
     "used_as_related_in": []
   },
-  "Alterman_2025_ApJL_982_L40/fig_10": {
+  "Alterman_2025_ApJL_982_L40/fig_10a": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
-    "figure_id": "fig_10",
-    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_10.svg",
+    "figure_id": "fig_10a",
+    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_10a.svg",
     "short_title": "Mean speed in the helium-wave plane reveals two source populations",
     "alt": "A filled contour map shows mean solar wind speed (color scale 300-540 km/s) as a function of wave activity (horizontal axis, 0-1) and helium abundance (vertical axis, 0-10%).",
     "summary": {
@@ -1032,10 +1056,10 @@
       "sources-of-the-solar-wind"
     ]
   },
-  "Alterman_2025_ApJL_982_L40/fig_12": {
+  "Alterman_2025_ApJL_982_L40/fig_10b": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
-    "figure_id": "fig_12",
-    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_12.svg",
+    "figure_id": "fig_10b",
+    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_10b.svg",
     "short_title": "The slowest 10% of wind stays below 390 km/s everywhere",
     "alt": "The same axes as panel (a) -- wave activity versus helium abundance -- now colored by the 10th percentile of speed (color scale 270-690 km/s).",
     "summary": {
@@ -1056,10 +1080,10 @@
     "used_as_primary_in": [],
     "used_as_related_in": []
   },
-  "Alterman_2025_ApJL_982_L40/fig_13": {
+  "Alterman_2025_ApJL_982_L40/fig_10c": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
-    "figure_id": "fig_13",
-    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_13.svg",
+    "figure_id": "fig_10c",
+    "src": "/papers/Alterman_2025_ApJL_982_L40/figures/fig_10c.svg",
     "short_title": "The fastest 10% of closed-field wind exceeds 420 km/s",
     "alt": "The same axes as panels (a) and (b), now colored by the 90th percentile of speed (color scale 270-690 km/s).",
     "summary": {
@@ -1575,10 +1599,10 @@
     "used_as_primary_in": [],
     "used_as_related_in": []
   },
-  "Alterman_2026_ApJL_996_L12/fig_15": {
+  "Alterman_2026_ApJL_996_L12/fig_15a": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
-    "figure_id": "fig_15",
-    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_15.svg",
+    "figure_id": "fig_15a",
+    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_15a.svg",
     "short_title": "Mean helium reveals two distinct high-helium islands",
     "alt": "This panel maps mean helium abundance (color) across wave activity (horizontal axis) and hydrogen compressibility (vertical axis, logarithmic).",
     "summary": {
@@ -1604,10 +1628,91 @@
       "solar-wind-compressibility"
     ]
   },
-  "Alterman_2026_ApJL_996_L12/fig_16": {
+  "Alterman_2026_ApJL_996_L12/fig_15b": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
-    "figure_id": "fig_16",
-    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_16.svg",
+    "figure_id": "fig_15b",
+    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_15b.svg",
+    "short_title": "90th percentile helium exceeds 7.5% in compressive wind",
+    "alt": "This panel maps the 90th percentile of helium abundance (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).",
+    "summary": {
+      "what_we_see": "This panel maps the 90th percentile of helium abundance (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic). The compressive island at top shows the most extreme upper-tail helium values, exceeding 7.5 percent with warm red and orange colors. The Alfvenic island at lower right shows elevated but more moderate upper-tail values that do not exceed about 6 percent. The black contour again marks the 3.82 percent minimum saturation abundance.",
+      "the_finding": "The upper tail of the helium distribution reaches dramatically higher values in the compressive island (above 7.5 percent) than in the Alfvenic island (below 6 percent). Since helium in standard fast wind from continuously open sources is expected to remain near 50 percent of the photospheric value, these extreme values in the compressive island suggest a fundamentally different enhancement mechanism. The compressive population can push helium to values far exceeding the typical open-source upper bound.",
+      "why_it_matters": "By showing that the most extreme helium abundances occur exclusively in compressive wind, this panel demonstrates that compressive fluctuations can drive helium to levels inconsistent with steady coronal outflow from open sources. These extreme values are important for understanding ion composition in interplanetary space and have implications for how much helium mass is transported by transient or dynamic events rather than steady-state processes."
+    },
+    "summary_short": "The upper tail of the helium distribution reaches dramatically higher values in the compressive island (above 7.5 percent) than in the Alfvenic island (below 6 percent).",
+    "keywords": [
+      "helium_abundance",
+      "normalized_cross_helicity",
+      "hydrogen_compressibility",
+      "Alfvenic_island",
+      "compressive_island",
+      "variability",
+      "mean_abundance",
+      "quantile_statistics",
+      "two_populations"
+    ],
+    "technical_caption": "Panel (b): 90% quantile of helium abundance as a function of cross helicity and solar wind compressibility.",
+    "used_as_primary_in": [],
+    "used_as_related_in": []
+  },
+  "Alterman_2026_ApJL_996_L12/fig_15c": {
+    "paper_id": "Alterman_2026_ApJL_996_L12",
+    "figure_id": "fig_15c",
+    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_15c.svg",
+    "short_title": "10th percentile helium stays elevated only in Alfvenic wind",
+    "alt": "This panel maps the 10th percentile of helium abundance (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).",
+    "summary": {
+      "what_we_see": "This panel maps the 10th percentile of helium abundance (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic). Only the Alfvenic island at lower right shows elevated lower-tail helium, exceeding 1.4 percent in the region with wave activity above about 0.7. The compressive island at top shows low 10th percentile values near or below 1 percent despite having high mean helium. Most of the plane has very low 10th percentile helium, indicating that helium-depleted conditions occur frequently outside the Alfvenic zone.",
+      "the_finding": "The lower tail of the helium distribution is elevated only in the Alfvenic, incompressible region. Compressive wind has very low 10th percentile helium despite its high mean, meaning compressive helium enhancement is episodic rather than sustained. In contrast, Alfvenic wind maintains elevated helium even at the 10th percentile, indicating a persistently enriched state. This asymmetry between the lower tails of the two islands is what drives the enormous variability difference shown in the next panel.",
+      "why_it_matters": "The contrast between low floor values in compressive wind and elevated floor values in Alfvenic wind reveals fundamentally different physics. Alfvenic wind from open coronal sources maintains consistently elevated helium, while compressive wind experiences intermittent helium surges interspersed with helium-poor intervals. This distinction is critical for space weather forecasting: compressive helium enhancements cannot be relied upon as steady indicators of source region identity."
+    },
+    "summary_short": "The lower tail of the helium distribution is elevated only in the Alfvenic, incompressible region.",
+    "keywords": [
+      "helium_abundance",
+      "normalized_cross_helicity",
+      "hydrogen_compressibility",
+      "Alfvenic_island",
+      "compressive_island",
+      "variability",
+      "mean_abundance",
+      "quantile_statistics",
+      "two_populations"
+    ],
+    "technical_caption": "Panel (c): 10% quantile of helium abundance as a function of cross helicity and solar wind compressibility.",
+    "used_as_primary_in": [],
+    "used_as_related_in": []
+  },
+  "Alterman_2026_ApJL_996_L12/fig_15d": {
+    "paper_id": "Alterman_2026_ApJL_996_L12",
+    "figure_id": "fig_15d",
+    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_15d.svg",
+    "short_title": "Helium variability exceeds 70% in the compressive island",
+    "alt": "This panel maps the variability of helium abundance (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).",
+    "summary": {
+      "what_we_see": "This panel maps the variability of helium abundance (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic). Variability measures how much the spread between the 90th and 10th percentiles exceeds the mean. The compressive island at top glows with warm colors indicating variability exceeding 70 percent, reaching up to 90 percent in some regions. In contrast, the Alfvenic island at lower right shows cool blues with variability within about 20 percent of the mean. The black contour again marks the 3.82 percent minimum saturation abundance.",
+      "the_finding": "The two helium-rich populations differ drastically in their variability. Alfvenic wind maintains helium within about 20 percent of its mean, consistent with steady enrichment from continuously open coronal sources. Compressive wind shows 70 to 90 percent variability, meaning the spread between its 10th and 90th percentiles far exceeds the mean itself. Despite comparable mean helium in both islands, the compressive population achieves this through highly intermittent extreme values rather than sustained enrichment.",
+      "why_it_matters": "This variability contrast is the smoking gun distinguishing the two populations. Steady coronal outflow from open field regions produces consistent helium (low variability), while compressive processes produce episodic helium surges (extreme variability). This panel, together with the three preceding panels, constitutes the paper's most comprehensive visualization, revealing that the traditional binary fast/slow classification misses a third population with unique statistical properties that likely originates from neither standard open nor closed sources."
+    },
+    "summary_short": "The two helium-rich populations differ drastically in their variability.",
+    "keywords": [
+      "helium_abundance",
+      "normalized_cross_helicity",
+      "hydrogen_compressibility",
+      "Alfvenic_island",
+      "compressive_island",
+      "variability",
+      "mean_abundance",
+      "quantile_statistics",
+      "two_populations"
+    ],
+    "technical_caption": "Panel (d): Variability of the helium abundance as a function of cross helicity and solar wind compressibility.",
+    "used_as_primary_in": [],
+    "used_as_related_in": []
+  },
+  "Alterman_2026_ApJL_996_L12/fig_16a": {
+    "paper_id": "Alterman_2026_ApJL_996_L12",
+    "figure_id": "fig_16a",
+    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_16a.svg",
     "short_title": "Mean speed exceeds saturation only in Alfvenic wind",
     "alt": "This panel maps mean solar wind speed (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).",
     "summary": {
@@ -1629,10 +1734,35 @@
     "used_as_primary_in": [],
     "used_as_related_in": []
   },
-  "Alterman_2026_ApJL_996_L12/fig_17": {
+  "Alterman_2026_ApJL_996_L12/fig_16b": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
-    "figure_id": "fig_17",
-    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_17.svg",
+    "figure_id": "fig_16b",
+    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_16b.svg",
+    "short_title": "Speed variability is larger in Alfvenic than compressive wind",
+    "alt": "This panel maps the variability of solar wind speed (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).",
+    "summary": {
+      "what_we_see": "This panel maps the variability of solar wind speed (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic). The Alfvenic region at lower right shows the highest speed variability with warm colors, while the compressive region at top shows relatively lower speed variability. The black contours at 433 and 450 km/s from panel (a) are also shown. Speed variability is moderate across most of the plane but peaks in the incompressible, high-wave-activity zone.",
+      "the_finding": "Speed variability is larger in the Alfvenic subset than in the compressive subset, which is the opposite pattern to helium variability in Figure 15d. Compressive wind has highly variable helium but less variable speed, while Alfvenic wind has less variable helium but more variable speed. This decoupling implies that compressibility drives helium changes independently of speed, confirming that compressive density fluctuations rather than speed itself regulate the excess helium in compressive wind.",
+      "why_it_matters": "The contrast between helium and speed variability patterns across the two populations provides strong evidence that different physical mechanisms control helium in each. If speed were the primary driver of helium enhancement, both quantities should vary together. Their decoupling means that models predicting helium content from speed alone will systematically fail for the compressive population, which constitutes a significant fraction of solar wind at intermediate speeds."
+    },
+    "summary_short": "Speed variability is larger in the Alfvenic subset than in the compressive subset, which is the opposite pattern to helium variability in Figure 15d.",
+    "keywords": [
+      "solar_wind_speed",
+      "normalized_cross_helicity",
+      "hydrogen_compressibility",
+      "speed_variability",
+      "Alfvenic_fast_wind",
+      "compressive_fast_wind",
+      "source_region_ambiguity"
+    ],
+    "technical_caption": "Panel (b): The variability of vsw calculated in the same manner as in Figure 15.",
+    "used_as_primary_in": [],
+    "used_as_related_in": []
+  },
+  "Alterman_2026_ApJL_996_L12/fig_17a": {
+    "paper_id": "Alterman_2026_ApJL_996_L12",
+    "figure_id": "fig_17a",
+    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_17a.svg",
     "short_title": "Mean compressibility concentrates at high helium, low wave activity",
     "alt": "This panel maps mean hydrogen compressibility (color) across wave activity (horizontal axis) and helium abundance (vertical axis).",
     "summary": {
@@ -1651,6 +1781,31 @@
       "mixed_source_resolution"
     ],
     "technical_caption": "Panel (a): Mean |δnH/nH| as a function of |σc| and AHe. Solid black contours indicate |δnH/nH| = 0.085, 0.1, and 0.15. The dashed–dotted black contour indicates where the 75% quantile of |δnH/nH| = 0.15.",
+    "used_as_primary_in": [],
+    "used_as_related_in": []
+  },
+  "Alterman_2026_ApJL_996_L12/fig_17b": {
+    "paper_id": "Alterman_2026_ApJL_996_L12",
+    "figure_id": "fig_17b",
+    "src": "/papers/Alterman_2026_ApJL_996_L12/figures/fig_17b.svg",
+    "short_title": "75th percentile compressibility stays below 0.1 in open-source wind",
+    "alt": "This panel maps the 75th percentile of hydrogen compressibility (color) across wave activity (horizontal axis) and helium abundance (vertical axis).",
+    "summary": {
+      "what_we_see": "This panel maps the 75th percentile of hydrogen compressibility (color) across wave activity (horizontal axis) and helium abundance (vertical axis). A dashed blue line marks the wave activity boundary for continuously open source regions defined in the companion paper. Solid contours mark where the 75th percentile reaches 0.1 and 0.15. To the right of the blue line, in the open-source region, even the 75th percentile of compressibility does not exceed 0.1 for most of the plane. Above the blue line and at high helium, the 75th percentile exceeds 0.15.",
+      "the_finding": "In the region identified as continuously open source wind, even the 75th percentile of compressibility remains below 0.1, confirming that open-source wind is overwhelmingly incompressible. Only at the highest helium values with low wave activity does the 75th percentile exceed the 0.15 compressible threshold. The majority of the parameter space does not exceed 0.15, meaning the compressive population is concentrated in a specific corner rather than spread across the plane.",
+      "why_it_matters": "By examining the 75th percentile rather than just the mean, this panel shows that the incompressible character of open-source wind is robust and not just an average effect. Even the upper tail of the compressibility distribution stays below 0.1 in the open-source region. This reinforces the identification of the high-helium, low-wave-activity corner as a distinct compressive population and supports the paper's inference that this population likely originates from neither traditional open nor closed magnetic source regions."
+    },
+    "summary_short": "In the region identified as continuously open source wind, even the 75th percentile of compressibility remains below 0.1, confirming that open-source wind is overwhelmingly incompressible.",
+    "keywords": [
+      "hydrogen_compressibility",
+      "normalized_cross_helicity",
+      "helium_abundance",
+      "compressible_wind",
+      "source_region_classification",
+      "compressibility_threshold",
+      "mixed_source_resolution"
+    ],
+    "technical_caption": "Panel (b): 75% quantile |δnH/nH| as a function of |σc| and AHe. Solid contours indicate where the 75% quantile of |δnH/nH| = 0.1 and 0.15. The region of the plane with |σc| greater than that indicated by the dashed–dotted blue line corresponds to solar wind originating in continuously open source regions as defined in Paper I.",
     "used_as_primary_in": [],
     "used_as_related_in": []
   },
@@ -1936,10 +2091,10 @@
     ],
     "used_as_related_in": []
   },
-  "aa51550-24/fig_5": {
+  "aa51550-24/fig_4": {
     "paper_id": "aa51550-24",
-    "figure_id": "fig_5",
-    "src": "/papers/aa51550-24/figures/fig_5.svg",
+    "figure_id": "fig_4",
+    "src": "/papers/aa51550-24/figures/fig_4.svg",
     "short_title": "Transition speed does not depend on ionization energy",
     "alt": "A scatter plot shows each element's transition speed plotted against its first ionization potential, the energy needed to strip its outermost electron.",
     "summary": {
@@ -1962,10 +2117,10 @@
       "heavy-ion-composition"
     ]
   },
-  "aa51550-24/fig_6": {
+  "aa51550-24/fig_5": {
     "paper_id": "aa51550-24",
-    "figure_id": "fig_6",
-    "src": "/papers/aa51550-24/figures/fig_6.svg",
+    "figure_id": "fig_5",
+    "src": "/papers/aa51550-24/figures/fig_5.svg",
     "short_title": "Transition abundances confirm expected FIP fractionation pattern",
     "alt": "A scatter plot shows each element's abundance at the transition speed, plotted against its first ionization potential.",
     "summary": {
@@ -1987,10 +2142,10 @@
       "heavy-ion-composition"
     ]
   },
-  "aa51550-24/fig_7": {
+  "aa51550-24/fig_6": {
     "paper_id": "aa51550-24",
-    "figure_id": "fig_7",
-    "src": "/papers/aa51550-24/figures/fig_7.svg",
+    "figure_id": "fig_6",
+    "src": "/papers/aa51550-24/figures/fig_6.svg",
     "short_title": "Fast wind reveals an unexplained mass-dependent fractionation",
     "alt": "A scatter plot shows how much each element's abundance at the fastest observed speed (592 km/s) exceeds its transition-point abundance, plotted against element mass in atomic mass units.",
     "summary": {
@@ -2013,10 +2168,10 @@
       "heavy-ion-composition"
     ]
   },
-  "aa51550-24/fig_4": {
+  "aa51550-24/fig_7": {
     "paper_id": "aa51550-24",
-    "figure_id": "fig_4",
-    "src": "/papers/aa51550-24/figures/fig_4.svg",
+    "figure_id": "fig_7",
+    "src": "/papers/aa51550-24/figures/fig_7.svg",
     "short_title": "Heavy and helium transition speeds bracket the most common wind",
     "alt": "A stepped blue histogram on a logarithmic vertical scale shows the probability density of solar wind speed observations, spanning roughly 200 to 800 km/s.",
     "summary": {
