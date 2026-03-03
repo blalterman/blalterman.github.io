@@ -199,7 +199,7 @@ for pub in results:
     url = (
         f"https://dx.doi.org/{pub.doi[0]}"
         if hasattr(pub, "doi") and pub.doi
-        else f"https://ui.adsabs.harvard.edu/abs/{pub.bibcode}"
+        else f"https://scixplorer.org/abs/{pub.bibcode}/abstract"
     )
 
     publications.append(
