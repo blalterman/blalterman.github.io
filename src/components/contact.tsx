@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Mail, Github } from 'lucide-react';
 import Link from 'next/link';
 import { OrcidIcon } from './icons/orcid-icon';
-import { NasaAdsIcon } from './icons/nasa-ads-icon';
+import { SciXIcon } from './icons/scix-icon';
 import { GoogleScholarIcon } from './icons/google-scholar-icon';
 import { ArxivIcon } from './icons/arxiv-icon';
 import { FirebaseIcon } from './icons/firebase-icon';
@@ -44,7 +44,7 @@ export function Contact() {
             <OrcidIcon className="h-6 w-6" />
           </Link>
           <Link href="https://scixplorer.org/search/p_=0&q=orcid%3A0000-0001-6673-3432&sort=date%20desc%2C%20bibcode%20desc" target="_blank" rel="noopener noreferrer" aria-label="SciX" className="text-muted-foreground hover:text-foreground transition-colors">
-            <NasaAdsIcon className="h-6 w-6" />
+            <SciXIcon className="h-6 w-6" />
           </Link>
           <Link href="https://scholar.google.com/citations?user=yF0j6J8AAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" className="text-muted-foreground hover:text-foreground transition-colors">
             <GoogleScholarIcon className="h-6 w-6" />

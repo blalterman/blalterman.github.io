@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Separator } from '@/components/ui/separator';
 import { OrcidIcon } from './icons/orcid-icon';
-import { NasaAdsIcon } from './icons/nasa-ads-icon';
+import { SciXIcon } from './icons/scix-icon';
 import { GoogleScholarIcon } from './icons/google-scholar-icon';
 import { ArxivIcon } from './icons/arxiv-icon';
 import { LinkedinIcon } from './icons/linkedin-icon';
@@ -65,7 +65,7 @@ export function MobileNav() {
             </Button>
             <Button variant="ghost" size="icon" asChild>
                 <Link href="https://scixplorer.org/search/p_=0&q=orcid%3A0000-0001-6673-3432&sort=date%20desc%2C%20bibcode%20desc" target="_blank" rel="noopener noreferrer" aria-label="SciX">
-                    <NasaAdsIcon className="h-5 w-5" />
+                    <SciXIcon className="h-5 w-5" />
                 </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { MobileNav } from '@/components/mobile-nav';
 import { ArxivIcon } from '@/components/icons/arxiv-icon';
 import { GoogleScholarIcon } from '@/components/icons/google-scholar-icon';
-import { NasaAdsIcon } from '@/components/icons/nasa-ads-icon';
+import { SciXIcon } from '@/components/icons/scix-icon';
 import { OrcidIcon } from '@/components/icons/orcid-icon';
 import Image from 'next/image';
 import { LinkedinIcon } from './icons/linkedin-icon';
@@ -40,7 +40,7 @@ export function Header() {
             </Button>
             <Button variant="ghost" size="icon" asChild>
                 <Link href="https://scixplorer.org/search/p_=0&q=orcid%3A0000-0001-6673-3432&sort=date%20desc%2C%20bibcode%20desc" target="_blank" rel="noopener noreferrer" aria-label="SciX">
-                    <NasaAdsIcon className="h-5 w-5" />
+                    <SciXIcon className="h-5 w-5" />
                 </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
