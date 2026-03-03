@@ -43,7 +43,7 @@ export function Contact() {
           <Link href="https://orcid.org/0000-0001-6673-3432" target="_blank" rel="noopener noreferrer" aria-label="ORCID" className="text-muted-foreground hover:text-foreground transition-colors">
             <OrcidIcon className="h-6 w-6" />
           </Link>
-          <Link href="https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0001-6673-3432&sort=date%20desc%2C%20bibcode%20desc" target="_blank" rel="noopener noreferrer" aria-label="NASA ADS" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link href="https://scixplorer.org/search/p_=0&q=orcid%3A0000-0001-6673-3432&sort=date%20desc%2C%20bibcode%20desc" target="_blank" rel="noopener noreferrer" aria-label="SciX" className="text-muted-foreground hover:text-foreground transition-colors">
             <NasaAdsIcon className="h-6 w-6" />
           </Link>
           <Link href="https://scholar.google.com/citations?user=yF0j6J8AAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" className="text-muted-foreground hover:text-foreground transition-colors">

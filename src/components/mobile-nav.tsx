@@ -64,7 +64,7 @@ export function MobileNav() {
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-                <Link href="https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0001-6673-3432&sort=date%20desc%2C%20bibcode%20desc" target="_blank" rel="noopener noreferrer" aria-label="NASA ADS">
+                <Link href="https://scixplorer.org/search/p_=0&q=orcid%3A0000-0001-6673-3432&sort=date%20desc%2C%20bibcode%20desc" target="_blank" rel="noopener noreferrer" aria-label="SciX">
                     <NasaAdsIcon className="h-5 w-5" />
                 </Link>
             </Button>
