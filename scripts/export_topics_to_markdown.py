@@ -9,6 +9,15 @@ import json
 from pathlib import Path
 
 
+def resolve_figure_pdf(ref: str, repo_root: Path) -> str | None:
+    """Resolve a figure ref (paper_id/figure_id) to its corpus PDF path."""
+    paper_id, figure_id = ref.split("/", 1)
+    pdf_path = repo_root / "research-corpus" / "papers" / paper_id / "figures" / f"{figure_id}.pdf"
+    if pdf_path.exists():
+        return str(pdf_path)
+    return None
+
+
 def load_figure_registry(repo_root: Path) -> dict:
     """Load the centralized figure registry."""
     registry_path = repo_root / "public" / "data" / "figure-registry.json"
@@ -17,7 +26,7 @@ def load_figure_registry(repo_root: Path) -> dict:
 
 
 def export_topic_to_markdown(
-    json_path: Path, output_dir: Path, registry: dict
+    json_path: Path, output_dir: Path, registry: dict, repo_root: Path
 ) -> Path:
     """Convert a research topic JSON to a markdown file for review.
 
@@ -61,6 +70,11 @@ def export_topic_to_markdown(
     lines.append(f"**Figure:** `{pf_ref}`")
     lines.append("")
 
+    pdf_path = resolve_figure_pdf(pf_ref, repo_root)
+    if pdf_path:
+        lines.append(f"![{pf_ref}]({pdf_path})")
+        lines.append("")
+
     if pf_entry.get("short_title"):
         lines.append("### Short Title")
         lines.append("")
@@ -88,6 +102,12 @@ def export_topic_to_markdown(
         lines.append(summary["why_it_matters"])
         lines.append("")
 
+    if pf_entry.get("technical_caption"):
+        lines.append("### Technical Caption")
+        lines.append("")
+        lines.append(pf_entry["technical_caption"])
+        lines.append("")
+
     # Merge keywords: registry + topic-specific
     registry_keywords = pf_entry.get("keywords", [])
     all_keywords = list(dict.fromkeys(registry_keywords + topic_keywords))
@@ -111,6 +131,11 @@ def export_topic_to_markdown(
             lines.append(f"### Related Figure {i}: `{rf_ref}`")
             lines.append("")
 
+            pdf_path = resolve_figure_pdf(rf_ref, repo_root)
+            if pdf_path:
+                lines.append(f"![{rf_ref}]({pdf_path})")
+                lines.append("")
+
             if rf_entry.get("short_title"):
                 lines.append(f"**Short Title:** {rf_entry['short_title']}")
                 lines.append("")
@@ -124,6 +149,10 @@ def export_topic_to_markdown(
 
             if rf_entry.get("summary_short"):
                 lines.append(f"**Summary:** {rf_entry['summary_short']}")
+                lines.append("")
+
+            if rf_entry.get("technical_caption"):
+                lines.append(f"**Technical Caption:** {rf_entry['technical_caption']}")
                 lines.append("")
 
     # Related Topics
@@ -166,7 +195,7 @@ def main():
     print(f"Exporting {len(json_files)} topics to markdown...\n")
 
     for json_path in json_files:
-        output_path = export_topic_to_markdown(json_path, output_dir, registry)
+        output_path = export_topic_to_markdown(json_path, output_dir, registry, repo_root)
         print(f"  {json_path.name} -> {output_path.name}")
 
     print(f"\nMarkdown files created in: {output_dir}")
