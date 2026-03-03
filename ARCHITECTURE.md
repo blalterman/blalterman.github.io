@@ -426,7 +426,7 @@ blalterman.github.io/
     "journal": "Publication venue",
     "publication_type": "article|dataset|inproceedings|...",
     "citations": 5,
-    "url": "https://dx.doi.org/... or https://ui.adsabs.harvard.edu/abs/..."
+    "url": "https://dx.doi.org/... or https://scixplorer.org/abs/.../abstract"
   }
 ]
 ```
@@ -3281,7 +3281,7 @@ This project is developed with assistance from AI tools. Follow these guidelines
 - **TypeScript:** https://www.typescriptlang.org/docs/
 - **Tailwind CSS:** https://tailwindcss.com/docs
 - **Shadcn/ui:** https://ui.shadcn.com/
-- **NASA ADS API:** https://ui.adsabs.harvard.edu/help/api/
+- **NASA ADS / SciX API:** https://scixplorer.org/help/api/
 
 ### Tools
 

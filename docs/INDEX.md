@@ -309,9 +309,9 @@ New documentation should be placed:
 - **Documentation:** https://docs.github.com/en/pages
 - **Custom Domains:** https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
 
-### NASA ADS API
-- **API Documentation:** https://ui.adsabs.harvard.edu/help/api/
-- **Search Query Syntax:** https://ui.adsabs.harvard.edu/help/search/
+### NASA ADS / SciX API
+- **API Documentation:** https://scixplorer.org/help/api/
+- **Search Query Syntax:** https://scixplorer.org/help/search/
 
 ---
 
