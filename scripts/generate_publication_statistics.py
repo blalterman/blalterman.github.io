@@ -112,6 +112,11 @@ def main():
     # Load source files
     ads_metrics = load_json(data_dir / 'ads_metrics.json')
     ads_pubs = load_json(data_dir / 'ads_publications.json')
+    non_ads_pubs_path = data_dir / 'non_ads_publications.json'
+    if non_ads_pubs_path.exists():
+        non_ads_pubs = load_json(non_ads_pubs_path)
+        print(f"  Non-ADS publications: {len(non_ads_pubs)}")
+        ads_pubs = ads_pubs + non_ads_pubs
     invited_pres = load_json(data_dir / 'invited_presentations.json')
     invited_conf = load_json(data_dir / 'invited_conferences.json')
 

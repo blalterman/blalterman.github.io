@@ -35,11 +35,20 @@ if not ads_file.exists():
         "Run fetch_ads_publications_to_data_dir.py first."
     )
 
+non_ads_file = public_data_dir / "non_ads_publications.json"
+
 print(f"📖 Loading ADS publications from {get_relative_path(ads_file)}")
 with open(ads_file, 'r') as f:
     ads_publications = json.load(f)
 
-print(f"   Loaded {len(ads_publications)} ADS publications")
+# Merge non-ADS publications (conferences, white papers not indexed by ADS)
+if non_ads_file.exists():
+    with open(non_ads_file, 'r') as f:
+        non_ads_publications = json.load(f)
+    ads_publications = ads_publications + non_ads_publications
+    print(f"   Loaded {len(ads_publications)} publications ({len(ads_publications) - len(non_ads_publications)} ADS + {len(non_ads_publications)} non-ADS)")
+else:
+    print(f"   Loaded {len(ads_publications)} ADS publications")
 
 # Load invited presentations (seminars/colloquia not in ADS)
 if invited_file.exists():

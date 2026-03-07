@@ -39,7 +39,7 @@ from utils import get_public_data_dir
 # Constants
 # ---------------------------------------------------------------------------
 
-PUBLICATIONS_FILE = "ads_publications.json"
+PUBLICATIONS_FILE = "non_ads_publications.json"
 
 CATEGORY_MAP = {
     "conference": "inproceedings",

@@ -1,0 +1,260 @@
+[
+  {
+    "bibcode": "NOADS-IAU-CME",
+    "title": "Charge-State Dependent Heating of Fe at a CME-Driven Shock Observed by Solar Orbiter",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2024-05-00",
+    "journal": "IAU/CME",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "url": "",
+    "invited": false
+  },
+  {
+    "bibcode": "NOADS-Arcetri-2022",
+    "title": "Fe Heating Across a Shock Observed by Solar Orbiter\u2019s Heavy Ion Sensor",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2023-11-00",
+    "journal": "Arcetri Workshop of Plasma Astrophysics",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "url": "",
+    "invited": false
+  },
+  {
+    "bibcode": "NOADS-Arcetri-2023",
+    "title": "Heavy Ion Surfing on Alfv\u00e9n Waves Observed by Solar Orbiter's Heavy Ion Sensor",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2023-11-00",
+    "journal": "Arcetri Workshop of Plasma Astrophysics",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "url": "",
+    "invited": false
+  },
+  {
+    "bibcode": "NOADS-SW-16-Alterman",
+    "title": "Mass-per-Charge Depending Heating of Iron at a Collisionless Shock",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2023-06-00",
+    "journal": "Solar Wind 16",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "url": "",
+    "invited": false
+  },
+  {
+    "bibcode": "NOADS-SW-16-Lepri",
+    "title": "Heavy ion composition in the inner heliosphere from Solar Orbiter",
+    "authors": [
+      "Lepri, S. T.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2023-06-00",
+    "journal": "Solar Wind 16",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "url": "",
+    "invited": false
+  },
+  {
+    "bibcode": "NOADS-Chapman-2023",
+    "title": "Heavy Ion Surfing on Alfven Waves Observed by Solar Orbiter\u2019s Heavy Ion Sensor",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2023-05-00",
+    "journal": "Chapman Conference on Advances in Understanding Alfv\u00e9n Waves in the Sun and the Heliosphere",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "url": "",
+    "invited": false
+  },
+  {
+    "bibcode": "NOADS-IAGA-2023",
+    "title": "Heavy Ion Surfing on Alfv\u00e9n Waves Observed by Solar Orbiter\u2019s Heavy Ion Sensor",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2023-05-00",
+    "journal": "28th IUGG General Assembly",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "url": "",
+    "invited": false
+  },
+  {
+    "bibcode": "NOADS-SolO8-Rivera",
+    "title": "Investigating He+ in the inner heliosphere with the ACE/SWICS and the Solar Orbiter/HIS",
+    "authors": [
+      "Rivera, Y.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2022-09-00",
+    "journal": "Solar Orbiter 8",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "url": "",
+    "invited": false
+  },
+  {
+    "bibcode": "NOADS-SolO8-Dewey",
+    "title": "In situ plasma composition of Oct-Nov 2021 ICMEs: HIS observations of prominence material",
+    "authors": [
+      "Dewey, R. M.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2022-09-00",
+    "journal": "Solar Orbiter 8",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "url": "",
+    "invited": false
+  },
+  {
+    "bibcode": "NOADS-barnes_will_2020_4091384",
+    "title": "Toward A Sustainable Software Development Model for Heliophysics",
+    "authors": [
+      "Barnes, W.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2020-10-00",
+    "journal": "Zenodo",
+    "publication_type": "techreport",
+    "citations": 0,
+    "url": "https://dx.doi.org/10.5281/zenodo.4091384",
+    "invited": false,
+    "keywords": "whitepaper"
+  },
+  {
+    "bibcode": "NOADS-verniero_j_l_2020_4158714",
+    "title": "Guiding Heliophysics Toward an Enhanced Transdisciplinary Framework",
+    "authors": [
+      "Verniero, J. L.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2020-10-00",
+    "journal": "Zenodo",
+    "publication_type": "techreport",
+    "citations": 0,
+    "url": "https://dx.doi.org/10.5281/zenodo.4158714",
+    "invited": false,
+    "keywords": "whitepaper"
+  },
+  {
+    "bibcode": "NOADS-Helio2050ISP",
+    "title": "Expanding the Realm of Solar and Space Physics: Exploration of the Outer Heliosphere and Local Interstellar Medium",
+    "authors": [
+      "Brandt, P. C.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2020-10-00",
+    "journal": "",
+    "publication_type": "techreport",
+    "citations": 0,
+    "url": "https://www.hou.usra.edu/meetings/helio2050/pdf/4099.pdf",
+    "invited": false,
+    "keywords": "whitepaper"
+  },
+  {
+    "bibcode": "NOADS-schonfeld_samuel_j_2020_4060331",
+    "title": "HelioWeb: A resource for 21st century science",
+    "authors": [
+      "Schonfeld, S. J.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2020-09-00",
+    "journal": "Zenodo",
+    "publication_type": "techreport",
+    "citations": 0,
+    "url": "https://dx.doi.org/10.5281/zenodo.4060331",
+    "invited": false,
+    "keywords": "whitepaper"
+  },
+  {
+    "bibcode": "NOADS-mason_e_i_2020_4024810",
+    "title": "The Need for Consistent, Comprehensive Inner Heliosphere Data",
+    "authors": [
+      "Mason, E. I.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2020-09-00",
+    "journal": "Zenodo",
+    "publication_type": "techreport",
+    "citations": 0,
+    "url": "https://dx.doi.org/10.5281/zenodo.4024810",
+    "invited": false,
+    "keywords": "whitepaper"
+  },
+  {
+    "bibcode": "NOADS-murphy_nicholas_a_2019_3265454",
+    "title": "Enabling scientific reproducibility in plasma research",
+    "authors": [
+      "Murphy, Nicholas A.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2019-07-00",
+    "journal": "Zenodo",
+    "publication_type": "techreport",
+    "citations": 0,
+    "url": "https://dx.doi.org/10.5281/zenodo.3265454",
+    "invited": false,
+    "keywords": "whitepaper"
+  },
+  {
+    "bibcode": "NOADS-murphy_nicholas_a_2019_2578291",
+    "title": "Making plasma research reproducible",
+    "authors": [
+      "Murphy, Nicholas A.",
+      "Alterman, B. L.",
+      "Stansby, D."
+    ],
+    "month": "",
+    "year": "2019-02-00",
+    "journal": "",
+    "publication_type": "techreport",
+    "citations": 0,
+    "url": "https://dx.doi.org/10.5281/zenodo.2578291",
+    "invited": false,
+    "keywords": "whitepaper"
+  },
+  {
+    "bibcode": "NOADS-murphy_nicholas_a_2019_2578277",
+    "title": "Building an open source software ecosystem for cross-disciplinary plasma research and education",
+    "authors": [
+      "Murphy, Nicholas A.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2019-02-00",
+    "journal": "",
+    "publication_type": "techreport",
+    "citations": 0,
+    "url": "https://dx.doi.org/10.5281/zenodo.2578277",
+    "invited": false,
+    "keywords": "whitepaper"
+  }
+]

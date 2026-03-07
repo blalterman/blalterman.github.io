@@ -1,7 +1,7 @@
 [
   {
     "bibcode": "2026ApJ...997..204V",
-    "title": "Solar Orbiter's Passage through Comet Leonard's Tail while in the He⁺ Focusing Cone",
+    "title": "Solar Orbiter's Passage through Comet Leonard's Tail while in the He\u207a Focusing Cone",
     "authors": [
       "Vasquez, Bernard J.",
       "Smith, Charles W.",
@@ -90,7 +90,7 @@
       "Guo, F.",
       "Horbury, T.",
       "Kanekal, S. G.",
-      "Kowalska-Leszczyńska, I.",
+      "Kowalska-Leszczy\u0144ska, I.",
       "Lee, C. O.",
       "Livadiotis, G. I.",
       "Luhmann, J. G.",
@@ -116,7 +116,7 @@
   },
   {
     "bibcode": "2025arXiv251220098D",
-    "title": "Alfvénic solar wind intervals observed by Solar Orbiter: Exploiting the capability of the SWA plasma suite and source region investigation",
+    "title": "Alfv\u00e9nic solar wind intervals observed by Solar Orbiter: Exploiting the capability of the SWA plasma suite and source region investigation",
     "authors": [
       "D'Amicis, R.",
       "Raines, J. M.",
@@ -140,7 +140,7 @@
       "Verscharen, D.",
       "Consolini, G.",
       "Yardley, S.",
-      "Réville, V.",
+      "R\u00e9ville, V.",
       "Telloni, D.",
       "Baker, D.",
       "Lewis, G.",
@@ -192,7 +192,7 @@
       "Desai, M. I.",
       "Ogasawara, K.",
       "Kistler, L.",
-      "Möbius, E.",
+      "M\u00f6bius, E.",
       "Starkey, M. J.",
       "Dayeh, M. A.",
       "Kataria, D.",
@@ -274,7 +274,7 @@
   },
   {
     "bibcode": "2025ApJ...990L..60R",
-    "title": "Observational Constraints on the Radial Evolution of O⁶⁺ Temperature and Differential Flow in the Inner Heliosphere",
+    "title": "Observational Constraints on the Radial Evolution of O\u2076\u207a Temperature and Differential Flow in the Inner Heliosphere",
     "authors": [
       "Rivera, Yeimy J.",
       "Klein, Kristopher G.",
@@ -323,14 +323,14 @@
   },
   {
     "bibcode": "2025ApJ...986L..28H",
-    "title": "The Temperature Anisotropy and Helium Abundance Features of Alfvénic Slow Solar Wind Observed by Parker Solar Probe, Helios, and Wind Missions",
+    "title": "The Temperature Anisotropy and Helium Abundance Features of Alfv\u00e9nic Slow Solar Wind Observed by Parker Solar Probe, Helios, and Wind Missions",
     "authors": [
       "Huang, Jia",
       "Larson, Davin E.",
       "Ervin, Tamar",
       "Liu, Mingzhe",
       "Ortiz, Oscar",
-      "Martinović, Mihailo M.",
+      "Martinovi\u0107, Mihailo M.",
       "Huang, Zhenguang",
       "Chasapis, Alexandros",
       "Chu, Xiangning",
@@ -471,7 +471,7 @@
   },
   {
     "bibcode": "2025ApJ...984L..64A",
-    "title": "Characterizing the Impact of Alfvén Wave Forcing in Interplanetary Space on the Distribution of Near-Earth Solar Wind Speeds",
+    "title": "Characterizing the Impact of Alfv\u00e9n Wave Forcing in Interplanetary Space on the Distribution of Near-Earth Solar Wind Speeds",
     "authors": [
       "Alterman, B. L."
     ],
@@ -500,7 +500,7 @@
   },
   {
     "bibcode": "2025EGUGA..27.4040A",
-    "title": "What determines the departure from equipartition of energy in Alfvénic fluctuations in solar wind streams? Insights from Solar Orbiter observations",
+    "title": "What determines the departure from equipartition of energy in Alfv\u00e9nic fluctuations in solar wind streams? Insights from Solar Orbiter observations",
     "authors": [
       "Amicis, Raffaella D.",
       "Benella, Simone",
@@ -529,7 +529,7 @@
   },
   {
     "bibcode": "2025ApJ...980...70R",
-    "title": "Differentiating the Acceleration Mechanisms in the Slow and Alfvénic Slow Solar Wind",
+    "title": "Differentiating the Acceleration Mechanisms in the Slow and Alfv\u00e9nic Slow Solar Wind",
     "authors": [
       "Rivera, Yeimy J.",
       "Badman, Samuel T.",
@@ -580,7 +580,7 @@
   },
   {
     "bibcode": "2025A&A...693A.243D",
-    "title": "On Alfvénic turbulence of solar wind streams observed by Solar Orbiter during March 2022 perihelion and their source regions",
+    "title": "On Alfv\u00e9nic turbulence of solar wind streams observed by Solar Orbiter during March 2022 perihelion and their source regions",
     "authors": [
       "D'Amicis, R.",
       "Velli, M.",
@@ -591,7 +591,7 @@
       "De Marco, R.",
       "Bruno, R.",
       "Wang, Y.-M.",
-      "Réville, V.",
+      "R\u00e9ville, V.",
       "Baker, D.",
       "Matteini, L.",
       "Yardley, S.",
@@ -663,7 +663,7 @@
       "Gershkovich, Irena",
       "Zhao, Liang",
       "Eddy, Tyler",
-      "Lugaz, Noé",
+      "Lugaz, No\u00e9",
       "Lario, David",
       "Nieves-Chinchilla, Teresa"
     ],
@@ -677,7 +677,7 @@
   },
   {
     "bibcode": "2024AGUFMSH11B..03R",
-    "title": "Comparing the Radial Evolution of Slow and Alfvénic Slow Solar Wind with Parker Solar Probe and Solar Orbiter",
+    "title": "Comparing the Radial Evolution of Slow and Alfv\u00e9nic Slow Solar Wind with Parker Solar Probe and Solar Orbiter",
     "authors": [
       "Rivera, Yeimy",
       "Badman, Samuel Timothy",
@@ -735,7 +735,7 @@
   },
   {
     "bibcode": "2024AGUFMSH31F2665H",
-    "title": "Temperature Anisotropy and Alpha Abundance Features of Alfvénic Slow Solar Wind Observed by Parker Solar Probe, Helios, and Wind Missions",
+    "title": "Temperature Anisotropy and Alpha Abundance Features of Alfv\u00e9nic Slow Solar Wind Observed by Parker Solar Probe, Helios, and Wind Missions",
     "authors": [
       "Huang, Jia",
       "Larson, Davin E.",
@@ -942,20 +942,6 @@
     "invited": false
   },
   {
-    "bibcode": "NOADS-IAU-CME",
-    "title": "Charge-State Dependent Heating of Fe at a CME-Driven Shock Observed by Solar Orbiter",
-    "authors": [
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2024-05-00",
-    "journal": "IAU/CME",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "url": "",
-    "invited": false
-  },
-  {
     "bibcode": "2024ApJ...964L..31A",
     "title": "Quiet-time Spectra of Suprathermal Heavy Ions near 1 au in Solar Cycles 23 and 24",
     "authors": [
@@ -1048,10 +1034,10 @@
       "Livi, S.",
       "Lavraud, B.",
       "Rouillard, A. P.",
-      "Génot, V.",
-      "André, N.",
+      "G\u00e9not, V.",
+      "Andr\u00e9, N.",
       "Fruit, G.",
-      "Réville, V.",
+      "R\u00e9ville, V.",
       "Kieokaew, R.",
       "Plotnikov, I.",
       "Penou, E.",
@@ -1161,7 +1147,7 @@
       "Rouillard, Alexis P.",
       "Genot, Vincent N.",
       "Plotnikov, Illya",
-      "Réville, Victor",
+      "R\u00e9ville, Victor",
       "Kieokaew, Rungployphan Om",
       "Prech, Lubomir",
       "D'Amicis, Raffaella",
@@ -1291,34 +1277,6 @@
     "publication_type": "abstract",
     "citations": 0,
     "url": "https://scixplorer.org/abs/2023AGUFMSH23B..03A/abstract",
-    "invited": false
-  },
-  {
-    "bibcode": "NOADS-Arcetri-2022",
-    "title": "Fe Heating Across a Shock Observed by Solar Orbiter’s Heavy Ion Sensor",
-    "authors": [
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2023-11-00",
-    "journal": "Arcetri Workshop of Plasma Astrophysics",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "url": "",
-    "invited": false
-  },
-  {
-    "bibcode": "NOADS-Arcetri-2023",
-    "title": "Heavy Ion Surfing on Alfvén Waves Observed by Solar Orbiter's Heavy Ion Sensor",
-    "authors": [
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2023-11-00",
-    "journal": "Arcetri Workshop of Plasma Astrophysics",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "url": "",
     "invited": false
   },
   {
@@ -1458,7 +1416,7 @@
   },
   {
     "bibcode": "2023ApJ...952...42A",
-    "title": "Solar Cycle Variation of 0.3-1.29 MeV Nucleon⁻¹ Heavy Ion Composition During Quiet Times Near 1 au in Solar Cycles 23 and 24",
+    "title": "Solar Cycle Variation of 0.3-1.29 MeV Nucleon\u207b\u00b9 Heavy Ion Composition During Quiet Times Near 1 au in Solar Cycles 23 and 24",
     "authors": [
       "Alterman, B. L.",
       "Desai, Mihir I.",
@@ -1850,12 +1808,12 @@
     "bibcode": "2023BAAS...55c.116G",
     "title": "Measuring interstellar neutrals in-situ: a critical contribution to heliospheric science",
     "authors": [
-      "Galli, André",
+      "Galli, Andr\u00e9",
       "Redfield, Seth",
       "Provornikova, Elena",
       "Kucharek, Harald",
-      "Swaczyna, Paweł",
-      "Sokół, Justyna M.",
+      "Swaczyna, Pawe\u0142",
+      "Sok\u00f3\u0142, Justyna M.",
       "Kubiak, Marzena A.",
       "Alterman, B. L."
     ],
@@ -1888,7 +1846,7 @@
       "Alterman, B. L.",
       "Alzate, Nathalia",
       "Andretta, Vincenzo",
-      "Auchère, Frédéric",
+      "Auch\u00e8re, Fr\u00e9d\u00e9ric",
       "Banerjee, Dipankar",
       "Berghmans, David",
       "Chamberlin, Phillip",
@@ -1953,35 +1911,6 @@
     "invited": false
   },
   {
-    "bibcode": "NOADS-SW-16-Alterman",
-    "title": "Mass-per-Charge Depending Heating of Iron at a Collisionless Shock",
-    "authors": [
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2023-06-00",
-    "journal": "Solar Wind 16",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "url": "",
-    "invited": false
-  },
-  {
-    "bibcode": "NOADS-SW-16-Lepri",
-    "title": "Heavy ion composition in the inner heliosphere from Solar Orbiter",
-    "authors": [
-      "Lepri, S. T.",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2023-06-00",
-    "journal": "Solar Wind 16",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "url": "",
-    "invited": false
-  },
-  {
     "bibcode": "2023EGUGA..25.7823A",
     "title": "Iron Heating Across a Shock Observed by Solar Orbiter's Heavy Ion Sensor",
     "authors": [
@@ -2015,34 +1944,6 @@
     "invited": false
   },
   {
-    "bibcode": "NOADS-Chapman-2023",
-    "title": "Heavy Ion Surfing on Alfven Waves Observed by Solar Orbiter’s Heavy Ion Sensor",
-    "authors": [
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2023-05-00",
-    "journal": "Chapman Conference on Advances in Understanding Alfvén Waves in the Sun and the Heliosphere",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "url": "",
-    "invited": false
-  },
-  {
-    "bibcode": "NOADS-IAGA-2023",
-    "title": "Heavy Ion Surfing on Alfvén Waves Observed by Solar Orbiter’s Heavy Ion Sensor",
-    "authors": [
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2023-05-00",
-    "journal": "28th IUGG General Assembly",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "url": "",
-    "invited": false
-  },
-  {
     "bibcode": "2023IAUS..372....3M",
     "title": "Solar Physics in the 2020s: DKIST, Parker Solar Probe, and Solar Orbiter as a Multi-Messenger Constellation",
     "authors": [
@@ -2063,7 +1964,7 @@
       "Linker, J.",
       "Malaspina, D. M.",
       "Matthews, S.",
-      "Müller, D.",
+      "M\u00fcller, D.",
       "Parenti, S.",
       "Petrie, G.",
       "Spadaro, D.",
@@ -2208,7 +2109,7 @@
     "bibcode": "2022AGUFMSH46A..03M",
     "title": "Overview and Classification of Solar Wind Instabilities in the Inner Heliosphere",
     "authors": [
-      "Martinović, Mihailo",
+      "Martinovi\u0107, Mihailo",
       "Klein, Kristopher G.",
       "Durovcova, Tereza",
       "Alterman, B. L."
@@ -2401,36 +2302,6 @@
     "publication_type": "article",
     "citations": 14,
     "url": "https://dx.doi.org/10.3847/1538-4357/ac8873",
-    "invited": false
-  },
-  {
-    "bibcode": "NOADS-SolO8-Rivera",
-    "title": "Investigating He+ in the inner heliosphere with the ACE/SWICS and the Solar Orbiter/HIS",
-    "authors": [
-      "Rivera, Y.",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2022-09-00",
-    "journal": "Solar Orbiter 8",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "url": "",
-    "invited": false
-  },
-  {
-    "bibcode": "NOADS-SolO8-Dewey",
-    "title": "In situ plasma composition of Oct-Nov 2021 ICMEs: HIS observations of prominence material",
-    "authors": [
-      "Dewey, R. M.",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2022-09-00",
-    "journal": "Solar Orbiter 8",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "url": "",
     "invited": false
   },
   {
@@ -2846,7 +2717,7 @@
       "Redfield, Seth",
       "Provornikova, Elena",
       "Kucharek, Harald",
-      "Swaczyna, Paweł",
+      "Swaczyna, Pawe\u0142",
       "Sokol, Justyna M.",
       "Kubiak, Marzena A.",
       "Alterman, B. L."
@@ -2892,12 +2763,12 @@
     "bibcode": "2022dsss.rept..326G",
     "title": "Measuring interstellar neutrals in-situ: a critical contribution to heliospheric science",
     "authors": [
-      "Galli, André",
+      "Galli, Andr\u00e9",
       "Redfield, Seth",
       "Provornikova, Elena",
       "Kucharek, Harald",
-      "Swaczyna, Paweł",
-      "Sokół, Justyna M.",
+      "Swaczyna, Pawe\u0142",
+      "Sok\u00f3\u0142, Justyna M.",
       "Kubiak, Marzena A.",
       "Alterman, B. L."
     ],
@@ -3107,9 +2978,9 @@
     "bibcode": "2021ApJ...923..116M",
     "title": "Ion-driven Instabilities in the Inner Heliosphere. I. Statistical Trends",
     "authors": [
-      "Martinović, Mihailo M.",
+      "Martinovi\u0107, Mihailo M.",
       "Klein, Kristopher G.",
-      "Ďurovcová, Tereza",
+      "\u010eurovcov\u00e1, Tereza",
       "Alterman, B. L."
     ],
     "month": "",
@@ -3194,14 +3065,14 @@
     "bibcode": "2021Atmos..12.1277N",
     "title": "Spectra of Temperature Fluctuations in the Solar Wind",
     "authors": [
-      "Němeček, Zdeněk",
-      "Šafránková, Jana",
-      "Němec, František",
-      "Ďurovcová, Tereza",
-      "Pitňa, Alexander",
+      "N\u011bme\u010dek, Zden\u011bk",
+      "\u0160afr\u00e1nkov\u00e1, Jana",
+      "N\u011bmec, Franti\u0161ek",
+      "\u010eurovcov\u00e1, Tereza",
+      "Pit\u0148a, Alexander",
       "Alterman, B. L.",
       "Voitenko, Yuriy M.",
-      "Pavlů, Jiří",
+      "Pavl\u016f, Ji\u0159\u00ed",
       "Stevens, Michael L."
     ],
     "month": "",
@@ -3267,7 +3138,7 @@
       "Lichko, E.",
       "Livi, R.",
       "McManus, M.",
-      "Martinović, M.",
+      "Martinovi\u0107, M.",
       "Rahmati, A.",
       "Stevens, M.",
       "Whittlesey, P."
@@ -3428,7 +3299,7 @@
       "Case, Anthony W.",
       "Kasper, Justin C.",
       "Klein, Kristopher G.",
-      "Martinović, Mihailo M.",
+      "Martinovi\u0107, Mihailo M.",
       "Stevens, Michael"
     ],
     "month": "",
@@ -3438,86 +3309,6 @@
     "citations": 39,
     "url": "https://dx.doi.org/10.1093/mnras/staa2770",
     "invited": false
-  },
-  {
-    "bibcode": "NOADS-barnes_will_2020_4091384",
-    "title": "Toward A Sustainable Software Development Model for Heliophysics",
-    "authors": [
-      "Barnes, W.",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2020-10-00",
-    "journal": "Zenodo",
-    "publication_type": "techreport",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.5281/zenodo.4091384",
-    "invited": false,
-    "keywords": "whitepaper"
-  },
-  {
-    "bibcode": "NOADS-verniero_j_l_2020_4158714",
-    "title": "Guiding Heliophysics Toward an Enhanced Transdisciplinary Framework",
-    "authors": [
-      "Verniero, J. L.",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2020-10-00",
-    "journal": "Zenodo",
-    "publication_type": "techreport",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.5281/zenodo.4158714",
-    "invited": false,
-    "keywords": "whitepaper"
-  },
-  {
-    "bibcode": "NOADS-Helio2050ISP",
-    "title": "Expanding the Realm of Solar and Space Physics: Exploration of the Outer Heliosphere and Local Interstellar Medium",
-    "authors": [
-      "Brandt, P. C.",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2020-10-00",
-    "journal": "",
-    "publication_type": "techreport",
-    "citations": 0,
-    "url": "https://www.hou.usra.edu/meetings/helio2050/pdf/4099.pdf",
-    "invited": false,
-    "keywords": "whitepaper"
-  },
-  {
-    "bibcode": "NOADS-schonfeld_samuel_j_2020_4060331",
-    "title": "HelioWeb: A resource for 21st century science",
-    "authors": [
-      "Schonfeld, S. J.",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2020-09-00",
-    "journal": "Zenodo",
-    "publication_type": "techreport",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.5281/zenodo.4060331",
-    "invited": false,
-    "keywords": "whitepaper"
-  },
-  {
-    "bibcode": "NOADS-mason_e_i_2020_4024810",
-    "title": "The Need for Consistent, Comprehensive Inner Heliosphere Data",
-    "authors": [
-      "Mason, E. I.",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2020-09-00",
-    "journal": "Zenodo",
-    "publication_type": "techreport",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.5281/zenodo.4024810",
-    "invited": false,
-    "keywords": "whitepaper"
   },
   {
     "bibcode": "2020ApJS..248....5V",
@@ -3599,9 +3390,9 @@
       "Vech, D.",
       "Klein, K. G.",
       "Stevens, M.",
-      "Martinović, Mihailo M.",
+      "Martinovi\u0107, Mihailo M.",
       "Alterman, B. L.",
-      "Ďurovcová, Tereza",
+      "\u010eurovcov\u00e1, Tereza",
       "Paulson, Kristoff",
       "Maruca, Bennett A.",
       "Qudsi, Ramiz A.",
@@ -3637,7 +3428,7 @@
     "bibcode": "2020ApJS..246...30M",
     "title": "The Enhancement of Proton Stochastic Heating in the Near-Sun Solar Wind",
     "authors": [
-      "Martinović, Mihailo M.",
+      "Martinovi\u0107, Mihailo M.",
       "Klein, Kristopher G.",
       "Kasper, Justin C.",
       "Case, Anthony W.",
@@ -3742,7 +3533,7 @@
     "bibcode": "2019AGUFMSH13C3448M",
     "title": "Stochastic heating of the solar wind becomes increasingly significant close to the Alfven critical point",
     "authors": [
-      "Martinović, M.",
+      "Martinovi\u0107, M.",
       "Klein, K. G.",
       "Kasper, J. C.",
       "Case, A. W.",
@@ -3803,7 +3594,7 @@
       "Whittlesey, P. L.",
       "Huang, J.",
       "Klein, K. G.",
-      "Martinović, M.",
+      "Martinovi\u0107, M.",
       "Bale, S. D.",
       "Pulupa, M.",
       "Malaspina, D.",
@@ -3843,7 +3634,7 @@
       "Livi, R.",
       "MacDowall, R. J.",
       "Mallet, A.",
-      "Martinović, M.",
+      "Martinovi\u0107, M.",
       "Paulson, K.",
       "Pulupa, M.",
       "Stevens, M. L.",
@@ -3892,22 +3683,6 @@
     "invited": false
   },
   {
-    "bibcode": "NOADS-murphy_nicholas_a_2019_3265454",
-    "title": "Enabling scientific reproducibility in plasma research",
-    "authors": [
-      "Murphy, Nicholas A.",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2019-07-00",
-    "journal": "Zenodo",
-    "publication_type": "techreport",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.5281/zenodo.3265454",
-    "invited": false,
-    "keywords": "whitepaper"
-  },
-  {
     "bibcode": "2019shin.confE..48A",
     "title": "Helium Variation Across Two Solar Cycles Reveals A Speed-Dependent Phase Lag",
     "authors": [
@@ -3921,39 +3696,6 @@
     "citations": 0,
     "url": "https://scixplorer.org/abs/2019shin.confE..48A/abstract",
     "invited": false
-  },
-  {
-    "bibcode": "NOADS-murphy_nicholas_a_2019_2578291",
-    "title": "Making plasma research reproducible",
-    "authors": [
-      "Murphy, Nicholas A.",
-      "Alterman, B. L.",
-      "Stansby, D."
-    ],
-    "month": "",
-    "year": "2019-02-00",
-    "journal": "",
-    "publication_type": "techreport",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.5281/zenodo.2578291",
-    "invited": false,
-    "keywords": "whitepaper"
-  },
-  {
-    "bibcode": "NOADS-murphy_nicholas_a_2019_2578277",
-    "title": "Building an open source software ecosystem for cross-disciplinary plasma research and education",
-    "authors": [
-      "Murphy, Nicholas A.",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2019-02-00",
-    "journal": "",
-    "publication_type": "techreport",
-    "citations": 0,
-    "url": "https://dx.doi.org/10.5281/zenodo.2578277",
-    "invited": false,
-    "keywords": "whitepaper"
   },
   {
     "bibcode": "2019PhDT.......121A",
