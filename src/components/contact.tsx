@@ -56,7 +56,7 @@ export function Contact() {
           <Link href="https://www.linkedin.com/in/blalterman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-foreground transition-colors">
             <LinkedinIcon className="h-6 w-6" />
           </Link>
-          <Link href="/Alterman-CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link href="/Alterman-CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV" className="text-foreground transition-colors">
             <CvIcon className="h-6 w-6" />
           </Link>
         </div>

@@ -84,7 +84,7 @@ export function MobileNav() {
                     <LinkedinIcon className="h-5 w-5" />
                 </Link>
             </Button>
-            <Button variant="ghost" size="icon" asChild>
+            <Button variant="ghost" size="icon" asChild className="[&_svg]:size-5">
                 <Link href="/Alterman-CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
                     <CvIcon className="h-5 w-5" />
                 </Link>
