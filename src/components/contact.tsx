@@ -38,7 +38,7 @@ export function Contact() {
           </Button>
         </div>
         <div className="flex justify-center items-center space-x-4 mb-4">
-          <Link href="https://github.com/blalterman" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link href="https://github.com/blalterman" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-foreground transition-colors">
             <Github className="h-6 w-6" />
           </Link>
           <Link href="https://orcid.org/0000-0001-6673-3432" target="_blank" rel="noopener noreferrer" aria-label="ORCID" className="text-muted-foreground hover:text-foreground transition-colors">
