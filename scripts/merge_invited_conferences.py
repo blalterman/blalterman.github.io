@@ -201,7 +201,7 @@ def main():
     invited_file = data_dir / "invited_conferences.json"
     if not invited_file.exists():
         print(f"\nError: Invited conferences file not found: {invited_file}")
-        print("Run convert_invited_bibtex.py first to generate invited data.")
+        print("Invited conferences JSON file is missing.")
         sys.exit(1)
 
     print(f"\nLoading invited conferences from {invited_file.name}...")

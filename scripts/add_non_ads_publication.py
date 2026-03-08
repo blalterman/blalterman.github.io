@@ -3,7 +3,7 @@
 Interactive CLI and batch importer for adding non-ADS publications to the website.
 
 Supports two modes:
-  1. Interactive CLI: Prompt the user for each field (similar to add_invited_talk.py)
+  1. Interactive CLI: Prompt the user for each field
   2. Batch import: Parse a .bib file via --from-bibtex flag
 
 Categories:
