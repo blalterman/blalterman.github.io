@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Github } from 'lucide-react';
+import { CvIcon } from '@/components/icons/cv-icon';
 import { Button } from '@/components/ui/button';
 import { MobileNav } from '@/components/mobile-nav';
 import { ArxivIcon } from '@/components/icons/arxiv-icon';
@@ -56,6 +57,11 @@ export function Header() {
             <Button variant="ghost" size="icon" asChild>
                 <Link href="https://www.linkedin.com/in/blalterman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <LinkedinIcon className="h-5 w-5" />
+                </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+                <Link href="/Alterman-CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
+                    <CvIcon className="h-5 w-5" />
                 </Link>
             </Button>
           </div>
