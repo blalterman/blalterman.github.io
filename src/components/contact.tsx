@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Mail, Github } from 'lucide-react';
+import { CvIcon } from '@/components/icons/cv-icon';
 import Link from 'next/link';
 import { OrcidIcon } from './icons/orcid-icon';
 import { SciXIcon } from './icons/scix-icon';
@@ -54,6 +55,9 @@ export function Contact() {
           </Link>
           <Link href="https://www.linkedin.com/in/blalterman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-foreground transition-colors">
             <LinkedinIcon className="h-6 w-6" />
+          </Link>
+          <Link href="/Alterman-CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV" className="text-muted-foreground hover:text-foreground transition-colors">
+            <CvIcon className="h-6 w-6" />
           </Link>
         </div>
         <p className="text-sm text-muted-foreground">
