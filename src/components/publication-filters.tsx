@@ -24,9 +24,21 @@ import {
 } from '@/components/ui/select'
 import { Label } from '@/components/ui/label'
 import { MultiSelect } from '@/components/ui/multi-select'
-import { BookOpen, Filter, ChevronDown, X } from 'lucide-react'
+import { BookOpen, Filter, ChevronDown, ChevronUp, X } from 'lucide-react'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-import { extractUniqueJournals, extractUniqueYears, isFirstAuthor, formatAuthorNames, isAlterman, decodeHtmlEntities } from '@/lib/publication-utils'
+import {
+  extractUniqueJournals,
+  extractUniqueYears,
+  isFirstAuthor,
+  formatAuthorNames,
+  isAlterman,
+  decodeHtmlEntities,
+  sortPublicationsByDate,
+  sortPublicationsByCitations,
+  sortPublicationsByTitle,
+  sortPublicationsByFirstAuthor,
+  sortPublicationsByJournal,
+} from '@/lib/publication-utils'
 
 interface PublicationCategory {
   title: string
@@ -73,6 +85,22 @@ export function PublicationFilters({
   const [journalFilters, setJournalFilters] = useState<string[]>([])
   const [yearFilters, setYearFilters] = useState<string[]>([])
   const [isPopoverOpen, setIsPopoverOpen] = useState(false)
+
+  // Sort state
+  const [sortColumn, setSortColumn] = useState<string | null>(null)
+  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc')
+
+  const handleSort = (column: string) => {
+    if (sortColumn !== column) {
+      setSortColumn(column)
+      setSortDirection('asc')
+    } else if (sortDirection === 'asc') {
+      setSortDirection('desc')
+    } else {
+      setSortColumn(null)
+      setSortDirection('asc')
+    }
+  }
 
   // Extract unique values for dropdowns
   const uniqueJournals = useMemo(
@@ -125,6 +153,26 @@ export function PublicationFilters({
     count += yearFilters.length
     return count
   }, [authorshipFilter, invitedFilter, journalFilters, yearFilters, categoryData.slug])
+
+  // Sort filtered publications
+  const sortedPublications = useMemo(() => {
+    if (!sortColumn) return filteredPublications
+
+    switch (sortColumn) {
+      case 'year':
+        return sortPublicationsByDate(filteredPublications, sortDirection)
+      case 'title':
+        return sortPublicationsByTitle(filteredPublications, sortDirection)
+      case 'authors':
+        return sortPublicationsByFirstAuthor(filteredPublications, sortDirection)
+      case 'journal':
+        return sortPublicationsByJournal(filteredPublications, sortDirection)
+      case 'citations':
+        return sortPublicationsByCitations(filteredPublications, sortDirection)
+      default:
+        return filteredPublications
+    }
+  }, [filteredPublications, sortColumn, sortDirection])
 
   // Reset all filters
   const clearAllFilters = () => {
@@ -347,16 +395,66 @@ export function PublicationFilters({
           <Table>
             <TableHeader>
               <TableRow className="bg-muted/50">
-                <TableHead className="w-[100px] font-bold">Year</TableHead>
-                <TableHead className="font-bold">Title</TableHead>
+                <TableHead
+                  className="w-[100px] font-bold cursor-pointer select-none hover:bg-muted/70 transition-colors"
+                  onClick={() => handleSort('year')}
+                >
+                  <span className="inline-flex items-center gap-1">
+                    Year
+                    {sortColumn === 'year' && (
+                      sortDirection === 'asc' ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />
+                    )}
+                  </span>
+                </TableHead>
+                <TableHead
+                  className="font-bold cursor-pointer select-none hover:bg-muted/70 transition-colors"
+                  onClick={() => handleSort('title')}
+                >
+                  <span className="inline-flex items-center gap-1">
+                    Title
+                    {sortColumn === 'title' && (
+                      sortDirection === 'asc' ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />
+                    )}
+                  </span>
+                </TableHead>
                 {categoryData.slug !== 'invited-talks' && categoryData.slug !== 'phd-thesis' && (
-                  <TableHead className="font-bold">Authors</TableHead>
+                  <TableHead
+                    className="font-bold cursor-pointer select-none hover:bg-muted/70 transition-colors"
+                    onClick={() => handleSort('authors')}
+                  >
+                    <span className="inline-flex items-center gap-1">
+                      Authors
+                      {sortColumn === 'authors' && (
+                        sortDirection === 'asc' ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />
+                      )}
+                    </span>
+                  </TableHead>
                 )}
                 {(categoryData.showJournal !== false) && (
-                  <TableHead className="font-bold">{journalLabel}</TableHead>
+                  <TableHead
+                    className="font-bold cursor-pointer select-none hover:bg-muted/70 transition-colors"
+                    onClick={() => handleSort('journal')}
+                  >
+                    <span className="inline-flex items-center gap-1">
+                      {journalLabel}
+                      {sortColumn === 'journal' && (
+                        sortDirection === 'asc' ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />
+                      )}
+                    </span>
+                  </TableHead>
                 )}
                 {categoryData.showCitations && (
-                  <TableHead className="text-center w-[100px] font-bold">Citations</TableHead>
+                  <TableHead
+                    className="text-center w-[100px] font-bold cursor-pointer select-none hover:bg-muted/70 transition-colors"
+                    onClick={() => handleSort('citations')}
+                  >
+                    <span className="inline-flex items-center gap-1 justify-center w-full">
+                      Citations
+                      {sortColumn === 'citations' && (
+                        sortDirection === 'asc' ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />
+                      )}
+                    </span>
+                  </TableHead>
                 )}
                 {(categoryData.showLinks !== false) && (
                   <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
@@ -364,7 +462,7 @@ export function PublicationFilters({
               </TableRow>
             </TableHeader>
             <TableBody>
-              {filteredPublications.map((pub: Publication, index: number) => (
+              {sortedPublications.map((pub: Publication, index: number) => (
                 <TableRow key={index} className="hover:bg-muted/30">
                   <TableCell className="font-medium">
                     {pub.year.substring(0, 4)}
