@@ -1,6 +1,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Briefcase, GraduationCap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface Education {
     Institution: string;
@@ -30,6 +32,11 @@ export function Experience({ heading, tagline, educationData, professionalData }
             <div className="text-center mb-16">
                 <h2 className="font-headline">{heading}</h2>
                 <p className="text-lg text-muted-foreground mt-2">{tagline}</p>
+                <Button variant="outline" asChild className="mt-4">
+                    <Link href="/Alterman-CV.pdf" target="_blank" rel="noopener noreferrer">
+                        Download My CV (PDF)
+                    </Link>
+                </Button>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>
