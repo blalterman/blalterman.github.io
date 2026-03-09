@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from pathlib import Path
 from utils import get_public_data_dir, get_public_plots_dir, get_relative_path
-from plot_config import COLORS, FIGURE, FONTS, LINES, GRID, LEGEND, LAYOUT, OUTPUT
+from plot_config import COLORS, FIGURE, FONTS, LINES, GRID, LEGEND, LAYOUT, OUTPUT, THEMES, get_theme_config
 
 # === SECTION 1: Load Publications Data ===
 public_data_dir = get_public_data_dir()
@@ -137,76 +137,96 @@ with open(output_path, 'w') as f:
 
 print(f"\n💾 Data saved to {get_relative_path(output_path)}")
 
-# === SECTION 4: Generate Line Plot ===
+# === SECTION 4: Generate Line Plots (light + dark) ===
 image_output_dir = get_public_plots_dir()
 image_output_dir.mkdir(parents=True, exist_ok=True)
 
-# Create figure with configured settings
-fig, ax = plt.subplots(figsize=FIGURE['figsize'], dpi=FIGURE['dpi'])
-fig.patch.set_facecolor(FIGURE['facecolor'])
 
-# Plot lines with configured styles (cumulative data)
-ax.plot(all_years, cum_refereed,
-        label='Refereed Articles',
-        color=COLORS['refereed'],
-        **LINES['refereed'])
+def generate_plot(theme_name='light'):
+    """Generate publications timeline plot for a given theme."""
+    theme = get_theme_config(theme_name)
+    suffix = '' if theme_name == 'light' else f'_{theme_name}'
 
-ax.plot(all_years, cum_conferences,
-        label='Conference Contributions',
-        color=COLORS['conference'],
-        **LINES['conference'])
+    # Create figure with configured settings
+    fig, ax = plt.subplots(figsize=FIGURE['figsize'], dpi=FIGURE['dpi'])
+    fig.patch.set_facecolor(theme['facecolor'])
+    ax.set_facecolor('none')
 
-ax.plot(all_years, cum_other,
-        label='Other Publications',
-        color=COLORS['other'],
-        **LINES['other'])
+    # Plot lines with configured styles (cumulative data)
+    ax.plot(all_years, cum_refereed,
+            label='Refereed Articles',
+            color=COLORS['refereed'],
+            **LINES['refereed'])
 
-# Apply styling
-ax.set_title('Cumulative Publications', **FONTS['title'])
-ax.set_xlabel('Year', **FONTS['axis_label'])
-ax.set_ylabel('Total Publications', **FONTS['axis_label'])
+    ax.plot(all_years, cum_conferences,
+            label='Conference Contributions',
+            color=COLORS['conference'],
+            **LINES['conference'])
 
-# Configure x-axis: label every 2nd year, minor ticks for all years
-major_ticks = all_years[::2]  # Every 2nd year for labels
-ax.set_xticks(major_ticks, minor=False)  # Major ticks with labels
-ax.set_xticks(all_years, minor=True)     # Minor ticks for all years
-ax.tick_params(axis='x', which='minor', length=3)  # Shorter minor ticks
-ax.tick_params(axis='x', which='major', length=6)  # Standard major ticks
+    ax.plot(all_years, cum_other,
+            label='Other Publications',
+            color=COLORS['other'],
+            **LINES['other'])
 
-# Configure grid
-ax.grid(GRID['visible'],
-        alpha=GRID['alpha'],
-        linestyle=GRID['linestyle'],
-        linewidth=GRID['linewidth'],
-        color=GRID['color'])
-ax.set_axisbelow(True)  # Grid behind plot elements
+    # Apply styling with theme colors
+    ax.set_title('Cumulative Publications', color=theme['text_color'], **FONTS['title'])
+    ax.set_xlabel('Year', color=theme['text_color'], **FONTS['axis_label'])
+    ax.set_ylabel('Total Publications', color=theme['text_color'], **FONTS['axis_label'])
 
-# Configure legend
-ax.legend(**LEGEND)
+    # Configure x-axis: label every 2nd year, minor ticks for all years
+    major_ticks = all_years[::2]  # Every 2nd year for labels
+    ax.set_xticks(major_ticks, minor=False)  # Major ticks with labels
+    ax.set_xticks(all_years, minor=True)     # Minor ticks for all years
+    ax.tick_params(axis='x', which='minor', length=3, colors=theme['tick_color'])
+    ax.tick_params(axis='x', which='major', length=6, colors=theme['tick_color'])
+    ax.tick_params(axis='y', colors=theme['tick_color'])
 
-# Hide top and right spines for cleaner look
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
+    # Configure grid with theme colors
+    ax.grid(GRID['visible'],
+            alpha=theme['grid_alpha'],
+            linestyle=GRID['linestyle'],
+            linewidth=GRID['linewidth'],
+            color=theme['grid_color'])
+    ax.set_axisbelow(True)  # Grid behind plot elements
 
-# Apply tight layout
-if LAYOUT['tight_layout']:
-    plt.tight_layout(pad=LAYOUT['pad'])
+    # Configure legend with theme colors
+    legend = ax.legend(**LEGEND)
+    legend.get_frame().set_facecolor(theme['legend_facecolor'])
+    legend.get_frame().set_edgecolor(theme['legend_edgecolor'])
+    for text in legend.get_texts():
+        text.set_color(theme['legend_text_color'])
 
-# === SECTION 5: Save Plots ===
-# Save SVG
-plot_path_svg = image_output_dir / "publications_timeline.svg"
-plt.savefig(plot_path_svg,
-            format='svg',
-            dpi=OUTPUT['svg_dpi'],
-            bbox_inches=OUTPUT['bbox_inches'])
-print(f"📈 Plot saved to {get_relative_path(plot_path_svg)}")
+    # Style spines
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    for spine in ['bottom', 'left']:
+        ax.spines[spine].set_color(theme['spine_color'])
 
-# Save PNG
-plot_path_png = image_output_dir / "publications_timeline.png"
-plt.savefig(plot_path_png,
-            format='png',
-            dpi=OUTPUT['png_dpi'],
-            bbox_inches=OUTPUT['bbox_inches'])
-print(f"📈 Plot saved to {get_relative_path(plot_path_png)}")
+    # Apply tight layout
+    if LAYOUT['tight_layout']:
+        plt.tight_layout(pad=LAYOUT['pad'])
+
+    # Save plots
+    plot_path_svg = image_output_dir / f"publications_timeline{suffix}.svg"
+    plt.savefig(plot_path_svg,
+                format='svg',
+                dpi=OUTPUT['svg_dpi'],
+                bbox_inches=OUTPUT['bbox_inches'],
+                transparent=(theme_name == 'dark'))
+    print(f"📈 Plot saved to {get_relative_path(plot_path_svg)}")
+
+    plot_path_png = image_output_dir / f"publications_timeline{suffix}.png"
+    plt.savefig(plot_path_png,
+                format='png',
+                dpi=OUTPUT['png_dpi'],
+                bbox_inches=OUTPUT['bbox_inches'],
+                transparent=(theme_name == 'dark'))
+    print(f"📈 Plot saved to {get_relative_path(plot_path_png)}")
+
+    plt.close()
+
+
+for theme_name in THEMES:
+    generate_plot(theme_name)
 
 print("\n✓ Publications timeline generation complete")

@@ -114,3 +114,34 @@ OUTPUT = {
     'png_dpi': 300,
     'bbox_inches': 'tight',         # Crop whitespace
 }
+
+# === THEME CONFIGURATIONS ===
+THEMES = {
+    'light': {
+        'facecolor': 'white',
+        'text_color': '#1f2937',       # gray-800
+        'tick_color': '#1f2937',
+        'spine_color': '#1f2937',
+        'grid_color': 'gray',
+        'grid_alpha': 0.3,
+        'legend_facecolor': 'white',
+        'legend_edgecolor': '#d1d5db',
+        'legend_text_color': '#1f2937',
+    },
+    'dark': {
+        'facecolor': 'none',           # transparent
+        'text_color': '#d1d5db',       # gray-300
+        'tick_color': '#d1d5db',
+        'spine_color': '#4b5563',      # gray-600
+        'grid_color': '#4b5563',
+        'grid_alpha': 0.4,
+        'legend_facecolor': '#1e293b', # slate-800
+        'legend_edgecolor': '#4b5563',
+        'legend_text_color': '#d1d5db',
+    },
+}
+
+
+def get_theme_config(theme_name='light'):
+    """Return theme config dict for a given theme name."""
+    return THEMES.get(theme_name, THEMES['light'])

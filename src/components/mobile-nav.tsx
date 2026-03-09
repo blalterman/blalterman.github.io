@@ -13,6 +13,7 @@ import { GoogleScholarIcon } from './icons/google-scholar-icon';
 import { ArxivIcon } from './icons/arxiv-icon';
 import { LinkedinIcon } from './icons/linkedin-icon';
 
+
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
 

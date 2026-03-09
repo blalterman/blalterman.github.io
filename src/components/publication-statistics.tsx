@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { useTheme } from 'next-themes'
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { TrendingUp } from 'lucide-react'
 
@@ -15,6 +16,9 @@ interface PublicationStatisticsProps {
  * Makes "Total papers" and "Total citations" clickable to view timeline plots in modals.
  */
 export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
+  const { resolvedTheme } = useTheme()
+  const plotSuffix = resolvedTheme === 'dark' ? '_dark' : ''
+
   const [publicationsDialogOpen, setPublicationsDialogOpen] = useState(false)
   const [citationsDialogOpen, setCitationsDialogOpen] = useState(false)
   const [refereedPapersDialogOpen, setRefereedPapersDialogOpen] = useState(false)
@@ -95,7 +99,7 @@ export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
           <DialogTitle className="sr-only">Cumulative Publications</DialogTitle>
           <div className="relative w-full aspect-[10/7]">
             <Image
-              src="/plots/publications_timeline.svg"
+              src={`/plots/publications_timeline${plotSuffix}.svg`}
               alt="Cumulative publications showing total refereed articles, conference contributions, and other publications from 2014-2025"
               fill
               className="object-contain"
@@ -111,7 +115,7 @@ export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
           <DialogTitle className="sr-only">Cumulative Citations</DialogTitle>
           <div className="relative w-full aspect-[10/7]">
             <Image
-              src="/plots/citations_by_year.svg"
+              src={`/plots/citations_by_year${plotSuffix}.svg`}
               alt="Cumulative citations showing total refereed and non-refereed citations from 2018-2026"
               fill
               className="object-contain"
@@ -127,7 +131,7 @@ export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
           <DialogTitle className="sr-only">Cumulative Publications</DialogTitle>
           <div className="relative w-full aspect-[10/7]">
             <Image
-              src="/plots/publications_timeline.svg"
+              src={`/plots/publications_timeline${plotSuffix}.svg`}
               alt="Cumulative publications showing total refereed articles, conference contributions, and other publications from 2014-2025"
               fill
               className="object-contain"
@@ -143,7 +147,7 @@ export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
           <DialogTitle className="sr-only">Cumulative Citations</DialogTitle>
           <div className="relative w-full aspect-[10/7]">
             <Image
-              src="/plots/citations_by_year.svg"
+              src={`/plots/citations_by_year${plotSuffix}.svg`}
               alt="Cumulative citations showing total refereed and non-refereed citations from 2018-2026"
               fill
               className="object-contain"
@@ -159,7 +163,7 @@ export function PublicationStatistics({ stats }: PublicationStatisticsProps) {
           <DialogTitle className="sr-only">H-Index Timeline</DialogTitle>
           <div className="relative w-full aspect-[10/7]">
             <Image
-              src="/plots/h_index_timeline.svg"
+              src={`/plots/h_index_timeline${plotSuffix}.svg`}
               alt="h-index timeline showing growth from 2014 to 2025"
               fill
               className="object-contain"

@@ -13,7 +13,7 @@ import json
 import matplotlib.pyplot as plt
 from pathlib import Path
 from utils import get_repo_root, get_public_data_dir, get_public_plots_dir, get_relative_path
-from plot_config import COLORS, FIGURE, FONTS, LINES, GRID, AXES, LAYOUT, OUTPUT
+from plot_config import COLORS, FIGURE, FONTS, LINES, GRID, AXES, LAYOUT, OUTPUT, THEMES, get_theme_config
 
 
 def load_h_index_data():
@@ -61,13 +61,17 @@ def load_h_index_data():
     return years, h_values
 
 
-def generate_h_index_plot():
+def generate_h_index_plot(theme_name='light'):
     """Generate and save h-index timeline plot."""
+    theme = get_theme_config(theme_name)
+    suffix = '' if theme_name == 'light' else f'_{theme_name}'
+
     years, h_values = load_h_index_data()
 
     # Create figure with configured settings
     fig, ax = plt.subplots(figsize=FIGURE['figsize'], dpi=FIGURE['dpi'])
-    fig.patch.set_facecolor(FIGURE['facecolor'])
+    fig.patch.set_facecolor(theme['facecolor'])
+    ax.set_facecolor('none')
 
     # Plot h-index timeline with configured line style
     ax.plot(
@@ -85,32 +89,35 @@ def generate_h_index_plot():
         color=COLORS['refereed']
     )
 
-    # Apply styling
-    ax.set_title('H-Index Timeline', **FONTS['title'])
-    ax.set_xlabel('Year', **FONTS['axis_label'])
-    ax.set_ylabel('h-index', **FONTS['axis_label'])
+    # Apply styling with theme colors
+    ax.set_title('H-Index Timeline', color=theme['text_color'], **FONTS['title'])
+    ax.set_xlabel('Year', color=theme['text_color'], **FONTS['axis_label'])
+    ax.set_ylabel('h-index', color=theme['text_color'], **FONTS['axis_label'])
 
     # Configure x-axis: label every 2nd year, minor ticks for all years
     major_ticks = years[::2]  # Every 2nd year for labels
     ax.set_xticks(major_ticks, minor=False)  # Major ticks with labels
     ax.set_xticks(years, minor=True)         # Minor ticks for all years
-    ax.tick_params(axis='x', which='minor', length=3)  # Shorter minor ticks
-    ax.tick_params(axis='x', which='major', length=6)  # Standard major ticks
+    ax.tick_params(axis='x', which='minor', length=3, colors=theme['tick_color'])
+    ax.tick_params(axis='x', which='major', length=6, colors=theme['tick_color'])
+    ax.tick_params(axis='y', colors=theme['tick_color'])
 
     # Integer y-axis (h-index is always integer)
     ax.yaxis.set_major_locator(plt.MaxNLocator(integer=True))
 
-    # Configure grid
+    # Configure grid with theme colors
     ax.grid(GRID['visible'],
-            alpha=GRID['alpha'],
+            alpha=theme['grid_alpha'],
             linestyle=GRID['linestyle'],
             linewidth=GRID['linewidth'],
-            color=GRID['color'])
+            color=theme['grid_color'])
     ax.set_axisbelow(True)  # Grid behind plot elements
 
-    # Hide top and right spines for cleaner look
+    # Style spines
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
+    for spine in ['bottom', 'left']:
+        ax.spines[spine].set_color(theme['spine_color'])
 
     # Apply tight layout
     if LAYOUT['tight_layout']:
@@ -119,25 +126,26 @@ def generate_h_index_plot():
     # Save both SVG and PNG
     plots_dir = get_public_plots_dir()
 
-    # Save SVG
-    plot_path_svg = plots_dir / "h_index_timeline.svg"
+    plot_path_svg = plots_dir / f"h_index_timeline{suffix}.svg"
     plt.savefig(plot_path_svg,
                 format='svg',
                 dpi=OUTPUT['svg_dpi'],
-                bbox_inches=OUTPUT['bbox_inches'])
+                bbox_inches=OUTPUT['bbox_inches'],
+                transparent=(theme_name == 'dark'))
     print(f"📈 Plot saved to {get_relative_path(plot_path_svg)}")
 
-    # Save PNG
-    plot_path_png = plots_dir / "h_index_timeline.png"
+    plot_path_png = plots_dir / f"h_index_timeline{suffix}.png"
     plt.savefig(plot_path_png,
                 format='png',
                 dpi=OUTPUT['png_dpi'],
-                bbox_inches=OUTPUT['bbox_inches'])
+                bbox_inches=OUTPUT['bbox_inches'],
+                transparent=(theme_name == 'dark'))
     print(f"📈 Plot saved to {get_relative_path(plot_path_png)}")
 
     plt.close()
 
 
 if __name__ == '__main__':
-    generate_h_index_plot()
+    for theme_name in THEMES:
+        generate_h_index_plot(theme_name)
     print("\n✓ H-index timeline generation complete")
