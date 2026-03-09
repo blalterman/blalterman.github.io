@@ -1,18 +1,18 @@
 {
   "Programming & Software": {
     "icon": "Code",
-    "skills": ["Python", "R", "SQL", "MATLAB", "Git & GitHub", "Docker"]
+    "skills": ["Python", "Bash", "Git & GitHub", "LaTeX", "Mathematica", "LabView"]
   },
-  "Data Analysis & Viz": {
+  "Data Analysis": {
     "icon": "BrainCircuit",
-    "skills": ["Machine Learning", "Statistical Modeling", "Pandas & NumPy", "Matplotlib & Seaborn", "Plotly & Dash", "GIS"]
+    "skills": ["Pandas & NumPy", "Matplotlib", "Statistical Modeling", "SolarWindPy"]
   },
-  "Mission Involvement": {
-    "icon": "Rocket",
-    "skills": ["Mars Rover Mission", "Hubble Telescope", "ExoMars Program", "James Webb ST"]
+  "Operating Systems": {
+    "icon": "Monitor",
+    "skills": ["Linux", "macOS", "Windows"]
   },
-  "Techniques & Methods": {
+  "Laboratory & Simulation": {
     "icon": "Database",
-    "skills": ["Spectroscopy", "Image Processing", "Numerical Simulation", "High-Performance Computing"]
+    "skills": ["Vacuum Chambers", "Particle Accelerators", "SIMION Ion Optics"]
   }
 }
