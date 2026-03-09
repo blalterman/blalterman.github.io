@@ -12,6 +12,7 @@ import { SciXIcon } from './icons/scix-icon';
 import { GoogleScholarIcon } from './icons/google-scholar-icon';
 import { ArxivIcon } from './icons/arxiv-icon';
 import { LinkedinIcon } from './icons/linkedin-icon';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 
 export function MobileNav() {
@@ -90,6 +91,7 @@ export function MobileNav() {
                     <CvIcon className="h-5 w-5" />
                 </Link>
             </Button>
+            <ThemeToggle />
           </div>
         </nav>
       </SheetContent>

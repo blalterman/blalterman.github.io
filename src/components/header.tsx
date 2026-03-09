@@ -9,6 +9,7 @@ import { SciXIcon } from '@/components/icons/scix-icon';
 import { OrcidIcon } from '@/components/icons/orcid-icon';
 import { LinkedinIcon } from './icons/linkedin-icon';
 import { LogoIcon } from '@/components/icons/logo-icon';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 
 export function Header() {
@@ -65,6 +66,7 @@ export function Header() {
                     <CvIcon className="h-5 w-5" />
                 </Link>
             </Button>
+            <ThemeToggle />
           </div>
           <MobileNav />
         </div>
