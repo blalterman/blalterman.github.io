@@ -67,7 +67,7 @@ export default function BenPage() {
                                     </CardTitle>
                                 </CardHeader>
                                 <CardContent className="p-0 flex-1">
-                                    <CardDescription className="text-base">
+                                    <CardDescription className="text-base text-body-foreground">
                                         {section.excerpt}
                                     </CardDescription>
                                 </CardContent>

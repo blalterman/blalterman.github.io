@@ -102,7 +102,7 @@ export default async function BenSubpage({ params }: { params: Promise<{ slug: s
                 </CardHeader>
                 <CardContent className="space-y-6">
                     {section.paragraphs.map((paragraph, index) => (
-                        <p key={index} className="text-lg text-muted-foreground leading-relaxed">
+                        <p key={index} className="text-lg text-body-foreground leading-relaxed">
                             {paragraph}
                         </p>
                     ))}

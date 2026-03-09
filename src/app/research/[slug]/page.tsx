@@ -58,7 +58,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ slug:
         <main className="flex-1 container mx-auto py-16 md:py-24">
             <h1 className="font-headline">{project?.title}</h1>
             <p
-                className="text-lg text-muted-foreground mt-4 [&_a]:text-primary [&_a:hover]:underline"
+                className="text-lg text-body-foreground leading-relaxed mt-4 [&_a]:text-primary [&_a:hover]:underline"
                 dangerouslySetInnerHTML={{ __html: renderMathInText(introductoryParagraph) }}
             />
             {figure && <ResearchFigure src={figure.src} alt={figure.alt} caption={figure.caption} />}

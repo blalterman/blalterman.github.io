@@ -93,7 +93,7 @@ export default function PublicationsPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-0 flex-1">
-                  <CardDescription className="text-base">
+                  <CardDescription className="text-base text-body-foreground">
                     {category.description}
                   </CardDescription>
                 </CardContent>
