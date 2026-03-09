@@ -135,8 +135,8 @@ THEMES = {
         'label_color': '#d3d8de',         # --body-foreground: 215 15% 85% (body tier)
         'tick_color': '#94a3b8',          # --muted-foreground: 215 20% 65% (muted tier)
         'spine_color': '#2f3541',         # --border: 220 16% 22%
-        'grid_color': '#2f3541',
-        'grid_alpha': 0.4,
+        'grid_color': 'gray',             # same mid-tone as light; bg tint bleeds through at low alpha
+        'grid_alpha': 0.3,                # match light method: mid-tone + low opacity = subtle but visible
         'legend_facecolor': '#161b26',    # --card: 222 25% 12%
         'legend_edgecolor': '#2f3541',
         'legend_text_color': '#d3d8de',   # --body-foreground (body tier)
