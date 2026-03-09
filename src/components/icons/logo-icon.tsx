@@ -6,7 +6,7 @@ export function LogoIcon(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 400 400"
       fill="currentColor"
-      aria-label="B. L. Alterman Logo"
+      aria-label="A fountain pen writing under a star"
       {...props}
     >
       <title>B. L. Alterman Logo</title>
