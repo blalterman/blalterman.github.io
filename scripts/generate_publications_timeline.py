@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from pathlib import Path
 from utils import get_public_data_dir, get_public_plots_dir, get_relative_path
-from plot_config import COLORS, FIGURE, FONTS, LINES, GRID, LEGEND, LAYOUT, OUTPUT, THEMES, get_theme_config
+from plot_config import COLORS, FIGURE, FONTS, LINES, GRID, LEGEND, LAYOUT, OUTPUT, THEMES, get_theme_config, get_data_colors
 
 # === SECTION 1: Load Publications Data ===
 public_data_dir = get_public_data_dir()
@@ -145,6 +145,7 @@ image_output_dir.mkdir(parents=True, exist_ok=True)
 def generate_plot(theme_name='light'):
     """Generate publications timeline plot for a given theme."""
     theme = get_theme_config(theme_name)
+    data_colors = get_data_colors(theme_name)
     suffix = '' if theme_name == 'light' else f'_{theme_name}'
 
     # Create figure with configured settings
@@ -155,23 +156,23 @@ def generate_plot(theme_name='light'):
     # Plot lines with configured styles (cumulative data)
     ax.plot(all_years, cum_refereed,
             label='Refereed Articles',
-            color=COLORS['refereed'],
+            color=data_colors['refereed'],
             **LINES['refereed'])
 
     ax.plot(all_years, cum_conferences,
             label='Conference Contributions',
-            color=COLORS['conference'],
+            color=data_colors['conference'],
             **LINES['conference'])
 
     ax.plot(all_years, cum_other,
             label='Other Publications',
-            color=COLORS['other'],
+            color=data_colors['other'],
             **LINES['other'])
 
     # Apply styling with theme colors
-    ax.set_title('Cumulative Publications', color=theme['text_color'], **FONTS['title'])
-    ax.set_xlabel('Year', color=theme['text_color'], **FONTS['axis_label'])
-    ax.set_ylabel('Total Publications', color=theme['text_color'], **FONTS['axis_label'])
+    ax.set_title('Cumulative Publications', color=theme['title_color'], **FONTS['title'])
+    ax.set_xlabel('Year', color=theme['label_color'], **FONTS['axis_label'])
+    ax.set_ylabel('Total Publications', color=theme['label_color'], **FONTS['axis_label'])
 
     # Configure x-axis: label every 2nd year, minor ticks for all years
     major_ticks = all_years[::2]  # Every 2nd year for labels

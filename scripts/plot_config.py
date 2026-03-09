@@ -119,8 +119,9 @@ OUTPUT = {
 THEMES = {
     'light': {
         'facecolor': 'white',
-        'text_color': '#1f2937',       # gray-800
-        'tick_color': '#1f2937',
+        'title_color': '#1f2937',      # gray-800 (heading tier)
+        'label_color': '#1f2937',      # gray-800 (body tier — same in light)
+        'tick_color': '#1f2937',       # gray-800 (muted tier — same in light)
         'spine_color': '#1f2937',
         'grid_color': 'gray',
         'grid_alpha': 0.3,
@@ -129,15 +130,16 @@ THEMES = {
         'legend_text_color': '#1f2937',
     },
     'dark': {
-        'facecolor': 'none',           # transparent
-        'text_color': '#d1d5db',       # gray-300
-        'tick_color': '#d1d5db',
-        'spine_color': '#4b5563',      # gray-600
-        'grid_color': '#4b5563',
+        'facecolor': 'none',              # transparent
+        'title_color': '#eff2f5',         # --foreground: 210 25% 95% (heading tier)
+        'label_color': '#d3d8de',         # --body-foreground: 215 15% 85% (body tier)
+        'tick_color': '#94a3b8',          # --muted-foreground: 215 20% 65% (muted tier)
+        'spine_color': '#2f3541',         # --border: 220 16% 22%
+        'grid_color': '#2f3541',
         'grid_alpha': 0.4,
-        'legend_facecolor': '#1e293b', # slate-800
-        'legend_edgecolor': '#4b5563',
-        'legend_text_color': '#d1d5db',
+        'legend_facecolor': '#161b26',    # --card: 222 25% 12%
+        'legend_edgecolor': '#2f3541',
+        'legend_text_color': '#d3d8de',   # --body-foreground (body tier)
     },
 }
 
@@ -145,3 +147,22 @@ THEMES = {
 def get_theme_config(theme_name='light'):
     """Return theme config dict for a given theme name."""
     return THEMES.get(theme_name, THEMES['light'])
+
+
+# === DARK-MODE DATA COLORS ===
+# Light-mode data colors (COLORS above) are medium-brightness, designed for white backgrounds.
+# On dark navy backgrounds, they blend (especially cornflowerblue-on-navy). These brighter
+# variants maintain the same hue families but push lightness up for dark-background contrast.
+DARK_COLORS = {
+    'refereed': '#93c5fd',           # bright sky blue (Tailwind blue-300)
+    'conference': '#fca5a5',         # bright coral (Tailwind red-300)
+    'other': '#86efac',              # bright mint (Tailwind green-300)
+    'nonrefereed': '#86efac',        # bright mint
+}
+
+
+def get_data_colors(theme_name='light'):
+    """Return data colors appropriate for the given theme."""
+    if theme_name == 'dark':
+        return DARK_COLORS
+    return COLORS

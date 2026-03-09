@@ -13,7 +13,7 @@ import json
 import matplotlib.pyplot as plt
 from pathlib import Path
 from utils import get_repo_root, get_public_data_dir, get_public_plots_dir, get_relative_path
-from plot_config import COLORS, FIGURE, FONTS, LINES, GRID, AXES, LAYOUT, OUTPUT, THEMES, get_theme_config
+from plot_config import COLORS, FIGURE, FONTS, LINES, GRID, AXES, LAYOUT, OUTPUT, THEMES, get_theme_config, get_data_colors
 
 
 def load_h_index_data():
@@ -64,6 +64,7 @@ def load_h_index_data():
 def generate_h_index_plot(theme_name='light'):
     """Generate and save h-index timeline plot."""
     theme = get_theme_config(theme_name)
+    data_colors = get_data_colors(theme_name)
     suffix = '' if theme_name == 'light' else f'_{theme_name}'
 
     years, h_values = load_h_index_data()
@@ -77,7 +78,7 @@ def generate_h_index_plot(theme_name='light'):
     ax.plot(
         years,
         h_values,
-        color=COLORS['refereed'],
+        color=data_colors['refereed'],
         **LINES['refereed']
     )
 
@@ -86,13 +87,13 @@ def generate_h_index_plot(theme_name='light'):
         years,
         h_values,
         alpha=0.2,
-        color=COLORS['refereed']
+        color=data_colors['refereed']
     )
 
     # Apply styling with theme colors
-    ax.set_title('H-Index Timeline', color=theme['text_color'], **FONTS['title'])
-    ax.set_xlabel('Year', color=theme['text_color'], **FONTS['axis_label'])
-    ax.set_ylabel('h-index', color=theme['text_color'], **FONTS['axis_label'])
+    ax.set_title('H-Index Timeline', color=theme['title_color'], **FONTS['title'])
+    ax.set_xlabel('Year', color=theme['label_color'], **FONTS['axis_label'])
+    ax.set_ylabel('h-index', color=theme['label_color'], **FONTS['axis_label'])
 
     # Configure x-axis: label every 2nd year, minor ticks for all years
     major_ticks = years[::2]  # Every 2nd year for labels
