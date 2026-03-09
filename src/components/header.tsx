@@ -7,8 +7,8 @@ import { ArxivIcon } from '@/components/icons/arxiv-icon';
 import { GoogleScholarIcon } from '@/components/icons/google-scholar-icon';
 import { SciXIcon } from '@/components/icons/scix-icon';
 import { OrcidIcon } from '@/components/icons/orcid-icon';
-import Image from 'next/image';
 import { LinkedinIcon } from './icons/linkedin-icon';
+import { LogoIcon } from '@/components/icons/logo-icon';
 
 export function Header() {
   return (
@@ -16,7 +16,7 @@ export function Header() {
       <div className="container flex h-16 max-w-screen-2xl items-center border-l-4 border-r-2 border-border/40">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Image src="/icons/logo.svg" alt="B. L. Alterman Logo" width={24} height={24} />
+            <LogoIcon className="h-6 w-6" />
             <span className="font-bold sm:inline-block">B. L. Alterman</span>
           </Link>
           <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
