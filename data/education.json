@@ -4,7 +4,12 @@
         "Department": "Applied Physics",
         "Location": "Ann Arbor, MI",
         "Dates": "2012 – 2019",
-        "Degree": "Doctor of Philosophy"
+        "Degree": "Doctor of Philosophy",
+        "dissertation": {
+            "title": "The Significance of Proton Beams in the Multiscale Solar Wind",
+            "url": "/publications/phd-thesis"
+        },
+        "advisors": ["Justin C. Kasper", "Stefano Livi"]
     },
     {
         "Institution": "Macalester College",

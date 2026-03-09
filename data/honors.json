@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Parker Solar Probe Group Achievement Award",
+    "organization": "NASA",
+    "year": "2023",
+    "url": "https://parkersolarprobe.jhuapl.edu/",
+    "category": "honor"
+  },
+  {
+    "title": "Explorers Club Fellow",
+    "organization": "The Explorers Club",
+    "year": "2020",
+    "url": "https://www.explorers.org/",
+    "category": "honor"
+  },
+  {
+    "title": "Ross Leadership Fellow",
+    "organization": "University of Michigan",
+    "year": "2018 – 2019",
+    "url": "https://sanger.umich.edu/experience/ross-leaders-academy/",
+    "category": "honor"
+  },
+  {
+    "title": "Bezos Scholar",
+    "organization": "Aspen Institute",
+    "year": "2007",
+    "url": "https://www.bezosscholars.org/",
+    "category": "honor"
+  },
+  {
+    "title": "AGU/SPA Committee Leadership",
+    "organization": "American Geophysical Union",
+    "year": "2020 – Present",
+    "items": [
+      { "name": "Nomination Task Force", "url": "https://connect.agu.org/spa/committees/ntf/ntf-team" },
+      { "name": "DEI Committee" },
+      { "name": "Early Career Leadership Advisory", "url": "https://connect.agu.org/spa/committees/early-career" }
+    ],
+    "category": "leadership"
+  },
+  {
+    "title": "Congressional Science Advocacy",
+    "organization": "AGU & University of Michigan",
+    "year": "2018",
+    "description": "Briefed congressional delegations on science policy",
+    "category": "leadership"
+  },
+  {
+    "title": "NASA Proposal Review Panels",
+    "organization": "NASA/ROSES",
+    "year": "2020, 2021",
+    "published": false,
+    "category": "leadership"
+  }
+]
