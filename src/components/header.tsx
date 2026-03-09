@@ -66,7 +66,9 @@ export function Header() {
                     <CvIcon className="h-5 w-5" />
                 </Link>
             </Button>
-            <ThemeToggle />
+            <div className="border-l border-border/40 pl-2">
+              <ThemeToggle />
+            </div>
           </div>
           <MobileNav />
         </div>
