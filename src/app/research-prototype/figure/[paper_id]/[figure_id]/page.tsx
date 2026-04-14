@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { FigureRegistry, FigureRegistryEntry } from '@/types/research-topic';
 import { Metadata } from 'next';
@@ -76,13 +75,12 @@ export default async function FigureDetailPage({ params }: Props) {
 
       <div className="space-y-8">
         {/* Figure Image */}
-        <div className="relative w-full aspect-[4/3] bg-muted rounded-lg overflow-hidden">
-          <Image
+        <div className="flex justify-center overflow-hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src={entry.src}
             alt={entry.alt}
-            fill
-            className="object-contain p-4"
-            priority
+            className="max-w-full h-auto"
           />
         </div>
 

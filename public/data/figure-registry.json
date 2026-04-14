@@ -2665,9 +2665,9 @@
     ],
     "technical_caption": "(Top) Solar wind helium abundance (A_He) as a function of solar wind speed (v_sw) and time as in Figure 1 over the time period covering 1995 to present day. (Bottom) A filled contour plot of the combined daily SOHO/EIT (195Å) and SDO/AIA (193Å) EUV central meridian brightpoint (BP) density as a function of solar latitude and time. BPs are averaged down to 27 day cadence. The color scale is chosen to highlight BP density > 0.8 and levels > 1 are shown in white to emphasize BPs in the range 0.8 to 1.0. The dotted yellow-black line highlights the 0.8 threshold. Solar minima and A_He shutoffs are plotted in light blue to contrast with BP density. Partially transparent blue lines indicate the latitudes λ = ±25°. The gray band in the top right corner indicates Parker Solar Probe (PSP) launch − 70 days through the exit of its sixth near-Sun +70 days and the yellow bars indicate the time spent below 0.25 AU. The green bar that starts at PSP encounter 4 indicates the time period following Solar Orbiter's (SolO) Feb 2020 launch (Müller et al., 2020).",
     "used_as_primary_in": [],
-    "used_as_related_in": [],
-    "used_as_not_shown_in": [
+    "used_as_related_in": [
       "solar-activity"
-    ]
+    ],
+    "used_as_not_shown_in": []
   }
 }

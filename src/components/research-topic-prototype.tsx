@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ResearchTopicData } from '@/types/research-topic';
 import { ChevronDown, ChevronUp, ExternalLink, ArrowRight } from 'lucide-react';
@@ -62,13 +61,12 @@ export function ResearchTopicPrototype({ data }: ResearchTopicPrototypeProps) {
       {/* Primary Figure */}
       {primary_figure && (
         <section className="space-y-6">
-          <div className="relative w-full aspect-[4/3] bg-muted rounded-lg overflow-hidden">
-            <Image
+          <div className="flex justify-center overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={primary_figure.src}
               alt={primary_figure.alt}
-              fill
-              className="object-contain p-4"
-              priority
+              className="max-w-full h-auto"
             />
           </div>
 
@@ -118,12 +116,12 @@ export function ResearchTopicPrototype({ data }: ResearchTopicPrototypeProps) {
                 href={fig.link || '#'}
                 className="border border-border rounded-lg overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
               >
-                <div className="relative w-full aspect-[4/3] bg-muted">
-                  <Image
+                <div className="flex justify-center bg-white overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={fig.src}
                     alt={fig.alt}
-                    fill
-                    className="object-contain p-2"
+                    className="max-w-full h-auto"
                   />
                 </div>
                 <div className="p-4 space-y-2">
