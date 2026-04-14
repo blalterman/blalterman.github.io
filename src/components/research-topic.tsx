@@ -26,7 +26,7 @@ function SummarySection({
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between py-3 text-left hover:bg-muted/50 transition-colors"
       >
-        <span className="font-medium text-foreground">{title}</span>
+        <span className="font-semibold text-foreground">{title}</span>
         {isOpen ? (
           <ChevronUp className="h-4 w-4 text-muted-foreground" />
         ) : (
@@ -34,7 +34,7 @@ function SummarySection({
         )}
       </button>
       {isOpen && (
-        <div className="pb-4 text-muted-foreground leading-relaxed">
+        <div className="pb-4 text-body-foreground leading-relaxed">
           {content}
         </div>
       )}
@@ -74,7 +74,7 @@ export function ResearchTopic({ data }: ResearchTopicProps) {
             <h2 className="font-headline text-2xl">{primary_figure.short_title}</h2>
 
             {/* Summary Accordion */}
-            <div className="border border-border rounded-lg px-4">
+            <div className="border border-border rounded-lg px-4 bg-card">
               <SummarySection
                 title="What We See"
                 content={primary_figure.summary.what_we_see}
