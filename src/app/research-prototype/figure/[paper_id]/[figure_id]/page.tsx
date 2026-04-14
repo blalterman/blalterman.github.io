@@ -75,7 +75,7 @@ export default async function FigureDetailPage({ params }: Props) {
 
       <div className="space-y-8">
         {/* Figure Image */}
-        <div className="flex justify-center bg-white rounded-lg overflow-hidden">
+        <div className="w-fit mx-auto p-3 bg-white rounded-lg overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={entry.src}

@@ -61,7 +61,7 @@ export function ResearchTopicPrototype({ data }: ResearchTopicPrototypeProps) {
       {/* Primary Figure */}
       {primary_figure && (
         <section className="space-y-6">
-          <div className="flex justify-center bg-white rounded-lg overflow-hidden">
+          <div className="w-fit mx-auto p-3 bg-white rounded-lg overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={primary_figure.src}
@@ -116,7 +116,7 @@ export function ResearchTopicPrototype({ data }: ResearchTopicPrototypeProps) {
                 href={fig.link || '#'}
                 className="border border-border rounded-lg overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
               >
-                <div className="flex justify-center bg-white overflow-hidden">
+                <div className="w-fit mx-auto p-3 bg-white overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={fig.src}
