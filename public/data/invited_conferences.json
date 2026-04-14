@@ -46,5 +46,20 @@
     "keywords": "invited",
     "invited_url": "ui.adsabs.harvard.edu/abs/2019AGUFM.U21B..14A",
     "url": ""
+  },
+  {
+    "title": "Later Years and Early Careers (Panel Discussion)",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "year": "2021-08-00",
+    "month": "8",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "invited": true,
+    "booktitle": "SHINE Conference",
+    "journal": "SHINE Conference",
+    "keywords": "invited",
+    "url": ""
   }
 ]

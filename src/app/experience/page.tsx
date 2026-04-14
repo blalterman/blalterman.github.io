@@ -14,6 +14,11 @@ interface Education {
     Location: string;
     Dates: string;
     Degree: string;
+    dissertation?: {
+        title: string;
+        url: string;
+    };
+    advisors?: string[];
 }
 
 interface Position {
@@ -21,6 +26,23 @@ interface Position {
     "Position Title": string;
     Dates: string;
     Location: string;
+}
+
+interface HonorItem {
+    name: string;
+    url?: string;
+    active?: boolean;
+}
+
+interface Honor {
+    title: string;
+    organization: string;
+    year: string;
+    url?: string;
+    description?: string;
+    items?: HonorItem[];
+    published?: boolean;
+    category: "honor" | "leadership";
 }
 
 interface ExperiencePageData {
@@ -31,6 +53,7 @@ interface ExperiencePageData {
 export default function ExperiencePage() {
     const educationData = loadJSONData<Education[]>('education.json');
     const positionsData = loadJSONData<Position[]>('positions.json');
+    const honorsData = loadJSONData<Honor[]>('honors.json');
     const experiencePageData = loadJSONData<ExperiencePageData>('experience-page.json');
 
     return (
@@ -39,6 +62,7 @@ export default function ExperiencePage() {
             tagline={experiencePageData.tagline}
             educationData={educationData}
             professionalData={positionsData}
+            honorsData={honorsData}
         />
     );
 }

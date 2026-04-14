@@ -138,6 +138,7 @@ def main():
     projects_path = public_data_dir / "research-projects.json"
     page_mappings_path = public_data_dir / "page-figure-mappings.json"
     pubs_path = public_data_dir / "ads_publications.json"
+    non_ads_pubs_path = public_data_dir / "non_ads_publications.json"
     legacy_metadata_path = repo_root / "public" / "paper-figures" / "figure-metadata.json"
     output_path = public_data_dir / "research-figures-with-captions.json"
 
@@ -152,6 +153,9 @@ def main():
         page_mappings = json.load(f)
     with open(pubs_path, 'r') as f:
         pubs_data = json.load(f)
+    if non_ads_pubs_path.exists():
+        with open(non_ads_pubs_path, 'r') as f:
+            pubs_data += json.load(f)
 
     # Load legacy metadata (for transitional compatibility)
     legacy_metadata = {}

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { GraduationCap, BookOpen, Database, FileText, Presentation, ScrollText, FileCode } from "lucide-react";
 import { Metadata, ResolvingMetadata } from 'next';
-import { loadJSONData } from "@/lib/data-loader";
+import { loadJSONData, loadAllPublications } from "@/lib/data-loader";
 import { getPublicationsByType, getInvitedPublications, getSeminarPresentations } from "@/lib/publication-utils";
 import type { Publication } from "@/types/publication";
 import { redirect } from "next/navigation";
@@ -40,7 +40,7 @@ const iconMap = {
 
 export async function generateStaticParams() {
   const categoriesData = loadJSONData<PublicationsCategoriesData>('publications-categories.json');
-  const adsPublications = loadJSONData<Publication[]>('ads_publications.json');
+  const adsPublications = loadAllPublications<Publication>();
 
   // Only generate routes for categories that have publications
   const categoriesWithPublications = categoriesData.categories.filter((category) => {
@@ -78,7 +78,7 @@ export default async function PublicationCategoryPage({ params }: { params: Prom
     redirect('/publications');
   }
 
-  const adsPublications = loadJSONData<Publication[]>('ads_publications.json');
+  const adsPublications = loadAllPublications<Publication>();
   const stats = loadJSONData<any>('publication_statistics.json');
   const invitedPresentations = loadJSONData<Publication[]>('invited_presentations.json');
 

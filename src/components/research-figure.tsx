@@ -15,7 +15,7 @@ export function ResearchFigure({ src, alt, caption, className }: ResearchFigureP
 
   return (
     <figure className={cn('my-8 flex flex-col items-center', className)}>
-      <div className="relative w-full max-w-4xl aspect-[4/3] border rounded-lg overflow-hidden shadow-lg">
+      <div className="relative w-full max-w-4xl aspect-[4/3] border rounded-lg overflow-hidden shadow-lg dark:bg-white dark:border-white/20">
         <Image
           src={src}
           alt={alt}

@@ -20,11 +20,11 @@ export function About({ biographyData }: AboutProps) {
         {/* Biography text aligned with hero name/tagline */}
         <div className="md:col-span-2 space-y-4">
           {biographyData.paragraphs.map((paragraph, index) => (
-            <p key={index} className="text-lg text-muted-foreground">
+            <p key={index} className="text-lg text-body-foreground leading-relaxed">
               {paragraph}
             </p>
           ))}
-          <p className="text-lg text-muted-foreground mt-4">
+          <p className="text-lg text-body-foreground leading-relaxed mt-4">
             Explore my research vision, leadership philosophy, and approach to building scientific systems that drive discovery{' '}
             <Link href="/ben" className="text-primary hover:underline font-medium">
               →

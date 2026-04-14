@@ -73,6 +73,59 @@ export function sortPublicationsByCitations(
 }
 
 /**
+ * Sort publications alphabetically by title.
+ *
+ * @param publications Array of publications to sort
+ * @param order Sort order: 'asc' for A-Z, 'desc' for Z-A
+ * @returns New array of publications sorted by title
+ */
+export function sortPublicationsByTitle(
+  publications: Publication[],
+  order: 'desc' | 'asc' = 'asc'
+): Publication[] {
+  return [...publications].sort((a, b) => {
+    const comparison = decodeHtmlEntities(a.title).localeCompare(decodeHtmlEntities(b.title));
+    return order === 'asc' ? comparison : -comparison;
+  });
+}
+
+/**
+ * Sort publications alphabetically by first author's surname.
+ *
+ * @param publications Array of publications to sort
+ * @param order Sort order: 'asc' for A-Z, 'desc' for Z-A
+ * @returns New array of publications sorted by first author
+ */
+export function sortPublicationsByFirstAuthor(
+  publications: Publication[],
+  order: 'desc' | 'asc' = 'asc'
+): Publication[] {
+  return [...publications].sort((a, b) => {
+    const authorA = (a.authors[0] || '').toLowerCase();
+    const authorB = (b.authors[0] || '').toLowerCase();
+    const comparison = authorA.localeCompare(authorB);
+    return order === 'asc' ? comparison : -comparison;
+  });
+}
+
+/**
+ * Sort publications alphabetically by journal name.
+ *
+ * @param publications Array of publications to sort
+ * @param order Sort order: 'asc' for A-Z, 'desc' for Z-A
+ * @returns New array of publications sorted by journal
+ */
+export function sortPublicationsByJournal(
+  publications: Publication[],
+  order: 'desc' | 'asc' = 'asc'
+): Publication[] {
+  return [...publications].sort((a, b) => {
+    const comparison = (a.journal || '').localeCompare(b.journal || '');
+    return order === 'asc' ? comparison : -comparison;
+  });
+}
+
+/**
  * Check if a publication is first-authored by Alterman.
  * Handles both "Alterman, B. L." and "B. L. Alterman" formats.
  *

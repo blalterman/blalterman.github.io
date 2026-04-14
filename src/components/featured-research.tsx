@@ -35,7 +35,7 @@ export function FeaturedResearch({ heading, tagline, researchProjects }: Feature
                   <CardTitle>{project.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="p-0 flex-1">
-                  <CardDescription>{project.description}</CardDescription>
+                  <CardDescription className="text-body-foreground">{project.description}</CardDescription>
                 </CardContent>
                 <CardFooter className="p-0 pt-4 flex justify-end gap-2">
                   <Button asChild>

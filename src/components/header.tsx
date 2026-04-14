@@ -1,13 +1,16 @@
 import Link from 'next/link';
 import { Github } from 'lucide-react';
+import { CvIcon } from '@/components/icons/cv-icon';
 import { Button } from '@/components/ui/button';
 import { MobileNav } from '@/components/mobile-nav';
 import { ArxivIcon } from '@/components/icons/arxiv-icon';
 import { GoogleScholarIcon } from '@/components/icons/google-scholar-icon';
 import { SciXIcon } from '@/components/icons/scix-icon';
 import { OrcidIcon } from '@/components/icons/orcid-icon';
-import Image from 'next/image';
 import { LinkedinIcon } from './icons/linkedin-icon';
+import { LogoIcon } from '@/components/icons/logo-icon';
+import { ThemeToggle } from '@/components/theme-toggle';
+
 
 export function Header() {
   return (
@@ -15,7 +18,7 @@ export function Header() {
       <div className="container flex h-16 max-w-screen-2xl items-center border-l-4 border-r-2 border-border/40">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Image src="/icons/logo.svg" alt="B. L. Alterman Logo" width={24} height={24} />
+            <LogoIcon className="h-6 w-6" />
             <span className="font-bold sm:inline-block">B. L. Alterman</span>
           </Link>
           <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
@@ -58,6 +61,14 @@ export function Header() {
                     <LinkedinIcon className="h-5 w-5" />
                 </Link>
             </Button>
+            <Button variant="ghost" size="icon" asChild className="[&_svg]:size-5">
+                <Link href="/Alterman-CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
+                    <CvIcon className="h-5 w-5" />
+                </Link>
+            </Button>
+            <div className="border-l border-border/40 pl-2">
+              <ThemeToggle />
+            </div>
           </div>
           <MobileNav />
         </div>

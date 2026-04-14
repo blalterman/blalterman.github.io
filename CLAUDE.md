@@ -20,6 +20,7 @@
 - Automated data pipeline fetching publications and citations from NASA ADS
 - Dynamic route system: single template generates all research pages from JSON data
 - Zero-maintenance content updates via JSON files
+- CV PDF auto-compiled and hosted via cross-repo GitHub Action from private CV repo
 
 **Tech Stack:** Next.js 15 (App Router), TypeScript 5, Tailwind CSS, Shadcn/ui, Python automation
 
@@ -99,13 +100,16 @@ python scripts/create_research_page.py
 **Automated Data** (updated weekly by GitHub Actions):
 - `ads_publications.json`, `ads_metrics.json`, `citations_by_year.json`
 - `research-figures-with-captions.json`
+- `publication_statistics.json`, `invited_metrics.json` (aggregated from multiple sources)
 
 **Manual Data** (curated):
 - **Research:** `research-projects.json`, `page-figure-mappings.json`, `research-paragraphs.json`
 - **Ben Page:** `ben-page.json`
-- **Publications:** `publications-categories.json`
+- **Publications:** `publications-categories.json`, `non_ads_publications.json`, `invited_conferences.json`, `invited_presentations.json`, `invited_public.json`
 - **Professional:** `education.json`, `positions.json`, `skills.json`
 - **Page Overviews:** `research-page.json`, `publications-page.json`, `experience-page.json`, `biography-homepage.json`
+
+**Important:** `ads_publications.json` contains only ADS-indexed publications (overwritten weekly). Non-ADS entries (conferences without bibcodes, Zenodo white papers) live in `non_ads_publications.json` to survive weekly updates. Both are merged at load time via `loadAllPublications()` in `data-loader.ts`.
 
 📘 **See [ARCHITECTURE.md § Data Management](./ARCHITECTURE.md#data-management) for complete data structure documentation**
 
@@ -148,6 +152,8 @@ python scripts/create_research_page.py
 - PDF→SVG conversion (on upload)
 - Figure data generation (on data changes)
 
+**Cross-repo:** The private CV repo (`CV-v3`) has a GitHub Action that compiles the LaTeX CV and pushes `Alterman-CV.pdf` to this repo's `public/` directory every Monday (after ADS data updates).
+
 📘 **See [ARCHITECTURE.md § GitHub Actions Workflows](./ARCHITECTURE.md#github-actions-workflows) for complete workflow documentation**
 
 ### 4. Component Structure
@@ -178,6 +184,7 @@ python scripts/create_research_page.py
 | New research page | `python scripts/create_research_page.py` OR update 3 JSON files |
 | New figure | Upload PDF to `/public/paper-figures/pdfs/` → auto-converts to SVG |
 | Update publications | Automatic weekly OR run fetch scripts manually |
+| Add non-ADS publication | `python scripts/add_non_ads_publication.py` (writes to `non_ads_publications.json`) |
 | Update professional info | Edit `education.json`, `positions.json`, `skills.json` |
 
 **Build Configuration:**
@@ -197,8 +204,11 @@ All scripts in `/scripts/` use shared `utils.py` for consistent path management:
 
 **Key Scripts:**
 - `create_research_page.py` - Interactive CLI for adding research pages (supports `--dry-run`)
+- `add_non_ads_publication.py` - Add non-ADS publications to `non_ads_publications.json`
 - `fetch_ads_*.py` - NASA ADS API integration (publications, metrics, citations)
 - `generate_figure_data.py` - Combines figure metadata with publications
+- `generate_publication_statistics.py` - Aggregates stats from all publication sources
+- `merge_invited_conferences.py` - Enriches publications with invited talk flags
 - `utils.py` - Shared utilities: `get_repo_root()`, `get_public_data_dir()`, `get_public_plots_dir()`
 
 📘 **See [ARCHITECTURE.md § Python Scripts](./ARCHITECTURE.md#python-scripts) for detailed documentation**
@@ -209,9 +219,12 @@ All scripts in `/scripts/` use shared `utils.py` for consistent path management:
 
 ```
 NASA ADS API → Python Scripts → JSON Files → Next.js Build → GitHub Pages
+                                    ↑                              ↑
+                    non_ads_publications.json              Alterman-CV.pdf
+                    invited_*.json (manual)          (from private CV repo)
 ```
 
-Weekly automation updates publications and metrics every Monday automatically.
+Weekly automation updates publications and metrics every Monday automatically. The private CV repo also rebuilds and pushes `Alterman-CV.pdf` after data updates.
 
 📘 **See [ARCHITECTURE.md § Data Flow Architecture](./ARCHITECTURE.md#data-flow-architecture) for complete flow diagram**
 
@@ -237,6 +250,7 @@ Weekly automation updates publications and metrics every Monday automatically.
 - **Automated Updates:** Publications and metrics update weekly via GitHub Actions
 - **Path Management:** Scripts work from any directory using `utils.py`
 - **Single Data Directory:** Scripts only write to `/public/data/` (no duplicate `data/`)
+- **CV Integration:** Private CV repo generates BibTeX from website JSON data; compiled PDF pushed here automatically
 
 ---
 
