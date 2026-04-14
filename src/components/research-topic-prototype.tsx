@@ -61,12 +61,12 @@ export function ResearchTopicPrototype({ data }: ResearchTopicPrototypeProps) {
       {/* Primary Figure */}
       {primary_figure && (
         <section className="space-y-6">
-          <div className="flex justify-center overflow-hidden">
+          <div className="flex justify-center bg-white rounded-lg overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={primary_figure.src}
               alt={primary_figure.alt}
-              className="max-w-full h-auto"
+              className="max-w-full max-h-[32rem] h-auto"
             />
           </div>
 
@@ -121,7 +121,7 @@ export function ResearchTopicPrototype({ data }: ResearchTopicPrototypeProps) {
                   <img
                     src={fig.src}
                     alt={fig.alt}
-                    className="max-w-full h-auto"
+                    className="max-w-full max-h-[16rem] h-auto"
                   />
                 </div>
                 <div className="p-4 space-y-2">

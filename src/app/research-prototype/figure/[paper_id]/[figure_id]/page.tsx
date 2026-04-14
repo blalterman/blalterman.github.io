@@ -75,12 +75,12 @@ export default async function FigureDetailPage({ params }: Props) {
 
       <div className="space-y-8">
         {/* Figure Image */}
-        <div className="flex justify-center overflow-hidden">
+        <div className="flex justify-center bg-white rounded-lg overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={entry.src}
             alt={entry.alt}
-            className="max-w-full h-auto"
+            className="max-w-full max-h-[32rem] h-auto"
           />
         </div>
 
