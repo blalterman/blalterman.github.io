@@ -59,63 +59,65 @@ def export_topic_to_markdown(
     lines.append("")
 
     # Primary Figure
-    pf_ref = data["primary_figure"]["ref"]
-    pf_entry = registry.get(pf_ref, {})
-    topic_keywords = data["primary_figure"].get("topic_keywords", [])
+    pf = data.get("primary_figure")
+    if pf:
+        pf_ref = pf["ref"]
+        pf_entry = registry.get(pf_ref, {})
+        topic_keywords = pf.get("topic_keywords", [])
 
-    lines.append("---")
-    lines.append("")
-    lines.append("## Primary Figure")
-    lines.append("")
-    lines.append(f"**Figure:** `{pf_ref}`")
-    lines.append("")
-
-    pdf_path = resolve_figure_pdf(pf_ref, repo_root)
-    if pdf_path:
-        lines.append(f"![{pf_ref}]({pdf_path})")
+        lines.append("---")
+        lines.append("")
+        lines.append("## Primary Figure")
+        lines.append("")
+        lines.append(f"**Figure:** `{pf_ref}`")
         lines.append("")
 
-    if pf_entry.get("short_title"):
-        lines.append("### Short Title")
-        lines.append("")
-        lines.append(pf_entry["short_title"])
-        lines.append("")
+        pdf_path = resolve_figure_pdf(pf_ref, repo_root)
+        if pdf_path:
+            lines.append(f"![{pf_ref}]({pdf_path})")
+            lines.append("")
 
-    if pf_entry.get("alt"):
-        lines.append("### Alt Text")
-        lines.append("")
-        lines.append(pf_entry["alt"])
-        lines.append("")
+        if pf_entry.get("short_title"):
+            lines.append("### Short Title")
+            lines.append("")
+            lines.append(pf_entry["short_title"])
+            lines.append("")
 
-    if pf_entry.get("summary"):
-        summary = pf_entry["summary"]
-        lines.append("### What We See")
-        lines.append("")
-        lines.append(summary["what_we_see"])
-        lines.append("")
-        lines.append("### The Finding")
-        lines.append("")
-        lines.append(summary["the_finding"])
-        lines.append("")
-        lines.append("### Why It Matters")
-        lines.append("")
-        lines.append(summary["why_it_matters"])
-        lines.append("")
+        if pf_entry.get("alt"):
+            lines.append("### Alt Text")
+            lines.append("")
+            lines.append(pf_entry["alt"])
+            lines.append("")
 
-    if pf_entry.get("technical_caption"):
-        lines.append("### Technical Caption")
-        lines.append("")
-        lines.append(pf_entry["technical_caption"])
-        lines.append("")
+        if pf_entry.get("summary"):
+            summary = pf_entry["summary"]
+            lines.append("### What We See")
+            lines.append("")
+            lines.append(summary["what_we_see"])
+            lines.append("")
+            lines.append("### The Finding")
+            lines.append("")
+            lines.append(summary["the_finding"])
+            lines.append("")
+            lines.append("### Why It Matters")
+            lines.append("")
+            lines.append(summary["why_it_matters"])
+            lines.append("")
 
-    # Merge keywords: registry + topic-specific
-    registry_keywords = pf_entry.get("keywords", [])
-    all_keywords = list(dict.fromkeys(registry_keywords + topic_keywords))
-    if all_keywords:
-        lines.append("### Keywords")
-        lines.append("")
-        lines.append(", ".join(all_keywords))
-        lines.append("")
+        if pf_entry.get("technical_caption"):
+            lines.append("### Technical Caption")
+            lines.append("")
+            lines.append(pf_entry["technical_caption"])
+            lines.append("")
+
+        # Merge keywords: registry + topic-specific
+        registry_keywords = pf_entry.get("keywords", [])
+        all_keywords = list(dict.fromkeys(registry_keywords + topic_keywords))
+        if all_keywords:
+            lines.append("### Keywords")
+            lines.append("")
+            lines.append(", ".join(all_keywords))
+            lines.append("")
 
     # Related Figures
     if data.get("related_figures"):

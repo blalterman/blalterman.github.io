@@ -17,16 +17,12 @@
   },
   "related_figures": [
     {
-      "ref": "aa51550-24/fig_1",
-      "relevance": "Shows helium's saturation at 402 km/s—the baseline for comparing heavy ions which saturate 75 km/s earlier"
+      "ref": "Alterman_2025_ApJL_982_L40/fig_3",
+      "relevance": "Links to Helium Abundance page; helium shows similar saturation behavior but at different speed threshold"
     },
     {
       "ref": "aa51550-24/fig_2",
       "relevance": "Shows the raw data before normalization, revealing the 75 km/s gap between heavy-ion and helium saturation speeds"
-    },
-    {
-      "ref": "aa51550-24/fig_7",
-      "relevance": "Context showing the saturation speeds straddle the solar wind's peak distribution, making the discrepancy operationally important"
     },
     {
       "ref": "aa51550-24/fig_4",
@@ -41,12 +37,16 @@
       "relevance": "Fast-wind enhancement shows mass dependence above saturation, motivating the charge-state analysis"
     },
     {
+      "ref": "aa51550-24/fig_7",
+      "relevance": "Context showing the saturation speeds straddle the solar wind's peak distribution, making the discrepancy operationally important"
+    },
+    {
       "ref": "aa51550-24/fig_8",
       "relevance": "Explains the divergence above saturation—charge state (R²=0.95), not mass, controls fast-wind fractionation"
     },
     {
-      "ref": "Alterman_2025_ApJL_982_L40/fig_3",
-      "relevance": "Links to Helium Abundance page; helium shows similar saturation behavior but at different speed threshold"
+      "ref": "aa54299-25/fig_2",
+      "relevance": "Demonstrates that slow-wind heavy element abundances dip at solar minimum, confirming the solar cycle modulation seen in helium extends across the periodic table"
     }
   ],
   "related_topics": [

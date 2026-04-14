@@ -58,11 +58,13 @@ def load_topic_refs(data_dir: Path) -> dict[str, dict]:
 
         slug = topic["slug"]
 
-        # Primary figure
-        ref = topic["primary_figure"]["ref"]
-        if ref not in usage:
-            usage[ref] = {"primary_in": [], "related_in": []}
-        usage[ref]["primary_in"].append(slug)
+        # Primary figure (optional — some topics have no primary yet)
+        pf = topic.get("primary_figure")
+        if pf:
+            ref = pf["ref"]
+            if ref not in usage:
+                usage[ref] = {"primary_in": [], "related_in": []}
+            usage[ref]["primary_in"].append(slug)
 
         # Related figures
         for rf in topic.get("related_figures", []):

@@ -31,6 +31,7 @@ export interface RelatedFigure {
   alt: string;
   relevance: string;
   summary_short: string;
+  link?: string;  // URL: topic page if primary elsewhere, or figure detail page
 }
 
 // ============================================
@@ -52,7 +53,7 @@ export interface RawResearchTopicData {
   title: string;
   subtitle: string;
   description: string;
-  primary_figure: PrimaryFigureRef;
+  primary_figure?: PrimaryFigureRef;
   related_figures: RelatedFigureRef[];
   related_topics?: RelatedTopic[];
   published?: boolean;
@@ -74,6 +75,7 @@ export interface FigureRegistryEntry {
   keywords: string[];
   used_as_primary_in?: string[];
   used_as_related_in?: string[];
+  used_as_not_shown_in?: string[];
 }
 
 export interface FigureRegistry {
@@ -104,7 +106,7 @@ export interface ResearchTopicData {
   title: string;
   subtitle: string;
   description: string;
-  primary_figure: PrimaryFigure;
+  primary_figure?: PrimaryFigure;
   related_figures: RelatedFigure[];
   related_topics?: RelatedTopic[];
   published?: boolean; // defaults to true if not specified

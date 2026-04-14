@@ -34,8 +34,16 @@
   ],
   "related_topics": [
     {
-      "slug": "alfven-waves",
+      "slug": "solar-wind-acceleration",
       "connection": "Both describe how solar wind evolves during its journey to Earth"
+    },
+    {
+      "slug": "proton-beams",
+      "connection": "Proton beams are one of the differential flow populations shaped by collisions"
+    },
+    {
+      "slug": "kinetic-processes",
+      "connection": "Coulomb collisions are a key kinetic process governing solar wind evolution"
     }
   ],
   "published": false,

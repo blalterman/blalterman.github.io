@@ -24,7 +24,10 @@
     ],
     "technical_caption": "Fits from four example look directions from the Wind Faraday cups using a new data processing algorithm. Three ion populations are shown: α (purple), p₁ (red), and p₂ (blue). The angle of a given look direction with respect to the average magnetic field throughout the spectrum is indicated at the top right of each panel. Errors for each energy/charge bin are vertical dashed lines.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "proton-beams"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2018_ApJ_864_112/fig_2": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -49,8 +52,11 @@
       "phase_space_density"
     ],
     "technical_caption": "VDFs corresponding to the spectrum shown in Figure 1. The joint proton VDF (top) and α-particle VDF (bottom) are shown. The proton beam can be identified by the secondary shoulder at large v_∥ > 0 in the top panel. Contours follow Marsch et al. (1982b). In decreasing order, solid lines are 0.8, 0.6, 0.4, and 0.2 and dashed lines are 0.1, 0.032, 0.01, 0.0031, and 0.001 of the maximum phase-space density.",
-    "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_primary_in": [
+      "proton-beams"
+    ],
+    "used_as_related_in": [],
+    "used_as_not_shown_in": []
   },
   "Alterman_2018_ApJ_864_112/fig_3": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -78,7 +84,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "coulomb-collisions"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2018_ApJ_864_112/fig_4": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -103,7 +110,10 @@
     ],
     "technical_caption": "2D histogram showing uncorrelated differential flow fluctuations (δΔv) for Δv_{α,p1} and Δv_{p2,p1}. That the fit is a circle centered on the origin indicates that the fluctuations are uncorrelated. The insert shows the fit function: f = h + A · exp[-½((x̃-μ_x)/σ_x)² - ½((ỹ-μ_y)/σ_y)²] where x̃ = xcosθ - ysinθ, ỹ = xsinθ + ycosθ, with parameters μ_x = -0.5, σ_x = 2.6, μ_y = -0.4, σ_y = 2.4, h = 6.3, A = 583.8, θ = 86.7.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "kinetic-processes"
+    ]
   },
   "Alterman_2018_ApJ_864_112/fig_5": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -131,7 +141,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "coulomb-collisions"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2018_ApJ_864_112/fig_6": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -158,7 +169,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "coulomb-collisions"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2018_ApJ_864_112/fig_7": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -185,7 +197,10 @@
     ],
     "technical_caption": "Examples of the Gaussian fits to 1D distributions of α and p₂ normalized differential flow along with the associated residuals. As discussed in Section 6, the Alfvén speed normalizations shown minimize the width of these distributions.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "kinetic-processes"
+    ]
   },
   "Alterman_2018_ApJ_864_112/fig_8": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -211,7 +226,10 @@
     ],
     "technical_caption": "Example α-particle and p₂ normalized differential flow illustrating the impacts of various Alfvén speed approximations. In both cases shown, inclusion of the proton core anisotropy (Equation (3)) reduces the width in comparison to the isotropic MHD Alfvén speed (Equation (2)), while including the anisotropy and the dynamic pressure (p̃_v) increases it.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "kinetic-processes"
+    ]
   },
   "Alterman_2018_ApJ_864_112/fig_9": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -240,7 +258,8 @@
     "used_as_primary_in": [
       "coulomb-collisions"
     ],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": []
   },
   "Alterman_2019_ApJL_879_L6/fig_1": {
     "paper_id": "Alterman_2019_ApJL_879_L6",
@@ -266,7 +285,10 @@
     ],
     "technical_caption": "Helium abundance (A_He) as a function of time and solar wind speed. Solar wind speed (v_sw) is divided into 10 quantiles. The 13 month smoothed SSN (dashed black) is plotted on the secondary y-axis. The legend indicates the middle of a given v_sw quantile and the Spearman rank correlation coefficient between A_He and SSN for that quantile. In effect, this figure updates Figure 1 of Kasper et al. (2007, 2012). The present drop in A_He reflects the onset of solar minimum 25.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "solar-activity"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2019_ApJL_879_L6/fig_2a": {
     "paper_id": "Alterman_2019_ApJL_879_L6",
@@ -291,7 +313,10 @@
     ],
     "technical_caption": "Panel (a): Spearman rank cross-correlation coefficient as a function of v_sw for observed (empty markers) and delayed (filled markers) SSN using 250 day averages. Marker color and shape match the style of Figure 1. Dotted lines connect the markers to aid the eye. Error bars represent variability across averaging windows from 225 to 275 days.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "solar-activity"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2019_ApJL_879_L6/fig_2b": {
     "paper_id": "Alterman_2019_ApJL_879_L6",
@@ -320,7 +345,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "solar-activity"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2019_ApJL_879_L6/fig_3a": {
     "paper_id": "Alterman_2019_ApJL_879_L6",
@@ -346,7 +372,10 @@
     ],
     "technical_caption": "Panel (a): Helium abundance (A_He) as a function of observed SSN for the v_sw quantile covering 347 < v_sw ≤ 363 km/s (centered at 355 km/s). Points are connected by lines to aid the eye. Line and marker color correspond to the number of days since mission start, as shown in the color bar. Marker shape matches the quantile in previous figures. A green dashed line presents a robust fit to the trend: A_He = 0.018 × SSN + 1.9, with R² = 0.681 and χ²_ν = 2.526. The hysteresis effect is visible as a counter-clockwise loop.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-activity"
+    ]
   },
   "Alterman_2019_ApJL_879_L6/fig_3b": {
     "paper_id": "Alterman_2019_ApJL_879_L6",
@@ -371,7 +400,10 @@
     ],
     "technical_caption": "Panel (b): Helium abundance (A_He) as a function of delayed SSN for the same v_sw quantile (347 < v_sw ≤ 363 km/s). The delay applied is approximately 150 days, as determined from Figure 2(b). Points are connected by lines to aid the eye. Line and marker color correspond to days since mission start. A green dashed line presents a robust fit: A_He = 0.018 × SSN_delayed + 1.9, with R² = 0.763 and χ²_ν = 0.846. Delaying SSN by the phase offset appropriate to this v_sw quantile reduces the hysteresis effect, as indicated by the increase in delayed R² and χ²_ν closer to unity.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-activity"
+    ]
   },
   "Alterman_2019_ApJL_879_L6/fig_4": {
     "paper_id": "Alterman_2019_ApJL_879_L6",
@@ -396,7 +428,10 @@
     ],
     "technical_caption": "A summary of the zero solar activity helium abundance, A_He(SSN = 0), as a function of v_sw for all robust fits in the fashion of Figure 3. Error bars indicate the standard deviation of each quantity over the range in averaging windows 225 ≤ N_days ≤ 275, centered on N_days = 250. Unfilled markers show results using all SSN values; filled markers show identical calculations restricted to SSN < 25. The black dashed curve is the relationship A_He(v) = 0.0163 × (v − 259) derived by Kasper et al. (2007) from a 2-year interval surrounding solar Minimum 23. Agreement between filled markers and the Kasper curve indicates that results covering the full range of solar activity in cycles 23 and 24 are consistent with prior solar minimum-specific observations.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-activity"
+    ]
   },
   "Alterman_2023_ApJ_952_42/fig_1": {
     "paper_id": "Alterman_2023_ApJ_952_42",
@@ -421,7 +456,10 @@
     ],
     "technical_caption": "(a) The C to Fe intensity over the energy range 0.11–1.29 MeV nucleon⁻¹. (b) The variance of the C–Fe intensity over 24 hr intervals defined in Panel (a) as a function of the corresponding mean, with the maximum of the 24 hr statistics in a fixed number of bins. A subset is manually selected for fitting with the maximum of two lines. Our quiet-time threshold (QT) is the intersection of these two lines and the fits provide a 1σ uncertainty on that value (semitransparent pink). Data to the left of this threshold corresponds to quiet times. For reference, panel (a) also includes the QT threshold and its 1σ uncertainty; data below the dashed line corresponds to a quiet-time. (c) An example of the cumulative C through Fe intensity time series illustrating the difference between active and quiet times. Only 7 of 29 quiet-time intervals fall within its 1σ uncertainty.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "suprathermal-ions"
+    ]
   },
   "Alterman_2023_ApJ_952_42/fig_1c": {
     "paper_id": "Alterman_2023_ApJ_952_42",
@@ -445,7 +483,10 @@
     ],
     "technical_caption": "(c) An example of the cumulative C through Fe intensity time series illustrating the difference between active and quiet times. Only 7 of 29 quiet-time intervals fall within its 1σ uncertainty.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "suprathermal-ions"
+    ]
   },
   "Alterman_2023_ApJ_952_42/fig_2": {
     "paper_id": "Alterman_2023_ApJ_952_42",
@@ -469,7 +510,10 @@
     ],
     "technical_caption": "A summary of the QT selection fits per Figure 1 across all years. The color bar identifies the year corresponding to each line, with the 13 month smoothed SSN over plotted for context. Panels match Figure 1. Panel (b) shows the binned maxima and a summary of the fits across all years. The QT threshold region in the left-hand panel is completely transparent for visual clarity.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "suprathermal-ions"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2023_ApJ_952_42/fig_3": {
     "paper_id": "Alterman_2023_ApJ_952_42",
@@ -494,7 +538,10 @@
     ],
     "technical_caption": "(a) Hourly C–Fe intensity as a function of time. (b) The left-hand axis plots the annual number of quiet hours. The right-hand axis in both panels plots annual SSN. In the bottom panel, partially filled markers indicate years corresponding to solar cycle extrema, as defined in Section 3.2.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "suprathermal-ions"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2023_ApJ_952_42/fig_4": {
     "paper_id": "Alterman_2023_ApJ_952_42",
@@ -524,7 +571,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "suprathermal-ions"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2023_ApJ_952_42/fig_5": {
     "paper_id": "Alterman_2023_ApJ_952_42",
@@ -551,7 +599,10 @@
     ],
     "technical_caption": "(a) Annual quiet-time abundance X/O along with these abundances normalized to its known reference abundances in (b) CIRs, (c) ISEP, and (d) GSEP events as a function of SEP M/Q for all years along with solar cycle extrema indicated in the legend. Each species is identified on the top axis.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "suprathermal-ions"
+    ]
   },
   "Alterman_2023_ApJ_952_42/fig_6": {
     "paper_id": "Alterman_2023_ApJ_952_42",
@@ -577,7 +628,10 @@
     ],
     "technical_caption": "The annual abundance X/O as a function of Fe/C. Markers and the connecting segments are colored according to their year; segments are partially transparent. A power law is fitted to each X/O as a function of Fe/C and plotted in the color matching the adjacent label box and Figure 4.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "suprathermal-ions"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2023_ApJ_952_42/fig_7": {
     "paper_id": "Alterman_2023_ApJ_952_42",
@@ -601,7 +655,10 @@
     ],
     "technical_caption": "Power-law exponents from fits to X/(Fe/C). Panel (a) plots data derived from Figure 6 for subsets of the data corresponding to solar cycle extrema. Panel (b) plots the results for all data from Figure 6. The legend gives the numerical values from panel (b). For clarity, only panel (b) shows variability error bars. While these exponents show some variability, we have too few solar cycle extrema to determine if the variations are sufficiently distinct from the overall average behavior in Panel (b) to be significant.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "suprathermal-ions"
+    ]
   },
   "Alterman_2023_ApJ_952_42/fig_8": {
     "paper_id": "Alterman_2023_ApJ_952_42",
@@ -629,7 +686,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "suprathermal-ions"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2023_ApJ_952_42/fig_9": {
     "paper_id": "Alterman_2023_ApJ_952_42",
@@ -654,7 +712,10 @@
     ],
     "technical_caption": "The fractionation trends derived from Figure 8 as a function of (a) solar activity and (b) for all data. This figure shows that ST M/Q fractionation is independent of solar activity.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "suprathermal-ions"
+    ]
   },
   "Alterman_2023_ApJ_952_42/fig_10": {
     "paper_id": "Alterman_2023_ApJ_952_42",
@@ -681,7 +742,10 @@
     ],
     "technical_caption": "The color-coded correlation coefficient ρ(X/O, SSN) between X/O and SSN as a function of first ionization potential (FIP) and SEP M/Q. Species are indicated on the top axis and a vertical dotted line connects the species label to its M/Q. O is indicated in gray for completeness. The vertical green dashed–dotted line indicates M/Q = 2.6. The horizontal dashed-purple line indicates FIP = 11 eV. Considering the impact of acceleration and source region impacts, this figure suggests that S behaves like a low FIP ion, even though FIP = 11 eV > 10 eV.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "suprathermal-ions"
+    ]
   },
   "Alterman_2024_ApJL_964_L31/fig_1": {
     "paper_id": "Alterman_2024_ApJL_964_L31",
@@ -709,7 +773,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "suprathermal-ions"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2024_ApJL_964_L31/fig_2": {
     "paper_id": "Alterman_2024_ApJL_964_L31",
@@ -737,7 +802,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "suprathermal-ions"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2024_ApJL_964_L31/fig_3": {
     "paper_id": "Alterman_2024_ApJL_964_L31",
@@ -763,7 +829,10 @@
     ],
     "technical_caption": "Carbon and iron spectral indices as a function of oxygen spectral index. The dotted line indicates unity. The two filled triangles indicate gamma_Fe for which the uncertainty is >=0.1.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "suprathermal-ions"
+    ]
   },
   "Alterman_2024_ApJL_964_L31/fig_4": {
     "paper_id": "Alterman_2024_ApJL_964_L31",
@@ -791,7 +860,8 @@
     "used_as_primary_in": [
       "suprathermal-ions"
     ],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": []
   },
   "Alterman_2025_ApJL_982_L40/fig_1": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -815,7 +885,10 @@
     ],
     "technical_caption": "Three probability density functions (PDFs) of the solar wind speed observed by the Wind Faraday cups at 1 au. The PDFs indicate all the data observed (green dashed), data from solar maxima 23 and 24 (orange dashed–dotted), and solar minima 23 and 24 (solid black).",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "sources-of-the-solar-wind"
+    ]
   },
   "Alterman_2025_ApJL_982_L40/fig_2": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -845,7 +918,8 @@
     "used_as_primary_in": [
       "sources-of-the-solar-wind"
     ],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": []
   },
   "Alterman_2025_ApJL_982_L40/fig_3": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -869,12 +943,11 @@
       "saturation_abundance"
     ],
     "technical_caption": "The helium abundance a function of solar wind speed. A_He has been normalized to its maximum value in each column. The helium abundance monotonically increases from 0% to 4.19% in slow wind and saturates to this A_He = 4.19% in fast solar wind for which v_sw > 433 km s⁻¹.",
-    "used_as_primary_in": [
-      "helium-abundance"
-    ],
+    "used_as_primary_in": [],
     "used_as_related_in": [
       "heavy-ion-composition"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2025_ApJL_982_L40/fig_4": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -898,7 +971,11 @@
     ],
     "technical_caption": "The cross helicity as a function of v_sw, normalized to its maximum value in each column. The blue line indicates values at 60% of the maximum in each column. The green line indicates the saturation speed (v_s) as derived in Figure 3.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "sources-of-the-solar-wind",
+      "turbulence"
+    ]
   },
   "Alterman_2025_ApJL_982_L40/fig_5": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -925,7 +1002,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "helium-abundance"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2025_ApJL_982_L40/fig_6": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -952,7 +1030,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "helium-abundance"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2025_ApJL_982_L40/fig_7": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -978,7 +1057,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "helium-abundance"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2025_ApJL_982_L40/fig_8": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1002,7 +1082,10 @@
     ],
     "technical_caption": "Mean alpha particle and proton number densities as a function of solar wind speed. The semitransparent regions are the standard deviations. The highlighted regions on the n_He trend indicate speeds within 1σ of the slow wind peak (v_slow) in Figure 1, the fast wind peak (v_fast) in Figure 1, and the saturation speed (v_s) derived in Figure 3 for all data along with v_n, the peak of n_He in this figure when the n_α trend is recalculated across the |σ_c| quantiles.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "helium-abundance"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2025_ApJL_982_L40/fig_9": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1026,7 +1109,10 @@
     ],
     "technical_caption": "The same PDF of v_sw in Figure 1. The highlighted purple, orange, blue, and green intervals are the same as in Figure 8: the fast and slow wind peaks derived from Gaussian fits (v_slow and v_fast in purple), the range of saturation speeds derived across |σ_c| (v_s in blue), the peaks of n_α derived in Figure 8 across |σ_c| (v_n in orange), and the speed at which the Gaussians used to derive v_slow and v_fast intersect (v_i in green).",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "helium-abundance"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2025_ApJL_982_L40/fig_10a": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1054,7 +1140,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "sources-of-the-solar-wind"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2025_ApJL_982_L40/fig_10b": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1078,7 +1165,10 @@
     ],
     "technical_caption": "Contour plots of the solar wind speed (v_sw) as a function of normalized cross helicity (|σ_c|) and helium abundance (A_He). Panel (a) uses the mean v_sw. Panels (b) and (c) use the 10% and 90% quantile of v_sw, respectively. The color scale in panels (b) and (c) is larger than the range in panel (a). Contours for mean v_sw = 355, 399, 407, 439, 450, and 484 km s⁻¹ are drawn on all three panels. The color of the contours depend on the panels and are chosen for contrast. The first two are v_slow and the upper bound on it. The middle two are the slowest and fastest v_s. The latter two are the speed at which Gaussians fit to the slow and fast wind peaks during solar minima intersect and the lower bound on this intersection value. The area between the v_slow, v_s, and v_i contour pairs are labeled with the corresponding v_X text. All contours are smoothed with a 1σ filter for visual clarity.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "sources-of-the-solar-wind"
+    ]
   },
   "Alterman_2025_ApJL_982_L40/fig_10c": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1102,7 +1192,10 @@
     ],
     "technical_caption": "Contour plots of the solar wind speed (v_sw) as a function of normalized cross helicity (|σ_c|) and helium abundance (A_He). Panel (a) uses the mean v_sw. Panels (b) and (c) use the 10% and 90% quantile of v_sw, respectively. The color scale in panels (b) and (c) is larger than the range in panel (a). Contours for mean v_sw = 355, 399, 407, 439, 450, and 484 km s⁻¹ are drawn on all three panels. The color of the contours depend on the panels and are chosen for contrast. The first two are v_slow and the upper bound on it. The middle two are the slowest and fastest v_s. The latter two are the speed at which Gaussians fit to the slow and fast wind peaks during solar minima intersect and the lower bound on this intersection value. The area between the v_slow, v_s, and v_i contour pairs are labeled with the corresponding v_X text. All contours are smoothed with a 1σ filter for visual clarity.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "sources-of-the-solar-wind"
+    ]
   },
   "Alterman_2025_ApJL_982_L40/fig_11": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1130,6 +1223,9 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "sources-of-the-solar-wind"
+    ],
+    "used_as_not_shown_in": [
+      "space-weather"
     ]
   },
   "Alterman_2025_ApJL_984_L64/fig_1": {
@@ -1158,9 +1254,10 @@
     ],
     "technical_caption": "Probability density function (PDF) of solar wind speed observed near Earth during the declining phase of solar activity (cycles 23 and 24). The distribution shows distinct slow (v_slow = 355 ± 44 km/s, turquoise) and fast (v_fast = 622 ± 58 km/s, turquoise) wind peaks. Pink regions indicate v_i = 484 ± 34 km/s (intersection speed of Gaussian fits to slow and fast peaks) and v_σ = 399–436 km/s (speed range over which the helium abundance gradient decreases as Alfvénicity increases). Orange region shows v_K = 557–700 km/s (near-Earth speed predicted from Parker Solar Probe kinetic energy flux measurements). Green regions show v_IPW = 620–671 km/s (near-Earth speed predicted by isopoly model with Alfvén wave forcing) and v_IP = 434–554 km/s (same model without Alfvén wave forcing). Histogram smoothed using Savitzky-Golay filter; bin width 5.38 km/s; values below 10^-4 omitted for clarity.",
     "used_as_primary_in": [
-      "alfven-waves"
+      "solar-wind-acceleration"
     ],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": []
   },
   "Alterman_2025_ApJL_984_L64/fig_2": {
     "paper_id": "Alterman_2025_ApJL_984_L64",
@@ -1187,8 +1284,9 @@
     "technical_caption": "2D heat map of the frequency of near-Earth solar wind observations as a function of solar wind speed (horizontal axis, ~300–800 km/s) and kinetic energy flux W_K (vertical axis, 0–1.4 mW/m², linear scale). Each column normalized to its maximum value to remove sampling bias favoring slow wind. Data binned in 10 km/s speed intervals; each column fit with log-normal distribution. Black dashed-dotted line shows central trend (peak W_K vs. v_sw from 1D fits); black solid lines show the spread of values; thick black line marks v_fast = 622 ± 58 km/s range. Horizontal orange band shows W_est = 0.64 ± 0.02 mW/m² (near-Earth kinetic energy flux predicted from Parker Solar Probe measurements during Encounters 1, 2, 4, and 5, scaled to 1 AU using power-law fits from Liu et al. 2021). Intersection of orange band with black trend defines v_K = 557–700 km/s. Distributions above 740 km/s poorly fit by log-normal due to low counts during the declining phase of solar activity.",
     "used_as_primary_in": [],
     "used_as_related_in": [
-      "alfven-waves"
-    ]
+      "solar-wind-acceleration"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2025_ApJL_984_L64/fig_3": {
     "paper_id": "Alterman_2025_ApJL_984_L64",
@@ -1212,7 +1310,10 @@
     ],
     "technical_caption": "Example log-normal distribution fit (dashed-dotted orange line) to the binned observations (black data points) of kinetic energy flux for solar wind speeds in the range 620–630 km/s. The horizontal axis shows kinetic energy flux W_K in mW/m², and the vertical axis shows normalized count. The distribution exhibits characteristic right-skewed asymmetry with a longer tail toward higher flux values. This fitting procedure was applied to all 10 km/s speed bins up to 740 km/s to extract the central trend (peak flux vs. speed) shown as the dashed-dotted line in Figure 2. Log-normal distributions used because flux distributions are asymmetric with enhanced tails on the high-W_K side.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-acceleration"
+    ]
   },
   "Alterman_2025_ApJL_984_L64/fig_4": {
     "paper_id": "Alterman_2025_ApJL_984_L64",
@@ -1238,7 +1339,10 @@
     ],
     "technical_caption": "Solar wind speed probability density function (PDF) from Figure 1 with Gaussian fits to slow and fast wind peaks. Thin black line shows observed distribution during the declining phase of solar activity. Thick green segments show the portions of data used for fitting (v_sw < 400 km/s for slow wind, v_sw > 600 km/s for fast wind). Two orange Gaussian curves fit separately: slow wind (dashed) and fast wind (dash-dotted). Slow wind Gaussian: center μ_slow = 355 ± 1 km/s, width σ_slow = 44 ± 2 km/s, amplitude A_slow = (5.9 ± 0.1) × 10^-3 (Table 1). Fast wind Gaussian: center μ_fast = 622 ± 2 km/s, width σ_fast = 58 ± 2 km/s, amplitude A_fast = (1.05 ± 0.01) × 10^-3 (Table 1). Gray shaded region shows the intersection range v_i = 484 ± 34 km/s, the speed where slow and fast wind contribute equally. Supplemental figure demonstrating decomposition method and quantifying characteristic speeds for slow and fast wind populations.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-acceleration"
+    ]
   },
   "Alterman_2026_ApJL_996_L12/fig_1": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1262,8 +1366,13 @@
       "Wind_spacecraft"
     ],
     "technical_caption": "The helium abundance as a function of solar wind speed. A_He has been normalized to its maximum value in each column. The blue line indicates the mean value of A_He in each column. The dashed–dotted green line is a bilinear fit to these means using Equation (2). The helium abundance monotonically increases from 0% to 4.19% in slow wind and saturates to this A_He = 4.19% in fast solar wind for which v_sw > 433 km s^-1.",
-    "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_primary_in": [
+      "helium-abundance"
+    ],
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-compressibility"
+    ]
   },
   "Alterman_2026_ApJL_996_L12/fig_2": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1285,8 +1394,13 @@
       "source_regions"
     ],
     "technical_caption": "A contour plot of the pdf of |σ_c|. The columns in the underlying 2D histogram have been normalized to their maximum value. The contour at 0.7 is indicated in black.",
-    "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_primary_in": [
+      "turbulence"
+    ],
+    "used_as_related_in": [
+      "sources-of-the-solar-wind"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_3": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1314,7 +1428,8 @@
     "used_as_primary_in": [
       "space-weather"
     ],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_4": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1337,7 +1452,10 @@
     ],
     "technical_caption": "A contour plot of the pdf of |δn_H/n_H|(v_sw). In the underlying 2D histogram, the frequency of observing |δn_H/n_H| in each column is normalized to its maximum value. The contours are smoothed with a 1σ Gaussian kernel for visual clarity.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "solar-wind-compressibility"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_5": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1363,7 +1481,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "space-weather"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_6": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1389,7 +1508,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "space-weather"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_7": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1415,7 +1535,8 @@
     "used_as_primary_in": [
       "solar-wind-compressibility"
     ],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_8": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1438,7 +1559,10 @@
     ],
     "technical_caption": "A zoom-in of the region indicated in Figure 7. The gradient of the contour for |δnH/nH| = 0.09 changes across the saturation points. The fits AHe(vsw) cross over the speed range vsw ≈ 530–560 km s⁻¹, which is bounded by solid black lines instead of red and blue dashed–dotted lines. This region where the AHe(vsw) fits at low |σc| become larger than the fits at high |σc| crosses the |δnH/nH| = 0.085 contour.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "solar-wind-compressibility"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_9": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1465,9 +1589,9 @@
     "technical_caption": "Fits of AHe(vsw) for 15 quantiles of hydrogen compressibility (|δnH/nH|). The color bar identifies |δnH/nH|. Quantiles with |δnH/nH| > 0.15 are indicated in pink. The green plots indicate the saturation points (vs, As).",
     "used_as_primary_in": [],
     "used_as_related_in": [
-      "helium-abundance",
-      "solar-wind-compressibility"
-    ]
+      "helium-abundance"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_10": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1493,8 +1617,10 @@
     "technical_caption": "Fits to AHe(vsw) in 15 |δnH/nH| quantiles. Each fit is scaled to its saturation point (vs, As), which is indicated at (1, 1) in green. As in Figure 9, the quantiles are indicated by the color bar.",
     "used_as_primary_in": [],
     "used_as_related_in": [
-      "helium-abundance"
-    ]
+      "helium-abundance",
+      "solar-wind-compressibility"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_11": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1521,7 +1647,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "solar-wind-compressibility"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_12": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1545,7 +1672,10 @@
     ],
     "technical_caption": "The slopes of A_He(v_sw) for speeds v_sw > v_s in each |δn_H/n_H| quantile. Nominally, this is the slope for the fast solar wind originating in open solar wind regions and we refer to them as \"saturation slopes\" in this work. Quantiles for which |δn_H/n_H| > 0.15 are plotted in pink and indicated with squares instead of circles. The marker indicating the quantile with |δn_H/n_H| = 0.085 is blue, while all other quantiles have a black marker edge.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "solar-wind-compressibility"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_13": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1571,7 +1701,10 @@
     ],
     "technical_caption": "Saturation fit parameters for different maximum |δn_H/n_H|, given by the legend, as a function of |σ_c| along with the data, irrespective of |δn_H/n_H|. The panels are saturation (a) slope (m_s), (b) speed (v_s), and (c) abundance (A_s). Gray lines are the fit parameters across all observations in Figure 1. The \"Comp.\" subset is compressible solar wind with |δn_H/n_H| > 0.15.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "solar-wind-compressibility"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_14": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1597,7 +1730,11 @@
     ],
     "technical_caption": "The pdf of the solar wind speed observed by the Wind FCs at 1 au during solar minima 23 and 24 is plotted in black. The colored segments indicate speed ranges derived in this paper, Paper I, B. L. Alterman et al. (2025), and B. Alterman (2025). The v_sw range corresponding to each segment is plotted in the same color below the pdf and labeled. The vertical location of these v_sw ranges is chosen to avoid overlap. The speed ranges are summarized in Table 4.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "solar-wind-acceleration",
+      "solar-wind-compressibility"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_15a": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1626,7 +1763,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "solar-wind-compressibility"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_15b": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1653,7 +1791,10 @@
     ],
     "technical_caption": "Panel (b): 90% quantile of helium abundance as a function of cross helicity and solar wind compressibility.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-compressibility"
+    ]
   },
   "Alterman_2026_ApJL_996_L12/fig_15c": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1680,7 +1821,10 @@
     ],
     "technical_caption": "Panel (c): 10% quantile of helium abundance as a function of cross helicity and solar wind compressibility.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-compressibility"
+    ]
   },
   "Alterman_2026_ApJL_996_L12/fig_15d": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1707,7 +1851,10 @@
     ],
     "technical_caption": "Panel (d): Variability of the helium abundance as a function of cross helicity and solar wind compressibility.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-compressibility"
+    ]
   },
   "Alterman_2026_ApJL_996_L12/fig_16a": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1732,7 +1879,10 @@
     ],
     "technical_caption": "Panel (a): The solar wind speed as a function of cross helicity and compressibility. The black contour indicates vsw = 433 and 450 km s⁻¹, the fastest vs derived in Paper I and for incompressible solar wind (|δnH/nH| < 0.15) in this work.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "solar-wind-compressibility"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_16b": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1757,7 +1907,10 @@
     ],
     "technical_caption": "Panel (b): The variability of vsw calculated in the same manner as in Figure 15.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "solar-wind-compressibility"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_17a": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1782,7 +1935,10 @@
     ],
     "technical_caption": "Panel (a): Mean |δnH/nH| as a function of |σc| and AHe. Solid black contours indicate |δnH/nH| = 0.085, 0.1, and 0.15. The dashed–dotted black contour indicates where the 75% quantile of |δnH/nH| = 0.15.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [
+      "solar-wind-compressibility"
+    ],
+    "used_as_not_shown_in": []
   },
   "Alterman_2026_ApJL_996_L12/fig_17b": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1807,7 +1963,10 @@
     ],
     "technical_caption": "Panel (b): 75% quantile |δnH/nH| as a function of |σc| and AHe. Solid contours indicate where the 75% quantile of |δnH/nH| = 0.1 and 0.15. The region of the plane with |σc| greater than that indicated by the dashed–dotted blue line corresponds to solar wind originating in continuously open source regions as defined in Paper I.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-compressibility"
+    ]
   },
   "Alterman_2026_ApJL_996_L12/fig_18": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1832,7 +1991,10 @@
     ],
     "technical_caption": "The average normalized cross helicity (|σc|) as a function of the helium abundance (AHe) in each of 15 compressibility (|δnH/nH|) quantiles. Shaded regions indicate the SEM. The color of each |δnH/nH| quantile is given by the color bar. Lines are smoothed with a 1σ Gaussian filter for visual clarity. Compressibilities |δnH/nH| > 0.15 are plotted in pink. The quantile corresponding to |δnH/nH| = 0.085 is highlighted by plotting the dotted orange line on top of a black solid line. The green line plots As(|σc|) in each |δnH/nH| quantile.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-compressibility"
+    ]
   },
   "Alterman_2026_ApJL_996_L12/fig_19": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1857,7 +2019,10 @@
     ],
     "technical_caption": "The normalized cross helicity as a function of vsw in the 15 |δnH/nH| quantiles. Style matches Figure 18, with the green line indicating vs instead of As.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-compressibility"
+    ]
   },
   "Alterman_2026_ApJL_996_L12/fig_20": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1882,7 +2047,10 @@
     ],
     "technical_caption": "The hydrogen compressibility |δnH/nH| as a function of the solar wind speed vsw in quantiles of |σc|, which is given by the color bar. The green line labeled vs indicates |δnH/nH| in each |σc| quantile at the corresponding saturation abundance.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-compressibility"
+    ]
   },
   "Alterman_2026_ApJL_996_L12/fig_21": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1906,7 +2074,10 @@
     ],
     "technical_caption": "The hydrogen compressibility |δnH/nH| as a function of the helium abundance AHe in quantiles of |σc|, which is given by the color bar. The green line labeled As indicates |δnH/nH| in each |σc| quantile at the corresponding saturation abundance.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-compressibility"
+    ]
   },
   "Alterman_2026_ApJL_996_L12/fig_22": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1931,7 +2102,10 @@
     ],
     "technical_caption": "The saturation point (vs, As) in Figure 11 plotted as a function of |σc|. Points are connected by a dotted line to aid the eye. Uncertainties are plotted as error bars with the same color as the markers, and a semitransparent gray envelope traces out the envelope surrounding the error bars. Each |δnH/nH| quantile is mapped to |σc| using (a) Figure 19 and (b) Figure 18. Markers excluding the quantile |δnH/nH| = 0.085 are open. The |δnH/nH| = 0.085 quantile marker is filled and has a black edge. As in Figure 11, the blue horizontal regions correspond to the average value of (a) vs and (b) AHe for key ranges of |σc| derived in Paper I.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-compressibility"
+    ]
   },
   "Alterman_2026_ApJL_996_L12/fig_23": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1956,7 +2130,10 @@
     ],
     "technical_caption": "The saturation slopes from Figure 12 as a function of |σc|. In panel (a), |δnH/nH| in Figure 12 is mapped to |σc| using the trends in Figure 19 by calculating the |σc| corresponding to vs in each |δnH/nH| quantile. We then plot the saturation slope in that |δnH/nH| quantile as a function of this |σc|. In panel (b), we use the same method to determine the |σc| corresponding to As in each |δnH/nH| quantile from Figure 18. Because markers corresponding to |δnH/nH| ≤ 0.085 overlap, markers are unfilled. The exception are markers corresponding to the |δnH/nH| = 0.085 level, which are filled.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-compressibility"
+    ]
   },
   "Alterman_2026_ApJL_996_L12/fig_24": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -1981,7 +2158,10 @@
     ],
     "technical_caption": "The saturation (a) speed vs and (b) abundance As as a function of compressibility |δnH/nH| for each |σc| quantile, which is given by the color bar. Points are connected by a dotted line to aid the eye. Uncertainties are plotted as error bars with the same color as the markers, and a semitransparent gray envelope traces out the envelope surrounding the error bars. This figure is similar to Figure 22 in that it maps |σc| for each saturation point derived in Paper I to |δnH/nH| in its |σc| quantile. In effect, it is the analogous mapping in Figure 22 for Paper I, Figure 6.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-compressibility"
+    ]
   },
   "Alterman_2026_ApJL_996_L12/fig_25": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
@@ -2006,7 +2186,10 @@
     ],
     "technical_caption": "Helium abundance at 800 km/s derived from the fits of AHe(vsw) across |σc| quantiles in Paper I, each scaled to the saturation abundance As in that paper. Error bars and markers are colored by |σc| to facilitate comparison with prior figures. The dashed-dotted line is a fit to the trend.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-wind-compressibility"
+    ]
   },
   "aa51550-24/fig_1": {
     "paper_id": "aa51550-24",
@@ -2032,7 +2215,8 @@
     ],
     "technical_caption": "Contour plot corresponding to a column-normalized 2D histogram of the SWE helium abundance as a function of the proton speed observed at Wind. The solid green line and error bars are the mean and standard deviation in each column. The dash-dotted pink line shows the result of a bilinear fit to the green line, where each line is selected as the minimum of both lines in the bilinear function over the full domain. Only speeds of vsw > 300 km s⁻¹ are included in the fit. Semitransparent blue lines indicate the saturation speed (vs) and saturation abundance (As) along with their uncertainties, where the bilinear function changes slope.",
     "used_as_primary_in": [],
-    "used_as_related_in": [
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
       "heavy-ion-composition"
     ]
   },
@@ -2062,7 +2246,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "heavy-ion-composition"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "aa51550-24/fig_3": {
     "paper_id": "aa51550-24",
@@ -2089,7 +2274,8 @@
     "used_as_primary_in": [
       "heavy-ion-composition"
     ],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": []
   },
   "aa51550-24/fig_4": {
     "paper_id": "aa51550-24",
@@ -2115,7 +2301,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "heavy-ion-composition"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "aa51550-24/fig_5": {
     "paper_id": "aa51550-24",
@@ -2140,7 +2327,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "heavy-ion-composition"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "aa51550-24/fig_6": {
     "paper_id": "aa51550-24",
@@ -2166,7 +2354,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "heavy-ion-composition"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "aa51550-24/fig_7": {
     "paper_id": "aa51550-24",
@@ -2192,7 +2381,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "heavy-ion-composition"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "aa51550-24/fig_8": {
     "paper_id": "aa51550-24",
@@ -2217,7 +2407,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "heavy-ion-composition"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "aa54299-25/fig_1": {
     "paper_id": "aa54299-25",
@@ -2246,7 +2437,8 @@
     "used_as_primary_in": [
       "solar-activity"
     ],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": []
   },
   "aa54299-25/fig_2": {
     "paper_id": "aa54299-25",
@@ -2275,8 +2467,10 @@
     "technical_caption": "SWICS abundances normalized to their photospheric values in (a) fast and (b) slow wind as a function of time, aggregated in 250-day intervals. The right axes plots the normalized 13-month smoothed sunspot number. The SWE abundances normalized to its photospheric values are plotted for reference. The vertical dotted lines indicate solar minimum 24. The vertical dash-dotted line indicates the helium shutoff (Alterman et al. 2021).",
     "used_as_primary_in": [],
     "used_as_related_in": [
+      "heavy-ion-composition",
       "solar-activity"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "aa54299-25/fig_3": {
     "paper_id": "aa54299-25",
@@ -2305,7 +2499,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "solar-activity"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "s11207-021-01801-9/fig_1": {
     "paper_id": "s11207-021-01801-9",
@@ -2335,7 +2530,8 @@
     "used_as_primary_in": [],
     "used_as_related_in": [
       "solar-activity"
-    ]
+    ],
+    "used_as_not_shown_in": []
   },
   "s11207-021-01801-9/fig_2": {
     "paper_id": "s11207-021-01801-9",
@@ -2360,7 +2556,10 @@
     ],
     "technical_caption": "(Left) Orange circles plot the time by which A_He shutoff heralds a given solar cycle. Green error bars indicate the uncertainty only due to A_He's precision (P). Orange error bars show the uncertainty due to the geometric mean of the precision and the 250-day averaging window length (√(P² + W²)). (Right) Sources of uncertainty in each of the left panel's data points. Orange squares and green diamonds plot the uncertainties indicated in the same color that the left panel uses. The red dash-dotted line indicates the 125-day uncertainty due to the averaging window size (W). Excluding Cycle 22, the averaging window size is the dominant source of uncertainty in determining when A_He shutoff occurs.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-activity"
+    ]
   },
   "s11207-021-01801-9/fig_3": {
     "paper_id": "s11207-021-01801-9",
@@ -2383,7 +2582,10 @@
     ],
     "technical_caption": "Blue pluses plot SSN cycle length as a function of cycle number as conventionally defined. Orange circles plot the time between successive A_He shutoffs as a function of the solar cycle during which a given A_He shutoff interval closing a shutoff cycle occurs. This is N − 1 in comparison to the cycle number a given A_He shutoff heralds (cf. Figure 2). As in Figure 2's left panel, orange error bars indicate the uncertainty due to A_He's precision and the 250-day averaging window. Green error bars indicate the uncertainty due to A_He's precision alone.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-activity"
+    ]
   },
   "s11207-021-01801-9/fig_4": {
     "paper_id": "s11207-021-01801-9",
@@ -2406,7 +2608,10 @@
     ],
     "technical_caption": "(Left) Time by which A_He shutoff date changes as a function of averaging window size. As with the vertical dotted lines in Figure 1, A_He shutoff dates are averaged across v_sw-quantiles. Error bars are the standard deviation of these dates. Times are referenced to the 250-day window value and horizontal blue lines indicate this window size. (Right) Weighted average for each cycle identified in the left panel. Error bars represent the standard uncertainty of the mean.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-activity"
+    ]
   },
   "s11207-021-01801-9/fig_5": {
     "paper_id": "s11207-021-01801-9",
@@ -2429,7 +2634,10 @@
     ],
     "technical_caption": "(Left) Time by which A_He shutoff date changes as a function of the start of the window. Values are averaged across v_sw-quantiles and referenced to the start of each 250 day window. (Right) Weighted average for each cycle identified in the (Left) panel. In both panels, error bars and horizontal blue lines follow Figure 4.",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-activity"
+    ]
   },
   "s11207-021-01801-9/fig_6": {
     "paper_id": "s11207-021-01801-9",
@@ -2457,6 +2665,9 @@
     ],
     "technical_caption": "(Top) Solar wind helium abundance (A_He) as a function of solar wind speed (v_sw) and time as in Figure 1 over the time period covering 1995 to present day. (Bottom) A filled contour plot of the combined daily SOHO/EIT (195Å) and SDO/AIA (193Å) EUV central meridian brightpoint (BP) density as a function of solar latitude and time. BPs are averaged down to 27 day cadence. The color scale is chosen to highlight BP density > 0.8 and levels > 1 are shown in white to emphasize BPs in the range 0.8 to 1.0. The dotted yellow-black line highlights the 0.8 threshold. Solar minima and A_He shutoffs are plotted in light blue to contrast with BP density. Partially transparent blue lines indicate the latitudes λ = ±25°. The gray band in the top right corner indicates Parker Solar Probe (PSP) launch − 70 days through the exit of its sixth near-Sun +70 days and the yellow bars indicate the time spent below 0.25 AU. The green bar that starts at PSP encounter 4 indicates the time period following Solar Orbiter's (SolO) Feb 2020 launch (Müller et al., 2020).",
     "used_as_primary_in": [],
-    "used_as_related_in": []
+    "used_as_related_in": [],
+    "used_as_not_shown_in": [
+      "solar-activity"
+    ]
   }
 }

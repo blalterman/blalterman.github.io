@@ -2,7 +2,7 @@
   "slug": "solar-activity",
   "title": "Solar Activity",
   "subtitle": "How the 11-year cycle reshapes solar wind composition",
-  "description": "Solar wind composition breathes in sync with the Sun's 11-year activity cycle. Fast wind from coronal holes maintains stable abundances regardless of solar activity, while slow wind abundances rise during solar maximum and crash during solar minimum\u2014with heavier elements showing stronger modulation due to gravitational settling.",
+  "description": "Solar wind composition breathes in sync with the Sun's 11-year activity cycle. Fast wind from coronal holes maintains stable abundances regardless of solar activity, while slow wind abundances rise during solar maximum and crash during solar minimum—with heavier elements showing stronger modulation due to gravitational settling.",
   "primary_figure": {
     "ref": "aa54299-25/fig_1",
     "topic_keywords": [
@@ -18,6 +18,14 @@
   },
   "related_figures": [
     {
+      "ref": "Alterman_2019_ApJL_879_L6/fig_2a",
+      "relevance": "Shows that accounting for the time delay between solar activity and helium's response dramatically improves the helium-sunspot correlation at all speeds, overturning the conclusion that this was a purely slow-wind phenomenon"
+    },
+    {
+      "ref": "Alterman_2019_ApJL_879_L6/fig_2b",
+      "relevance": "Reveals that helium doesn't respond instantaneously—delay increases linearly with speed, providing a window into source region response times"
+    },
+    {
       "ref": "aa54299-25/fig_2",
       "relevance": "Extends the helium finding across the periodic table, confirming the fast/slow dichotomy is universal"
     },
@@ -26,12 +34,12 @@
       "relevance": "Reveals the physical mechanism: gravitational settling preferentially depletes heavier elements during solar minimum"
     },
     {
-      "ref": "Alterman_2019_ApJL_879_L6/fig_2b",
-      "relevance": "Reveals that helium doesn't respond instantaneously\u2014delay increases linearly with speed, providing a window into source region response times"
-    },
-    {
       "ref": "s11207-021-01801-9/fig_1",
       "relevance": "Demonstrates predictive capability: helium shutoff consistently precedes solar minimum by ~10 months across four cycles"
+    },
+    {
+      "ref": "Alterman_2019_ApJL_879_L6/fig_1",
+      "relevance": "Establishes the 23-year baseline showing helium abundance rising and falling with sunspot number at every wind speed across two complete solar cycles"
     }
   ],
   "related_topics": [

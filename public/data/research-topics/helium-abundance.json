@@ -4,7 +4,7 @@
   "subtitle": "Tracing solar wind origins through composition",
   "description": "Helium abundance in the solar wind varies dramatically with speed, rising from near-zero in the slowest wind to a saturation value of 4.19% above 433 km/s. This compositional fingerprint, locked in at the chromosphere, provides a powerful diagnostic for distinguishing solar wind from source regions with intermittently and continuously open magnetic field topologies.",
   "primary_figure": {
-    "ref": "Alterman_2025_ApJL_982_L40/fig_3",
+    "ref": "Alterman_2026_ApJL_996_L12/fig_1",
     "topic_keywords": [
       "helium abundance",
       "saturation",
@@ -23,11 +23,19 @@
     },
     {
       "ref": "Alterman_2025_ApJL_982_L40/fig_6",
-      "relevance": "Reveals that helium abundance follows a universal scaling law below saturation regardless of Alfv\u00e9nicity, but diverges into Alfv\u00e9nicity-dependent behavior above saturation"
+      "relevance": "Reveals that helium abundance follows a universal scaling law below saturation regardless of Alfvénicity, but diverges into Alfvénicity-dependent behavior above saturation"
     },
     {
       "ref": "Alterman_2025_ApJL_982_L40/fig_7",
       "relevance": "Quantifies the anticorrelation between saturation speed and saturation abundance as a function of Alfvénicity, providing the key empirical relationship for understanding helium behavior"
+    },
+    {
+      "ref": "Alterman_2025_ApJL_982_L40/fig_8",
+      "relevance": "Shows that helium density peaks at 409 km/s, right where the transition between closed and open magnetic source regions occurs, providing independent confirmation of the saturation-based source-region boundary"
+    },
+    {
+      "ref": "Alterman_2025_ApJL_982_L40/fig_9",
+      "relevance": "Maps all five characteristic speeds onto the wind speed distribution, revealing that the fast/slow boundary is not a single threshold but a sequence of overlapping helium-related transitions spanning ~130 km/s"
     },
     {
       "ref": "Alterman_2026_ApJL_996_L12/fig_9",

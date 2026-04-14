@@ -9,7 +9,7 @@
       "chromosphere",
       "transition region",
       "sonic surface",
-      "Alfv\u00e9n surface",
+      "Alfvén surface",
       "helium ionization",
       "cross helicity",
       "magnetic topology",
@@ -19,12 +19,16 @@
   },
   "related_figures": [
     {
+      "ref": "Alterman_2025_ApJL_982_L40/fig_10a",
+      "relevance": "Quantitative data underlying the classification cartoon"
+    },
+    {
       "ref": "Alterman_2025_ApJL_982_L40/fig_11",
       "relevance": "Shows the operational classification scheme derived from the physics in Figure 2"
     },
     {
-      "ref": "Alterman_2025_ApJL_982_L40/fig_10a",
-      "relevance": "Quantitative data underlying the classification cartoon"
+      "ref": "Alterman_2026_ApJL_996_L12/fig_2",
+      "relevance": "Establishes the baseline relationship between Alfvenic wave activity and speed, showing that fast wind from continuously open sources is wave-rich while slow wind spans all wave levels, motivating the need for multi-parameter source classification"
     }
   ],
   "related_topics": [

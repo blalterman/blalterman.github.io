@@ -60,50 +60,52 @@ export function ResearchTopicPrototype({ data }: ResearchTopicPrototypeProps) {
       </section>
 
       {/* Primary Figure */}
-      <section className="space-y-6">
-        <div className="relative w-full aspect-[4/3] bg-muted rounded-lg overflow-hidden">
-          <Image
-            src={primary_figure.src}
-            alt={primary_figure.alt}
-            fill
-            className="object-contain p-4"
-            priority
-          />
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="font-headline text-2xl">{primary_figure.short_title}</h2>
-
-          {/* Summary Accordion */}
-          <div className="border border-border rounded-lg px-4">
-            <SummarySection
-              title="What We See"
-              content={primary_figure.summary.what_we_see}
-              defaultOpen={true}
-            />
-            <SummarySection
-              title="The Finding"
-              content={primary_figure.summary.the_finding}
-            />
-            <SummarySection
-              title="Why It Matters"
-              content={primary_figure.summary.why_it_matters}
+      {primary_figure && (
+        <section className="space-y-6">
+          <div className="relative w-full aspect-[4/3] bg-muted rounded-lg overflow-hidden">
+            <Image
+              src={primary_figure.src}
+              alt={primary_figure.alt}
+              fill
+              className="object-contain p-4"
+              priority
             />
           </div>
 
-          {/* Keywords */}
-          <div className="flex flex-wrap gap-2">
-            {primary_figure.keywords.map((keyword) => (
-              <span
-                key={keyword}
-                className="px-2 py-1 text-xs bg-muted text-muted-foreground rounded-full"
-              >
-                {keyword}
-              </span>
-            ))}
+          <div className="space-y-4">
+            <h2 className="font-headline text-2xl">{primary_figure.short_title}</h2>
+
+            {/* Summary Accordion */}
+            <div className="border border-border rounded-lg px-4">
+              <SummarySection
+                title="What We See"
+                content={primary_figure.summary.what_we_see}
+                defaultOpen={true}
+              />
+              <SummarySection
+                title="The Finding"
+                content={primary_figure.summary.the_finding}
+              />
+              <SummarySection
+                title="Why It Matters"
+                content={primary_figure.summary.why_it_matters}
+              />
+            </div>
+
+            {/* Keywords */}
+            <div className="flex flex-wrap gap-2">
+              {primary_figure.keywords.map((keyword) => (
+                <span
+                  key={keyword}
+                  className="px-2 py-1 text-xs bg-muted text-muted-foreground rounded-full"
+                >
+                  {keyword}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Related Figures */}
       {related_figures.length > 0 && (
@@ -111,9 +113,10 @@ export function ResearchTopicPrototype({ data }: ResearchTopicPrototypeProps) {
           <h2 className="font-headline text-2xl">Related Figures</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {related_figures.map((fig) => (
-              <div
+              <Link
                 key={`${fig.paper_id}-${fig.figure_id}`}
-                className="border border-border rounded-lg overflow-hidden"
+                href={fig.link || '#'}
+                className="border border-border rounded-lg overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
               >
                 <div className="relative w-full aspect-[4/3] bg-muted">
                   <Image
@@ -124,11 +127,11 @@ export function ResearchTopicPrototype({ data }: ResearchTopicPrototypeProps) {
                   />
                 </div>
                 <div className="p-4 space-y-2">
-                  <h3 className="font-medium">{fig.short_title}</h3>
+                  <h3 className="font-medium group-hover:text-primary transition-colors">{fig.short_title}</h3>
                   <p className="text-sm text-muted-foreground">{fig.summary_short}</p>
                   <p className="text-xs text-primary">{fig.relevance}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>

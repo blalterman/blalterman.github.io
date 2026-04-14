@@ -1,6 +1,6 @@
 {
-  "slug": "alfven-waves",
-  "title": "Alfven Waves",
+  "slug": "solar-wind-acceleration",
+  "title": "Solar Wind Acceleration",
   "subtitle": "How magnetic waves shape solar wind speeds",
   "description": "Alfven waves propagating through the solar wind continuously deposit energy into the plasma, accelerating it during its journey from the Sun to Earth. Speed distributions reveal that fast solar wind receives an additional 100+ km/s boost from wave forcing, explaining why observed speeds exceed predictions from thermal expansion alone.",
   "primary_figure": {
@@ -20,6 +20,10 @@
     {
       "ref": "Alterman_2025_ApJL_984_L64/fig_2",
       "relevance": "Demonstrates how kinetic energy measured near the Sun by Parker Solar Probe predicts speeds at Earth, validating that wave-driven acceleration is complete by 0.2 AU"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_14",
+      "relevance": "Places characteristic speeds from compressibility, wave activity, and energy budget analyses onto the bimodal speed distribution, showing how multiple independent approaches converge on a consistent picture of where wave-driven acceleration shapes the wind"
     }
   ],
   "related_topics": [

@@ -1,0 +1,30 @@
+{
+  "slug": "proton-beams",
+  "title": "Proton Beams",
+  "subtitle": "Placeholder — awaiting domain expert review",
+  "description": "Placeholder — awaiting domain expert review",
+  "primary_figure": {
+    "ref": "Alterman_2018_ApJ_864_112/fig_2"
+  },
+  "related_figures": [
+    {
+      "ref": "Alterman_2018_ApJ_864_112/fig_1",
+      "relevance": "Demonstrates the three-population fitting algorithm that simultaneously detects proton beams, proton cores, and alpha particles in Faraday cup data, unlocking 20+ years of Wind data for beam studies"
+    }
+  ],
+  "related_topics": [],
+  "published": false,
+  "paper": {
+    "id": "Alterman_2018_ApJ_864_112",
+    "title": "A Comparison of Alpha Particle and Proton Beam Differential Flows in Collisionally Young Solar Wind",
+    "doi": "https://doi.org/10.3847/1538-4357/aad23f",
+    "bibcode": "2018ApJ...864..112A",
+    "journal": "The Astrophysical Journal",
+    "year": 2018,
+    "license": {
+      "holder": "American Astronomical Society",
+      "year": 2018,
+      "type": "CC BY 3.0"
+    }
+  }
+}

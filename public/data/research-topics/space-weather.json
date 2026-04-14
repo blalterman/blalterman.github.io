@@ -32,12 +32,16 @@
       "connection": "Helium abundance is a key parameter in the classification scheme"
     },
     {
-      "slug": "alfven-waves",
+      "slug": "solar-wind-acceleration",
       "connection": "Cross helicity (Alfvénicity) is the other key parameter in the classification"
     },
     {
       "slug": "solar-wind-compressibility",
       "connection": "Compressibility refines the classification boundaries"
+    },
+    {
+      "slug": "sources-of-the-solar-wind",
+      "connection": "The classification scheme maps solar wind back to its coronal source regions"
     }
   ],
   "published": false,

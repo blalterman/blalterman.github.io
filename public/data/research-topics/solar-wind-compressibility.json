@@ -2,7 +2,7 @@
   "slug": "solar-wind-compressibility",
   "title": "Solar Wind Compressibility",
   "subtitle": "How density fluctuations regulate helium",
-  "description": "Hydrogen compressibility (density fluctuations) is the primary regulator of helium abundance saturation in the solar wind. When compressibility drops below 9%, helium saturates at a universal value regardless of speed or Alfv\u00e9nicity. This incompressibility threshold provides a powerful diagnostic for identifying solar wind source regions.",
+  "description": "Hydrogen compressibility (density fluctuations) is the primary regulator of helium abundance saturation in the solar wind. When compressibility drops below 9%, helium saturates at a universal value regardless of speed or Alfvénicity. This incompressibility threshold provides a powerful diagnostic for identifying solar wind source regions.",
   "primary_figure": {
     "ref": "Alterman_2026_ApJL_996_L12/fig_7",
     "topic_keywords": [
@@ -17,16 +17,48 @@
   },
   "related_figures": [
     {
-      "ref": "Alterman_2026_ApJL_996_L12/fig_9",
-      "relevance": "Shows universal saturation below 15% compressibility threshold"
+      "ref": "Alterman_2026_ApJL_996_L12/fig_10",
+      "relevance": "Demonstrates that limiting compressibility < 15% excludes confounding impacts and enables reliable source region identification"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_11",
+      "relevance": "Demonstrates how the transition speeds between classification regimes depend on plasma compressibility"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_12",
+      "relevance": "Provides the clearest quantitative evidence that compressible fluctuations cause anomalous helium behavior: the helium gradient above saturation jumps six-fold once compressibility exceeds the 0.15 threshold"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_14",
+      "relevance": "Maps compressibility-derived characteristic speeds onto the bimodal wind distribution alongside wave activity and energy budget analyses, showing how compressible and incompressible saturation speeds delineate distinct transition regions"
     },
     {
       "ref": "Alterman_2026_ApJL_996_L12/fig_15a",
       "relevance": "Reveals dual role of compressibility in mean abundance vs variability"
     },
     {
-      "ref": "Alterman_2026_ApJL_996_L12/fig_11",
-      "relevance": "Demonstrates how the transition speeds between classification regimes depend on plasma compressibility"
+      "ref": "Alterman_2026_ApJL_996_L12/fig_16a",
+      "relevance": "Shows that mean speed exceeds the saturation threshold only in Alfvenic, incompressible wind, demonstrating that compressible wind carries fast-wind-like helium at slower speeds and exposing the limitation of speed-based source classification"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_16b",
+      "relevance": "Reveals that compressible wind has highly variable helium but less variable speed, the opposite of Alfvenic wind, confirming that compressibility drives helium changes independently of speed"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_17a",
+      "relevance": "Identifies the high-helium, low-wave-activity region as compressible wind, resolving the companion paper's ambiguous classification zone and providing the physical mechanism behind the anomalous helium enhancement"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_4",
+      "relevance": "Introduces hydrogen compressibility as a classification variable, showing that compressible and incompressible fast wind coexist at the same speeds and that speed alone cannot distinguish them"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_8",
+      "relevance": "Zooms into the saturation region to show that the compressibility contour gradient reverses at the saturation point, linking helium composition set deep in the corona to density fluctuation behavior during interplanetary transit"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_13",
+      "relevance": "Resolves the central puzzle from the companion paper: progressively excluding compressible wind flattens the wave-activity dependence of saturation parameters, showing that what appeared to be a wave-activity effect was actually driven by compressibility"
     }
   ],
   "related_topics": [

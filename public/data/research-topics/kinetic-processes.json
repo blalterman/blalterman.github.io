@@ -1,0 +1,22 @@
+{
+  "slug": "kinetic-processes",
+  "title": "Kinetic Processes",
+  "subtitle": "Placeholder — awaiting domain expert review",
+  "description": "Placeholder — awaiting domain expert review",
+  "related_figures": [],
+  "related_topics": [],
+  "published": false,
+  "paper": {
+    "id": "Alterman_2018_ApJ_864_112",
+    "title": "A Comparison of Alpha Particle and Proton Beam Differential Flows in Collisionally Young Solar Wind",
+    "doi": "https://doi.org/10.3847/1538-4357/aad23f",
+    "bibcode": "2018ApJ...864..112A",
+    "journal": "The Astrophysical Journal",
+    "year": 2018,
+    "license": {
+      "holder": "American Astronomical Society",
+      "year": 2018,
+      "type": "CC BY 3.0"
+    }
+  }
+}

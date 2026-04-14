@@ -17,20 +17,32 @@
   },
   "related_figures": [
     {
-      "ref": "Alterman_2024_ApJL_964_L31/fig_1",
-      "relevance": "Shows all 9 elements following the same spectral slope"
+      "ref": "Alterman_2023_ApJ_952_42/fig_2",
+      "relevance": "Validates that the quiet-time selection method produces consistent thresholds across two full solar cycles, ensuring that downstream suprathermal abundance measurements reflect real physical changes rather than methodological drift"
     },
     {
-      "ref": "Alterman_2024_ApJL_964_L31/fig_2",
-      "relevance": "Demonstrates independence from solar activity"
+      "ref": "Alterman_2023_ApJ_952_42/fig_3",
+      "relevance": "Confirms that quiet hours anticorrelate with sunspot number at -0.95, validating the quiet-time identification as physically meaningful and establishing the 22-year baseline for studying suprathermal composition evolution"
     },
     {
       "ref": "Alterman_2023_ApJ_952_42/fig_4",
       "relevance": "Proves suprathermals are remnants from CIRs during solar minimum and CME-driven shocks during solar maximum"
     },
     {
+      "ref": "Alterman_2023_ApJ_952_42/fig_6",
+      "relevance": "Reduces the complex behavior of eight suprathermal elements to power-law relationships with a single enrichment indicator (Fe/C), revealing cyclic composition loops tied to solar activity phase"
+    },
+    {
       "ref": "Alterman_2023_ApJ_952_42/fig_8",
       "relevance": "Connects suprathermals to their role as seed population for solar energetic particle events"
+    },
+    {
+      "ref": "Alterman_2024_ApJL_964_L31/fig_1",
+      "relevance": "Shows all 9 elements following the same spectral slope"
+    },
+    {
+      "ref": "Alterman_2024_ApJL_964_L31/fig_2",
+      "relevance": "Demonstrates independence from solar activity"
     }
   ],
   "related_topics": [

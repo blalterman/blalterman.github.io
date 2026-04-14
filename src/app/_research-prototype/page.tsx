@@ -46,19 +46,32 @@ const researchQuestions: ResearchQuestion[] = [
       'sources-of-the-solar-wind',
       'helium-abundance',
       'heavy-ion-composition',
-      'solar-wind-compressibility',
-      'space-weather',
     ],
   },
   {
     question: 'How does the solar wind evolve on its journey to Earth?',
     subtitle: 'Heliospheric Evolution',
-    topics: ['alfven-waves', 'coulomb-collisions'],
+    topics: [
+      'solar-wind-acceleration',
+      'solar-wind-compressibility',
+      'coulomb-collisions',
+      'turbulence',
+    ],
+  },
+  {
+    question: 'How do we simplify the solar wind for space weather?',
+    subtitle: 'Space Weather Applications',
+    topics: ['space-weather'],
   },
   {
     question: "How does the Sun's activity cycle shape the heliosphere?",
     subtitle: 'Temporal Evolution',
     topics: ['solar-activity'],
+  },
+  {
+    question: 'How do particle interactions shape the solar wind?',
+    subtitle: 'Solar Wind Microphysics',
+    topics: ['proton-beams'],
   },
   {
     question: 'What energetic particles populate the heliosphere?',

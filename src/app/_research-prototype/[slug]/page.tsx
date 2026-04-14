@@ -43,25 +43,27 @@ function resolveTopicData(
   raw: RawResearchTopicData,
   registry: FigureRegistry
 ): ResearchTopicData {
-  // Resolve primary figure
-  const primaryEntry = registry[raw.primary_figure.ref];
-  if (!primaryEntry) {
-    throw new Error(`Figure not found in registry: ${raw.primary_figure.ref}`);
+  // Resolve primary figure (optional — some topics have no primary yet)
+  let primaryFigure: PrimaryFigure | undefined;
+  if (raw.primary_figure) {
+    const primaryEntry = registry[raw.primary_figure.ref];
+    if (!primaryEntry) {
+      throw new Error(`Figure not found in registry: ${raw.primary_figure.ref}`);
+    }
+    primaryFigure = {
+      paper_id: primaryEntry.paper_id,
+      figure_id: primaryEntry.figure_id,
+      src: primaryEntry.src,
+      short_title: primaryEntry.short_title,
+      alt: primaryEntry.alt,
+      summary: primaryEntry.summary!,  // Primary figures must have extended summary
+      // Merge registry keywords with topic-specific keywords
+      keywords: [
+        ...primaryEntry.keywords,
+        ...(raw.primary_figure.topic_keywords || [])
+      ].filter((k, i, arr) => arr.indexOf(k) === i)  // dedupe
+    };
   }
-
-  const primaryFigure: PrimaryFigure = {
-    paper_id: primaryEntry.paper_id,
-    figure_id: primaryEntry.figure_id,
-    src: primaryEntry.src,
-    short_title: primaryEntry.short_title,
-    alt: primaryEntry.alt,
-    summary: primaryEntry.summary!,  // Primary figures must have extended summary
-    // Merge registry keywords with topic-specific keywords
-    keywords: [
-      ...primaryEntry.keywords,
-      ...(raw.primary_figure.topic_keywords || [])
-    ].filter((k, i, arr) => arr.indexOf(k) === i)  // dedupe
-  };
 
   // Resolve related figures
   const relatedFigures: RelatedFigure[] = raw.related_figures.map(rf => {
@@ -70,6 +72,12 @@ function resolveTopicData(
       throw new Error(`Figure not found in registry: ${rf.ref}`);
     }
 
+    // If this figure is primary for another topic, link there; otherwise link to figure detail
+    const primaryTopics = (entry.used_as_primary_in || []).filter(t => t !== raw.slug);
+    const link = primaryTopics.length > 0
+      ? `/research-prototype/${primaryTopics[0]}`
+      : `/research-prototype/figure/${entry.paper_id}/${entry.figure_id}`;
+
     return {
       paper_id: entry.paper_id,
       figure_id: entry.figure_id,
@@ -77,9 +85,13 @@ function resolveTopicData(
       short_title: entry.short_title,
       alt: entry.alt,
       relevance: rf.relevance,  // From topic, not registry
-      summary_short: entry.summary_short || ''
+      summary_short: entry.summary_short || '',
+      link
     };
   });
+
+  // Shuffle related figures at build time to avoid implied ordering
+  const shuffledRelated = [...relatedFigures].sort(() => Math.random() - 0.5);
 
   return {
     slug: raw.slug,
@@ -87,7 +99,7 @@ function resolveTopicData(
     subtitle: raw.subtitle,
     description: raw.description,
     primary_figure: primaryFigure,
-    related_figures: relatedFigures,
+    related_figures: shuffledRelated,
     related_topics: raw.related_topics,
     published: raw.published,
     paper: raw.paper
