@@ -63,7 +63,7 @@
       "connection": "Helium shows the same saturation behavior as heavy ions but at 402 km/s vs 327 km/s"
     }
   ],
-  "published": false,
+  "published": true,
   "paper": {
     "id": "aa51550-24",
     "title": "The transition from slow to fast wind as observed in composition observations",

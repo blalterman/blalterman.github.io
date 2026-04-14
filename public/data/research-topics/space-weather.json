@@ -44,7 +44,7 @@
       "connection": "The classification scheme maps solar wind back to its coronal source regions"
     }
   ],
-  "published": false,
+  "published": true,
   "paper": {
     "id": "Alterman_2026_ApJL_996_L12",
     "title": "On the Regulation of the Solar Wind Helium Abundance by the Hydrogen Compressibility",
