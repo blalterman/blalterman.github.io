@@ -62,14 +62,14 @@ export default async function FigureDetailPage({ params }: Props) {
   const notShownTopics = entry.used_as_not_shown_in || [];
 
   return (
-    <main className="flex-1 container mx-auto py-16 md:py-24 max-w-4xl">
+    <div className="container mx-auto py-16 md:py-24 max-w-4xl">
       <div className="mb-8">
         <button
           onClick={undefined}
           className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors text-sm"
         >
           <ArrowLeft className="h-4 w-4" />
-          <Link href="/research-prototype">Back to Research Topics</Link>
+          <Link href="/research">Back to Research Topics</Link>
         </button>
       </div>
 
@@ -118,7 +118,7 @@ export default async function FigureDetailPage({ params }: Props) {
               {primaryTopics.map((slug: string) => (
                 <Link
                   key={slug}
-                  href={`/research-prototype/${slug}`}
+                  href={`/research/${slug}`}
                   className="block text-primary hover:underline"
                 >
                   {slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')} (primary figure)
@@ -127,7 +127,7 @@ export default async function FigureDetailPage({ params }: Props) {
               {relatedTopics.map((slug: string) => (
                 <Link
                   key={slug}
-                  href={`/research-prototype/${slug}`}
+                  href={`/research/${slug}`}
                   className="block text-primary hover:underline"
                 >
                   {slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
@@ -136,7 +136,7 @@ export default async function FigureDetailPage({ params }: Props) {
               {notShownTopics.map((slug: string) => (
                 <Link
                   key={slug}
-                  href={`/research-prototype/${slug}`}
+                  href={`/research/${slug}`}
                   className="block text-muted-foreground hover:text-primary hover:underline"
                 >
                   {slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')} (related topic)
@@ -153,6 +153,6 @@ export default async function FigureDetailPage({ params }: Props) {
           </p>
         </section>
       </div>
-    </main>
+    </div>
   );
 }

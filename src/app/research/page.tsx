@@ -1,44 +1,135 @@
-
-import { FeaturedResearch } from "@/components/featured-research";
-import { loadJSONData } from "@/lib/data-loader";
-import { filterPublishedProjects } from "@/lib/research-utils";
-import { Metadata } from "next";
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowRight } from 'lucide-react';
+import { filterPublishedProjects } from '@/lib/research-utils';
+import { ResearchTopicData } from '@/types/research-topic';
+import fs from 'fs';
+import path from 'path';
 
 export const metadata: Metadata = {
-    title: "Research | B. L. Alterman",
-    description: "Explore featured research projects by B. L. Alterman, including studies on proton beams, helium abundance, space weather, and other topics in heliophysics.",
+  title: 'Research | B. L. Alterman',
+  description: 'Research pages organized by fundamental research questions in heliophysics.',
 };
 
-interface ResearchProject {
-    title: string;
-    description: string;
-    image: string;
-    imageHint: string;
-    slug: string;
-    published?: boolean;
+// Load all topic data from JSON files
+function loadAllTopics(): ResearchTopicData[] {
+  const topicsDir = path.join(process.cwd(), 'public/data/research-topics');
+  const files = fs.readdirSync(topicsDir).filter(f => f.endsWith('.json'));
+
+  return files.map(file => {
+    const filePath = path.join(topicsDir, file);
+    const content = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(content);
+  });
 }
 
-interface ResearchPageData {
-    heading: string;
-    tagline: string;
+// Convert slug to title case (e.g., "solar-activity" -> "Solar Activity")
+function slugToTitle(slug: string): string {
+  return slug
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 }
+
+interface ResearchQuestion {
+  question: string;
+  subtitle: string;
+  topics: string[];
+}
+
+const researchQuestions: ResearchQuestion[] = [
+  {
+    question: 'Where does the solar wind come from?',
+    subtitle: 'Source Identification',
+    topics: [
+      'sources-of-the-solar-wind',
+      'helium-abundance',
+      'heavy-ion-composition',
+    ],
+  },
+  {
+    question: 'How does the solar wind evolve on its journey to Earth?',
+    subtitle: 'Heliospheric Evolution',
+    topics: [
+      'solar-wind-acceleration',
+      'solar-wind-compressibility',
+      'coulomb-collisions',
+      'turbulence',
+    ],
+  },
+  {
+    question: 'How do we simplify the solar wind for space weather?',
+    subtitle: 'Space Weather Applications',
+    topics: ['space-weather'],
+  },
+  {
+    question: "How does the Sun's activity cycle shape the heliosphere?",
+    subtitle: 'Temporal Evolution',
+    topics: ['solar-activity'],
+  },
+  {
+    question: 'How do particle interactions shape the solar wind?',
+    subtitle: 'Solar Wind Microphysics',
+    topics: ['proton-beams'],
+  },
+  {
+    question: 'What energetic particles populate the heliosphere?',
+    subtitle: 'Energetic Particle Environment',
+    topics: ['suprathermal-ions'],
+  },
+];
 
 export default function ResearchPage() {
-    const researchProjects = loadJSONData<ResearchProject[]>('research-projects.json');
-    const researchPageData = loadJSONData<ResearchPageData>('research-page.json');
+  // Load and filter topics by published status
+  const allTopics = loadAllTopics();
+  const publishedTopics = filterPublishedProjects(allTopics);
+  const publishedSlugs = new Set(publishedTopics.map(t => t.slug));
 
-    // Filter published projects (environment-aware: shows all in dev, only published in production)
-    const publishedProjects = filterPublishedProjects(researchProjects);
+  // Filter each section's topics to only include published ones
+  const filteredQuestions = researchQuestions
+    .map(section => ({
+      ...section,
+      topics: section.topics.filter(slug => publishedSlugs.has(slug))
+    }))
+    .filter(section => section.topics.length > 0);
 
-    // Shuffle research projects at build time to avoid implied priority hierarchy
-    // Order will be identical for all visitors until next deployment
-    const shuffledProjects = [...publishedProjects].sort(() => Math.random() - 0.5);
+  return (
+    <div className="container mx-auto py-16 md:py-24 max-w-5xl">
+      <header className="text-center mb-12">
+        <h1 className="font-headline text-4xl md:text-5xl mb-4">Research Topics</h1>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Exploring the Sun-Earth connection through fundamental questions about solar wind origins, evolution, and variability.
+        </p>
+      </header>
 
-    return (
-        <FeaturedResearch
-            heading={researchPageData.heading}
-            tagline={researchPageData.tagline}
-            researchProjects={shuffledProjects}
-        />
-    );
+      <div className="space-y-16">
+        {filteredQuestions.map((section) => (
+          <section key={section.subtitle}>
+            <div className="mb-6">
+              <h2 className="font-headline text-2xl md:text-3xl text-primary mb-1">
+                {section.question}
+              </h2>
+              <p className="text-sm text-muted-foreground uppercase tracking-wide">
+                {section.subtitle}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {section.topics.map((slug) => (
+                <Link key={slug} href={`/research/${slug}`}>
+                  <Card className="h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                    <CardHeader className="flex flex-row items-center justify-between">
+                      <CardTitle className="text-lg">{slugToTitle(slug)}</CardTitle>
+                      <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                    </CardHeader>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
+  );
 }

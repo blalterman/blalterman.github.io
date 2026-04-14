@@ -1,67 +1,156 @@
-import { ResearchFigure } from '@/components/research-figure';
-import { loadJSONData } from '@/lib/data-loader';
+import { ResearchTopic } from '@/components/research-topic';
+import {
+  ResearchTopicData,
+  RawResearchTopicData,
+  FigureRegistry,
+  PrimaryFigure,
+  RelatedFigure
+} from '@/types/research-topic';
 import { filterPublishedProjects } from '@/lib/research-utils';
-import { renderMathInText } from '@/lib/render-math';
-import { Metadata, ResolvingMetadata } from 'next';
-import { redirect } from 'next/navigation';
+import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import fs from 'fs';
+import path from 'path';
+
+// Only allow statically generated paths (required for static export with zero pages)
+export const dynamicParams = false;
 
 type Props = {
-    params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string }>;
 };
 
-export async function generateStaticParams() {
-    const projects = loadJSONData<any[]>('research-projects.json');
-    // Only generate static params for published projects (environment-aware)
-    const publishedProjects = filterPublishedProjects(projects);
-    return publishedProjects.map((project) => ({
-        slug: project.slug,
-    }));
+// Load the figure registry
+function loadFigureRegistry(): FigureRegistry {
+  const registryPath = path.join(process.cwd(), 'public/data/figure-registry.json');
+  const content = fs.readFileSync(registryPath, 'utf8');
+  return JSON.parse(content);
 }
 
-export async function generateMetadata(
-    { params }: Props,
-    parent: ResolvingMetadata
-): Promise<Metadata> {
-    const { slug } = await params;
-    const projects = loadJSONData<any[]>('research-projects.json');
-    const project = projects.find((p: any) => p.slug === slug);
-    const paragraphs = loadJSONData<Record<string, string>>('research-paragraphs.json');
-    const paragraph = paragraphs[slug];
+// Load all raw topic data from JSON files
+function loadAllRawTopics(): RawResearchTopicData[] {
+  const topicsDir = path.join(process.cwd(), 'public/data/research-topics');
+  const files = fs.readdirSync(topicsDir).filter(f => f.endsWith('.json'));
 
-    return {
-        title: `${project?.title || 'Research'} | B. L. Alterman`,
-        description: paragraph || project?.description,
+  return files.map(file => {
+    const filePath = path.join(topicsDir, file);
+    const content = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(content);
+  });
+}
+
+// Resolve a raw topic by joining with the figure registry
+function resolveTopicData(
+  raw: RawResearchTopicData,
+  registry: FigureRegistry
+): ResearchTopicData {
+  // Resolve primary figure (optional — some topics have no primary yet)
+  let primaryFigure: PrimaryFigure | undefined;
+  if (raw.primary_figure) {
+    const primaryEntry = registry[raw.primary_figure.ref];
+    if (!primaryEntry) {
+      throw new Error(`Figure not found in registry: ${raw.primary_figure.ref}`);
+    }
+    primaryFigure = {
+      paper_id: primaryEntry.paper_id,
+      figure_id: primaryEntry.figure_id,
+      src: primaryEntry.src,
+      short_title: primaryEntry.short_title,
+      alt: primaryEntry.alt,
+      summary: primaryEntry.summary!,  // Primary figures must have extended summary
+      // Merge registry keywords with topic-specific keywords
+      keywords: [
+        ...primaryEntry.keywords,
+        ...(raw.primary_figure.topic_keywords || [])
+      ].filter((k, i, arr) => arr.indexOf(k) === i)  // dedupe
     };
-}
+  }
 
-export default async function ResearchPage({ params }: { params: Promise<{ slug: string }> }) {
-    const { slug } = await params;
-
-    const projects = loadJSONData<any[]>('research-projects.json');
-    const project = projects.find((p: any) => p.slug === slug);
-
-    // Redirect to /research if page is unpublished in production
-    // (In development, allow access to all pages)
-    const isDev = process.env.NODE_ENV === 'development';
-    if (!isDev && project?.published === false) {
-        redirect('/research');
+  // Resolve related figures
+  const relatedFigures: RelatedFigure[] = raw.related_figures.map(rf => {
+    const entry = registry[rf.ref];
+    if (!entry) {
+      throw new Error(`Figure not found in registry: ${rf.ref}`);
     }
 
-    const paragraphs = loadJSONData<Record<string, string>>('research-paragraphs.json');
-    const figuresData = loadJSONData<any[]>('research-figures-with-captions.json');
+    // If this figure is primary for another topic, link there; otherwise link to figure detail
+    const primaryTopics = (entry.used_as_primary_in || []).filter(t => t !== raw.slug);
+    const link = primaryTopics.length > 0
+      ? `/research/${primaryTopics[0]}`
+      : `/research/figure/${entry.paper_id}/${entry.figure_id}`;
 
-    const pageData = figuresData.find((p: any) => p.slug === slug);
-    const introductoryParagraph = paragraphs[slug];
-    const figure = pageData?.figure;
+    return {
+      paper_id: entry.paper_id,
+      figure_id: entry.figure_id,
+      src: entry.src,
+      short_title: entry.short_title,
+      alt: entry.alt,
+      relevance: rf.relevance,  // From topic, not registry
+      summary_short: entry.summary_short || '',
+      link
+    };
+  });
 
-    return (
-        <main className="flex-1 container mx-auto py-16 md:py-24">
-            <h1 className="font-headline">{project?.title}</h1>
-            <p
-                className="text-lg text-body-foreground leading-relaxed mt-4 [&_a]:text-primary [&_a:hover]:underline"
-                dangerouslySetInnerHTML={{ __html: renderMathInText(introductoryParagraph) }}
-            />
-            {figure && <ResearchFigure src={figure.src} alt={figure.alt} caption={figure.caption} />}
-        </main>
-    );
+  // Shuffle related figures at build time to avoid implied ordering
+  const shuffledRelated = [...relatedFigures].sort(() => Math.random() - 0.5);
+
+  return {
+    slug: raw.slug,
+    title: raw.title,
+    subtitle: raw.subtitle,
+    description: raw.description,
+    primary_figure: primaryFigure,
+    related_figures: shuffledRelated,
+    related_topics: raw.related_topics,
+    published: raw.published,
+    paper: raw.paper
+  };
+}
+
+// Load and resolve all topics
+function loadAllTopics(): ResearchTopicData[] {
+  const registry = loadFigureRegistry();
+  const rawTopics = loadAllRawTopics();
+  return rawTopics.map(raw => resolveTopicData(raw, registry));
+}
+
+export async function generateStaticParams() {
+  const topics = loadAllTopics();
+  const publishedTopics = filterPublishedProjects(topics);
+
+  return publishedTopics.map((topic) => ({
+    slug: topic.slug,
+  }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const topics = loadAllTopics();
+  const topic = topics.find(t => t.slug === slug);
+
+  return {
+    title: `${topic?.title || 'Research'} | B. L. Alterman`,
+    description: topic?.description,
+  };
+}
+
+export default async function ResearchTopicPage({ params }: Props) {
+  const { slug } = await params;
+  const topics = loadAllTopics();
+  const topic = topics.find(t => t.slug === slug);
+
+  if (!topic) {
+    notFound();
+  }
+
+  // Redirect/404 if unpublished in production
+  const isDev = process.env.NODE_ENV === 'development';
+  if (!isDev && topic.published === false) {
+    notFound();
+  }
+
+  return (
+    <div className="container mx-auto py-16 md:py-24 max-w-4xl">
+      <ResearchTopic data={topic} />
+    </div>
+  );
 }

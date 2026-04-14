@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ResearchTopicData } from '@/types/research-topic';
 import { ChevronDown, ChevronUp, ExternalLink, ArrowRight } from 'lucide-react';
 
-interface ResearchTopicPrototypeProps {
+interface ResearchTopicProps {
   data: ResearchTopicData;
 }
 
@@ -42,7 +42,7 @@ function SummarySection({
   );
 }
 
-export function ResearchTopicPrototype({ data }: ResearchTopicPrototypeProps) {
+export function ResearchTopic({ data }: ResearchTopicProps) {
   const { primary_figure, related_figures, related_topics, paper } = data;
 
   return (
@@ -143,7 +143,7 @@ export function ResearchTopicPrototype({ data }: ResearchTopicPrototypeProps) {
             {related_topics.map((topic) => (
               <Link
                 key={topic.slug}
-                href={`/research-prototype/${topic.slug}`}
+                href={`/research/${topic.slug}`}
                 className="flex items-center justify-between p-4 border border-border rounded-lg hover:bg-muted/50 transition-colors group"
               >
                 <div>
