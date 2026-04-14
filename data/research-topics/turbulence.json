@@ -1,0 +1,30 @@
+{
+  "slug": "turbulence",
+  "title": "Turbulence",
+  "subtitle": "Placeholder — awaiting domain expert review",
+  "description": "Placeholder — awaiting domain expert review",
+  "primary_figure": {
+    "ref": "Alterman_2026_ApJL_996_L12/fig_2"
+  },
+  "related_figures": [],
+  "related_topics": [
+    {
+      "slug": "solar-wind-compressibility",
+      "connection": "Compressibility modulates how turbulent wave energy is distributed across wind types"
+    }
+  ],
+  "published": true,
+  "paper": {
+    "id": "Alterman_2025_ApJL_982_L40",
+    "title": "Cross Helicity and the Helium Abundance as an In Situ Metric of Solar Wind Acceleration",
+    "doi": "https://doi.org/10.3847/2041-8213/ada835",
+    "bibcode": "2025ApJ...982L..40A",
+    "journal": "The Astrophysical Journal Letters",
+    "year": 2025,
+    "license": {
+      "holder": "The Author(s). Published by the American Astronomical Society",
+      "year": 2025,
+      "type": "CC BY 4.0"
+    }
+  }
+}
