@@ -49,7 +49,6 @@ npm run lint
 
 # Python scripts (requires dependencies)
 pip install -r scripts/requirements.txt
-python scripts/create_research_page.py
 ```
 
 ---
@@ -99,15 +98,14 @@ python scripts/create_research_page.py
 
 **Automated Data** (updated weekly by GitHub Actions):
 - `ads_publications.json`, `ads_metrics.json`, `citations_by_year.json`
-- `research-figures-with-captions.json`
 - `publication_statistics.json`, `invited_metrics.json` (aggregated from multiple sources)
 
 **Manual Data** (curated):
-- **Research:** `research-projects.json`, `page-figure-mappings.json`, `research-paragraphs.json`
+- **Research:** `research-topics/*.json` (per-topic files), `figure-registry.json`
 - **Ben Page:** `ben-page.json`
 - **Publications:** `publications-categories.json`, `non_ads_publications.json`, `invited_conferences.json`, `invited_presentations.json`, `invited_public.json`
 - **Professional:** `education.json`, `positions.json`, `skills.json`
-- **Page Overviews:** `research-page.json`, `publications-page.json`, `experience-page.json`, `biography-homepage.json`
+- **Page Overviews:** `publications-page.json`, `experience-page.json`, `biography-homepage.json`
 
 **Important:** `ads_publications.json` contains only ADS-indexed publications (overwritten weekly). Non-ADS entries (conferences without bibcodes, Zenodo white papers) live in `non_ads_publications.json` to survive weekly updates. Both are merged at load time via `loadAllPublications()` in `data-loader.ts`.
 
@@ -118,10 +116,11 @@ python scripts/create_research_page.py
 **Single React component generates multiple static pages from JSON data** - this pattern is used across Research, Ben, and Publications pages.
 
 **Research Pages:**
-- File: `/src/app/research/[slug]/page.tsx`
-- `generateStaticParams()` reads `research-projects.json`
-- **Research Overview:** Cards displayed in random order (shuffled at build time)
-- **Adding new:** `python scripts/create_research_page.py` OR update 3 JSON files
+- Overview: `/src/app/research/page.tsx` — organized by research questions
+- Subpages: `/src/app/research/[slug]/page.tsx` — topic pages with figures + summaries
+- Figure detail: `/src/app/research/figure/[paper_id]/[figure_id]/page.tsx`
+- `generateStaticParams()` reads `research-topics/*.json` + `figure-registry.json`
+- **Adding new:** Create `public/data/research-topics/<slug>.json` with topic data and figure refs
 
 **Ben Pages:**
 - Overview: `/src/app/ben/page.tsx` - card grid linking to subpages
@@ -146,11 +145,10 @@ python scripts/create_research_page.py
 
 ### 3. GitHub Actions Automation
 
-**6 workflows** handle data updates and deployment:
+**5 workflows** handle data updates and deployment:
 - Publications, metrics, citations (weekly Mon updates)
 - Timeline plots (triggers after data updates complete)
 - PDF→SVG conversion (on upload)
-- Figure data generation (on data changes)
 
 **Cross-repo:** The private CV repo (`CV-v3`) has a GitHub Action that compiles the LaTeX CV and pushes `Alterman-CV.pdf` to this repo's `public/` directory every Monday (after ADS data updates).
 
@@ -181,7 +179,7 @@ python scripts/create_research_page.py
 
 | Task | Method |
 |------|--------|
-| New research page | `python scripts/create_research_page.py` OR update 3 JSON files |
+| New research page | Create `public/data/research-topics/<slug>.json` with figure refs |
 | New figure | Upload PDF to `/public/paper-figures/pdfs/` → auto-converts to SVG |
 | Update publications | Automatic weekly OR run fetch scripts manually |
 | Add non-ADS publication | `python scripts/add_non_ads_publication.py` (writes to `non_ads_publications.json`) |
@@ -203,10 +201,9 @@ python scripts/create_research_page.py
 All scripts in `/scripts/` use shared `utils.py` for consistent path management:
 
 **Key Scripts:**
-- `create_research_page.py` - Interactive CLI for adding research pages (supports `--dry-run`)
 - `add_non_ads_publication.py` - Add non-ADS publications to `non_ads_publications.json`
 - `fetch_ads_*.py` - NASA ADS API integration (publications, metrics, citations)
-- `generate_figure_data.py` - Combines figure metadata with publications
+- `generate_figure_registry_from_corpus.py` - Generates `figure-registry.json` from research-corpus metadata (manual, no automated workflow yet)
 - `generate_publication_statistics.py` - Aggregates stats from all publication sources
 - `merge_invited_conferences.py` - Enriches publications with invited talk flags
 - `utils.py` - Shared utilities: `get_repo_root()`, `get_public_data_dir()`, `get_public_plots_dir()`
@@ -235,7 +232,7 @@ Weekly automation updates publications and metrics every Monday automatically. T
 | Issue | Check |
 |-------|-------|
 | Publications not updating | GitHub Actions logs, verify `ADS_DEV_KEY`/`ADS_ORCID` secrets |
-| Research page missing | Verify slug in all 3 JSON files, rebuild site |
+| Research page missing | Verify slug has a `research-topics/<slug>.json` file, rebuild site |
 | Figure not displaying | Check file exists in `/public/paper-figures/svg/`, verify paths |
 | Build failing | Validate JSON syntax, check TypeScript, clear `.next` cache |
 

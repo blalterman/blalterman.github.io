@@ -154,7 +154,6 @@ blalterman.github.io/
 │       ├── update-ads-metrics.yml
 │       ├── update_annual_citations.yml
 │       ├── convert-pdfs.yml
-│       ├── generate-figure-data.yml
 │       └── deploy.yaml (implied)
 │
 ├── src/
@@ -164,8 +163,9 @@ blalterman.github.io/
 │   │   ├── globals.css               # Global Tailwind styles
 │   │   ├── research/
 │   │   │   ├── page.tsx              # Research overview (/research)
-│   │   │   ├── [slug]/page.tsx       # Dynamic research subpages
-│   │   │   └── layout.tsx
+│   │   │   ├── [slug]/page.tsx       # Dynamic research topic pages
+│   │   │   ├── figure/[paper_id]/[figure_id]/page.tsx  # Figure detail pages
+│   │   │   └── layout.tsx            # Header + Contact wrapper
 │   │   ├── publications/
 │   │   │   ├── page.tsx              # Publications list
 │   │   │   ├── loading.tsx
@@ -178,9 +178,7 @@ blalterman.github.io/
 │   │   ├── ui/                       # Shadcn/ui components (52 files)
 │   │   ├── icons/                    # Custom SVG icons
 │   │   ├── header.tsx                # Navigation header
-│   │   ├── research-figure.tsx       # Figure display with captions
-│   │   ├── featured-research.tsx     # Research grid
-│   │   ├── research.tsx
+│   │   ├── research-topic.tsx        # Research topic page component
 │   │   ├── about.tsx
 │   │   ├── experience.tsx
 │   │   ├── contact.tsx
@@ -204,20 +202,20 @@ blalterman.github.io/
 │   │   ├── ads_publications.json           # AUTO: Publications from ADS
 │   │   ├── ads_metrics.json                # AUTO: Citation metrics
 │   │   ├── citations_by_year.json          # AUTO: Yearly citations
-│   │   ├── research-figures-with-captions.json  # AUTO: Combined figure data
 │   │   ├── publication_statistics.json     # AUTO: Aggregated publication stats
 │   │   ├── invited_metrics.json            # AUTO: Invited talk statistics
 │   │   ├── non_ads_publications.json       # MANUAL: Non-ADS publications (merged at load time)
 │   │   ├── invited_conferences.json        # MANUAL: Invited conference presentations
 │   │   ├── invited_presentations.json      # MANUAL: Other invited presentations
 │   │   ├── invited_public.json             # MANUAL: Invited public/outreach talks
-│   │   ├── research-projects.json          # MANUAL: Featured research topics
-│   │   ├── research-paragraphs.json        # MANUAL: Detailed descriptions
-│   │   ├── page-figure-mappings.json       # MANUAL: Maps pages to figures
-│   │   ├── figure-metadata.json            # MANUAL: Figure database
+│   │   ├── figure-registry.json            # MANUAL: Figure metadata registry
+│   │   ├── research-topics/                # MANUAL: Per-topic research data
+│   │   │   ├── proton-beams.json
+│   │   │   ├── helium-abundance.json
+│   │   │   ├── coulomb-collisions.json
+│   │   │   └── ...                         # One file per research topic
 │   │   ├── ben-page.json                   # MANUAL: Ben page structure & content
 │   │   ├── publications-categories.json    # MANUAL: Publication category definitions
-│   │   ├── research-page.json              # MANUAL: Research overview content
 │   │   ├── publications-page.json          # MANUAL: Publications overview content
 │   │   ├── experience-page.json            # MANUAL: Experience overview content
 │   │   ├── biography-homepage.json         # MANUAL: Homepage biography content
@@ -243,13 +241,11 @@ blalterman.github.io/
 │   ├── generate_h_index_timeline.py           # Generate h-index plot
 │   ├── generate_publications_timeline.py      # Generate publications timeline
 │   ├── generate_publication_statistics.py     # Aggregate publication stats
-│   ├── generate_figure_data.py                # Combine data sources
+│   ├── generate_figure_registry_from_corpus.py # Generate figure registry (manual)
 │   ├── merge_invited_conferences.py           # Enrich pubs with invited flags
 │   ├── compute_invited_metrics.py             # Generate invited talk metrics
 │   ├── add_non_ads_publication.py             # Add non-ADS publications
-│   ├── create_research_page.py                # Interactive page creation
 │   ├── plot_config.py                         # Shared plot styling
-│   ├── test_create_research_page.py           # Unit tests
 │   ├── utils.py                               # Shared utilities
 │   └── requirements.txt                       # Python dependencies
 │
@@ -324,45 +320,33 @@ blalterman.github.io/
        │                          │ year.svg         │
        │                          └──────────────────┘
        │
-       └────────────────┐
-                        │
-        ┌───────────────┴────────────────┐
-        │                                │
-        ▼                                ▼
-┌──────────────┐              ┌──────────────────┐
-│ Figure       │              │ Page-Figure      │
-│ Metadata     │              │ Mappings         │
-│ (Manual)     │              │ (Manual)         │
-└──────┬───────┘              └──────┬───────────┘
-       │                             │
-       └──────────┬──────────────────┘
-                  │
-                  ▼
-        ┌─────────────────────┐
-        │  generate_figure_   │
-        │  data.py            │
-        │  (Combines sources) │
-        └─────────┬───────────┘
-                  │
-                  ▼
-        ┌─────────────────────┐
-        │ research-figures-   │
-        │ with-captions.json  │
-        │ (Combined output)   │
-        └─────────┬───────────┘
-                  │
-                  ▼
-        ┌─────────────────────┐
-        │  Next.js Static     │
-        │  Site Generation    │
-        │  (Dynamic Routes)   │
-        └─────────┬───────────┘
-                  │
-                  ▼
-        ┌─────────────────────┐
-        │  GitHub Pages       │
-        │  Deployment         │
-        └─────────────────────┘
+       │
+       ▼
+┌──────────────────────────────────────────────┐
+│                                              │
+│  Manual Data (Research Content)              │
+│                                              │
+│  ┌──────────────────┐  ┌──────────────────┐  │
+│  │ research-topics/ │  │ figure-registry  │  │
+│  │ *.json           │  │ .json            │  │
+│  │ (Per-topic data) │  │ (Figure metadata)│  │
+│  └────────┬─────────┘  └────────┬─────────┘  │
+│           └──────────┬──────────┘            │
+│                      │                       │
+└──────────────────────┼───────────────────────┘
+                       │
+                       ▼
+             ┌─────────────────────┐
+             │  Next.js Static     │
+             │  Site Generation    │
+             │  (Dynamic Routes)   │
+             └─────────┬───────────┘
+                       │
+                       ▼
+             ┌─────────────────────┐
+             │  GitHub Pages       │
+             │  Deployment         │
+             └─────────────────────┘
 ```
 
 ### Data Categories
@@ -371,7 +355,6 @@ blalterman.github.io/
 - `ads_publications.json` - Publications from NASA ADS (overwritten weekly — non-ADS entries must NOT go here)
 - `ads_metrics.json` - Citation metrics and h-index
 - `citations_by_year.json` - Annual citation counts
-- `research-figures-with-captions.json` - Combined figure data
 - `publication_statistics.json` - Aggregated stats from all publication sources
 - `invited_metrics.json` - Invited talk statistics
 - `citations_by_year.svg` - Citation trend visualization
@@ -381,10 +364,8 @@ blalterman.github.io/
 - `invited_conferences.json` - Invited conference presentations
 - `invited_presentations.json` - Other invited presentations
 - `invited_public.json` - Public/outreach talks (merged into "Other Invited" in CV)
-- `research-projects.json` - Featured research project definitions
-- `figure-metadata.json` - Figure database with captions, alt text, bibcodes
-- `page-figure-mappings.json` - Simple mapping of research pages to figures
-- `research-paragraphs.json` - Detailed descriptions for research subpages
+- `research-topics/*.json` - Per-topic research data (one file per topic)
+- `figure-registry.json` - Figure metadata registry (generated by manual script)
 - `education.json` & `positions.json` - Academic and professional history
 - `skills.json` - Technical skills data
 
@@ -410,8 +391,6 @@ blalterman.github.io/
 > - [Update Citations](#3-update-annual-citations)
 > - [Generate Timeline Plots](#4-generate-timeline-plots)
 > - [Convert PDFs](#5-convert-pdfs-to-svg)
-> - [Generate Figure Data](#6-generate-figure-data)
-
 ---
 
 ### 1. Update ADS Publications
@@ -571,47 +550,9 @@ blalterman.github.io/
 
 ---
 
-### 6. Generate Figure Data
-
-**File:** `.github/workflows/generate-figure-data.yml`
-
-**Trigger:** On push to paths:
-- `public/data/ads_publications.json`
-- `public/paper-figures/figure-metadata.json`
-- `public/data/page-figure-mappings.json`
-- `public/data/research-projects.json`
-
-**Purpose:** Combine figure metadata with publication data and citations
-
-**Process:**
-1. Run `generate_figure_data.py`
-2. Merge figure info, publication metadata, and citation data
-3. Fetch figure licenses from external sources
-4. Generate rich captions with citations
-5. Commit output
-
-**Output:** `/public/data/research-figures-with-captions.json`
-
-**Data Format:**
-```json
-[
-  {
-    "slug": "proton-beams",
-    "title": "Proton Beams",
-    "figure": {
-      "src": "/paper-figures/svg/filename.svg",
-      "alt": "Alternative text",
-      "caption": "From Alterman et al. (2024), The Astrophysical Journal [link]"
-    }
-  }
-]
-```
-
----
-
 ### Workflow Dependencies & Triggers
 
-The 6 workflows are orchestrated with specific dependencies and trigger patterns to ensure data consistency and proper update sequencing.
+The 5 workflows are orchestrated with specific dependencies and trigger patterns to ensure data consistency and proper update sequencing.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -656,12 +597,7 @@ EVENT-BASED TRIGGERS (Independent):
 
 On Push to              ┌──────────────────────────────────────┐
 paper-figures/pdfs/     │ convert-pdfs.yml                     │
-          ┌─────────────┤ → paper-figures/svg/*.svg            │
-          │             └──────────────────────────────────────┘
-          │
-On Push to              ┌──────────────────────────────────────┐
-4 data files            │ generate-figure-data.yml             │
-          └─────────────┤ → research-figures-with-captions.json│
+          └─────────────┤ → paper-figures/svg/*.svg            │
                         └──────────────────────────────────────┘
 
 ══════════════════════════════════════════
@@ -670,15 +606,15 @@ TRIGGER SUMMARY:
 
 • schedule (cron) ····· 3 workflows (00:00, 03:00, 04:00 UTC Mon)
 • workflow_run ········ 1 workflow (plots - waits for data)
-• push (path) ········· 2 workflows (PDFs, figure data)
-• workflow_dispatch ··· All 6 (manual trigger available)
+• push (path) ········· 1 workflow (PDFs)
+• workflow_dispatch ··· All 5 (manual trigger available)
 ```
 
 **Key Design Decisions:**
 
 1. **Staggered Schedule:** Citations (00:00) → Metrics (03:00) → Publications (04:00) prevents API rate limiting
 2. **Dependent Workflow:** Timeline plots wait for all 3 ADS workflows to complete before generating visualizations
-3. **Independent Events:** PDF conversion and figure data generation run independently when files change
+3. **Independent Events:** PDF conversion runs independently when figure PDFs are pushed
 4. **Manual Overrides:** All workflows support `workflow_dispatch` for on-demand execution
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -690,7 +626,7 @@ TRIGGER SUMMARY:
 
 > **Purpose:** Detailed reference for all automation scripts in `/scripts/` directory
 >
-> **When to use this section:** Adding new data fetching automation, understanding how figures are processed, debugging data pipeline issues, creating new research pages programmatically
+> **When to use this section:** Adding new data fetching automation, understanding how figures are processed, debugging data pipeline issues
 >
 > **Related Sections:** [GitHub Actions Workflows](#github-actions-workflows) • [Data Management](#data-management) • [Common Tasks](#common-tasks)
 >
@@ -700,8 +636,7 @@ TRIGGER SUMMARY:
 > - [Metrics Fetcher](#2-fetch_ads_metrics_to_data_dirpy)
 > - [Citations Data Fetcher](#3-fetch_ads_citations_to_data_dirpy)
 > - [Citations Plot Generator](#4-generate_citations_timelinepy)
-> - [Figure Data Generator](#5-generate_figure_datapy)
-> - [Research Page Creator](#6-create_research_pagepy)
+> - [Figure Registry Generator](#5-generate_figure_registry_from_corpuspy)
 > - [Non-ADS Publication Importer](#8-add_non_ads_publicationpy)
 
 ---
@@ -771,7 +706,6 @@ The automation scripts follow a clear **separation of concerns** pattern with th
 **Other Enrichment Scripts:**
 - `merge_invited_conferences.py` - Enriches `ads_publications.json` with invited talk flags
 - `compute_invited_metrics.py` - Generates `invited_metrics.json` from publications
-- `generate_figure_data.py` - Combines figure metadata with publication data
 
 **Characteristics:**
 - Read from multiple JSON sources
@@ -923,88 +857,30 @@ Monday 00:00-04:00 UTC (Layer 1 - Parallel):
 
 ---
 
-### 5. `generate_figure_data.py`
+### 5. `generate_figure_registry_from_corpus.py`
 
-**Purpose:** Combine figure metadata with publication data to create rich captions
-
-**Inputs:**
-1. `/public/data/research-projects.json` - Featured research topics
-2. `/public/paper-figures/figure-metadata.json` - Figure database
-3. `/public/data/page-figure-mappings.json` - Maps pages to figures
-4. `/public/data/ads_publications.json` - Publication details
+**Purpose:** Generate `figure-registry.json` from a corpus of paper figure files
 
 **Process:**
-1. For each research project (slug):
-   - Look up assigned figure from page mappings
-   - Get figure metadata (src, alt, caption, bibcode)
-   - Find publication info via bibcode
-   - Generate caption with citation formatting
-   - Fetch figure licenses
-2. Handle placeholders (figures without real publication links)
-3. Generate rich captions like: "From Alterman et al. (2024), The Astrophysical Journal [linked]"
+1. Scan the figure corpus directory for paper figures
+2. Extract metadata (paper ID, figure ID, file paths)
+3. Generate registry entries with SVG paths and paper references
+4. Write `figure-registry.json` to `/public/data/`
 
-**Output:** `/public/data/research-figures-with-captions.json`
-
-**Caption Format:**
-```
-From {first_author} et al. ({year}), {journal}
-```
-
-**Placeholder Handling:**
-- If figure is `placeholder.png` or similar, returns simple structure
-- No publication lookup for placeholders
-
----
-
-### 6. `create_research_page.py`
-
-**Purpose:** Interactive CLI tool for creating new research pages
-
-**Features:**
-- Displays existing pages and available figures
-- Smart slug generation from titles with uniqueness checking
-- Input validation
-- Preview mode (shows changes before applying)
-- Dry-run support: `python scripts/create_research_page.py --dry-run`
-- Automatic backup of modified files
-- Updates all three JSON files atomically
-
-**Workflow:**
-1. Display existing research pages
-2. Prompt for title (validates non-empty)
-3. Generate unique slug from title
-4. Prompt for description
-5. Display available figures (not already assigned)
-6. Prompt for figure selection
-7. Prompt for detailed content (paragraph)
-8. Preview all changes
-9. Ask for confirmation
-10. Update three JSON files:
-    - `research-projects.json`
-    - `page-figure-mappings.json`
-    - `research-paragraphs.json`
+**Output:** `/public/data/figure-registry.json`
 
 **Usage:**
 ```bash
-# Interactive mode
-python scripts/create_research_page.py
-
-# Preview mode (no changes made)
-python scripts/create_research_page.py --dry-run
+python scripts/generate_figure_registry_from_corpus.py
 ```
 
-**Testing:**
-```bash
-python scripts/test_create_research_page.py
-```
+**Note:** This script is run manually when new figures are added. There is no automated GitHub Actions workflow for figure registry generation.
 
 ---
 
-### 7. `fetch_figure_licenses.py`
+### 6. `fetch_figure_licenses.py`
 
 **Purpose:** Fetch Creative Commons license information for figures
-
-**Used By:** `generate_figure_data.py`
 
 **Process:** Looks up DOI to find licensing info
 
@@ -1058,45 +934,55 @@ The site uses **Next.js App Router's dynamic routing** with static generation to
 
 ### How It Works
 
-**Single Template:** `/src/app/research/[slug]/page.tsx`
+**Topic Pages:** `/src/app/research/[slug]/page.tsx`
 
 ```typescript
-export async function generateStaticParams() {
-  const projects = loadJSONData<ResearchProject[]>('research-projects.json');
-  return projects.map(project => ({ slug: project.slug }));
+// Load all raw topic data from JSON files
+function loadAllRawTopics(): RawResearchTopicData[] {
+  const topicsDir = path.join(process.cwd(), 'public/data/research-topics');
+  const files = fs.readdirSync(topicsDir).filter(f => f.endsWith('.json'));
+  return files.map(file => {
+    const content = fs.readFileSync(path.join(topicsDir, file), 'utf8');
+    return JSON.parse(content);
+  });
 }
 
-export default function ResearchSubPage({ params }: { params: { slug: string } }) {
-  // Load data dynamically based on slug
-  const projects = loadJSONData<ResearchProject[]>('research-projects.json');
-  const paragraphs = loadJSONData<Record<string, string>>('research-paragraphs.json');
-  const figuresData = loadJSONData<ResearchFigureData[]>('research-figures-with-captions.json');
+export async function generateStaticParams() {
+  const topics = loadAllRawTopics();
+  const published = filterPublishedProjects(topics);
+  return published.map(topic => ({ slug: topic.slug }));
+}
+```
 
-  // Find data for this specific slug
-  const project = projects.find(p => p.slug === params.slug);
-  const paragraph = paragraphs[params.slug];
-  const figureData = figuresData.find(f => f.slug === params.slug);
+**Figure Detail Pages:** `/src/app/research/figure/[paper_id]/[figure_id]/page.tsx`
 
-  // Render page
-  return (
-    <div>
-      <h1>{project.title}</h1>
-      <p>{paragraph}</p>
-      <ResearchFigure {...figureData.figure} />
-    </div>
-  );
+```typescript
+function loadFigureRegistry(): FigureRegistry {
+  const registryPath = path.join(process.cwd(), 'public/data/figure-registry.json');
+  return JSON.parse(fs.readFileSync(registryPath, 'utf8'));
+}
+
+export async function generateStaticParams() {
+  const registry = loadFigureRegistry();
+  return Object.values(registry).map((entry: FigureRegistryEntry) => ({
+    paper_id: entry.paper_id,
+    figure_id: entry.figure_id,
+  }));
 }
 ```
 
 ### Build Process
 
 **At Build Time:**
-1. `generateStaticParams()` reads `research-projects.json`
-2. Extracts all slugs: `["proton-beams", "helium-abundance", "coulomb-collisions", ...]`
-3. Next.js generates static HTML for each slug:
+1. `generateStaticParams()` reads all `research-topics/*.json` files
+2. Filters to published topics, extracts slugs
+3. Next.js generates static HTML for each topic slug:
    - `/out/research/proton-beams.html`
    - `/out/research/helium-abundance.html`
    - `/out/research/coulomb-collisions.html`
+   - etc.
+4. Separately, figure detail pages read `figure-registry.json` and generate:
+   - `/out/research/figure/Alterman_2018_ApJ_864_112/fig_1.html`
    - etc.
 
 **At Runtime (Static Site):**
@@ -1113,67 +999,68 @@ export default function ResearchSubPage({ params }: { params: { slug: string } }
 5. **Static Export Compatible:** Generates individual HTML files for GitHub Pages
 6. **Type Safety:** TypeScript ensures data structure consistency
 
-### Research Card Randomization
+### Research Topic Organization
 
-**Behavior:** Research project cards on `/research` are shuffled at build time
+**Behavior:** Research topics on `/research` are organized by fundamental research questions
 
-**Implementation:** `/src/app/research/page.tsx` (line 30)
+**Implementation:** `/src/app/research/page.tsx`
 ```typescript
-const shuffledProjects = [...researchProjects].sort(() => Math.random() - 0.5);
+const researchQuestions: ResearchQuestion[] = [
+  {
+    question: 'Where does the solar wind come from?',
+    subtitle: 'Source Identification',
+    topics: ['sources-of-the-solar-wind', 'helium-abundance', 'heavy-ion-composition'],
+  },
+  // ... additional research questions
+];
 ```
 
 **Characteristics:**
-- Shuffle occurs once during `npm run build`
-- All visitors see identical order until next deployment
-- Order refreshes automatically via:
-  - Weekly GitHub Actions deployments (every Monday)
-  - Manual deployments/rebuilds
-  - Any push to main branch that triggers deployment
-
-**Rationale:** Prevents implied priority hierarchy among research topics
+- Topics are grouped under parent research questions
+- Each question has a subtitle and a list of topic slugs
+- Only published topics are displayed (filtered at build time)
+- Question sections with no published topics are hidden
 
 ### Adding a New Research Page
 
-**Option 1: Interactive Script (Recommended)**
-```bash
-python scripts/create_research_page.py
-```
+Create a new JSON file at `public/data/research-topics/<slug>.json`:
 
-**Option 2: Manual JSON Updates**
-
-1. **Add to `research-projects.json`:**
 ```json
 {
-  "title": "Solar Energetic Particles",
   "slug": "solar-energetic-particles",
-  "description": "Studying particle acceleration in solar events",
-  "image": "https://placehold.co/600x400.png",
-  "imageHint": "solar particles"
+  "title": "Solar Energetic Particles",
+  "subtitle": "Brief subtitle for the topic",
+  "description": "Brief description for the overview card",
+  "primary_figure": {
+    "ref": "Paper_ID/fig_N"
+  },
+  "related_figures": [],
+  "related_topics": [],
+  "published": true,
+  "paper": {
+    "id": "Paper_ID",
+    "title": "Source paper title",
+    "doi": "https://doi.org/...",
+    "bibcode": "2024ApJ...960...70A",
+    "journal": "The Astrophysical Journal",
+    "year": 2024,
+    "license": {
+      "holder": "American Astronomical Society",
+      "year": 2024,
+      "type": "CC BY 4.0"
+    }
+  }
 }
 ```
 
-2. **Add to `page-figure-mappings.json`:**
-```json
-{
-  "solar-energetic-particles": "sep-figure.svg"
-}
-```
-
-3. **Add to `research-paragraphs.json`:**
-```json
-{
-  "solar-energetic-particles": "Detailed research description discussing particle acceleration mechanisms..."
-}
-```
-
-4. **Push to main:**
+**Push to main:**
 ```bash
-git add public/data/*.json
+git add public/data/research-topics/solar-energetic-particles.json
 git commit -m "Add solar energetic particles research page"
 git push
 ```
 
-5. **Result:** Page automatically exists at `/research/solar-energetic-particles`
+**Result:** Page automatically exists at `/research/solar-energetic-particles`
 
 **No React/TypeScript files need to be created!**
 
@@ -1199,21 +1086,30 @@ This architecture provides:
 
 ### 1. Research Pages
 
-**Pattern:** Card Overview → Dynamic Research Topics
+**Pattern:** Overview → Dynamic Research Topics → Figure Detail Pages
 
 **Overview Page:** `/src/app/research/page.tsx`
-- Displays grid of research project cards
-- Cards shuffled at build time (no implied priority)
-- Links to individual research pages
+- Displays research topics organized by fundamental questions
+- Links to individual research topic pages
 
-**Dynamic Subpages:** `/src/app/research/[slug]/page.tsx`
+**Dynamic Topic Pages:** `/src/app/research/[slug]/page.tsx`
 - Generates pages for each research topic
-- Data sources: `research-projects.json`, `research-paragraphs.json`, `research-figures-with-captions.json`
+- Data sources: `research-topics/*.json`, `figure-registry.json`
+- Renders primary figure, related figures, and topic content via `ResearchTopic` component
+
+**Figure Detail Pages:** `/src/app/research/figure/[paper_id]/[figure_id]/page.tsx`
+- Individual pages for each figure in the registry
+- Data source: `figure-registry.json`
+- Shows full-size figure with metadata and citation info
+
+**Layout:** `/src/app/research/layout.tsx`
+- Wraps all research pages (overview, topics, figures) with Header + Contact
 
 **URL Structure:**
-- `/research` - Card grid overview
+- `/research` - Research overview
 - `/research/proton-beams` - Individual topic
 - `/research/helium-abundance` - Individual topic
+- `/research/figure/Alterman_2018_ApJ_864_112/fig_1` - Figure detail
 - etc.
 
 ---
@@ -1380,15 +1276,19 @@ const publishedItems = isDev ? allItems : allItems.filter(item => item.published
 │
 ├── research/
 │   ├── page.tsx               # Research overview (/research)
-│   │   └── Featured research grid (from research-projects.json)
+│   │   └── Topic cards organized by research questions (from research-topics/*.json)
 │   │
-│   ├── [slug]/page.tsx         # Dynamic research subpages
-│   │   ├── generateStaticParams() reads from research-projects.json
-│   │   ├── Loads figure data, paragraphs, publication info
-│   │   ├── ResearchFigure component with caption
+│   ├── [slug]/page.tsx         # Dynamic research topic pages
+│   │   ├── generateStaticParams() reads from research-topics/*.json
+│   │   ├── Resolves figure refs against figure-registry.json
+│   │   ├── ResearchTopic component with primary + related figures
 │   │   └── Math rendering via LaTeX
 │   │
-│   └── layout.tsx
+│   ├── figure/[paper_id]/[figure_id]/page.tsx  # Figure detail pages
+│   │   ├── generateStaticParams() reads from figure-registry.json
+│   │   └── Full-size figure display with metadata and citation
+│   │
+│   └── layout.tsx             # Header + Contact wrapper for all research pages
 │
 ├── publications/
 │   ├── page.tsx               # Publications overview page (/publications)
@@ -1466,35 +1366,12 @@ Shadcn/ui pre-built components (52 files) based on Radix UI primitives with Tail
   - LinkedIn
 - Mobile navigation menu
 
-**`research-figure.tsx`** - Figure Display Component
-```typescript
-interface ResearchFigureProps {
-  src: string;
-  alt: string;
-  caption: string;
-}
-```
-- Image with aspect ratio container
-- Caption with HTML rendering support (for links)
-- LaTeX math expression rendering
-- Responsive sizing
-
-**`featured-research.tsx`** - Research Grid
-- Card-based layout showing research projects
-- Displays project title, description, image
-- Responsive grid (1 column mobile → 2 columns tablet → 3 columns desktop)
-- Hover effects and transitions
-
-**Card Order:**
-- Research project cards are shuffled at build time using `Array.sort(() => Math.random() - 0.5)`
-- All visitors see the same random order until the next build/deployment
-- Order changes automatically with weekly automated builds (Monday deployments)
-- Manual rebuilds (`npm run build`) will generate a new random order
-
-**`research.tsx`** - Featured Research Projects Section
-- Section header
-- Grid of featured research cards
-- Currently uses data from research-projects.json
+**`research-topic.tsx`** - Research Topic Page Component
+- Renders a complete research topic page with primary figure, related figures, and content
+- Resolves figure references against the figure registry
+- Displays figure attribution (journal, DOI, license)
+- Links to figure detail pages
+- Responsive layout with constrained figure sizing and white backgrounds
 
 **`experience.tsx`** - Professional Timeline
 - Education and position cards
@@ -1592,8 +1469,8 @@ export function loadJSONData<T>(fileName: string): T {
 
 **Usage:**
 ```typescript
-const projects = loadJSONData<ResearchProject[]>('research-projects.json');
 const metrics = loadJSONData<ADSMetrics>('ads_metrics.json');
+const registry = loadJSONData<FigureRegistry>('figure-registry.json');
 ```
 
 **Note:** Works with synchronous file reading (server-side only)
@@ -1664,13 +1541,13 @@ export function filterPublishedProjects<T extends { published?: boolean }>(
 
 **Usage Example:**
 ```typescript
-const projects = loadJSONData<ResearchProject[]>('research-projects.json');
-const publishedProjects = filterPublishedProjects(projects);
-// Development: all 9 projects | Production: only published projects
+const topics = loadAllRawTopics(); // from research-topics/*.json
+const publishedTopics = filterPublishedProjects(topics);
+// Development: all topics | Production: only published topics
 ```
 
 **Used By:**
-- `/src/app/research/page.tsx` - Filter cards on research overview
+- `/src/app/research/page.tsx` - Filter topics on research overview
 - `/src/app/research/[slug]/page.tsx` - Filter static params generation
 
 [↑ Back to Table of Contents](#table-of-contents)
@@ -1694,7 +1571,6 @@ const publishedProjects = filterPublishedProjects(projects);
 - [ads_publications.json](#ads_publicationsjson-3600-lines) - Publications from NASA ADS
 - [ads_metrics.json](#ads_metricsjson-679-lines) - Citation metrics
 - [citations_by_year.json](#citations_by_yearjson-43-lines) - Annual citations
-- [research-figures-with-captions.json](#research-figures-with-captionsjson-82-lines) - Combined figure data
 - [publication_statistics.json](#publication_statisticsjson) - Aggregated publication stats
 - [invited_metrics.json](#invited_metricsjson) - Invited talk statistics
 
@@ -1703,10 +1579,8 @@ const publishedProjects = filterPublishedProjects(projects);
 - [invited_conferences.json](#invited_conferencesjson) - Invited conference presentations
 - [invited_presentations.json](#invited_presentationsjson) - Other invited presentations
 - [invited_public.json](#invited_publicjson) - Invited public/outreach talks
-- [research-projects.json](#research-projectsjson-65-lines) - Featured research topics
-- [page-figure-mappings.json](#page-figure-mappingsjson-11-lines) - Figure assignments
-- [research-paragraphs.json](#research-paragraphsjson-12-lines) - Detailed descriptions
-- [figure-metadata.json](#figure-metadatajson) - Figure database
+- [research-topics/*.json](#research-topicsjson) - Per-topic research data
+- [figure-registry.json](#figure-registryjson) - Figure metadata registry
 - [ben-page.json](#ben-pagejson-40-lines) - Ben page structure
 - [publications-categories.json](#publications-categoriesjson-50-lines) - Publication categories
 - [education.json](#educationjson-16-lines) - Academic credentials
@@ -1757,7 +1631,6 @@ const publishedProjects = filterPublishedProjects(projects);
 
 **Used By:**
 - Publications page (/publications)
-- generate_figure_data.py (for caption generation)
 
 ---
 
@@ -1843,37 +1716,6 @@ const publishedProjects = filterPublishedProjects(projects);
 **Used By:**
 - SVG plot generation (citations_by_year.svg)
 - Publications page (future implementation)
-
----
-
-#### `research-figures-with-captions.json` (~82 lines)
-
-**Updated:** When publications, figure-metadata, or mappings change
-
-**Source:** Generated by `generate_figure_data.py`
-
-**Structure:**
-```json
-[
-  {
-    "slug": "proton-beams",
-    "title": "Proton Beams",
-    "figure": {
-      "src": "/paper-figures/svg/P9-Fig9.svg",
-      "alt": "Proton velocity distributions showing beam features",
-      "caption": "From <a href=\"https://dx.doi.org/...\">Alterman et al. (2024), The Astrophysical Journal</a>"
-    }
-  }
-]
-```
-
-**Caption Format:**
-- Includes author list (first author et al.)
-- Publication year
-- Journal name
-- Clickable link to DOI or ADS
-
-**Used By:** Research detail pages ([slug] dynamic route)
 
 ---
 
@@ -2007,113 +1849,85 @@ const publishedProjects = filterPublishedProjects(projects);
 
 ---
 
-#### `research-projects.json` (~65 lines)
+#### `research-topics/*.json`
 
-**Purpose:** Define featured research topics
+**Purpose:** Per-topic research data files. Each research topic has its own JSON file in `public/data/research-topics/`.
 
-**Structure:**
+**Structure (per file):**
 ```json
-[
-  {
-    "title": "Proton Beams",
-    "slug": "proton-beams",
-    "description": "Investigating how proton beams form and evolve in the solar wind",
-    "image": "https://placehold.co/600x400.png",
-    "imageHint": "solar wind particles",
-    "published": false
+{
+  "slug": "proton-beams",
+  "title": "Proton Beams",
+  "subtitle": "Brief subtitle for the topic",
+  "description": "Brief description for the overview card",
+  "primary_figure": {
+    "ref": "Alterman_2018_ApJ_864_112/fig_2"
+  },
+  "related_figures": [
+    {
+      "ref": "Alterman_2018_ApJ_864_112/fig_1",
+      "relevance": "Description of why this figure is relevant"
+    }
+  ],
+  "related_topics": [],
+  "published": false,
+  "paper": {
+    "id": "Alterman_2018_ApJ_864_112",
+    "title": "Paper title",
+    "doi": "https://doi.org/...",
+    "bibcode": "2018ApJ...864..112A",
+    "journal": "The Astrophysical Journal",
+    "year": 2018,
+    "license": {
+      "holder": "American Astronomical Society",
+      "year": 2018,
+      "type": "CC BY 3.0"
+    }
   }
-]
+}
 ```
 
 **Fields:**
-- **title:** Display title (used in navigation, headers)
-- **slug:** URL-safe identifier (used in /research/[slug])
+- **slug:** URL-safe identifier (used in /research/[slug]), must match the filename
+- **title:** Display title (used in headers)
+- **subtitle:** Brief subtitle displayed below the title
 - **description:** Brief summary (shown on research overview page)
-- **image:** Placeholder image URL (for overview grid)
-- **imageHint:** Alt text hint for image
+- **primary_figure.ref:** Reference to figure in `figure-registry.json` (format: `paper_id/figure_id`)
+- **related_figures:** Array of additional figures with relevance descriptions
+- **related_topics:** Slugs of related research topics
 - **published:** (optional, boolean) Whether page is visible in production. Defaults to `true`. Set to `false` to hide page in production builds while keeping it visible in development
+- **paper:** Source publication metadata including DOI, bibcode, journal, and license
 
 **Used By:**
-- Research overview page (/research) - displayed in random order (shuffled at build time)
-- Research detail pages (generateStaticParams)
-- generate_figure_data.py
+- Research overview page (/research)
+- Research topic pages (generateStaticParams)
 
 ---
 
-#### `page-figure-mappings.json` (~11 lines)
+#### `figure-registry.json`
 
-**Purpose:** Map research page slugs to figure filenames
+**Purpose:** Central registry of all figures available for use on research pages. Maps figure references to file paths and metadata.
 
 **Structure:**
 ```json
 {
-  "proton-beams": "placeholder.png",
-  "helium-abundance": "Ahe-bilinear.svg",
-  "coulomb-collisions": "P9-Fig9.svg",
-  "magnetic-switchbacks": "placeholder.png",
-  "solar-wind-thermodynamics": "placeholder.png",
-  "turbulence-heating": "placeholder.png"
-}
-```
-
-**Pattern:** `slug` → `figure_filename.svg`
-
-**Notes:**
-- Filenames refer to files in `/public/paper-figures/svg/`
-- `placeholder.png` used for pages without specific figures
-- One-to-one mapping (each page gets exactly one figure)
-
-**Used By:** generate_figure_data.py
-
----
-
-#### `research-paragraphs.json` (~12 lines)
-
-**Purpose:** Detailed descriptions for each research subpage
-
-**Structure:**
-```json
-{
-  "proton-beams": "Detailed introductory paragraph about proton beams. Can include multiple sentences describing the research topic, methods, findings, and implications.",
-  "helium-abundance": "Another detailed paragraph for this topic..."
-}
-```
-
-**Content Guidelines:**
-- 3-5 sentences recommended
-- Focus on research significance and approach
-- Can include LaTeX math expressions: `$E = mc^2$`
-- Avoid overly technical jargon
-
-**Used By:** Research detail pages (shown above figure)
-
----
-
-#### `figure-metadata.json`
-
-**Purpose:** Figure database with captions, alt text, and bibcodes
-
-**Structure:**
-```json
-{
-  "P9-Fig9.svg": {
-    "src": "/paper-figures/svg/P9-Fig9.svg",
-    "alt": "Proton velocity distributions from Parker Solar Probe",
-    "caption": "Proton velocity distribution functions showing beam features",
-    "bibcode": "2024ApJ...960...70A",
-    "license": "CC-BY-4.0"
+  "Alterman_2018_ApJ_864_112/fig_1": {
+    "paper_id": "Alterman_2018_ApJ_864_112",
+    "figure_id": "fig_1",
+    "svg_path": "/paper-figures/svg/Alterman_2018_ApJ_864_112_fig_1.svg",
+    "alt": "Description of the figure",
+    "caption": "Figure caption text"
   }
 }
 ```
 
-**Fields:**
-- **src:** Path to figure file (relative to public/)
-- **alt:** Accessibility text describing visual content
-- **caption:** Figure caption (without citation)
-- **bibcode:** NASA ADS bibcode for source publication
-- **license:** Creative Commons license (optional)
+**Key Format:** `paper_id/figure_id` — used as the lookup key in topic files' `primary_figure.ref` and `related_figures[].ref` fields
 
-**Used By:** generate_figure_data.py (to look up figure details)
+**Generated By:** `scripts/generate_figure_registry_from_corpus.py` (run manually)
+
+**Used By:**
+- Research topic pages (resolve figure refs to file paths)
+- Figure detail pages (generateStaticParams, display)
 
 ---
 
@@ -2563,19 +2377,9 @@ python scripts/generate_citations_timeline.py
 python scripts/generate_h_index_timeline.py
 ```
 
-**3. Test Figure Data Generation:**
+**3. Test Figure Registry Generation:**
 ```bash
-python scripts/generate_figure_data.py
-```
-
-**4. Test Research Page Creation (Dry Run):**
-```bash
-python scripts/create_research_page.py --dry-run
-```
-
-**5. Run Tests:**
-```bash
-python scripts/test_create_research_page.py
+python scripts/generate_figure_registry_from_corpus.py
 ```
 
 ---
@@ -2584,43 +2388,13 @@ python scripts/test_create_research_page.py
 
 #### Add a New Research Page
 
-**Option 1: Interactive Script**
+Create a new topic file at `public/data/research-topics/<slug>.json` with the topic data structure (see [research-topics/*.json](#research-topicsjson) for the full schema).
+
+**Note:** By default, pages are published. To create a draft page visible only in development, add `"published": false` to the topic definition.
+
+**Commit and push:**
 ```bash
-python scripts/create_research_page.py
-```
-
-**Option 2: Manual Updates**
-
-1. **Edit `research-projects.json`:**
-```json
-{
-  "title": "New Research Topic",
-  "slug": "new-research-topic",
-  "description": "Brief description of the research",
-  "image": "https://placehold.co/600x400.png",
-  "imageHint": "descriptive text"
-}
-```
-
-**Note:** By default, pages are published. To create a draft page visible only in development, add `"published": false` to the project definition.
-
-2. **Edit `page-figure-mappings.json`:**
-```json
-{
-  "new-research-topic": "figure-name.svg"
-}
-```
-
-3. **Edit `research-paragraphs.json`:**
-```json
-{
-  "new-research-topic": "Detailed description of the research topic..."
-}
-```
-
-4. **Commit and push:**
-```bash
-git add public/data/*.json
+git add public/data/research-topics/new-research-topic.json
 git commit -m "Add new research topic"
 git push
 ```
@@ -2642,24 +2416,15 @@ git push
 - PDF automatically converted to SVG
 - SVG saved to `/public/paper-figures/svg/my-figure.svg`
 
-3. **Add Metadata to `figure-metadata.json`:**
-```json
-{
-  "my-figure.svg": {
-    "src": "/paper-figures/svg/my-figure.svg",
-    "alt": "Description of what the figure shows",
-    "caption": "Figure caption text",
-    "bibcode": "2024ApJ...960...70A"
-  }
-}
+3. **Regenerate figure registry:**
+```bash
+python scripts/generate_figure_registry_from_corpus.py
+git add public/data/figure-registry.json
+git commit -m "Regenerate figure registry"
+git push
 ```
 
-4. **Map Figure to Page in `page-figure-mappings.json`:**
-```json
-{
-  "existing-research-slug": "my-figure.svg"
-}
-```
+4. **Reference the figure in a topic file** using its registry key (e.g., `Paper_ID/fig_N`) in the `primary_figure.ref` or `related_figures[].ref` field.
 
 ---
 
@@ -2698,6 +2463,10 @@ npm run build
 │   ├── index.html
 │   ├── proton-beams.html
 │   ├── helium-abundance.html
+│   ├── figure/
+│   │   └── Alterman_2018_ApJ_864_112/
+│   │       ├── fig_1.html
+│   │       └── fig_2.html
 │   └── ...
 ├── publications/
 │   └── index.html
@@ -2707,7 +2476,7 @@ npm run build
     └── static/...
 ```
 
-**Note:** Each build generates a new random order for research project cards on `/research`.
+**Note:** Research topics are organized by research questions defined in the overview page component.
 
 **3. Test Locally:**
 ```bash
@@ -2958,7 +2727,7 @@ npm run lint
 **3. Check Data Files:**
 ```bash
 # Validate JSON syntax
-python -m json.tool public/data/research-projects.json
+python -m json.tool public/data/figure-registry.json
 python -m json.tool public/data/ads_publications.json
 ```
 
@@ -2979,16 +2748,16 @@ npm run build
 
 ### Task: Hide/Show Research Pages (Environment-Aware)
 
-Use the `published` field to control research page visibility in production while keeping them accessible in development.
+Use the `published` field in each topic's JSON file to control research page visibility in production while keeping them accessible in development.
 
 **Hide a Research Page:**
 
-1. **Edit `/public/data/research-projects.json`:**
+1. **Edit `/public/data/research-topics/<slug>.json`:**
 ```json
 {
-  "title": "Proton Beams",
   "slug": "proton-beams",
-  "published": false  ← Add this field
+  "title": "Proton Beams",
+  "published": false
 }
 ```
 
@@ -2998,9 +2767,8 @@ npm run build
 ```
 
 **Result:**
-- ✅ Development (`npm run dev`): Page visible, card appears
-- ❌ Production (`npm run build`): Page not built, card hidden
-- 🔗 Direct URL: Redirects to `/research` in production
+- Development (`npm run dev`): Page visible, card appears
+- Production (`npm run build`): Page not built, card hidden
 
 **Re-enable a Page:**
 
@@ -3009,7 +2777,6 @@ Set `"published": true` or remove the field entirely (defaults to true).
 **Environment Behavior:**
 - **Development:** All pages visible (including unpublished) for testing
 - **Production:** Only published pages built and displayed
-- **Direct URLs:** Unpublished pages redirect to `/research` in production
 
 **Use Cases:**
 - Draft pages without figures or content
@@ -3200,17 +2967,18 @@ python scripts/fetch_ads_publications_to_data_dir.py
 ### Issue: Research Page Not Appearing
 
 **Check:**
-1. Entry exists in `research-projects.json` with correct slug
-2. Entry exists in `page-figure-mappings.json` with matching slug
-3. Entry exists in `research-paragraphs.json` with matching slug
+1. Topic file exists at `public/data/research-topics/<slug>.json`
+2. File contains valid JSON with correct `slug` field matching the filename
+3. `published` field is not set to `false` (or running in development mode)
 4. Site was rebuilt after JSON changes
 5. No typos in slug names (must match exactly)
 
 **Debug:**
-```typescript
-// Add console.log in [slug]/page.tsx
-console.log('Available projects:', projects.map(p => p.slug));
-console.log('Requested slug:', params.slug);
+```bash
+# List all topic slugs
+ls public/data/research-topics/
+# Validate a topic file
+python -m json.tool public/data/research-topics/<slug>.json
 ```
 
 ---
@@ -3218,17 +2986,16 @@ console.log('Requested slug:', params.slug);
 ### Issue: Figure Not Displaying
 
 **Check:**
-1. Figure file exists in `/public/paper-figures/svg/`
-2. Filename matches entry in `page-figure-mappings.json`
-3. Figure metadata exists in `figure-metadata.json`
-4. Path in figure metadata is correct: `/paper-figures/svg/filename.svg`
-5. `generate_figure_data.py` was run after adding figure
+1. Figure SVG file exists in `/public/paper-figures/svg/`
+2. Figure has an entry in `figure-registry.json` with correct `svg_path`
+3. Topic file's `primary_figure.ref` or `related_figures[].ref` matches a key in the registry
+4. Registry was regenerated after adding new figures
 
-**Regenerate Figure Data:**
+**Regenerate Figure Registry:**
 ```bash
-python scripts/generate_figure_data.py
-git add public/data/research-figures-with-captions.json
-git commit -m "Regenerate figure data"
+python scripts/generate_figure_registry_from_corpus.py
+git add public/data/figure-registry.json
+git commit -m "Regenerate figure registry"
 git push
 ```
 
@@ -3345,7 +3112,7 @@ npm run typecheck
 
 3. **Backup Before Edits:** Scripts create backups automatically, but keep manual backups too
 
-4. **Use Scripts:** Prefer `create_research_page.py` over manual JSON edits
+4. **Per-Topic Files:** Each research topic gets its own JSON file in `research-topics/`
 
 ---
 
@@ -3492,6 +3259,16 @@ This project is developed with assistance from AI tools. Follow these guidelines
 > **When to use this section:** Understanding recent changes, tracking documentation evolution
 
 ---
+
+### 2026-04-14
+- Updated research pages documentation to reflect migration from old system to figure registry architecture
+- Removed references to deleted files: `research-projects.json`, `research-paragraphs.json`, `research-figures-with-captions.json`, `page-figure-mappings.json`, `figure-metadata.json`, `research-page.json`
+- Removed references to deleted components: `research-figure.tsx`, `featured-research.tsx`, `research.tsx`
+- Removed references to deleted scripts: `create_research_page.py`, `generate_figure_data.py`, `test_create_research_page.py`
+- Removed `generate-figure-data.yml` workflow documentation
+- Added documentation for new data sources: `research-topics/*.json`, `figure-registry.json`
+- Added documentation for new route: `/research/figure/[paper_id]/[figure_id]`
+- Added documentation for `research-topic.tsx` component and `generate_figure_registry_from_corpus.py` script
 
 ### 2026-03-08
 - Added documentation for CV integration (cross-repo GitHub Action, BibTeX generation from website JSON)
