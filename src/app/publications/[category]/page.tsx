@@ -87,9 +87,14 @@ export default async function PublicationCategoryPage({ params }: { params: Prom
     ? [...adsPublications, ...invitedPresentations]
     : adsPublications;
 
-  // Filter based on page type
+  // Filter based on page type. Conferences excludes invited talks
+  // (they live on /publications/invited-talks) so each entry has one home.
   const publications = categoryData.slug === 'invited-talks'
     ? getSeminarPresentations(allPublications)
+    : categoryData.slug === 'conferences'
+    ? getPublicationsByType(allPublications, categoryData.publicationType).filter(
+        (p) => p.keywords !== 'invited'
+      )
     : getPublicationsByType(allPublications, categoryData.publicationType);
 
   // If no publications in this category, redirect to /publications
