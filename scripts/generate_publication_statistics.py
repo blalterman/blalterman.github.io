@@ -71,7 +71,7 @@ def compute_total_citations_by_year(ads_metrics):
     return total_by_year
 
 
-def compute_category_counts(ads_pubs, invited_pres):
+def compute_category_counts(ads_pubs, invited_pres, invited_conf):
     """Compute publication counts by category."""
     from collections import Counter
 
@@ -183,7 +183,7 @@ def main():
             'normalized_refereed': ads_metrics['histograms']['downloads']['refereed downloads normalized'],
         },
 
-        'category_counts': compute_category_counts(ads_pubs, invited_pres)
+        'category_counts': compute_category_counts(ads_pubs, invited_pres, invited_conf)
     }
 
     # Write output
