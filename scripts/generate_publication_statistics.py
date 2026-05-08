@@ -79,7 +79,11 @@ def compute_category_counts(ads_pubs, invited_pres, invited_conf):
     type_counts = Counter(pub['publication_type'] for pub in ads_pubs)
 
     return {
-        'refereed': sum(1 for pub in ads_pubs if 'REFEREED' in pub.get('properties', [])),
+        'refereed': sum(
+            1 for pub in ads_pubs
+            if pub.get('publication_type') == 'article'
+            and 'REFEREED' in pub.get('properties', [])
+        ),
         'conferences': type_counts.get('inproceedings', 0) + type_counts.get('abstract', 0),
         'datasets': type_counts.get('dataset', 0),
         'software': type_counts.get('software', 0),
