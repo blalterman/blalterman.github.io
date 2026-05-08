@@ -149,7 +149,9 @@ def standardize_author_name(author_name: str) -> str:
     # No standardization rule matched - return original name unchanged
     return name
 
-# Fields to request from ADS
+# Fields to request from ADS.
+# 'property' carries ADS's curated tags including REFEREED/NOT REFEREED;
+# we use it to compute refereed counts that match ADS's server-side stats.
 fields = [
     "bibcode",
     "title",
@@ -159,6 +161,7 @@ fields = [
     "doctype",
     "citation_count",
     "doi",
+    "property",
 ]
 
 # Query ADS with retry on transient bot-protection / rate-limit responses.
@@ -220,6 +223,8 @@ for pub in results:
         else f"https://scixplorer.org/abs/{pub.bibcode}/abstract"
     )
 
+    properties = list(getattr(pub, "property", None) or [])
+
     publications.append(
         {
             "bibcode": pub.bibcode,
@@ -229,6 +234,7 @@ for pub in results:
             "year": year,
             "journal": journal, # This line is potentially problematic from previous edit. Fixing it here.
             "publication_type": pub_type,
+            "properties": properties,
             "citations": citations,
             "url": url,
             "invited": False,  # Default all publications to non-invited
