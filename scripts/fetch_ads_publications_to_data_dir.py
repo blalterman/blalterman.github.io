@@ -2,6 +2,7 @@ import ads
 import os
 import json
 import re
+import time
 from datetime import datetime
 from pathlib import Path
 from utils import get_public_data_dir, get_relative_path
@@ -160,8 +161,25 @@ fields = [
     "doi",
 ]
 
-# Query ADS
-results = list(ads.SearchQuery(orcid=ORCID, fl=fields, rows=2000))
+# Query ADS with retry on transient bot-protection / rate-limit responses.
+# See ads.exceptions.APIResponseError for the upstream surface.
+MAX_ATTEMPTS = 3
+BACKOFFS_SECONDS = [60, 180]  # waits between attempts 1->2 and 2->3
+
+results = None
+for attempt in range(MAX_ATTEMPTS):
+    try:
+        results = list(ads.SearchQuery(orcid=ORCID, fl=fields, rows=300))
+        break
+    except ads.exceptions.APIResponseError as e:
+        if attempt < MAX_ATTEMPTS - 1:
+            wait = BACKOFFS_SECONDS[attempt]
+            print(f"⚠️  ADS API error on attempt {attempt + 1}/{MAX_ATTEMPTS}: {e}")
+            print(f"   Retrying in {wait}s...")
+            time.sleep(wait)
+        else:
+            print(f"✗ ADS API failed after {MAX_ATTEMPTS} attempts: {e}")
+            raise
 
 # Build structured JSON data
 publications = []
@@ -215,6 +233,16 @@ for pub in results:
             "url": url,
             "invited": False,  # Default all publications to non-invited
         }
+    )
+
+# Corpus sanity check: refuse to overwrite existing data with a near-empty
+# result. Current corpus is 152 entries; a sudden drop below 100 indicates
+# an ADS-side issue (partial response, ORCID misconfig) rather than normal
+# attrition. Fail loudly so the workflow's failure-issue step fires.
+if len(publications) < 100:
+    raise RuntimeError(
+        f"Refusing to write: only {len(publications)} publications fetched, "
+        f"expected >=100. Possible ADS or ORCID issue. Investigate before retrying."
     )
 
 # Save to public/data directory
