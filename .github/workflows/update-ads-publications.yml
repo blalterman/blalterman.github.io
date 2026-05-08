@@ -52,6 +52,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add public/data/ads_publications.json
+          git add public/data/non_ads_publications.json
           git add public/data/invited_metrics.json
           git add public/data/publication_statistics.json
           git commit -m "Update ADS publications and metrics [automated]" || echo "No changes to commit"
