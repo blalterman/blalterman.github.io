@@ -93,7 +93,7 @@ def generate_h_index_plot(theme_name='light'):
     # Apply styling with theme colors
     ax.set_title('H-Index Timeline', color=theme['title_color'], **FONTS['title'])
     ax.set_xlabel('Year', color=theme['label_color'], **FONTS['axis_label'])
-    ax.set_ylabel('h-index', color=theme['label_color'], **FONTS['axis_label'])
+    ax.set_ylabel('H-Index', color=theme['label_color'], **FONTS['axis_label'])
 
     # Configure x-axis: label every 2nd year, minor ticks for all years
     major_ticks = years[::2]  # Every 2nd year for labels
