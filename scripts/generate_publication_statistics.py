@@ -143,7 +143,7 @@ def main():
             'invited_conferences': len(invited_conf),
             'invited_presentations': len(invited_pres),
             'invited_total': len(invited_conf) + len(invited_pres),
-            'total_papers': ads_metrics['basic stats']['number of papers'] + len(invited_pres),
+            'total_papers': len(ads_pubs) + len(invited_pres),
             'total_reads': ads_metrics['basic stats']['total number of reads'],
             'total_downloads': ads_metrics['basic stats']['total number of downloads'],
         },
