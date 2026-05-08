@@ -29,6 +29,14 @@
     "year": "2025-02-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 16,
     "url": "https://dx.doi.org/10.3847/1538-4357/ada699",
     "invited": false
@@ -84,6 +92,17 @@
     "year": "2023-06-00",
     "journal": "Solar Physics",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ASSOCIATED",
+      "DATA",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PMC_OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 59,
     "url": "https://dx.doi.org/10.1007/s11207-023-02170-1",
     "invited": false
@@ -115,6 +134,14 @@
     "year": "2025-09-00",
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 2,
     "url": "https://dx.doi.org/10.3847/2041-8213/adfa97",
     "invited": false
@@ -150,6 +177,15 @@
     "year": "2020-05-00",
     "journal": "The Astrophysical Journal Supplement Series",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "DATA",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 118,
     "url": "https://dx.doi.org/10.3847/1538-4365/ab86af",
     "invited": false
@@ -193,6 +229,14 @@
     "year": "2020-02-00",
     "journal": "The Astrophysical Journal Supplement Series",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 95,
     "url": "https://dx.doi.org/10.3847/1538-4365/ab74e0",
     "invited": false
@@ -208,6 +252,14 @@
     "year": "2025-04-00",
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 13,
     "url": "https://dx.doi.org/10.3847/2041-8213/adb48e",
     "invited": false
@@ -237,6 +289,14 @@
     "year": "2024-10-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 10,
     "url": "https://dx.doi.org/10.3847/1538-4357/ad7815",
     "invited": false
@@ -254,6 +314,14 @@
     "year": "2025-02-00",
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 11,
     "url": "https://dx.doi.org/10.1051/0004-6361/202451550",
     "invited": false
@@ -271,6 +339,14 @@
     "year": "2018-09-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 96,
     "url": "https://dx.doi.org/10.3847/1538-4357/aad23f",
     "invited": false
@@ -303,6 +379,15 @@
     "year": "2022-01-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ASSOCIATED",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 56,
     "url": "https://dx.doi.org/10.3847/1538-4357/ac36d5",
     "invited": false
@@ -321,6 +406,14 @@
     "year": "2025-08-00",
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 5,
     "url": "https://dx.doi.org/10.1051/0004-6361/202554299",
     "invited": false
@@ -357,6 +450,14 @@
     "year": "2025-06-00",
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 20,
     "url": "https://dx.doi.org/10.3847/2041-8213/ade0ac",
     "invited": false
@@ -371,6 +472,14 @@
     "year": "2025-05-00",
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 6,
     "url": "https://dx.doi.org/10.3847/2041-8213/add0a6",
     "invited": false
@@ -396,6 +505,14 @@
     "year": "2023-07-00",
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ASSOCIATED",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 25,
     "url": "https://dx.doi.org/10.1051/0004-6361/202345951",
     "invited": false
@@ -424,6 +541,15 @@
     "year": "2021-03-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ASSOCIATED",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 59,
     "url": "https://dx.doi.org/10.3847/1538-4357/abd7a0",
     "invited": false
@@ -455,6 +581,13 @@
     "year": "2026-02-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.3847/1538-4357/ae2756",
     "invited": false
@@ -474,6 +607,15 @@
     "year": "2019-10-00",
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "DATA",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 46,
     "url": "https://dx.doi.org/10.3847/2041-8213/ab4adc",
     "invited": false
@@ -508,6 +650,14 @@
     "year": "2020-02-00",
     "journal": "The Astrophysical Journal Supplement Series",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 46,
     "url": "https://dx.doi.org/10.3847/1538-4365/ab527f",
     "invited": false
@@ -523,6 +673,15 @@
     "year": "2019-07-00",
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "DATA",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 50,
     "url": "https://dx.doi.org/10.3847/2041-8213/ab2391",
     "invited": false
@@ -538,6 +697,14 @@
     "year": "2026-01-00",
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 2,
     "url": "https://dx.doi.org/10.3847/2041-8213/ae002f",
     "invited": false
@@ -555,6 +722,14 @@
     "year": "2021-12-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 20,
     "url": "https://dx.doi.org/10.3847/1538-4357/ac3081",
     "invited": false
@@ -581,6 +756,14 @@
     "year": "2020-11-00",
     "journal": "Monthly Notices of the Royal Astronomical Society",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 39,
     "url": "https://dx.doi.org/10.1093/mnras/staa2770",
     "invited": false
@@ -598,6 +781,13 @@
     "year": "2021-04-00",
     "journal": "Solar Physics",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 21,
     "url": "https://dx.doi.org/10.1007/s11207-021-01801-9",
     "invited": false
@@ -618,6 +808,13 @@
     "year": "2022-09-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 14,
     "url": "https://dx.doi.org/10.3847/1538-4357/ac8873",
     "invited": false
@@ -636,6 +833,14 @@
     "year": "2023-07-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 6,
     "url": "https://dx.doi.org/10.3847/1538-4357/acd24a",
     "invited": false
@@ -656,6 +861,10 @@
     "year": "2025-06-00",
     "journal": "Geophysical Research Letters",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "REFEREED"
+    ],
     "citations": 2,
     "url": "https://dx.doi.org/10.1029/2025GL115186",
     "invited": false
@@ -720,6 +929,13 @@
     "year": "2023-07-00",
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.3847/25c2cfeb.0e9841dd",
     "invited": false
@@ -750,6 +966,15 @@
     "year": "2023-06-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ASSOCIATED",
+      "DATA",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 6,
     "url": "https://dx.doi.org/10.3847/1538-4357/accc32",
     "invited": false
@@ -768,6 +993,13 @@
     "year": "2024-04-00",
     "journal": "The Astrophysical Journal Letters",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 1,
     "url": "https://dx.doi.org/10.3847/2041-8213/ad2deb",
     "invited": false
@@ -782,6 +1014,13 @@
     "year": "2019-00-00",
     "journal": "Ph.D. Thesis",
     "publication_type": "phdthesis",
+    "properties": [
+      "AUTHOR_OPENACCESS",
+      "ESOURCE",
+      "NONARTICLE",
+      "OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 3,
     "url": "https://scixplorer.org/abs/2019PhDT.......121A/abstract",
     "invited": false
@@ -914,6 +1153,13 @@
     "year": "2023-07-00",
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS"
+    ],
     "citations": 1,
     "url": "https://dx.doi.org/10.3847/25c2cfeb.e0bf48d5",
     "invited": false
@@ -944,6 +1190,13 @@
     "year": "2023-07-00",
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS"
+    ],
     "citations": 1,
     "url": "https://dx.doi.org/10.3847/25c2cfeb.6bd5e78b",
     "invited": false
@@ -966,6 +1219,13 @@
     "year": "2021-09-00",
     "journal": "Atmosphere",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 5,
     "url": "https://dx.doi.org/10.3390/atmos12101277",
     "invited": false
@@ -1023,6 +1283,13 @@
     "year": "2023-07-00",
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.3847/25c2cfeb.bff53876",
     "invited": false
@@ -1048,6 +1315,14 @@
     "year": "2026-04-00",
     "journal": "Journal of Geophysical Research (Space Physics)",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.1029/2026JA035166",
     "invited": false
@@ -1098,6 +1373,11 @@
     "year": "2024-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2024AGUFMSH33E2787A/abstract",
     "invited": false
@@ -1112,6 +1392,13 @@
     "year": "2022-06-00",
     "journal": "Research Notes of the American Astronomical Society",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS"
+    ],
     "citations": 1,
     "url": "https://dx.doi.org/10.3847/2515-5172/ac7a2f",
     "invited": false
@@ -1133,6 +1420,13 @@
     "year": "2023-07-00",
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS"
+    ],
     "citations": 1,
     "url": "https://dx.doi.org/10.3847/25c2cfeb.d070989e",
     "invited": false
@@ -1264,6 +1558,13 @@
     "year": "2022-07-00",
     "journal": "White paper prepared for the The Decadal Survey on Solar and Space Physics (Heliophysics)",
     "publication_type": "techreport",
+    "properties": [
+      "AUTHOR_OPENACCESS",
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022dsss.rept..158A/abstract",
     "invited": false
@@ -1289,6 +1590,13 @@
     "year": "2023-07-00",
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.3847/25c2cfeb.28b02668",
     "invited": false
@@ -1333,6 +1641,13 @@
     "year": "2023-07-00",
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.3847/25c2cfeb.1c7fc2c0",
     "invited": false
@@ -1397,6 +1712,13 @@
     "year": "2022-07-00",
     "journal": "White paper prepared for the The Decadal Survey on Solar and Space Physics (Heliophysics)",
     "publication_type": "techreport",
+    "properties": [
+      "AUTHOR_OPENACCESS",
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022dsss.rept..319K/abstract",
     "invited": false
@@ -1437,6 +1759,11 @@
     "year": "2022-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022AGUFMSH42D2320A/abstract",
     "invited": false
@@ -1455,6 +1782,11 @@
     "year": "2023-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2023AGUFMSH43A..04A/abstract",
     "invited": false
@@ -1490,6 +1822,15 @@
     "year": "2026-03-00",
     "journal": "The Astrophysical Journal",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "DATA",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 1,
     "url": "https://dx.doi.org/10.3847/1538-4357/ae4582",
     "invited": false
@@ -1515,6 +1856,11 @@
     "year": "2022-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022AGUFMSH35D1837M/abstract",
     "invited": false
@@ -1545,6 +1891,11 @@
     "year": "2022-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022AGUFMSH45C2347L/abstract",
     "invited": false
@@ -1563,6 +1914,10 @@
     "year": "2021-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2021AGUFMSH55F1908A/abstract",
     "invited": false
@@ -1580,6 +1935,10 @@
     "year": "2021-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2021AGUFMSH35C2063M/abstract",
     "invited": false
@@ -1624,6 +1983,13 @@
     "year": "2022-07-00",
     "journal": "White paper prepared for the The Decadal Survey on Solar and Space Physics (Heliophysics)",
     "publication_type": "techreport",
+    "properties": [
+      "AUTHOR_OPENACCESS",
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022dsss.rept..220C/abstract",
     "invited": false
@@ -1649,6 +2015,13 @@
     "year": "2022-07-00",
     "journal": "White paper prepared for the The Decadal Survey on Solar and Space Physics (Heliophysics)",
     "publication_type": "techreport",
+    "properties": [
+      "AUTHOR_OPENACCESS",
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022dsss.rept..299V/abstract",
     "invited": false
@@ -1679,6 +2052,13 @@
     "year": "2022-07-00",
     "journal": "White paper prepared for the The Decadal Survey on Solar and Space Physics (Heliophysics)",
     "publication_type": "techreport",
+    "properties": [
+      "AUTHOR_OPENACCESS",
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022dsss.rept..295R/abstract",
     "invited": false
@@ -1726,6 +2106,13 @@
     "year": "2025-01-00",
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 9,
     "url": "https://dx.doi.org/10.1051/0004-6361/202451686",
     "invited": false
@@ -1772,6 +2159,13 @@
     "year": "2023-08-00",
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 26,
     "url": "https://dx.doi.org/10.1051/0004-6361/202346304",
     "invited": false
@@ -1790,6 +2184,13 @@
     "year": "2018-05-00",
     "journal": "Physical Review Letters",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 70,
     "url": "https://dx.doi.org/10.1103/PhysRevLett.120.205102",
     "invited": false
@@ -1838,6 +2239,13 @@
     "year": "2025-12-00",
     "journal": "arXiv e-prints",
     "publication_type": "eprint",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "NOT REFEREED",
+      "OPENACCESS"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.48550/arXiv.2512.20098",
     "invited": false
@@ -1882,6 +2290,13 @@
     "year": "2026-01-00",
     "journal": "Space Science Reviews",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 3,
     "url": "https://dx.doi.org/10.1007/s11214-025-01257-4",
     "invited": false
@@ -1904,6 +2319,13 @@
     "year": "2025-12-00",
     "journal": "arXiv e-prints",
     "publication_type": "eprint",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "NOT REFEREED",
+      "OPENACCESS"
+    ],
     "citations": 1,
     "url": "https://dx.doi.org/10.48550/arXiv.2512.18485",
     "invited": false
@@ -1947,6 +2369,13 @@
     "year": "2024-02-00",
     "journal": "Astronomy and Astrophysics",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 3,
     "url": "https://dx.doi.org/10.1051/0004-6361/202347874",
     "invited": false
@@ -2009,6 +2438,14 @@
     "year": "2025-12-00",
     "journal": "Space Science Reviews",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "OPENACCESS",
+      "PMC_OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 7,
     "url": "https://dx.doi.org/10.1007/s11214-025-01251-w",
     "invited": false
@@ -2039,6 +2476,14 @@
     "year": "2022-12-00",
     "journal": "Frontiers in Astronomy and Space Sciences",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ASSOCIATED",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 18,
     "url": "https://dx.doi.org/10.3389/fspas.2022.1056347",
     "invited": false
@@ -2076,6 +2521,14 @@
     "year": "2023-00-00",
     "journal": "The Era of Multi-Messenger Solar Physics",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "TOC"
+    ],
     "citations": 5,
     "url": "https://dx.doi.org/10.1017/S1743921323001266",
     "invited": false
@@ -2131,6 +2584,11 @@
     "year": "2023-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2023AGUFMSH51E2669W/abstract",
     "invited": false
@@ -2157,6 +2615,13 @@
     "year": "2025-12-00",
     "journal": "arXiv e-prints",
     "publication_type": "eprint",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "NOT REFEREED",
+      "OPENACCESS"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.48550/arXiv.2512.03890",
     "invited": false
@@ -2185,6 +2650,10 @@
     "year": "2025-06-00",
     "journal": "246th Meeting of the American Astronomical Society",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2025AAS...24640402B/abstract",
     "invited": false
@@ -2221,6 +2690,13 @@
     "year": "2020-04-00",
     "journal": "arXiv e-prints",
     "publication_type": "eprint",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "NOT REFEREED",
+      "OPENACCESS"
+    ],
     "citations": 3,
     "url": "https://dx.doi.org/10.48550/arXiv.2004.08632",
     "invited": false
@@ -2248,6 +2724,13 @@
     "year": "2022-06-00",
     "journal": "Frontiers in Astronomy and Space Sciences",
     "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
     "citations": 2,
     "url": "https://dx.doi.org/10.3389/fspas.2022.912868",
     "invited": false
@@ -2277,6 +2760,11 @@
     "year": "2025-04-00",
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.5194/egusphere-egu25-4040",
     "invited": false
@@ -2316,6 +2804,11 @@
     "year": "2024-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2024AGUFMSH11B..03R/abstract",
     "invited": false
@@ -2341,6 +2834,11 @@
     "year": "2023-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2023AGUFMSH43D3194M/abstract",
     "invited": false
@@ -2360,6 +2858,14 @@
     "year": "2023-07-00",
     "journal": "Uranus Flagship: Investigations and Instruments for Cross-Discipline Science Workshop",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2023LPICo2808.8113E/abstract",
     "invited": false
@@ -2385,6 +2891,12 @@
     "year": "2023-07-00",
     "journal": "VizieR Online Data Catalog",
     "publication_type": "dataset",
+    "properties": [
+      "ASSOCIATED",
+      "DATA",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2023yCat..36750196M/abstract",
     "invited": false
@@ -2418,6 +2930,11 @@
     "year": "2023-05-00",
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.5194/egusphere-egu23-7823",
     "invited": false
@@ -2435,6 +2952,11 @@
     "year": "2022-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022AGUFMSH46A..03M/abstract",
     "invited": false
@@ -2467,6 +2989,11 @@
     "year": "2023-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2023AGUFMSH34B..01L/abstract",
     "invited": false
@@ -2500,6 +3027,11 @@
     "year": "2023-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2023AGUFMSH31G3048D/abstract",
     "invited": false
@@ -2519,6 +3051,11 @@
     "year": "2024-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2024AGUFMSH23F..01B/abstract",
     "invited": false
@@ -2550,6 +3087,11 @@
     "year": "2023-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2023AGUFMSH51C2622D/abstract",
     "invited": false
@@ -2565,6 +3107,11 @@
     "year": "2025-06-00",
     "journal": "SHINE 2025 Workshop",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2025shin.confE.129A/abstract",
     "invited": false
@@ -2598,6 +3145,11 @@
     "year": "2024-04-00",
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.5194/egusphere-egu24-13328",
     "invited": false
@@ -2621,6 +3173,11 @@
     "year": "2021-04-00",
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.5194/egusphere-egu21-12435",
     "invited": false
@@ -2637,6 +3194,10 @@
     "year": "2021-01-00",
     "journal": "COSPAR",
     "publication_type": "abstract",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2021cosp...43E1117A/abstract",
     "invited": false
@@ -2671,6 +3232,11 @@
     "year": "2024-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2024AGUFMSH31F2665H/abstract",
     "invited": false
@@ -2700,6 +3266,11 @@
     "year": "2024-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2024AGUFMSH23C2951L/abstract",
     "invited": false
@@ -2725,6 +3296,11 @@
     "year": "2022-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022AGUFMSH22E2047D/abstract",
     "invited": false
@@ -2756,6 +3332,10 @@
     "year": "2020-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2020AGUFMSH035..05L/abstract",
     "invited": false
@@ -2781,6 +3361,10 @@
     "year": "2020-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2020AGUFMSH0490013V/abstract",
     "invited": false
@@ -2799,6 +3383,11 @@
     "year": "2018-07-00",
     "journal": "SHINE",
     "publication_type": "abstract",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 1,
     "url": "https://scixplorer.org/abs/2018shin.confE...6K/abstract",
     "invited": false
@@ -2820,6 +3409,11 @@
     "year": "2025-06-00",
     "journal": "SHINE 2025 Workshop",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2025shin.confE.195M/abstract",
     "invited": false
@@ -2839,6 +3433,14 @@
     "year": "2023-07-00",
     "journal": "Uranus Flagship: Investigations and Instruments for Cross-Discipline Science Workshop",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2023LPICo2808.8118P/abstract",
     "invited": false
@@ -2866,6 +3468,11 @@
     "year": "2022-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022AGUFMSH36B..07S/abstract",
     "invited": false
@@ -2891,6 +3498,11 @@
     "year": "2022-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022AGUFMSH15E1521G/abstract",
     "invited": false
@@ -2929,6 +3541,10 @@
     "year": "2022-07-00",
     "journal": "COSPAR",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022cosp...44.1092A/abstract",
     "invited": false
@@ -2955,6 +3571,10 @@
     "year": "2020-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2020AGUFMSH0290004W/abstract",
     "invited": false
@@ -2992,6 +3612,10 @@
     "year": "2019-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2019AGUFMSH13C3452H/abstract",
     "invited": false
@@ -3021,6 +3645,11 @@
     "year": "2024-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2024AGUFMSH33E2788G/abstract",
     "invited": false
@@ -3053,6 +3682,11 @@
     "year": "2024-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2024AGUFMP32B...02D/abstract",
     "invited": false
@@ -3082,6 +3716,11 @@
     "year": "2024-04-00",
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.5194/egusphere-egu24-20809",
     "invited": false
@@ -3103,6 +3742,13 @@
     "year": "2023-07-00",
     "journal": "Bulletin of AAS",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.3847/25c2cfeb.5deec7eb",
     "invited": false
@@ -3141,6 +3787,10 @@
     "year": "2022-06-00",
     "journal": "SHINE",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022shin.confE.120A/abstract",
     "invited": false
@@ -3162,6 +3812,10 @@
     "year": "2022-07-00",
     "journal": "COSPAR",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022cosp...44.1656J/abstract",
     "invited": false
@@ -3179,6 +3833,10 @@
     "year": "2020-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2020AGUFMSH053..01A/abstract",
     "invited": false
@@ -3202,6 +3860,11 @@
     "year": "2022-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022AGUFMSH15A..05L/abstract",
     "invited": false
@@ -3222,6 +3885,11 @@
     "year": "2022-10-00",
     "journal": "Triennial Earth-Sun Summit",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022tess.conf111b01/abstract",
     "invited": false
@@ -3256,6 +3924,10 @@
     "year": "2019-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2019AGUFMSH21C3331V/abstract",
     "invited": false
@@ -3275,6 +3947,10 @@
     "year": "2018-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2018AGUFMSH23B..06K/abstract",
     "invited": false
@@ -3293,6 +3969,10 @@
     "year": "2017-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2017AGUFMSH32A..03A/abstract",
     "invited": false
@@ -3313,6 +3993,10 @@
     "year": "2014-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2014AGUFMSH33A4130T/abstract",
     "invited": false
@@ -3330,6 +4014,10 @@
     "year": "2022-06-00",
     "journal": "SHINE",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022shin.confE.214M/abstract",
     "invited": false
@@ -3351,6 +4039,10 @@
     "year": "2022-07-00",
     "journal": "COSPAR",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022cosp...44.3205G/abstract",
     "invited": false
@@ -3374,6 +4066,10 @@
     "year": "2022-07-00",
     "journal": "COSPAR",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022cosp...44.1524D/abstract",
     "invited": false
@@ -3403,6 +4099,10 @@
     "year": "2022-07-00",
     "journal": "COSPAR",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022cosp...44.1221L/abstract",
     "invited": false
@@ -3436,6 +4136,10 @@
     "year": "2019-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2019AGUFMSH13C3448M/abstract",
     "invited": false
@@ -3452,6 +4156,10 @@
     "year": "2015-07-00",
     "journal": "SHINE",
     "publication_type": "abstract",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2015shin.confE.159A/abstract",
     "invited": false
@@ -3470,6 +4178,11 @@
     "year": "2017-07-00",
     "journal": "SHINE",
     "publication_type": "abstract",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2017shin.confE.111A/abstract",
     "invited": false
@@ -3497,6 +4210,12 @@
     "year": "2024-08-00",
     "journal": "SHINE 2024 Workshop",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2024shin.confE.129M/abstract",
     "invited": false
@@ -3518,6 +4237,11 @@
     "year": "2023-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2023AGUFMSH23B..03A/abstract",
     "invited": false
@@ -3536,6 +4260,10 @@
     "year": "2015-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2015AGUFMSH21A2374A/abstract",
     "invited": false
@@ -3560,6 +4288,11 @@
     "year": "2022-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022AGUFMSH15C1491J/abstract",
     "invited": false
@@ -3578,6 +4311,11 @@
     "year": "2022-05-00",
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.5194/egusphere-egu22-8953",
     "invited": false
@@ -3595,6 +4333,10 @@
     "year": "2021-10-00",
     "journal": "APS Division of Plasma Physics",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2021APS..DPPTO6003M/abstract",
     "invited": false
@@ -3613,6 +4355,10 @@
     "year": "2021-01-00",
     "journal": "COSPAR",
     "publication_type": "abstract",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2021cosp...43E1118A/abstract",
     "invited": false
@@ -3650,6 +4396,10 @@
     "year": "2019-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2019AGUFMSH43C3381A/abstract",
     "invited": false
@@ -3665,6 +4415,10 @@
     "year": "2019-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2019AGUFM.U21B..14A/abstract",
     "invited": true,
@@ -3686,6 +4440,10 @@
     "year": "2018-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2018AGUFMSH23D3350Q/abstract",
     "invited": false
@@ -3704,6 +4462,11 @@
     "year": "2017-07-00",
     "journal": "SHINE",
     "publication_type": "abstract",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2017shin.confE...5Q/abstract",
     "invited": false
@@ -3718,6 +4481,11 @@
     "year": "2017-07-00",
     "journal": "SHINE",
     "publication_type": "abstract",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2017shin.confE...7A/abstract",
     "invited": true,
@@ -3741,6 +4509,11 @@
     "year": "2017-07-00",
     "journal": "SHINE",
     "publication_type": "abstract",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2017shin.confE.112J/abstract",
     "invited": false
@@ -3759,6 +4532,11 @@
     "year": "2018-07-00",
     "journal": "SHINE",
     "publication_type": "abstract",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2018shin.confE..55Q/abstract",
     "invited": false
@@ -3781,6 +4559,10 @@
     "year": "2014-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2014AGUFMSH21B4102W/abstract",
     "invited": false
@@ -3798,6 +4580,10 @@
     "year": "2016-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2016AGUFMSH51D2611A/abstract",
     "invited": false
@@ -3818,6 +4604,10 @@
     "year": "2015-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2015AGUFMSH31C2429H/abstract",
     "invited": false
@@ -3836,6 +4626,12 @@
     "year": "2022-10-00",
     "journal": "Triennial Earth-Sun Summit",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022tess.conf20104A/abstract",
     "invited": false
@@ -3865,6 +4661,10 @@
     "year": "2022-07-00",
     "journal": "COSPAR",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022cosp...44.1540L/abstract",
     "invited": false
@@ -3896,6 +4696,10 @@
     "year": "2019-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2019AGUFMSH23A..03K/abstract",
     "invited": false
@@ -3914,6 +4718,10 @@
     "year": "2018-00-00",
     "journal": "APS Division of Plasma Physics",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2018APS..DPPYO8006K/abstract",
     "invited": false
@@ -3930,6 +4738,11 @@
     "year": "2016-07-00",
     "journal": "SHINE",
     "publication_type": "abstract",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2016shin.confE..74A/abstract",
     "invited": false
@@ -3947,6 +4760,11 @@
     "year": "2018-07-00",
     "journal": "SHINE",
     "publication_type": "abstract",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2018shin.confE.181A/abstract",
     "invited": false
@@ -3965,6 +4783,10 @@
     "year": "2017-10-00",
     "journal": "APS Division of Plasma Physics",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2017APS..DPPCO6003K/abstract",
     "invited": false
@@ -3982,6 +4804,11 @@
     "year": "2017-04-00",
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2017EGUGA..1911005K/abstract",
     "invited": false
@@ -4010,6 +4837,11 @@
     "year": "2025-06-00",
     "journal": "SHINE 2025 Workshop",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2025shin.confE...4A/abstract",
     "invited": false
@@ -4038,6 +4870,11 @@
     "year": "2024-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2024AGUFMSH22B..07K/abstract",
     "invited": false
@@ -4059,6 +4896,13 @@
     "year": "2022-07-00",
     "journal": "White paper prepared for the The Decadal Survey on Solar and Space Physics (Heliophysics)",
     "publication_type": "techreport",
+    "properties": [
+      "AUTHOR_OPENACCESS",
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022dsss.rept..326G/abstract",
     "invited": false
@@ -4077,6 +4921,13 @@
     "year": "2021-12-00",
     "journal": "ESS Open Archive eprints",
     "publication_type": "eprint",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "NOT REFEREED",
+      "OPENACCESS"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.1002/essoar.10509340.1",
     "invited": false
@@ -4097,6 +4948,10 @@
     "year": "2022-06-00",
     "journal": "SHINE",
     "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022shin.confE.122R/abstract",
     "invited": false
@@ -4125,6 +4980,11 @@
     "year": "2022-05-00",
     "journal": "EGU General Assembly",
     "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://dx.doi.org/10.5194/egusphere-egu22-5984",
     "invited": false
@@ -4140,6 +5000,11 @@
     "year": "2019-05-00",
     "journal": "SHINE",
     "publication_type": "abstract",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2019shin.confE..48A/abstract",
     "invited": false
@@ -4156,6 +5021,10 @@
     "year": "2018-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2018AGUFMSH43B3701A/abstract",
     "invited": false
@@ -4174,6 +5043,10 @@
     "year": "2017-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2017AGUFMSH32A..09V/abstract",
     "invited": false
@@ -4191,6 +5064,10 @@
     "year": "2017-12-00",
     "journal": "AGU Fall Meeting",
     "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2017AGUFMSH32A..01K/abstract",
     "invited": false
