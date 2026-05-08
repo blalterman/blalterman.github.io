@@ -83,7 +83,7 @@ def compute_category_counts(ads_pubs, invited_pres):
         'conferences': type_counts.get('inproceedings', 0) + type_counts.get('abstract', 0),
         'datasets': type_counts.get('dataset', 0),
         'software': type_counts.get('software', 0),
-        'invited-talks': len(invited_pres),  # Seminars only
+        'invited-talks': len(invited_pres) + len(invited_conf),
         'phd-thesis': type_counts.get('phdthesis', 0),
         'white-papers': type_counts.get('techreport', 0),
         'preprints': type_counts.get('eprint', 0)

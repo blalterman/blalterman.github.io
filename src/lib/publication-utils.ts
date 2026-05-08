@@ -325,22 +325,22 @@ export function filterPublicationsByKeywords(
 }
 
 /**
- * Get seminar/colloquium presentations (keywords: "invitedother").
- * These are institution visits, department seminars, specialist talks.
- * Does NOT include conference presentations (even if invited).
+ * Get all invited talks: institutional seminars (keywords: "invitedother")
+ * and conference invited talks (keywords: "invited"). Used by the
+ * /publications/invited-talks subpage so the table count matches the
+ * banner's invited_total.
  *
  * @param publications Array of all publications
  * @param order Sort order ('desc' for newest first, 'asc' for oldest first)
- * @returns Filtered and sorted seminar presentations
+ * @returns Filtered and sorted invited talks (seminars + conference invited)
  */
 export function getSeminarPresentations(
   publications: Publication[],
   order: 'desc' | 'asc' = 'desc'
 ): Publication[] {
-  return sortPublicationsByDate(
-    filterPublicationsByKeywords(publications, 'invitedother'),
-    order
-  );
+  const seminars = filterPublicationsByKeywords(publications, 'invitedother');
+  const conferences = filterPublicationsByKeywords(publications, 'invited');
+  return sortPublicationsByDate([...seminars, ...conferences], order);
 }
 
 /**
