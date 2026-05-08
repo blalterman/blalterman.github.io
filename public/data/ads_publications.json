@@ -37,52 +37,8 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 17,
+    "citations": 16,
     "url": "https://dx.doi.org/10.3847/1538-4357/ada699",
-    "invited": false
-  },
-  {
-    "bibcode": "2026ApJ...999..225Y",
-    "title": "Solar Wind Heating near the Sun: A Radial Evolution Approach",
-    "authors": [
-      "Yogesh",
-      "Ofman, Leon",
-      "Klein, Kristopher G.",
-      "Niranjana",
-      "Martinović, Mihailo",
-      "Howes, Gregory G.",
-      "Mostafavi, Parisa",
-      "Boardsen, Scott A.",
-      "Sadykov, Viacheslav M.",
-      "Pal, Sanchita",
-      "Jian, Lan K.",
-      "Gupta, Aakash",
-      "Chakrabarty, D.",
-      "Alterman, B. L.",
-      "Verniero, Jaye L.",
-      "Paulson, K. W.",
-      "Huang, Jia",
-      "Livi, Roberto",
-      "Larson, Davin E.",
-      "Möstl, Christian",
-      "Davies, Emma E.",
-      "Weiler, Eva"
-    ],
-    "month": "",
-    "year": "2026-03-00",
-    "journal": "The Astrophysical Journal",
-    "publication_type": "article",
-    "properties": [
-      "ARTICLE",
-      "DATA",
-      "EPRINT_OPENACCESS",
-      "ESOURCE",
-      "OPENACCESS",
-      "PUB_OPENACCESS",
-      "REFEREED"
-    ],
-    "citations": 1,
-    "url": "https://dx.doi.org/10.3847/1538-4357/ae4582",
     "invited": false
   },
   {
@@ -1448,6 +1404,34 @@
     "invited": false
   },
   {
+    "bibcode": "2023BAAS...55c.271M",
+    "title": "Enabling Critical Solar Wind Research via Consistent, Comprehensive Inner Heliosphere Data Coverage",
+    "authors": [
+      "Mason, E. I.",
+      "Rivera, Y. J.",
+      "Alterman, B. L.",
+      "Spitzer, S. A.",
+      "Higginson, A. K.",
+      "Chen, T. Y.",
+      "Kooi, J. E.",
+      "Gilly, C. R."
+    ],
+    "month": "",
+    "year": "2023-07-00",
+    "journal": "Bulletin of AAS",
+    "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS"
+    ],
+    "citations": 1,
+    "url": "https://dx.doi.org/10.3847/25c2cfeb.d070989e",
+    "invited": false
+  },
+  {
     "bibcode": "2022dsss.rept..158A",
     "title": "Pushing the Frontier of Solar &amp; Space Physics: Exploration of the Heliosphere and the Very Local Interstellar Medium by an Interstellar Probe",
     "authors": [
@@ -1583,34 +1567,6 @@
     ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2022dsss.rept..158A/abstract",
-    "invited": false
-  },
-  {
-    "bibcode": "2023BAAS...55c.271M",
-    "title": "Enabling Critical Solar Wind Research via Consistent, Comprehensive Inner Heliosphere Data Coverage",
-    "authors": [
-      "Mason, E. I.",
-      "Rivera, Y. J.",
-      "Alterman, B. L.",
-      "Spitzer, S. A.",
-      "Higginson, A. K.",
-      "Chen, T. Y.",
-      "Kooi, J. E.",
-      "Gilly, C. R."
-    ],
-    "month": "",
-    "year": "2023-07-00",
-    "journal": "Bulletin of AAS",
-    "publication_type": "abstract",
-    "properties": [
-      "ESOURCE",
-      "NONARTICLE",
-      "NOT REFEREED",
-      "OPENACCESS",
-      "PUB_OPENACCESS"
-    ],
-    "citations": 1,
-    "url": "https://dx.doi.org/10.3847/25c2cfeb.d070989e",
     "invited": false
   },
   {
@@ -1833,6 +1789,50 @@
     ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2023AGUFMSH43A..04A/abstract",
+    "invited": false
+  },
+  {
+    "bibcode": "2026ApJ...999..225Y",
+    "title": "Solar Wind Heating near the Sun: A Radial Evolution Approach",
+    "authors": [
+      "Yogesh",
+      "Ofman, Leon",
+      "Klein, Kristopher G.",
+      "Niranjana",
+      "Martinović, Mihailo",
+      "Howes, Gregory G.",
+      "Mostafavi, Parisa",
+      "Boardsen, Scott A.",
+      "Sadykov, Viacheslav M.",
+      "Pal, Sanchita",
+      "Jian, Lan K.",
+      "Gupta, Aakash",
+      "Chakrabarty, D.",
+      "Alterman, B. L.",
+      "Verniero, Jaye L.",
+      "Paulson, K. W.",
+      "Huang, Jia",
+      "Livi, Roberto",
+      "Larson, Davin E.",
+      "Möstl, Christian",
+      "Davies, Emma E.",
+      "Weiler, Eva"
+    ],
+    "month": "",
+    "year": "2026-03-00",
+    "journal": "The Astrophysical Journal",
+    "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "DATA",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
+    "citations": 1,
+    "url": "https://dx.doi.org/10.3847/1538-4357/ae4582",
     "invited": false
   },
   {
@@ -5071,35 +5071,5 @@
     "citations": 0,
     "url": "https://scixplorer.org/abs/2017AGUFMSH32A..01K/abstract",
     "invited": false
-  },
-  {
-    "title": "An Experimentalists Introduction to the Solar Wind",
-    "authors": [
-      "Alterman, B. L."
-    ],
-    "year": "2017-07-00",
-    "month": "July",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "invited": true,
-    "booktitle": "SHINE Conference Student Day",
-    "journal": "SHINE Conference Student Day",
-    "keywords": "invited",
-    "url": ""
-  },
-  {
-    "title": "Later Years and Early Careers (Panel Discussion)",
-    "authors": [
-      "Alterman, B. L."
-    ],
-    "year": "2021-08-00",
-    "month": "8",
-    "publication_type": "inproceedings",
-    "citations": 0,
-    "invited": true,
-    "booktitle": "SHINE Conference",
-    "journal": "SHINE Conference",
-    "keywords": "invited",
-    "url": ""
   }
 ]

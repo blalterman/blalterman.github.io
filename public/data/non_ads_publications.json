@@ -15,7 +15,7 @@
   },
   {
     "bibcode": "NOADS-Arcetri-2022",
-    "title": "Fe Heating Across a Shock Observed by Solar Orbiter\u2019s Heavy Ion Sensor",
+    "title": "Fe Heating Across a Shock Observed by Solar Orbiter’s Heavy Ion Sensor",
     "authors": [
       "Alterman, B. L."
     ],
@@ -29,7 +29,7 @@
   },
   {
     "bibcode": "NOADS-Arcetri-2023",
-    "title": "Heavy Ion Surfing on Alfv\u00e9n Waves Observed by Solar Orbiter's Heavy Ion Sensor",
+    "title": "Heavy Ion Surfing on Alfvén Waves Observed by Solar Orbiter's Heavy Ion Sensor",
     "authors": [
       "Alterman, B. L."
     ],
@@ -72,13 +72,13 @@
   },
   {
     "bibcode": "NOADS-Chapman-2023",
-    "title": "Heavy Ion Surfing on Alfven Waves Observed by Solar Orbiter\u2019s Heavy Ion Sensor",
+    "title": "Heavy Ion Surfing on Alfven Waves Observed by Solar Orbiter’s Heavy Ion Sensor",
     "authors": [
       "Alterman, B. L."
     ],
     "month": "",
     "year": "2023-05-00",
-    "journal": "Chapman Conference on Advances in Understanding Alfv\u00e9n Waves in the Sun and the Heliosphere",
+    "journal": "Chapman Conference on Advances in Understanding Alfvén Waves in the Sun and the Heliosphere",
     "publication_type": "inproceedings",
     "citations": 0,
     "url": "",
@@ -86,7 +86,7 @@
   },
   {
     "bibcode": "NOADS-IAGA-2023",
-    "title": "Heavy Ion Surfing on Alfv\u00e9n Waves Observed by Solar Orbiter\u2019s Heavy Ion Sensor",
+    "title": "Heavy Ion Surfing on Alfvén Waves Observed by Solar Orbiter’s Heavy Ion Sensor",
     "authors": [
       "Alterman, B. L."
     ],
@@ -256,5 +256,37 @@
     "url": "https://dx.doi.org/10.5281/zenodo.2578277",
     "invited": false,
     "keywords": "whitepaper"
+  },
+  {
+    "title": "An Experimentalists Introduction to the Solar Wind",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "year": "2017-07-00",
+    "month": "July",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "invited": true,
+    "booktitle": "SHINE Conference Student Day",
+    "journal": "SHINE Conference Student Day",
+    "keywords": "invited",
+    "url": "",
+    "bibcode": "NOADS-Experimentalists2017ba16"
+  },
+  {
+    "title": "Later Years and Early Careers (Panel Discussion)",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "year": "2021-08-00",
+    "month": "8",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "invited": true,
+    "booktitle": "SHINE Conference",
+    "journal": "SHINE Conference",
+    "keywords": "invited",
+    "url": "",
+    "bibcode": "NOADS-Later20211867"
   }
 ]
