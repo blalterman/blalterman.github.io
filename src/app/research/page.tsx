@@ -97,7 +97,7 @@ export default function ResearchPage() {
   return (
     <div className="container mx-auto py-16 md:py-24 max-w-5xl">
       <header className="text-center mb-12">
-        <h1 className="font-headline text-4xl md:text-5xl mb-4">Research Topics</h1>
+        <h1 className="font-headline mb-4">Research Topics</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Exploring the Sun-Earth connection through fundamental questions about solar wind origins, evolution, and variability.
         </p>

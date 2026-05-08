@@ -120,7 +120,7 @@ export default async function PublicationCategoryPage({ params }: { params: Prom
       </nav>
 
       {/* Category title with icon (promoted to H1 for SEO) */}
-      <h1 className="text-2xl font-bold text-center flex items-center justify-center mb-8">
+      <h1 className="font-headline text-center flex items-center justify-center mb-8">
         {IconComponent && <IconComponent className="mr-3 h-8 w-8 text-primary" />}
         {categoryData.title}
       </h1>

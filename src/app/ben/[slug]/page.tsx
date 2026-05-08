@@ -95,7 +95,7 @@ export default async function BenSubpage({ params }: { params: Promise<{ slug: s
             {/* Content wrapped in Card */}
             <Card className="max-w-4xl mx-auto shadow-lg">
                 <CardHeader>
-                    <h1 className="flex items-center font-headline text-3xl md:text-4xl font-semibold leading-none tracking-tight">
+                    <h1 className="flex items-center font-headline">
                         {IconComponent && <IconComponent className="mr-4 h-10 w-10 text-primary" />}
                         {section.title}
                     </h1>

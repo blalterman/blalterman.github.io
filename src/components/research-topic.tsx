@@ -49,7 +49,7 @@ export function ResearchTopic({ data }: ResearchTopicProps) {
     <div className="space-y-12">
       {/* Header */}
       <header>
-        <h1 className="font-headline text-4xl mb-2">{data.title}</h1>
+        <h1 className="font-headline mb-2">{data.title}</h1>
         <p className="text-xl text-muted-foreground">{data.subtitle}</p>
       </header>
 

@@ -85,7 +85,7 @@ export default async function FigureDetailPage({ params }: Props) {
         </div>
 
         {/* Title */}
-        <h1 className="font-headline text-3xl">{entry.short_title}</h1>
+        <h1 className="font-headline">{entry.short_title}</h1>
 
         {/* Summary */}
         {entry.summary && (
