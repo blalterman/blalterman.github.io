@@ -54,7 +54,7 @@ export function Experience({ heading, tagline, educationData, professionalData, 
     return (
         <section id="experience" className="container mx-auto py-16 md:py-24">
             <div className="text-center mb-16">
-                <h2 className="font-headline">{heading}</h2>
+                <h1 className="font-headline">{heading}</h1>
                 <p className="text-lg text-muted-foreground mt-2">{tagline}</p>
                 <Button variant="outline" asChild className="mt-4">
                     <Link href="/Alterman-CV.pdf" target="_blank" rel="noopener noreferrer">
@@ -64,10 +64,10 @@ export function Experience({ heading, tagline, educationData, professionalData, 
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>
-                    <h3 className="flex items-center text-2xl font-bold mb-6">
+                    <h2 className="flex items-center text-2xl font-bold mb-6">
                         <GraduationCap className="mr-3 h-7 w-7 text-primary" />
                         Education
-                    </h3>
+                    </h2>
                     <div className="space-y-8">
                         {educationData.map((edu) => (
                             <Card key={edu.Institution} className="shadow-lg">
@@ -97,10 +97,10 @@ export function Experience({ heading, tagline, educationData, professionalData, 
                     </div>
                 </div>
                 <div>
-                    <h3 className="flex items-center text-2xl font-bold mb-6">
+                    <h2 className="flex items-center text-2xl font-bold mb-6">
                         <Briefcase className="mr-3 h-7 w-7 text-primary" />
                         Professional Positions
-                    </h3>
+                    </h2>
                     <div className="space-y-8">
                         {professionalData.map((job) => (
                             <Card key={`${job["Position Title"]}-${job.Company}`} className="shadow-lg">
@@ -120,10 +120,10 @@ export function Experience({ heading, tagline, educationData, professionalData, 
 
             {publishedHonors.length > 0 && (
                 <div className="mt-16">
-                    <h3 className="flex items-center text-2xl font-bold mb-6">
+                    <h2 className="flex items-center text-2xl font-bold mb-6">
                         <Award className="mr-3 h-7 w-7 text-primary" />
                         Honors & Leadership
-                    </h3>
+                    </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {publishedHonors.map((honor) => (
                             <Card key={honor.title} className="shadow-lg h-full flex flex-col">
