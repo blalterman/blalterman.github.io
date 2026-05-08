@@ -51,3 +51,7 @@ tmp/
 # bibtex source files (converted to JSON in public/data/)
 /data/
 review-docs/
+
+# playwright mcp session artifacts
+.playwright-mcp/*.yml
+.playwright-mcp/*.log
