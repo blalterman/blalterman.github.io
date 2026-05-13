@@ -1,0 +1,189 @@
+{
+  "batch": "F1",
+  "label": "Compressibility regulator (Alterman_2026_ApJL_996_L12)",
+  "papers": ["Alterman_2026_ApJL_996_L12"],
+  "authored_at": "2026-05-13T00:00:00Z",
+  "calibration_spec": "tools/docs/description-calibration.md",
+  "patches": [
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_1",
+      "description": "Helium abundance rises linearly with solar wind speed in slow wind, then saturates at A_He = 4.19% above v_s = 433 km/s — half the photospheric value, marking the slow-to-fast source transition.",
+      "voice_grounding_source": "summary_short.the_finding; paper abstract; Section 1 saturation definition; figure-detail single-sentence-punch voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_2",
+      "description": "Normalized cross helicity |sigma_c| approaches 1 as solar wind speed rises, with the 0.7 contour separating Alfvenic wind from continuously open sources and lower-|sigma_c| wind from mixed origins.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 1 Fig. 2 caption; cross-helicity-as-source-tracer framing from Paper I"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_3",
+      "description": "Combining v_sw, A_He, and |sigma_c| splits the helium-speed plane into four regions: helium-poor closed-source wind, Alfvenic helium-rich open-source wind, an ambiguous mixing band, and a likely-transient corner.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 1 Fig. 3 caption (categorization scheme from Paper I)"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_4",
+      "description": "Hydrogen compressibility |delta n_H/n_H| persists across all solar wind speeds: less common above 0.1 than below, but present even in fast wind where it forms an asymmetric high-compressibility tail.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 1 Fig. 4 caption; compressive-fluctuation threshold from Tu & Marsch 1994"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_5",
+      "description": "Hydrogen compressibility and cross helicity are anticorrelated only at high speeds: the |sigma_c| = 0.7 contour tracks the compressible-incompressible boundary above v_s, but the anticorrelation vanishes in slow wind.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 1 Fig. 5 caption; abstract sentence on intuitive anticorrelation"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_6",
+      "description": "Saturation points (v_s, A_s) sit just above the |sigma_c| = 0.6 contour, and Paper I's A_He(v_sw) fits cross over 530–560 km/s — the paradox where non-Alfvenic wind carries more helium than Alfvenic wind at the same speed.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 3.1 Fig. 6 caption; crossover paradox setup"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_7",
+      "description": "Compressibility |delta n_H/n_H| varies systematically across the A_He–v_sw plane: above saturation, wind with helium above A_s carries distinctly higher compressibility than wind on the 4.19% plateau, exposing hidden structure.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 3.2 Fig. 7 caption"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_8",
+      "description": "The |delta n_H/n_H| = 0.09 contour gradient reverses direction at the saturation point near (4%, 400 km/s), and the 0.085 contour intersects the 530–560 km/s crossover where |sigma_c| = 0.7.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 3.2 Fig. 8 caption (4 enumerated observations)"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_9",
+      "description": "Sorting by compressibility splits solar wind above saturation in two: incompressible wind (|delta n_H/n_H| < 0.15) plateaus at A_s; compressible wind keeps accumulating helium, producing gradients several times steeper.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 3.3 Fig. 9 caption; Table 2 quantile fits"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_10",
+      "description": "Rescaling each A_He(v_sw) fit to its own (v_s, A_s) collapses the incompressible quantiles onto a universal curve below saturation; above saturation, only compressible quantiles (|delta n_H/n_H| > 0.15) break the collapse.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 3.3 Fig. 10 caption; abstract's two-subset claim"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_11",
+      "description": "Saturation speed v_s steps up sharply at |delta n_H/n_H| ≈ 0.15. A_s is nearly constant for incompressible wind but non-monotonic in compressible wind, dipping then rising at the highest compressibility.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 3.3 Table 2; incompressible-vs-compressible boundary at 0.15"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_12",
+      "description": "The above-saturation slope m_s jumps from ~0.8 × 10⁻³ %/km/s in incompressible wind to 6.1 × 10⁻³ %/km/s in compressible wind — confirming that compressibility, not low |sigma_c|, drives the steep gradients identified in Paper I.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 3.3 Fig. 12; Table 2 saturation slopes"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_13",
+      "description": "Progressively excluding compressible wind from the |sigma_c| quantile analysis reduces the dependence of saturation parameters on cross helicity, with the largest reduction at low |sigma_c| where compressible wind concentrates.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 3 Fig. 13; mapping between this work and Paper I"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_14",
+      "description": "Characteristic speeds from compressibility, cross helicity, and independent energy-budget studies all map onto physically distinct portions of the bimodal v_sw distribution: incompressible v_s at 417–436 km/s aligns with the slow-to-fast transition.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 3 Fig. 14; Alterman 2025 wave-poor framing"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_15a",
+      "description": "Enhanced mean A_He above saturation occupies two disjoint regions: an Alfvenic island (high |sigma_c|, low compressibility) and a compressible island (high |delta n_H/n_H| across all |sigma_c|) — two paths to the same mean helium.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 4 Fig. 15a; abstract's two-subset enhanced-A_He claim"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_15b",
+      "description": "The 90th-percentile A_He exceeds 7.5% in the compressible island versus below 6% in the Alfvenic island — well above 50% of the photospheric value expected from continuously open sources, signaling a different enhancement mechanism.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 4 Fig. 15b; photospheric A_He reference from Asplund et al. 2021"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_15c",
+      "description": "The 10th-percentile A_He stays elevated only in the Alfvenic, incompressible region. Compressible wind has very low 10th-percentile helium despite a high mean — its enrichment is episodic rather than sustained.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 4 Fig. 15c"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_15d",
+      "description": "Helium variability (P90 − P10) reaches 70–90% of the mean in the compressible island versus ~20% in the Alfvenic island. Comparable mean A_He arises from steady enrichment in one population and large transient excursions in the other.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 4 Fig. 15d; episodic-vs-sustained framing"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_16a",
+      "description": "Mean v_sw exceeds the largest incompressible saturation speed only in the Alfvenic island. Compressible helium-rich wind stays slower than v_s despite comparable A_He — the same mean speed is reached at either high |sigma_c| or high |delta n_H/n_H|.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 4 Fig. 16a"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_16b",
+      "description": "Speed variability is larger in the Alfvenic subset than the compressible subset — the opposite of helium variability. Compressibility drives A_He changes independently of speed, so the two populations are not just slow and fast versions of one process.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 4 Fig. 16b; decoupling-of-helium-and-speed claim"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_17a",
+      "description": "Mean |delta n_H/n_H| concentrates at high A_He and low |sigma_c| — the ambiguous region Paper I could not classify. The 0.15 compressibility contour follows the boundary of that region almost exactly.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 4 Fig. 17a; Paper I ambiguous-region framing"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_17b",
+      "description": "In the |sigma_c| > 0.7 region identified with continuously open sources, even the 75th percentile of compressibility stays below 0.1, confirming open-source wind is overwhelmingly incompressible.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 4 Fig. 17b"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_18",
+      "description": "Cross helicity peaks near A_He = A_s for all but the most compressible quantile. Above A_s, incompressible wind maintains high |sigma_c| while compressible wind shows declining wave activity, splitting the above-saturation behavior.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 4 Fig. 18"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_19",
+      "description": "In incompressible wind, |sigma_c|(v_sw) curves bundle tightly together. In compressible wind, |sigma_c| is suppressed across all speeds and the curves separate, providing the mapping that converts compressibility quantiles to cross-helicity quantiles.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 4 Fig. 19; mapping function for Paper I cross-referencing"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_20",
+      "description": "Compressibility is nearly independent of |sigma_c| in slow wind but fans out at high speeds: the lowest-|sigma_c| wind becomes the most compressible, the highest-|sigma_c| wind the most incompressible, with the divergence starting near v_s.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 4 Fig. 20"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_21",
+      "description": "|delta n_H/n_H| reaches a minimum of 0.067 at A_He ≈ 5.3%, distinctly above the saturation abundance of 3.8–4.2%. Below this minimum, low-|sigma_c| wind becomes more compressible while high-|sigma_c| wind becomes less compressible.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 4 Fig. 21"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_22",
+      "description": "Mapping the compressibility-derived saturation points to |sigma_c| recovers the same Low/Mid/High three-interval pattern Paper I found in direct |sigma_c| analysis, with high, intermediate, and low |delta n_H/n_H| respectively.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 5 Fig. 22; Paper I three-interval framing"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_23",
+      "description": "The bimodal split between compressible and incompressible saturation slopes survives the mapping to |sigma_c|: incompressible points fall above |sigma_c| ≈ 0.6 with near-zero slopes; compressible points below 0.55 with slopes 5–6× larger.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 5 Fig. 23"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_24",
+      "description": "Every saturation point from Paper I's |sigma_c| quantile analysis maps to |delta n_H/n_H| < 0.15 — the incompressible regime. Mid and High |sigma_c| subsets cluster below 0.085; Low |sigma_c| extends up to ~0.14.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 5 Fig. 24; abstract's upper-bound claim |delta n_H/n_H| < 0.15"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2026_ApJL_996_L12/fig_25",
+      "description": "Excess A_He above saturation at v_sw = 800 km/s decreases linearly with |sigma_c|: ~40% in the least Alfvenic wind, ~10% in the most Alfvenic wind, with a linear extrapolation to 46% excess in perfectly non-Alfvenic wind.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 5 Fig. 25; abstract's regulator framing"
+    }
+  ]
+}

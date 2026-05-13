@@ -1,0 +1,99 @@
+{
+  "batch": "F3",
+  "label": "Solar cycle composition cluster",
+  "papers": ["Alterman_2019_ApJL_879_L6", "s11207-021-01801-9", "aa54299-25"],
+  "authored_at": "2026-05-13T00:00:00Z",
+  "calibration_spec": "tools/docs/description-calibration.md",
+  "patches": [
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2019_ApJL_879_L6/fig_1",
+      "description": "Across one full 22-year Hale cycle, helium abundance tracks sunspot number at every solar wind speed from 322 to 542 km/s, with Spearman correlations from 0.90 in slow wind down to 0.57 in the fastest bin.",
+      "voice_grounding_source": "summary_short + technical_caption (ρ range, v_sw range, Hale cycle framing); paper abstract sentence 1-2 (Hale cycle, two cycles); figure-detail voice per calibration spec"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2019_ApJL_879_L6/fig_2a",
+      "description": "Applying a wind-speed-dependent time delay to sunspot number lifts the helium correlation above 0.7 at every speed, including the fastest bin where the observed value of 0.57 had previously appeared to weaken the connection.",
+      "voice_grounding_source": "summary_short + the_finding (correlation jump from 0.57 to >0.7); paper § 4 (delayed ρ ≥ 0.7 for all v_sw); calibration spec figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2019_ApJL_879_L6/fig_2b",
+      "description": "Helium's response lag to sunspot number rises monotonically with solar wind speed at roughly 1.1 days per km/s, from about 130 days at 322 km/s to about 350 days at 542 km/s.",
+      "voice_grounding_source": "summary_short + technical_caption (fit equation τ = 1.1 v_sw − 218 days, R² = 0.791); paper § 4 (monotonic increasing function); calibration spec quantitative emphasis"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2019_ApJL_879_L6/fig_3a",
+      "description": "In the 355 km/s wind bin, helium abundance traces a counter-clockwise hysteresis loop against sunspot number: at the same SSN, A_He sits higher on the declining phase than the rising phase.",
+      "voice_grounding_source": "summary_short + the_finding (counter-clockwise loop, 355 km/s bin); paper § 5 (hysteresis pattern, time moves counter-clockwise); calibration spec figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2019_ApJL_879_L6/fig_3b",
+      "description": "Shifting sunspot number forward by 150 days collapses the helium hysteresis loop to a line: χ²ν drops from 2.526 to 0.846 and R² rises from 0.681 to 0.763 with the slope and intercept unchanged.",
+      "voice_grounding_source": "summary_short + technical_caption (R²/χ²ν values, 150-day delay); paper § 5 (linear model better characterizes delayed SSN); calibration spec quantitative emphasis"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2019_ApJL_879_L6/fig_4",
+      "description": "The quiet-Sun helium abundance derived from 23 years of Wind data matches the Kasper et al. (2007) curve fit to a single two-year minimum, including the helium vanishing speed near 259 km/s.",
+      "voice_grounding_source": "summary_short + the_finding (cross-validation with Kasper 2007); paper § 6 (consistent with Kasper 2007 across multiple cycles, v_0 = 259 km/s); calibration spec figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "s11207-021-01801-9/fig_1",
+      "description": "Before each of solar minima 22 through 25, helium abundance drops sharply and recovers across all wind speeds at approximately the same time, preceding the SSN-defined minimum and the Lyman-alpha and F10.7 indicators.",
+      "voice_grounding_source": "summary_short + the_finding (concurrent shutoff across v_sw, precedes minima); paper abstract (shutoff at approximately the same time across v_sw, prior to SSN minima); calibration spec figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "s11207-021-01801-9/fig_2",
+      "description": "Helium shutoff heralds the official sunspot minimum by 200 to 430 days, with a precision-weighted average of 229 days; for every cycle except Cycle 22, the 250-day averaging window dominates the timing uncertainty.",
+      "voice_grounding_source": "summary_short + the_finding (heralding times, averaging window uncertainty); paper § 3 + technical_caption (precision vs window uncertainty); calibration spec quantitative emphasis"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "s11207-021-01801-9/fig_3",
+      "description": "The time between successive helium shutoffs matches the conventional sunspot cycle length across Cycles 21 through 24, agreeing to within one 250-day averaging window in every case.",
+      "voice_grounding_source": "summary_short + the_finding (cycle length match across four cycles); paper § 3 (shutoff cycle length nearly identical to SSN cycle length); calibration spec figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "s11207-021-01801-9/fig_4",
+      "description": "Varying the averaging window from 225 to 275 days shifts the identified helium shutoff date by less than one window length for four of five cycles, with Cycle 22 the sole exception drifting toward earlier dates.",
+      "voice_grounding_source": "summary_short + the_finding (window-size sensitivity test, Cycle 22 exception); paper § 4 (sensitivity to averaging window); calibration spec figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "s11207-021-01801-9/fig_5",
+      "description": "Sliding the averaging window start date by up to 250 days leaves helium shutoff timing within one window length for Cycles 21, 23, 24, and 25, confirming the result is insensitive to analysis-window choice.",
+      "voice_grounding_source": "summary_short + the_finding (window-start sensitivity, robust for four of five cycles); paper § 4 (sensitivity tests); calibration spec figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "s11207-021-01801-9/fig_6",
+      "description": "Helium shutoff occurs at approximately the same time that new-cycle EUV brightpoints emerge near mid-latitudes, tying solar wind composition near Earth to the equatorial flux cancelation that ends each extended cycle.",
+      "voice_grounding_source": "summary_short + the_finding (brightpoint emergence coincidence, butterfly pattern); paper abstract (overlap of adjacent cycles, equatorial flux cancelation); calibration spec figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "aa54299-25/fig_1",
+      "description": "Across 1994 to 2022, slow-wind helium correlates with sunspot number at 0.94 while fast-wind helium oscillates within a narrow band centered on 51 ± 3% of the photospheric value.",
+      "voice_grounding_source": "summary_short + technical_caption (r = 0.94 slow, 51 ± 3% fast-wind ceiling); paper abstract result 1-2 (strong correlation slow and fast, 51% photospheric limit); calibration spec quantitative emphasis"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "aa54299-25/fig_2",
+      "description": "Slow-wind heavy element abundances from C through Fe drop during the deep solar minimum around 2008-2009 and recover with rising activity; fast-wind abundances remain comparatively stable across the cycle.",
+      "voice_grounding_source": "summary_short + the_finding (slow-wind tracks cycle, fast-wind stable); paper abstract results 3-4 (slow-wind heavy elements evolve, fast-wind do not); calibration spec figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "aa54299-25/fig_3",
+      "description": "For elements heavier than helium, the slow-wind correlation with solar activity rises monotonically with atomic mass from 0.51 for carbon to 0.82 for iron; helium breaks the trend, correlating as strongly as iron.",
+      "voice_grounding_source": "summary_short + the_finding (monotonic mass trend, helium anomaly); paper abstract results 5 + § 1 (correlation 0.49 C to 0.81 Fe; helium dynamically relevant); calibration spec quantitative emphasis"
+    }
+  ]
+}

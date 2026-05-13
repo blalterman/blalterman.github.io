@@ -1,0 +1,99 @@
+{
+  "batch": "F4",
+  "label": "Suprathermal heavy ions",
+  "papers": ["Alterman_2023_ApJ_952_42", "Alterman_2024_ApJL_964_L31"],
+  "authored_at": "2026-05-13T00:00:00Z",
+  "calibration_spec": "tools/docs/description-calibration.md",
+  "patches": [
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2023_ApJ_952_42/fig_1",
+      "description": "An automated method identifies quiet-time suprathermal background by fitting two power laws to the variance-mean relationship of ACE/ULEIS 24-hour intervals; their intersection defines the threshold with a 1-sigma uncertainty.",
+      "voice_grounding_source": "summary_short field; technical_caption; figure-detail voice (declarative finding, technical specifics)"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2023_ApJ_952_42/fig_1c",
+      "description": "The variance-mean threshold cleanly separates active and quiet intervals in a five-day July 2012 time series, with only 7 of 29 quiet intervals falling inside the 1-sigma uncertainty band.",
+      "voice_grounding_source": "summary_short field; the_finding paragraph; figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2023_ApJ_952_42/fig_2",
+      "description": "Quiet-time thresholds derived from ACE/ULEIS variance-mean fits cluster within a narrow band across two solar cycles (1997-2021), confirming the method captures a real physical transition rather than year-specific noise.",
+      "voice_grounding_source": "summary_short field; the_finding paragraph; figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2023_ApJ_952_42/fig_3",
+      "description": "Annual quiet-hour counts anticorrelate with sunspot number at Pearson rho = -0.95 across 1997-2021: solar maximum leaves few quiet intervals; solar minimum is dominated by them.",
+      "voice_grounding_source": "summary_short field; the_finding paragraph; figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2023_ApJ_952_42/fig_4",
+      "description": "Quiet-time heavy-ion abundances normalized to oxygen shift systematically with the solar cycle: low-FIP species (Mg, Si, S, Ca, Fe) correlate with sunspot number above +0.8 while carbon anticorrelates at -0.84.",
+      "voice_grounding_source": "summary_short field; the_finding paragraph; figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2023_ApJ_952_42/fig_5",
+      "description": "Dividing quiet-time abundances by CIR reference values flattens the M/Q trend during solar minimum; dividing by gradual-SEP values flattens it during maximum. Impulsive-SEP normalization fails in both phases.",
+      "voice_grounding_source": "summary_short field; the_finding paragraph; figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2023_ApJ_952_42/fig_6",
+      "description": "Eight heavy-ion abundances follow power-law trends with Fe/C, the single-number enrichment indicator. Year-coded data traces cyclic loops tied to solar-cycle phase rather than scattering randomly.",
+      "voice_grounding_source": "summary_short field; the_finding paragraph; figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2023_ApJ_952_42/fig_7",
+      "description": "Power-law exponents for X/O versus Fe/C run from C (-0.21) through Ne (-0.02), Mg (+0.36), Si (+0.47), S (+0.54), Ca (+0.61), to Fe (+0.79), holding roughly constant across four solar-cycle extrema.",
+      "voice_grounding_source": "summary_short field; numerical values in the_finding paragraph; figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2023_ApJ_952_42/fig_8",
+      "description": "Abundance variability rises systematically with M/Q across all four solar-cycle extrema, with slopes matching the gradual-SEP trend Desai et al. (2006) measured in individual events.",
+      "voice_grounding_source": "summary_short field; the_finding paragraph; technical_caption; figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2023_ApJ_952_42/fig_9",
+      "description": "The slope of M/Q fractionation is statistically consistent across all four solar-cycle extrema and matches the Desai et al. (2006) gradual-SEP value; threshold-choice variability stays well inside the fit uncertainty.",
+      "voice_grounding_source": "summary_short field; the_finding paragraph; figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2023_ApJ_952_42/fig_10",
+      "description": "Sunspot-number correlation of quiet-time abundances divides cleanly at FIP = 11 eV, not at M/Q. Sulfur (FIP = 10.4 eV) lands decisively on the low-FIP side, contradicting prior treatment of S as a high-FIP species.",
+      "voice_grounding_source": "summary_short field; the_finding paragraph; technical_caption; figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2024_ApJL_964_L31/fig_1",
+      "description": "Nine heavy-ion species from carbon (mass 12) to iron (mass 56) follow nearly identical power-law spectra over 0.3 to 1.28 MeV/nucleon in 2004, with no breaks or rollovers across the full energy range.",
+      "voice_grounding_source": "summary_short field; the_finding paragraph; figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2024_ApJL_964_L31/fig_2",
+      "description": "The oxygen spectral index fluctuates around 2.5 across 1998-2020 without tracking the dramatic swings in sunspot number; only two of nine species show even a modest correlation with solar activity.",
+      "voice_grounding_source": "summary_short field; the_finding paragraph; figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2024_ApJL_964_L31/fig_3",
+      "description": "Carbon spectral indices cluster tightly along the one-to-one diagonal with oxygen (rank correlation 0.93); iron follows with more scatter, and the two species bracket the full M/Q range studied.",
+      "voice_grounding_source": "summary_short field; the_finding paragraph; figure-detail voice"
+    },
+    {
+      "target_file": "public/data/figure-registry.json",
+      "target_key": "Alterman_2024_ApJL_964_L31/fig_4",
+      "description": "Pooling 150+ spectral-slope measurements across nine species and 22 years yields gamma = 2.5 +/- 0.3, ruling out the 1.5 prediction from continuous compressional-heating models as the sole mechanism.",
+      "voice_grounding_source": "summary_short field; the_finding paragraph; figure-detail voice"
+    }
+  ]
+}
