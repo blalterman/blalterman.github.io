@@ -252,7 +252,7 @@ For each batch:
 1. Read the tmp file
 2. Sample 3-5 descriptions for voice/anti-pattern compliance
 3. If acceptable: apply each `patches[i].description` to `patches[i].target_file` at `patches[i].target_key`
-4. Add a description field at that key in the source JSON
+4. Add a NEW field named `meta_description` at that key in the source JSON. Do NOT overwrite existing `description`, `summary_short`, or `excerpt` fields — those serve page-body content and remain authoritative for on-page rendering. The metadata helper consumes `meta_description` (with fallback to existing field).
 5. Remove the tmp file
 6. Commit with subject `feat(seo): apply unified descriptions for <category>`
 7. Repeat for next batch
