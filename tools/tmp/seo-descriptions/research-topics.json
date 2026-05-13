@@ -1,0 +1,81 @@
+{
+  "batch": "Research_Topics",
+  "label": "Research topic pages",
+  "papers": [],
+  "authored_at": "2026-05-13T00:00:00Z",
+  "calibration_spec": "tools/docs/description-calibration.md",
+  "patches": [
+    {
+      "target_file": "public/data/research-topics/helium-abundance.json",
+      "target_key": "$",
+      "description": "Helium saturates near 4.19% above 433 km/s. Set in the chromosphere, helium fingerprints the source region. Set at the Sun-heliosphere interface, the cross helicity fingerprints the coupling process where the solar wind is born from coronal plasma.",
+      "voice_grounding_source": "Worked Example 1 (approved 2026-05-13); corpus: Alterman & D'Amicis 2025 (ApJL 982 L40) + 2026 (ApJL 996 L12)"
+    },
+    {
+      "target_file": "public/data/research-topics/sources-of-the-solar-wind.json",
+      "target_key": "$",
+      "description": "Solar wind emerges from coronal source regions with distinct magnetic topologies. Helium abundance fingerprints the chromospheric source; cross helicity fingerprints the coupling at the Sun-heliosphere interface. Together they classify in situ plasma by the topology of the field that released it.",
+      "voice_grounding_source": "topic.description; diagnostic-split framing per spec § Claim Grounding; Alterman & D'Amicis 2025 (ApJL 982 L40) fig 2 + fig 11"
+    },
+    {
+      "target_file": "public/data/research-topics/heavy-ion-composition.json",
+      "target_key": "$",
+      "description": "Heavy ions saturate near 327 km/s — 75 km/s below helium — and below saturation collapse onto a single curve regardless of mass or first ionization potential. Above saturation, charge state alone (R^2 = 0.95) controls fast-wind fractionation, breaking the universal scaling.",
+      "voice_grounding_source": "topic.description; aa51550-24 fig 3, fig 4 (327 km/s, FIP-independent), fig 8 (charge-state R^2=0.95)"
+    },
+    {
+      "target_file": "public/data/research-topics/solar-wind-acceleration.json",
+      "target_key": "$",
+      "description": "Alfven waves deposit energy into the solar wind during transit, adding 100+ km/s to fast-wind speeds beyond what thermal expansion predicts. Kinetic energy measured by Parker Solar Probe near the Sun predicts speeds at 1 au, fixing wave-driven acceleration as complete by 0.2 au.",
+      "voice_grounding_source": "topic.description; Alterman 2025 (ApJL 984 L64) fig 1 + fig 2"
+    },
+    {
+      "target_file": "public/data/research-topics/solar-wind-compressibility.json",
+      "target_key": "$",
+      "description": "Hydrogen compressibility regulates helium saturation. When density fluctuations fall below 9%, helium saturates at a universal value independent of speed or Alfvenicity. The 15% threshold isolates source regions: above it, the helium gradient jumps six-fold and classification by speed fails.",
+      "voice_grounding_source": "topic.description; Alterman & D'Amicis 2026 (ApJL 996 L12) fig 7, fig 10, fig 12"
+    },
+    {
+      "target_file": "public/data/research-topics/coulomb-collisions.json",
+      "target_key": "$",
+      "description": "Coulomb collisions act as friction on solar wind ions during transit from Sun to Earth, damping the differential flow of alpha particles and proton beams. Extrapolating measured drifts to zero collisional age recovers the intrinsic velocity limit at the local Alfven speed set by wave-particle interactions in the corona.",
+      "voice_grounding_source": "topic.description; Alterman et al. 2018 (ApJ 864 112) fig 5, fig 6, fig 9"
+    },
+    {
+      "target_file": "public/data/research-topics/turbulence.json",
+      "target_key": "$",
+      "description": "Alfvenic wave activity tracks solar wind speed: fast wind from continuously open sources is wave-rich, while slow wind spans the full range of cross helicity. The wave-activity field alone cannot separate source types, motivating compressibility and helium as the additional classification axes.",
+      "voice_grounding_source": "primary_figure ref Alterman_2026_ApJL_996_L12/fig_2 relevance text from sources-of-the-solar-wind related_figures; topic body is placeholder, claim grounded in cited paper"
+    },
+    {
+      "target_file": "public/data/research-topics/space-weather.json",
+      "target_key": "$",
+      "description": "Forecasting geomagnetic impact requires knowing where the solar wind originated. Helium abundance fingerprints the chromospheric source; cross helicity fingerprints the coupling at the Sun-heliosphere interface. The two diagnostics together classify in situ plasma into source-region types that drive distinct space-weather signatures at Earth.",
+      "voice_grounding_source": "topic.description; diagnostic-split framing per spec § Claim Grounding; Alterman & D'Amicis 2026 (ApJL 996 L12) fig 3, fig 5"
+    },
+    {
+      "target_file": "public/data/research-topics/solar-activity.json",
+      "target_key": "$",
+      "description": "Solar wind composition tracks the 11-year cycle. Fast wind from coronal holes holds stable abundances across the cycle, while slow-wind abundances rise at maximum and crash at minimum. Helium shutoff leads the sunspot minimum by about 10 months across four cycles, with heavier elements modulated more strongly by gravitational settling.",
+      "voice_grounding_source": "topic.description; Alterman et al. 2019 (ApJL 879 L6) fig 1 + fig 2; s11207-021-01801-9 fig 1; aa54299-25 fig 3"
+    },
+    {
+      "target_file": "public/data/research-topics/proton-beams.json",
+      "target_key": "$",
+      "description": "A three-population fit to Wind Faraday cup spectra resolves the proton beam, proton core, and alpha particle simultaneously, unlocking 20+ years of beam observations. Beam drift clusters at the local Alfven speed, while alpha drift damps under Coulomb friction — a contrast that separates wave-particle from collisional control of differential flow.",
+      "voice_grounding_source": "primary_figure ref Alterman_2018_ApJ_864_112/fig_2; related_figures fig_1 relevance; topic body is placeholder, claims grounded in cited paper Alterman 2018 (ApJ 864 112)"
+    },
+    {
+      "target_file": "public/data/research-topics/suprathermal-ions.json",
+      "target_key": "$",
+      "description": "Quiet-time suprathermal ions near 1 au follow a universal power-law spectrum with index gamma = 2.5, invariant across nine elements and two full solar cycles. CIRs seed the population at solar minimum, CME-driven shocks at solar maximum, yet the spectral slope holds — a constraint on whatever process accelerates the heliosphere's seed pool.",
+      "voice_grounding_source": "topic.description; Alterman et al. 2024 (ApJL 964 L31) fig 1 + fig 4; Alterman et al. 2023 (ApJ 952 42) fig 4"
+    },
+    {
+      "target_file": "public/data/research-topics/kinetic-processes.json",
+      "target_key": "$",
+      "description": "Wave-particle interactions and Coulomb collisions together set kinetic limits on solar wind ions. Alpha particles and proton beams drift at the local Alfven speed where waves dominate; collisions damp these drifts during transit, leaving collisional age as the lever that separates intrinsic from interplanetary structure.",
+      "voice_grounding_source": "topic.paper Alterman 2018 (ApJ 864 112); topic body is placeholder, claims grounded in cited paper; related_topics: coulomb-collisions, proton-beams"
+    }
+  ]
+}
