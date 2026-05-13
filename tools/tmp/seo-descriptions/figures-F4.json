@@ -14,8 +14,9 @@
     {
       "target_file": "public/data/figure-registry.json",
       "target_key": "Alterman_2023_ApJ_952_42/fig_1c",
-      "description": "The variance-mean threshold cleanly separates active and quiet intervals in a five-day July 2012 time series, with only 7 of 29 quiet intervals falling inside the 1-sigma uncertainty band.",
-      "voice_grounding_source": "summary_short field; the_finding paragraph; figure-detail voice"
+      "description": "The variance-mean threshold cleanly separates active and quiet intervals in a July 2012 time series, with only 7 of 29 quiet intervals falling inside the 1-sigma uncertainty band.",
+      "voice_grounding_source": "summary_short field; the_finding paragraph; figure-detail voice",
+      "audit_changes": "Removed unsupported 'five-day' duration claim (L14): paper describes Panel (c) only as 'An example time series ... during 2012 July' without specifying a five-day window."
     },
     {
       "target_file": "public/data/figure-registry.json",
@@ -51,7 +52,9 @@
       "target_file": "public/data/figure-registry.json",
       "target_key": "Alterman_2023_ApJ_952_42/fig_7",
       "description": "Power-law exponents for X/O versus Fe/C run from C (-0.21) through Ne (-0.02), Mg (+0.36), Si (+0.47), S (+0.54), Ca (+0.61), to Fe (+0.79), holding roughly constant across four solar-cycle extrema.",
-      "voice_grounding_source": "summary_short field; numerical values in the_finding paragraph; figure-detail voice"
+      "voice_grounding_source": "summary_short field; numerical values in the_finding paragraph; figure-detail voice",
+      "audit_flag": "verify",
+      "audit_flag_reason": "L14: paper text confirms only C (-0.21) and Fe (+0.79) as smallest/largest exponents; paper says 'The legend gives the numerical values from panel (b)' but the five intermediate values (Ne -0.02, Mg +0.36, Si +0.47, S +0.54, Ca +0.61) and N's omission cannot be verified from paper.md or figure-registry summary. Reviewer should cross-check Figure 7 legend."
     },
     {
       "target_file": "public/data/figure-registry.json",
