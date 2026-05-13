@@ -9,10 +9,9 @@
     {
       "target_file": "public/data/publications-categories.json",
       "target_key": "categories/phd-thesis",
-      "description": "Doctoral dissertation on solar wind helium abundance and its connection to coronal sources.",
-      "voice_grounding_source": "Existing category.description (Doctoral dissertation); spec § Publications category pages taxonomic-label voice; PhD topic from corpus.",
-      "audit_flag": "verify",
-      "audit_flag_reason": "L14 corpus-traceability failure: the only phdthesis entry in corpus is titled 'The significance of proton beams in the multiscale solar wind' — not helium abundance. Description appears to misidentify thesis topic."
+      "description": "Doctoral dissertation: the significance of proton beams in the multiscale solar wind.",
+      "voice_grounding_source": "Actual thesis title from corpus (bibcode 2019PhDT.......121A); category.description; spec § Publications category pages.",
+      "audit_changes": "User-resolved L14 flag (2026-05-13): corrected misidentified thesis topic. Actual title in corpus is about proton beams in the multiscale solar wind, not helium abundance."
     },
     {
       "target_file": "public/data/publications-categories.json",
