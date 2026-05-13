@@ -57,7 +57,9 @@
       "target_file": "public/data/figure-registry.json",
       "target_key": "Alterman_2025_ApJL_982_L40/fig_9",
       "description": "Five characteristic speeds derived in this paper — vanishing, transition, saturation, and bounding values — partition the solar minimum speed distribution into consecutive segments mapped to source regions.",
-      "voice_grounding_source": "summary_short field; alt-text (five color-coded segments); paper Section deriving the speed sequence."
+      "voice_grounding_source": "summary_short field; alt-text (five color-coded segments); paper Section deriving the speed sequence.",
+      "audit_flag": "verify",
+      "audit_flag_reason": "L10/L14: Figure 9's five speeds per Table 2 are v_slow, v_n, v_s, v_i, v_fast (peaks + intersection + saturation). 'Vanishing speed' (v_v, Kasper 2007) appears only in Table 1 and is not one of Figure 9's highlighted speeds. Description's label set mismatches the figure."
     },
     {
       "target_file": "public/data/figure-registry.json",
