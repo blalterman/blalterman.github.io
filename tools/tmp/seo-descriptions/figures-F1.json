@@ -44,8 +44,9 @@
     {
       "target_file": "public/data/figure-registry.json",
       "target_key": "Alterman_2026_ApJL_996_L12/fig_7",
-      "description": "Compressibility |delta n_H/n_H| varies systematically across the A_He–v_sw plane: above saturation, wind with helium above A_s carries distinctly higher compressibility than wind on the 4.19% plateau, exposing hidden structure.",
-      "voice_grounding_source": "summary_short.the_finding; paper Section 3.2 Fig. 7 caption"
+      "description": "Compressibility |delta n_H/n_H| varies systematically across the A_He–v_sw plane: above saturation, wind with helium above A_s carries distinctly higher compressibility than wind on the 4.19% plateau.",
+      "voice_grounding_source": "summary_short.the_finding; paper Section 3.2 Fig. 7 caption",
+      "audit_changes": "L1: removed trailing hedge phrase 'exposing hidden structure' — generic enthusiasm with no semantic load; the finding (higher compressibility above A_s) is fully stated by the preceding clause."
     },
     {
       "target_file": "public/data/figure-registry.json",
