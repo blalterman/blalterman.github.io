@@ -86,8 +86,9 @@
     {
       "target_file": "public/data/figure-registry.json",
       "target_key": "aa54299-25/fig_2",
-      "description": "Slow-wind heavy element abundances from C through Fe drop during the deep solar minimum around 2008-2009 and recover with rising activity; fast-wind abundances remain comparatively stable across the cycle.",
-      "voice_grounding_source": "summary_short + the_finding (slow-wind tracks cycle, fast-wind stable); paper abstract results 3-4 (slow-wind heavy elements evolve, fast-wind do not); calibration spec figure-detail voice"
+      "description": "Slow-wind heavy element abundances from N through Fe drop during the deep solar minimum around 2008-2009 and recover with rising activity; fast-wind abundances remain comparatively stable across the cycle.",
+      "voice_grounding_source": "summary_short + the_finding (slow-wind tracks cycle except C, fast-wind stable); paper abstract result 3 (slow-wind heavy elements with the exception of C evolve significantly); calibration spec figure-detail voice",
+      "audit_changes": "L14 corpus accuracy: paper abstract result 3 and figure-registry the_finding both explicitly except carbon (C) from slow-wind heavy element evolution. Original 'from C through Fe drop' overclaimed C participation. Revised to 'from N through Fe' to match corpus."
     },
     {
       "target_file": "public/data/figure-registry.json",
