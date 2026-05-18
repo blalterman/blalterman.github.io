@@ -22,6 +22,9 @@ def fetch_ads_metrics(orcid: str):
     for attempt in range(MAX_ATTEMPTS):
         try:
             results = ads.SearchQuery(orcid=orcid, fl=["bibcode"], rows=2000)
+            # ADS load-sheds the ads-api-client User-Agent during high load;
+            # override with a generic UA so requests aren't categorized as bot traffic.
+            results.session.headers["User-Agent"] = "python-requests/2.32.3"
             bibcodes = [article.bibcode for article in results]
             break
         except ads.exceptions.APIResponseError as e:

@@ -172,7 +172,11 @@ BACKOFFS_SECONDS = [60, 180]  # waits between attempts 1->2 and 2->3
 results = None
 for attempt in range(MAX_ATTEMPTS):
     try:
-        results = list(ads.SearchQuery(orcid=ORCID, fl=fields, rows=300))
+        sq = ads.SearchQuery(orcid=ORCID, fl=fields, rows=300)
+        # ADS load-sheds the ads-api-client User-Agent during high load;
+        # override with a generic UA so requests aren't categorized as bot traffic.
+        sq.session.headers["User-Agent"] = "python-requests/2.32.3"
+        results = list(sq)
         break
     except ads.exceptions.APIResponseError as e:
         if attempt < MAX_ATTEMPTS - 1:

@@ -75,6 +75,9 @@ results = ads.SearchQuery(
     fl=["bibcode"],
     rows=2000,
 )
+# ADS load-sheds the ads-api-client User-Agent during high load;
+# override with a generic UA so requests aren't categorized as bot traffic.
+results.session.headers["User-Agent"] = "python-requests/2.32.3"
 bibcodes = [paper.bibcode for paper in results]
 print(f"Found {len(bibcodes)} papers.")
 
