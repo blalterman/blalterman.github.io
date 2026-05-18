@@ -3,6 +3,7 @@ import requests
 import os
 import json
 import argparse
+import time
 from pathlib import Path
 from utils import get_public_data_dir, get_relative_path
 
@@ -15,8 +16,23 @@ def fetch_ads_metrics(orcid: str):
     ads.config.token = token
 
     print(f"Fetching publications for ORCID: {orcid}")
-    results = ads.SearchQuery(orcid=orcid, fl=["bibcode"], rows=2000)
-    bibcodes = [article.bibcode for article in results]
+    MAX_ATTEMPTS = 3
+    BACKOFF_SECONDS = [60, 180]
+    bibcodes = None
+    for attempt in range(MAX_ATTEMPTS):
+        try:
+            results = ads.SearchQuery(orcid=orcid, fl=["bibcode"], rows=2000)
+            bibcodes = [article.bibcode for article in results]
+            break
+        except ads.exceptions.APIResponseError as e:
+            if attempt < MAX_ATTEMPTS - 1:
+                wait = BACKOFF_SECONDS[attempt]
+                print(f"⚠️  ADS API error on attempt {attempt + 1}/{MAX_ATTEMPTS}: {e}")
+                print(f"   Retrying in {wait}s...")
+                time.sleep(wait)
+            else:
+                print(f"✗ ADS API failed after {MAX_ATTEMPTS} attempts: {e}")
+                raise
 
     if not bibcodes:
         raise ValueError("No bibcodes found for this ORCID.")
