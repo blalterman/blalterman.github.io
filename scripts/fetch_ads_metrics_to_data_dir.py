@@ -12,6 +12,8 @@ def fetch_ads_metrics(orcid: str):
     if not token:
         raise EnvironmentError("ADS_DEV_KEY environment variable not set.")
 
+    ads.config.token = token
+
     print(f"Fetching publications for ORCID: {orcid}")
     results = ads.SearchQuery(orcid=orcid, fl=["bibcode"], rows=2000)
     bibcodes = [article.bibcode for article in results]
