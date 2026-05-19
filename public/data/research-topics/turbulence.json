@@ -26,5 +26,6 @@
       "year": 2025,
       "type": "CC BY 4.0"
     }
-  }
+  },
+  "meta_description": "Alfvénic wave activity tracks solar wind source region and therefore solar wind speed. Fast wind from continuously open sources like coronal holes is Alfvénic, while slow wind from intermittently open sources has no prefered wave type. While the Alfvénicity or cross helicity alone cannot separate source regions, it can when combined with solar wind helium observations as an additional classifier."
 }

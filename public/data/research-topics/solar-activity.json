@@ -69,5 +69,6 @@
       "year": 2025,
       "type": "CC BY 4.0"
     }
-  }
+  },
+  "meta_description": "Solar wind composition tracks the 11-year cycle. Fast wind from coronal holes holds stable abundances across the cycle, while slow-wind abundances rise at maximum and crash at minimum. Helium shutoff leads the sunspot minimum by about 10 months across four cycles, with heavier elements modulated more strongly by gravitational settling."
 }

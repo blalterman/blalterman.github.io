@@ -45,5 +45,6 @@
       "year": 2025,
       "type": "CC BY 4.0"
     }
-  }
+  },
+  "meta_description": "Alfven waves deposit energy into the solar wind during transit, adding 100+ km/s to fast-wind speeds beyond what thermal expansion predicts. Kinetic energy measured by Parker Solar Probe near the Sun predicts speeds at 1 au, fixing wave-driven acceleration as complete by 0.2 au."
 }
