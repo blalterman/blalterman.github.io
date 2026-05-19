@@ -12,7 +12,8 @@
         "No single instrument or single person can accomplish this task alone. We need highly specialized instruments that can observe a range of phenomena over timescales that can exceed any single instrument's lifetime and one person's career. The questions we ask and the challenges we face demand that we work together to achieve our goals. Questions of this scale don't just require teams—they define how great teams must function.",
         "I build teams that meet this definition: collaborative systems where diverse expertise converges, rigorous methods compound, and individual limitations transform into collective strength. Through these teams, we drive profound discovery. I believe the future of science depends not on brilliant individuals working in isolation, but on brilliant systems that make breakthrough insights inevitable rather than accidental. This research expands not just what we know, but what becomes knowable—creating collaborative foundations that transform today's grand challenges into tomorrow's scientific breakthroughs."
       ],
-      "published": true
+      "published": true,
+      "meta_description": "What does it mean to be on this planet, orbiting our Sun? Answering this question drives my research on the solar wind, the teams I build, and the systems I orchestrate to make breakthroughs inevitable."
     },
     {
       "title": "Team Ethos",
@@ -24,7 +25,8 @@
         "Teams of this caliber require strong principles, values, and practices to succeed. Our values—psychological safety, ownership, care, and a balance of independence with interdependence—govern how we treat one another. My principles—integrity, transparency, empathy, curiosity, rigor, and gratitude—set our standards. Our practices translate both into concrete habits: we cross-check evidence across missions so insights cohere; we write plainly and explain choices; we archive code and methods with each result; each milestone has a directly responsible individual; weekly check-ins keep momentum; monthly \"unlock\" milestones ensure near-term wins open the larger architecture.",
         "Today, we are building a new understanding of how the solar wind's helium abundance varies with the solar cycle, providing deep and nuanced insight into how helium impacts the solar wind's birth. These results also redefine how we understand the solar cycle and forecast its effects by separating two previously coupled problems: timing and amplitude of the solar cycle. This result strengthens solar cycle forecasts, improving our ability to safeguard human life and technology on Earth and in space."
       ],
-      "published": true
+      "published": true,
+      "meta_description": "I build high-trust teams where questions are celebrated and conflict is a tool—putting the problem on the wall, arguing evidence not intention, and turning team culture into a performance system."
     },
     {
       "title": "Mentorship Philosophy",
@@ -36,7 +38,8 @@
         "In practice, I help mentees build intuition for meeting problems in alignment with their values. I model integrity, perseverance, discipline, and accountability, grounded in self-awareness, self-care, and self-respect. I lead with conscious vulnerability—showing how I tackle challenges, not only outcomes. I create space to sit with experience, reflect on their approach, strategize about the future, and deliberately choose the next step. I connect mentees with resources and a network that sustains this work. I invite them to name and act from personal truth so their actions stay true to their commitments and grounded in their principles. Our standard is clear. Leave ready to lead your own work with integrity, care, and vision. When it fits, return as a collaborator.",
         "Lasting change rarely comes from a single grand gesture. It accrues through small, repeated choices that shape our day-to-day work and build a more just, responsive, and thoughtful world where each of us belongs. When we support one another in that growth, we craft the future we promised. That is how I mentor."
       ],
-      "published": true
+      "published": true,
+      "meta_description": "I help mentees build intuition for meeting problems in alignment with their values—modeling integrity, perseverance, and accountability, and leading with conscious vulnerability so growth stays grounded in personal truth."
     },
     {
       "title": "Open Science",
@@ -48,7 +51,8 @@
         "I separate evolving tools from time-stamped research. Libraries grow and improve over time as understanding deepens and methods mature. Published results must remain reproducible indefinitely, frozen at a specific moment so others can verify what I claimed when I claimed it. This separation honors both needs: continuous improvement in computational tools alongside permanent reproducibility in published work. I automate verification through tests and documentation builds that run continuously. Broken examples fail immediately. Quality checking happens with every change, not periodically before publication. This discipline transforms reproducibility from an aspirational goal into a routine practice—effortless rather than heroic. When verification is automatic, I can focus effort on discovery rather than maintenance. The boring parts stay boring, and the science stays reproducible.",
         "Open science is collaborative science. When tools and methods flow freely between researchers, the community advances faster than any individual could alone. Early-career scientists gain practical skills by reading production code, not just idealized examples. Researchers across institutions build directly on shared work without reinventing solutions. This approach distributes expertise more equitably and accelerates the pace of discovery. When methods are open, science advances through shared understanding rather than isolated expertise. Trust becomes communal rather than individual. That is why I share openly: because discovery serves humanity best when knowledge flows freely."
       ],
-      "published": true
+      "published": true,
+      "meta_description": "Open Science is both a practical necessity and an ethical commitment. If you can read my methods, you can rebuild my results—trust earned through verifiable reproducibility, not credentials alone."
     },
     {
       "title": "Generative AI",
@@ -60,7 +64,8 @@
         "I place AI where it adds leverage: after intent and requirements are set; during documentation, refactoring, and clarity passes; and as a second set of eyes on completeness—never as a substitute for interpretation, architecture, or deriving requirements from physical models. I disclose assistance whenever AI materially shapes text or code, and I avoid confidential or export-controlled inputs. Because science must be reproducible, AI-assisted steps must be reproducible. I document what tools I used, how I applied them, and how I validated outputs. Generative work can be broad—scaffolds, refactors, features, data transformations—but lands in targetted, reviewable increments behind tests and code review. This discipline maintains scientific integrity while capturing AI's strengths.",
         "To make AI effective and safe, I engineer the system around it. Clean repository practices—tests, continuous integration, version control, and clear documentation—scaffold changes that are easy to review and reproduce. I work requirements-first and link each requirement to reviewable commits. Clear expectations keep reviews focused on artifacts and criteria, not people, building shared ownership and trust. This approach places responsibility where it belongs: on human judgment, team culture, and the practices we build together. When wielded deliberately and reviewed rigorously, AI serves discovery without compromising the integrity that makes science communal. To see these principles implemented in concrete infrastructure, explore my work on AI-Assisted Development, where I built SolarWindPy as an intentionally opinionated framework with specialized validation agents that demonstrate how deliberate architecture makes AI collaboration safe and effective for research, production, and regulated software development."
       ],
-      "published": true
+      "published": true,
+      "meta_description": "Generative AI is a tool under human direction and accountability. I retain authorship and final review over every claim, figure, and line of code—the tool does not bear responsibility. I do."
     },
     {
       "title": "AI-Assisted Development",
@@ -72,7 +77,9 @@
         "I built SolarWindPy between 2019 and 2021 for my thesis research using traditional development. Recently, I added AI collaboration infrastructure—specialized agents, pre-commit hooks, requirements-first planning workflows—to this existing opinionated framework. The framework's nested composition architecture creates natural guardrails: Vector and Tensor foundations compose into Ion and MagneticField objects, which unify into the Plasma framework. This hierarchy scopes functionality to correct abstraction levels, preventing scope creep and namespace bloat. Ion objects require exactly six validated measurements—invalid plasma representations raise errors before reaching the codebase. Three-level MultiIndex columns establish predictable patterns AI replicates reliably across thirteen thousand lines. The framework encodes correctness; automated hooks enforce it systematically without human intervention.\n\nBetween August and September 2025, my commit cadence on the SolarWindPy codebase sustained a 6.5× increase relative to my pre-AI baseline — measured across my full solar wind code lineage: private pre-release repositories developed during my PhD thesis (2015-2019), plus the public SolarWindPy package (2019-2025), totaling 1,962 commits across 600 active days. The 37-day sprint culminated in SolarWindPy's first public PyPI release on September 2, 2025, after six years of internal use across my publication work. The driver was a methodological shift from ad-hoc to rigorous test-driven development — formalizing the validation gates that scientific software typically applies informally if at all. The same lineage is the technical substrate for 10+ peer-reviewed publications in solar wind physics. Commit cadence is a proxy for sustained engagement under the discipline; the substance is the TDD adoption.",
         "AI collaboration requires transforming AI from a black box into an accountable tool. When we architect frameworks that encode domain expertise as enforceable rules, we create boundaries teams and regulatory bodies can examine, audit, and reference. The framework approach preserves human agency—developers conduct architecture and requirements while AI accelerates mechanical implementation—enabling effective collaboration that serves work requiring verified correctness.\n\nThis matters beyond scientific computing. Medical software development needs clinical validation frameworks supporting HIPAA and FDA compliance through systematic correctness checking. Engineering systems require safety compliance guardrails meeting industry-specific regulations through automated validation. Financial applications demand regulatory rule enforcement with comprehensive audit trails. Trust emerges from demonstrated reliability, not from claims of capability. Each domain requires its own specialized frameworks encoding relevant expertise, but the underlying pattern holds.\n\nThis work demonstrates AI alignment principles in practice—making AI helpful through acceleration, harmless through validation, and honest through transparency. The most powerful AI applications aren't about prompt engineering. They're about architecting systems that make AI collaboration systematically reliable for work that matters."
       ],
-      "published": true
+      "published": true,
+      "meta_description": "I don't architect prompts. I architect frameworks that encode domain expertise as enforceable rules, making AI collaboration safe, reliable, and trustworthy for scientific work that requires verified correctness."
     }
-  ]
+  ],
+  "meta_description": "How I ask big questions, build teams to answer them, and practice science openly."
 }
