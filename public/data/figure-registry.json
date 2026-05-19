@@ -918,7 +918,8 @@
     "used_as_related_in": [],
     "used_as_not_shown_in": [
       "sources-of-the-solar-wind"
-    ]
+    ],
+    "meta_description": "During solar minimum the speed distribution splits into two peaks: a slow-wind peak at 355 km/s and a fast-wind shoulder at 622 km/s. This bimodality motivates the saturation framework built on later figures."
   },
   "Alterman_2025_ApJL_982_L40/fig_2": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -949,7 +950,8 @@
       "sources-of-the-solar-wind"
     ],
     "used_as_related_in": [],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "Helium abundance is set in the chromosphere below the sonic point; cross helicity is set between the sonic and Alfven surfaces. The two diagnostics fingerprint distinct heights of the Sun-heliosphere coupling chain."
   },
   "Alterman_2025_ApJL_982_L40/fig_3": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -977,7 +979,8 @@
     "used_as_related_in": [
       "heavy-ion-composition"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "Helium abundance saturates at 4.19% above 433 km/s. A bilinear fit to A_He versus solar wind speed defines the saturation point (v_s, A_s) that anchors the saturation framework."
   },
   "Alterman_2025_ApJL_982_L40/fig_4": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1005,7 +1008,8 @@
     "used_as_not_shown_in": [
       "sources-of-the-solar-wind",
       "turbulence"
-    ]
+    ],
+    "meta_description": "Fast wind sits almost exclusively at high cross helicity (|sigma_c| approaching 1) while slow wind spans the full 0-to-1 range. Wave activity has no preferred level in slow wind but is uniformly high above v_s."
   },
   "Alterman_2025_ApJL_982_L40/fig_5": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1033,7 +1037,8 @@
     "used_as_related_in": [
       "helium-abundance"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "The saturation speed shifts systematically with wave activity. Across 15 cross-helicity quantiles, higher |sigma_c| pulls v_s to lower speeds — the first evidence that wave-driven acceleration tilts the helium transition."
   },
   "Alterman_2025_ApJL_982_L40/fig_6": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1061,7 +1066,8 @@
     "used_as_related_in": [
       "helium-abundance"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "Rescaling each cross-helicity bin to its own (v_s, A_s) collapses all 15 curves onto a single trajectory below saturation. Helium depletion in slow wind follows one universal process independent of wave activity."
   },
   "Alterman_2025_ApJL_982_L40/fig_7": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1088,7 +1094,8 @@
     "used_as_related_in": [
       "helium-abundance"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "As cross helicity climbs, the saturation speed drops 23 km/s (433 to 410) while the saturation abundance rises 0.26 percentage points (3.87% to 4.13%). The anticorrelation locates the Alfvenic slow wind in the A_He-|sigma_c| plane."
   },
   "Alterman_2025_ApJL_982_L40/fig_8": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1115,7 +1122,8 @@
     "used_as_related_in": [
       "helium-abundance"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "Helium density peaks at 409 km/s — at the boundary between magnetically closed and open source regions — while hydrogen density falls monotonically with speed. The helium peak locates the source-region transition."
   },
   "Alterman_2025_ApJL_982_L40/fig_9": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1142,7 +1150,8 @@
     "used_as_related_in": [
       "helium-abundance"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "Five Table 2 speeds partition the solar-minimum wind distribution into source-region segments: the slow and fast peaks, the helium-density peak v_n ≈ 409 km/s, the helium-saturation speed v_s ≈ 430 km/s, and their Gaussian intersection v_i = 484 km/s."
   },
   "Alterman_2025_ApJL_982_L40/fig_10a": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1171,7 +1180,8 @@
     "used_as_related_in": [
       "sources-of-the-solar-wind"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "Mean speed contoured over the A_He-|sigma_c| plane separates two populations: low-helium / low-|sigma_c| closed-source wind and high-helium / high-|sigma_c| open-source wind. The diagnostic plane sorts sources without composition data."
   },
   "Alterman_2025_ApJL_982_L40/fig_10b": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1198,7 +1208,8 @@
     "used_as_related_in": [],
     "used_as_not_shown_in": [
       "sources-of-the-solar-wind"
-    ]
+    ],
+    "meta_description": "The 10th-percentile speed stays below 390 km/s everywhere in the A_He-|sigma_c| plane, including its open-source corner. Some open-field plasma reaches Earth at canonically slow speeds — the Alfvenic slow wind population."
   },
   "Alterman_2025_ApJL_982_L40/fig_10c": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1225,7 +1236,8 @@
     "used_as_related_in": [],
     "used_as_not_shown_in": [
       "sources-of-the-solar-wind"
-    ]
+    ],
+    "meta_description": "The 90th-percentile speed exceeds 420 km/s across the closed-field portion of the plane, ranging up to 510 km/s. Closed-source plasma can reach speeds traditionally classified as fast wind."
   },
   "Alterman_2025_ApJL_982_L40/fig_11": {
     "paper_id": "Alterman_2025_ApJL_982_L40",
@@ -1256,7 +1268,8 @@
     ],
     "used_as_not_shown_in": [
       "space-weather"
-    ]
+    ],
+    "meta_description": "Four regions partition the A_He-|sigma_c| plane by source magnetic topology — closed, open, transitional, and Alfvenic slow. The classification maps in-situ observations to source regions without composition or charge-state data."
   },
   "Alterman_2025_ApJL_984_L64/fig_1": {
     "paper_id": "Alterman_2025_ApJL_984_L64",
@@ -2252,7 +2265,8 @@
     "used_as_related_in": [],
     "used_as_not_shown_in": [
       "heavy-ion-composition"
-    ]
+    ],
+    "meta_description": "Helium abundance rises with speed up to 402 km/s, then saturates at roughly half its photospheric value. ACE/SWICS reproduces the Wind-derived saturation framework, validating the bilinear fit across instruments."
   },
   "aa51550-24/fig_2": {
     "paper_id": "aa51550-24",
@@ -2281,7 +2295,8 @@
     "used_as_related_in": [
       "heavy-ion-composition"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "All heavy elements (C, N, O, Ne, Mg, Si, S, Fe) saturate near 327 km/s — 75 km/s slower than helium at 402 km/s. The fast-slow transition speed for heavy ions sits well below the helium transition."
   },
   "aa51550-24/fig_3": {
     "paper_id": "aa51550-24",
@@ -2309,7 +2324,8 @@
       "heavy-ion-composition"
     ],
     "used_as_related_in": [],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "Below the transition speed, all heavy elements collapse onto a single gradient once scaled to their own saturation points. Slow wind shows no element-specific fractionation — a universal compositional process operates below v_s."
   },
   "aa51550-24/fig_4": {
     "paper_id": "aa51550-24",
@@ -2336,7 +2352,8 @@
     "used_as_related_in": [
       "heavy-ion-composition"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "Heavy-ion transition speeds are independent of first ionization potential. The fast-slow transition is set by a process that does not discriminate between low-FIP and high-FIP elements."
   },
   "aa51550-24/fig_5": {
     "paper_id": "aa51550-24",
@@ -2362,7 +2379,8 @@
     "used_as_related_in": [
       "heavy-ion-composition"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "Heavy-ion abundances at the transition speed reproduce the canonical FIP effect: low-FIP elements enhanced roughly twofold over high-FIP elements. The saturation-point abundances match prior fast-wind measurements."
   },
   "aa51550-24/fig_6": {
     "paper_id": "aa51550-24",
@@ -2389,7 +2407,8 @@
     "used_as_related_in": [
       "heavy-ion-composition"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "In fast wind, lighter heavy elements are enhanced more above their saturation values than heavier ones, forming a clear mass-dependent trend. A second fractionation process operates only above v_s."
   },
   "aa51550-24/fig_7": {
     "paper_id": "aa51550-24",
@@ -2416,7 +2435,8 @@
     "used_as_related_in": [
       "heavy-ion-composition"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "The heavy-ion transition at 327 km/s sits just below the most common solar wind speed; helium's transition at 402 km/s sits just above it. Both characteristic speeds bracket the peak of the wind speed distribution."
   },
   "aa51550-24/fig_8": {
     "paper_id": "aa51550-24",
@@ -2442,7 +2462,8 @@
     "used_as_related_in": [
       "heavy-ion-composition"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "Fast-wind heavy-ion fractionation organizes by charge state with R-squared 0.95, versus below 0.55 for mass, FIP, and mass-to-charge ratio. Charge state — not mass — drives the yet-to-be-determined fractionation mechanism above v_s."
   },
   "aa54299-25/fig_1": {
     "paper_id": "aa54299-25",
