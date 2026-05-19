@@ -10,7 +10,8 @@
       "publicationType": "phdthesis",
       "showCitations": false,
       "showFilters": false,
-      "showJournal": false
+      "showJournal": false,
+      "meta_description": "Doctoral dissertation: the significance of proton beams in the multiscale solar wind."
     },
     {
       "title": "Refereed Publications",
@@ -19,7 +20,8 @@
       "description": "Peer-reviewed journal articles",
       "publicationType": "article",
       "showCitations": true,
-      "showFilters": true
+      "showFilters": true,
+      "meta_description": "Peer-reviewed journal articles on solar wind composition, helium abundance, heavy ions, and cross helicity."
     },
     {
       "title": "Datasets",
@@ -28,16 +30,21 @@
       "description": "Published research datasets",
       "publicationType": "dataset",
       "showCitations": false,
-      "showFilters": false
+      "showFilters": false,
+      "meta_description": "Published research datasets with persistent DOIs supporting reproducibility of the underlying analyses."
     },
     {
       "title": "Conferences",
       "slug": "conferences",
       "icon": "Presentation",
       "description": "Conference talks, poster presentations, and published proceedings",
-      "publicationType": ["inproceedings", "abstract"],
+      "publicationType": [
+        "inproceedings",
+        "abstract"
+      ],
       "showCitations": false,
-      "showFilters": true
+      "showFilters": true,
+      "meta_description": "Conference talks, poster presentations, and published proceedings from AGU, SHINE, and related meetings."
     },
     {
       "title": "Invited Talks",
@@ -48,7 +55,8 @@
       "showCitations": false,
       "showFilters": false,
       "journalLabel": "Venue",
-      "showLinks": false
+      "showLinks": false,
+      "meta_description": "Invited colloquia, seminars, and public lectures delivered at universities, research institutes, and outreach venues."
     },
     {
       "title": "White Papers",
@@ -57,7 +65,8 @@
       "description": "Technical reports and white papers",
       "publicationType": "techreport",
       "showCitations": false,
-      "showFilters": true
+      "showFilters": true,
+      "meta_description": "Technical reports and community white papers contributed to heliophysics mission and decadal-survey planning."
     },
     {
       "title": "Pre-Prints",
@@ -66,7 +75,8 @@
       "description": "Manuscripts submitted or accepted for publication",
       "publicationType": "eprint",
       "showCitations": false,
-      "showFilters": true
+      "showFilters": true,
+      "meta_description": "Manuscripts submitted or accepted for publication, posted to arXiv ahead of the journal version of record."
     }
   ]
 }
