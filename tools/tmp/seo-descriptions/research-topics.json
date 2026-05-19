@@ -44,8 +44,8 @@
     {
       "target_file": "public/data/research-topics/turbulence.json",
       "target_key": "$",
-      "description": "Alfvenic wave activity tracks solar wind speed: fast wind from continuously open sources is wave-rich, while slow wind spans the full range of cross helicity. The wave-activity field alone cannot separate source types, motivating compressibility and helium as the additional classification axes.",
-      "voice_grounding_source": "primary_figure ref Alterman_2026_ApJL_996_L12/fig_2 relevance text from sources-of-the-solar-wind related_figures; topic body is placeholder, claim grounded in cited paper"
+      "description": "Alfvénic wave activity tracks solar wind source region and therefore solar wind speed. Fast wind from continuously open sources like coronal holes is Alfvénic, while slow wind from intermittently open sources has no prefered wave type. While the Alfvénicity or cross helicity alone cannot separate source regions, it can when combined with solar wind helium observations as an additional classifier.",
+      "voice_grounding_source": "user-revised text per OI-1 review 2026-05-19; topic body is placeholder; claim framing grounded in Alterman_2026_ApJL_996_L12/fig_2 + sources-of-the-solar-wind related_figures"
     },
     {
       "target_file": "public/data/research-topics/space-weather.json",
@@ -62,20 +62,14 @@
     {
       "target_file": "public/data/research-topics/proton-beams.json",
       "target_key": "$",
-      "description": "A three-population fit to Wind Faraday cup spectra resolves the proton beam, proton core, and alpha particle simultaneously, unlocking 20+ years of beam observations. Beam drift clusters at the local Alfven speed, while alpha drift damps under Coulomb friction — a contrast that separates wave-particle from collisional control of differential flow.",
-      "voice_grounding_source": "primary_figure ref Alterman_2018_ApJ_864_112/fig_2; related_figures fig_1 relevance; topic body is placeholder, claims grounded in cited paper Alterman 2018 (ApJ 864 112)"
+      "description": "A three-population fit to Wind Faraday cup spectra resolves the proton beam, proton core, and alpha particle simultaneously, unlocking 20+ years of beam observations. Beam differential flow remains unaffected by Coulomb friction in more collisional solar wind than alpha particles, suggesting there is a difference in how wave-particle and collisional processes impact both species.",
+      "voice_grounding_source": "1st sentence agent-authored; 2nd sentence user-revised per OI-1 review 2026-05-19; claims grounded in cited paper Alterman 2018 (ApJ 864 112) primary_figure fig_2"
     },
     {
       "target_file": "public/data/research-topics/suprathermal-ions.json",
       "target_key": "$",
       "description": "Quiet-time suprathermal ions near 1 au follow a universal power-law spectrum with index gamma = 2.5, invariant across nine elements and two full solar cycles. CIRs seed the population at solar minimum, CME-driven shocks at solar maximum, yet the spectral slope holds — a constraint on whatever process accelerates the heliosphere's seed pool.",
       "voice_grounding_source": "topic.description; Alterman et al. 2024 (ApJL 964 L31) fig 1 + fig 4; Alterman et al. 2023 (ApJ 952 42) fig 4"
-    },
-    {
-      "target_file": "public/data/research-topics/kinetic-processes.json",
-      "target_key": "$",
-      "description": "Wave-particle interactions and Coulomb collisions together set kinetic limits on solar wind ions. Alpha particles and proton beams drift at the local Alfven speed where waves dominate; collisions damp these drifts during transit, leaving collisional age as the lever that separates intrinsic from interplanetary structure.",
-      "voice_grounding_source": "topic.paper Alterman 2018 (ApJ 864 112); topic body is placeholder, claims grounded in cited paper; related_topics: coulomb-collisions, proton-beams"
     }
   ]
 }
