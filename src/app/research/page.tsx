@@ -4,13 +4,15 @@ import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import { filterPublishedProjects } from '@/lib/research-utils';
 import { ResearchTopicData } from '@/types/research-topic';
+import { buildPageMetadata } from '@/lib/metadata';
 import fs from 'fs';
 import path from 'path';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: '/research',
   title: 'Research | B. L. Alterman',
-  description: 'Research pages organized by fundamental research questions in heliophysics.',
-};
+  description: 'Exploring the Sun-Earth connection through fundamental questions about solar wind origins, evolution, and variability.',
+});
 
 // Load all topic data from JSON files
 function loadAllTopics(): ResearchTopicData[] {

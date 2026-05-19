@@ -5,6 +5,7 @@ import { filterPublishedProjects } from "@/lib/research-utils";
 import { Metadata, ResolvingMetadata } from "next";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import { buildPageMetadata } from "@/lib/metadata";
 
 type Props = {
     params: Promise<{ slug: string }>;
@@ -17,6 +18,7 @@ interface BenSection {
     excerpt: string;
     paragraphs: string[];
     published?: boolean;
+    meta_description?: string;
 }
 
 interface BenPageData {
@@ -51,10 +53,11 @@ export async function generateMetadata(
     const benData = loadJSONData<BenPageData>('ben-page.json');
     const section = benData.sections.find((s) => s.slug === slug);
 
-    return {
+    return buildPageMetadata({
+        path: `/ben/${slug}`,
         title: `${section?.title || 'About Ben'} | B. L. Alterman`,
-        description: section?.excerpt || "Learn about Ben's research vision and team-building philosophy.",
-    };
+        description: section?.meta_description ?? section?.excerpt ?? "Learn about Ben's research vision and team-building philosophy.",
+    });
 }
 
 export default async function BenSubpage({ params }: { params: Promise<{ slug: string }> }) {

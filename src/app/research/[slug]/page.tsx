@@ -7,6 +7,7 @@ import {
   RelatedFigure
 } from '@/types/research-topic';
 import { filterPublishedProjects } from '@/lib/research-utils';
+import { buildPageMetadata } from '@/lib/metadata';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import fs from 'fs';
@@ -98,6 +99,7 @@ function resolveTopicData(
     title: raw.title,
     subtitle: raw.subtitle,
     description: raw.description,
+    meta_description: raw.meta_description,
     primary_figure: primaryFigure,
     related_figures: shuffledRelated,
     related_topics: raw.related_topics,
@@ -127,10 +129,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const topics = loadAllTopics();
   const topic = topics.find(t => t.slug === slug);
 
-  return {
+  return buildPageMetadata({
+    path: `/research/${slug}`,
     title: `${topic?.title || 'Research'} | B. L. Alterman`,
-    description: topic?.description,
-  };
+    description: topic?.meta_description ?? topic?.description ?? 'Research topic page',
+  });
 }
 
 export default async function ResearchTopicPage({ params }: Props) {

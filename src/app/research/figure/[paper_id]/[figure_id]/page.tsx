@@ -3,6 +3,7 @@ import { FigureRegistry, FigureRegistryEntry } from '@/types/research-topic';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
+import { buildPageMetadata } from '@/lib/metadata';
 import fs from 'fs';
 import path from 'path';
 
@@ -31,10 +32,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const registry = loadFigureRegistry();
   const entry = registry[`${paper_id}/${figure_id}`];
 
-  return {
+  return buildPageMetadata({
+    path: `/research/figure/${paper_id}/${figure_id}`,
     title: `${entry?.short_title || 'Figure'} | B. L. Alterman`,
-    description: entry?.summary_short || undefined,
-  };
+    description: entry?.meta_description ?? entry?.summary_short ?? 'Figure detail',
+  });
 }
 
 function SummarySection({ title, content }: { title: string; content: string }) {

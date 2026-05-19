@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { GraduationCap, BookOpen, Database, FileText, Presentation, ScrollText, FileCode } from "lucide-react";
 import { Metadata, ResolvingMetadata } from 'next';
 import { loadJSONData, loadAllPublications } from "@/lib/data-loader";
+import { buildPageMetadata } from "@/lib/metadata";
 import { getPublicationsByType, getInvitedPublications, getSeminarPresentations } from "@/lib/publication-utils";
 import type { Publication } from "@/types/publication";
 import { redirect } from "next/navigation";
@@ -18,6 +19,7 @@ interface PublicationCategory {
   slug: string;
   icon: string;
   description: string;
+  meta_description?: string;
   publicationType: string | string[];
   showCitations: boolean;
 }
@@ -61,10 +63,11 @@ export async function generateMetadata(
   const categoriesData = loadJSONData<PublicationsCategoriesData>('publications-categories.json');
   const categoryData = categoriesData.categories.find((c) => c.slug === category);
 
-  return {
+  return buildPageMetadata({
+    path: `/publications/${category}`,
     title: `${categoryData?.title || 'Publications'} | B. L. Alterman`,
-    description: categoryData?.description || "Publications by B. L. Alterman",
-  };
+    description: categoryData?.meta_description ?? categoryData?.description ?? "Publications by B. L. Alterman",
+  });
 }
 
 export default async function PublicationCategoryPage({ params }: { params: Promise<{ category: string }> }) {

@@ -5,11 +5,13 @@ import { Metadata } from 'next';
 import { loadJSONData } from "@/lib/data-loader";
 import Link from "next/link";
 import { PublicationStatistics } from "@/components/publication-statistics";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/publications",
   title: "Publications | B. L. Alterman",
-  description: "A comprehensive list of peer-reviewed articles, datasets, conference proceedings, and other publications by B. L. Alterman, with links to NASA/ADS.",
-};
+  description: "Refereed journal articles, conference proceedings, invited talks, and public engagement.",
+});
 
 interface PublicationsPageData {
   heading: string;

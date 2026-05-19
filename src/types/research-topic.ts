@@ -53,6 +53,7 @@ export interface RawResearchTopicData {
   title: string;
   subtitle: string;
   description: string;
+  meta_description?: string;
   primary_figure?: PrimaryFigureRef;
   related_figures: RelatedFigureRef[];
   related_topics?: RelatedTopic[];
@@ -72,6 +73,7 @@ export interface FigureRegistryEntry {
   alt: string;
   summary: FigureSummary | null;
   summary_short: string | null;
+  meta_description?: string;
   keywords: string[];
   used_as_primary_in?: string[];
   used_as_related_in?: string[];
@@ -106,6 +108,7 @@ export interface ResearchTopicData {
   title: string;
   subtitle: string;
   description: string;
+  meta_description?: string;
   primary_figure?: PrimaryFigure;
   related_figures: RelatedFigure[];
   related_topics?: RelatedTopic[];

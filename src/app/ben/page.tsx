@@ -5,11 +5,7 @@ import { loadJSONData } from "@/lib/data-loader";
 import { filterPublishedProjects } from "@/lib/research-utils";
 import { Metadata } from "next";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-    title: "B. L. Alterman",
-    description: "Learn about Ben's research vision and team-building philosophy.",
-};
+import { buildPageMetadata } from "@/lib/metadata";
 
 interface BenSection {
     title: string;
@@ -18,11 +14,13 @@ interface BenSection {
     excerpt: string;
     paragraphs: string[];
     published?: boolean;
+    meta_description?: string;
 }
 
 interface BenPageData {
     heading: string;
     tagline: string;
+    meta_description?: string;
     sections: BenSection[];
 }
 
@@ -34,6 +32,15 @@ const iconMap = {
     Wrench: Wrench,
     ShieldCheck: ShieldCheck,
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+    const benData = loadJSONData<BenPageData>('ben-page.json');
+    return buildPageMetadata({
+        path: '/ben',
+        title: 'B. L. Alterman',
+        description: benData.meta_description ?? "Learn about Ben's research vision and team-building philosophy.",
+    });
+}
 
 export default function BenPage() {
     const benData = loadJSONData<BenPageData>('ben-page.json');

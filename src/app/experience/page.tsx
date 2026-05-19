@@ -2,11 +2,13 @@
 import { Experience } from "@/components/experience";
 import { loadJSONData } from "@/lib/data-loader";
 import { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+    path: "/experience",
     title: "Experience & Education | B. L. Alterman",
-    description: "An overview of B. L. Alterman's professional positions and academic background, including roles at NASA, SwRI, and degrees from the University of Michigan and Macalester College.",
-};
+    description: "B. L. Alterman's roles, education, and technical skills.",
+});
 
 interface Education {
     Institution: string;
