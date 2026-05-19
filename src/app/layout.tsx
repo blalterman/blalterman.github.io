@@ -72,11 +72,6 @@ export default function RootLayout({
       "https://sciprofiles.com/profile/blalterman"
     ],
     "jobTitle": "Research Astrophysicist",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "NASA Goddard Space Flight Center",
-      "url": "https://www.nasa.gov/goddard"
-    },
     "alumniOf": [
       {
         "@type": "EducationalOrganization",
