@@ -1257,7 +1257,8 @@
       "solar-wind-acceleration"
     ],
     "used_as_related_in": [],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "Near-Earth speed distribution shows a fast wind peak at 622±58 km/s. The isopoly model with Alfvén wave forcing predicts v_IPW = 620-671 km/s; removing wave forcing drops the prediction to 434-554 km/s, in the intermediate gap between peaks."
   },
   "Alterman_2025_ApJL_984_L64/fig_2": {
     "paper_id": "Alterman_2025_ApJL_984_L64",
@@ -1286,7 +1287,8 @@
     "used_as_related_in": [
       "solar-wind-acceleration"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "Kinetic energy flux scaled from Parker Solar Probe near-Sun measurements intersects the observed near-Earth trend at v_K = 557-700 km/s, matching the 622 km/s fast wind peak without invoking any additional energy source."
   },
   "Alterman_2025_ApJL_984_L64/fig_3": {
     "paper_id": "Alterman_2025_ApJL_984_L64",
@@ -1313,7 +1315,8 @@
     "used_as_related_in": [],
     "used_as_not_shown_in": [
       "solar-wind-acceleration"
-    ]
+    ],
+    "meta_description": "Kinetic energy flux at 620-630 km/s follows a log-normal distribution with a rightward tail. The multiplicative shape is the expected signature of repeated Alfvén wave energy deposition during transit from the Sun to Earth."
   },
   "Alterman_2025_ApJL_984_L64/fig_4": {
     "paper_id": "Alterman_2025_ApJL_984_L64",
@@ -1342,7 +1345,8 @@
     "used_as_related_in": [],
     "used_as_not_shown_in": [
       "solar-wind-acceleration"
-    ]
+    ],
+    "meta_description": "Gaussian fits decompose the bimodal speed distribution into slow (355±44 km/s) and fast (622±58 km/s) populations. Their intersection at v_i = 484±34 km/s marks where intermittently and continuously open source regions contribute equally."
   },
   "Alterman_2026_ApJL_996_L12/fig_1": {
     "paper_id": "Alterman_2026_ApJL_996_L12",
