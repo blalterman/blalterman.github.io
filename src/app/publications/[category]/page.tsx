@@ -9,6 +9,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { PublicationFilters } from "@/components/publication-filters";
 import { PublicationStatistics } from "@/components/publication-statistics";
+import { buildScholarlyArticleJsonLd } from "@/lib/scholarly-metadata";
 
 type Props = {
   params: Promise<{ category: string }>;
@@ -108,7 +109,15 @@ export default async function PublicationCategoryPage({ params }: { params: Prom
   const IconComponent = iconMap[categoryData.icon as keyof typeof iconMap];
 
   return (
-    <div className="container mx-auto py-16 md:py-24">
+    <>
+      {publications.map((pub) => (
+        <script
+          key={pub.bibcode}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: buildScholarlyArticleJsonLd(pub) }}
+        />
+      ))}
+      <div className="container mx-auto py-16 md:py-24">
       {/* Breadcrumb navigation */}
       <nav className="mb-8 text-sm text-muted-foreground">
         <Link href="/" className="hover:text-foreground transition-colors">
@@ -149,5 +158,6 @@ export default async function PublicationCategoryPage({ params }: { params: Prom
         </Button>
       </div>
     </div>
+    </>
   );
 }
