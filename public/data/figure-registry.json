@@ -27,7 +27,8 @@
     "used_as_related_in": [
       "proton-beams"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "A three-population fit to Wind Faraday cup spectra separates proton cores, proton beams, and alpha particles, unlocking 20+ years of archival data for simultaneous differential-flow comparisons."
   },
   "Alterman_2018_ApJ_864_112/fig_2": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -56,7 +57,8 @@
       "proton-beams"
     ],
     "used_as_related_in": [],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "The proton beam shows up as a field-aligned shoulder extending from the proton core in velocity space, cleanly separated from the alpha distribution and confirming the three-population fit is not an artifact."
   },
   "Alterman_2018_ApJ_864_112/fig_3": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -85,7 +87,8 @@
     "used_as_related_in": [
       "coulomb-collisions"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "In fast, nearly collisionless solar wind, proton beams drift at 108% of the Alfven speed while alpha particles drift at 67%, with the alpha distribution noticeably broader."
   },
   "Alterman_2018_ApJ_864_112/fig_4": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -113,7 +116,8 @@
     "used_as_related_in": [],
     "used_as_not_shown_in": [
       "kinetic-processes"
-    ]
+    ],
+    "meta_description": "Minute-scale fluctuations in alpha and proton-beam drift speeds are uncorrelated -- the 2D distribution is a circle, ruling out a common large-scale wave driving both species in tandem."
   },
   "Alterman_2018_ApJ_864_112/fig_5": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -142,7 +146,8 @@
     "used_as_related_in": [
       "coulomb-collisions"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "Alpha drift decays from 80% to 40% of the Alfven speed as collisional age increases, while proton beam drift stays flat near the Alfven speed -- only the alphas feel Coulomb friction."
   },
   "Alterman_2018_ApJ_864_112/fig_6": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -170,7 +175,8 @@
     "used_as_related_in": [
       "coulomb-collisions"
     ],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "In the youngest measured plasma, alpha particles drift at 71% of the proton beam speed, up from 62% over the broader collisionless range, and the ratio distribution narrows by 27%."
   },
   "Alterman_2018_ApJ_864_112/fig_7": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -200,7 +206,8 @@
     "used_as_related_in": [],
     "used_as_not_shown_in": [
       "kinetic-processes"
-    ]
+    ],
+    "meta_description": "Normalizing by an Alfven speed that includes proton core temperature anisotropy tightens the drift distributions to widths of 0.132 for alphas and 0.150 for beams, with flat residuals."
   },
   "Alterman_2018_ApJ_864_112/fig_8": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -229,7 +236,8 @@
     "used_as_related_in": [],
     "used_as_not_shown_in": [
       "kinetic-processes"
-    ]
+    ],
+    "meta_description": "The anisotropic Alfven speed produces the narrowest drift distributions for both alphas and beams; adding the dynamic pressure correction broadens them, indicating that term carries more noise than signal."
   },
   "Alterman_2018_ApJ_864_112/fig_9": {
     "paper_id": "Alterman_2018_ApJ_864_112",
@@ -259,7 +267,8 @@
       "coulomb-collisions"
     ],
     "used_as_related_in": [],
-    "used_as_not_shown_in": []
+    "used_as_not_shown_in": [],
+    "meta_description": "Extrapolated to zero Coulomb collisions, alpha particles drift at 67% of the Alfven speed and proton beams drift at 105% -- evidence the two populations launch from the corona with fundamentally different drift speeds."
   },
   "Alterman_2019_ApJL_879_L6/fig_1": {
     "paper_id": "Alterman_2019_ApJL_879_L6",
