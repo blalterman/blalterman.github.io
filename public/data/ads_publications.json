@@ -37,7 +37,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 17,
+    "citations": 18,
     "url": "https://dx.doi.org/10.3847/1538-4357/ada699",
     "invited": false
   },
@@ -318,7 +318,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 95,
+    "citations": 96,
     "url": "https://dx.doi.org/10.3847/1538-4365/ab74e0",
     "invited": false
   },
@@ -391,7 +391,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 96,
+    "citations": 97,
     "url": "https://dx.doi.org/10.3847/1538-4357/aad23f",
     "invited": false
   },
@@ -432,7 +432,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 56,
+    "citations": 57,
     "url": "https://dx.doi.org/10.3847/1538-4357/ac36d5",
     "invited": false
   },
@@ -632,7 +632,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 26,
+    "citations": 25,
     "url": "https://dx.doi.org/10.1051/0004-6361/202345951",
     "invited": false
   },
@@ -660,7 +660,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 46,
+    "citations": 47,
     "url": "https://dx.doi.org/10.3847/2041-8213/ab4adc",
     "invited": false
   },
@@ -1070,6 +1070,43 @@
     "invited": false
   },
   {
+    "bibcode": "2023BAAS...55c.341R",
+    "title": "Deciphering the Birth Region, Formation, and Evolution of Ambient and Transient Solar Wind Using Heavy Ion Observations",
+    "authors": [
+      "Rivera, Y. J.",
+      "Higginson, A.",
+      "Viall, N. M.",
+      "Wallace, S.",
+      "Lepri, S. T.",
+      "Landi, E.",
+      "Spitzer, S. A.",
+      "Raines, J. M.",
+      "Alterman, B. L.",
+      "Cranmer, S. R.",
+      "Gilly, C. R.",
+      "Laming, J. M.",
+      "Mason, E. I.",
+      "Raymond, J. C.",
+      "Lynch, B. J.",
+      "Chen, T. Y.",
+      "Dewey, R. M."
+    ],
+    "month": "",
+    "year": "2023-07-00",
+    "journal": "Bulletin of AAS",
+    "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS"
+    ],
+    "citations": 1,
+    "url": "https://dx.doi.org/10.3847/25c2cfeb.6bd5e78b",
+    "invited": false
+  },
+  {
     "bibcode": "2023BAAS...55c.038B",
     "title": "Pushing the Frontier of Solar &amp; Space Physics: Exploration of the Heliosphere and the Very Local Interstellar Medium by an Interstellar Probe",
     "authors": [
@@ -1209,72 +1246,6 @@
     "invited": false
   },
   {
-    "bibcode": "2023BAAS...55c.341R",
-    "title": "Deciphering the Birth Region, Formation, and Evolution of Ambient and Transient Solar Wind Using Heavy Ion Observations",
-    "authors": [
-      "Rivera, Y. J.",
-      "Higginson, A.",
-      "Viall, N. M.",
-      "Wallace, S.",
-      "Lepri, S. T.",
-      "Landi, E.",
-      "Spitzer, S. A.",
-      "Raines, J. M.",
-      "Alterman, B. L.",
-      "Cranmer, S. R.",
-      "Gilly, C. R.",
-      "Laming, J. M.",
-      "Mason, E. I.",
-      "Raymond, J. C.",
-      "Lynch, B. J.",
-      "Chen, T. Y.",
-      "Dewey, R. M."
-    ],
-    "month": "",
-    "year": "2023-07-00",
-    "journal": "Bulletin of AAS",
-    "publication_type": "abstract",
-    "properties": [
-      "ESOURCE",
-      "NONARTICLE",
-      "NOT REFEREED",
-      "OPENACCESS",
-      "PUB_OPENACCESS"
-    ],
-    "citations": 1,
-    "url": "https://dx.doi.org/10.3847/25c2cfeb.6bd5e78b",
-    "invited": false
-  },
-  {
-    "bibcode": "2021Atmos..12.1277N",
-    "title": "Spectra of Temperature Fluctuations in the Solar Wind",
-    "authors": [
-      "Němeček, Zdeněk",
-      "Šafránková, Jana",
-      "Němec, František",
-      "Ďurovcová, Tereza",
-      "Pitňa, Alexander",
-      "Alterman, B. L.",
-      "Voitenko, Yuriy M.",
-      "Pavlů, Jiří",
-      "Stevens, Michael L."
-    ],
-    "month": "",
-    "year": "2021-09-00",
-    "journal": "Atmosphere",
-    "publication_type": "article",
-    "properties": [
-      "ARTICLE",
-      "ESOURCE",
-      "OPENACCESS",
-      "PUB_OPENACCESS",
-      "REFEREED"
-    ],
-    "citations": 5,
-    "url": "https://dx.doi.org/10.3390/atmos12101277",
-    "invited": false
-  },
-  {
     "bibcode": "2026JGRA..13135166A",
     "title": "State of the Early Career Profession in Space Physics and Aeronomy: Climatological Survey Results",
     "authors": [
@@ -1308,58 +1279,32 @@
     "invited": false
   },
   {
-    "bibcode": "2024AGUFMSH33E2787A",
-    "title": "Suprathermal Ion Observations from Solar Orbiter: Status of Intercalibration between the Heavy Ion Sensor and Suprathermal Ion Spectrograph",
+    "bibcode": "2021Atmos..12.1277N",
+    "title": "Spectra of Temperature Fluctuations in the Solar Wind",
     "authors": [
+      "Němeček, Zdeněk",
+      "Šafránková, Jana",
+      "Němec, František",
+      "Ďurovcová, Tereza",
+      "Pitňa, Alexander",
       "Alterman, B. L.",
-      "Allen, Robert Colby",
-      "Dewey, Ryan M.",
-      "Livi, Stefano A.",
-      "Lepri, Susan T.",
-      "Raines, Jim M.",
-      "Ho, George C.",
-      "Mason, Glenn M.",
-      "Wimmer-Schweingruber, Robert F.",
-      "Rodriguez-Pacheco, Javier",
-      "Spitzer, Sarah A.",
-      "Rivera, Yeimy",
-      "Kucharek, Harald",
-      "Owen, Christopher John",
-      "Allegrini, Frederic",
-      "Ogasawara, Keiichi",
-      "Galvin, Antoinette Broe",
-      "Verscharen, Daniel",
-      "Kistler, Lynn M.",
-      "Wurz, Peter",
-      "Elliott, Heather Alison",
-      "Nicolaou, Georgios",
-      "Stubbs, Timothy",
-      "Delano, Kevin",
-      "Louarn, Philippe",
-      "Fedorov, Andrei",
-      "Bruno, Roberto",
-      "D'Amicis, Raffaella",
-      "Bert, Christopher Mark",
-      "Carpenter, Daniel",
-      "Shimoun, Evan",
-      "Gershkovich, Irena",
-      "Zhao, Liang",
-      "Eddy, Tyler",
-      "Lugaz, Noé",
-      "Lario, David",
-      "Nieves-Chinchilla, Teresa"
+      "Voitenko, Yuriy M.",
+      "Pavlů, Jiří",
+      "Stevens, Michael L."
     ],
     "month": "",
-    "year": "2024-12-00",
-    "journal": "AGU Fall Meeting",
-    "publication_type": "abstract",
+    "year": "2021-09-00",
+    "journal": "Atmosphere",
+    "publication_type": "article",
     "properties": [
+      "ARTICLE",
       "ESOURCE",
-      "NONARTICLE",
-      "NOT REFEREED"
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
     ],
-    "citations": 0,
-    "url": "https://scixplorer.org/abs/2024AGUFMSH33E2787A/abstract",
+    "citations": 5,
+    "url": "https://dx.doi.org/10.3390/atmos12101277",
     "invited": false
   },
   {
@@ -1424,6 +1369,61 @@
     ],
     "citations": 0,
     "url": "https://dx.doi.org/10.3847/25c2cfeb.bff53876",
+    "invited": false
+  },
+  {
+    "bibcode": "2024AGUFMSH33E2787A",
+    "title": "Suprathermal Ion Observations from Solar Orbiter: Status of Intercalibration between the Heavy Ion Sensor and Suprathermal Ion Spectrograph",
+    "authors": [
+      "Alterman, B. L.",
+      "Allen, Robert Colby",
+      "Dewey, Ryan M.",
+      "Livi, Stefano A.",
+      "Lepri, Susan T.",
+      "Raines, Jim M.",
+      "Ho, George C.",
+      "Mason, Glenn M.",
+      "Wimmer-Schweingruber, Robert F.",
+      "Rodriguez-Pacheco, Javier",
+      "Spitzer, Sarah A.",
+      "Rivera, Yeimy",
+      "Kucharek, Harald",
+      "Owen, Christopher John",
+      "Allegrini, Frederic",
+      "Ogasawara, Keiichi",
+      "Galvin, Antoinette Broe",
+      "Verscharen, Daniel",
+      "Kistler, Lynn M.",
+      "Wurz, Peter",
+      "Elliott, Heather Alison",
+      "Nicolaou, Georgios",
+      "Stubbs, Timothy",
+      "Delano, Kevin",
+      "Louarn, Philippe",
+      "Fedorov, Andrei",
+      "Bruno, Roberto",
+      "D'Amicis, Raffaella",
+      "Bert, Christopher Mark",
+      "Carpenter, Daniel",
+      "Shimoun, Evan",
+      "Gershkovich, Irena",
+      "Zhao, Liang",
+      "Eddy, Tyler",
+      "Lugaz, Noé",
+      "Lario, David",
+      "Nieves-Chinchilla, Teresa"
+    ],
+    "month": "",
+    "year": "2024-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2024AGUFMSH33E2787A/abstract",
     "invited": false
   },
   {
@@ -2113,7 +2113,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 9,
+    "citations": 10,
     "url": "https://dx.doi.org/10.1051/0004-6361/202451686",
     "invited": false
   },
@@ -2298,7 +2298,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 5,
+    "citations": 7,
     "url": "https://dx.doi.org/10.1007/s11214-025-01257-4",
     "invited": false
   },
@@ -3096,6 +3096,43 @@
     "invited": false
   },
   {
+    "bibcode": "2024AGUFMP32B...02D",
+    "title": "Analysis of Pickup Ions Observed by SWA-HIS during the Solar Orbiter Encounter with Comet Leonard",
+    "authors": [
+      "Delano, Kevin",
+      "Stubbs, Timothy",
+      "Dewey, Ryan M.",
+      "Galvin, Antoinette Broe",
+      "Kistler, Lynn M.",
+      "Jones, Geraint",
+      "Grant, Samuel D. T.",
+      "Owen, Christopher John",
+      "Berger, Lars",
+      "Wimmer-Schweingruber, Robert F.",
+      "Ellis, Lorna",
+      "Rivera, Yeimy",
+      "Lario, David",
+      "Wurz, Peter",
+      "Lepri, Susan T.",
+      "Kucharek, Harald",
+      "Raines, Jim M.",
+      "Alterman, B. L.",
+      "Livi, Stefano A."
+    ],
+    "month": "",
+    "year": "2024-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2024AGUFMP32B...02D/abstract",
+    "invited": false
+  },
+  {
     "bibcode": "2024EGUGA..2613328A",
     "title": "Inter-Calibration of Solar Orbiter's Heavy Ion Sensor and Suprathermal Ion Spectrograph",
     "authors": [
@@ -3581,43 +3618,6 @@
     ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2024AGUFMSH33E2788G/abstract",
-    "invited": false
-  },
-  {
-    "bibcode": "2024AGUFMP32B...02D",
-    "title": "Analysis of Pickup Ions Observed by SWA-HIS during the Solar Orbiter Encounter with Comet Leonard",
-    "authors": [
-      "Delano, Kevin",
-      "Stubbs, Timothy",
-      "Dewey, Ryan M.",
-      "Galvin, Antoinette Broe",
-      "Kistler, Lynn M.",
-      "Jones, Geraint",
-      "Grant, Samuel D. T.",
-      "Owen, Christopher John",
-      "Berger, Lars",
-      "Wimmer-Schweingruber, Robert F.",
-      "Ellis, Lorna",
-      "Rivera, Yeimy",
-      "Lario, David",
-      "Wurz, Peter",
-      "Lepri, Susan T.",
-      "Kucharek, Harald",
-      "Raines, Jim M.",
-      "Alterman, B. L.",
-      "Livi, Stefano A."
-    ],
-    "month": "",
-    "year": "2024-12-00",
-    "journal": "AGU Fall Meeting",
-    "publication_type": "abstract",
-    "properties": [
-      "ESOURCE",
-      "NONARTICLE",
-      "NOT REFEREED"
-    ],
-    "citations": 0,
-    "url": "https://scixplorer.org/abs/2024AGUFMP32B...02D/abstract",
     "invited": false
   },
   {
