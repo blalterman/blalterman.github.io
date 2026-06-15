@@ -37,7 +37,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 18,
+    "citations": 19,
     "url": "https://dx.doi.org/10.3847/1538-4357/ada699",
     "invited": false
   },
@@ -81,7 +81,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 1,
+    "citations": 2,
     "url": "https://dx.doi.org/10.3847/1538-4357/ae4582",
     "invited": false
   },
@@ -186,7 +186,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 2,
+    "citations": 3,
     "url": "https://dx.doi.org/10.3847/2041-8213/adfa97",
     "invited": false
   },
@@ -230,7 +230,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 118,
+    "citations": 119,
     "url": "https://dx.doi.org/10.3847/1538-4365/ab86af",
     "invited": false
   },
@@ -410,7 +410,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 20,
+    "citations": 21,
     "url": "https://dx.doi.org/10.3847/2041-8213/ade0ac",
     "invited": false
   },
@@ -476,7 +476,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 57,
+    "citations": 58,
     "url": "https://dx.doi.org/10.3847/1538-4357/ac36d5",
     "invited": false
   },
@@ -502,7 +502,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 5,
+    "citations": 6,
     "url": "https://dx.doi.org/10.1051/0004-6361/202554299",
     "invited": false
   },
@@ -561,7 +561,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 59,
+    "citations": 60,
     "url": "https://dx.doi.org/10.3847/1538-4357/abd7a0",
     "invited": false
   },
@@ -660,7 +660,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 47,
+    "citations": 48,
     "url": "https://dx.doi.org/10.3847/2041-8213/ab4adc",
     "invited": false
   },
@@ -859,7 +859,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 14,
+    "citations": 15,
     "url": "https://dx.doi.org/10.3847/1538-4357/ac8873",
     "invited": false
   },
@@ -2251,35 +2251,6 @@
     "invited": false
   },
   {
-    "bibcode": "2025arXiv251218485M",
-    "title": "How the Oblique Drift Instability Alters Solar Wind Heating and Constrains the Distribution of Solar Wind Observations",
-    "authors": [
-      "Martinovic, Mihailo M.",
-      "Klein, Kristopher G.",
-      "Ofman, Leon",
-      "Yogesh",
-      "Verniero, Jaye L.",
-      "Yoon, Peter H.",
-      "Howes, Gregory G.",
-      "Verscharen, Daniel",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2025-12-00",
-    "journal": "arXiv e-prints",
-    "publication_type": "eprint",
-    "properties": [
-      "ARTICLE",
-      "EPRINT_OPENACCESS",
-      "ESOURCE",
-      "NOT REFEREED",
-      "OPENACCESS"
-    ],
-    "citations": 1,
-    "url": "https://dx.doi.org/10.48550/arXiv.2512.18485",
-    "invited": false
-  },
-  {
     "bibcode": "2026SSRv..222....6C",
     "title": "IMAP's Role in Understanding Particle Injection and Energization Throughout the Heliosphere",
     "authors": [
@@ -2329,6 +2300,35 @@
     ],
     "citations": 7,
     "url": "https://dx.doi.org/10.1007/s11214-025-01257-4",
+    "invited": false
+  },
+  {
+    "bibcode": "2025arXiv251218485M",
+    "title": "How the Oblique Drift Instability Alters Solar Wind Heating and Constrains the Distribution of Solar Wind Observations",
+    "authors": [
+      "Martinovic, Mihailo M.",
+      "Klein, Kristopher G.",
+      "Ofman, Leon",
+      "Yogesh",
+      "Verniero, Jaye L.",
+      "Yoon, Peter H.",
+      "Howes, Gregory G.",
+      "Verscharen, Daniel",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2025-12-00",
+    "journal": "arXiv e-prints",
+    "publication_type": "eprint",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "NOT REFEREED",
+      "OPENACCESS"
+    ],
+    "citations": 2,
+    "url": "https://dx.doi.org/10.48550/arXiv.2512.18485",
     "invited": false
   },
   {
@@ -2657,6 +2657,233 @@
     ],
     "citations": 0,
     "url": "https://dx.doi.org/10.48550/arXiv.2512.03890",
+    "invited": false
+  },
+  {
+    "bibcode": "2025AGUFMSM51A..03A",
+    "title": "Interpretable Machine Learning for ICME Identification: Leveraging Solar Wind Helium Abundance, Compressibility, and Cross Helicity",
+    "authors": [
+      "Alterman, B. L.",
+      "Weiss, Andreas",
+      "Carcaboso, Fernando",
+      "Pal, Sanchita",
+      "., Yogesh",
+      "Randol, Brent M.",
+      "Martinovic, Mihailo",
+      "Stevens, Michael Louis",
+      "Pandya, Megha Mahendrabhai",
+      "Maruca, Bennett",
+      "Ofman, Leon",
+      "Wilson, Lynn B.",
+      "Chen, Li",
+      "Szabo, Adam",
+      "Nieves-Chinchilla, Teresa",
+      "Möstl, Christian"
+    ],
+    "month": "",
+    "year": "2025-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2025AGUFMSM51A..03A/abstract",
+    "invited": false
+  },
+  {
+    "bibcode": "2025AGUFMSM33D2445N",
+    "title": "The May 2024 Storm: dayside magnetopause and cusps in simulated soft X-Rays",
+    "authors": [
+      "Ng, Jonathan",
+      "Chen, Li",
+      "Burkholder, Brandon L.",
+      "Sibeck, David G.",
+      "Porter, Frederick S.",
+      "Pham, Kevin H.",
+      "Merkin, Viacheslav G.",
+      "Connor, Hyunju KIM",
+      "Bonnell, John W.",
+      "Petrinec, Steven M.",
+      "Alterman, B. L.",
+      "Cucho-Padin, Gonzalo"
+    ],
+    "month": "",
+    "year": "2025-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2025AGUFMSM33D2445N/abstract",
+    "invited": false
+  },
+  {
+    "bibcode": "2025AGUFMSH33E2553M",
+    "title": "How Secondary Population Drifts Regulate Low-Beta Solar Wind Stability",
+    "authors": [
+      "Martinović, Mihailo",
+      "Klein, Kristopher G.",
+      "Verniero, Jaye",
+      "., Yogesh",
+      "Ofman, Leon",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2025-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2025AGUFMSH33E2553M/abstract",
+    "invited": false
+  },
+  {
+    "bibcode": "2025AGUFMSH51E1213G",
+    "title": "Pickup Ion Distributions In the Inner Heliosphere (0.3 AU to 1 AU) as Observed by the Solar Orbiter SWA/Heavy Ion Sensor",
+    "authors": [
+      "Galvin, Antoinette Broe",
+      "Kistler, Lynn M.",
+      "Ellis, Lorna",
+      "Vasquez, Bernard John",
+      "Livi, Stefano A.",
+      "Owen, Christopher John",
+      "Louarn, Philippe",
+      "Lepri, Susan T.",
+      "Raines, Jim M.",
+      "Dewey, Ryan M.",
+      "Stubbs, Timothy",
+      "Delano, Kevin",
+      "Alterman, B. L.",
+      "Rivera, Yeimy"
+    ],
+    "month": "",
+    "year": "2025-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2025AGUFMSH51E1213G/abstract",
+    "invited": false
+  },
+  {
+    "bibcode": "2025AGUFMSH33D2537D",
+    "title": "Differences in heavy ion streaming in the inner heliosphere observed by Solar Orbiter",
+    "authors": [
+      "Dewey, Ryan M.",
+      "Lepri, Susan T.",
+      "Raines, Jim M.",
+      "Coburn, Jesse",
+      "Rivera, Yeimy",
+      "Livi, Stefano A.",
+      "Shimoun, Evan",
+      "Galvin, Antoinette Broe",
+      "Kistler, Lynn M.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2025-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2025AGUFMSH33D2537D/abstract",
+    "invited": false
+  },
+  {
+    "bibcode": "2025AGUFMSH11A..07C",
+    "title": "IMAP's Role in Understanding Particle Injection and Energization Throughout the Heliosphere",
+    "authors": [
+      "Cohen, Christina",
+      "Alterman, B. L.",
+      "Baker, Daniel N.",
+      "Bruno, Alessandro",
+      "Bzowski, Maciej A.",
+      "Christian, Eric R.",
+      "Dalla, Silvia",
+      "Dayeh, Maher A.",
+      "Desai, Mihir Indrajit",
+      "Elliott, Heather Alison",
+      "Giacalone, Joe",
+      "Gkioulidou, Matina",
+      "Guo, Fan",
+      "Horbury, Timothy Simon",
+      "Kanekal, Shrikanth G.",
+      "Kowalska-Leszczyńska, Izabela",
+      "Lee, Christina O.",
+      "Livadiotis, George",
+      "Luhmann, Janet G.",
+      "Matthaeus, William H.",
+      "McComas, David J.",
+      "Mitchell, J. Grant",
+      "Möbius, Eberhard",
+      "Rankin, Jamie Sue",
+      "Richardson, John D.",
+      "Schwadron, Nathan",
+      "Skoug, Ruth M.",
+      "Turner, Drew L.",
+      "Zank, Gary P.",
+      "Zirnstein, Eric"
+    ],
+    "month": "",
+    "year": "2025-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2025AGUFMSH11A..07C/abstract",
+    "invited": false
+  },
+  {
+    "bibcode": "2025AGUFMSH21G2572A",
+    "title": "Solar Wind Helium Abundance: A Fixed-Amplitude Solar Activity Indicator for Space Weather Forecasting",
+    "authors": [
+      "Alterman, B. L.",
+      "Carcaboso, Fernando",
+      "Randol, Brent M.",
+      "Mason, Emily Irene",
+      "Chhabra, Sherry",
+      "Stevens, Michael Louis",
+      "Weiss, Andreas",
+      "Martinovic, Mihailo",
+      "Laming, John Martin",
+      "Ko, Yuan-Kuen",
+      "Weberg, Micah J.",
+      "Maruca, Bennett",
+      "Wilson, Lynn B.",
+      "., Yogesh",
+      "Rivera, Yeimy",
+      "Pal, Sanchita",
+      "Nieves-Chinchilla, Teresa",
+      "Ofman, Leon",
+      "Szabo, Adam",
+      "Möstl, Christian"
+    ],
+    "month": "",
+    "year": "2025-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2025AGUFMSH21G2572A/abstract",
     "invited": false
   },
   {
@@ -3052,6 +3279,26 @@
     "invited": false
   },
   {
+    "bibcode": "2025shin.confE.129A",
+    "title": "Cross Helicity and the Helium Abundance as an in situ Metric of Solar Wind Acceleration",
+    "authors": [
+      "Alterman, B. L.",
+      "D'Amicis, R."
+    ],
+    "month": "",
+    "year": "2025-06-00",
+    "journal": "SHINE 2025 Workshop",
+    "publication_type": "inproceedings",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2025shin.confE.129A/abstract",
+    "invited": false
+  },
+  {
     "bibcode": "2024AGUFMSH23F..01B",
     "title": "Evaluating the Parker Model with the Trans-Heliospheric Survey",
     "authors": [
@@ -3221,26 +3468,6 @@
     ],
     "citations": 0,
     "url": "https://dx.doi.org/10.5194/egusphere-egu24-13328",
-    "invited": false
-  },
-  {
-    "bibcode": "2025shin.confE.129A",
-    "title": "Cross Helicity and the Helium Abundance as an in situ Metric of Solar Wind Acceleration",
-    "authors": [
-      "Alterman, B. L.",
-      "D'Amicis, R."
-    ],
-    "month": "",
-    "year": "2025-06-00",
-    "journal": "SHINE 2025 Workshop",
-    "publication_type": "inproceedings",
-    "properties": [
-      "ARTICLE",
-      "NOT REFEREED",
-      "TOC"
-    ],
-    "citations": 0,
-    "url": "https://scixplorer.org/abs/2025shin.confE.129A/abstract",
     "invited": false
   },
   {
@@ -3655,6 +3882,34 @@
     "invited": false
   },
   {
+    "bibcode": "2023BAAS...55c.116G",
+    "title": "Measuring interstellar neutrals in-situ: a critical contribution to heliospheric science",
+    "authors": [
+      "Galli, André",
+      "Redfield, Seth",
+      "Provornikova, Elena",
+      "Kucharek, Harald",
+      "Swaczyna, Paweł",
+      "Sokół, Justyna M.",
+      "Kubiak, Marzena A.",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2023-07-00",
+    "journal": "Bulletin of AAS",
+    "publication_type": "abstract",
+    "properties": [
+      "ESOURCE",
+      "NONARTICLE",
+      "NOT REFEREED",
+      "OPENACCESS",
+      "PUB_OPENACCESS"
+    ],
+    "citations": 0,
+    "url": "https://dx.doi.org/10.3847/25c2cfeb.5deec7eb",
+    "invited": false
+  },
+  {
     "bibcode": "2022shin.confE.120A",
     "title": "Heavy Ion Heating Observed by Solar Orbiter HIS Across a Shock",
     "authors": [
@@ -3772,34 +4027,6 @@
     ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2020AGUFMSH053..01A/abstract",
-    "invited": false
-  },
-  {
-    "bibcode": "2023BAAS...55c.116G",
-    "title": "Measuring interstellar neutrals in-situ: a critical contribution to heliospheric science",
-    "authors": [
-      "Galli, André",
-      "Redfield, Seth",
-      "Provornikova, Elena",
-      "Kucharek, Harald",
-      "Swaczyna, Paweł",
-      "Sokół, Justyna M.",
-      "Kubiak, Marzena A.",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2023-07-00",
-    "journal": "Bulletin of AAS",
-    "publication_type": "abstract",
-    "properties": [
-      "ESOURCE",
-      "NONARTICLE",
-      "NOT REFEREED",
-      "OPENACCESS",
-      "PUB_OPENACCESS"
-    ],
-    "citations": 0,
-    "url": "https://dx.doi.org/10.3847/25c2cfeb.5deec7eb",
     "invited": false
   },
   {
@@ -4659,6 +4886,26 @@
     "invited": false
   },
   {
+    "bibcode": "2018AGUFMSH43B3701A",
+    "title": "The Variation of Helium Across a Two Solar Cycles",
+    "authors": [
+      "Alterman, B. L.",
+      "Kasper, J. C.",
+      "Stevens, M. L."
+    ],
+    "month": "",
+    "year": "2018-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2018AGUFMSH43B3701A/abstract",
+    "invited": false
+  },
+  {
     "bibcode": "2017shin.confE...5Q",
     "title": "Using Higher-Order Moments to Quantify Ion-Beam Strength in the Solar Wind",
     "authors": [
@@ -5010,26 +5257,6 @@
     ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2019shin.confE..48A/abstract",
-    "invited": false
-  },
-  {
-    "bibcode": "2018AGUFMSH43B3701A",
-    "title": "The Variation of Helium Across a Two Solar Cycles",
-    "authors": [
-      "Alterman, B. L.",
-      "Kasper, J. C.",
-      "Stevens, M. L."
-    ],
-    "month": "",
-    "year": "2018-12-00",
-    "journal": "AGU Fall Meeting",
-    "publication_type": "abstract",
-    "properties": [
-      "NONARTICLE",
-      "NOT REFEREED"
-    ],
-    "citations": 0,
-    "url": "https://scixplorer.org/abs/2018AGUFMSH43B3701A/abstract",
     "invited": false
   },
   {
