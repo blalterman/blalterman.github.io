@@ -81,7 +81,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 2,
+    "citations": 3,
     "url": "https://dx.doi.org/10.3847/1538-4357/ae4582",
     "invited": false
   },
@@ -1024,6 +1024,39 @@
     "invited": false
   },
   {
+    "bibcode": "2026JGRA..13135166A",
+    "title": "State of the Early Career Profession in Space Physics and Aeronomy: Climatological Survey Results",
+    "authors": [
+      "Allen, R. C.",
+      "Gallardo-Lacourt, B.",
+      "Raptis, S.",
+      "Gilly, C. R.",
+      "Gasque, L. C.",
+      "Alterman, B. L.",
+      "Buitrago-Casas, J. C.",
+      "Macho, E. P.",
+      "Malhotra, G.",
+      "McGranaghan, R. M.",
+      "Mostafavi, P.",
+      "Vines, S. K."
+    ],
+    "month": "",
+    "year": "2026-04-00",
+    "journal": "Journal of Geophysical Research (Space Physics)",
+    "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://dx.doi.org/10.1029/2026JA035166",
+    "invited": false
+  },
+  {
     "bibcode": "2024ApJ...964L..31A",
     "title": "Quiet-time Spectra of Suprathermal Heavy Ions near 1 au in Solar Cycles 23 and 24",
     "authors": [
@@ -1275,36 +1308,58 @@
     "invited": false
   },
   {
-    "bibcode": "2026JGRA..13135166A",
-    "title": "State of the Early Career Profession in Space Physics and Aeronomy: Climatological Survey Results",
+    "bibcode": "2024AGUFMSH33E2787A",
+    "title": "Suprathermal Ion Observations from Solar Orbiter: Status of Intercalibration between the Heavy Ion Sensor and Suprathermal Ion Spectrograph",
     "authors": [
-      "Allen, R. C.",
-      "Gallardo-Lacourt, B.",
-      "Raptis, S.",
-      "Gilly, C. R.",
-      "Gasque, L. C.",
       "Alterman, B. L.",
-      "Buitrago-Casas, J. C.",
-      "Macho, E. P.",
-      "Malhotra, G.",
-      "McGranaghan, R. M.",
-      "Mostafavi, P.",
-      "Vines, S. K."
+      "Allen, Robert Colby",
+      "Dewey, Ryan M.",
+      "Livi, Stefano A.",
+      "Lepri, Susan T.",
+      "Raines, Jim M.",
+      "Ho, George C.",
+      "Mason, Glenn M.",
+      "Wimmer-Schweingruber, Robert F.",
+      "Rodriguez-Pacheco, Javier",
+      "Spitzer, Sarah A.",
+      "Rivera, Yeimy",
+      "Kucharek, Harald",
+      "Owen, Christopher John",
+      "Allegrini, Frederic",
+      "Ogasawara, Keiichi",
+      "Galvin, Antoinette Broe",
+      "Verscharen, Daniel",
+      "Kistler, Lynn M.",
+      "Wurz, Peter",
+      "Elliott, Heather Alison",
+      "Nicolaou, Georgios",
+      "Stubbs, Timothy",
+      "Delano, Kevin",
+      "Louarn, Philippe",
+      "Fedorov, Andrei",
+      "Bruno, Roberto",
+      "D'Amicis, Raffaella",
+      "Bert, Christopher Mark",
+      "Carpenter, Daniel",
+      "Shimoun, Evan",
+      "Gershkovich, Irena",
+      "Zhao, Liang",
+      "Eddy, Tyler",
+      "Lugaz, Noé",
+      "Lario, David",
+      "Nieves-Chinchilla, Teresa"
     ],
     "month": "",
-    "year": "2026-04-00",
-    "journal": "Journal of Geophysical Research (Space Physics)",
-    "publication_type": "article",
+    "year": "2024-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
     "properties": [
-      "ARTICLE",
-      "EPRINT_OPENACCESS",
       "ESOURCE",
-      "OPENACCESS",
-      "PUB_OPENACCESS",
-      "REFEREED"
+      "NONARTICLE",
+      "NOT REFEREED"
     ],
     "citations": 0,
-    "url": "https://dx.doi.org/10.1029/2026JA035166",
+    "url": "https://scixplorer.org/abs/2024AGUFMSH33E2787A/abstract",
     "invited": false
   },
   {
@@ -1369,61 +1424,6 @@
     ],
     "citations": 0,
     "url": "https://dx.doi.org/10.3847/25c2cfeb.bff53876",
-    "invited": false
-  },
-  {
-    "bibcode": "2024AGUFMSH33E2787A",
-    "title": "Suprathermal Ion Observations from Solar Orbiter: Status of Intercalibration between the Heavy Ion Sensor and Suprathermal Ion Spectrograph",
-    "authors": [
-      "Alterman, B. L.",
-      "Allen, Robert Colby",
-      "Dewey, Ryan M.",
-      "Livi, Stefano A.",
-      "Lepri, Susan T.",
-      "Raines, Jim M.",
-      "Ho, George C.",
-      "Mason, Glenn M.",
-      "Wimmer-Schweingruber, Robert F.",
-      "Rodriguez-Pacheco, Javier",
-      "Spitzer, Sarah A.",
-      "Rivera, Yeimy",
-      "Kucharek, Harald",
-      "Owen, Christopher John",
-      "Allegrini, Frederic",
-      "Ogasawara, Keiichi",
-      "Galvin, Antoinette Broe",
-      "Verscharen, Daniel",
-      "Kistler, Lynn M.",
-      "Wurz, Peter",
-      "Elliott, Heather Alison",
-      "Nicolaou, Georgios",
-      "Stubbs, Timothy",
-      "Delano, Kevin",
-      "Louarn, Philippe",
-      "Fedorov, Andrei",
-      "Bruno, Roberto",
-      "D'Amicis, Raffaella",
-      "Bert, Christopher Mark",
-      "Carpenter, Daniel",
-      "Shimoun, Evan",
-      "Gershkovich, Irena",
-      "Zhao, Liang",
-      "Eddy, Tyler",
-      "Lugaz, Noé",
-      "Lario, David",
-      "Nieves-Chinchilla, Teresa"
-    ],
-    "month": "",
-    "year": "2024-12-00",
-    "journal": "AGU Fall Meeting",
-    "publication_type": "abstract",
-    "properties": [
-      "ESOURCE",
-      "NONARTICLE",
-      "NOT REFEREED"
-    ],
-    "citations": 0,
-    "url": "https://scixplorer.org/abs/2024AGUFMSH33E2787A/abstract",
     "invited": false
   },
   {
@@ -2251,6 +2251,35 @@
     "invited": false
   },
   {
+    "bibcode": "2025arXiv251218485M",
+    "title": "How the Oblique Drift Instability Alters Solar Wind Heating and Constrains the Distribution of Solar Wind Observations",
+    "authors": [
+      "Martinovic, Mihailo M.",
+      "Klein, Kristopher G.",
+      "Ofman, Leon",
+      "Yogesh",
+      "Verniero, Jaye L.",
+      "Yoon, Peter H.",
+      "Howes, Gregory G.",
+      "Verscharen, Daniel",
+      "Alterman, B. L."
+    ],
+    "month": "",
+    "year": "2025-12-00",
+    "journal": "arXiv e-prints",
+    "publication_type": "eprint",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "NOT REFEREED",
+      "OPENACCESS"
+    ],
+    "citations": 2,
+    "url": "https://dx.doi.org/10.48550/arXiv.2512.18485",
+    "invited": false
+  },
+  {
     "bibcode": "2026SSRv..222....6C",
     "title": "IMAP's Role in Understanding Particle Injection and Energization Throughout the Heliosphere",
     "authors": [
@@ -2300,35 +2329,6 @@
     ],
     "citations": 7,
     "url": "https://dx.doi.org/10.1007/s11214-025-01257-4",
-    "invited": false
-  },
-  {
-    "bibcode": "2025arXiv251218485M",
-    "title": "How the Oblique Drift Instability Alters Solar Wind Heating and Constrains the Distribution of Solar Wind Observations",
-    "authors": [
-      "Martinovic, Mihailo M.",
-      "Klein, Kristopher G.",
-      "Ofman, Leon",
-      "Yogesh",
-      "Verniero, Jaye L.",
-      "Yoon, Peter H.",
-      "Howes, Gregory G.",
-      "Verscharen, Daniel",
-      "Alterman, B. L."
-    ],
-    "month": "",
-    "year": "2025-12-00",
-    "journal": "arXiv e-prints",
-    "publication_type": "eprint",
-    "properties": [
-      "ARTICLE",
-      "EPRINT_OPENACCESS",
-      "ESOURCE",
-      "NOT REFEREED",
-      "OPENACCESS"
-    ],
-    "citations": 2,
-    "url": "https://dx.doi.org/10.48550/arXiv.2512.18485",
     "invited": false
   },
   {
@@ -2535,6 +2535,38 @@
     "invited": false
   },
   {
+    "bibcode": "2025AAS...24640402B",
+    "title": "The AGU Space Physics and Astronomy (SPA) Early Career Leadership Advisory Committee",
+    "authors": [
+      "Buitrago-Casas, Juan",
+      "Allen, Robert",
+      "Raptis, Savvas",
+      "Gilly, Chris",
+      "Alterman, B. L.",
+      "Gallardo-Lacourt, Bea",
+      "Gasque, Claire",
+      "Heyns, Mike",
+      "Kumari, Komal",
+      "Madanian, Hadi",
+      "Malhotra, Garima",
+      "McGranaghan, Ryan",
+      "Mostafavi, Parisa",
+      "Mukhopadyay, Agnit",
+      "Perez Macho, Eduardo"
+    ],
+    "month": "",
+    "year": "2025-06-00",
+    "journal": "246th Meeting of the American Astronomical Society",
+    "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2025AAS...24640402B/abstract",
+    "invited": false
+  },
+  {
     "bibcode": "2023AGUFMSH51E2669W",
     "title": "Defining the Middle Corona",
     "authors": [
@@ -2592,38 +2624,6 @@
     ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2023AGUFMSH51E2669W/abstract",
-    "invited": false
-  },
-  {
-    "bibcode": "2025AAS...24640402B",
-    "title": "The AGU Space Physics and Astronomy (SPA) Early Career Leadership Advisory Committee",
-    "authors": [
-      "Buitrago-Casas, Juan",
-      "Allen, Robert",
-      "Raptis, Savvas",
-      "Gilly, Chris",
-      "Alterman, B. L.",
-      "Gallardo-Lacourt, Bea",
-      "Gasque, Claire",
-      "Heyns, Mike",
-      "Kumari, Komal",
-      "Madanian, Hadi",
-      "Malhotra, Garima",
-      "McGranaghan, Ryan",
-      "Mostafavi, Parisa",
-      "Mukhopadyay, Agnit",
-      "Perez Macho, Eduardo"
-    ],
-    "month": "",
-    "year": "2025-06-00",
-    "journal": "246th Meeting of the American Astronomical Society",
-    "publication_type": "abstract",
-    "properties": [
-      "NONARTICLE",
-      "NOT REFEREED"
-    ],
-    "citations": 0,
-    "url": "https://scixplorer.org/abs/2025AAS...24640402B/abstract",
     "invited": false
   },
   {
@@ -4272,6 +4272,47 @@
     "invited": false
   },
   {
+    "bibcode": "2019AGUFMSH43C3381A",
+    "title": "Observations of Non-Thermal Structure in the Proton Velocity Distribution Function Using Proton Beams Below 0.3 AU from Parker Solar Probe and at 1 AU with Wind",
+    "authors": [
+      "Alterman, B. L.",
+      "Kasper, J. C.",
+      "Stevens, M. L.",
+      "Case, A. W.",
+      "Korreck, K. E.",
+      "Larson, D. E.",
+      "Livi, R.",
+      "Whittlesey, P. L.",
+      "Huang, J.",
+      "Klein, K. G.",
+      "Martinović, M.",
+      "Bale, S. D.",
+      "Pulupa, M.",
+      "Malaspina, D.",
+      "Bonnell, J. W.",
+      "Goetz, K.",
+      "Harvey, P.",
+      "Dudok de Wit, T.",
+      "MacDowall, R. J.",
+      "Verniero, J.",
+      "Tenerani, A.",
+      "Alexandrova, O.",
+      "Maruca, B.",
+      "Matteini, L."
+    ],
+    "month": "",
+    "year": "2019-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2019AGUFMSH43C3381A/abstract",
+    "invited": false
+  },
+  {
     "bibcode": "2019AGUFMSH21C3331V",
     "title": "Parker Solar Probe observations of proton beams simultaneous with ion-cyclotron waves",
     "authors": [
@@ -4449,6 +4490,27 @@
     "invited": false
   },
   {
+    "bibcode": "2016AGUFMSH51D2611A",
+    "title": "Alfvenicity of Ion Drifts at 1AU",
+    "authors": [
+      "Alterman, B. L.",
+      "Stevens, M. L.",
+      "Kasper, J. C.",
+      "Koval, A."
+    ],
+    "month": "",
+    "year": "2016-12-00",
+    "journal": "AGU Fall Meeting",
+    "publication_type": "abstract",
+    "properties": [
+      "NONARTICLE",
+      "NOT REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2016AGUFMSH51D2611A/abstract",
+    "invited": false
+  },
+  {
     "bibcode": "2015AGUFMSH21A2374A",
     "title": "Differential flow: Locally Generated or Coronal Artifact?",
     "authors": [
@@ -4571,47 +4633,6 @@
     "invited": false
   },
   {
-    "bibcode": "2019AGUFMSH43C3381A",
-    "title": "Observations of Non-Thermal Structure in the Proton Velocity Distribution Function Using Proton Beams Below 0.3 AU from Parker Solar Probe and at 1 AU with Wind",
-    "authors": [
-      "Alterman, B. L.",
-      "Kasper, J. C.",
-      "Stevens, M. L.",
-      "Case, A. W.",
-      "Korreck, K. E.",
-      "Larson, D. E.",
-      "Livi, R.",
-      "Whittlesey, P. L.",
-      "Huang, J.",
-      "Klein, K. G.",
-      "Martinović, M.",
-      "Bale, S. D.",
-      "Pulupa, M.",
-      "Malaspina, D.",
-      "Bonnell, J. W.",
-      "Goetz, K.",
-      "Harvey, P.",
-      "Dudok de Wit, T.",
-      "MacDowall, R. J.",
-      "Verniero, J.",
-      "Tenerani, A.",
-      "Alexandrova, O.",
-      "Maruca, B.",
-      "Matteini, L."
-    ],
-    "month": "",
-    "year": "2019-12-00",
-    "journal": "AGU Fall Meeting",
-    "publication_type": "abstract",
-    "properties": [
-      "NONARTICLE",
-      "NOT REFEREED"
-    ],
-    "citations": 0,
-    "url": "https://scixplorer.org/abs/2019AGUFMSH43C3381A/abstract",
-    "invited": false
-  },
-  {
     "bibcode": "2019AGUFM.U21B..14A",
     "title": "Helium Variation Across Two Solar Cycles Reveals A Speed-Dependent Phase Lag",
     "authors": [
@@ -4681,6 +4702,27 @@
     "invited": false
   },
   {
+    "bibcode": "2016shin.confE..74A",
+    "title": "Alfvenicity of Ion Drifts at 1AU",
+    "authors": [
+      "Alterman, B. L.",
+      "Stevens, Michael L.",
+      "Kasper, Justin C."
+    ],
+    "month": "",
+    "year": "2016-07-00",
+    "journal": "SHINE",
+    "publication_type": "abstract",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2016shin.confE..74A/abstract",
+    "invited": false
+  },
+  {
     "bibcode": "2018shin.confE..55Q",
     "title": "Observational signatures of fluctuating moments associated with ion-cyclotron waves in the solar wind",
     "authors": [
@@ -4730,24 +4772,27 @@
     "invited": false
   },
   {
-    "bibcode": "2016AGUFMSH51D2611A",
-    "title": "Alfvenicity of Ion Drifts at 1AU",
+    "bibcode": "2022tess.conf20104A",
+    "title": "Solar Cycle Variation of Suprathermal Heavy Ion Composition and Spectra during Quiet Times near 1 AU during Solar Cycles 23 and 24",
     "authors": [
       "Alterman, B. L.",
-      "Stevens, M. L.",
-      "Kasper, J. C.",
-      "Koval, A."
+      "Desai, Mihir",
+      "Dayeh, Maher",
+      "Mason, Glen",
+      "Ho, George"
     ],
     "month": "",
-    "year": "2016-12-00",
-    "journal": "AGU Fall Meeting",
-    "publication_type": "abstract",
+    "year": "2022-10-00",
+    "journal": "Triennial Earth-Sun Summit",
+    "publication_type": "inproceedings",
     "properties": [
-      "NONARTICLE",
-      "NOT REFEREED"
+      "ARTICLE",
+      "ESOURCE",
+      "NOT REFEREED",
+      "TOC"
     ],
     "citations": 0,
-    "url": "https://scixplorer.org/abs/2016AGUFMSH51D2611A/abstract",
+    "url": "https://scixplorer.org/abs/2022tess.conf20104A/abstract",
     "invited": false
   },
   {
@@ -4842,6 +4887,26 @@
     "invited": false
   },
   {
+    "bibcode": "2019shin.confE..48A",
+    "title": "Helium Variation Across Two Solar Cycles Reveals A Speed-Dependent Phase Lag",
+    "authors": [
+      "Alterman, B. L.",
+      "Kasper, Justin C."
+    ],
+    "month": "",
+    "year": "2019-05-00",
+    "journal": "SHINE",
+    "publication_type": "abstract",
+    "properties": [
+      "ARTICLE",
+      "NOT REFEREED",
+      "TOC"
+    ],
+    "citations": 0,
+    "url": "https://scixplorer.org/abs/2019shin.confE..48A/abstract",
+    "invited": false
+  },
+  {
     "bibcode": "2018AGUFMSH23D3350Q",
     "title": "Observational signatures of fluctuating moments associated with ion-cyclotron waves in the solar wind.",
     "authors": [
@@ -4926,27 +4991,6 @@
     ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2017shin.confE...5Q/abstract",
-    "invited": false
-  },
-  {
-    "bibcode": "2016shin.confE..74A",
-    "title": "Alfvenicity of Ion Drifts at 1AU",
-    "authors": [
-      "Alterman, B. L.",
-      "Stevens, Michael L.",
-      "Kasper, Justin C."
-    ],
-    "month": "",
-    "year": "2016-07-00",
-    "journal": "SHINE",
-    "publication_type": "abstract",
-    "properties": [
-      "ARTICLE",
-      "NOT REFEREED",
-      "TOC"
-    ],
-    "citations": 0,
-    "url": "https://scixplorer.org/abs/2016shin.confE..74A/abstract",
     "invited": false
   },
   {
@@ -5183,30 +5227,6 @@
     "invited": false
   },
   {
-    "bibcode": "2022tess.conf20104A",
-    "title": "Solar Cycle Variation of Suprathermal Heavy Ion Composition and Spectra during Quiet Times near 1 AU during Solar Cycles 23 and 24",
-    "authors": [
-      "Alterman, B. L.",
-      "Desai, Mihir",
-      "Dayeh, Maher",
-      "Mason, Glen",
-      "Ho, George"
-    ],
-    "month": "",
-    "year": "2022-10-00",
-    "journal": "Triennial Earth-Sun Summit",
-    "publication_type": "inproceedings",
-    "properties": [
-      "ARTICLE",
-      "ESOURCE",
-      "NOT REFEREED",
-      "TOC"
-    ],
-    "citations": 0,
-    "url": "https://scixplorer.org/abs/2022tess.conf20104A/abstract",
-    "invited": false
-  },
-  {
     "bibcode": "2022EGUGA..24.5984L",
     "title": "Preferential Acceleration of Suprathermal Particles at Shocks",
     "authors": [
@@ -5237,26 +5257,6 @@
     ],
     "citations": 0,
     "url": "https://dx.doi.org/10.5194/egusphere-egu22-5984",
-    "invited": false
-  },
-  {
-    "bibcode": "2019shin.confE..48A",
-    "title": "Helium Variation Across Two Solar Cycles Reveals A Speed-Dependent Phase Lag",
-    "authors": [
-      "Alterman, B. L.",
-      "Kasper, Justin C."
-    ],
-    "month": "",
-    "year": "2019-05-00",
-    "journal": "SHINE",
-    "publication_type": "abstract",
-    "properties": [
-      "ARTICLE",
-      "NOT REFEREED",
-      "TOC"
-    ],
-    "citations": 0,
-    "url": "https://scixplorer.org/abs/2019shin.confE..48A/abstract",
     "invited": false
   },
   {
