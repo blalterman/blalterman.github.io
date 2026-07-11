@@ -521,12 +521,12 @@ export function PublicationFilters({
                               <Button variant="outline" size="sm" asChild>
                                 <a href={pub.pdfPath} target="_blank" rel="noopener noreferrer">
                                   <Download className="h-4 w-4 mr-1" />
-                                  {pub.pdfVersion === 'preprint' ? 'Preprint' : 'PDF'}
+                                  {pub.pdfVersion === 'preprint' ? 'Preprint' : pub.pdfVersion === 'whitepaper' ? 'White Paper' : 'PDF'}
                                 </a>
                               </Button>
                             </TooltipTrigger>
                             <TooltipContent>
-                              <p>{pub.pdfVersion === 'preprint' ? 'Download preprint (arXiv)' : 'Download PDF'}</p>
+                              <p>{pub.pdfVersion === 'preprint' ? 'Download preprint (arXiv)' : pub.pdfVersion === 'whitepaper' ? 'Download white paper' : 'Download PDF'}</p>
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>

@@ -17,7 +17,7 @@ interface PublicationPdf {
   /** Root-absolute path to the PDF under public/ (e.g. "/papers/pdfs/2018ApJ_864_112A.pdf"). */
   path: string;
   /** Which version is hosted. */
-  version: 'vor' | 'preprint' | 'thesis';
+  version: 'vor' | 'preprint' | 'thesis' | 'whitepaper';
   /** Human-readable license/provenance note (not rendered). */
   license: string;
   /** Where the file was sourced from (research-corpus | zotero | unpaywall | arxiv). */

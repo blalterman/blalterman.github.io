@@ -238,5 +238,47 @@
     "version": "preprint",
     "license": "arXiv non-exclusive (author-posted manuscript)",
     "source": "arxiv"
+  },
+  "NOADS-barnes_will_2020_4091384": {
+    "path": "/papers/pdfs/NOADS_barnes_will_2020_4091384.pdf",
+    "version": "whitepaper",
+    "license": "CC-BY 4.0",
+    "source": "zenodo"
+  },
+  "NOADS-verniero_j_l_2020_4158714": {
+    "path": "/papers/pdfs/NOADS_verniero_j_l_2020_4158714.pdf",
+    "version": "whitepaper",
+    "license": "CC-BY 4.0",
+    "source": "zenodo"
+  },
+  "NOADS-schonfeld_samuel_j_2020_4060331": {
+    "path": "/papers/pdfs/NOADS_schonfeld_samuel_j_2020_4060331.pdf",
+    "version": "whitepaper",
+    "license": "CC-BY 4.0",
+    "source": "zenodo"
+  },
+  "NOADS-mason_e_i_2020_4024810": {
+    "path": "/papers/pdfs/NOADS_mason_e_i_2020_4024810.pdf",
+    "version": "whitepaper",
+    "license": "CC-BY 4.0",
+    "source": "zenodo"
+  },
+  "NOADS-murphy_nicholas_a_2019_3265454": {
+    "path": "/papers/pdfs/NOADS_murphy_nicholas_a_2019_3265454.pdf",
+    "version": "whitepaper",
+    "license": "CC0",
+    "source": "zenodo"
+  },
+  "NOADS-murphy_nicholas_a_2019_2578291": {
+    "path": "/papers/pdfs/NOADS_murphy_nicholas_a_2019_2578291.pdf",
+    "version": "whitepaper",
+    "license": "CC0",
+    "source": "zenodo"
+  },
+  "NOADS-murphy_nicholas_a_2019_2578277": {
+    "path": "/papers/pdfs/NOADS_murphy_nicholas_a_2019_2578277.pdf",
+    "version": "whitepaper",
+    "license": "CC0",
+    "source": "zenodo"
   }
 }

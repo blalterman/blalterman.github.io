@@ -54,6 +54,6 @@ export interface Publication {
   /** Root-absolute path to the self-hosted PDF, joined from publication-pdfs.json by bibcode */
   pdfPath?: string;
 
-  /** Which version is self-hosted: version of record, preprint, or thesis */
-  pdfVersion?: 'vor' | 'preprint' | 'thesis';
+  /** Which version is self-hosted: version of record, preprint, thesis, or white paper */
+  pdfVersion?: 'vor' | 'preprint' | 'thesis' | 'whitepaper';
 }
