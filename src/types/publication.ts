@@ -50,4 +50,10 @@ export interface Publication {
 
   /** Direct URL to invited talk announcement */
   invited_url?: string;
+
+  /** Root-absolute path to the self-hosted PDF, joined from publication-pdfs.json by bibcode */
+  pdfPath?: string;
+
+  /** Which version is self-hosted: version of record, preprint, or thesis */
+  pdfVersion?: 'vor' | 'preprint' | 'thesis';
 }

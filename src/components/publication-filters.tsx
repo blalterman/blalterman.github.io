@@ -24,7 +24,7 @@ import {
 } from '@/components/ui/select'
 import { Label } from '@/components/ui/label'
 import { MultiSelect } from '@/components/ui/multi-select'
-import { BookOpen, Filter, ChevronDown, ChevronUp, X } from 'lucide-react'
+import { BookOpen, Download, Filter, ChevronDown, ChevronUp, X } from 'lucide-react'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import {
   extractUniqueJournals,
@@ -457,7 +457,7 @@ export function PublicationFilters({
                   </TableHead>
                 )}
                 {(categoryData.showLinks !== false) && (
-                  <TableHead className="text-right w-[150px] font-bold">Links</TableHead>
+                  <TableHead className="text-right w-[180px] font-bold">Links</TableHead>
                 )}
               </TableRow>
             </TableHeader>
@@ -496,7 +496,8 @@ export function PublicationFilters({
                     <TableCell className="text-center">{pub.citations}</TableCell>
                   )}
                   {(categoryData.showLinks !== false) && (
-                    <TableCell className="text-right space-x-2">
+                    <TableCell>
+                      <div className="flex flex-wrap items-center justify-center gap-2">
                       {pub.url && (
                         <TooltipProvider>
                           <Tooltip>
@@ -513,6 +514,24 @@ export function PublicationFilters({
                           </Tooltip>
                         </TooltipProvider>
                       )}
+                      {pub.pdfPath && (
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <Button variant="outline" size="sm" asChild>
+                                <a href={pub.pdfPath} target="_blank" rel="noopener noreferrer">
+                                  <Download className="h-4 w-4 mr-1" />
+                                  {pub.pdfVersion === 'preprint' ? 'Preprint' : 'PDF'}
+                                </a>
+                              </Button>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>{pub.pdfVersion === 'preprint' ? 'Download preprint (arXiv)' : 'Download PDF'}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      )}
+                      </div>
                     </TableCell>
                   )}
                 </TableRow>
