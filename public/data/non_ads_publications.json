@@ -133,7 +133,14 @@
     "title": "Toward A Sustainable Software Development Model for Heliophysics",
     "authors": [
       "Barnes, W.",
-      "Alterman, B. L."
+      "Juno, J.",
+      "Reep, J.",
+      "Ireland, J.",
+      "Wright, P.",
+      "Spitzer, S.",
+      "Alterman, B. L.",
+      "Stansby, D.",
+      "Lichko, E."
     ],
     "month": "",
     "year": "2020-10-00",
@@ -149,6 +156,10 @@
     "title": "Guiding Heliophysics Toward an Enhanced Transdisciplinary Framework",
     "authors": [
       "Verniero, J. L.",
+      "Juno, J.",
+      "Sadykov, V. M.",
+      "Wright, P. J.",
+      "Schonfeld, S. J.",
       "Alterman, B. L."
     ],
     "month": "",
@@ -181,7 +192,9 @@
     "title": "HelioWeb: A resource for 21st century science",
     "authors": [
       "Schonfeld, S. J.",
-      "Alterman, B. L."
+      "Higginson, A. K.",
+      "Alterman, B. L.",
+      "Kirk, M. S. F."
     ],
     "month": "",
     "year": "2020-09-00",
@@ -197,6 +210,10 @@
     "title": "The Need for Consistent, Comprehensive Inner Heliosphere Data",
     "authors": [
       "Mason, E. I.",
+      "Higginson, A. K.",
+      "Rivera, Y. J.",
+      "Weberg, M.",
+      "Spitzer, S. A.",
       "Alterman, B. L."
     ],
     "month": "",
@@ -212,8 +229,11 @@
     "bibcode": "NOADS-murphy_nicholas_a_2019_3265454",
     "title": "Enabling scientific reproducibility in plasma research",
     "authors": [
-      "Murphy, Nicholas A.",
-      "Alterman, B. L."
+      "Murphy, N. A.",
+      "Alterman, B. L.",
+      "Stansby, D.",
+      "Dominguez, A.",
+      "Stańczak, D."
     ],
     "month": "",
     "year": "2019-07-00",
@@ -228,7 +248,7 @@
     "bibcode": "NOADS-murphy_nicholas_a_2019_2578291",
     "title": "Making plasma research reproducible",
     "authors": [
-      "Murphy, Nicholas A.",
+      "Murphy, N. A.",
       "Alterman, B. L.",
       "Stansby, D."
     ],
@@ -245,8 +265,51 @@
     "bibcode": "NOADS-murphy_nicholas_a_2019_2578277",
     "title": "Building an open source software ecosystem for cross-disciplinary plasma research and education",
     "authors": [
-      "Murphy, Nicholas A.",
-      "Alterman, B. L."
+      "Murphy, N. A.",
+      "Stańczak, D.",
+      "Leonard, A. J.",
+      "Parashar, T.",
+      "Kozlowski, P. M.",
+      "Alterman, B. L.",
+      "Roberts, D. A.",
+      "Christe, S. D.",
+      "Conners, M.",
+      "Bobra, M.",
+      "Mason, J. P.",
+      "Barnes, W.",
+      "McGranaghan, R. M.",
+      "Bhatt, A.",
+      "Erikson, P. J.",
+      "Lind, F. D.",
+      "Volz, R.",
+      "Swoboda, J.",
+      "Hatzigeorgiu, N.",
+      "Inglis, A.",
+      "deOliveira-Lopes, F. N.",
+      "Ireland, J.",
+      "Coxon, J. C.",
+      "Murray, S. A.",
+      "Yates, J. N.",
+      "Cheung, M. C. M.",
+      "Klenzing, J.",
+      "Stansby, D.",
+      "He, H.",
+      "Huang, Y.",
+      "Dong, C.",
+      "Winter, H.",
+      "Buitrago-Casas, J.",
+      "Kaur, M.",
+      "Smith, S.",
+      "Dudson, B.",
+      "Seaton, D. B.",
+      "Comisso, L.",
+      "Halford, A. J.",
+      "Barnak, D. H.",
+      "Weigel, R. S.",
+      "Tavant, A.",
+      "Vandegriff, J. D.",
+      "de Val-Borro, M.",
+      "Savcheva, A."
     ],
     "month": "",
     "year": "2019-02-00",
