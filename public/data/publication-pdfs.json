@@ -280,5 +280,41 @@
     "version": "whitepaper",
     "license": "CC0",
     "source": "zenodo"
+  },
+  "2022dsss.rept..158A": {
+    "path": "/papers/pdfs/2022dsss_rept_158A.pdf",
+    "version": "whitepaper",
+    "license": "CC-BY 4.0 (BAAS)",
+    "source": "baas"
+  },
+  "2022dsss.rept..299V": {
+    "path": "/papers/pdfs/2022dsss_rept_299V.pdf",
+    "version": "whitepaper",
+    "license": "CC-BY 4.0 (BAAS)",
+    "source": "baas"
+  },
+  "2022dsss.rept..295R": {
+    "path": "/papers/pdfs/2022dsss_rept_295R.pdf",
+    "version": "whitepaper",
+    "license": "CC-BY 4.0 (BAAS)",
+    "source": "baas"
+  },
+  "2022dsss.rept..326G": {
+    "path": "/papers/pdfs/2022dsss_rept_326G.pdf",
+    "version": "whitepaper",
+    "license": "CC-BY 4.0 (BAAS)",
+    "source": "baas"
+  },
+  "2022dsss.rept..319K": {
+    "path": "/papers/pdfs/2022dsss_rept_319K.pdf",
+    "version": "whitepaper",
+    "license": "CC-BY 4.0 (BAAS)",
+    "source": "baas"
+  },
+  "2022dsss.rept..220C": {
+    "path": "/papers/pdfs/2022dsss_rept_220C.pdf",
+    "version": "whitepaper",
+    "license": "CC-BY 4.0 (BAAS)",
+    "source": "baas"
   }
 }
