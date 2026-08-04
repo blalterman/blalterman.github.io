@@ -6,7 +6,7 @@ Reads yearly citation counts from public/data/citations_by_year.json
 and creates styled line plots matching other timeline visualizations.
 
 This script does NOT fetch data from NASA ADS - run
-fetch_ads_citations_to_data_dir.py first to ensure data is current.
+derive_citations_by_year.py first to ensure data is current.
 
 Usage:
     python scripts/generate_citations_timeline.py
@@ -31,7 +31,7 @@ def generate_citations_timeline(theme_name='light'):
     if not data_file.exists():
         raise FileNotFoundError(
             f"Citations data not found at {get_relative_path(data_file)}. "
-            "Run fetch_ads_citations_to_data_dir.py first."
+            "Run derive_citations_by_year.py first."
         )
 
     print(f"📖 Loading citations data from {get_relative_path(data_file)}")

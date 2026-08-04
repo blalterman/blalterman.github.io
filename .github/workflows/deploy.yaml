@@ -7,7 +7,6 @@ on:
       - "Update ADS Publications List"
       - "Generate Figure Data"
       - "Update ADS Citation Metrics"
-      - "Update NASA ADS Citations Plot and Data"
       - "Update All Timeline Plots"
       - "Convert PDFs to SVG"
     types:

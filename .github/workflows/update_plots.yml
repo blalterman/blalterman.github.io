@@ -5,7 +5,6 @@ on:
     workflows:
       - "Update ADS Citation Metrics"
       - "Update ADS Publications List"
-      - "Update NASA ADS Citations Plot and Data"
     types:
       - completed
   workflow_dispatch:
@@ -41,6 +40,12 @@ jobs:
           git fetch origin
           git pull origin main --ff-only
 
+      - name: Derive citations by year from ADS metrics
+        run: python scripts/derive_citations_by_year.py
+
+      - name: Generate citations timeline plot
+        run: python scripts/generate_citations_timeline.py
+
       - name: Generate publications timeline plot
         run: python scripts/generate_publications_timeline.py
 
@@ -51,6 +56,26 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add public/data/publications_timeline.json public/plots/*.svg public/plots/*.png
+          git add public/data/publications_timeline.json public/data/citations_by_year.json public/plots/*.svg public/plots/*.png
           git commit -m "Update timeline plots [automated]" || echo "No changes to commit"
           git push origin main
+
+      - name: Create issue on failure
+        if: failure()
+        uses: actions/github-script@v9
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Workflow failed: ${context.workflow} (run ${context.runId})`,
+              body: [
+                `**Workflow:** ${context.workflow}`,
+                `**Run:** ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+                `**Triggered by:** ${context.eventName}`,
+                `**SHA:** ${context.sha}`,
+                ``,
+                `Auto-created by \`if: failure()\`. Investigate run logs at the URL above.`
+              ].join('\n'),
+              labels: ['workflow-failure', 'automated']
+            })
