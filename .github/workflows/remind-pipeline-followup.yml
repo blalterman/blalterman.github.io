@@ -1,0 +1,84 @@
+name: Remind Pipeline Follow-up
+
+# One-time nudge on issue #16, the pipeline follow-up checklist.
+#
+# Fires 2026-08-11 13:00 UTC: the Tuesday after the first natural Monday run of
+# the reorganized update_plots.yml, and after Audit Deployed Data reports at
+# Monday 12:00 UTC.
+#
+# The cron repeats annually because GitHub cron has no run-once form. The
+# open-issue guard below makes a repeat harmless: once #16 is closed, this
+# posts nothing. Delete this file when the checklist is done.
+
+on:
+  schedule:
+    - cron: '0 13 11 8 *'
+  workflow_dispatch:
+
+env:
+  ISSUE_NUMBER: 16
+  AUDIT_WORKFLOW: audit-deployed-data.yml
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Comment with the audit result if the checklist is still open
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const issue_number = Number(process.env.ISSUE_NUMBER);
+
+            const { data: issue } = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number,
+            });
+
+            if (issue.state !== 'open') {
+              core.info(`Issue #${issue_number} is ${issue.state}; nothing to remind about.`);
+              return;
+            }
+
+            // Report the audit's own verdict, so this comment answers the
+            // question rather than only asking it.
+            const { data: runs } = await github.rest.actions.listWorkflowRuns({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: process.env.AUDIT_WORKFLOW,
+              per_page: 5,
+            });
+
+            const scheduled = runs.workflow_runs.filter(r => r.event === 'schedule');
+            const latest = scheduled[0];
+
+            let verdict;
+            if (!latest) {
+              // Absence of a scheduled run is itself the finding: silence and
+              // success are indistinguishable without this distinction.
+              verdict = `**No scheduled audit run found.** Silence is not evidence of health here. Check whether the schedule is still registered at ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/workflows/${process.env.AUDIT_WORKFLOW}`;
+            } else {
+              const when = latest.created_at.slice(0, 10);
+              const mark = latest.conclusion === 'success' ? 'passed' : `**${latest.conclusion}**`;
+              verdict = `Most recent scheduled audit (${when}): ${mark}. ${latest.html_url}`;
+            }
+
+            const body = [
+              `Scheduled reminder for this checklist.`,
+              ``,
+              verdict,
+              ``,
+              `**Decision to make:** the reorganized \`update_plots.yml\` should now have run on its real \`workflow_run\` trigger. If the audit passed, the gate at the top of this issue is cleared and consolidation can start with a clean baseline. If it failed, read which assertion broke before changing anything else.`,
+              ``,
+              `Close this issue when the checklist is done, and delete \`.github/workflows/remind-pipeline-followup.yml\`.`,
+            ].join('\n');
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number,
+              body,
+            });
+
+            core.info(`Commented on issue #${issue_number}.`);
