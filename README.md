@@ -10,9 +10,8 @@ The website relies on a series of GitHub Actions to automate content updates. He
 
 -   **`update-ads-publications.yml`**: Runs on a weekly schedule to fetch the latest publication list from the NASA ADS API using a personal ORCID. It saves the formatted data to `public/data/ads_publications.json`.
 -   **`update-ads-metrics.yml`**: Runs on a weekly schedule to fetch up-to-date citation metrics (like h-index and total citations) from the NASA ADS API. It saves the data to `public/data/ads_metrics.json`.
--   **`update_annual_citations.yml`**: Runs weekly to fetch year-by-year citation data from NASA ADS. It generates both a data file (`public/data/citations_by_year.json`) and a plot (`public/plots/citations_by_year.svg`).
 -   **`convert-pdfs.yml`**: Triggers on any push to the `public/paper-figures/pdfs/` directory. It automatically converts any new or modified PDF files into SVG format and saves them in `public/paper-figures/svg/`, making them web-ready.
--   **`update_plots.yml`**: Triggers automatically after the three ADS data workflows complete. It generates publication, h-index, and citation timeline visualizations using Python scripts and saves both JSON data and SVG/PNG plots to the `public/` directories.
+-   **`update_plots.yml`**: Triggers automatically after the two ADS data workflows complete. It derives year-by-year citation counts from `ads_metrics.json`, then generates publication, h-index, and citation timeline visualizations using Python scripts and saves both JSON data and SVG/PNG plots to the `public/` directories.
 
 **Deployment:** The site deploys automatically to GitHub Pages via the Next.js static export configuration (`output: 'export'` in `next.config.ts`). GitHub Pages builds and publishes changes whenever commits are pushed to the main branch.
 
@@ -33,7 +32,7 @@ Below is a breakdown of the key data files and their role in the content pipelin
     -   **Purpose**: Contains key citation statistics (h-index, total citations, etc.).
     -   **Usage**: Consumed by the **Publications Page** to display the summary metric cards.
 -   **`citations_by_year.json`**:
-    -   **Origin**: Auto-generated weekly by the `update_annual_citations.yml` workflow.
+    -   **Origin**: Derived weekly from `ads_metrics.json` by `scripts/derive_citations_by_year.py`, run by the `update_plots.yml` workflow.
     -   **Purpose**: Contains yearly citation counts.
     -   **Usage**: Used by its corresponding script to generate the plot at `public/plots/citations_by_year.svg`.
 

@@ -146,8 +146,8 @@ pip install -r scripts/requirements.txt
 ### 3. GitHub Actions Automation
 
 **5 workflows** handle data updates and deployment:
-- Publications, metrics, citations (weekly Mon updates)
-- Timeline plots (triggers after data updates complete)
+- Publications, metrics (weekly Mon updates)
+- Timeline plots (triggers after data updates complete; also derives `citations_by_year.json` from `ads_metrics.json`)
 - PDF→SVG conversion (on upload)
 
 **Cross-repo:** The private CV repo (`CV-v3`) has a GitHub Action that compiles the LaTeX CV and pushes `Alterman-CV.pdf` to this repo's `public/` directory every Monday (after ADS data updates).

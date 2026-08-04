@@ -152,7 +152,7 @@ blalterman.github.io/
 │   └── workflows/                    # GitHub Actions automation
 │       ├── update-ads-publications.yml
 │       ├── update-ads-metrics.yml
-│       ├── update_annual_citations.yml
+│       ├── update_plots.yml
 │       ├── convert-pdfs.yml
 │       └── deploy.yaml (implied)
 │
@@ -236,7 +236,8 @@ blalterman.github.io/
 ├── scripts/                          # Python automation
 │   ├── fetch_ads_publications_to_data_dir.py  # Fetch publications
 │   ├── fetch_ads_metrics_to_data_dir.py       # Fetch metrics
-│   ├── fetch_ads_citations_to_data_dir.py     # Fetch citations data
+│   ├── derive_citations_by_year.py            # Derive citations from ADS metrics
+│   ├── verify_citations_derivation.py         # Check derivation against prior method
 │   ├── generate_citations_timeline.py         # Generate citations plot
 │   ├── generate_h_index_timeline.py           # Generate h-index plot
 │   ├── generate_publications_timeline.py      # Generate publications timeline
@@ -463,76 +464,35 @@ blalterman.github.io/
 
 ---
 
-### 3. Update Annual Citations
-
-**File:** `.github/workflows/update_annual_citations.yml`
-
-**Trigger:** Weekly on Mondays at 00:00 UTC (or manual dispatch)
-
-**Purpose:** Update yearly citation data and timeline visualizations
-
-**Process:**
-1. Run `fetch_ads_citations_to_data_dir.py` (data collection)
-   - 7-day caching to avoid redundant API calls
-   - Fetch citation histogram per year from ADS
-2. Run `generate_citations_timeline.py` (visualization)
-   - Generate citations timeline plot
-3. Run `generate_h_index_timeline.py` (visualization)
-   - Generate h-index timeline plot
-4. Commit JSON data and all plots
-
-**Output:**
-- `/public/data/citations_by_year.json`
-- `/public/plots/citations_by_year.svg`
-- `/public/plots/citations_by_year.png`
-- `/public/plots/h_index_timeline.svg`
-- `/public/plots/h_index_timeline.png`
-
-**Features:**
-- Rate limiting with Retry-After headers
-- Timezone handling (Eastern Time)
-- Separates refereed vs. non-refereed citations
-
-**Data Format:**
-```json
-{
-  "2024": {
-    "refereed to refereed": 5,
-    "refereed to nonrefereed": 1,
-    "nonrefereed to refereed": 0,
-    "nonrefereed to nonrefereed": 2
-  }
-}
-```
-
----
-
-### 4. Generate Timeline Plots
+### 3. Generate Timeline Plots
 
 **File:** `.github/workflows/update_plots.yml`
 
 **Trigger:** `workflow_run` (executes after ADS workflows complete successfully) or manual dispatch
 
-**Purpose:** Generate publication, h-index, and citation timeline visualizations after data updates
+**Purpose:** Derive yearly citation counts, then generate publication, h-index, and citation timeline visualizations after data updates
 
 **Process:**
-1. Waits for completion of all 3 ADS data workflows (publications, metrics, citations)
-2. Runs `generate_publications_timeline.py` - creates publication counts by year/category
-3. Runs `generate_h_index_timeline.py` - creates h-index growth visualization
-4. Runs `generate_citations_timeline.py` - creates citation trends visualization
-5. Commits generated plots and data files
+1. Waits for completion of the 2 ADS data workflows (publications, metrics)
+2. Runs `derive_citations_by_year.py` - reshapes the citation histogram already present in `ads_metrics.json` into `citations_by_year.json`, with no additional API call
+3. Runs `generate_citations_timeline.py` - creates citation trends visualization
+4. Runs `generate_publications_timeline.py` - creates publication counts by year/category
+5. Runs `generate_h_index_timeline.py` - creates h-index growth visualization
+6. Commits generated plots and data files
+7. Opens a labeled GitHub issue if any step fails
 
 **Outputs:**
 - `/public/data/publications_timeline.json`
+- `/public/data/citations_by_year.json`
 - `/public/plots/publications_timeline.svg` and `.png`
 - `/public/plots/h_index_timeline.svg` and `.png`
-- `/public/plots/citations_by_year.svg` and `.png`
+- `/public/plots/citations_by_year.svg` and `.png` (light and `_dark` variants)
 
-**Key Feature:** Uses `workflow_run` trigger to ensure data dependencies are met before visualization generation
+**Key Feature:** Uses `workflow_run` trigger to ensure data dependencies are met before visualization generation. Stages plots by glob, so every theme variant is committed.
 
 ---
 
-### 5. Convert PDFs to SVG
+### 4. Convert PDFs to SVG
 
 **File:** `.github/workflows/convert-pdfs.yml`
 
@@ -563,13 +523,8 @@ The 5 workflows are orchestrated with specific dependencies and trigger patterns
 TIME-BASED TRIGGERS (Parallel Execution):
 ══════════════════════════════════════════
 
-00:00 UTC ┌──────────────────────────────────────┐
-    ┌─────┤ update_annual_citations.yml          │
-    │     │ → citations_by_year.json             │
-    │     └──────────────────────────────────────┘
-    │
-03:00 UTC ┌──────────────────────────────────────┐
-    ├─────┤ update-ads-metrics.yml                │
+01:00 UTC ┌──────────────────────────────────────┐
+    ┌─────┤ update-ads-metrics.yml                │
     │     │ → ads_metrics.json                    │
     │     └──────────────────────────────────────┘
     │
@@ -580,12 +535,13 @@ TIME-BASED TRIGGERS (Parallel Execution):
           │ → publication_statistics.json         │
           └──────────────────────────────────────┘
                         │
-                        │ (after all 3 complete)
+                        │ (after both complete)
                         ▼
             ┌──────────────────────────────────────┐
             │ update_plots.yml                     │
             │ TRIGGER: workflow_run (dependency)   │
             │                                       │
+            │ → citations_by_year.json (derived)   │
             │ → publications_timeline.json/.svg    │
             │ → h_index_timeline.svg/.png          │
             │ → citations_by_year.svg/.png         │
@@ -634,7 +590,7 @@ TRIGGER SUMMARY:
 > - [Shared Utilities](#shared-utilities-utilspy)
 > - [Publications Fetcher](#1-fetch_ads_publications_to_data_dirpy)
 > - [Metrics Fetcher](#2-fetch_ads_metrics_to_data_dirpy)
-> - [Citations Data Fetcher](#3-fetch_ads_citations_to_data_dirpy)
+> - [Citations Deriver](#3-derive_citations_by_yearpy)
 > - [Citations Plot Generator](#4-generate_citations_timelinepy)
 > - [Figure Registry Generator](#5-generate_figure_registry_from_corpuspy)
 > - [Non-ADS Publication Importer](#8-add_non_ads_publicationpy)
@@ -678,13 +634,16 @@ The automation scripts follow a clear **separation of concerns** pattern with th
 **Scripts:**
 - `fetch_ads_publications_to_data_dir.py` → `ads_publications.json`
 - `fetch_ads_metrics_to_data_dir.py` → `ads_metrics.json`
-- `fetch_ads_citations_to_data_dir.py` → `citations_by_year.json`
 
 **Characteristics:**
 - Each script fetches from a single source (NASA ADS API)
 - Outputs one primary JSON file
 - No dependencies on other scripts' output
-- Run independently on staggered schedule (Monday 00:00, 03:00, 04:00 UTC)
+- Run independently on staggered schedule (Monday 01:00, 04:00 UTC)
+
+`citations_by_year.json` is not fetched. It is derived from `ads_metrics.json`
+by `derive_citations_by_year.py` in Layer 2, since the ADS metrics payload
+already contains the citation histogram.
 
 #### Layer 2: Data Enrichment & Aggregation
 
@@ -808,28 +767,28 @@ Monday 00:00-04:00 UTC (Layer 1 - Parallel):
 
 ---
 
-### 3. `fetch_ads_citations_to_data_dir.py`
+### 3. `derive_citations_by_year.py`
 
-**Purpose:** Fetch annual citation data from NASA ADS (data collection only)
+**Purpose:** Reshape the citation histogram already present in `ads_metrics.json` into yearly counts (no network access)
 
 **Features:**
-- 7-day caching to prevent redundant API calls
-- Rate limiting with Retry-After header handling
-- Timezone handling (Eastern Time)
-- Separation of concerns (data only, no visualization)
+- No API call, so no credentials, no rate limiting, and no cache
+- Indexes the four histogram keys directly, so an ADS rename raises `KeyError` rather than silently zeroing a series
+- Reconciles its derived total against `citation stats -> total number of citations`, which ADS computes by a separate path
+- Deterministic, so its output is a truthful freshness signal in git history
 
 **Process:**
-1. Get all bibcodes for ORCID
-2. Query citation histogram by year from ADS
-3. Separate refereed vs. non-refereed citations
-4. Save JSON data only
+1. Load `/public/data/ads_metrics.json`
+2. Sum `refereed to refereed` + `nonrefereed to refereed` per year for the refereed series, and the two `to nonrefereed` keys for the non-refereed series
+3. Reconcile the total, and warn loudly if ADS reported any skipped bibcodes
+4. Drop years with no citations of either kind
 
 **Output:**
 - `/public/data/citations_by_year.json`
 
-**API Endpoint:** `https://api.adsabs.harvard.edu/v1/metrics`
-
 **Note:** Run `generate_citations_timeline.py` afterward to create plots from this data.
+
+**Replaces:** `fetch_ads_citations_to_data_dir.py`, removed 2026-08. That script issued one request per bibcode and cached on file mtime, which `actions/checkout` resets on every run, so its ADS query never executed in CI and the data sat frozen from 2025-12-26. `verify_citations_derivation.py` confirms this derivation reproduces that script's output exactly on a same-day fixture.
 
 ---
 
@@ -853,7 +812,7 @@ Monday 00:00-04:00 UTC (Layer 1 - Parallel):
 - `/public/plots/citations_by_year.svg`
 - `/public/plots/citations_by_year.png`
 
-**Note:** Must run `fetch_ads_citations_to_data_dir.py` first to ensure data is current.
+**Note:** Must run `derive_citations_by_year.py` first to ensure data is current.
 
 ---
 
@@ -2370,7 +2329,9 @@ export ADS_ORCID="0000-0001-2345-6789"
 # Fetch data from NASA ADS
 python scripts/fetch_ads_publications_to_data_dir.py
 python scripts/fetch_ads_metrics_to_data_dir.py
-python scripts/fetch_ads_citations_to_data_dir.py
+
+# Derive citations from the metrics payload (no API call)
+python scripts/derive_citations_by_year.py
 
 # Generate visualizations
 python scripts/generate_citations_timeline.py
