@@ -1,0 +1,61 @@
+name: Audit Deployed Data
+
+# Checks what a visitor actually loads, which no other workflow observes.
+#
+# Deliberately NOT triggered by workflow_run. A post-deploy check can only
+# verify deploys that happen; it cannot detect a pipeline that stopped running.
+# This runs on its own clock so silence is detectable.
+#
+# Monday 12:00 UTC, hours after the data pipeline settles (metrics 01:00,
+# publications 04:00, plots and deploy shortly after), so it never races a
+# deploy in flight.
+
+on:
+  schedule:
+    - cron: '0 12 * * 1'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.10'
+
+      # No pip install: the audit and its imports are standard library only.
+      # The watcher should have fewer moving parts than what it watches.
+      - name: Audit deployed data against the repository
+        run: python scripts/audit_deployed_data.py
+
+      - name: Create issue on failure
+        if: failure()
+        uses: actions/github-script@v9
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Deployed data is stale or inconsistent (run ${context.runId})`,
+              body: [
+                `The deployed site disagrees with this repository, or serves data`,
+                `inconsistent with its own metrics payload.`,
+                ``,
+                `**Run:** ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+                `**Triggered by:** ${context.eventName}`,
+                `**SHA:** ${context.sha}`,
+                ``,
+                `Read the run log for the failing assertion. Reproduce locally with:`,
+                '```',
+                `python scripts/audit_deployed_data.py`,
+                '```',
+                ``,
+                `Auto-created by \`if: failure()\`.`
+              ].join('\n'),
+              labels: ['workflow-failure', 'automated', 'stale-data']
+            })
