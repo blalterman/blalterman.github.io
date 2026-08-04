@@ -4,6 +4,17 @@ Shared plotting configuration for academic productivity visualizations.
 Ensures consistent styling across publications timeline and citations plots.
 """
 
+import matplotlib
+
+# Matplotlib derives SVG element ids (clip paths, glyph refs) from a salt that
+# is random per process, so regenerating a plot from unchanged data produced a
+# byte-different file and therefore a commit. A fixed salt makes those ids
+# stable, leaving <dc:date> as the only element that varies between runs.
+#
+# Set on import so every generator inherits it. Changing this value rewrites
+# the ids in every SVG once.
+matplotlib.rcParams['svg.hashsalt'] = 'blalterman.github.io'
+
 # === COLOR PALETTE ===
 COLORS = {
     # Primary categories
