@@ -186,7 +186,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 62,
+    "citations": 61,
     "url": "https://dx.doi.org/10.1007/s11207-023-02170-1",
     "invited": false
   },
@@ -251,6 +251,31 @@
     "invited": false
   },
   {
+    "bibcode": "2018ApJ...864..112A",
+    "title": "A Comparison of Alpha Particle and Proton Beam Differential Flows in Collisionally Young Solar Wind",
+    "authors": [
+      "Alterman, B. L.",
+      "Kasper, Justin C.",
+      "Stevens, Michael L.",
+      "Koval, Andriy"
+    ],
+    "month": "",
+    "year": "2018-09-00",
+    "journal": "The Astrophysical Journal",
+    "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
+    "citations": 99,
+    "url": "https://dx.doi.org/10.3847/1538-4357/aad23f",
+    "invited": false
+  },
+  {
     "bibcode": "2025A&A...694A.265A",
     "title": "The transition from slow to fast wind as observed in composition observations",
     "authors": [
@@ -271,7 +296,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 11,
+    "citations": 12,
     "url": "https://dx.doi.org/10.1051/0004-6361/202451550",
     "invited": false
   },
@@ -297,7 +322,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 6,
+    "citations": 9,
     "url": "https://dx.doi.org/10.1051/0004-6361/202554299",
     "invited": false
   },
@@ -575,6 +600,29 @@
     "invited": false
   },
   {
+    "bibcode": "2026ApJ...996L..12A",
+    "title": "On the Regulation of the Solar Wind Helium Abundance by the Hydrogen Compressibility",
+    "authors": [
+      "Alterman, B. L.",
+      "D'Amicis, Raffaella"
+    ],
+    "month": "",
+    "year": "2026-01-00",
+    "journal": "The Astrophysical Journal Letters",
+    "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
+    "citations": 2,
+    "url": "https://dx.doi.org/10.3847/2041-8213/ae002f",
+    "invited": false
+  },
+  {
     "bibcode": "2021ApJ...909....7K",
     "title": "Inferred Linear Stability of Parker Solar Probe Observations Using One- and Two-component Proton Distributions",
     "authors": [
@@ -609,54 +657,6 @@
     ],
     "citations": 62,
     "url": "https://dx.doi.org/10.3847/1538-4357/abd7a0",
-    "invited": false
-  },
-  {
-    "bibcode": "2026ApJ...996L..12A",
-    "title": "On the Regulation of the Solar Wind Helium Abundance by the Hydrogen Compressibility",
-    "authors": [
-      "Alterman, B. L.",
-      "D'Amicis, Raffaella"
-    ],
-    "month": "",
-    "year": "2026-01-00",
-    "journal": "The Astrophysical Journal Letters",
-    "publication_type": "article",
-    "properties": [
-      "ARTICLE",
-      "EPRINT_OPENACCESS",
-      "ESOURCE",
-      "OPENACCESS",
-      "PUB_OPENACCESS",
-      "REFEREED"
-    ],
-    "citations": 2,
-    "url": "https://dx.doi.org/10.3847/2041-8213/ae002f",
-    "invited": false
-  },
-  {
-    "bibcode": "2018ApJ...864..112A",
-    "title": "A Comparison of Alpha Particle and Proton Beam Differential Flows in Collisionally Young Solar Wind",
-    "authors": [
-      "Alterman, B. L.",
-      "Kasper, Justin C.",
-      "Stevens, Michael L.",
-      "Koval, Andriy"
-    ],
-    "month": "",
-    "year": "2018-09-00",
-    "journal": "The Astrophysical Journal",
-    "publication_type": "article",
-    "properties": [
-      "ARTICLE",
-      "EPRINT_OPENACCESS",
-      "ESOURCE",
-      "OPENACCESS",
-      "PUB_OPENACCESS",
-      "REFEREED"
-    ],
-    "citations": 99,
-    "url": "https://dx.doi.org/10.3847/1538-4357/aad23f",
     "invited": false
   },
   {
@@ -912,45 +912,6 @@
     "invited": false
   },
   {
-    "bibcode": "2023ApJ...950...51J",
-    "title": "Anterograde Collisional Analysis of Solar Wind Ions",
-    "authors": [
-      "Johnson, E.",
-      "Maruca, B. A.",
-      "McManus, M.",
-      "Klein, K. G.",
-      "Lichko, E. R.",
-      "Verniero, J.",
-      "Paulson, K. W.",
-      "DeWeese, H.",
-      "Dieguez, I.",
-      "Qudsi, R. A.",
-      "Kasper, J.",
-      "Stevens, M.",
-      "Alterman, B. L.",
-      "Wilson, L. B., III",
-      "Livi, R.",
-      "Rahmati, A.",
-      "Larson, D."
-    ],
-    "month": "",
-    "year": "2023-06-00",
-    "journal": "The Astrophysical Journal",
-    "publication_type": "article",
-    "properties": [
-      "ARTICLE",
-      "ASSOCIATED",
-      "DATA",
-      "ESOURCE",
-      "OPENACCESS",
-      "PUB_OPENACCESS",
-      "REFEREED"
-    ],
-    "citations": 7,
-    "url": "https://dx.doi.org/10.3847/1538-4357/accc32",
-    "invited": false
-  },
-  {
     "bibcode": "2022ApJ...936...83R",
     "title": "Manifestation of Gravitational Settling in Coronal Mass Ejections Measured in the Heliosphere",
     "authors": [
@@ -1046,6 +1007,45 @@
     ],
     "citations": 0,
     "url": "https://dx.doi.org/10.3847/25c2cfeb.0e9841dd",
+    "invited": false
+  },
+  {
+    "bibcode": "2023ApJ...950...51J",
+    "title": "Anterograde Collisional Analysis of Solar Wind Ions",
+    "authors": [
+      "Johnson, E.",
+      "Maruca, B. A.",
+      "McManus, M.",
+      "Klein, K. G.",
+      "Lichko, E. R.",
+      "Verniero, J.",
+      "Paulson, K. W.",
+      "DeWeese, H.",
+      "Dieguez, I.",
+      "Qudsi, R. A.",
+      "Kasper, J.",
+      "Stevens, M.",
+      "Alterman, B. L.",
+      "Wilson, L. B., III",
+      "Livi, R.",
+      "Rahmati, A.",
+      "Larson, D."
+    ],
+    "month": "",
+    "year": "2023-06-00",
+    "journal": "The Astrophysical Journal",
+    "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ASSOCIATED",
+      "DATA",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
+    "citations": 7,
+    "url": "https://dx.doi.org/10.3847/1538-4357/accc32",
     "invited": false
   },
   {
@@ -2647,6 +2647,39 @@
     "invited": false
   },
   {
+    "bibcode": "2025arXiv251203890N",
+    "title": "The May 2024 Storm: dayside magnetopause and cusps in simulated soft X-Rays",
+    "authors": [
+      "Ng, J.",
+      "Chen, L.-J.",
+      "Burkholder, B.",
+      "Sibeck, D.",
+      "Porter, F. S.",
+      "Pham, K. H.",
+      "Merkin, V. G.",
+      "Connor, H.",
+      "Bonnell, J. W.",
+      "Petrinec, S.",
+      "Zou, Y.",
+      "Alterman, B. L.",
+      "Cucho-Padin, G."
+    ],
+    "month": "",
+    "year": "2025-12-00",
+    "journal": "arXiv e-prints",
+    "publication_type": "eprint",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "NOT REFEREED",
+      "OPENACCESS"
+    ],
+    "citations": 0,
+    "url": "https://dx.doi.org/10.48550/arXiv.2512.03890",
+    "invited": false
+  },
+  {
     "bibcode": "2025AGUFMSM51A..03A",
     "title": "Interpretable Machine Learning for ICME Identification: Leveraging Solar Wind Helium Abundance, Compressibility, and Cross Helicity",
     "authors": [
@@ -2871,39 +2904,6 @@
     ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2025AGUFMSH21G2572A/abstract",
-    "invited": false
-  },
-  {
-    "bibcode": "2025arXiv251203890N",
-    "title": "The May 2024 Storm: dayside magnetopause and cusps in simulated soft X-Rays",
-    "authors": [
-      "Ng, J.",
-      "Chen, L.-J.",
-      "Burkholder, B.",
-      "Sibeck, D.",
-      "Porter, F. S.",
-      "Pham, K. H.",
-      "Merkin, V. G.",
-      "Connor, H.",
-      "Bonnell, J. W.",
-      "Petrinec, S.",
-      "Zou, Y.",
-      "Alterman, B. L.",
-      "Cucho-Padin, G."
-    ],
-    "month": "",
-    "year": "2025-12-00",
-    "journal": "arXiv e-prints",
-    "publication_type": "eprint",
-    "properties": [
-      "ARTICLE",
-      "EPRINT_OPENACCESS",
-      "ESOURCE",
-      "NOT REFEREED",
-      "OPENACCESS"
-    ],
-    "citations": 0,
-    "url": "https://dx.doi.org/10.48550/arXiv.2512.03890",
     "invited": false
   },
   {
