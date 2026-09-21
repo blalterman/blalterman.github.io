@@ -2374,6 +2374,39 @@
     "invited": false
   },
   {
+    "bibcode": "2026ApJ..1008...90O",
+    "title": "Resolving Compositional Features of Solar Wind Source Regions near the Heliospheric Current Sheet at 0.3 au",
+    "authors": [
+      "Ogasawara, Keiichi",
+      "Dewey, Ryan M.",
+      "Allegrini, Frédéric",
+      "Alterman, B. L.",
+      "Galvin, Antoinette",
+      "Horbury, Timothy S.",
+      "Kistler, Lynn",
+      "Lepri, Susan T.",
+      "Livi, Stefano A.",
+      "Louarn, Philippe",
+      "Owen, Christopher J.",
+      "Raines, James M.",
+      "Spitzer, Sarah A."
+    ],
+    "month": "",
+    "year": "2026-09-00",
+    "journal": "The Astrophysical Journal",
+    "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://dx.doi.org/10.3847/1538-4357/ae9153",
+    "invited": false
+  },
+  {
     "bibcode": "2018PhRvL.120t5102K",
     "title": "Majority of Solar Wind Intervals Support Ion-Driven Instabilities",
     "authors": [
@@ -2839,39 +2872,6 @@
     ],
     "citations": 0,
     "url": "https://scixplorer.org/abs/2023AGUFMSH51E2669W/abstract",
-    "invited": false
-  },
-  {
-    "bibcode": "2026ApJ..1008...90O",
-    "title": "Resolving Compositional Features of Solar Wind Source Regions near the Heliospheric Current Sheet at 0.3 au",
-    "authors": [
-      "Ogasawara, Keiichi",
-      "Dewey, Ryan M.",
-      "Allegrini, Frédéric",
-      "Alterman, B. L.",
-      "Galvin, Antoinette",
-      "Horbury, Timothy S.",
-      "Kistler, Lynn",
-      "Lepri, Susan T.",
-      "Livi, Stefano A.",
-      "Louarn, Philippe",
-      "Owen, Christopher J.",
-      "Raines, James M.",
-      "Spitzer, Sarah A."
-    ],
-    "month": "",
-    "year": "2026-09-00",
-    "journal": "The Astrophysical Journal",
-    "publication_type": "article",
-    "properties": [
-      "ARTICLE",
-      "ESOURCE",
-      "OPENACCESS",
-      "PUB_OPENACCESS",
-      "REFEREED"
-    ],
-    "citations": 0,
-    "url": "https://dx.doi.org/10.3847/1538-4357/ae9153",
     "invited": false
   },
   {
