@@ -7,7 +7,7 @@ workflow logs) read green for the 32 weeks that citations_by_year.json was
 frozen. This script checks the only thing none of them observe: what a visitor
 actually loads.
 
-Two assertions, neither of which needs a threshold or a calibration:
+Three assertions, none of which needs a threshold or a calibration:
 
   A. The deployed ads_metrics.json equals the committed one.
      Catches a deploy that silently serves a stale snapshot.
@@ -15,6 +15,13 @@ Two assertions, neither of which needs a threshold or a calibration:
   B. Deriving citations from the DEPLOYED metrics reproduces the DEPLOYED
      citations_by_year.json. Catches the frozen-data failure directly: a stale
      citations file cannot agree with a current metrics file.
+
+  C. Every publication the deployed Refereed page renders has a self-hosted PDF
+     in the deployed publication-pdfs.json, or an explicit exemption below.
+     data-loader.ts already warns when a registry key matches no publication;
+     nothing warned about the reverse, and the registry is hand-curated while
+     ads_publications.json is refreshed weekly, so the automated side outgrows
+     the curated one and a paper loses its Download button silently.
 
 Both are computed from artifacts fetched over the network, so a pipeline that
 never ran fails assertion A rather than passing silently.
@@ -35,6 +42,17 @@ from utils import get_public_data_dir
 
 DEFAULT_SITE = "https://blalterman.github.io"
 TIMEOUT_SECONDS = 30
+
+# Publications on the Refereed page for which no file can be served at all, each
+# paired with the reason. Assertion C treats an entry here as covered, so adding
+# one is a deliberate, reviewable act; the default for a new paper is to fail.
+PDF_EXEMPT = {
+    "2022RNAAS...6..135A": "RNAAS is published HTML-only; the AAS issues no PDF.",
+}
+
+# The slug of the category whose PDF coverage assertion C checks, as
+# publications-categories.json spells it.
+AUDITED_CATEGORY = "refereed"
 
 
 def fetch_json(site, path):
@@ -108,6 +126,65 @@ def main():
         failures.append(
             "Deployed citations_by_year.json disagrees with the deployed metrics. "
             + "; ".join(drift[:5])
+        )
+
+    # --- C. every refereed publication has a PDF or an exemption -----------
+    #
+    # The population is taken from the deployed publications-categories.json
+    # rather than hardcoded, because that file is what the page itself filters
+    # on (getPublicationsByType -> filterPublicationsByType matches
+    # publication_type only). Auditing a population derived any other way --
+    # ADS's REFEREED property, say -- would silently exclude papers the page
+    # does render, which is the same silent gap this assertion exists to close.
+    deployed_pubs = fetch_json(args.site, "data/ads_publications.json")
+    deployed_non_ads = fetch_json(args.site, "data/non_ads_publications.json")
+    deployed_pdfs = fetch_json(args.site, "data/publication-pdfs.json")
+    deployed_categories = fetch_json(args.site, "data/publications-categories.json")
+
+    audited = next(
+        c for c in deployed_categories["categories"]
+        if c["slug"] == AUDITED_CATEGORY
+    )
+    wanted = audited["publicationType"]
+    wanted = wanted if isinstance(wanted, list) else [wanted]
+
+    # loadAllPublications() merges both sources before joining the registry, so
+    # the audit must merge them too or it would miss a non-ADS entry.
+    rendered = [
+        p for p in deployed_pubs + deployed_non_ads
+        if p.get("publication_type") in wanted
+    ]
+
+    # Positive control: the category must not be empty, or "all of them have a
+    # PDF" is vacuously true.
+    print(f"  fetched: {len(rendered)} publications on /publications/"
+          f"{AUDITED_CATEGORY}, {len(deployed_pdfs)} PDF registry entries")
+    if not rendered:
+        raise RuntimeError(
+            f"No deployed publication has type {wanted}; assertion C would be vacuous."
+        )
+
+    uncovered = [
+        p["bibcode"] for p in rendered
+        if p["bibcode"] not in deployed_pdfs and p["bibcode"] not in PDF_EXEMPT
+    ]
+    stale_exemptions = [b for b in PDF_EXEMPT if b in deployed_pdfs]
+
+    if not uncovered and not stale_exemptions:
+        print(f"  PASS  every deployed {AUDITED_CATEGORY} publication has a PDF "
+              f"or a recorded exemption")
+    if uncovered:
+        failures.append(
+            f"{len(uncovered)} publication(s) on /publications/{AUDITED_CATEGORY} "
+            f"have no self-hosted PDF and no exemption: {', '.join(sorted(uncovered))}. "
+            f"Add each to public/data/publication-pdfs.json, or to PDF_EXEMPT in "
+            f"this script with the reason no file can be served."
+        )
+    if stale_exemptions:
+        failures.append(
+            f"PDF_EXEMPT names {', '.join(sorted(stale_exemptions))}, which now "
+            f"has a registry entry. Remove the exemption so it cannot mask a "
+            f"future gap."
         )
 
     if failures:
