@@ -1,6 +1,12 @@
 name: Deploy Static Site to GitHub Pages
 
 on:
+  schedule:
+    # Monday 08:00 UTC, two nominal hours after the CV build's 06:00.
+    # The gap is sized from measured queue delay, not build duration:
+    # scheduled runs here start 50min-7h late, but delays correlate within
+    # a week, so relative order holds. Do not tighten it.
+    - cron: '0 8 * * 1'
   workflow_dispatch:
   workflow_run:
     workflows:
@@ -18,7 +24,7 @@ concurrency:
 
 jobs:
   build-and-deploy:
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     permissions:
       pages: write

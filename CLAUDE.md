@@ -150,7 +150,7 @@ pip install -r scripts/requirements.txt
 - Timeline plots (triggers after data updates complete; also derives `citations_by_year.json` from `ads_metrics.json`)
 - PDF→SVG conversion (on upload)
 
-**Cross-repo:** The private CV repo (`CV-v3`) has a GitHub Action that compiles the LaTeX CV and pushes `Alterman-CV.pdf` to this repo's `public/` directory every Monday (after ADS data updates).
+**Cross-repo:** The private CV repo (`CV-v3`) has a GitHub Action that compiles the LaTeX CV and pushes `Alterman-CV.pdf` to this repo's `public/` directory every Monday (after ADS data updates). That push only lands the file; it triggers no deploy. The PDF is published by this repo's scheduled Monday 08:00 UTC deploy.
 
 📘 **See [ARCHITECTURE.md § GitHub Actions Workflows](./ARCHITECTURE.md#github-actions-workflows) for complete workflow documentation**
 

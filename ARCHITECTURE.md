@@ -371,7 +371,7 @@ blalterman.github.io/
 - `skills.json` - Technical skills data
 
 **Cross-Repo:**
-- `Alterman-CV.pdf` - Compiled CV PDF, pushed to `public/` by the private CV repo's GitHub Action. The CV generates its BibTeX from this website's JSON data, making the website the single source of truth for all publications.
+- `Alterman-CV.pdf` - Compiled CV PDF, pushed to `public/` by the private CV repo's GitHub Action. The CV generates its BibTeX from this website's JSON data, making the website the single source of truth for all publications. The push does not itself publish: `deploy.yaml` has no `push:` trigger, so the new PDF goes live at the next deploy, scheduled Mondays 08:00 UTC.
 
 [↑ Back to Table of Contents](#table-of-contents)
 
