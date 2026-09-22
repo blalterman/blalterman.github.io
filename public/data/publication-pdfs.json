@@ -1,4 +1,16 @@
 {
+  "2026ApJ..1008...90O": {
+    "path": "/papers/pdfs/2026ApJ_1008_90O.pdf",
+    "version": "vor",
+    "license": "CC-BY 4.0",
+    "source": "publisher"
+  },
+  "2026PhRvL.136y5201M": {
+    "path": "/papers/pdfs/2026PhRvL_136y5201M.pdf",
+    "version": "vor",
+    "license": "APS published version, author-posted",
+    "source": "publisher"
+  },
   "2026ApJ...999..225Y": {
     "path": "/papers/pdfs/2026ApJ_999_225Y.pdf",
     "version": "vor",
