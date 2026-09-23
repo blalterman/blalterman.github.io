@@ -89,7 +89,7 @@ jobs:
           git add public/data/publication_statistics.json
           git add public/data/publications_timeline.json
           git add public/data/citations_by_year.json
-          git add public/plots/*.svg public/plots/*.png
+          git add public/plots/
           git diff --cached --quiet && { echo "No changes"; exit 0; }
           git commit -m "Update site data [automated]"
           for i in 1 2 3 4 5; do
