@@ -4,6 +4,18 @@ Reverse-chronological session log. Newest entry on top. Written by /session:clos
 
 ---
 
+## 2026-09-23 15:15 (0fb0de4)
+- Session: 0fb0de44-056e-4ef1-bea5-19b8ccc8f508
+- Candidates: none identified
+- Done: UNLOGGED SESSION. 10 commit(s) landed with no closeout. Run `git log 1e80e9c..HEAD` for the list.
+- Decisions: none recorded.
+- Open threads: this block was written at session end by progress_stub.py because the session ended without /session:close. Replace it by running /session:close.
+- Next action: unknown.
+- Active dispatch: none
+- Active handoff: none
+- Session ended: other
+- Transcript: /Users/blalterman/.claude/projects/-Users-blalterman-observatories-code-blalterman-github-io/0fb0de44-056e-4ef1-bea5-19b8ccc8f508.jsonl
+
 ## 2026-09-22 02:05 (63168dd)
 - Session: 63168dd3-a84c-48e5-b65e-215fc13603a1
 - Candidates: 2817241, 8313e02
