@@ -12,10 +12,7 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows:
-      - "Update ADS Publications List"
-      - "Generate Figure Data"
-      - "Update ADS Citation Metrics"
-      - "Update All Timeline Plots"
+      - "Update Site Data"
       - "Convert PDFs to SVG"
     types:
       - completed
