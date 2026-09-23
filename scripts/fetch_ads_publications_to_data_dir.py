@@ -2,10 +2,9 @@ import ads
 import os
 import json
 import re
-import time
 from datetime import datetime
 from pathlib import Path
-from utils import get_public_data_dir, get_relative_path
+from utils import get_public_data_dir, get_relative_path, retry_with_backoff
 from html_to_unicode import convert_html_to_unicode
 
 import pdb
@@ -166,27 +165,29 @@ fields = [
 
 # Query ADS with retry on transient bot-protection / rate-limit responses.
 # See ads.exceptions.APIResponseError for the upstream surface.
-MAX_ATTEMPTS = 3
-BACKOFFS_SECONDS = [60, 180]  # waits between attempts 1->2 and 2->3
 
-results = None
-for attempt in range(MAX_ATTEMPTS):
-    try:
-        sq = ads.SearchQuery(orcid=ORCID, fl=fields, rows=300)
-        # ADS load-sheds the ads-api-client User-Agent during high load;
-        # override with a generic UA so requests aren't categorized as bot traffic.
-        sq.session.headers["User-Agent"] = "python-requests/2.32.3"
-        results = list(sq)
-        break
-    except ads.exceptions.APIResponseError as e:
-        if attempt < MAX_ATTEMPTS - 1:
-            wait = BACKOFFS_SECONDS[attempt]
-            print(f"⚠️  ADS API error on attempt {attempt + 1}/{MAX_ATTEMPTS}: {e}")
-            print(f"   Retrying in {wait}s...")
-            time.sleep(wait)
-        else:
-            print(f"✗ ADS API failed after {MAX_ATTEMPTS} attempts: {e}")
-            raise
+def _on_retry(attempt, exc, delay):
+    print(f"⚠️  ADS API error on attempt {attempt + 1}: {exc}")
+    print(f"   Retrying in {delay:.0f}s...")
+
+
+def _query_publications():
+    sq = ads.SearchQuery(orcid=ORCID, fl=fields, rows=300)
+    # ADS load-sheds the ads-api-client User-Agent during high load;
+    # override with a generic UA so requests aren't categorized as bot traffic.
+    sq.session.headers["User-Agent"] = "python-requests/2.32.3"
+    return list(sq)
+
+
+try:
+    results = retry_with_backoff(
+        _query_publications,
+        exceptions=(ads.exceptions.APIResponseError,),
+        on_retry=_on_retry,
+    )
+except ads.exceptions.APIResponseError as e:
+    print(f"✗ ADS API failed after exhausting retries: {e}")
+    raise
 
 # Build structured JSON data
 publications = []

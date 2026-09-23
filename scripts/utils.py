@@ -1,6 +1,8 @@
 """
 Utility functions for NASA ADS data fetching scripts.
 """
+import random
+import time
 from pathlib import Path
 
 
@@ -85,3 +87,44 @@ def get_relative_path(path: Path) -> Path:
     except ValueError:
         # Path is not within the repository
         return path
+
+
+def retry_with_backoff(fn, *, attempts=5, base_delay=30, max_delay=900,
+                        exceptions=(Exception,), on_retry=None):
+    """Call fn(), retrying with exponential backoff and jitter.
+
+    Delays are computed as min(base_delay * 2**n, max_delay) plus a small
+    random jitter, rather than read from a fixed list, so raising `attempts`
+    is a real knob (no IndexError ceiling).
+
+    Args:
+        fn: Zero-argument callable to invoke.
+        attempts: Maximum number of calls to fn (>= 1).
+        base_delay: Delay in seconds before the first retry.
+        max_delay: Upper bound on any single delay.
+        exceptions: Exception type(s) that trigger a retry.
+        on_retry: Optional callback `on_retry(attempt, exc, delay)`, called
+            before each retry sleep (attempt is 0-indexed: the attempt that
+            just failed).
+
+    Returns:
+        The return value of the first successful call to fn.
+
+    Raises:
+        The exception raised by the final attempt, if every attempt fails.
+        ValueError: If attempts < 1.
+    """
+    if attempts < 1:
+        raise ValueError(f"attempts must be >= 1, got {attempts}")
+
+    for attempt in range(attempts):
+        try:
+            return fn()
+        except exceptions as e:
+            if attempt >= attempts - 1:
+                raise
+            delay = min(base_delay * 2 ** attempt, max_delay)
+            delay += random.uniform(0, delay * 0.1)
+            if on_retry is not None:
+                on_retry(attempt, e, delay)
+            time.sleep(delay)
