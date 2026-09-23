@@ -12,7 +12,7 @@ name: Audit Deployed Data
 
 on:
   schedule:
-    - cron: '0 12 * * 1'
+    - cron: '23 12 * * 1'
   workflow_dispatch:
 
 jobs:

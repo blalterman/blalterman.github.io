@@ -2,7 +2,7 @@ name: Update ADS Citation Metrics
 
 on:
   schedule:
-    - cron: "0 1 * * 1"  # Every Monday at 01:00 UTC (3h gap before publications)
+    - cron: "23 1 * * 1"  # Every Monday at 01:23 UTC (3h gap before publications)
   workflow_dispatch:
 
 jobs:

@@ -2,7 +2,7 @@ name: Update ADS Publications List
 
 on:
   schedule:
-    - cron: "0 4 * * 1"  # Every Monday at 04:00 UTC
+    - cron: "23 4 * * 1"  # Every Monday at 04:23 UTC
   workflow_dispatch:
 
 jobs:

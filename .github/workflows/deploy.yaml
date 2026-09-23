@@ -2,11 +2,13 @@ name: Deploy Static Site to GitHub Pages
 
 on:
   schedule:
-    # Monday 08:00 UTC, two nominal hours after the CV build's 06:00.
+    # Monday 08:23 UTC, two nominal hours after the CV build's 06:23.
     # The gap is sized from measured queue delay, not build duration:
     # scheduled runs here start 50min-7h late, but delays correlate within
-    # a week, so relative order holds. Do not tighten it.
-    - cron: '0 8 * * 1'
+    # a week, so relative order holds. Do not tighten it. Minute 23 rather
+    # than 00 avoids GitHub's top-of-the-hour scheduling spike; every cron
+    # across both repos shares that offset, so the gaps are unchanged.
+    - cron: '23 8 * * 1'
   workflow_dispatch:
   workflow_run:
     workflows:
