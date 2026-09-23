@@ -2,8 +2,13 @@ name: Update All Timeline Plots
 
 on:
   workflow_run:
+    # Publications only, deliberately. Listing metrics as well made this run
+    # twice every Monday, once after each, doing identical work and committing
+    # an identical plot diff both times (2026-09-21: 05:57 and 09:49).
+    # Publications runs last, and derive_citations_by_year.py reads
+    # ads_metrics.json which metrics has already committed by then, so one run
+    # after publications sees complete data.
     workflows:
-      - "Update ADS Citation Metrics"
       - "Update ADS Publications List"
     types:
       - completed
