@@ -37,7 +37,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 25,
+    "citations": 26,
     "url": "https://dx.doi.org/10.3847/1538-4357/ada699",
     "invited": false
   },
@@ -147,7 +147,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 121,
+    "citations": 122,
     "url": "https://dx.doi.org/10.3847/1538-4365/ab86af",
     "invited": false
   },
@@ -322,7 +322,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 101,
+    "citations": 102,
     "url": "https://dx.doi.org/10.3847/1538-4357/aad23f",
     "invited": false
   },
@@ -363,7 +363,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 60,
+    "citations": 61,
     "url": "https://dx.doi.org/10.3847/1538-4357/ac36d5",
     "invited": false
   },
@@ -407,7 +407,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 22,
+    "citations": 23,
     "url": "https://dx.doi.org/10.3847/2041-8213/ade0ac",
     "invited": false
   },
@@ -432,7 +432,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 13,
+    "citations": 14,
     "url": "https://dx.doi.org/10.1051/0004-6361/202451550",
     "invited": false
   },
@@ -469,7 +469,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 62,
+    "citations": 63,
     "url": "https://dx.doi.org/10.3847/1538-4357/abd7a0",
     "invited": false
   },
@@ -574,7 +574,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 48,
+    "citations": 50,
     "url": "https://dx.doi.org/10.3847/2041-8213/ab4adc",
     "invited": false
   },
@@ -658,6 +658,7 @@
     "publication_type": "article",
     "properties": [
       "ARTICLE",
+      "DATA",
       "EPRINT_OPENACCESS",
       "ESOURCE",
       "OPENACCESS",
@@ -688,7 +689,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 51,
+    "citations": 52,
     "url": "https://dx.doi.org/10.3847/2041-8213/ab2391",
     "invited": false
   },
@@ -722,7 +723,7 @@
       "PUB_OPENACCESS",
       "REFEREED"
     ],
-    "citations": 39,
+    "citations": 40,
     "url": "https://dx.doi.org/10.1093/mnras/staa2770",
     "invited": false
   },
@@ -776,7 +777,7 @@
       "OPENACCESS",
       "REFEREED"
     ],
-    "citations": 3,
+    "citations": 4,
     "url": "https://dx.doi.org/10.1103/nlq9-2g37",
     "invited": false
   },
@@ -828,6 +829,32 @@
     "invited": false
   },
   {
+    "bibcode": "2023ApJ...952...42A",
+    "title": "Solar Cycle Variation of 0.3-1.29 MeV Nucleon⁻¹ Heavy Ion Composition During Quiet Times Near 1 au in Solar Cycles 23 and 24",
+    "authors": [
+      "Alterman, B. L.",
+      "Desai, Mihir I.",
+      "Dayeh, Maher A.",
+      "Mason, Glenn M.",
+      "Ho, George"
+    ],
+    "month": "",
+    "year": "2023-07-00",
+    "journal": "The Astrophysical Journal",
+    "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "EPRINT_OPENACCESS",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
+    "citations": 6,
+    "url": "https://dx.doi.org/10.3847/1538-4357/acd24a",
+    "invited": false
+  },
+  {
     "bibcode": "2022ApJ...936...83R",
     "title": "Manifestation of Gravitational Settling in Coronal Mass Ejections Measured in the Heliosphere",
     "authors": [
@@ -852,32 +879,6 @@
     ],
     "citations": 15,
     "url": "https://dx.doi.org/10.3847/1538-4357/ac8873",
-    "invited": false
-  },
-  {
-    "bibcode": "2023ApJ...952...42A",
-    "title": "Solar Cycle Variation of 0.3-1.29 MeV Nucleon⁻¹ Heavy Ion Composition During Quiet Times Near 1 au in Solar Cycles 23 and 24",
-    "authors": [
-      "Alterman, B. L.",
-      "Desai, Mihir I.",
-      "Dayeh, Maher A.",
-      "Mason, Glenn M.",
-      "Ho, George"
-    ],
-    "month": "",
-    "year": "2023-07-00",
-    "journal": "The Astrophysical Journal",
-    "publication_type": "article",
-    "properties": [
-      "ARTICLE",
-      "EPRINT_OPENACCESS",
-      "ESOURCE",
-      "OPENACCESS",
-      "PUB_OPENACCESS",
-      "REFEREED"
-    ],
-    "citations": 6,
-    "url": "https://dx.doi.org/10.3847/1538-4357/acd24a",
     "invited": false
   },
   {
@@ -2374,39 +2375,6 @@
     "invited": false
   },
   {
-    "bibcode": "2026ApJ..1008...90O",
-    "title": "Resolving Compositional Features of Solar Wind Source Regions near the Heliospheric Current Sheet at 0.3 au",
-    "authors": [
-      "Ogasawara, Keiichi",
-      "Dewey, Ryan M.",
-      "Allegrini, Frédéric",
-      "Alterman, B. L.",
-      "Galvin, Antoinette",
-      "Horbury, Timothy S.",
-      "Kistler, Lynn",
-      "Lepri, Susan T.",
-      "Livi, Stefano A.",
-      "Louarn, Philippe",
-      "Owen, Christopher J.",
-      "Raines, James M.",
-      "Spitzer, Sarah A."
-    ],
-    "month": "",
-    "year": "2026-09-00",
-    "journal": "The Astrophysical Journal",
-    "publication_type": "article",
-    "properties": [
-      "ARTICLE",
-      "ESOURCE",
-      "OPENACCESS",
-      "PUB_OPENACCESS",
-      "REFEREED"
-    ],
-    "citations": 0,
-    "url": "https://dx.doi.org/10.3847/1538-4357/ae9153",
-    "invited": false
-  },
-  {
     "bibcode": "2018PhRvL.120t5102K",
     "title": "Majority of Solar Wind Intervals Support Ion-Driven Instabilities",
     "authors": [
@@ -2520,6 +2488,39 @@
     ],
     "citations": 18,
     "url": "https://dx.doi.org/10.3389/fspas.2022.1056347",
+    "invited": false
+  },
+  {
+    "bibcode": "2026ApJ..1008...90O",
+    "title": "Resolving Compositional Features of Solar Wind Source Regions near the Heliospheric Current Sheet at 0.3 au",
+    "authors": [
+      "Ogasawara, Keiichi",
+      "Dewey, Ryan M.",
+      "Allegrini, Frédéric",
+      "Alterman, B. L.",
+      "Galvin, Antoinette",
+      "Horbury, Timothy S.",
+      "Kistler, Lynn",
+      "Lepri, Susan T.",
+      "Livi, Stefano A.",
+      "Louarn, Philippe",
+      "Owen, Christopher J.",
+      "Raines, James M.",
+      "Spitzer, Sarah A."
+    ],
+    "month": "",
+    "year": "2026-09-00",
+    "journal": "The Astrophysical Journal",
+    "publication_type": "article",
+    "properties": [
+      "ARTICLE",
+      "ESOURCE",
+      "OPENACCESS",
+      "PUB_OPENACCESS",
+      "REFEREED"
+    ],
+    "citations": 0,
+    "url": "https://dx.doi.org/10.3847/1538-4357/ae9153",
     "invited": false
   },
   {
