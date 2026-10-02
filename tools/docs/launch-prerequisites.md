@@ -61,7 +61,7 @@ Format: `- [ ] Port 9002: {FREE / OCCUPIED by PID <N> — kill with 'kill <N>'}`
 
 ## Required Data Files
 
-Files auto-fetched weekly via GitHub Actions workflows (`update-ads-publications.yml`, `update-ads-metrics.yml`); `citations_by_year.json` is derived from `ads_metrics.json` by `update_plots.yml`. Manual refresh via `python3 scripts/fetch_ads_publications.py` and siblings if missing.
+Files auto-fetched weekly by the `update-site-data.yml` GitHub Actions workflow, which also derives `citations_by_year.json` from `ads_metrics.json`. Manual refresh via `python3 scripts/fetch_ads_metrics_to_data_dir.py --orcid $ADS_ORCID`, `python3 scripts/fetch_ads_publications_to_data_dir.py`, then `python3 scripts/derive_citations_by_year.py` if missing.
 
 ```bash
 test -f /Users/blalterman/observatories/code/blalterman.github.io/public/data/ads_publications.json \

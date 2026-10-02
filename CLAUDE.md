@@ -145,12 +145,13 @@ pip install -r scripts/requirements.txt
 
 ### 3. GitHub Actions Automation
 
-**5 workflows** handle data updates and deployment:
-- Publications, metrics (weekly Mon updates)
-- Timeline plots (triggers after data updates complete; also derives `citations_by_year.json` from `ads_metrics.json`)
-- PDF→SVG conversion (on upload)
+**4 workflows** handle data updates and deployment:
+- `update-site-data.yml`: one Monday 01:23 UTC job that fetches ADS metrics and publications, derives `citations_by_year.json`, and regenerates the timeline plots
+- `deploy.yaml`: runs after a successful data update or PDF conversion, Mondays 08:23 UTC, or on manual dispatch. **A push to `main` does not deploy.**
+- `audit-deployed-data.yml`: Monday 12:23 UTC check of the live site against the repo
+- `convert-pdfs.yml`: research-corpus figure PDFs → SVG, on a submodule update
 
-**Cross-repo:** The private CV repo (`CV-v3`) has a GitHub Action that compiles the LaTeX CV and pushes `Alterman-CV.pdf` to this repo's `public/` directory every Monday (after ADS data updates). That push only lands the file; it triggers no deploy. The PDF is published by this repo's scheduled Monday 08:00 UTC deploy.
+**Cross-repo:** The private CV repo (`CV-v3`) has a GitHub Action that compiles the LaTeX CV and pushes `Alterman-CV.pdf` to this repo's `public/` directory every Monday (after ADS data updates). That push only lands the file; it triggers no deploy. The PDF is published by this repo's scheduled Monday 08:23 UTC deploy.
 
 📘 **See [ARCHITECTURE.md § GitHub Actions Workflows](./ARCHITECTURE.md#github-actions-workflows) for complete workflow documentation**
 

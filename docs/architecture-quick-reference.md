@@ -20,8 +20,8 @@
 - **Utility functions** → [Utility Functions](../ARCHITECTURE.md#utility-functions)
 
 ### Automation
-- **How do publications update?** → [Update ADS Publications](../ARCHITECTURE.md#1-update-ads-publications)
-- **How do metrics update?** → [Update ADS Metrics](../ARCHITECTURE.md#2-update-ads-metrics)
+- **How do publications update?** → [Update Site Data](../ARCHITECTURE.md#1-update-site-data)
+- **How do metrics update?** → [Update Site Data](../ARCHITECTURE.md#1-update-site-data)
 - **How do figures convert?** → [Convert PDFs to SVG](../ARCHITECTURE.md#4-convert-pdfs-to-svg)
 - **All workflows** → [GitHub Actions Workflows](../ARCHITECTURE.md#github-actions-workflows)
 

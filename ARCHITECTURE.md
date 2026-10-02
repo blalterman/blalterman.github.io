@@ -150,11 +150,10 @@ This is a **statically-generated academic portfolio website** for B. L. Alterman
 blalterman.github.io/
 ├── .github/
 │   └── workflows/                    # GitHub Actions automation
-│       ├── update-ads-publications.yml
-│       ├── update-ads-metrics.yml
-│       ├── update_plots.yml
-│       ├── convert-pdfs.yml
-│       └── deploy.yaml (implied)
+│       ├── update-site-data.yml      # Weekly ADS data + plots
+│       ├── deploy.yaml               # Build + publish to GitHub Pages
+│       ├── audit-deployed-data.yml   # Weekly live-site check
+│       └── convert-pdfs.yml          # research-corpus figures → SVG
 │
 ├── src/
 │   ├── app/                          # Next.js App Router pages
@@ -371,7 +370,7 @@ blalterman.github.io/
 - `skills.json` - Technical skills data
 
 **Cross-Repo:**
-- `Alterman-CV.pdf` - Compiled CV PDF, pushed to `public/` by the private CV repo's GitHub Action. The CV generates its BibTeX from this website's JSON data, making the website the single source of truth for all publications. The push does not itself publish: `deploy.yaml` has no `push:` trigger, so the new PDF goes live at the next deploy, scheduled Mondays 08:00 UTC.
+- `Alterman-CV.pdf` - Compiled CV PDF, pushed to `public/` by the private CV repo's GitHub Action. The CV generates its BibTeX from this website's JSON data, making the website the single source of truth for all publications. The push does not itself publish: `deploy.yaml` has no `push:` trigger, so the new PDF goes live at the next deploy, scheduled Mondays 08:23 UTC.
 
 [↑ Back to Table of Contents](#table-of-contents)
 
@@ -387,35 +386,40 @@ blalterman.github.io/
 > **Related Sections:** [Data Flow Architecture](#data-flow-architecture) • [Python Scripts](#python-scripts) • [Deployment Process](#deployment-process)
 >
 > **Quick Links:**
-> - [Update Publications](#1-update-ads-publications)
-> - [Update Metrics](#2-update-ads-metrics)
-> - [Update Citations](#3-update-annual-citations)
-> - [Generate Timeline Plots](#4-generate-timeline-plots)
-> - [Convert PDFs](#5-convert-pdfs-to-svg)
+> - [Update Site Data](#1-update-site-data)
+> - [Deploy Static Site](#2-deploy-static-site)
+> - [Audit Deployed Data](#3-audit-deployed-data)
+> - [Convert PDFs](#4-convert-pdfs-to-svg)
 ---
 
-### 1. Update ADS Publications
+### 1. Update Site Data
 
-**File:** `.github/workflows/update-ads-publications.yml`
+**File:** `.github/workflows/update-site-data.yml`
 
-**Trigger:** Weekly on Mondays at 04:00 UTC (or manual dispatch)
+**Trigger:** Weekly on Mondays at 01:23 UTC (or manual dispatch)
 
-**Purpose:** Fetch latest publications from NASA ADS using ORCID
+**Purpose:** Refresh every ADS-derived data file and regenerate the timeline plots in a single job. Step order enforces the dependencies between them, so no step can read a file an earlier step has not yet written.
 
 **Process:**
-1. Checkout repository
-2. Set up Python 3.10
-3. Install dependencies from `scripts/requirements.txt`
-4. Run `fetch_ads_publications_to_data_dir.py`
-5. Commit changes to main if any exist
+1. Checkout repository, set up Python 3.10, install `scripts/requirements.txt`
+2. `fetch_ads_metrics_to_data_dir.py --orcid $ADS_ORCID` → `ads_metrics.json`
+3. Pause 60 s between the two ADS calls
+4. `fetch_ads_publications_to_data_dir.py` → `ads_publications.json`
+5. `merge_invited_conferences.py`, then `generate_publication_statistics.py` → `publication_statistics.json`
+6. `derive_citations_by_year.py` - reshapes the citation histogram already present in `ads_metrics.json` into `citations_by_year.json`, with no additional API call
+7. `generate_citations_timeline.py`, `generate_publications_timeline.py`, `generate_h_index_timeline.py`
+8. Commit all changed data and plots as one "Update site data [automated]" commit, retrying the push up to 5 times with a rebase between attempts
+9. Open a `workflow-failure` issue if any step fails
 
-**Output:** `/public/data/ads_publications.json`
+**Outputs:**
+- `/public/data/ads_metrics.json`, `ads_publications.json`, `non_ads_publications.json`, `publication_statistics.json`, `publications_timeline.json`, `citations_by_year.json`
+- `/public/plots/` - publication, h-index, and citation timelines as `.svg` and `.png`, light and `_dark` variants (staged by directory, so every variant is committed)
 
 **Dependencies:**
 - `ADS_DEV_KEY` (GitHub secret)
 - `ADS_ORCID` (GitHub secret)
 
-**Data Format:**
+**`ads_publications.json` format:**
 ```json
 [
   {
@@ -432,63 +436,42 @@ blalterman.github.io/
 ]
 ```
 
----
-
-### 2. Update ADS Metrics
-
-**File:** `.github/workflows/update-ads-metrics.yml`
-
-**Trigger:** Weekly on Mondays at 03:00 UTC (or manual dispatch)
-
-**Purpose:** Fetch citation metrics (h-index, total citations, etc.)
-
-**Process:**
-1. Run `fetch_ads_metrics_to_data_dir.py` with ORCID argument
-2. Make API request to NASA ADS metrics endpoint
-3. Commit updated metrics
-
-**Output:** `/public/data/ads_metrics.json`
-
-**Used By:** Publications page for displaying h-index and citation statistics
-
-**Data Format:**
+**`ads_metrics.json` format (abridged):**
 ```json
 {
   "indicators": { "h": 8 },
   "basic stats": { "number of papers": 15 },
   "citation stats": { "total number of citations": 42 },
   "basic stats refereed": { "number of papers": 12 },
-  "citation stats refereed": { "total number of citations": 38 }
+  "citation stats refereed": { "total number of citations": 38 },
+  "histograms": { "citations": { "refereed to refereed": { "2025": 0 } } }
 }
 ```
 
 ---
 
-### 3. Generate Timeline Plots
+### 2. Deploy Static Site
 
-**File:** `.github/workflows/update_plots.yml`
+**File:** `.github/workflows/deploy.yaml`
 
-**Trigger:** `workflow_run` (executes after ADS workflows complete successfully) or manual dispatch
+**Trigger:**
+- `workflow_run` on successful completion of **Update Site Data** or **Convert PDFs to SVG**
+- Weekly on Mondays at 08:23 UTC, which publishes the CV PDF the private CV repo pushes earlier that morning
+- Manual dispatch
 
-**Purpose:** Derive yearly citation counts, then generate publication, h-index, and citation timeline visualizations after data updates
+**There is no `push` trigger.** A commit that changes only code or hand-edited JSON is not published until the next scheduled run, so dispatch this workflow manually to ship it sooner.
 
-**Process:**
-1. Waits for completion of the 2 ADS data workflows (publications, metrics)
-2. Runs `derive_citations_by_year.py` - reshapes the citation histogram already present in `ads_metrics.json` into `citations_by_year.json`, with no additional API call
-3. Runs `generate_citations_timeline.py` - creates citation trends visualization
-4. Runs `generate_publications_timeline.py` - creates publication counts by year/category
-5. Runs `generate_h_index_timeline.py` - creates h-index growth visualization
-6. Commits generated plots and data files
-7. Opens a labeled GitHub issue if any step fails
+**Process:** checkout `main`, `npm ci`, `npm run build`, upload `./out` as the Pages artifact, deploy. The `deploy` concurrency group cancels an in-progress deploy when a newer one starts.
 
-**Outputs:**
-- `/public/data/publications_timeline.json`
-- `/public/data/citations_by_year.json`
-- `/public/plots/publications_timeline.svg` and `.png`
-- `/public/plots/h_index_timeline.svg` and `.png`
-- `/public/plots/citations_by_year.svg` and `.png` (light and `_dark` variants)
+---
 
-**Key Feature:** Uses `workflow_run` trigger to ensure data dependencies are met before visualization generation. Stages plots by glob, so every theme variant is committed.
+### 3. Audit Deployed Data
+
+**File:** `.github/workflows/audit-deployed-data.yml`
+
+**Trigger:** Weekly on Mondays at 12:23 UTC (or manual dispatch)
+
+**Purpose:** Check what a visitor actually loads by running `scripts/audit_deployed_data.py` against the live site, comparing the deployed data with the repository. It is deliberately on its own schedule rather than `workflow_run`: a post-deploy hook only runs when a deploy happens, so it cannot notice a pipeline that stopped running.
 
 ---
 
@@ -496,82 +479,57 @@ blalterman.github.io/
 
 **File:** `.github/workflows/convert-pdfs.yml`
 
-**Trigger:** On push to `public/paper-figures/pdfs/` directory
+**Trigger:** Push that changes the `research-corpus` submodule pointer (or manual dispatch)
 
-**Purpose:** Auto-convert PDF figures to web-friendly SVG format
+**Purpose:** Convert paper figures from the research corpus into web-ready files
 
 **Process:**
-1. Install `poppler-utils` for PDF conversion
-2. Use `pdftocairo` to convert each PDF to SVG
-3. Save to `/public/paper-figures/svg/`
-4. Auto-commit SVG files
-
-**Benefit:** Simplifies figure management - just upload PDFs and they're automatically converted
+1. Checkout with submodules, install `poppler-utils`
+2. For each `research-corpus/papers/<paper_id>/figures/fig_*.pdf`, run `pdftocairo -svg` into `public/papers/<paper_id>/figures/`
+3. Fall back to a 300 dpi PNG when an SVG exceeds 50 MB
+4. Auto-commit the converted files
 
 ---
 
 ### Workflow Dependencies & Triggers
 
-The 5 workflows are orchestrated with specific dependencies and trigger patterns to ensure data consistency and proper update sequencing.
-
 ```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                         WEEKLY SCHEDULED UPDATES                         │
-│                          (Every Monday, UTC)                             │
-└─────────────────────────────────────────────────────────────────────────┘
+MONDAY (UTC)
+════════════
 
-TIME-BASED TRIGGERS (Parallel Execution):
-══════════════════════════════════════════
+01:23  update-site-data.yml   (schedule)
+         metrics → publications → statistics → citations_by_year → plots
+         one commit: "Update site data [automated]"
+            │
+            │ workflow_run (success)
+            ▼
+       deploy.yaml            build + publish to GitHub Pages
 
-01:00 UTC ┌──────────────────────────────────────┐
-    ┌─────┤ update-ads-metrics.yml                │
-    │     │ → ads_metrics.json                    │
-    │     └──────────────────────────────────────┘
-    │
-04:00 UTC ┌──────────────────────────────────────┐
-    └─────┤ update-ads-publications.yml           │
-          │ → ads_publications.json               │
-          │ → invited_metrics.json                │
-          │ → publication_statistics.json         │
-          └──────────────────────────────────────┘
-                        │
-                        │ (after both complete)
-                        ▼
-            ┌──────────────────────────────────────┐
-            │ update_plots.yml                     │
-            │ TRIGGER: workflow_run (dependency)   │
-            │                                       │
-            │ → citations_by_year.json (derived)   │
-            │ → publications_timeline.json/.svg    │
-            │ → h_index_timeline.svg/.png          │
-            │ → citations_by_year.svg/.png         │
-            └──────────────────────────────────────┘
+08:23  deploy.yaml            (schedule; publishes the CV PDF pushed by CV-v3)
 
-══════════════════════════════════════════
-EVENT-BASED TRIGGERS (Independent):
-══════════════════════════════════════════
+12:23  audit-deployed-data.yml (schedule; checks the live site)
 
-On Push to              ┌──────────────────────────────────────┐
-paper-figures/pdfs/     │ convert-pdfs.yml                     │
-          └─────────────┤ → paper-figures/svg/*.svg            │
-                        └──────────────────────────────────────┘
+ON EVENT
+════════
 
-══════════════════════════════════════════
-TRIGGER SUMMARY:
-══════════════════════════════════════════
+push changing research-corpus ──► convert-pdfs.yml ──workflow_run──► deploy.yaml
 
-• schedule (cron) ····· 3 workflows (00:00, 03:00, 04:00 UTC Mon)
-• workflow_run ········ 1 workflow (plots - waits for data)
-• push (path) ········· 1 workflow (PDFs)
-• workflow_dispatch ··· All 5 (manual trigger available)
+TRIGGER SUMMARY
+═══════════════
+
+• schedule ··········· update-site-data, deploy, audit-deployed-data
+• workflow_run ······· deploy (after update-site-data or convert-pdfs)
+• push (path) ········ convert-pdfs
+• workflow_dispatch ·· all 4
 ```
 
 **Key Design Decisions:**
 
-1. **Staggered Schedule:** Citations (00:00) → Metrics (03:00) → Publications (04:00) prevents API rate limiting
-2. **Dependent Workflow:** Timeline plots wait for all 3 ADS workflows to complete before generating visualizations
-3. **Independent Events:** PDF conversion runs independently when figure PDFs are pushed
-4. **Manual Overrides:** All workflows support `workflow_dispatch` for on-demand execution
+1. **One data job, not several:** the ADS fetches, derivations, and plots run as ordered steps in a single job, so ordering is guaranteed by step sequence instead of cross-workflow `workflow_run` chains, and a week's data lands as one commit.
+2. **Minute 23, not :00:** every cron avoids GitHub's top-of-the-hour scheduling spike.
+3. **Deploy is not push-triggered:** deploys follow data updates and the Monday schedule; code changes ship by manual dispatch or at the next scheduled run.
+4. **Independent audit:** the audit runs on its own clock so that a silent pipeline is detectable.
+5. **Manual overrides:** every workflow supports `workflow_dispatch`.
 
 [↑ Back to Table of Contents](#table-of-contents)
 
@@ -639,7 +597,7 @@ The automation scripts follow a clear **separation of concerns** pattern with th
 - Each script fetches from a single source (NASA ADS API)
 - Outputs one primary JSON file
 - No dependencies on other scripts' output
-- Run independently on staggered schedule (Monday 01:00, 04:00 UTC)
+- Run as the first steps of `update-site-data.yml` (Monday 01:23 UTC), metrics then publications, 60 s apart
 
 `citations_by_year.json` is not fetched. It is derived from `ads_metrics.json`
 by `derive_citations_by_year.py` in Layer 2, since the ADS metrics payload
@@ -693,7 +651,7 @@ already contains the citation histogram.
 - Read from Layer 1 or Layer 2 outputs
 - No API calls - visualization only
 - Generate both JSON data and plot files (.svg/.png)
-- Triggered by `workflow_run` after data updates complete
+- Run as steps of `update-site-data.yml`, after the data steps they read
 
 #### Benefits of This Pattern
 
@@ -702,25 +660,24 @@ already contains the citation histogram.
 3. **Resilience:** API failures only affect Layer 1; Layers 2-3 can still run with cached data
 4. **Flexibility:** Can re-generate visualizations without re-fetching from APIs
 5. **Clear Dependencies:** Layer 2 depends on Layer 1; Layer 3 depends on Layers 1-2
-6. **Parallel Execution:** Layer 1 scripts run in parallel (staggered for rate limiting)
-7. **Caching:** Only Layer 1 implements caching (7-day for citations)
+6. **Ordered Execution:** All three layers run as sequential steps of one job, so each layer reads only files an earlier step has written
+7. **No Caching:** Every run fetches fresh from ADS. Do not add a file-mtime cache: `actions/checkout` resets mtimes, so such a cache always reads as fresh in CI and the fetch never runs
 
 #### Data Flow Example
 
 ```
-Monday 00:00-04:00 UTC (Layer 1 - Parallel):
-├─ fetch_ads_citations → citations_by_year.json
+Monday 01:23 UTC, update-site-data.yml (one job, steps in order):
+Layer 1:
 ├─ fetch_ads_metrics → ads_metrics.json
 └─ fetch_ads_publications → ads_publications.json
            │
-           ├─ merge_invited_conferences → ads_publications.json (enriched)
-           ├─ compute_invited_metrics → invited_metrics.json
-           └─ generate_publication_statistics → publication_statistics.json
+Layer 2:   ├─ merge_invited_conferences → ads_publications.json (enriched)
+           ├─ generate_publication_statistics → publication_statistics.json
+           └─ derive_citations_by_year → citations_by_year.json (from ads_metrics.json)
                         │
-                        └─ (Layer 3 - After all complete):
-                           ├─ generate_publications_timeline
-                           ├─ generate_citations_timeline
-                           └─ generate_h_index_timeline
+Layer 3:                ├─ generate_citations_timeline
+                        ├─ generate_publications_timeline
+                        └─ generate_h_index_timeline
 ```
 
 ---
@@ -1554,7 +1511,7 @@ const publishedTopics = filterPublishedProjects(topics);
 
 #### `ads_publications.json` (~3,600 lines)
 
-**Updated:** Weekly on Mondays at 04:00 UTC
+**Updated:** Weekly on Mondays, `update-site-data.yml` (01:23 UTC)
 
 **Source:** NASA ADS API via ORCID
 
@@ -1595,7 +1552,7 @@ const publishedTopics = filterPublishedProjects(topics);
 
 #### `ads_metrics.json` (~679 lines)
 
-**Updated:** Weekly on Mondays at 03:00 UTC
+**Updated:** Weekly on Mondays, `update-site-data.yml` (01:23 UTC)
 
 **Source:** NASA ADS Metrics API
 
@@ -1644,7 +1601,7 @@ const publishedTopics = filterPublishedProjects(topics);
 
 #### `citations_by_year.json` (~43 lines)
 
-**Updated:** Weekly on Mondays at 00:00 UTC
+**Updated:** Weekly on Mondays, derived by `update-site-data.yml` (01:23 UTC)
 
 **Source:** NASA ADS Metrics API
 
@@ -2462,86 +2419,49 @@ npm run start
 
 ### Automated Deployment
 
-**Trigger:** Push to `main` branch
+**Workflow:** `.github/workflows/deploy.yaml`
+
+**Triggers:**
+- Successful completion of **Update Site Data** or **Convert PDFs to SVG** (`workflow_run`)
+- Mondays 08:23 UTC (`schedule`), which publishes the CV PDF pushed by the private CV repo
+- Manual dispatch
+
+A push to `main` does **not** deploy. Code-only changes go live at the next scheduled run unless dispatched manually.
 
 **Process:**
-1. **Data Workflows Run:**
-   - Update ADS publications (if Monday 04:00 UTC)
-   - Update ADS metrics (if Monday 03:00 UTC)
-   - Update annual citations (if Monday 00:00 UTC)
-   - Generate figure data (if data files changed)
-
-2. **Build Workflow:**
-   - Checkout repository
-   - Install Node.js dependencies
-   - Run `npm run build`
-   - Generate static site to `/out`
-
-3. **Deploy to GitHub Pages:**
-   - Push `/out` contents to `gh-pages` branch
-   - GitHub Pages serves from `gh-pages` branch
-   - Site available at: https://blalterman.github.io
-
-**Result:** Site automatically updates with latest data and content
+1. Checkout `main`
+2. `npm ci`, then `npm run build` (static export to `/out`)
+3. Upload `/out` as a GitHub Pages artifact (`actions/upload-pages-artifact`)
+4. Deploy it (`actions/deploy-pages`); the site is served at https://blalterman.github.io
 
 ---
 
 ### Manual Deployment
 
-**1. Build Locally:**
+Dispatch the deploy workflow, which builds from `main` on GitHub:
+
 ```bash
-npm run build
+gh workflow run deploy.yaml --ref main
+gh run watch "$(gh run list -w 'Deploy Static Site to GitHub Pages' -L1 --json databaseId --jq '.[0].databaseId')"
 ```
 
-**2. Deploy to GitHub Pages:**
-```bash
-# Install gh-pages package if not already installed
-npm install -g gh-pages
+Pages serves the artifact the workflow uploads, not a `gh-pages` branch, so pushing a locally built `/out` anywhere does not publish it.
 
-# Deploy /out directory to gh-pages branch
-gh-pages -d out
-```
-
-**3. Verify Deployment:**
-Visit https://blalterman.github.io
+**Verify:** visit https://blalterman.github.io
 
 ---
 
 ### Deployment Flow Diagram
 
 ```
-┌─────────────────┐
-│  Push to main   │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────────────────┐
-│  GitHub Actions Triggered   │
-└────────┬────────────────────┘
-         │
-         ├──→ Data Workflows (if scheduled)
-         │    ├─ Update publications
-         │    ├─ Update metrics
-         │    └─ Update citations
-         │
-         ├──→ Figure Data Generation (if data changed)
-         │
-         └──→ Build Workflow
-              ├─ npm install
-              ├─ npm run build
-              └─ Generate /out
-                       │
-                       ▼
-              ┌────────────────┐
-              │  Deploy to     │
-              │  gh-pages      │
-              └────────┬───────┘
-                       │
-                       ▼
-              ┌────────────────┐
-              │  GitHub Pages  │
-              │  Serves Site   │
-              └────────────────┘
+update-site-data.yml ──┐
+(Mon 01:23, success)   │ workflow_run
+convert-pdfs.yml ──────┤
+(success)              ▼
+Mon 08:23 schedule ──► deploy.yaml ──► npm ci → npm run build → /out
+manual dispatch ─────►     │
+                           ▼
+                upload-pages-artifact → deploy-pages → GitHub Pages
 ```
 
 [↑ Back to Table of Contents](#table-of-contents)

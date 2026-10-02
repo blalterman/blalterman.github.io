@@ -8,12 +8,12 @@ A key feature of this project is its set of automated data workflows, which use 
 
 The website relies on a series of GitHub Actions to automate content updates. Here is a breakdown of the key workflows found in the `.github/workflows/` directory:
 
--   **`update-ads-publications.yml`**: Runs on a weekly schedule to fetch the latest publication list from the NASA ADS API using a personal ORCID. It saves the formatted data to `public/data/ads_publications.json`.
--   **`update-ads-metrics.yml`**: Runs on a weekly schedule to fetch up-to-date citation metrics (like h-index and total citations) from the NASA ADS API. It saves the data to `public/data/ads_metrics.json`.
--   **`convert-pdfs.yml`**: Triggers on any push to the `public/paper-figures/pdfs/` directory. It automatically converts any new or modified PDF files into SVG format and saves them in `public/paper-figures/svg/`, making them web-ready.
--   **`update_plots.yml`**: Triggers automatically after the two ADS data workflows complete. It derives year-by-year citation counts from `ads_metrics.json`, then generates publication, h-index, and citation timeline visualizations using Python scripts and saves both JSON data and SVG/PNG plots to the `public/` directories.
+-   **`update-site-data.yml`**: Runs every Monday at 01:23 UTC as a single job. It fetches citation metrics and the publication list from the NASA ADS API (via ORCID), merges invited talks, generates publication statistics, derives year-by-year citation counts from `ads_metrics.json`, and regenerates the publication, h-index, and citation timeline plots, committing everything as one `[automated]` commit.
+-   **`deploy.yaml`**: Builds the Next.js static export (`output: 'export'` in `next.config.ts`) and publishes it to GitHub Pages. It runs after a successful `update-site-data.yml` or `convert-pdfs.yml`, every Monday at 08:23 UTC, or on manual dispatch.
+-   **`audit-deployed-data.yml`**: Runs every Monday at 12:23 UTC and checks the live site's data against the repository.
+-   **`convert-pdfs.yml`**: Triggers on a push that updates the `research-corpus` submodule. It converts each paper's `fig_*.pdf` figures to SVG under `public/papers/<paper_id>/figures/`, falling back to PNG for very large figures.
 
-**Deployment:** The site deploys automatically to GitHub Pages via the Next.js static export configuration (`output: 'export'` in `next.config.ts`). GitHub Pages builds and publishes changes whenever commits are pushed to the main branch.
+**Deployment:** Pushing to `main` does not deploy by itself. Changes go live after the next data update or the Monday 08:23 UTC scheduled deploy, or immediately with `gh workflow run deploy.yaml --ref main`.
 
 ## Data Architecture and Content Pipeline
 
@@ -24,15 +24,15 @@ Below is a breakdown of the key data files and their role in the content pipelin
 ### Publication Data
 
 -   **`ads_publications.json`**:
-    -   **Origin**: Auto-generated weekly by the `update-ads-publications.yml` workflow.
+    -   **Origin**: Auto-generated weekly by the `update-site-data.yml` workflow.
     -   **Purpose**: Contains the comprehensive list of all publications from NASA ADS.
     -   **Usage**: Consumed by the **Publications Page** (`src/app/publications/page.tsx`) to build the various publication tables. It is also a key input for the `generate_figure_data.py` script.
 -   **`ads_metrics.json`**:
-    -   **Origin**: Auto-generated weekly by the `update-ads-metrics.yml` workflow.
+    -   **Origin**: Auto-generated weekly by the `update-site-data.yml` workflow.
     -   **Purpose**: Contains key citation statistics (h-index, total citations, etc.).
     -   **Usage**: Consumed by the **Publications Page** to display the summary metric cards.
 -   **`citations_by_year.json`**:
-    -   **Origin**: Derived weekly from `ads_metrics.json` by `scripts/derive_citations_by_year.py`, run by the `update_plots.yml` workflow.
+    -   **Origin**: Derived weekly from `ads_metrics.json` by `scripts/derive_citations_by_year.py`, run by the `update-site-data.yml` workflow.
     -   **Purpose**: Contains yearly citation counts.
     -   **Usage**: Used by its corresponding script to generate the plot at `public/plots/citations_by_year.svg`.
 
