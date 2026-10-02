@@ -18,7 +18,7 @@ const PLOTS = [
   },
   {
     src: 'citations_by_year',
-    alt: 'Cumulative citations showing total refereed and non-refereed citations from 2018-2026',
+    alt: 'Cumulative citations showing total refereed and non-refereed citations by year',
     title: 'Cumulative Citations',
   },
   {

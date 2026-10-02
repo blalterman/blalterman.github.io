@@ -14,9 +14,35 @@ Usage:
 
 import itertools
 import json
+from datetime import datetime, timezone
+
 import matplotlib.pyplot as plt
 from utils import get_public_data_dir, get_public_plots_dir, get_relative_path
 from plot_config import COLORS, FIGURE, FONTS, LINES, GRID, LEGEND, LAYOUT, OUTPUT, THEMES, get_theme_config, get_data_colors
+
+
+def fold_future_years(years, ref_counts, nonref_counts, current_year):
+    """Fold citations dated after current_year into current_year.
+
+    ADS dates a citation by the citing paper's publication year, so papers
+    already assigned to next year's journal volumes produce a bin for a year
+    that has not started. Plotted cumulatively, that bin draws a near-flat
+    final segment that reads as stalled growth. Folding keeps the cumulative
+    total unchanged; citations_by_year.json itself stays a faithful copy of ADS.
+    """
+    folded = {}
+    for year, ref, nonref in zip(years, ref_counts, nonref_counts):
+        key = str(min(int(year), current_year))
+        r, n = folded.get(key, (0, 0))
+        folded[key] = (r + ref, n + nonref)
+
+    future = [y for y in years if int(y) > current_year]
+    if future:
+        moved = sum(r + n for y, r, n in zip(years, ref_counts, nonref_counts) if int(y) > current_year)
+        print(f"   Folded {moved} citation(s) dated {', '.join(future)} into {current_year}")
+
+    out_years = sorted(folded, key=int)
+    return out_years, [folded[y][0] for y in out_years], [folded[y][1] for y in out_years]
 
 
 def generate_citations_timeline(theme_name='light'):
@@ -42,6 +68,9 @@ def generate_citations_timeline(theme_name='light'):
     all_years = data['years']
     ref_counts = data['refereed']
     nonref_counts = data['nonrefereed']
+
+    all_years, ref_counts, nonref_counts = fold_future_years(
+        all_years, ref_counts, nonref_counts, datetime.now(timezone.utc).year)
 
     total_citations = sum(ref_counts) + sum(nonref_counts)
     print(f"   Total citations: {total_citations}")
