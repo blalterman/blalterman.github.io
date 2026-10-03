@@ -8,7 +8,7 @@
 
 **Short Title:** New algorithm separates three ion populations in Faraday cup data
 
-![Four panels display energy spectra from the Wind spacecraft's Faraday cups, each measured from a different angle relative to the magnetic field (118, 139, 156, and 170 degrees, noted in each panel corner).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2018_ApJ_864_112/figures/fig_1.svg)
+![Four panels display energy spectra from the Wind spacecraft's Faraday cups, each measured from a different angle relative to the magnetic field (118, 139, 156, and 170 degrees, noted in each panel corner).](../public/papers/Alterman_2018_ApJ_864_112/figures/fig_1.svg)
 
 **File:** `/papers/Alterman_2018_ApJ_864_112/figures/fig_1.svg`
 
@@ -43,7 +43,7 @@ energy_spectrum, Faraday_cup, Wind_spacecraft, three_population_fit, alpha_parti
 
 **Short Title:** Proton beam forms a distinct shoulder in velocity space
 
-![Two stacked contour plots show particle velocity distributions in a coordinate system of parallel velocity (horizontal axis) versus perpendicular velocity (vertical axis), both in km/s.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2018_ApJ_864_112/figures/fig_2.svg)
+![Two stacked contour plots show particle velocity distributions in a coordinate system of parallel velocity (horizontal axis) versus perpendicular velocity (vertical axis), both in km/s.](../public/papers/Alterman_2018_ApJ_864_112/figures/fig_2.svg)
 
 **File:** `/papers/Alterman_2018_ApJ_864_112/figures/fig_2.svg`
 
@@ -78,7 +78,7 @@ velocity_distribution_function, proton_beam, alpha_particle, proton_core, veloci
 
 **Short Title:** Proton beams drift faster than alphas relative to the Alfven speed
 
-![Two overlapping histogram distributions plot drift speed normalized by the Alfven speed on the horizontal axis against measurement count on the vertical axis.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2018_ApJ_864_112/figures/fig_3.svg)
+![Two overlapping histogram distributions plot drift speed normalized by the Alfven speed on the horizontal axis against measurement count on the vertical axis.](../public/papers/Alterman_2018_ApJ_864_112/figures/fig_3.svg)
 
 **File:** `/papers/Alterman_2018_ApJ_864_112/figures/fig_3.svg`
 
@@ -114,7 +114,7 @@ differential_flow, Alfven_speed, alpha_particle, proton_beam, Gaussian_fit, fast
 
 **Short Title:** Alpha and beam drift fluctuations are uncorrelated
 
-![A 2D histogram plots short-timescale fluctuations in alpha particle drift speed (horizontal axis, in km/s) against fluctuations in proton beam drift speed (vertical axis, in km/s), each measured relative to a 14-minute running mean.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2018_ApJ_864_112/figures/fig_4.svg)
+![A 2D histogram plots short-timescale fluctuations in alpha particle drift speed (horizontal axis, in km/s) against fluctuations in proton beam drift speed (vertical axis, in km/s), each measured relative to a 14-minute running mean.](../public/papers/Alterman_2018_ApJ_864_112/figures/fig_4.svg)
 
 **File:** `/papers/Alterman_2018_ApJ_864_112/figures/fig_4.svg`
 
@@ -149,7 +149,7 @@ differential_flow_fluctuations, uncorrelated, alpha_particle, proton_beam, circu
 
 **Short Title:** Alpha drift fades with collisions while beam drift persists
 
-![Two vertically stacked heatmaps share a horizontal axis of collisional age (ranging from 10^-2 to 10^-1 on a logarithmic scale).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2018_ApJ_864_112/figures/fig_5.svg)
+![Two vertically stacked heatmaps share a horizontal axis of collisional age (ranging from 10^-2 to 10^-1 on a logarithmic scale).](../public/papers/Alterman_2018_ApJ_864_112/figures/fig_5.svg)
 
 **File:** `/papers/Alterman_2018_ApJ_864_112/figures/fig_5.svg`
 
@@ -185,7 +185,7 @@ collisional_age, differential_flow, alpha_particle, proton_beam, Alfven_speed, C
 
 **Short Title:** Alpha-to-beam speed ratio sharpens in youngest plasma
 
-![Two overlapping histogram distributions plot the ratio of alpha particle drift speed to proton beam drift speed on the horizontal axis against normalized count on the vertical axis.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2018_ApJ_864_112/figures/fig_6.svg)
+![Two overlapping histogram distributions plot the ratio of alpha particle drift speed to proton beam drift speed on the horizontal axis against normalized count on the vertical axis.](../public/papers/Alterman_2018_ApJ_864_112/figures/fig_6.svg)
 
 **File:** `/papers/Alterman_2018_ApJ_864_112/figures/fig_6.svg`
 
@@ -221,7 +221,7 @@ drift_speed_ratio, alpha_particle, proton_beam, collisional_age, youngest_plasma
 
 **Short Title:** Anisotropy-corrected Alfven speed yields tightest drift distributions
 
-![Two side-by-side columns each contain an upper histogram and a lower residual plot.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2018_ApJ_864_112/figures/fig_7.svg)
+![Two side-by-side columns each contain an upper histogram and a lower residual plot.](../public/papers/Alterman_2018_ApJ_864_112/figures/fig_7.svg)
 
 **File:** `/papers/Alterman_2018_ApJ_864_112/figures/fig_7.svg`
 
@@ -256,7 +256,7 @@ Alfven_speed, anisotropic_MHD, differential_flow, Gaussian_fit, residuals, alpha
 
 **Short Title:** Anisotropic Alfven speed without dynamic pressure minimizes spread
 
-![A scatter plot of distribution width (vertical axis, ranging from 0 to 0.25) versus distribution mean (horizontal axis, ranging from 0 to 1.2) displays six data points with error bars, grouped into two clusters.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2018_ApJ_864_112/figures/fig_8.svg)
+![A scatter plot of distribution width (vertical axis, ranging from 0 to 0.25) versus distribution mean (horizontal axis, ranging from 0 to 1.2) displays six data points with error bars, grouped into two clusters.](../public/papers/Alterman_2018_ApJ_864_112/figures/fig_8.svg)
 
 **File:** `/papers/Alterman_2018_ApJ_864_112/figures/fig_8.svg`
 
@@ -291,7 +291,7 @@ Alfven_speed_approximation, anisotropic_MHD, dynamic_pressure, temperature_aniso
 
 **Short Title:** Extrapolated drift speeds reveal coronal launch conditions
 
-![A plot with collisional age on a logarithmic horizontal axis (from 10^-2 to 10^-1) and drift speed normalized by the anisotropic Alfven speed on the vertical axis (from 0 to 1.2).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2018_ApJ_864_112/figures/fig_9.svg)
+![A plot with collisional age on a logarithmic horizontal axis (from 10^-2 to 10^-1) and drift speed normalized by the anisotropic Alfven speed on the vertical axis (from 0 to 1.2).](../public/papers/Alterman_2018_ApJ_864_112/figures/fig_9.svg)
 
 **File:** `/papers/Alterman_2018_ApJ_864_112/figures/fig_9.svg`
 
@@ -327,7 +327,7 @@ collisional_age, differential_flow, alpha_particle, proton_beam, Alfven_speed, e
 
 **Short Title:** Slow-wind helium swings with the sunspot cycle over 23 years
 
-![Ten colored lines track the percentage of helium in the solar wind from 1995 to 2018, each representing a different wind speed bin (slowest in blue, fastest in lavender).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2019_ApJL_879_L6/figures/fig_1.svg)
+![Ten colored lines track the percentage of helium in the solar wind from 1995 to 2018, each representing a different wind speed bin (slowest in blue, fastest in lavender).](../public/papers/Alterman_2019_ApJL_879_L6/figures/fig_1.svg)
 
 **File:** `/papers/Alterman_2019_ApJL_879_L6/figures/fig_1.svg`
 
@@ -362,7 +362,7 @@ helium_abundance, solar_cycle, sunspot_number, solar_wind_speed, time_series, Ha
 
 **Short Title:** Delaying sunspot number lifts the helium correlation at all speeds
 
-![Two series of colored data points trace the strength of the helium-sunspot connection at each wind speed.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2019_ApJL_879_L6/figures/fig_2a.svg)
+![Two series of colored data points trace the strength of the helium-sunspot connection at each wind speed.](../public/papers/Alterman_2019_ApJL_879_L6/figures/fig_2a.svg)
 
 **File:** `/papers/Alterman_2019_ApJL_879_L6/figures/fig_2a.svg`
 
@@ -397,7 +397,7 @@ cross_correlation, Spearman_rank, solar_wind_speed, time_lag, helium_abundance, 
 
 **Short Title:** Faster solar wind waits longer to respond to solar activity
 
-![Colored data points with error bars march upward from left to right across the plot, showing the time delay in days between a change in sunspot number and the corresponding change in helium abundance.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2019_ApJL_879_L6/figures/fig_2b.svg)
+![Colored data points with error bars march upward from left to right across the plot, showing the time delay in days between a change in sunspot number and the corresponding change in helium abundance.](../public/papers/Alterman_2019_ApJL_879_L6/figures/fig_2b.svg)
 
 **File:** `/papers/Alterman_2019_ApJL_879_L6/figures/fig_2b.svg`
 
@@ -433,7 +433,7 @@ phase_lag, time_delay, solar_wind_speed, linear_fit, helium_abundance, sunspot_n
 
 **Short Title:** Helium traces counter-clockwise loops around observed sunspots
 
-![Diamond-shaped data points plot helium abundance (vertical axis, 0-7%) against sunspot number (horizontal axis, 0-200), colored by time from mission start using a colorbar on the right that runs from black (early, around 1995) through red and orange to yellow (late, around 2018).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2019_ApJL_879_L6/figures/fig_3a.svg)
+![Diamond-shaped data points plot helium abundance (vertical axis, 0-7%) against sunspot number (horizontal axis, 0-200), colored by time from mission start using a colorbar on the right that runs from black (early, around 1995) through red and orange to yellow (late, around 2018).](../public/papers/Alterman_2019_ApJL_879_L6/figures/fig_3a.svg)
 
 **File:** `/papers/Alterman_2019_ApJL_879_L6/figures/fig_3a.svg`
 
@@ -468,7 +468,7 @@ hysteresis, helium_abundance, sunspot_number, solar_cycle, counter_clockwise_loo
 
 **Short Title:** Time-shifting sunspots collapses the hysteresis to a straight line
 
-![The same diamond-shaped data points from the companion panel now plot helium against a time-shifted sunspot number, with identical color coding from black (early) through orange to yellow (late).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2019_ApJL_879_L6/figures/fig_3b.svg)
+![The same diamond-shaped data points from the companion panel now plot helium against a time-shifted sunspot number, with identical color coding from black (early) through orange to yellow (late).](../public/papers/Alterman_2019_ApJL_879_L6/figures/fig_3b.svg)
 
 **File:** `/papers/Alterman_2019_ApJL_879_L6/figures/fig_3b.svg`
 
@@ -503,7 +503,7 @@ hysteresis_correction, delayed_sunspot_number, helium_abundance, linear_relation
 
 **Short Title:** Quiet-Sun helium rises with speed, confirming a decade-old prediction
 
-![Two series of colored data points with error bars rise from left to right, showing the baseline helium abundance -- the amount present when the Sun is completely quiet (zero sunspots) -- at each wind speed.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2019_ApJL_879_L6/figures/fig_4.svg)
+![Two series of colored data points with error bars rise from left to right, showing the baseline helium abundance -- the amount present when the Sun is completely quiet (zero sunspots) -- at each wind speed.](../public/papers/Alterman_2019_ApJL_879_L6/figures/fig_4.svg)
 
 **File:** `/papers/Alterman_2019_ApJL_879_L6/figures/fig_4.svg`
 
@@ -538,7 +538,7 @@ zero_activity_abundance, solar_wind_speed, helium_vanishing_speed, Kasper_2007, 
 
 **Short Title:** Automated method identifies quiet times in suprathermal ion data
 
-![Two side-by-side panels for 2012 showing suprathermal ion intensity sorted cumulatively with a quiet-time threshold (left) and a variance-versus-mean scatter plot with two power-law fits whose intersection defines the quiet-time boundary (right).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2023_ApJ_952_42/figures/fig_1.svg)
+![Two side-by-side panels for 2012 showing suprathermal ion intensity sorted cumulatively with a quiet-time threshold (left) and a variance-versus-mean scatter plot with two power-law fits whose intersection defines the quiet-time boundary (right).](../public/papers/Alterman_2023_ApJ_952_42/figures/fig_1.svg)
 
 **File:** `/papers/Alterman_2023_ApJ_952_42/figures/fig_1.svg`
 
@@ -573,7 +573,7 @@ quiet_time_selection, suprathermal_ions, intensity_threshold, variance_mean, ACE
 
 **Short Title:** Quiet-time threshold cleanly separates active and quiet intervals
 
-![A time series spanning five days in late July 2012 (days 26 through 30) showing hourly carbon-through-iron particle intensity on a logarithmic vertical axis.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2023_ApJ_952_42/figures/fig_1c.svg)
+![A time series spanning five days in late July 2012 (days 26 through 30) showing hourly carbon-through-iron particle intensity on a logarithmic vertical axis.](../public/papers/Alterman_2023_ApJ_952_42/figures/fig_1c.svg)
 
 **File:** `/papers/Alterman_2023_ApJ_952_42/figures/fig_1c.svg`
 
@@ -608,7 +608,7 @@ quiet_time_selection, suprathermal_ions, intensity_threshold, cumulative_intensi
 
 **Short Title:** Quiet-time thresholds remain consistent across two solar cycles
 
-![A color bar at the top maps years from 1997 (dark blue-purple) through 2021 (dark red), with a dashed black curve showing 13-month smoothed sunspot number peaking around 2000 and 2014.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2023_ApJ_952_42/figures/fig_2.svg)
+![A color bar at the top maps years from 1997 (dark blue-purple) through 2021 (dark red), with a dashed black curve showing 13-month smoothed sunspot number peaking around 2000 and 2014.](../public/papers/Alterman_2023_ApJ_952_42/figures/fig_2.svg)
 
 **File:** `/papers/Alterman_2023_ApJ_952_42/figures/fig_2.svg`
 
@@ -643,7 +643,7 @@ quiet_time_selection, solar_cycle, sunspot_number, temporal_color_coding, ACE_UL
 
 **Short Title:** Quiet hours peak when sunspot activity drops to its lowest
 
-![Two stacked panels spanning 1997 to 2021 showing hourly suprathermal ion intensity colored by quiet or non-quiet classification (top) and annual quiet-hour counts alongside the sunspot number cycle (bottom).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2023_ApJ_952_42/figures/fig_3.png)
+![Two stacked panels spanning 1997 to 2021 showing hourly suprathermal ion intensity colored by quiet or non-quiet classification (top) and annual quiet-hour counts alongside the sunspot number cycle (bottom).](../public/papers/Alterman_2023_ApJ_952_42/figures/fig_3.png)
 
 **File:** `/papers/Alterman_2023_ApJ_952_42/figures/fig_3.png`
 
@@ -678,7 +678,7 @@ quiet_hours, sunspot_number, solar_cycle, anticorrelation, ACE_ULEIS, solar_mini
 
 **Short Title:** Heavy ion abundances shift between CIR and SEP values with the solar cycle
 
-![Panel (a) shows eight colored time series from 1998 to 2019, each tracing a different element's abundance relative to oxygen on a logarithmic scale.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2023_ApJ_952_42/figures/fig_4.svg)
+![Panel (a) shows eight colored time series from 1998 to 2019, each tracing a different element's abundance relative to oxygen on a logarithmic scale.](../public/papers/Alterman_2023_ApJ_952_42/figures/fig_4.svg)
 
 **File:** `/papers/Alterman_2023_ApJ_952_42/figures/fig_4.svg`
 
@@ -714,7 +714,7 @@ suprathermal_abundances, solar_cycle, sunspot_number, heavy_ions, CIR, GSEP, ISE
 
 **Short Title:** CIR and GSEP normalization removes mass-dependent abundance trends
 
-![Four vertically stacked panels plot element abundances against mass-per-charge ratio on logarithmic axes.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2023_ApJ_952_42/figures/fig_5.svg)
+![Four vertically stacked panels plot element abundances against mass-per-charge ratio on logarithmic axes.](../public/papers/Alterman_2023_ApJ_952_42/figures/fig_5.svg)
 
 **File:** `/papers/Alterman_2023_ApJ_952_42/figures/fig_5.svg`
 
@@ -749,7 +749,7 @@ mass_per_charge, suprathermal_abundances, CIR, ISEP, GSEP, normalization, solar_
 
 **Short Title:** All heavy ion abundances follow power-law trends with Fe/C ratio
 
-![A log-log plot shows eight heavy element abundances (C through Fe, vertically offset by labeled scale factors) plotted against the iron-to-carbon ratio.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2023_ApJ_952_42/figures/fig_6.svg)
+![A log-log plot shows eight heavy element abundances (C through Fe, vertically offset by labeled scale factors) plotted against the iron-to-carbon ratio.](../public/papers/Alterman_2023_ApJ_952_42/figures/fig_6.svg)
 
 **File:** `/papers/Alterman_2023_ApJ_952_42/figures/fig_6.svg`
 
@@ -784,7 +784,7 @@ Fe_C_ratio, power_law, suprathermal_abundances, heavy_ions, solar_cycle, enrichm
 
 **Short Title:** Power-law enrichment exponents hold roughly steady across solar cycle phases
 
-![Two adjoining panels share a vertical axis ranging from -0.4 to +1.0.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2023_ApJ_952_42/figures/fig_7.svg)
+![Two adjoining panels share a vertical axis ranging from -0.4 to +1.0.](../public/papers/Alterman_2023_ApJ_952_42/figures/fig_7.svg)
 
 **File:** `/papers/Alterman_2023_ApJ_952_42/figures/fig_7.svg`
 
@@ -819,7 +819,7 @@ power_law_exponents, solar_cycle_extrema, Fe_C_ratio, mass_dependence, suprather
 
 **Short Title:** Suprathermal variability increases with mass-per-charge, matching GSEP trends
 
-![Power-law exponents from quiet-time abundance variability fits are plotted against SEP mass-per-charge ratio (M/Q) on the horizontal axis, with element labels along the top (C, N, O, Ne, Mg, Si, S, Ca, Fe).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2023_ApJ_952_42/figures/fig_8.svg)
+![Power-law exponents from quiet-time abundance variability fits are plotted against SEP mass-per-charge ratio (M/Q) on the horizontal axis, with element labels along the top (C, N, O, Ne, Mg, Si, S, Ca, Fe).](../public/papers/Alterman_2023_ApJ_952_42/figures/fig_8.svg)
 
 **File:** `/papers/Alterman_2023_ApJ_952_42/figures/fig_8.svg`
 
@@ -855,7 +855,7 @@ mass_per_charge, power_law_exponents, M_Q_fractionation, GSEP, Desai_2006, supra
 
 **Short Title:** Mass-per-charge fractionation slope holds constant across solar activity
 
-![Two adjoining panels share a vertical axis labeled 'Slope m of X/O(Fe/C) Exponents vs M/Q,' ranging from 0 to about 0.6.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2023_ApJ_952_42/figures/fig_9.svg)
+![Two adjoining panels share a vertical axis labeled 'Slope m of X/O(Fe/C) Exponents vs M/Q,' ranging from 0 to about 0.6.](../public/papers/Alterman_2023_ApJ_952_42/figures/fig_9.svg)
 
 **File:** `/papers/Alterman_2023_ApJ_952_42/figures/fig_9.svg`
 
@@ -890,7 +890,7 @@ M_Q_fractionation, solar_activity_independence, robustness_test, Desai_2006, fit
 
 **Short Title:** Sulfur groups with low-FIP elements, not high-FIP as previously assumed
 
-![A scatter plot positions each element by its mass-per-charge ratio (horizontal axis, 2.0 to 4.5+ AMU/e) and first ionization potential (vertical axis, 6 to 22 eV).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2023_ApJ_952_42/figures/fig_10.svg)
+![A scatter plot positions each element by its mass-per-charge ratio (horizontal axis, 2.0 to 4.5+ AMU/e) and first ionization potential (vertical axis, 6 to 22 eV).](../public/papers/Alterman_2023_ApJ_952_42/figures/fig_10.svg)
 
 **File:** `/papers/Alterman_2023_ApJ_952_42/figures/fig_10.svg`
 
@@ -925,7 +925,7 @@ first_ionization_potential, FIP_effect, sulfur, mass_per_charge, sunspot_correla
 
 **Short Title:** Nine heavy-ion species fall along identical power-law spectra
 
-![A log-log plot titled '2004' shows how particle intensity drops with increasing energy for nine chemical elements measured during quiet periods.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2024_ApJL_964_L31/figures/fig_1.svg)
+![A log-log plot titled '2004' shows how particle intensity drops with increasing energy for nine chemical elements measured during quiet periods.](../public/papers/Alterman_2024_ApJL_964_L31/figures/fig_1.svg)
 
 **File:** `/papers/Alterman_2024_ApJL_964_L31/figures/fig_1.svg`
 
@@ -961,7 +961,7 @@ suprathermal ions, energy spectrum, power law, heavy ions, quiet time, spectral 
 
 **Short Title:** Spectral slope holds steady as sunspot activity rises and falls
 
-![A dual-axis time-series plot spanning 1998 to about 2020 showing annual oxygen spectral indices with error bars (left axis) alongside the sunspot number cycle (right axis).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2024_ApJL_964_L31/figures/fig_2.svg)
+![A dual-axis time-series plot spanning 1998 to about 2020 showing annual oxygen spectral indices with error bars (left axis) alongside the sunspot number cycle (right axis).](../public/papers/Alterman_2024_ApJL_964_L31/figures/fig_2.svg)
 
 **File:** `/papers/Alterman_2024_ApJL_964_L31/figures/fig_2.svg`
 
@@ -997,7 +997,7 @@ spectral index, solar cycle, sunspot number, oxygen, quiet time, suprathermal io
 
 **Short Title:** Carbon tracks oxygen tightly; iron follows with more scatter
 
-![A scatter plot comparing spectral slopes of carbon and iron against oxygen, year by year.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2024_ApJL_964_L31/figures/fig_3.svg)
+![A scatter plot comparing spectral slopes of carbon and iron against oxygen, year by year.](../public/papers/Alterman_2024_ApJL_964_L31/figures/fig_3.svg)
 
 **File:** `/papers/Alterman_2024_ApJL_964_L31/figures/fig_3.svg`
 
@@ -1032,7 +1032,7 @@ spectral index, carbon, iron, oxygen, correlation, mass-to-charge ratio, species
 
 **Short Title:** Two decades of measurements converge on a single spectral slope of 2.5
 
-![A stacked histogram collects every spectral-slope measurement from all nine elements across every year from 1998 to 2019.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2024_ApJL_964_L31/figures/fig_4.svg)
+![A stacked histogram collects every spectral-slope measurement from all nine elements across every year from 1998 to 2019.](../public/papers/Alterman_2024_ApJL_964_L31/figures/fig_4.svg)
 
 **File:** `/papers/Alterman_2024_ApJL_964_L31/figures/fig_4.svg`
 
@@ -1068,7 +1068,7 @@ spectral index, histogram, distribution, suprathermal ions, universal value, see
 
 **Short Title:** Solar wind splits into slow and fast peaks during solar minimum
 
-![Three curves on a logarithmic vertical axis show how frequently the solar wind reaches Earth at different speeds, from about 200 to 800 kilometers per second.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_982_L40/figures/fig_1.svg)
+![Three curves on a logarithmic vertical axis show how frequently the solar wind reaches Earth at different speeds, from about 200 to 800 kilometers per second.](../public/papers/Alterman_2025_ApJL_982_L40/figures/fig_1.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_982_L40/figures/fig_1.svg`
 
@@ -1103,7 +1103,7 @@ solar_wind_speed, probability_distribution, solar_minimum, solar_maximum, bimoda
 
 **Short Title:** Helium and wave properties are set at different heights above the Sun
 
-![A schematic shows the Sun on the left with its golden photosphere, a green chromosphere, and a cyan transition region above it.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_982_L40/figures/fig_2.svg)
+![A schematic shows the Sun on the left with its golden photosphere, a green chromosphere, and a cyan transition region above it.](../public/papers/Alterman_2025_ApJL_982_L40/figures/fig_2.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_982_L40/figures/fig_2.svg`
 
@@ -1139,7 +1139,7 @@ magnetic_topology, source_regions, chromosphere, transition_region, sonic_surfac
 
 **Short Title:** Helium abundance saturates at 4.19% above 433 km/s
 
-![A column-normalized density map shows helium abundance (vertical axis, 0-10%) versus solar wind speed (horizontal axis, 200-800 km/s).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_982_L40/figures/fig_3.svg)
+![A column-normalized density map shows helium abundance (vertical axis, 0-10%) versus solar wind speed (horizontal axis, 200-800 km/s).](../public/papers/Alterman_2025_ApJL_982_L40/figures/fig_3.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_982_L40/figures/fig_3.svg`
 
@@ -1176,7 +1176,7 @@ helium_abundance, solar_wind_speed, saturation, column_normalization, two_line_f
 
 **Short Title:** Fast wind is exclusively wave-like; slow wind spans all wave levels
 
-![A column-normalized density map shows wave activity (vertical axis, 0-1) versus solar wind speed (horizontal axis, 200-800 km/s).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_982_L40/figures/fig_4.svg)
+![A column-normalized density map shows wave activity (vertical axis, 0-1) versus solar wind speed (horizontal axis, 200-800 km/s).](../public/papers/Alterman_2025_ApJL_982_L40/figures/fig_4.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_982_L40/figures/fig_4.svg`
 
@@ -1211,7 +1211,7 @@ cross_helicity, Alfvenicity, solar_wind_speed, column_normalization, fast_wind, 
 
 **Short Title:** Higher wave activity shifts helium saturation to lower speeds
 
-![Fifteen colored lines trace helium abundance versus solar wind speed, colored from dark blue (lowest wave activity) through yellow to dark red (highest wave activity).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_982_L40/figures/fig_5.svg)
+![Fifteen colored lines trace helium abundance versus solar wind speed, colored from dark blue (lowest wave activity) through yellow to dark red (highest wave activity).](../public/papers/Alterman_2025_ApJL_982_L40/figures/fig_5.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_982_L40/figures/fig_5.svg`
 
@@ -1247,7 +1247,7 @@ helium_abundance, cross_helicity, quantile_analysis, saturation_point, anticorre
 
 **Short Title:** Helium depletion below saturation follows one universal curve
 
-![Fifteen helium-versus-speed curves, one per wave-activity bin, rescaled so each curve's saturation point maps to the coordinate (1, 1), marked by a green dot.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_982_L40/figures/fig_6.svg)
+![Fifteen helium-versus-speed curves, one per wave-activity bin, rescaled so each curve's saturation point maps to the coordinate (1, 1), marked by a green dot.](../public/papers/Alterman_2025_ApJL_982_L40/figures/fig_6.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_982_L40/figures/fig_6.svg`
 
@@ -1283,7 +1283,7 @@ helium_abundance, cross_helicity, rescaled, universal_curve, gradient, wave_inde
 
 **Short Title:** Saturation speed and abundance anticorrelate with wave activity
 
-![Two vertically stacked panels share a horizontal axis showing wave activity from 0 to 1.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_982_L40/figures/fig_7.svg)
+![Two vertically stacked panels share a horizontal axis showing wave activity from 0 to 1.](../public/papers/Alterman_2025_ApJL_982_L40/figures/fig_7.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_982_L40/figures/fig_7.svg`
 
@@ -1319,7 +1319,7 @@ saturation_speed, saturation_abundance, cross_helicity, anticorrelation, weighte
 
 **Short Title:** Helium density peaks near the closed-to-open source transition
 
-![A logarithmic chart shows hydrogen (solid green line) and helium (orange dash-dot line) particle density versus solar wind speed from 300 to 800 km/s.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_982_L40/figures/fig_8.svg)
+![A logarithmic chart shows hydrogen (solid green line) and helium (orange dash-dot line) particle density versus solar wind speed from 300 to 800 km/s.](../public/papers/Alterman_2025_ApJL_982_L40/figures/fig_8.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_982_L40/figures/fig_8.svg`
 
@@ -1354,7 +1354,7 @@ number_density, hydrogen, helium, solar_wind_speed, density_peak, source_region_
 
 **Short Title:** Five characteristic speeds span the fast/slow transition zone
 
-![The solar minimum wind speed distribution is shown as a solid black curve on a logarithmic vertical axis, with five color-coded segments highlighting characteristic speed ranges.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_982_L40/figures/fig_9.svg)
+![The solar minimum wind speed distribution is shown as a solid black curve on a logarithmic vertical axis, with five color-coded segments highlighting characteristic speed ranges.](../public/papers/Alterman_2025_ApJL_982_L40/figures/fig_9.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_982_L40/figures/fig_9.svg`
 
@@ -1389,7 +1389,7 @@ solar_wind_speed, probability_distribution, solar_minimum, characteristic_speeds
 
 **Short Title:** Mean speed in the helium-wave plane reveals two source populations
 
-![A filled contour map shows mean solar wind speed (color scale 300-540 km/s) as a function of wave activity (horizontal axis, 0-1) and helium abundance (vertical axis, 0-10%).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_982_L40/figures/fig_10a.svg)
+![A filled contour map shows mean solar wind speed (color scale 300-540 km/s) as a function of wave activity (horizontal axis, 0-1) and helium abundance (vertical axis, 0-10%).](../public/papers/Alterman_2025_ApJL_982_L40/figures/fig_10a.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_982_L40/figures/fig_10a.svg`
 
@@ -1425,7 +1425,7 @@ cross_helicity, helium_abundance, mean_speed, contour, classification, open_fiel
 
 **Short Title:** The slowest 10% of wind stays below 390 km/s everywhere
 
-![The same axes as panel (a) -- wave activity versus helium abundance -- now colored by the 10th percentile of speed (color scale 270-690 km/s).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_982_L40/figures/fig_10b.svg)
+![The same axes as panel (a) -- wave activity versus helium abundance -- now colored by the 10th percentile of speed (color scale 270-690 km/s).](../public/papers/Alterman_2025_ApJL_982_L40/figures/fig_10b.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_982_L40/figures/fig_10b.svg`
 
@@ -1460,7 +1460,7 @@ cross_helicity, helium_abundance, speed_quantile, 10th_percentile, contour, spee
 
 **Short Title:** The fastest 10% of closed-field wind exceeds 420 km/s
 
-![The same axes as panels (a) and (b), now colored by the 90th percentile of speed (color scale 270-690 km/s).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_982_L40/figures/fig_10c.svg)
+![The same axes as panels (a) and (b), now colored by the 90th percentile of speed (color scale 270-690 km/s).](../public/papers/Alterman_2025_ApJL_982_L40/figures/fig_10c.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_982_L40/figures/fig_10c.svg`
 
@@ -1495,7 +1495,7 @@ cross_helicity, helium_abundance, speed_quantile, 90th_percentile, contour, spee
 
 **Short Title:** A new classification maps solar wind to its magnetic source
 
-![A cartoon diagram divides the wave activity (horizontal axis, 0-1) versus helium abundance (vertical axis, 0-10%) plane into four labeled regions using black contour boundaries.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_982_L40/figures/fig_11.svg)
+![A cartoon diagram divides the wave activity (horizontal axis, 0-1) versus helium abundance (vertical axis, 0-10%) plane into four labeled regions using black contour boundaries.](../public/papers/Alterman_2025_ApJL_982_L40/figures/fig_11.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_982_L40/figures/fig_11.svg`
 
@@ -1531,7 +1531,7 @@ classification_scheme, source_regions, open_field, closed_field, mixed_source, t
 
 **Short Title:** Alfven wave forcing explains the fastest solar wind at Earth
 
-![A smooth black curve on a logarithmic vertical axis plots how frequently the solar wind arrives at Earth at each speed, from about 270 to 750 kilometers per second.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_984_L64/figures/fig_1.svg)
+![A smooth black curve on a logarithmic vertical axis plots how frequently the solar wind arrives at Earth at each speed, from about 270 to 750 kilometers per second.](../public/papers/Alterman_2025_ApJL_984_L64/figures/fig_1.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_984_L64/figures/fig_1.svg`
 
@@ -1567,7 +1567,7 @@ solar wind speed, probability distribution, fast wind, slow wind, Alfvén wave f
 
 **Short Title:** Near-Sun energy predicts near-Earth fast wind speeds
 
-![A two-dimensional heatmap plots kinetic energy flux (vertical axis, 0 to 1.4 milliwatts per square meter) against solar wind speed (horizontal axis, about 300 to 800 km/s).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_984_L64/figures/fig_2.svg)
+![A two-dimensional heatmap plots kinetic energy flux (vertical axis, 0 to 1.4 milliwatts per square meter) against solar wind speed (horizontal axis, about 300 to 800 km/s).](../public/papers/Alterman_2025_ApJL_984_L64/figures/fig_2.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_984_L64/figures/fig_2.svg`
 
@@ -1603,7 +1603,7 @@ kinetic energy flux, solar wind speed, 2D histogram, Parker Solar Probe, radial 
 
 **Short Title:** Log-normal fit captures the skewed energy distribution at each speed
 
-![A single panel shows the distribution of kinetic energy flux values measured for solar wind arriving between 620 and 630 km/s, near the center of the fast wind peak.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_984_L64/figures/fig_3.svg)
+![A single panel shows the distribution of kinetic energy flux values measured for solar wind arriving between 620 and 630 km/s, near the center of the fast wind peak.](../public/papers/Alterman_2025_ApJL_984_L64/figures/fig_3.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_984_L64/figures/fig_3.svg`
 
@@ -1638,7 +1638,7 @@ kinetic energy flux, log-normal distribution, statistical fitting, fast wind, en
 
 **Short Title:** Two Gaussians separate slow and fast wind populations
 
-![A logarithmic-scale plot shows the observed solar wind speed distribution as a thin black line spanning roughly 270 to 750 km/s, with a prominent peak near 355 km/s and a lower shoulder near 622 km/s.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2025_ApJL_984_L64/figures/fig_4.svg)
+![A logarithmic-scale plot shows the observed solar wind speed distribution as a thin black line spanning roughly 270 to 750 km/s, with a prominent peak near 355 km/s and a lower shoulder near 622 km/s.](../public/papers/Alterman_2025_ApJL_984_L64/figures/fig_4.svg)
 
 **File:** `/papers/Alterman_2025_ApJL_984_L64/figures/fig_4.svg`
 
@@ -1673,7 +1673,7 @@ solar wind speed, Gaussian fit, slow wind, fast wind, bimodal distribution, spee
 
 **Short Title:** Helium abundance rises with speed then saturates
 
-![This heatmap shows how frequently the solar wind contains different amounts of helium (vertical axis) at each speed (horizontal axis), with brighter warm colors indicating more common combinations.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_1.svg)
+![This heatmap shows how frequently the solar wind contains different amounts of helium (vertical axis) at each speed (horizontal axis), with brighter warm colors indicating more common combinations.](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_1.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_1.svg`
 
@@ -1708,7 +1708,7 @@ helium_abundance, solar_wind_speed, saturation_point, bilinear_fit, slow_wind, f
 
 **Short Title:** Alfvenic wave activity concentrates in faster wind
 
-![This contour plot shows how the normalized cross helicity, a measure of Alfvenic wave activity (vertical axis), varies with solar wind speed (horizontal axis).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_2.svg)
+![This contour plot shows how the normalized cross helicity, a measure of Alfvenic wave activity (vertical axis), varies with solar wind speed (horizontal axis).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_2.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_2.svg`
 
@@ -1743,7 +1743,7 @@ normalized_cross_helicity, solar_wind_speed, Alfvenicity, wave_activity, source_
 
 **Short Title:** Three-parameter map classifies solar wind by origin
 
-![This schematic diagram divides the solar wind into regions based on wave activity (horizontal axis) and helium content (vertical axis), with speed shown by contour lines.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_3.svg)
+![This schematic diagram divides the solar wind into regions based on wave activity (horizontal axis) and helium content (vertical axis), with speed shown by contour lines.](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_3.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_3.svg`
 
@@ -1779,7 +1779,7 @@ source_region_classification, normalized_cross_helicity, helium_abundance, conti
 
 **Short Title:** Hydrogen density fluctuations persist across all speeds
 
-![This contour plot shows how much the hydrogen density fluctuates (vertical axis, logarithmic scale) at each solar wind speed (horizontal axis).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_4.svg)
+![This contour plot shows how much the hydrogen density fluctuates (vertical axis, logarithmic scale) at each solar wind speed (horizontal axis).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_4.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_4.svg`
 
@@ -1814,7 +1814,7 @@ hydrogen_compressibility, solar_wind_speed, density_fluctuations, compressive_fl
 
 **Short Title:** Compressibility and wave activity are inversely related
 
-![This contour plot maps the average hydrogen density fluctuation level using color across solar wind speed (horizontal axis) and wave activity (vertical axis).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_5.svg)
+![This contour plot maps the average hydrogen density fluctuation level using color across solar wind speed (horizontal axis) and wave activity (vertical axis).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_5.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_5.svg`
 
@@ -1850,7 +1850,7 @@ hydrogen_compressibility, normalized_cross_helicity, solar_wind_speed, incompres
 
 **Short Title:** Wave activity maps onto the helium-speed plane
 
-![This contour plot shows the average wave activity level (color) as a function of solar wind speed (horizontal axis) and helium abundance (vertical axis).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_6.svg)
+![This contour plot shows the average wave activity level (color) as a function of solar wind speed (horizontal axis) and helium abundance (vertical axis).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_6.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_6.svg`
 
@@ -1886,7 +1886,7 @@ normalized_cross_helicity, helium_abundance, solar_wind_speed, saturation_point,
 
 **Short Title:** Compressibility reveals structure hidden in the helium plateau
 
-![This contour plot shows the average hydrogen compressibility (color) across solar wind speed (horizontal axis) and helium abundance (vertical axis).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_7.svg)
+![This contour plot shows the average hydrogen compressibility (color) across solar wind speed (horizontal axis) and helium abundance (vertical axis).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_7.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_7.svg`
 
@@ -1922,7 +1922,7 @@ hydrogen_compressibility, helium_abundance, solar_wind_speed, saturation_point, 
 
 **Short Title:** Compressibility contour gradient reverses at saturation
 
-![A zoomed view of the helium-speed saturation region, showing compressibility contours near the point where helium abundance stops rising with speed.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_8.svg)
+![A zoomed view of the helium-speed saturation region, showing compressibility contours near the point where helium abundance stops rising with speed.](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_8.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_8.svg`
 
@@ -1957,7 +1957,7 @@ hydrogen_compressibility, saturation_point, gradient_reversal, compressibility_t
 
 **Short Title:** Compressible wind drives helium far above the plateau
 
-![Fifteen colored lines trace how helium abundance (vertical axis) changes with solar wind speed (horizontal axis), each representing a different compressibility level from low (dark blue) to high (pink).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_9.svg)
+![Fifteen colored lines trace how helium abundance (vertical axis) changes with solar wind speed (horizontal axis), each representing a different compressibility level from low (dark blue) to high (pink).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_9.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_9.svg`
 
@@ -1993,7 +1993,7 @@ helium_abundance, solar_wind_speed, hydrogen_compressibility, saturation_fits, c
 
 **Short Title:** Incompressible curves collapse onto a universal shape
 
-![Fifteen helium-speed curves, one per compressibility bin, rescaled so that each saturation point sits at coordinates (1, 1).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_10.svg)
+![Fifteen helium-speed curves, one per compressibility bin, rescaled so that each saturation point sits at coordinates (1, 1).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_10.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_10.svg`
 
@@ -2029,7 +2029,7 @@ universal_scaling, saturation_point, normalized_curves, incompressible_wind, com
 
 **Short Title:** Saturation speed and abundance shift at the compressibility boundary
 
-![Two panels show how the saturation point changes with hydrogen compressibility (horizontal axis).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_11.svg)
+![Two panels show how the saturation point changes with hydrogen compressibility (horizontal axis).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_11.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_11.svg`
 
@@ -2065,7 +2065,7 @@ saturation_point, saturation_speed, saturation_abundance, hydrogen_compressibili
 
 **Short Title:** Compressive wind has six times steeper helium gradients
 
-![This scatter plot shows the slope of the helium-speed relationship above saturation (vertical axis) versus hydrogen compressibility (horizontal axis).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_12.svg)
+![This scatter plot shows the slope of the helium-speed relationship above saturation (vertical axis) versus hydrogen compressibility (horizontal axis).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_12.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_12.svg`
 
@@ -2100,7 +2100,7 @@ saturation_slope, hydrogen_compressibility, compressible_wind, incompressible_wi
 
 **Short Title:** Excluding compressive wind flattens the wave-activity dependence
 
-![Three panels show saturation fit parameters plotted against wave activity, each with multiple colored curves representing different upper limits on allowed compressibility (red for 0.085, green for 0.1, orange for 0.15) plus a purple curve for the compressible subset above 0.15.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_13.svg)
+![Three panels show saturation fit parameters plotted against wave activity, each with multiple colored curves representing different upper limits on allowed compressibility (red for 0.085, green for 0.1, orange for 0.15) plus a purple curve for the compressible subset above 0.15.](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_13.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_13.svg`
 
@@ -2135,7 +2135,7 @@ saturation_parameters, normalized_cross_helicity, hydrogen_compressibility, comp
 
 **Short Title:** Derived speeds map onto the bimodal wind distribution
 
-![This chart shows the probability of observing the solar wind at different speeds, forming a tall peak around 355 km/s for slow wind and a smaller shoulder near 622 km/s for fast wind.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_14.svg)
+![This chart shows the probability of observing the solar wind at different speeds, forming a tall peak around 355 km/s for slow wind and a smaller shoulder near 622 km/s for fast wind.](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_14.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_14.svg`
 
@@ -2170,7 +2170,7 @@ solar_wind_speed, speed_distribution, bimodal_distribution, saturation_speed, ch
 
 **Short Title:** Mean helium reveals two distinct high-helium islands
 
-![This panel maps mean helium abundance (color) across wave activity (horizontal axis) and hydrogen compressibility (vertical axis, logarithmic).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_15a.svg)
+![This panel maps mean helium abundance (color) across wave activity (horizontal axis) and hydrogen compressibility (vertical axis, logarithmic).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_15a.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_15a.svg`
 
@@ -2206,7 +2206,7 @@ helium_abundance, normalized_cross_helicity, hydrogen_compressibility, Alfvenic_
 
 **Short Title:** 90th percentile helium exceeds 7.5% in compressive wind
 
-![This panel maps the 90th percentile of helium abundance (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_15b.svg)
+![This panel maps the 90th percentile of helium abundance (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_15b.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_15b.svg`
 
@@ -2241,7 +2241,7 @@ helium_abundance, normalized_cross_helicity, hydrogen_compressibility, Alfvenic_
 
 **Short Title:** 10th percentile helium stays elevated only in Alfvenic wind
 
-![This panel maps the 10th percentile of helium abundance (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_15c.svg)
+![This panel maps the 10th percentile of helium abundance (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_15c.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_15c.svg`
 
@@ -2276,7 +2276,7 @@ helium_abundance, normalized_cross_helicity, hydrogen_compressibility, Alfvenic_
 
 **Short Title:** Helium variability exceeds 70% in the compressive island
 
-![This panel maps the variability of helium abundance (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_15d.svg)
+![This panel maps the variability of helium abundance (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_15d.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_15d.svg`
 
@@ -2311,7 +2311,7 @@ helium_abundance, normalized_cross_helicity, hydrogen_compressibility, Alfvenic_
 
 **Short Title:** Mean speed exceeds saturation only in Alfvenic wind
 
-![This panel maps mean solar wind speed (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_16a.svg)
+![This panel maps mean solar wind speed (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_16a.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_16a.svg`
 
@@ -2346,7 +2346,7 @@ solar_wind_speed, normalized_cross_helicity, hydrogen_compressibility, speed_var
 
 **Short Title:** Speed variability is larger in Alfvenic than compressive wind
 
-![This panel maps the variability of solar wind speed (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_16b.svg)
+![This panel maps the variability of solar wind speed (color) across wave activity (horizontal axis) and compressibility (vertical axis, logarithmic).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_16b.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_16b.svg`
 
@@ -2381,7 +2381,7 @@ solar_wind_speed, normalized_cross_helicity, hydrogen_compressibility, speed_var
 
 **Short Title:** Mean compressibility concentrates at high helium, low wave activity
 
-![This panel maps mean hydrogen compressibility (color) across wave activity (horizontal axis) and helium abundance (vertical axis).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_17a.svg)
+![This panel maps mean hydrogen compressibility (color) across wave activity (horizontal axis) and helium abundance (vertical axis).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_17a.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_17a.svg`
 
@@ -2416,7 +2416,7 @@ hydrogen_compressibility, normalized_cross_helicity, helium_abundance, compressi
 
 **Short Title:** 75th percentile compressibility stays below 0.1 in open-source wind
 
-![This panel maps the 75th percentile of hydrogen compressibility (color) across wave activity (horizontal axis) and helium abundance (vertical axis).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_17b.svg)
+![This panel maps the 75th percentile of hydrogen compressibility (color) across wave activity (horizontal axis) and helium abundance (vertical axis).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_17b.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_17b.svg`
 
@@ -2451,7 +2451,7 @@ hydrogen_compressibility, normalized_cross_helicity, helium_abundance, compressi
 
 **Short Title:** Wave activity peaks near saturation helium for all compressibility levels
 
-![Fifteen colored lines trace how wave activity (vertical axis) varies with helium abundance (horizontal axis), each representing a different compressibility level from low (dark blue) to high (pink).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_18.svg)
+![Fifteen colored lines trace how wave activity (vertical axis) varies with helium abundance (horizontal axis), each representing a different compressibility level from low (dark blue) to high (pink).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_18.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_18.svg`
 
@@ -2486,7 +2486,7 @@ normalized_cross_helicity, helium_abundance, hydrogen_compressibility, saturatio
 
 **Short Title:** Incompressible wind shows tightly bundled wave-activity curves
 
-![Fifteen colored lines trace how wave activity (vertical axis) varies with solar wind speed (horizontal axis) at different compressibility levels.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_19.svg)
+![Fifteen colored lines trace how wave activity (vertical axis) varies with solar wind speed (horizontal axis) at different compressibility levels.](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_19.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_19.svg`
 
@@ -2521,7 +2521,7 @@ normalized_cross_helicity, solar_wind_speed, hydrogen_compressibility, saturatio
 
 **Short Title:** Low-wave wind becomes most compressible at high speeds
 
-![Fifteen colored lines trace how compressibility (vertical axis) varies with solar wind speed (horizontal axis), each representing a different wave activity level from low (dark purple) to high (dark red).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_20.svg)
+![Fifteen colored lines trace how compressibility (vertical axis) varies with solar wind speed (horizontal axis), each representing a different wave activity level from low (dark purple) to high (dark red).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_20.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_20.svg`
 
@@ -2556,7 +2556,7 @@ hydrogen_compressibility, solar_wind_speed, normalized_cross_helicity, saturatio
 
 **Short Title:** Compressibility reaches a minimum above saturation helium
 
-![Fifteen colored lines trace how compressibility (vertical axis) varies with helium abundance (horizontal axis), each for a different wave activity level from low (purple) to high (red).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_21.svg)
+![Fifteen colored lines trace how compressibility (vertical axis) varies with helium abundance (horizontal axis), each for a different wave activity level from low (purple) to high (red).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_21.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_21.svg`
 
@@ -2591,7 +2591,7 @@ hydrogen_compressibility, helium_abundance, normalized_cross_helicity, saturatio
 
 **Short Title:** Mapped compressibility quantiles recover the wave-activity pattern
 
-![Two panels show saturation speed (panel a) and saturation abundance (panel b) plotted against wave activity, after mapping each compressibility level to its corresponding wave activity value.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_22.svg)
+![Two panels show saturation speed (panel a) and saturation abundance (panel b) plotted against wave activity, after mapping each compressibility level to its corresponding wave activity value.](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_22.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_22.svg`
 
@@ -2626,7 +2626,7 @@ saturation_point, normalized_cross_helicity, hydrogen_compressibility, compressi
 
 **Short Title:** Bimodal slope split persists after mapping to wave activity
 
-![Two panels show the saturation slope (helium gradient above saturation, vertical axis) mapped to wave activity (horizontal axis).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_23.svg)
+![Two panels show the saturation slope (helium gradient above saturation, vertical axis) mapped to wave activity (horizontal axis).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_23.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_23.svg`
 
@@ -2661,7 +2661,7 @@ saturation_slope, normalized_cross_helicity, hydrogen_compressibility, bimodal_s
 
 **Short Title:** All wave-activity quantiles map to incompressible compressibility
 
-![Two panels show saturation speed (panel a) and saturation abundance (panel b) from the companion paper's wave-activity analysis, mapped to their corresponding compressibility values (horizontal axis).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_24.svg)
+![Two panels show saturation speed (panel a) and saturation abundance (panel b) from the companion paper's wave-activity analysis, mapped to their corresponding compressibility values (horizontal axis).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_24.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_24.svg`
 
@@ -2696,7 +2696,7 @@ saturation_point, hydrogen_compressibility, normalized_cross_helicity, inverse_m
 
 **Short Title:** Less wave-active wind carries up to 40% excess helium at 800 km/s
 
-![This scatter plot shows how much extra helium the solar wind carries at 800 km/s beyond the saturation level (vertical axis, as a ratio to saturation abundance), plotted against wave activity (horizontal axis).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/Alterman_2026_ApJL_996_L12/figures/fig_25.svg)
+![This scatter plot shows how much extra helium the solar wind carries at 800 km/s beyond the saturation level (vertical axis, as a ratio to saturation abundance), plotted against wave activity (horizontal axis).](../public/papers/Alterman_2026_ApJL_996_L12/figures/fig_25.svg)
 
 **File:** `/papers/Alterman_2026_ApJL_996_L12/figures/fig_25.svg`
 
@@ -2731,7 +2731,7 @@ helium_enhancement, saturation_abundance, normalized_cross_helicity, linear_tren
 
 **Short Title:** Helium abundance saturates at 402 km/s in the solar wind
 
-![A filled contour plot shows how helium concentration in the solar wind varies with solar wind speed, measured by the Wind spacecraft.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/aa51550-24/figures/fig_1.svg)
+![A filled contour plot shows how helium concentration in the solar wind varies with solar wind speed, measured by the Wind spacecraft.](../public/papers/aa51550-24/figures/fig_1.svg)
 
 **File:** `/papers/aa51550-24/figures/fig_1.svg`
 
@@ -2767,7 +2767,7 @@ helium_abundance, solar_wind_speed, saturation_speed, saturation_abundance, bili
 
 **Short Title:** Heavy ions transition to fast wind 75 km/s slower than helium
 
-![Ten colored curves track the photospheric-normalized abundance of different chemical elements against solar wind speed, spanning roughly 300 to 650 km/s.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/aa51550-24/figures/fig_2.svg)
+![Ten colored curves track the photospheric-normalized abundance of different chemical elements against solar wind speed, spanning roughly 300 to 650 km/s.](../public/papers/aa51550-24/figures/fig_2.svg)
 
 **File:** `/papers/aa51550-24/figures/fig_2.svg`
 
@@ -2803,7 +2803,7 @@ heavy_ion_abundance, solar_wind_speed, saturation_speed, ACE_SWICS, Wind_SWE, fa
 
 **Short Title:** Slow wind composition is universal; fast wind fractionates by mass
 
-![Ten element abundance-versus-speed curves, rescaled so that each element's transition point sits at the coordinate (1, 1).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/aa51550-24/figures/fig_3.svg)
+![Ten element abundance-versus-speed curves, rescaled so that each element's transition point sits at the coordinate (1, 1).](../public/papers/aa51550-24/figures/fig_3.svg)
 
 **File:** `/papers/aa51550-24/figures/fig_3.svg`
 
@@ -2839,7 +2839,7 @@ normalized_abundance, saturation_scaling, mass_dependent_fractionation, fast_win
 
 **Short Title:** Transition speed does not depend on ionization energy
 
-![A scatter plot shows each element's transition speed plotted against its first ionization potential, the energy needed to strip its outermost electron.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/aa51550-24/figures/fig_4.svg)
+![A scatter plot shows each element's transition speed plotted against its first ionization potential, the energy needed to strip its outermost electron.](../public/papers/aa51550-24/figures/fig_4.svg)
 
 **File:** `/papers/aa51550-24/figures/fig_4.svg`
 
@@ -2875,7 +2875,7 @@ saturation_speed, first_ionization_potential, FIP_independence, heavy_ions, heli
 
 **Short Title:** Transition abundances confirm expected FIP fractionation pattern
 
-![A scatter plot shows each element's abundance at the transition speed, plotted against its first ionization potential.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/aa51550-24/figures/fig_5.svg)
+![A scatter plot shows each element's abundance at the transition speed, plotted against its first ionization potential.](../public/papers/aa51550-24/figures/fig_5.svg)
 
 **File:** `/papers/aa51550-24/figures/fig_5.svg`
 
@@ -2911,7 +2911,7 @@ saturation_abundance, first_ionization_potential, FIP_effect, low_FIP_enhancemen
 
 **Short Title:** Fast wind reveals an unexplained mass-dependent fractionation
 
-![A scatter plot shows how much each element's abundance at the fastest observed speed (592 km/s) exceeds its transition-point abundance, plotted against element mass in atomic mass units.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/aa51550-24/figures/fig_6.svg)
+![A scatter plot shows how much each element's abundance at the fastest observed speed (592 km/s) exceeds its transition-point abundance, plotted against element mass in atomic mass units.](../public/papers/aa51550-24/figures/fig_6.svg)
 
 **File:** `/papers/aa51550-24/figures/fig_6.svg`
 
@@ -2947,7 +2947,7 @@ mass_dependent_fractionation, fast_wind, saturation_abundance, gravitational_set
 
 **Short Title:** Heavy and helium transition speeds bracket the most common wind
 
-![A stepped blue histogram on a logarithmic vertical scale shows the probability density of solar wind speed observations, spanning roughly 200 to 800 km/s.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/aa51550-24/figures/fig_7.svg)
+![A stepped blue histogram on a logarithmic vertical scale shows the probability density of solar wind speed observations, spanning roughly 200 to 800 km/s.](../public/papers/aa51550-24/figures/fig_7.svg)
 
 **File:** `/papers/aa51550-24/figures/fig_7.svg`
 
@@ -2983,7 +2983,7 @@ speed_distribution, probability_density, saturation_speed, helium_transition, he
 
 **Short Title:** Charge state organizes fast wind fractionation into a tight trend
 
-![A scatter plot shows fast-wind abundance ratios for ten elements, plotted against each element's typical electrical charge in the solar wind.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/aa51550-24/figures/fig_8.svg)
+![A scatter plot shows fast-wind abundance ratios for ten elements, plotted against each element's typical electrical charge in the solar wind.](../public/papers/aa51550-24/figures/fig_8.svg)
 
 **File:** `/papers/aa51550-24/figures/fig_8.svg`
 
@@ -3019,7 +3019,7 @@ charge_state_fractionation, fast_wind, saturation_abundance, robust_R_squared, m
 
 **Short Title:** Slow-wind helium swings with the sunspot cycle
 
-![A time series spanning 1994–2022 plots the fraction of helium in the solar wind relative to the Sun's surface value.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/aa54299-25/figures/fig_1.svg)
+![A time series spanning 1994–2022 plots the fraction of helium in the solar wind relative to the Sun's surface value.](../public/papers/aa54299-25/figures/fig_1.svg)
 
 **File:** `/papers/aa54299-25/figures/fig_1.svg`
 
@@ -3055,7 +3055,7 @@ solar wind, helium abundance, solar cycle, sunspot number, fast wind, slow wind,
 
 **Short Title:** Slow-wind heavy element abundances dip at solar minimum
 
-![Two panels spanning 1998–2012 track nine element abundances (He through Fe) relative to their photospheric values on a logarithmic vertical scale.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/aa54299-25/figures/fig_2.svg)
+![Two panels spanning 1998–2012 track nine element abundances (He through Fe) relative to their photospheric values on a logarithmic vertical scale.](../public/papers/aa54299-25/figures/fig_2.svg)
 
 **File:** `/papers/aa54299-25/figures/fig_2.svg`
 
@@ -3091,7 +3091,7 @@ heavy ions, elemental abundances, solar cycle, first ionization potential, FIP e
 
 **Short Title:** Correlation with solar activity grows with element mass
 
-![Each element's slow-wind correlation coefficient with solar activity is plotted against its atomic mass, from helium (~4 amu) on the left to iron (~56 amu) on the right.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/aa54299-25/figures/fig_3.svg)
+![Each element's slow-wind correlation coefficient with solar activity is plotted against its atomic mass, from helium (~4 amu) on the left to iron (~56 amu) on the right.](../public/papers/aa54299-25/figures/fig_3.svg)
 
 **File:** `/papers/aa54299-25/figures/fig_3.svg`
 
@@ -3127,7 +3127,7 @@ correlation coefficient, element mass, gravitational settling, sunspot number, s
 
 **Short Title:** Helium depletes sharply before each solar cycle begins
 
-![Panel A spans 1974 to 2020 and shows ten colored lines with distinct markers, each tracking helium percentage in the solar wind at a different wind speed (330 to 568 km/s, labeled in the top legend).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/s11207-021-01801-9/figures/fig_1.svg)
+![Panel A spans 1974 to 2020 and shows ten colored lines with distinct markers, each tracking helium percentage in the solar wind at a different wind speed (330 to 568 km/s, labeled in the top legend).](../public/papers/s11207-021-01801-9/figures/fig_1.svg)
 
 **File:** `/papers/s11207-021-01801-9/figures/fig_1.svg`
 
@@ -3163,7 +3163,7 @@ helium_abundance, solar_cycle, sunspot_number, helium_shutoff, solar_minimum, OM
 
 **Short Title:** Helium shutoff precedes each solar minimum by months
 
-![The left panel shows five orange circles (one per solar cycle, 21 through 25) plotted against the y-axis labeled 'Time by which A_He Shutoff Heralds the Solar Cycle [Days],' ranging from 0 to 600 days.](/Users/balterma/observatories/code/blalterman.github.io/public/papers/s11207-021-01801-9/figures/fig_2.svg)
+![The left panel shows five orange circles (one per solar cycle, 21 through 25) plotted against the y-axis labeled 'Time by which A_He Shutoff Heralds the Solar Cycle [Days],' ranging from 0 to 600 days.](../public/papers/s11207-021-01801-9/figures/fig_2.svg)
 
 **File:** `/papers/s11207-021-01801-9/figures/fig_2.svg`
 
@@ -3198,7 +3198,7 @@ heralding_time, helium_shutoff, solar_minimum, uncertainty_analysis, averaging_w
 
 **Short Title:** Helium shutoff cycle length matches the sunspot cycle
 
-![A single panel plots cycle length in years (y-axis, ranging from 9 to 13) against solar cycle number (x-axis, cycles 21 through 24).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/s11207-021-01801-9/figures/fig_3.svg)
+![A single panel plots cycle length in years (y-axis, ranging from 9 to 13) against solar cycle number (x-axis, cycles 21 through 24).](../public/papers/s11207-021-01801-9/figures/fig_3.svg)
 
 **File:** `/papers/s11207-021-01801-9/figures/fig_3.svg`
 
@@ -3233,7 +3233,7 @@ cycle_length, helium_shutoff, sunspot_number, solar_cycle, cycle_comparison
 
 **Short Title:** Shutoff timing holds steady across averaging window sizes
 
-![The left panel plots the change in helium shutoff date (y-axis, ranging from -500 to +500 days) as a function of averaging window size (x-axis, 225 to 275 days).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/s11207-021-01801-9/figures/fig_4.svg)
+![The left panel plots the change in helium shutoff date (y-axis, ranging from -500 to +500 days) as a function of averaging window size (x-axis, 225 to 275 days).](../public/papers/s11207-021-01801-9/figures/fig_4.svg)
 
 **File:** `/papers/s11207-021-01801-9/figures/fig_4.svg`
 
@@ -3268,7 +3268,7 @@ sensitivity_analysis, averaging_window, helium_shutoff, robustness_test, systema
 
 **Short Title:** Shutoff timing holds steady across window start dates
 
-![Two panels testing sensitivity of helium shutoff timing to the averaging window start date, with individual cycle traces (left) and weighted cycle averages (right).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/s11207-021-01801-9/figures/fig_5.svg)
+![Two panels testing sensitivity of helium shutoff timing to the averaging window start date, with individual cycle traces (left) and weighted cycle averages (right).](../public/papers/s11207-021-01801-9/figures/fig_5.svg)
 
 **File:** `/papers/s11207-021-01801-9/figures/fig_5.svg`
 
@@ -3303,7 +3303,7 @@ sensitivity_analysis, window_start, helium_shutoff, robustness_test, systematic_
 
 **Short Title:** Helium shutoff coincides with new-cycle magnetic emergence
 
-![Two stacked panels for 1995-2021 showing solar wind helium abundance at different wind speeds with sunspot number overlay (top) and EUV brightpoint density as a function of latitude and time (bottom).](/Users/balterma/observatories/code/blalterman.github.io/public/papers/s11207-021-01801-9/figures/fig_6.svg)
+![Two stacked panels for 1995-2021 showing solar wind helium abundance at different wind speeds with sunspot number overlay (top) and EUV brightpoint density as a function of latitude and time (bottom).](../public/papers/s11207-021-01801-9/figures/fig_6.svg)
 
 **File:** `/papers/s11207-021-01801-9/figures/fig_6.svg`
 

@@ -2,6 +2,7 @@
 """Export figure registry to markdown for Word review."""
 
 import json
+import os
 from pathlib import Path
 
 def export_registry_to_markdown():
@@ -26,8 +27,10 @@ def export_registry_to_markdown():
         lines.append(f"**Short Title:** {fig['short_title']}")
         lines.append("")
         # Embed the figure image
-        # Convert src path to absolute path for pandoc
-        fig_path = str(repo_root / "public" / fig['src'].lstrip('/'))
+        # Relative to the markdown file, so the link resolves on any machine and
+        # in any markdown viewer; pandoc-docx passes the file's directory as
+        # --resource-path so pandoc resolves it the same way.
+        fig_path = os.path.relpath(repo_root / "public" / fig['src'].lstrip('/'), output_path.parent)
         lines.append(f"![{fig['alt']}]({fig_path})")
         lines.append("")
         lines.append(f"**File:** `{fig['src']}`")

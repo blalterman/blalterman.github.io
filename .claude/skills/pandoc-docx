@@ -21,13 +21,21 @@ if [[ ! -f "$INPUT_FILE" ]]; then
     exit 1
 fi
 
-# Find pandoc
-PANDOC_PATH="/opt/anaconda3/envs/docx-conversion/bin/pandoc"
-if [[ ! -f "$PANDOC_PATH" ]]; then
-    echo "❌ Error: pandoc not found at $PANDOC_PATH"
-    echo "Check conda environment: docx-conversion"
+# Find pandoc in the docx-conversion conda env (install prefix varies by machine)
+PANDOC_PATH=""
+for prefix in /opt/anaconda3 /opt/miniconda3 "$HOME/anaconda3" "$HOME/miniconda3"; do
+    if [[ -x "$prefix/envs/docx-conversion/bin/pandoc" ]]; then
+        PANDOC_PATH="$prefix/envs/docx-conversion/bin/pandoc"
+        break
+    fi
+done
+if [[ -z "$PANDOC_PATH" ]]; then
+    echo "❌ Error: pandoc not found in any docx-conversion conda env"
+    echo "Checked /opt/anaconda3, /opt/miniconda3, ~/anaconda3, ~/miniconda3"
     exit 1
 fi
+# rsvg-convert (SVG embedding) lives in the same env
+export PATH="$(dirname "$PANDOC_PATH"):$PATH"
 
 # Find reference template
 TEMPLATE="nasa-reference-template.docx"
@@ -42,7 +50,8 @@ fi
 
 # Run conversion
 echo "Converting $INPUT_FILE → $OUTPUT_FILE"
-$PANDOC_PATH "$INPUT_FILE" -o "$OUTPUT_FILE" $TEMPLATE_ARG
+# Image links are relative to the markdown file, so resolve them from its directory
+"$PANDOC_PATH" "$INPUT_FILE" -o "$OUTPUT_FILE" $TEMPLATE_ARG --resource-path="$(dirname "$INPUT_FILE"):."
 
 # Verify output
 if [[ -f "$OUTPUT_FILE" ]]; then
