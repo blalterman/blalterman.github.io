@@ -151,10 +151,17 @@ export default async function ResearchTopicPage({ params }: Props) {
     notFound();
   }
 
-  // Drop "See Also" links to topics that are unpublished in production
+  // Drop links to topics that are unpublished in production: "See Also" entries
+  // are removed, and related-figure cards fall back to the figure detail page
   const publishedSlugs = new Set(filterPublishedProjects(topics).map(t => t.slug));
   const data = {
     ...topic,
+    related_figures: topic.related_figures.map(rf => {
+      const target = rf.link?.match(/^\/research\/([^/]+)$/)?.[1];
+      return target && !publishedSlugs.has(target)
+        ? { ...rf, link: `/research/figure/${rf.paper_id}/${rf.figure_id}` }
+        : rf;
+    }),
     related_topics: topic.related_topics?.filter(rt => publishedSlugs.has(rt.slug)),
   };
 
