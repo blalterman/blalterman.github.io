@@ -151,9 +151,16 @@ export default async function ResearchTopicPage({ params }: Props) {
     notFound();
   }
 
+  // Drop "See Also" links to topics that are unpublished in production
+  const publishedSlugs = new Set(filterPublishedProjects(topics).map(t => t.slug));
+  const data = {
+    ...topic,
+    related_topics: topic.related_topics?.filter(rt => publishedSlugs.has(rt.slug)),
+  };
+
   return (
     <div className="container mx-auto py-16 md:py-24 max-w-4xl">
-      <ResearchTopic data={topic} />
+      <ResearchTopic data={data} />
     </div>
   );
 }

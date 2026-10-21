@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { FigureRegistry, FigureRegistryEntry } from '@/types/research-topic';
+import { FigureRegistry, FigureRegistryEntry, RawResearchTopicData } from '@/types/research-topic';
+import { filterPublishedProjects } from '@/lib/research-utils';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
@@ -17,6 +18,15 @@ function loadFigureRegistry(): FigureRegistry {
   const registryPath = path.join(process.cwd(), 'public/data/figure-registry.json');
   const content = fs.readFileSync(registryPath, 'utf8');
   return JSON.parse(content);
+}
+
+// Slugs of topic pages that are built in this environment
+function loadPublishedTopicSlugs(): Set<string> {
+  const topicsDir = path.join(process.cwd(), 'public/data/research-topics');
+  const topics: RawResearchTopicData[] = fs.readdirSync(topicsDir)
+    .filter(f => f.endsWith('.json'))
+    .map(file => JSON.parse(fs.readFileSync(path.join(topicsDir, file), 'utf8')));
+  return new Set(filterPublishedProjects(topics).map(t => t.slug));
 }
 
 export async function generateStaticParams() {
@@ -58,10 +68,12 @@ export default async function FigureDetailPage({ params }: Props) {
     notFound();
   }
 
-  // Find topic pages where this figure appears
-  const primaryTopics = entry.used_as_primary_in || [];
-  const relatedTopics = entry.used_as_related_in || [];
-  const notShownTopics = entry.used_as_not_shown_in || [];
+  // Find topic pages where this figure appears, skipping unpublished topics
+  const publishedSlugs = loadPublishedTopicSlugs();
+  const isPublished = (slug: string) => publishedSlugs.has(slug);
+  const primaryTopics = (entry.used_as_primary_in || []).filter(isPublished);
+  const relatedTopics = (entry.used_as_related_in || []).filter(isPublished);
+  const notShownTopics = (entry.used_as_not_shown_in || []).filter(isPublished);
 
   return (
     <div className="container mx-auto py-16 md:py-24 max-w-4xl">
