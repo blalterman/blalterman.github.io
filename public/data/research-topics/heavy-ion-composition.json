@@ -26,7 +26,7 @@
     },
     {
       "ref": "aa51550-24/fig_4",
-      "relevance": "Proves saturation speed is independent of first ionization potential—all heavy elements cluster at 327 km/s"
+      "relevance": "Proves saturation speed is independent of first ionization potential: all heavy elements cluster at 327 km/s"
     },
     {
       "ref": "aa51550-24/fig_5",
@@ -42,7 +42,7 @@
     },
     {
       "ref": "aa51550-24/fig_8",
-      "relevance": "Explains the divergence above saturation—charge state (R²=0.95), not mass, controls fast-wind fractionation"
+      "relevance": "Explains the divergence above saturation: charge state (R²=0.95), not mass, controls fast-wind fractionation"
     },
     {
       "ref": "aa54299-25/fig_2",
@@ -77,5 +77,5 @@
       "type": "CC BY 4.0"
     }
   },
-  "meta_description": "Heavy ions saturate near 327 km/s — 75 km/s below helium — and below saturation collapse onto a single curve regardless of mass or first ionization potential. Above saturation, charge state alone (R^2 = 0.95) controls fast-wind fractionation, breaking the universal scaling."
+  "meta_description": "Heavy ions saturate near 327 km/s (75 km/s below helium) and below saturation collapse onto a single curve regardless of mass or first ionization potential. Above saturation, charge state alone (R^2 = 0.95) controls fast-wind fractionation, breaking the universal scaling."
 }
