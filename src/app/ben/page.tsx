@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Telescope, Compass, HeartHandshake, Share2, Wrench, ShieldCheck, Sparkles, ArrowRight } from "lucide-react";
+import { Telescope, Compass, HeartHandshake, Share2, Wrench, ShieldCheck, BrainCircuit, ArrowRight } from "lucide-react";
 import { loadJSONData } from "@/lib/data-loader";
 import { filterPublishedProjects } from "@/lib/research-utils";
 import { Metadata } from "next";
@@ -30,7 +30,7 @@ const iconMap = {
     HeartHandshake: HeartHandshake,
     Share2: Share2,
     Wrench: Wrench,
-    Sparkles: Sparkles,
+    BrainCircuit: BrainCircuit,
     ShieldCheck: ShieldCheck,
 };
 
