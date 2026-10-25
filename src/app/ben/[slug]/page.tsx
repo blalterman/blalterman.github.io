@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Telescope, Compass, HeartHandshake, Share2, Wrench, ShieldCheck } from "lucide-react";
+import { Telescope, Compass, HeartHandshake, Share2, Wrench, ShieldCheck, Sparkles } from "lucide-react";
 import { loadJSONData } from "@/lib/data-loader";
 import { filterPublishedProjects } from "@/lib/research-utils";
 import { Metadata, ResolvingMetadata } from "next";
@@ -33,8 +33,26 @@ const iconMap = {
     HeartHandshake: HeartHandshake,
     Share2: Share2,
     Wrench: Wrench,
+    Sparkles: Sparkles,
     ShieldCheck: ShieldCheck,
 };
+
+// Render [text](url) links inside paragraph text: internal paths use Next Link,
+// external URLs open in a new tab
+function renderInline(text: string) {
+    const parts = text.split(/(\[[^\]]+\]\([^)\s]+\))/g);
+    return parts.map((part, i) => {
+        const m = part.match(/^\[([^\]]+)\]\(([^)\s]+)\)$/);
+        if (!m) return part;
+        const [, label, href] = m;
+        const className = "text-primary underline underline-offset-2 hover:opacity-80";
+        return href.startsWith("/") ? (
+            <Link key={i} href={href} className={className}>{label}</Link>
+        ) : (
+            <a key={i} href={href} className={className} target="_blank" rel="noopener noreferrer">{label}</a>
+        );
+    });
+}
 
 export async function generateStaticParams() {
     const benData = loadJSONData<BenPageData>('ben-page.json');
@@ -106,7 +124,7 @@ export default async function BenSubpage({ params }: { params: Promise<{ slug: s
                 <CardContent className="space-y-6">
                     {section.paragraphs.map((paragraph, index) => (
                         <p key={index} className="text-lg text-body-foreground leading-relaxed">
-                            {paragraph}
+                            {renderInline(paragraph)}
                         </p>
                     ))}
                 </CardContent>
