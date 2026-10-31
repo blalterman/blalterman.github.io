@@ -390,5 +390,41 @@
     "day": "27",
     "keywords": "invited",
     "url": ""
+  },
+  {
+    "title": "Using 30 Years of Solar Wind Helium Abundance Observations to Derive Insights about the Sun as a Star",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "year": "2026-10-19",
+    "month": "October",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "invited": true,
+    "booktitle": "APS Colloquium, University of Colorado Boulder",
+    "journal": "APS Colloquium, University of Colorado Boulder",
+    "location": "Boulder, CO",
+    "day": "19",
+    "keywords": "invitedother",
+    "invited_url": "https://calendar.colorado.edu/event/aps-colloquium-dr-benjamin-alterman",
+    "url": ""
+  },
+  {
+    "title": "Using 30 Years of Solar Wind Helium Abundance Observations to Derive Insights about the Sun as a Star",
+    "authors": [
+      "Alterman, B. L."
+    ],
+    "year": "2026-10-27",
+    "month": "October",
+    "publication_type": "inproceedings",
+    "citations": 0,
+    "invited": true,
+    "booktitle": "Astronomy/Space Physics Seminar, University of Delaware",
+    "journal": "Astronomy/Space Physics Seminar, University of Delaware",
+    "location": "Newark, DE",
+    "day": "27",
+    "keywords": "invitedother",
+    "invited_url": "https://events.udel.edu/event/astronomyspace-physics-seminar-dr-benjamin-alterman",
+    "url": ""
   }
 ]
