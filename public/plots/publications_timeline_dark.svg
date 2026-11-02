@@ -6,11 +6,11 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-02T07:47:43.714248</dc:date>
+    <dc:date>2026-11-02T04:19:47.842214</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -986,8 +986,8 @@ L 231.066236 200.513204
 L 255.035313 193.061167 
 L 279.00439 191.81916 
 L 302.973468 191.81916 
-L 326.942545 190.577154 
-L 350.911622 190.577154 
+L 326.942545 191.81916 
+L 350.911622 191.81916 
 " clip-path="url(#pa337f4f219)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #86efac; stroke-width: 1.5"/>
     <defs>
      <path id="m746c574899" d="M -0 3.535534 
@@ -1009,8 +1009,8 @@ z
      <use xlink:href="#m746c574899" x="255.035313" y="193.061167" style="fill: #86efac; stroke: #86efac; stroke-linejoin: miter"/>
      <use xlink:href="#m746c574899" x="279.00439" y="191.81916" style="fill: #86efac; stroke: #86efac; stroke-linejoin: miter"/>
      <use xlink:href="#m746c574899" x="302.973468" y="191.81916" style="fill: #86efac; stroke: #86efac; stroke-linejoin: miter"/>
-     <use xlink:href="#m746c574899" x="326.942545" y="190.577154" style="fill: #86efac; stroke: #86efac; stroke-linejoin: miter"/>
-     <use xlink:href="#m746c574899" x="350.911622" y="190.577154" style="fill: #86efac; stroke: #86efac; stroke-linejoin: miter"/>
+     <use xlink:href="#m746c574899" x="326.942545" y="191.81916" style="fill: #86efac; stroke: #86efac; stroke-linejoin: miter"/>
+     <use xlink:href="#m746c574899" x="350.911622" y="191.81916" style="fill: #86efac; stroke: #86efac; stroke-linejoin: miter"/>
     </g>
    </g>
    <g id="patch_3">

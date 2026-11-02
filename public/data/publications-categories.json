@@ -75,7 +75,8 @@
       ],
       "excludeBibcodes": [
         "2025arXiv251220098D",
-        "2020arXiv200408632M"
+        "2020arXiv200408632M",
+        "2025arXiv251203890N"
       ],
       "showCitations": false,
       "showFilters": true,
