@@ -21,6 +21,9 @@
       "publicationType": "article",
       "showCitations": true,
       "showFilters": true,
+      "excludeBibcodes": [
+        "2022RNAAS...6..135A"
+      ],
       "meta_description": "Peer-reviewed journal articles on solar wind composition, helium abundance, heavy ions, and cross helicity."
     },
     {
@@ -59,24 +62,24 @@
       "meta_description": "Invited colloquia, seminars, and public lectures delivered at universities, research institutes, and outreach venues."
     },
     {
-      "title": "White Papers",
-      "slug": "white-papers",
+      "title": "Other Publications",
+      "slug": "other-publications",
       "icon": "ScrollText",
-      "description": "Technical reports and white papers",
-      "publicationType": "techreport",
+      "description": "White papers, technical reports, research notes, and preprints",
+      "publicationType": [
+        "techreport",
+        "eprint"
+      ],
+      "includeBibcodes": [
+        "2022RNAAS...6..135A"
+      ],
+      "excludeBibcodes": [
+        "2025arXiv251220098D",
+        "2020arXiv200408632M"
+      ],
       "showCitations": false,
       "showFilters": true,
-      "meta_description": "Technical reports and community white papers contributed to heliophysics mission and decadal-survey planning."
-    },
-    {
-      "title": "Pre-Prints",
-      "slug": "preprints",
-      "icon": "FileCode",
-      "description": "Manuscripts submitted or accepted for publication",
-      "publicationType": "eprint",
-      "showCitations": false,
-      "showFilters": true,
-      "meta_description": "Manuscripts submitted or accepted for publication, posted to arXiv ahead of the journal version of record."
+      "meta_description": "Community white papers for heliophysics mission and decadal-survey planning, a research note, and preprints."
     }
   ]
 }

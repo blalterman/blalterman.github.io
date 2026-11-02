@@ -38,7 +38,7 @@ import urllib.error
 import urllib.request
 
 from derive_citations_by_year import derive_counts
-from utils import get_public_data_dir
+from utils import category_members, find_category, get_public_data_dir
 
 DEFAULT_SITE = "https://blalterman.github.io"
 TIMEOUT_SECONDS = 30
@@ -132,8 +132,9 @@ def main():
     #
     # The population is taken from the deployed publications-categories.json
     # rather than hardcoded, because that file is what the page itself filters
-    # on (getPublicationsByType -> filterPublicationsByType matches
-    # publication_type only). Auditing a population derived any other way --
+    # on (getCategoryPublications: publication_type, minus excludeBibcodes, plus
+    # includeBibcodes; category_members applies the same rule). Auditing a
+    # population derived any other way --
     # ADS's REFEREED property, say -- would silently exclude papers the page
     # does render, which is the same silent gap this assertion exists to close.
     deployed_pubs = fetch_json(args.site, "data/ads_publications.json")
@@ -141,19 +142,11 @@ def main():
     deployed_pdfs = fetch_json(args.site, "data/publication-pdfs.json")
     deployed_categories = fetch_json(args.site, "data/publications-categories.json")
 
-    audited = next(
-        c for c in deployed_categories["categories"]
-        if c["slug"] == AUDITED_CATEGORY
-    )
-    wanted = audited["publicationType"]
-    wanted = wanted if isinstance(wanted, list) else [wanted]
+    audited = find_category(deployed_categories, AUDITED_CATEGORY)
 
     # loadAllPublications() merges both sources before joining the registry, so
     # the audit must merge them too or it would miss a non-ADS entry.
-    rendered = [
-        p for p in deployed_pubs + deployed_non_ads
-        if p.get("publication_type") in wanted
-    ]
+    rendered = category_members(deployed_pubs + deployed_non_ads, audited)
 
     # Positive control: the category must not be empty, or "all of them have a
     # PDF" is vacuously true.
@@ -161,7 +154,7 @@ def main():
           f"{AUDITED_CATEGORY}, {len(deployed_pdfs)} PDF registry entries")
     if not rendered:
         raise RuntimeError(
-            f"No deployed publication has type {wanted}; assertion C would be vacuous."
+            f"No deployed publication is in {AUDITED_CATEGORY}; assertion C would be vacuous."
         )
 
     uncovered = [

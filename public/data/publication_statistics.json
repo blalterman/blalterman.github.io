@@ -8,7 +8,7 @@
     "total_citations": 1184,
     "refereed_citations": 1070,
     "ads_papers": 164,
-    "refereed_papers": 45,
+    "refereed_papers": 44,
     "invited_conferences": 4,
     "invited_presentations": 26,
     "invited_total": 30,
@@ -170,19 +170,19 @@
       "2026": 4.827712609970675
     },
     "all_including_invited": {
-      "2026": 17,
       "2018": 11,
-      "2020": 11,
-      "2017": 11,
-      "2021": 13,
       "2025": 29,
-      "2019": 13,
-      "2022": 35,
       "2015": 3,
-      "2016": 2,
+      "2017": 11,
+      "2026": 17,
+      "2021": 13,
       "2024": 16,
+      "2022": 35,
+      "2020": 11,
+      "2023": 31,
+      "2019": 13,
       "2014": 2,
-      "2023": 31
+      "2016": 2
     }
   },
   "invited_by_year": {
@@ -638,7 +638,6 @@
     "software": 0,
     "invited-talks": 30,
     "phd-thesis": 1,
-    "white-papers": 14,
-    "preprints": 4
+    "other-publications": 17
   }
 }

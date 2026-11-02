@@ -3,7 +3,7 @@ import { GraduationCap, BookOpen, Database, FileText, Presentation, ScrollText, 
 import { Metadata, ResolvingMetadata } from 'next';
 import { loadJSONData, loadAllPublications } from "@/lib/data-loader";
 import { buildPageMetadata } from "@/lib/metadata";
-import { getPublicationsByType, getInvitedPublications, getSeminarPresentations } from "@/lib/publication-utils";
+import { getCategoryPublications, getPublicationsByType, getInvitedPublications, getSeminarPresentations } from "@/lib/publication-utils";
 import type { Publication } from "@/types/publication";
 import { redirect } from "next/navigation";
 import Link from "next/link";
@@ -22,6 +22,8 @@ interface PublicationCategory {
   description: string;
   meta_description?: string;
   publicationType: string | string[];
+  includeBibcodes?: string[];
+  excludeBibcodes?: string[];
   showCitations: boolean;
 }
 
@@ -47,7 +49,7 @@ export async function generateStaticParams() {
 
   // Only generate routes for categories that have publications
   const categoriesWithPublications = categoriesData.categories.filter((category) => {
-    const publications = getPublicationsByType(adsPublications, category.publicationType);
+    const publications = getCategoryPublications(adsPublications, category);
     return publications.length > 0;
   });
 
@@ -99,7 +101,7 @@ export default async function PublicationCategoryPage({ params }: { params: Prom
     ? getPublicationsByType(allPublications, categoryData.publicationType).filter(
         (p) => p.keywords !== 'invited'
       )
-    : getPublicationsByType(allPublications, categoryData.publicationType);
+    : getCategoryPublications(allPublications, categoryData);
 
   // If no publications in this category, redirect to /publications
   if (publications.length === 0) {

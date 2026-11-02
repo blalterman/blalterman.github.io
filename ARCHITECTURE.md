@@ -1999,6 +1999,13 @@ const publishedTopics = filterPublishedProjects(topics);
   - `publicationType` (string | string[]): ADS publication type(s) to filter (`article`, `dataset`, `inproceedings`, `abstract`, `techreport`, `eprint`, `phdthesis`)
   - `showCitations` (boolean): Whether to display citations column in table
 
+**Membership Exceptions (Optional):**
+  - `excludeBibcodes` (string[]): Bibcodes removed from the category even though their type matches
+  - `includeBibcodes` (string[]): Bibcodes added to the category regardless of their type
+  - A category's members are the entries of its `publicationType`(s), minus `excludeBibcodes`, plus `includeBibcodes`. `getCategoryPublications()` in `src/lib/publication-utils.ts` applies this rule for the pages, and `category_members()` in `scripts/utils.py` applies it for `generate_publication_statistics.py` and `audit_deployed_data.py`. The CV generator (`CV-v3/scripts/generate_bibtex_from_website.py`) reads the same lists.
+  - The lists live here because `ads_publications.json` is overwritten weekly; this curated file is their only home. Never hardcode bibcodes in TSX, TeX, or Python.
+  - Example: the RNAAS research note is type `article` but not refereed, so `refereed` excludes it and `other-publications` includes it. When a preprint in Other Publications is published, add its arXiv bibcode to `other-publications`' `excludeBibcodes`.
+
 **Filter & Display Configuration (Optional):**
   - `showFilters` (boolean): Enable/disable interactive filtering UI (default: `true`)
   - `showJournal` (boolean): Show/hide journal/venue column (default: `true`)
@@ -2022,8 +2029,8 @@ const publishedTopics = filterPublishedProjects(topics);
 - `dataset` → Datasets
 - `inproceedings` → Conference Proceedings
 - `abstract` → Conference Presentations
-- `techreport` → White Papers
-- `eprint` → Pre-Prints
+- `techreport` → Other Publications
+- `eprint` → Other Publications (preprints with a published version are listed in `excludeBibcodes`)
 - `phdthesis` → PhD Thesis
 
 [↑ Back to Table of Contents](#table-of-contents)

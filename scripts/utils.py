@@ -128,3 +128,47 @@ def retry_with_backoff(fn, *, attempts=5, base_delay=30, max_delay=900,
             if on_retry is not None:
                 on_retry(attempt, e, delay)
             time.sleep(delay)
+
+def category_members(publications, category):
+    """Return the publications that belong to a publications category.
+
+    Mirrors getCategoryPublications() in src/lib/publication-utils.ts:
+    entries whose publication_type is one of the category's publicationType(s),
+    minus its excludeBibcodes, plus its includeBibcodes. The category dict is
+    one element of publications-categories.json's "categories" list, the single
+    curated home of these membership exceptions.
+
+    Args:
+        publications: List of publication dicts (ADS and non-ADS merged).
+        category: One category dict from publications-categories.json.
+
+    Returns:
+        list: The member publications, each listed once, in input order.
+    """
+    wanted = category["publicationType"]
+    wanted = wanted if isinstance(wanted, list) else [wanted]
+    exclude = set(category.get("excludeBibcodes", []))
+    include = set(category.get("includeBibcodes", []))
+
+    members = []
+    seen = set()
+    for pub in publications:
+        bibcode = pub.get("bibcode")
+        by_type = pub.get("publication_type") in wanted and bibcode not in exclude
+        if (by_type or bibcode in include) and bibcode not in seen:
+            members.append(pub)
+            seen.add(bibcode)
+    return members
+
+
+def find_category(categories_data, slug):
+    """Return the category with this slug from publications-categories.json.
+
+    Raises:
+        KeyError: If no category has the slug, so a renamed or missing category
+            fails loudly instead of counting as empty.
+    """
+    for category in categories_data["categories"]:
+        if category["slug"] == slug:
+            return category
+    raise KeyError(f"publications-categories.json has no category with slug {slug!r}")

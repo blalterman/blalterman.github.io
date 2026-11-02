@@ -14,7 +14,7 @@ Date: 2025-12-26
 import json
 from pathlib import Path
 from collections import defaultdict
-from utils import get_public_data_dir
+from utils import category_members, find_category, get_public_data_dir
 
 
 def load_json(filepath):
@@ -71,7 +71,16 @@ def compute_total_citations_by_year(ads_metrics):
     return total_by_year
 
 
-def compute_category_counts(ads_pubs, invited_pres, invited_conf):
+def count_refereed(pubs):
+    """Count refereed articles: type article with the ADS REFEREED property."""
+    return sum(
+        1 for pub in pubs
+        if pub.get('publication_type') == 'article'
+        and 'REFEREED' in pub.get('properties', [])
+    )
+
+
+def compute_category_counts(ads_pubs, invited_pres, invited_conf, categories_data):
     """Compute publication counts by category."""
     from collections import Counter
 
@@ -79,11 +88,7 @@ def compute_category_counts(ads_pubs, invited_pres, invited_conf):
     type_counts = Counter(pub['publication_type'] for pub in ads_pubs)
 
     return {
-        'refereed': sum(
-            1 for pub in ads_pubs
-            if pub.get('publication_type') == 'article'
-            and 'REFEREED' in pub.get('properties', [])
-        ),
+        'refereed': count_refereed(ads_pubs),
         'conferences': sum(
             1 for pub in ads_pubs
             if pub.get('publication_type') in ('inproceedings', 'abstract')
@@ -93,8 +98,9 @@ def compute_category_counts(ads_pubs, invited_pres, invited_conf):
         'software': type_counts.get('software', 0),
         'invited-talks': len(invited_pres) + len(invited_conf),
         'phd-thesis': type_counts.get('phdthesis', 0),
-        'white-papers': type_counts.get('techreport', 0),
-        'preprints': type_counts.get('eprint', 0)
+        'other-publications': len(category_members(
+            ads_pubs, find_category(categories_data, 'other-publications')
+        )),
     }
 
 
@@ -127,6 +133,7 @@ def main():
         ads_pubs = ads_pubs + non_ads_pubs
     invited_pres = load_json(data_dir / 'invited_presentations.json')
     invited_conf = load_json(data_dir / 'invited_conferences.json')
+    categories_data = load_json(data_dir / 'publications-categories.json')
 
     print(f"  ADS metrics: h-index={ads_metrics['indicators']['h']}")
     print(f"  ADS publications: {len(ads_pubs)}")
@@ -147,7 +154,9 @@ def main():
             'total_citations': ads_metrics['citation stats']['total number of citations'],
             'refereed_citations': ads_metrics['citation stats']['total number of refereed citations'],
             'ads_papers': ads_metrics['basic stats']['number of papers'],
-            'refereed_papers': ads_metrics['basic stats refereed']['number of papers'],
+            # Counted from the publication list, not ADS's refereed total,
+            # which also counts the PhD thesis.
+            'refereed_papers': count_refereed(ads_pubs),
             'invited_conferences': len(invited_conf),
             'invited_presentations': len(invited_pres),
             'invited_total': len(invited_conf) + len(invited_pres),
@@ -191,7 +200,7 @@ def main():
             'normalized_refereed': ads_metrics['histograms']['downloads']['refereed downloads normalized'],
         },
 
-        'category_counts': compute_category_counts(ads_pubs, invited_pres, invited_conf)
+        'category_counts': compute_category_counts(ads_pubs, invited_pres, invited_conf, categories_data)
     }
 
     # Write output

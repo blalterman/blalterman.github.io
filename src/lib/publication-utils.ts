@@ -56,6 +56,48 @@ export function getPublicationsByType(
 }
 
 /**
+ * The membership fields of a category in publications-categories.json.
+ * Structural, so each page's own category interface satisfies it.
+ */
+export interface CategoryMembership {
+  publicationType: string | string[];
+  /** Bibcodes added to the category regardless of their type */
+  includeBibcodes?: string[];
+  /** Bibcodes removed from the category even though their type matches */
+  excludeBibcodes?: string[];
+}
+
+/**
+ * Get the publications that belong to a category, sorted by date.
+ *
+ * Membership is: entries of the category's publicationType(s), minus
+ * excludeBibcodes, plus includeBibcodes. The bibcode lists live in
+ * publications-categories.json, which survives the weekly ADS overwrite.
+ *
+ * @param publications Array of publications to process
+ * @param category Category whose membership rule to apply
+ * @param order Sort order: 'desc' for newest first, 'asc' for oldest first
+ * @returns New array of the category's publications, sorted by date
+ */
+export function getCategoryPublications(
+  publications: Publication[],
+  category: CategoryMembership,
+  order: 'desc' | 'asc' = 'desc'
+): Publication[] {
+  const exclude = new Set(category.excludeBibcodes ?? []);
+  const include = new Set(category.includeBibcodes ?? []);
+
+  const byType = getPublicationsByType(publications, category.publicationType, order)
+    .filter(pub => !exclude.has(pub.bibcode));
+  const members = new Set(byType.map(pub => pub.bibcode));
+  const added = publications.filter(
+    pub => include.has(pub.bibcode) && !members.has(pub.bibcode)
+  );
+
+  return sortPublicationsByDate([...byType, ...added], order);
+}
+
+/**
  * Sort publications by citation count.
  *
  * @param publications Array of publications to sort
