@@ -46,9 +46,7 @@ TIMEOUT_SECONDS = 30
 # Publications on the Refereed page for which no file can be served at all, each
 # paired with the reason. Assertion C treats an entry here as covered, so adding
 # one is a deliberate, reviewable act; the default for a new paper is to fail.
-PDF_EXEMPT = {
-    "2022RNAAS...6..135A": "RNAAS is published HTML-only; the AAS issues no PDF.",
-}
+PDF_EXEMPT: dict[str, str] = {}
 
 # The slug of the category whose PDF coverage assertion C checks, as
 # publications-categories.json spells it.
