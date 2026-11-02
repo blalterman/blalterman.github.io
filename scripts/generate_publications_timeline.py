@@ -21,7 +21,7 @@ import json
 import matplotlib.pyplot as plt
 import pandas as pd
 from pathlib import Path
-from utils import get_public_data_dir, get_public_plots_dir, get_relative_path
+from utils import get_public_data_dir, get_public_plots_dir, get_relative_path, category_members, find_category
 from plot_config import COLORS, FIGURE, FONTS, LINES, GRID, LEGEND, LAYOUT, OUTPUT, THEMES, get_theme_config, get_data_colors
 
 # === SECTION 1: Load Publications Data ===
@@ -64,33 +64,48 @@ else:
     print(f"   No invited presentations file found, using ADS only")
 
 # === SECTION 2: Data Processing ===
-# Convert to DataFrame
+# Assign each publication to a plot band. Refereed and Other follow the same
+# membership rule as the website's category pages (publications-categories.json),
+# so the RNAAS note and dropped preprints land where the pages put them. The
+# Other band also keeps the thesis, datasets, and software, which have their
+# own pages but would otherwise vanish from a plot of total output.
+categories_data = json.loads((public_data_dir / "publications-categories.json").read_text())
+refereed_ids = {id(p) for p in category_members(ads_publications, find_category(categories_data, "refereed"))}
+other_ids = {id(p) for p in category_members(ads_publications, find_category(categories_data, "other-publications"))}
+other_extra_types = {"phdthesis", "dataset", "software"}
+conference_types = {"abstract", "inproceedings"}
+# Types that may legitimately fall outside every band: an eprint excluded
+# because a published version exists. Anything else unplaced is a gap.
+expected_unplaced_types = {"eprint"}
+
+
+def plot_band(pub):
+    """Return the plot band for a publication, or None if it is not plotted."""
+    if id(pub) in refereed_ids:
+        return "Refereed Articles"
+    if id(pub) in other_ids or pub.get("publication_type") in other_extra_types:
+        return "Other"
+    if pub.get("publication_type") in conference_types:
+        return "Conference Contributions"
+    return None
+
+
+bands = [plot_band(p) for p in publications]
+unexpected = sorted({
+    p.get("publication_type") for p, band in zip(publications, bands)
+    if band is None and p.get("publication_type") not in expected_unplaced_types
+})
+if unexpected:
+    print(f"⚠️  Warning: publications with unplaced types dropped from the plot: {unexpected}")
+
 df = pd.DataFrame(publications)
+df["category"] = bands
 
 # Extract year from "YYYY-MM-DD" format
 df['year'] = df['year'].str.split('-').str[0]
 df = df[df['year'] != ''].copy()  # Filter out empty years
 df['year'] = df['year'].astype(int)
-
-# Define category mappings
-category_map = {
-    'article': 'Refereed Articles',
-    'abstract': 'Conference Contributions',
-    'inproceedings': 'Conference Contributions',
-    'techreport': 'Other Publications',
-    'eprint': 'Other Publications',
-    'dataset': 'Other Publications',
-    'phdthesis': 'Other Publications',
-    'software': 'Other Publications',
-}
-
-df['category'] = df['publication_type'].map(category_map)
-
-# Handle unmapped types
-if df['category'].isna().any():
-    unmapped = df[df['category'].isna()]['publication_type'].unique()
-    print(f"⚠️  Warning: Unmapped publication types found: {unmapped}")
-    df = df[df['category'].notna()]  # Drop unmapped for now
+df = df[df['category'].notna()]
 
 # Count publications by year and category
 counts = df.groupby(['year', 'category']).size().unstack(fill_value=0)
@@ -103,23 +118,23 @@ counts = counts.reindex(year_range, fill_value=0)
 all_years = counts.index.tolist()
 refereed = counts.get('Refereed Articles', pd.Series(0, index=counts.index)).tolist()
 conferences = counts.get('Conference Contributions', pd.Series(0, index=counts.index)).tolist()
-other = counts.get('Other Publications', pd.Series(0, index=counts.index)).tolist()
+other = counts.get('Other', pd.Series(0, index=counts.index)).tolist()
 
 # Compute cumulative sums for plotting (pandas native)
 cum_refereed = counts.get('Refereed Articles', pd.Series(0, index=counts.index)).cumsum().tolist()
 cum_conferences = counts.get('Conference Contributions', pd.Series(0, index=counts.index)).cumsum().tolist()
-cum_other = counts.get('Other Publications', pd.Series(0, index=counts.index)).cumsum().tolist()
+cum_other = counts.get('Other', pd.Series(0, index=counts.index)).cumsum().tolist()
 
 print("\n📊 Publication counts by year:")
 print(counts)
 print(f"\n✓ Total publications: {len(df)}")
 print(f"  • Refereed Articles: {sum(refereed)}")
 print(f"  • Conference Contributions: {sum(conferences)}")
-print(f"  • Other Publications: {sum(other)}")
+print(f"  • Other: {sum(other)}")
 print(f"\n📈 Cumulative totals (final year):")
 print(f"  • Refereed Articles: {cum_refereed[-1]}")
 print(f"  • Conference Contributions: {cum_conferences[-1]}")
-print(f"  • Other Publications: {cum_other[-1]}")
+print(f"  • Other: {cum_other[-1]}")
 
 # === SECTION 3: Save JSON Data ===
 output_filename = "publications_timeline.json"
@@ -165,7 +180,7 @@ def generate_plot(theme_name='light'):
             **LINES['conference'])
 
     ax.plot(all_years, cum_other,
-            label='Other Publications',
+            label='Other',
             color=data_colors['other'],
             **LINES['other'])
 
