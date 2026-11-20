@@ -1,0 +1,81 @@
+{
+  "slug": "heavy-ion-composition",
+  "title": "Heavy Ion Composition",
+  "subtitle": "Universal behavior below the fast-slow transition",
+  "description": "When normalized to their saturation points, all heavy ion species follow an identical trajectory in slow solar wind, revealing universal physics that doesn't discriminate by mass, charge, or ionization potential. Above saturation, this universality breaks down as element-specific fractionation takes over in fast wind.",
+  "primary_figure": {
+    "ref": "aa51550-24/fig_3",
+    "topic_keywords": [
+      "normalized abundance",
+      "universal slow-wind gradient",
+      "fast-wind fractionation",
+      "saturation point",
+      "element-specific divergence",
+      "mass independence",
+      "charge-state fractionation"
+    ]
+  },
+  "related_figures": [
+    {
+      "ref": "Alterman_2025_ApJL_982_L40/fig_3",
+      "relevance": "Links to Helium Abundance page; helium shows similar saturation behavior but at different speed threshold"
+    },
+    {
+      "ref": "aa51550-24/fig_2",
+      "relevance": "Shows the raw data before normalization, revealing the 75 km/s gap between heavy-ion and helium saturation speeds"
+    },
+    {
+      "ref": "aa51550-24/fig_4",
+      "relevance": "Proves saturation speed is independent of first ionization potential: all heavy elements cluster at 327 km/s"
+    },
+    {
+      "ref": "aa51550-24/fig_5",
+      "relevance": "Saturation abundances show expected FIP pattern, revealing where chromospheric fractionation sets composition"
+    },
+    {
+      "ref": "aa51550-24/fig_6",
+      "relevance": "Fast-wind enhancement shows mass dependence above saturation, motivating the charge-state analysis"
+    },
+    {
+      "ref": "aa51550-24/fig_7",
+      "relevance": "Context showing the saturation speeds straddle the solar wind's peak distribution, making the discrepancy operationally important"
+    },
+    {
+      "ref": "aa51550-24/fig_8",
+      "relevance": "Explains the divergence above saturation: charge state (R²=0.95), not mass, controls fast-wind fractionation"
+    },
+    {
+      "ref": "aa54299-25/fig_2",
+      "relevance": "Demonstrates that slow-wind heavy element abundances dip at solar minimum, confirming the solar cycle modulation seen in helium extends across the periodic table"
+    }
+  ],
+  "related_topics": [
+    {
+      "slug": "sources-of-the-solar-wind",
+      "connection": "Heavy ion saturation speeds provide source region classification thresholds"
+    },
+    {
+      "slug": "solar-activity",
+      "connection": "Heavy ion abundances modulate with the solar cycle"
+    },
+    {
+      "slug": "helium-abundance",
+      "connection": "Helium shows the same saturation behavior as heavy ions but at 402 km/s vs 327 km/s"
+    }
+  ],
+  "published": true,
+  "paper": {
+    "id": "aa51550-24",
+    "title": "The transition from slow to fast wind as observed in composition observations",
+    "doi": "https://doi.org/10.1051/0004-6361/202451550",
+    "bibcode": "2025A&A...694A.265A",
+    "journal": "Astronomy and Astrophysics",
+    "year": 2025,
+    "license": {
+      "holder": "The Authors",
+      "year": 2025,
+      "type": "CC BY 4.0"
+    }
+  },
+  "meta_description": "Heavy ions saturate near 327 km/s (75 km/s below helium) and below saturation collapse onto a single curve regardless of mass or first ionization potential. Above saturation, charge state alone (R^2 = 0.95) controls fast-wind fractionation, breaking the universal scaling."
+}

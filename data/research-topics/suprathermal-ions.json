@@ -1,0 +1,73 @@
+{
+  "slug": "suprathermal-ions",
+  "title": "Suprathermal Ions",
+  "subtitle": "Remnants of past energetic events",
+  "description": "Suprathermal ions are particles with energies above the thermal solar wind but below fully accelerated cosmic rays. These remnant populations exhibit a universal spectral index of 2.5 that remains invariant across nine different elements and two full solar cycles, revealing a fundamental constraint on particle acceleration in the heliosphere.",
+  "primary_figure": {
+    "ref": "Alterman_2024_ApJL_964_L31/fig_4",
+    "topic_keywords": [
+      "histogram",
+      "distribution",
+      "spectral index",
+      "gamma 2.5",
+      "universal behavior",
+      "heavy ions",
+      "suprathermal particles"
+    ]
+  },
+  "related_figures": [
+    {
+      "ref": "Alterman_2023_ApJ_952_42/fig_2",
+      "relevance": "Validates that the quiet-time selection method produces consistent thresholds across two full solar cycles, ensuring that downstream suprathermal abundance measurements reflect real physical changes rather than methodological drift"
+    },
+    {
+      "ref": "Alterman_2023_ApJ_952_42/fig_3",
+      "relevance": "Confirms that quiet hours anticorrelate with sunspot number at -0.95, validating the quiet-time identification as physically meaningful and establishing the 22-year baseline for studying suprathermal composition evolution"
+    },
+    {
+      "ref": "Alterman_2023_ApJ_952_42/fig_4",
+      "relevance": "Proves suprathermals are remnants from CIRs during solar minimum and CME-driven shocks during solar maximum"
+    },
+    {
+      "ref": "Alterman_2023_ApJ_952_42/fig_6",
+      "relevance": "Reduces the complex behavior of eight suprathermal elements to power-law relationships with a single enrichment indicator (Fe/C), revealing cyclic composition loops tied to solar activity phase"
+    },
+    {
+      "ref": "Alterman_2023_ApJ_952_42/fig_8",
+      "relevance": "Connects suprathermals to their role as seed population for solar energetic particle events"
+    },
+    {
+      "ref": "Alterman_2024_ApJL_964_L31/fig_1",
+      "relevance": "Shows all 9 elements following the same spectral slope"
+    },
+    {
+      "ref": "Alterman_2024_ApJL_964_L31/fig_2",
+      "relevance": "Demonstrates independence from solar activity"
+    }
+  ],
+  "related_topics": [
+    {
+      "slug": "space-weather",
+      "connection": "Suprathermal ions are seed populations for SEP events"
+    },
+    {
+      "slug": "solar-activity",
+      "connection": "Suprathermal composition varies with the solar cycle"
+    }
+  ],
+  "published": true,
+  "paper": {
+    "id": "Alterman_2024_ApJL_964_L31",
+    "title": "Quiet-time Spectra of Suprathermal Heavy Ions near 1 au in Solar Cycles 23 and 24",
+    "doi": "https://doi.org/10.3847/2041-8213/ad2deb",
+    "bibcode": "2024ApJ...964L..31A",
+    "journal": "The Astrophysical Journal Letters",
+    "year": 2024,
+    "license": {
+      "holder": "The Author(s). Published by the American Astronomical Society",
+      "year": 2024,
+      "type": "CC BY 4.0"
+    }
+  },
+  "meta_description": "Quiet-time suprathermal ions near 1 au follow a universal power-law spectrum with index gamma = 2.5, invariant across nine elements and two full solar cycles. CIRs seed the population at solar minimum, CME-driven shocks at solar maximum, yet the spectral slope holds: a constraint on whatever process accelerates the heliosphere's seed pool."
+}

@@ -1,0 +1,127 @@
+{
+  "paper_id": "s11207-021-01801-9",
+  "paper_title": "Solar Wind Helium Abundance Heralds Solar Cycle Onset",
+  "paper_doi": "https://doi.org/10.1007/s11207-021-01801-9",
+  "metadata": {
+    "version": "1.0",
+    "figures_count": 6,
+    "target_audience": "scientifically_literate_public"
+  },
+  "figures": [
+    {
+      "figure_id": "fig_1",
+      "short_title": "Forty-Five Years Reveal Helium Shutoff Pattern Before Solar Minima",
+      "summary": {
+        "what_we_see": "This large two-panel figure spans 45 years from 1974 to present day, tracking a critical ingredient of the solar wind\u2014helium\u2014as it varies through four complete solar cycles. Panel A displays helium abundance (the percentage of helium atoms relative to hydrogen) split into ten speed categories represented by different colors and symbols, with each category's measurements averaged over 250-day windows. The vertical axis shows helium percentage from 0% to 7%, while the horizontal timeline is marked by vertical purple dash-dot lines indicating officially declared solar minima (when sunspot activity bottoms out) and dotted vertical lines showing newly identified helium 'shutoff' events. Blue bands around the dotted lines indicate timing uncertainty. A secondary axis overlays the familiar 11-year sunspot number curve (black line) that rises and falls four times across the period. Panel B plots two other solar activity indicators\u2014Lyman-alpha irradiance (left, blue) and F10.7 radio emission (right, orange)\u2014showing that both reach their minimum after the sunspot minimum, demonstrating that different activity measures follow different timelines.",
+        "the_finding": "A striking pattern emerges across all four solar cycles: immediately before each officially declared solar minimum (purple lines), helium abundance suddenly crashes and then recovers over approximately 250 days across nearly all speed categories simultaneously (dotted lines marking the 'shutoff'). This rapid depletion-and-recovery consistently occurs roughly 10 months before the sunspot-based minimum declaration\u2014shown by the gap between dotted lines (helium shutoff) and purple lines (sunspot minimum). Unlike other solar cycle indicators that gradually rise or fall, this helium shutoff is abrupt: values plunge from their slow upward climb toward maximum, hit a sharp minimum, then quickly bounce back and resume climbing. Crucially, this happens at nearly the same time across all solar wind speeds from slow (330 km/s) to fast (600 km/s)\u2014indicated by the tight clustering of different colored curves at each dotted line\u2014suggesting a global solar phenomenon rather than something tied to how different speed winds are accelerated. Between solar cycles 21-25, every cycle shows this signature, with the timing between successive shutoffs (dotted to dotted line) closely matching the time between successive sunspot minima (purple to purple line).",
+        "why_it_matters": "This discovery transforms our ability to predict solar cycle transitions by providing an early-warning signal that precedes traditional indicators by nearly a year. For decades, scientists have relied on sunspot counts to declare when one solar cycle ends and the next begins, but that method can only identify the transition after the fact\u2014when sunspot activity has already reached its minimum. Helium shutoff offers a herald: when we observe this rapid depletion-recovery pattern, we can confidently predict that a solar minimum\u2014and thus the start of a new cycle\u2014is about 10 months away.\n\nThis matters profoundly for space weather forecasting, satellite mission planning, and understanding the Sun's magnetic dynamo. The simultaneity across all solar wind speeds is the key clue to the underlying cause: since slow wind (originating from complex equatorial regions) and fast wind (from stable polar coronal holes) are accelerated by completely different mechanisms at different heights in the solar atmosphere, the fact that helium shuts off at the same time in both suggests the phenomenon originates deep in the Sun\u2014likely at or below the photosphere\u2014where helium ionization happens before the wind ever accelerates.\n\nCurrent theory, developed in collaboration with brightpoint observations, links helium shutoff to a dramatic event occurring during the overlap of consecutive solar cycles: the equatorial cancelation of oppositely-directed magnetic flux from the dying older cycle, essentially marking the 'death certificate' of an extended 22-year magnetic cycle.\n\nFor space weather-dependent operations, this 10-month advance notice enables significant preparation. Satellite operators can optimize orbits as atmospheric drag decreases during solar minimum. Radio communication services can anticipate ionospheric changes. Power grid managers can prepare for shifting space weather patterns. The Sun's transition from chaotic magnetic topology at minimum toward more organized activity at maximum affects all these systems, and early warning helps each sector respond appropriately."
+      },
+      "keywords": [
+        "helium abundance",
+        "solar cycle",
+        "helium shutoff",
+        "sunspot minimum",
+        "solar wind speed",
+        "OMNI data",
+        "Lyman-alpha",
+        "F10.7",
+        "heralding time",
+        "solar activity indicators"
+      ]
+    },
+    {
+      "figure_id": "fig_2",
+      "short_title": "Helium Shutoff Heralds Solar Minimum by 10 Months with Quantified Uncertainty",
+      "summary": {
+        "what_we_see": "This two-panel figure quantifies the advance warning helium shutoff provides before official solar minima. The left panel displays heralding time on the vertical axis, showing how many days helium shutoff precedes each minimum for solar cycles 21-25. Each orange circle carries two error bars: green bars show precision uncertainty across solar wind speeds, while orange bars include the 250-day averaging window uncertainty. The right panel separates these uncertainty sources, plotting precision and total uncertainty as functions of cycle number. A horizontal red line at 125 days marks the window contribution.",
+        "the_finding": "Helium shutoff heralds solar minimum by 229-300 days on average, with remarkable consistency across four cycles but one notable outlier. Cycles 21, 22, and 23 cluster between 296-312 days. Cycle 24 provided only 184 days warning, while cycle 25 stretched to 426 days. The uncertainty analysis reveals a key pattern: for cycles 21, 23-25, precision error bars are tiny, confirming helium shutoff happens simultaneously across all solar wind speeds. Cycle 22 breaks this pattern with 232-day precision scatter, suggesting the shutoff timing varied across speeds for that particular cycle.",
+        "why_it_matters": "This figure transforms helium shutoff from observation to quantitative forecasting tool. When forecasters detect helium shutoff in real-time data, they can predict solar minimum approximately 250-300 days ahead. The small precision errors validate that this timing is robust regardless of which solar wind population you sample. The cycle 25 anomaly raises important questions: either the December 2019 solar minimum date needs revision, or cycle 25 represents a genuine departure from the pattern. Understanding these error sources enables honest probabilistic forecasting rather than false-precision claims."
+      },
+      "keywords": [
+        "heralding time",
+        "uncertainty quantification",
+        "precision",
+        "averaging window",
+        "solar minimum prediction",
+        "cycle 25 anomaly",
+        "error analysis",
+        "forecasting accuracy"
+      ]
+    },
+    {
+      "figure_id": "fig_3",
+      "short_title": "Helium Shutoff Cycle Length Matches Traditional Solar Cycle Duration",
+      "summary": {
+        "what_we_see": "This comparison plot validates helium shutoff as an alternative solar cycle clock. The horizontal axis shows solar cycle number, while the vertical axis displays cycle length in years. Blue plus signs mark traditional sunspot-based cycle lengths. Orange circles show helium shutoff cycle lengths with error bars for precision and window uncertainty. The two measurements track the same fundamental periodicity through completely different physical processes.",
+        "the_finding": "The agreement is striking: for three of four cycles, helium shutoff and sunspot cycle lengths match almost exactly. Cycle 21 shows perfect agreement at 10.5 years. Cycle 22 matches at 9.7 years. Cycle 23 agrees within measurement uncertainty. Only cycle 24 shows a notable 0.7-year discrepancy, though this still overlaps error bars. The consistent match across decades validates that helium shutoff measures the same 11-year dynamo periodicity as sunspots, just through an entirely different mechanism.",
+        "why_it_matters": "This concordance elevates helium shutoff to a validated alternative solar cycle clock. For decades, sunspot counting has been the standard, but it requires tedious visual observations and suffers from historical calibration issues. Helium abundance offers an automated, objective, in situ measurement with continuous digital records. The agreement implies that whatever deep magnetic process creates the sunspot cycle also controls helium behavior. For forecasting, this creates redundancy: if sunspot observations become unavailable, helium measurements can still track cycle phase reliably."
+      },
+      "keywords": [
+        "cycle length",
+        "sunspot number",
+        "helium shutoff cycle",
+        "solar cycle validation",
+        "dynamo periodicity",
+        "independent measurement",
+        "cycle 24 discrepancy"
+      ]
+    },
+    {
+      "figure_id": "fig_4",
+      "short_title": "Helium Shutoff Timing Robust Across Different Averaging Window Sizes",
+      "summary": {
+        "what_we_see": "This sensitivity analysis tests whether the helium shutoff phenomenon is a real physical event or merely an artifact of the specific 250-day averaging window used in the analysis. The figure contains two panels examining how shutoff timing changes when the averaging window size varies. The left panel plots the change in detected shutoff date (vertical axis, ranging from -200 to +200 days) as a function of averaging window size (horizontal axis, spanning 225 to 275 days in 5-day increments). Each colored curve represents a different solar cycle (21-25), with error bars showing the spread of shutoff dates across different solar wind speeds. All values are referenced to zero\u2014the shutoff date identified using the standard 250-day window\u2014so positive values mean 'shutoff appears later with this window size' and negative values mean 'earlier.' Horizontal blue lines bracket the \u00b1125-day range, representing the inherent uncertainty zone for a 250-day window. The right panel condenses this information by plotting the weighted average change for each cycle, with error bars representing standard error of the mean, again referenced to the 250-day baseline.",
+        "the_finding": "The helium shutoff signal proves remarkably robust: across the full 50-day range of window sizes tested (225-275 days), detected shutoff dates for cycles 21, 23, 24, and 25 (shown in various colors) fluctuate by no more than \u00b1150 days and predominantly cluster within the \u00b1125-day blue-bracketed zone expected from window-size uncertainty alone. This means the phenomenon isn't an artifact\u2014you'd see it regardless of whether you smooth the data over ~7.5 months or ~9 months. The right panel's weighted averages hover near zero for these four cycles, confirming no systematic bias toward earlier or later dates as window size changes; the shutoff timing is genuinely pinned to a real event occurring in the solar wind, not a mirage created by a particular choice of smoothing. Cycle 22 (one of the colored curves) breaks this pattern spectacularly: its left-panel trace consistently sits below zero (negative values) and its right-panel weighted average shows a clear bias toward earlier dates\u2014meaning that regardless of which window size between 225-275 days you choose, cycle 22's shutoff appears to have occurred earlier than the 250-day analysis suggests. The error bars in the left panel (standard deviation across solar wind speeds) are generally small for cycles 21, 23-25, reinforcing that shutoff happened simultaneously across different speeds, but larger for cycle 22, consistent with the high precision uncertainty identified in Figure 2.",
+        "why_it_matters": "This methodological validation is critical for establishing helium shutoff as a reliable forecasting tool rather than a data-processing curiosity. When scientists discover a new pattern in noisy time-series data, the first question is always: 'Is this real, or did your choice of smoothing window create a false signal?' This figure answers definitively: helium shutoff is real\u2014it survives across a wide range of reasonable averaging choices, emerging consistently because there's a genuine, abrupt change in solar wind helium content occurring over ~250 days before each solar minimum. The fact that four out of five cycles show timing changes confined to the expected \u00b1125-day uncertainty zone (blue lines) means researchers can confidently apply this analysis to future solar cycles without worrying that tweaking the averaging window will make the signal vanish or shift wildly. For operational forecasting, this robustness is essential: real-time detection of helium shutoff won't depend on perfectly replicating the exact 250-day window\u2014anything in the 7-9 month range will capture the signal, making the forecast resilient to variations in data cadence or gaps from instrument downtime. The cycle 22 systematic bias toward earlier dates, however, reveals something important about that particular solar minimum: the analysis suggests the true shutoff\u2014and thus the true magnetic transition marking cycle onset\u2014may have occurred 50-100 days earlier than the 250-day window indicates, hinting at unusually abrupt or asymmetric behavior during that cycle's magnetic field reconfiguration. This doesn't invalidate the method; rather, it shows that helium shutoff can reveal cycle-to-cycle variations in how the Sun's magnetic dynamo behaves during the overlap and cancelation phase. For future work, this motivates higher time-resolution studies (using 100-150 day windows or even daily data) to pinpoint shutoff timing more precisely and investigate whether certain cycles exhibit faster or slower equatorial flux cancelation, potentially linking to differences in the subsequent cycle's strength or duration."
+      },
+      "keywords": [
+        "sensitivity analysis",
+        "averaging window",
+        "methodological validation",
+        "robustness",
+        "cycle 22 bias",
+        "window size dependence",
+        "artifact testing"
+      ]
+    },
+    {
+      "figure_id": "fig_5",
+      "short_title": "Shutoff Timing Independent of When Averaging Window Starts",
+      "summary": {
+        "what_we_see": "This sensitivity analysis tests whether detected helium shutoff timing depends on when the averaging window starts. The layout mirrors Figure 4: a left panel showing shutoff date changes as window start time varies from 0 to 250 days, and a right panel showing weighted averages for each cycle. Blue lines bracket the expected uncertainty zone. Each colored curve represents a different solar cycle.",
+        "the_finding": "The pattern replicates Figure 4's findings: helium shutoff timing for cycles 21, 23-25 remains stable regardless of window start time. All weighted averages hover near zero, showing no systematic bias. Cycle 22 again stands out, consistently appearing earlier than the baseline suggests. This negative bias in cycle 22 appears in both Figure 4 (window size) and Figure 5 (window start), confirming it reflects genuine physics rather than processing artifacts.",
+        "why_it_matters": "The convergence of Figures 4 and 5 provides ironclad evidence that helium shutoff is real, not a statistical mirage. For practical applications, this dual robustness means real-time detection can be implemented flexibly without requiring precise window configurations. The consistent cycle 22 early bias across both tests elevates it from curious outlier to physical puzzle: something genuinely different happened during that magnetic reconfiguration. Testing these hypotheses requires higher time-resolution analysis or complementary brightpoint observations explored in Figure 6."
+      },
+      "keywords": [
+        "window start sensitivity",
+        "temporal robustness",
+        "methodological validation",
+        "cycle 22 early bias",
+        "artifact elimination",
+        "processing independence"
+      ]
+    },
+    {
+      "figure_id": "fig_6",
+      "short_title": "Brightpoint Emergence Coincides with Helium Shutoff During Cycle Overlap",
+      "summary": {
+        "what_we_see": "This two-panel visualization reveals the physical mechanism behind helium shutoff. The top panel shows helium abundance time series with shutoff events marked. The bottom panel adds extreme-ultraviolet brightpoint density as a function of solar latitude and time, displayed as a butterfly diagram. Warm colors highlight brightpoint densities above 0.8, with the 0.8 contour traced by a dotted line. Blue horizontal lines bracket the mid-latitude action zone at plus or minus 25 degrees. Mission context appears in the corner: gray for Parker Solar Probe, green for Solar Orbiter.",
+        "the_finding": "Comparing the two panels reveals an astonishing coincidence: helium depletion occurs at nearly the same time as mid-latitude brightpoints emerge. For solar minimum 24, northern mid-latitude brightpoints appeared first. For minimum 25, southern brightpoints led instead. Both times, this hemispheric asymmetry coincides with helium shutoff timing. The bottom panel shows the classic butterfly pattern, with brightpoints migrating equatorward over each cycle. The critical moment is when new-cycle brightpoints reach mid-latitudes while old-cycle brightpoints converge at the equator.",
+        "why_it_matters": "This correlation provides smoking-gun evidence for the physical mechanism driving helium shutoff. Brightpoints form where opposite-polarity magnetic flux emerges at the Sun's surface. Their mid-latitude emergence signals that the new solar cycle has strengthened enough to compete with the dying cycle. The timing coincidence implies helium abundance is exquisitely sensitive to the global magnetic topology during this narrow window. The proposed mechanism: as old-cycle magnetic bands cancel across the equator, flux emergence shuts down temporarily, cutting off helium supply. This transforms helium shutoff into a remote diagnostic of deep solar processes we cannot directly observe."
+      },
+      "keywords": [
+        "brightpoints",
+        "EUV observations",
+        "hemispheric asymmetry",
+        "magnetic flux cancelation",
+        "cycle overlap",
+        "butterfly diagram",
+        "equatorial convergence",
+        "Parker Solar Probe",
+        "Solar Orbiter",
+        "toroidal field bands",
+        "mid-latitude emergence"
+      ]
+    }
+  ]
+}

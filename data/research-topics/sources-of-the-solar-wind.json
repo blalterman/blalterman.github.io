@@ -1,0 +1,63 @@
+{
+  "slug": "sources-of-the-solar-wind",
+  "title": "Sources of the Solar Wind",
+  "subtitle": "Understanding where the solar wind is born",
+  "description": "The solar wind originates from different regions on the Sun, each with distinct magnetic topologies. By combining helium abundance and cross helicity measurements, we can trace in situ observations back to their solar source regions.",
+  "primary_figure": {
+    "ref": "Alterman_2025_ApJL_982_L40/fig_2",
+    "topic_keywords": [
+      "chromosphere",
+      "transition region",
+      "sonic surface",
+      "Alfvén surface",
+      "helium ionization",
+      "cross helicity",
+      "magnetic topology",
+      "open field",
+      "closed field"
+    ]
+  },
+  "related_figures": [
+    {
+      "ref": "Alterman_2025_ApJL_982_L40/fig_10a",
+      "relevance": "Quantitative data underlying the classification cartoon"
+    },
+    {
+      "ref": "Alterman_2025_ApJL_982_L40/fig_11",
+      "relevance": "Shows the operational classification scheme derived from the physics in Figure 2"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_2",
+      "relevance": "Establishes the baseline relationship between Alfvenic wave activity and speed, showing that fast wind from continuously open sources is wave-rich while slow wind spans all wave levels, motivating the need for multi-parameter source classification"
+    }
+  ],
+  "related_topics": [
+    {
+      "slug": "helium-abundance",
+      "connection": "Helium abundance is a key diagnostic for source identification"
+    },
+    {
+      "slug": "space-weather",
+      "connection": "Applies the source classification scheme for space weather forecasting"
+    },
+    {
+      "slug": "solar-wind-compressibility",
+      "connection": "Compressibility provides an additional diagnostic for source region identification"
+    }
+  ],
+  "published": true,
+  "paper": {
+    "id": "Alterman_2025_ApJL_982_L40",
+    "title": "Cross Helicity and the Helium Abundance as an In Situ Metric of Solar Wind Acceleration",
+    "doi": "https://doi.org/10.3847/2041-8213/ada835",
+    "bibcode": "2025ApJ...982L..40A",
+    "journal": "The Astrophysical Journal Letters",
+    "year": 2025,
+    "license": {
+      "holder": "The Author(s). Published by the American Astronomical Society",
+      "year": 2025,
+      "type": "CC BY 4.0"
+    }
+  },
+  "meta_description": "Solar wind emerges from coronal source regions with distinct magnetic topologies. Helium abundance fingerprints the chromospheric source; cross helicity fingerprints the coupling at the Sun-heliosphere interface. Together they classify in situ plasma by the topology of the field that released it."
+}

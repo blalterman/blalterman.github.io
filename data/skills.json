@@ -1,0 +1,18 @@
+{
+  "Programming & Software": {
+    "icon": "Code",
+    "skills": ["Python", "Bash", "Git & GitHub", "LaTeX", "Mathematica", "LabView"]
+  },
+  "Data Analysis": {
+    "icon": "BrainCircuit",
+    "skills": ["Pandas & NumPy", "Matplotlib", "Statistical Modeling", "SolarWindPy"]
+  },
+  "Operating Systems": {
+    "icon": "Monitor",
+    "skills": ["Linux", "macOS", "Windows"]
+  },
+  "Laboratory & Simulation": {
+    "icon": "Database",
+    "skills": ["Vacuum Chambers", "Particle Accelerators", "SIMION Ion Optics"]
+  }
+}

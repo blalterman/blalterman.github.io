@@ -1,0 +1,86 @@
+{
+  "heading": "Publications",
+  "tagline": "Peer-reviewed research, datasets, and conference contributions",
+  "categories": [
+    {
+      "title": "PhD Thesis",
+      "slug": "phd-thesis",
+      "icon": "GraduationCap",
+      "description": "Doctoral dissertation",
+      "publicationType": "phdthesis",
+      "showCitations": false,
+      "showFilters": false,
+      "showJournal": false,
+      "meta_description": "Doctoral dissertation: the significance of proton beams in the multiscale solar wind."
+    },
+    {
+      "title": "Refereed Publications",
+      "slug": "refereed",
+      "icon": "BookOpen",
+      "description": "Peer-reviewed journal articles",
+      "publicationType": "article",
+      "showCitations": true,
+      "showFilters": true,
+      "excludeBibcodes": [
+        "2022RNAAS...6..135A"
+      ],
+      "meta_description": "Peer-reviewed journal articles on solar wind composition, helium abundance, heavy ions, and cross helicity."
+    },
+    {
+      "title": "Datasets",
+      "slug": "datasets",
+      "icon": "Database",
+      "description": "Published research datasets",
+      "publicationType": "dataset",
+      "showCitations": false,
+      "showFilters": false,
+      "meta_description": "Published research datasets with persistent DOIs supporting reproducibility of the underlying analyses."
+    },
+    {
+      "title": "Conferences",
+      "slug": "conferences",
+      "icon": "Presentation",
+      "description": "Conference talks, poster presentations, and published proceedings",
+      "publicationType": [
+        "inproceedings",
+        "abstract"
+      ],
+      "showCitations": false,
+      "showFilters": true,
+      "meta_description": "Conference talks, poster presentations, and published proceedings from AGU, SHINE, and related meetings."
+    },
+    {
+      "title": "Invited Talks",
+      "slug": "invited-talks",
+      "icon": "Presentation",
+      "description": "Invited colloquia, seminars, and public lectures",
+      "publicationType": "inproceedings",
+      "showCitations": false,
+      "showFilters": false,
+      "journalLabel": "Venue",
+      "showLinks": false,
+      "meta_description": "Invited colloquia, seminars, and public lectures delivered at universities, research institutes, and outreach venues."
+    },
+    {
+      "title": "Other Publications",
+      "slug": "other-publications",
+      "icon": "ScrollText",
+      "description": "White papers, technical reports, research notes, and preprints",
+      "publicationType": [
+        "techreport",
+        "eprint"
+      ],
+      "includeBibcodes": [
+        "2022RNAAS...6..135A"
+      ],
+      "excludeBibcodes": [
+        "2025arXiv251220098D",
+        "2020arXiv200408632M",
+        "2025arXiv251203890N"
+      ],
+      "showCitations": false,
+      "showFilters": true,
+      "meta_description": "Community white papers for heliophysics mission and decadal-survey planning, a research note, and preprints."
+    }
+  ]
+}

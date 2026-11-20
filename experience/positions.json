@@ -1,0 +1,38 @@
+[
+  {
+    "Company": "NASA Goddard Space Flight Center",
+    "Position Title": "Research Astrophysicist",
+    "Dates": "2024 --",
+    "Location": "Greenbelt, MD"
+  },
+  {
+    "Company": "Southwest Research Institute",
+    "Position Title": "Senior Research Scientist",
+    "Dates": "2023 -- 2024",
+    "Location": "San Antonio, TX"
+  },
+  {
+    "Company": "Southwest Research Institute",
+    "Position Title": "Research Scientist",
+    "Dates": "2022 -- 2023",
+    "Location": "San Antonio, TX"
+  },
+  {
+    "Company": "Southwest Research Institute",
+    "Position Title": "Postdoctoral Researcher",
+    "Dates": "2020 -- 2021",
+    "Location": "San Antonio, TX"
+  },
+  {
+    "Company": "University of Texas at San Antonio",
+    "Position Title": "Postdoctoral Researcher",
+    "Dates": "2021--2022",
+    "Location": "San Antonio, TX"
+  },
+  {
+    "Company": "University of Michigan",
+    "Position Title": "Research Fellow",
+    "Dates": "2019--2020",
+    "Location": "Ann Arbor, MI"
+  }
+]

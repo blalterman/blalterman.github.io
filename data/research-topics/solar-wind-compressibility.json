@@ -1,0 +1,93 @@
+{
+  "slug": "solar-wind-compressibility",
+  "title": "Solar Wind Compressibility",
+  "subtitle": "How density fluctuations regulate helium",
+  "description": "Hydrogen compressibility (density fluctuations) is the primary regulator of helium abundance saturation in the solar wind. When compressibility drops below 9%, helium saturates at a universal value regardless of speed or Alfvénicity. This incompressibility threshold provides a powerful diagnostic for identifying solar wind source regions.",
+  "primary_figure": {
+    "ref": "Alterman_2026_ApJL_996_L12/fig_7",
+    "topic_keywords": [
+      "hydrogen compressibility",
+      "density fluctuations",
+      "incompressible wind",
+      "saturation region",
+      "compressibility threshold",
+      "helium regulation",
+      "source region identification"
+    ]
+  },
+  "related_figures": [
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_10",
+      "relevance": "Demonstrates that limiting compressibility < 15% excludes confounding impacts and enables reliable source region identification"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_11",
+      "relevance": "Demonstrates how the transition speeds between classification regimes depend on plasma compressibility"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_12",
+      "relevance": "Provides the clearest quantitative evidence that compressible fluctuations cause anomalous helium behavior: the helium gradient above saturation jumps six-fold once compressibility exceeds the 0.15 threshold"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_14",
+      "relevance": "Maps compressibility-derived characteristic speeds onto the bimodal wind distribution alongside wave activity and energy budget analyses, showing how compressible and incompressible saturation speeds delineate distinct transition regions"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_15a",
+      "relevance": "Reveals dual role of compressibility in mean abundance vs variability"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_16a",
+      "relevance": "Shows that mean speed exceeds the saturation threshold only in Alfvenic, incompressible wind, demonstrating that compressible wind carries fast-wind-like helium at slower speeds and exposing the limitation of speed-based source classification"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_16b",
+      "relevance": "Reveals that compressible wind has highly variable helium but less variable speed, the opposite of Alfvenic wind, confirming that compressibility drives helium changes independently of speed"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_17a",
+      "relevance": "Identifies the high-helium, low-wave-activity region as compressible wind, resolving the companion paper's ambiguous classification zone and providing the physical mechanism behind the anomalous helium enhancement"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_4",
+      "relevance": "Introduces hydrogen compressibility as a classification variable, showing that compressible and incompressible fast wind coexist at the same speeds and that speed alone cannot distinguish them"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_8",
+      "relevance": "Zooms into the saturation region to show that the compressibility contour gradient reverses at the saturation point, linking helium composition set deep in the corona to density fluctuation behavior during interplanetary transit"
+    },
+    {
+      "ref": "Alterman_2026_ApJL_996_L12/fig_13",
+      "relevance": "Resolves the central puzzle from the companion paper: progressively excluding compressible wind flattens the wave-activity dependence of saturation parameters, showing that what appeared to be a wave-activity effect was actually driven by compressibility"
+    }
+  ],
+  "related_topics": [
+    {
+      "slug": "helium-abundance",
+      "connection": "Compressibility regulates when helium reaches saturation"
+    },
+    {
+      "slug": "sources-of-the-solar-wind",
+      "connection": "Compressibility threshold identifies coronal hole-type source regions"
+    },
+    {
+      "slug": "space-weather",
+      "connection": "Compressibility refines solar wind source classification"
+    }
+  ],
+  "published": true,
+  "paper": {
+    "id": "Alterman_2026_ApJL_996_L12",
+    "title": "On the Regulation of the Solar Wind Helium Abundance by the Hydrogen Compressibility",
+    "doi": "https://doi.org/10.3847/2041-8213/ae002f",
+    "bibcode": "2026ApJ...996L..12A",
+    "journal": "The Astrophysical Journal Letters",
+    "year": 2026,
+    "license": {
+      "holder": "The Author(s). Published by the American Astronomical Society",
+      "year": 2026,
+      "type": "CC BY 4.0"
+    }
+  },
+  "meta_description": "Hydrogen compressibility regulates helium saturation. When density fluctuations fall below 9%, helium saturates at a universal value independent of speed or Alfvenicity. The 15% threshold isolates source regions: above it, the helium gradient jumps six-fold and classification by speed fails."
+}
